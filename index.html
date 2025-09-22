@@ -1248,13 +1248,8 @@
                 learnershipLink.addEventListener('click', function(e) {
                     e.preventDefault();
                     closeContactPopup();
-                    // Wait a bit for the contact popup to close, then open learnership modal
-                    setTimeout(() => {
-                        if (window.loadApplicationForm && window.openModal) {
-                            loadApplicationForm();
-                            window.openModal();
-                        }
-                    }, 300);
+                    // Redirect to new learnership application page
+                    window.location.href = 'learnership-application.html';
                 });
             }
         });
@@ -1436,8 +1431,8 @@
             openModalButtons.forEach(btn => {
                 if (btn) {
                     btn.addEventListener('click', () => {
-                        loadApplicationForm();
-                        openModal();
+                        // Redirect to new learnership application page
+                        window.location.href = 'learnership-application.html';
                     });
                 }
             });

@@ -50,7 +50,11 @@
       "Bash(do echo \"Processing $file\")",
       "Bash(git init:*)",
       "Bash(git remote add:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git push:*)",
+      "Bash(node:*)",
+      "Bash(del test-assessment.js)",
+      "Bash(del test-writing-assessment.html)"
     ],
     "deny": [],
     "ask": []
