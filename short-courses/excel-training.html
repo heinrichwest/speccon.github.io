@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excel Training | SpecCon Holdings</title>
+    <meta name="description" content="Comprehensive Microsoft Excel training from basic formulas to advanced data analysis and automation.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="../js/centralized-modals.js"></script>
+    <link rel="icon" type="image/png" href="../images/Logo.png">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 10px 10px -5px rgb(0 0 0 / 0.04);
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-900">
+    <!-- Header -->
+    <header class="bg-white/95 backdrop-blur-md shadow-lg fixed w-full z-50 top-0">
+        <div class="container mx-auto px-4 lg:px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <a href="../index.html">
+                        <img src="../images/Logo.png" alt="SpecCon Holdings Logo" class="h-12">
+                    </a>
+                    <div class="ml-3">
+                        <h1 class="text-xl font-bold text-gray-900">SpecCon Holdings</h1>
+                        <p class="text-sm text-gray-600">Excel Training</p>
+                    </div>
+                </div>
+
+                <nav class="hidden lg:flex items-center space-x-8">
+                    <a href="../index.html" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300">Home</a>
+                    <a href="computer-courses.html" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300">Back to Computer Courses</a>
+                    <a href="../index.html#contact" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300">Contact Us</a>
+                </nav>
+
+                <div class="hidden lg:block">
+                    <button data-modal="book" data-course="Excel Training" class="bg-gradient-to-r from-emerald-500 to-emerald-600 text-white font-semibold px-6 py-3 rounded-lg hover:from-emerald-600 hover:to-emerald-700 transition duration-300 shadow-lg">
+                        Book Training
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-emerald-600 via-emerald-700 to-emerald-800 text-white pt-28 pb-20">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="mb-6">
+                        <span class="bg-emerald-500/20 text-emerald-100 px-4 py-2 rounded-full text-sm font-medium">Computer Skills</span>
+                    </div>
+                    <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">Excel Training</h1>
+                    <p class="text-xl text-emerald-100 mb-8">
+                        Master Microsoft Excel from basic formulas to advanced data analysis and automation. Essential skills for any professional.
+                    </p>
+
+                    <div class="grid grid-cols-3 gap-6 mb-8">
+                        <div class="text-center p-4 bg-white/10 rounded-lg">
+                            <div class="text-2xl font-bold text-white">1-3</div>
+                            <div class="text-emerald-100 text-sm">Days Duration</div>
+                        </div>
+                        <div class="text-center p-4 bg-white/10 rounded-lg">
+                            <div class="text-2xl font-bold text-white">3</div>
+                            <div class="text-emerald-100 text-sm">Levels Available</div>
+                        </div>
+                        <div class="text-center p-4 bg-white/10 rounded-lg">
+                            <div class="text-2xl font-bold text-white">✓</div>
+                            <div class="text-emerald-100 text-sm">Microsoft Aligned</div>
+                        </div>
+                    </div>
+
+                    <a href="../index.html#contact" class="bg-white text-emerald-600 font-bold py-4 px-8 rounded-lg hover:bg-gray-100 transition duration-300 inline-flex items-center">
+                        <i data-lucide="calendar" class="w-5 h-5 mr-2"></i>
+                        Book This Training
+                    </a>
+                </div>
+
+                <div class="relative">
+                    <img src="https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=600"
+                         alt="Excel training session"
+                         class="rounded-2xl shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Levels -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Excel Training Levels</h2>
+                    <p class="text-xl text-gray-600">Choose the level that matches your current skills and goals</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8 mb-12">
+                    <!-- Basic Excel -->
+                    <div class="bg-white rounded-2xl shadow-lg p-8">
+                        <div class="w-16 h-16 bg-emerald-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                            <i data-lucide="play-circle" class="w-8 h-8 text-emerald-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4 text-center">Basic Excel</h3>
+                        <p class="text-gray-600 mb-6 text-center">Perfect for beginners or those who want to refresh their Excel fundamentals.</p>
+                        <ul class="space-y-3 text-gray-700">
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-500 mr-3 mt-0.5"></i>
+                                <span>Excel interface and navigation</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-500 mr-3 mt-0.5"></i>
+                                <span>Basic formulas and functions</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-500 mr-3 mt-0.5"></i>
+                                <span>Formatting and cell styles</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-500 mr-3 mt-0.5"></i>
+                                <span>Basic charts and graphs</span>
+                            </li>
+                        </ul>
+                        <div class="text-center mt-6">
+                            <span class="text-sm text-emerald-600 font-medium">Duration: 1 Day</span>
+                        </div>
+                    </div>
+
+                    <!-- Intermediate Excel -->
+                    <div class="bg-white rounded-2xl shadow-lg p-8 border-2 border-emerald-500">
+                        <div class="w-16 h-16 bg-emerald-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                            <i data-lucide="zap" class="w-8 h-8 text-emerald-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4 text-center">Intermediate Excel</h3>
+                        <div class="text-center mb-4">
+                            <span class="bg-emerald-500 text-white px-3 py-1 rounded-full text-sm font-medium">Most Popular</span>
+                        </div>
+                        <p class="text-gray-600 mb-6 text-center">Build on your basics with more powerful Excel features and functions.</p>
+                        <ul class="space-y-3 text-gray-700">
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-500 mr-3 mt-0.5"></i>
+                                <span>VLOOKUP and HLOOKUP functions</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-500 mr-3 mt-0.5"></i>
+                                <span>Pivot Tables and Pivot Charts</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-500 mr-3 mt-0.5"></i>
+                                <span>Data validation and filtering</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-500 mr-3 mt-0.5"></i>
+                                <span>Conditional formatting</span>
+                            </li>
+                        </ul>
+                        <div class="text-center mt-6">
+                            <span class="text-sm text-emerald-600 font-medium">Duration: 2 Days</span>
+                        </div>
+                    </div>
+
+                    <!-- Advanced Excel -->
+                    <div class="bg-white rounded-2xl shadow-lg p-8">
+                        <div class="w-16 h-16 bg-emerald-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                            <i data-lucide="award" class="w-8 h-8 text-emerald-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4 text-center">Advanced Excel</h3>
+                        <p class="text-gray-600 mb-6 text-center">Master advanced Excel features for data analysis and automation.</p>
+                        <ul class="space-y-3 text-gray-700">
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-500 mr-3 mt-0.5"></i>
+                                <span>Advanced formulas and array functions</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-500 mr-3 mt-0.5"></i>
+                                <span>Macros and VBA basics</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-500 mr-3 mt-0.5"></i>
+                                <span>Data analysis tools</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-500 mr-3 mt-0.5"></i>
+                                <span>Dashboard creation</span>
+                            </li>
+                        </ul>
+                        <div class="text-center mt-6">
+                            <span class="text-sm text-emerald-600 font-medium">Duration: 3 Days</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Benefits -->
+                <div class="grid md:grid-cols-3 gap-8 mb-12">
+                    <div class="text-center p-6 bg-white rounded-2xl shadow-lg">
+                        <div class="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i data-lucide="trending-up" class="w-8 h-8 text-emerald-600"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-3">Productivity Boost</h3>
+                        <p class="text-gray-600 text-sm">Dramatically increase your efficiency with powerful Excel shortcuts and automation.</p>
+                    </div>
+                    <div class="text-center p-6 bg-white rounded-2xl shadow-lg">
+                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i data-lucide="bar-chart" class="w-8 h-8 text-blue-600"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-3">Data Analysis</h3>
+                        <p class="text-gray-600 text-sm">Turn raw data into meaningful insights with advanced Excel analysis tools.</p>
+                    </div>
+                    <div class="text-center p-6 bg-white rounded-2xl shadow-lg">
+                        <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i data-lucide="briefcase" class="w-8 h-8 text-purple-600"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-3">Career Advancement</h3>
+                        <p class="text-gray-600 text-sm">Excel skills are essential in almost every industry and role.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who Should Attend -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Who Should Attend</h2>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="text-center p-6 bg-gray-50 rounded-xl">
+                        <div class="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="users" class="w-6 h-6 text-emerald-600"></i>
+                        </div>
+                        <h4 class="font-semibold text-gray-900 mb-2">Office Workers</h4>
+                        <p class="text-gray-600 text-sm">Anyone who uses Excel in their daily work activities</p>
+                    </div>
+                    <div class="text-center p-6 bg-gray-50 rounded-xl">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="calculator" class="w-6 h-6 text-blue-600"></i>
+                        </div>
+                        <h4 class="font-semibold text-gray-900 mb-2">Finance Professionals</h4>
+                        <p class="text-gray-600 text-sm">Accountants, analysts, and financial managers</p>
+                    </div>
+                    <div class="text-center p-6 bg-gray-50 rounded-xl">
+                        <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="bar-chart" class="w-6 h-6 text-purple-600"></i>
+                        </div>
+                        <h4 class="font-semibold text-gray-900 mb-2">Data Analysts</h4>
+                        <p class="text-gray-600 text-sm">Professionals working with data analysis and reporting</p>
+                    </div>
+                    <div class="text-center p-6 bg-gray-50 rounded-xl">
+                        <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="briefcase" class="w-6 h-6 text-orange-600"></i>
+                        </div>
+                        <h4 class="font-semibold text-gray-900 mb-2">Business Managers</h4>
+                        <p class="text-gray-600 text-sm">Managers who need to create reports and analyze business data</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-r from-emerald-600 to-emerald-700 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to Master Excel?</h2>
+            <p class="text-xl mb-8 text-emerald-100 max-w-3xl mx-auto">
+                Join thousands who have enhanced their productivity and career prospects with our comprehensive Excel training.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="../index.html#contact" class="bg-white text-emerald-600 font-bold py-4 px-8 rounded-lg hover:bg-gray-100 transition duration-300 inline-flex items-center justify-center">
+                    <i data-lucide="calendar" class="w-5 h-5 mr-2"></i>
+                    Schedule Training
+                </a>
+                <a href="computer-courses.html" class="border-2 border-white text-white font-bold py-4 px-8 rounded-lg hover:bg-white hover:text-emerald-600 transition duration-300 inline-flex items-center justify-center">
+                    <i data-lucide="arrow-left" class="w-5 h-5 mr-2"></i>
+                    Back to Computer Courses
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <img src="../images/Logo.png" alt="SpecCon Holdings Logo" class="h-10 mr-3">
+                        <span class="text-xl font-bold">SpecCon Holdings</span>
+                    </div>
+                    <p class="text-gray-400 mb-6">Empowering careers through quality education and training.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="../index.html" class="text-gray-400 hover:text-white transition duration-200">Home</a></li>
+                        <li><a href="../index.html#about" class="text-gray-400 hover:text-white transition duration-200">About</a></li>
+                        <li><a href="../index.html#qualifications" class="text-gray-400 hover:text-white transition duration-200">Qualifications</a></li>
+                        <li><a href="../index.html#contact" class="text-gray-400 hover:text-white transition duration-200">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Training Categories</h4>
+                    <ul class="space-y-2">
+                        <li><a href="compliance-courses.html" class="text-gray-400 hover:text-white transition duration-200">Compliance Training</a></li>
+                        <li><a href="computer-courses.html" class="text-gray-400 hover:text-white transition duration-200">Computer Courses</a></li>
+                        <li><a href="professional-development.html" class="text-gray-400 hover:text-white transition duration-200">Professional Development</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+                    <div class="space-y-2 text-gray-400">
+                        <p>Email: info@speccon.co.za</p>
+                        <p>Phone: +27 123 456 789</p>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2024 SpecCon Holdings. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

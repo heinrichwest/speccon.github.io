@@ -1,0 +1,65 @@
+QUALIFICATION DETAILS
+=====================
+
+Qualification Name: Occupational Certificate: Project Manager
+SETA: SSETA
+NQF Level: 5
+Minimum Credits: 240
+Qualification NLRD ID: 101869
+Learning Programme NLRD ID: N/A
+Expiry Date: 4-Jan-29
+Status: Accredited
+Reference Sheet: QCTO Cambridge
+
+MODULES AND UNITS
+=================
+
+• **Module 1: An Introduction to Project Management (4 credits)**
+  - 121905000-KM-01: Introductory studies for Project Managers (NQF Level 5, 4 credits)
+
+• **Module 2: Project Initiation and Planning (62 credits)**
+  - 121905000-KM-03: Project scope management (NQF Level 5, 8 credits)
+  - 121905000-PM-01: Initiate a project (NQF Level 5, 4 credits)
+  - 121905000-PM-02: Plan and develop a project management approach and scope statement (NQF Level 5, 12 credits)
+  - 121905000-PM-05: Plan project management systems (NQF Level 5, 8 credits)
+  - 121905000-WM-01: Attend to project initiation management processes (NQF Level 5, 10 credits)
+  - 121905000-WM-02: Attend to project planning processes (NQF Level 5, 20 credits)
+
+• **Module 3: Project Human Resource Management (24 credits)**
+  - 121905000-KM-07: Project Human Resource Management (NQF Level 5, 8 credits)
+  - 121905000-KM-11: Project Stakeholder Management (NQF Level 5, 8 credits)
+  - 121905000-PM-09: Manage and control the human resources of a project (NQF Level 5, 8 credits)
+
+• **Module 4: Project Communications Management (16 credits)**
+  - 121905000-KM-08: Project Communications Management (NQF Level 5, 8 credits)
+  - 121905000-PM-10: Conduct and control project communication and stakeholder interaction (NQF Level 5, 8 credits)
+
+• **Module 5: Project Risk Management (16 credits)**
+  - 121905000-KM-09: Project Risk Management (NQF Level 5, 8 credits)
+  - 121905000-PM-11: Manage and control project risks (NQF Level 5, 8 credits)
+
+• **Module 6: Project Time Management (16 credits)**
+  - 121905000-KM-04: Project Time Management (NQF Level 5, 8 credits)
+  - 121905000-PM-03: Plan and develop a project timeline and schedule (NQF Level 5, 8 credits)
+
+• **Module 7: Project Cost Management (16 credits)**
+  - 121905000-KM-05: Project Cost Management (NQF Level 5, 8 credits)
+  - 121905000-PM-04: Plan for and project the cost of a project (NQF Level 5, 8 credits)
+
+• **Module 8: Project Procurement Management (16 credits)**
+  - 121905000-KM-10: Project Procurement Management (NQF Level 5, 8 credits)
+  - 121905000-PM-12: Manage and control project procurement activities (NQF Level 5, 8 credits)
+
+• **Module 9: Project Integration Management (36 credits)**
+  - 121905000-KM-02: Project Integration Management (NQF Level 5, 4 credits)
+  - 121905000-PM-06: Monitor and control the scope of a project (NQF Level 5, 8 credits)
+  - 121905000-PM-07: Control the project delivery schedules and costs (NQF Level 5, 8 credits)
+  - 121905000-WM-03: Attend to project execution and control processes (NQF Level 5, 16 credits)
+
+• **Module 10: Project Quality Management (16 credits)**
+  - 121905000-KM-06: Project Quality Management (NQF Level 5, 8 credits)
+  - 121905000-PM-08: Control the project quality (NQF Level 5, 8 credits)
+
+• **Module 11: Project Close-out (18 credits)**
+  - 121905000-PM-13: Manage and control project close-out activities (NQF Level 5, 8 credits)
+  - 121905000-WM-04: Attend to project close out processes (NQF Level 5, 10 credits)

@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FASSET Qualifications | SpecCon Holdings</title>
+    <meta name="description" content="Explore our FASSET accredited qualification. Professional development and skills training in financial and accounting services.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="../js/value-adds-popup.js"></script>
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        /* SpecCon Brand Colors */
+        .speccon-blue { background-color: #12265E; }
+        .speccon-blue-secondary { background-color: #4A90E2; }
+        .speccon-light-blue { background-color: #92abc4; }
+        .text-speccon-blue { color: #12265E; }
+        .text-speccon-blue-secondary { color: #4A90E2; }
+        .text-speccon-light-blue { color: #92abc4; }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 10px 10px -5px rgb(0 0 0 / 0.04);
+        }
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        .dropdown-menu {
+            display: none;
+        }
+        /* Dropdown styling for better hover stability and alignment */
+        .dropdown {
+            padding-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+        .dropdown button {
+            display: flex;
+            align-items: center;
+        }
+        .dropdown-menu {
+            top: 100%;
+            margin-top: 0;
+            padding-top: 8px;
+        }
+
+        /* Sticky Banner Styles */
+        .sticky-banner {
+            position: fixed;
+            top: 100px;
+            right: 20px;
+            background: linear-gradient(135deg, #12265E 0%, #4A90E2 100%);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            z-index: 1000;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            font-weight: 600;
+            font-size: 14px;
+            backdrop-filter: blur(10px);
+        }
+
+        .sticky-banner:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+            background: linear-gradient(135deg, #0d1a47 0%, #3a7bc8 100%);
+        }
+
+        .banner-popup {
+            position: fixed;
+            top: 160px;
+            right: 20px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            z-index: 999;
+            overflow: hidden;
+            transform: translateY(-20px);
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.3s ease;
+            max-width: 420px;
+            width: 90vw;
+        }
+
+        .banner-popup.show {
+            transform: translateY(0);
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .animate-scroll {
+            animation: scroll 30s linear infinite;
+        }
+
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+
+        /* Enquiry Popup Modal Styles */
+        .enquiry-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        .enquiry-modal.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        .enquiry-modal-content {
+            background: white;
+            border-radius: 20px;
+            max-width: 500px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+            transform: translateY(20px);
+            transition: transform 0.3s ease;
+        }
+        .enquiry-modal.show .enquiry-modal-content {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-900">
+    <!-- Header -->
+    <header class="bg-white/95 backdrop-blur-md shadow-lg fixed w-full z-50 top-0">
+        <div class="container mx-auto px-4 lg:px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <a href="../index.html">
+                        <img src="../images/Logo.png" alt="SpecCon Holdings Logo" class="h-12">
+                    </a>
+                    <div class="ml-3">
+                        <h1 class="text-xl font-bold text-gray-900">SpecCon Holdings</h1>
+                        <p class="text-sm text-gray-600">FASSET Qualifications</p>
+                    </div>
+                </div>
+
+                <nav class="hidden lg:flex items-center space-x-8">
+                    <a href="../index.html#about" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300">Why Choose Us</a>
+                    <a href="../index.html#qualifications" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300">Qualifications</a>
+                    <a href="../index.html#accreditations" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300">Accreditations</a>
+                    <a href="../index.html#classroom-training" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300">Classroom Training</a>
+                    <div class="relative dropdown">
+                        <button class="text-gray-700 hover:text-blue-600 font-medium transition duration-300 inline-flex items-center">
+                            Other Products <i data-lucide="chevron-down" class="w-4 h-4 ml-1"></i>
+                        </button>
+                        <div class="dropdown-menu absolute left-0 w-64 bg-white rounded-lg shadow-xl py-2 z-20 border">
+                            <a href="https://elearning.co.za/" target="_blank" class="block px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition duration-200">
+                                <i data-lucide="monitor" class="w-4 h-4 inline mr-2"></i>Online Training
+                            </a>
+                            <a href="https://employmentequityact.co.za/" target="_blank" class="block px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition duration-200">
+                                <i data-lucide="shield-check" class="w-4 h-4 inline mr-2"></i>Employment Equity
+                            </a>
+                            <a href="https://learningmanagementsystem.co.za/" target="_blank" class="block px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition duration-200">
+                                <i data-lucide="graduation-cap" class="w-4 h-4 inline mr-2"></i>Learning Management System
+                            </a>
+                            <a href="https://skillsdevelopment.co.za/" target="_blank" class="block px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition duration-200">
+                                <i data-lucide="trending-up" class="w-4 h-4 inline mr-2"></i>Skills Development
+                            </a>
+                            <a href="https://www.specconacademy.co.za/" target="_blank" class="block px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition duration-200">
+                                <i data-lucide="school" class="w-4 h-4 inline mr-2"></i>SpecCon Academy
+                            </a>
+                            <a href="https://bbbee.co.za/" target="_blank" class="block px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition duration-200">
+                                <i data-lucide="award" class="w-4 h-4 inline mr-2"></i>BBBEE Consulting
+                            </a>
+                        </div>
+                    </div>
+                    
+                </nav>
+
+                <div class="hidden lg:block">
+                    <button onclick="openEnquiryModal()" class="bg-gradient-to-r from-[#12265E] to-[#4A90E2] text-white font-semibold px-6 py-3 rounded-lg hover:from-[#0d1a47] hover:to-[#3a7bc8] transition duration-300 shadow-lg">
+                        Enquire Now
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <section class="pt-24 pb-8 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <nav class="text-sm text-gray-600">
+                <a href="../index.html" class="hover:text-blue-600">Home</a>
+                <span class="mx-2">/</span>
+                <a href="../index.html#accreditations" class="hover:text-blue-600">Accreditations</a>
+                <span class="mx-2">/</span>
+                <span class="text-gray-900">FASSET</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="py-16 bg-gradient-to-br from-indigo-50 to-white">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <img src="../images/fasset%20seta.png" alt="FASSET Logo" class="w-20 h-20 object-contain mr-6">
+                        <div>
+                            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-2">FASSET</h1>
+                            <p class="text-xl text-indigo-600 font-semibold">1 Accredited Qualification</p>
+                        </div>
+                    </div>
+                    <p class="text-lg text-gray-600 leading-relaxed mb-8">
+                        The Financial and Accounting Services Sector Education and Training Authority (FASSET) focuses on developing skills in financial services, accounting, and information technology sectors.
+                        Our specialized qualification prepares learners for careers in technology and financial services.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="text-center p-4 bg-white rounded-lg shadow">
+                            <div class="text-2xl font-bold text-indigo-600">1</div>
+                            <div class="text-sm text-gray-600">Qualification</div>
+                        </div>
+                        <div class="text-center p-4 bg-white rounded-lg shadow">
+                            <div class="text-2xl font-bold text-green-600">NQF 5</div>
+                            <div class="text-sm text-gray-600">Level</div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <img src="https://images.pexels.com/photos/5483077/pexels-photo-5483077.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                         alt="IT and financial professionals"
+                         class="rounded-2xl shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Qualifications List -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Available Qualification</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Professional development in information technology and systems</p>
+            </div>
+
+            <div class="grid md:grid-cols-1 lg:grid-cols-1 gap-8 max-w-2xl mx-auto">
+                <!-- NQF Level 5 -->
+                <a href="../qualifications/fasset-computer-technician-nqf5.html" class="bg-white rounded-2xl shadow-lg p-8 card-hover transition-all duration-300 block hover:shadow-2xl relative">
+                    <div class="absolute top-4 right-4 bg-green-500 text-white px-2 py-1 rounded-md text-xs font-bold">QCTO</div>
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mr-4">
+                            <i data-lucide="cpu" class="w-6 h-6 text-indigo-600"></i>
+                        </div>
+                        <div>
+                            <span class="text-sm text-indigo-600 font-medium">NQF Level 5</span>
+                            <h3 class="font-bold text-lg text-gray-900">Computer Technician</h3>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">Comprehensive training in computer systems, hardware, software, networking, and technical support to become a skilled computer technician.</p>
+                    <div class="flex justify-between items-center text-sm text-gray-500">
+                        <span>282 Credits</span>
+                        <span class="text-indigo-600 font-medium">Learn More →</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose FASSET -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Choose FASSET Qualifications?</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Industry-recognized credentials for financial and IT services excellence</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center p-8 bg-white rounded-2xl shadow-lg">
+                    <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i data-lucide="award" class="w-8 h-8 text-indigo-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Financial Sector Credibility</h3>
+                    <p class="text-gray-600">Gain recognition in the financial and accounting services sector with FASSET accreditation.</p>
+                </div>
+
+                <div class="text-center p-8 bg-white rounded-2xl shadow-lg">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i data-lucide="trending-up" class="w-8 h-8 text-green-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Technology Advancement</h3>
+                    <p class="text-gray-600">Stay current with latest computer technology and technical support methodologies.</p>
+                </div>
+
+                <div class="text-center p-8 bg-white rounded-2xl shadow-lg">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i data-lucide="cpu" class="w-8 h-8 text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Technical Expertise</h3>
+                    <p class="text-gray-600">Comprehensive training in computer systems, networking, and technical troubleshooting.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">About FASSET</h2>
+                <p class="text-lg text-gray-600 leading-relaxed mb-8">
+                    The Financial and Accounting Services Sector Education and Training Authority (FASSET) is committed to developing skills in financial services, accounting, and information technology sectors.
+                    Our qualification bridges the gap between technical knowledge and practical application in the IT industry.
+                </p>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="monitor" class="w-8 h-8 text-indigo-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Technical Excellence</h3>
+                        <p class="text-gray-600">Comprehensive training in computer systems and technology</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="award" class="w-8 h-8 text-green-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Industry Recognition</h3>
+                        <p class="text-gray-600">FASSET accredited qualification with industry relevance</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="trending-up" class="w-8 h-8 text-blue-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Career Opportunities</h3>
+                        <p class="text-gray-600">Opens doors to IT and technical support careers</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sticky Banner -->
+    <div id="stickyBanner" class="sticky-banner">
+        <i data-lucide="gift" class="w-4 h-4 inline mr-2"></i>
+        Our Free Value Adds
+    </div>
+
+    <!-- Banner Popup -->
+    <div id="bannerPopup" class="banner-popup">
+        <div class="p-6">
+            <div class="flex items-center justify-between mb-4">
+                <h3 class="text-xl font-bold text-gray-900">Value-Added Benefits</h3>
+                <button id="closePopup" class="text-gray-400 hover:text-gray-600">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+            <p class="text-gray-600 text-sm mb-6">You can get these value adds for free when you do learnerships with SpecCon</p>
+
+            <!-- Value Adds Grid -->
+            <div class="grid grid-cols-1 gap-4 mb-6">
+                <div class="flex items-center p-3 bg-blue-50 rounded-lg">
+                    <div class="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center mr-3">
+                        <i data-lucide="layout-template" class="w-4 h-4 text-white"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-sm text-gray-900">White Labelled LMS</h4>
+                        <p class="text-xs text-gray-600">Complete Learning Management System</p>
+                    </div>
+                </div>
+                <div class="flex items-center p-3 bg-green-50 rounded-lg">
+                    <div class="w-8 h-8 bg-green-500 rounded-lg flex items-center justify-center mr-3">
+                        <i data-lucide="book-open" class="w-4 h-4 text-white"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-sm text-gray-900">300+ Online Courses</h4>
+                        <p class="text-xs text-gray-600">Comprehensive course library</p>
+                    </div>
+                </div>
+                <div class="flex items-center p-3 bg-purple-50 rounded-lg">
+                    <div class="w-8 h-8 bg-purple-500 rounded-lg flex items-center justify-center mr-3">
+                        <i data-lucide="users" class="w-4 h-4 text-white"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-sm text-gray-900">Employment Equity System</h4>
+                        <p class="text-xs text-gray-600">Compliance and reporting</p>
+                    </div>
+                </div>
+                <div class="flex items-center p-3 bg-orange-50 rounded-lg">
+                    <div class="w-8 h-8 bg-orange-500 rounded-lg flex items-center justify-center mr-3">
+                        <i data-lucide="clipboard-check" class="w-4 h-4 text-white"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-sm text-gray-900">10+ Work Assessments</h4>
+                        <p class="text-xs text-gray-600">Excel & workplace skills tests</p>
+                    </div>
+                </div>
+                <div class="flex items-center p-3 bg-red-50 rounded-lg">
+                    <div class="w-8 h-8 bg-red-500 rounded-lg flex items-center justify-center mr-3">
+                        <i data-lucide="shield-check" class="w-4 h-4 text-white"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-sm text-gray-900">Compliance Training</h4>
+                        <p class="text-xs text-gray-600">First Aid, Fire Fighter, OHS</p>
+                    </div>
+                </div>
+                <div class="flex items-center p-3 bg-teal-50 rounded-lg">
+                    <div class="w-8 h-8 bg-teal-500 rounded-lg flex items-center justify-center mr-3">
+                        <i data-lucide="graduation-cap" class="w-4 h-4 text-white"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-sm text-gray-900">Academy Access</h4>
+                        <p class="text-xs text-gray-600">Resources for staff children</p>
+                    </div>
+                </div>
+                <div class="flex items-center p-3 bg-indigo-50 rounded-lg">
+                    <div class="w-8 h-8 bg-indigo-500 rounded-lg flex items-center justify-center mr-3">
+                        <i data-lucide="user-check" class="w-4 h-4 text-white"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-sm text-gray-900">SDF Service</h4>
+                        <p class="text-xs text-gray-600">Skills Development Facilitator support</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Client Testimonials -->
+            <div class="border-t pt-4">
+                <h4 class="font-bold text-gray-900 mb-3 text-sm">What Our Clients Say</h4>
+                <div class="space-y-3">
+                    <div class="flex items-start space-x-3">
+                        <img src="../Client Logos/AVI.PNG" alt="AVI" class="w-8 h-8 object-contain">
+                        <div>
+                            <p class="text-xs text-gray-700 italic">"SpecCon is knowledgeable, passionate and always goes the extra mile..."</p>
+                            <p class="text-xs text-gray-500 mt-1">- Neteske Gerber, AVI</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-3">
+                        <img src="../Client Logos/isuzu.PNG" alt="Isuzu" class="w-8 h-8 object-contain">
+                        <div>
+                            <p class="text-xs text-gray-700 italic">"The SpecCon LMS has transformed our training approach..."</p>
+                            <p class="text-xs text-gray-500 mt-1">- Lisa van Aswegen, Isuzu</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Client Logos Scrolling Bar -->
+            <div class="border-t pt-4 mt-4">
+                <p class="text-xs text-gray-500 text-center mb-2">Trusted by Leading Companies</p>
+                <div class="overflow-hidden">
+                    <div class="flex animate-scroll">
+                        <div class="flex space-x-4 min-w-max">
+                            <img src="../Client Logos/AVI.PNG" alt="AVI" class="h-6 object-contain grayscale">
+                            <img src="../Client Logos/isuzu.PNG" alt="Isuzu" class="h-6 object-contain grayscale">
+                            <img src="../Client Logos/imperial.PNG" alt="Imperial" class="h-6 object-contain grayscale">
+                            <img src="../Client Logos/Afgri.png" alt="AFGRI" class="h-6 object-contain grayscale">
+                            <img src="../Client Logos/servest.png" alt="Servest" class="h-6 object-contain grayscale">
+                            <img src="../Client Logos/labournet.png" alt="LabourNet" class="h-6 object-contain grayscale">
+                            <img src="../Client Logos/absa.png" alt="ABSA" class="h-6 object-contain grayscale">
+                            <img src="../Client Logos/Heinekin.PNG" alt="Heineken" class="h-6 object-contain grayscale">
+                        </div>
+                        <div class="flex space-x-4 min-w-max">
+                            <img src="../Client Logos/AVI.PNG" alt="AVI" class="h-6 object-contain grayscale">
+                            <img src="../Client Logos/isuzu.PNG" alt="Isuzu" class="h-6 object-contain grayscale">
+                            <img src="../Client Logos/imperial.PNG" alt="Imperial" class="h-6 object-contain grayscale">
+                            <img src="../Client Logos/Afgri.png" alt="AFGRI" class="h-6 object-contain grayscale">
+                            <img src="../Client Logos/servest.png" alt="Servest" class="h-6 object-contain grayscale">
+                            <img src="../Client Logos/labournet.png" alt="LabourNet" class="h-6 object-contain grayscale">
+                            <img src="../Client Logos/absa.png" alt="ABSA" class="h-6 object-contain grayscale">
+                            <img src="../Client Logos/Heinekin.PNG" alt="Heineken" class="h-6 object-contain grayscale">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-4">
+                <a href="../index.html#contact" class="w-full bg-gradient-to-r from-[#12265E] to-[#4A90E2] text-white text-center py-3 px-4 rounded-lg text-sm font-semibold hover:from-[#0d1a47] hover:to-[#3a7bc8] transition duration-300 block">
+                    Enquiry Now
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Enquiry Modal -->
+    <div id="enquiryModal" class="enquiry-modal">
+        <div class="enquiry-modal-content">
+            <div class="p-8">
+                <div class="flex items-center justify-between mb-6">
+                    <h2 class="text-2xl font-bold text-gray-900">Enquire About FASSET Qualifications</h2>
+                    <button onclick="closeEnquiryModal()" class="text-gray-400 hover:text-gray-600 text-xl">
+                        <i data-lucide="x" class="w-6 h-6"></i>
+                    </button>
+                </div>
+
+                <div class="mb-6 p-4 bg-blue-50 rounded-lg border border-blue-200">
+                    <p class="text-blue-700 text-sm">
+                        <i data-lucide="info" class="w-4 h-4 inline mr-2"></i>
+                        If you are applying for a learnership, please <a href="../index.html#apply" class="font-semibold underline hover:text-blue-800">click here</a>.
+                    </p>
+                </div>
+
+                <form id="enquiryForm" onsubmit="submitEnquiry(event)">
+                    <div class="grid md:grid-cols-2 gap-4 mb-4">
+                        <div>
+                            <label for="firstName" class="block text-sm font-medium text-gray-700 mb-2">Name *</label>
+                            <input type="text" id="firstName" name="firstName" required
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                        <div>
+                            <label for="surname" class="block text-sm font-medium text-gray-700 mb-2">Surname *</label>
+                            <input type="text" id="surname" name="surname" required
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-4 mb-4">
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email *</label>
+                            <input type="email" id="email" name="email" required
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="company" class="block text-sm font-medium text-gray-700 mb-2">Company *</label>
+                        <input type="text" id="company" name="company" required
+                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                    </div>
+
+                    <div class="mb-6">
+                        <label for="reason" class="block text-sm font-medium text-gray-700 mb-2">Reason for Enquiry *</label>
+                        <textarea id="reason" name="reason" rows="4" required
+                                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
+                                  placeholder="Please tell us about your enquiry and how we can help you..."></textarea>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-3">
+                        <button type="submit" class="flex-1 bg-gradient-to-r from-[#12265E] to-[#4A90E2] text-white font-semibold py-3 px-6 rounded-lg hover:from-[#0d1a47] hover:to-[#3a7bc8] transition duration-300">
+                            <i data-lucide="send" class="w-4 h-4 inline mr-2"></i>
+                            Send Enquiry
+                        </button>
+                        <button type="button" onclick="closeEnquiryModal()" class="flex-1 bg-gray-500 text-white font-semibold py-3 px-6 rounded-lg hover:bg-gray-600 transition duration-300">
+                            Cancel
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <img src="../images/Logo.png" alt="SpecCon Holdings Logo" class="h-12 mr-3">
+                        <div>
+                            <h3 class="text-xl font-bold">SpecCon Holdings</h3>
+                            <p class="text-gray-400">FASSET Qualifications</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 mb-4">Empowering careers through FASSET accredited training and qualifications.</p>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="../index.html" class="text-gray-400 hover:text-white transition duration-200">Home</a></li>
+                        <li><a href="../index.html#about" class="text-gray-400 hover:text-white transition duration-200">About Us</a></li>
+                        <li><a href="../index.html#qualifications" class="text-gray-400 hover:text-white transition duration-200">All Qualifications</a></li>
+                        <li><a href="../index.html#contact" class="text-gray-400 hover:text-white transition duration-200">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Other SETAs</h4>
+                    <ul class="space-y-2">
+                        <li><a href="etdp-seta.html" class="text-gray-400 hover:text-white transition duration-200">ETDP SETA</a></li>
+                        <li><a href="wr-seta.html" class="text-gray-400 hover:text-white transition duration-200">W&R SETA</a></li>
+                        <li><a href="mict-seta.html" class="text-gray-400 hover:text-white transition duration-200">MICT SETA</a></li>
+                        <li><a href="services-seta.html" class="text-gray-400 hover:text-white transition duration-200">Services SETA</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2025 SpecCon Holdings. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        // Popup functionality handled by centralized script
+        function showValueAddsPopup() {
+            const popup = document.getElementById('bannerPopup');
+            popup.classList.add('show');
+        }
+
+        // Close popup
+        document.getElementById('closePopup').addEventListener('click', function() {
+            const popup = document.getElementById('bannerPopup');
+            popup.classList.remove('show');
+        });
+
+        // Close popup when clicking outside
+        document.addEventListener('click', function(e) {
+            const popup = document.getElementById('bannerPopup');
+            const banner = document.getElementById('stickyBanner');
+
+            if (!popup.contains(e.target) && !banner.contains(e.target) && !e.target.closest('button[onclick="showValueAddsPopup()"]')) {
+                popup.classList.remove('show');
+            }
+        });
+
+        // Banner click functionality
+        document.getElementById('stickyBanner').addEventListener('click', showValueAddsPopup);
+
+        // Enquiry Modal Functions
+        function openEnquiryModal() {
+            const modal = document.getElementById('enquiryModal');
+            modal.classList.add('show');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeEnquiryModal() {
+            const modal = document.getElementById('enquiryModal');
+            modal.classList.remove('show');
+            document.body.style.overflow = 'auto';
+        }
+
+        function submitEnquiry(event) {
+            event.preventDefault();
+
+            // Get form data
+            const formData = new FormData(event.target);
+            const enquiryData = {
+                firstName: formData.get('firstName'),
+                surname: formData.get('surname'),
+                email: formData.get('email'),
+                phone: formData.get('phone'),
+                company: formData.get('company'),
+                reason: formData.get('reason'),
+                qualification: 'FASSET Qualifications'
+            };
+
+            // For now, just show success message and close modal
+            alert('Thank you for your enquiry! We will get back to you soon.');
+            closeEnquiryModal();
+
+            // Reset form
+            event.target.reset();
+
+            // In a real implementation, you would send this data to your server
+            console.log('Enquiry submitted:', enquiryData);
+        }
+
+        // Set up modal event listeners after DOM is ready
+        document.addEventListener('DOMContentLoaded', function() {
+            // Close modal when clicking outside
+            const enquiryModal = document.getElementById('enquiryModal');
+            if (enquiryModal) {
+                enquiryModal.addEventListener('click', function(e) {
+                    if (e.target === this) {
+                        closeEnquiryModal();
+                    }
+                });
+            }
+
+            // Close modal with Escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    closeEnquiryModal();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

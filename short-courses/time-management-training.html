@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Management Training | SpecCon Holdings</title>
+    <meta name="description" content="Professional time management training to boost productivity, prioritize tasks effectively, and achieve better work-life balance.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="../js/centralized-modals.js"></script>
+    <link rel="icon" type="image/png" href="../images/Logo.png">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 10px 10px -5px rgb(0 0 0 / 0.04);
+        }
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        .dropdown-menu {
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-900">
+    <!-- Header -->
+    <header class="bg-white/90 backdrop-blur-md shadow-sm fixed w-full z-50 top-0">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex items-center justify-between">
+                <a href="../home.html">
+                    <img src="../SpecCon2.png" alt="SpecCon Holdings Logo" class="h-12">
+                </a>
+                <nav class="hidden lg:flex items-center space-x-8">
+                    <a href="../home.html#about" class="text-gray-600 hover:text-blue-600 transition duration-300">About Us</a>
+                    <a href="../home.html#qualifications" class="text-gray-600 hover:text-blue-600 transition duration-300">Qualifications</a>
+                    <a href="../home.html#accreditations" class="text-gray-600 hover:text-blue-600 transition duration-300">Accreditations</a>
+                    <div class="relative dropdown">
+                        <button class="text-gray-600 hover:text-blue-600 transition duration-300 flex items-center">
+                            Other Products <i data-lucide="chevron-down" class="w-4 h-4 ml-1"></i>
+                        </button>
+                        <div class="dropdown-menu absolute -left-16 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-20">
+                            <a href="../home.html#classroom-training" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Classroom Training</a>
+                            <a href="http://elearning.co.za" target="_blank" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Online Training</a>
+                            <a href="http://employmentequityact.za" target="_blank" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Employment Equity</a>
+                            <a href="http://LMS.co.za" target="_blank" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Learner Management System</a>
+                        </div>
+                    </div>
+                    <a href="../home.html#contact" class="text-gray-600 hover:text-blue-600 transition duration-300">Contact Us</a>
+                </nav>
+                <div class="hidden lg:block">
+                     <button data-modal="book" data-course="Time Management Training" class="bg-blue-600 text-white font-semibold px-5 py-2 rounded-lg hover:bg-blue-700 transition duration-300 shadow">Book Training</button>
+                </div>
+                <button id="mobile-menu-button" class="lg:hidden">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+             <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden lg:hidden mt-4">
+                <a href="../home.html#about" class="block py-2 text-gray-600 hover:text-blue-600">About Us</a>
+                <a href="../home.html#qualifications" class="block py-2 text-gray-600 hover:text-blue-600">Qualifications</a>
+                <a href="../home.html#accreditations" class="block py-2 text-gray-600 hover:text-blue-600">Accreditations</a>
+                <a href="../home.html#classroom-training" class="block py-2 text-gray-600 hover:text-blue-600">Classroom Training</a>
+                <a href="http://elearning.co.za" target="_blank" class="block py-2 text-gray-600 hover:text-blue-600">Online Training</a>
+                <a href="../home.html#contact" class="block py-2 text-gray-600 hover:text-blue-600">Contact Us</a>
+                <button onclick="window.location.href='../home.html#contact'" class="w-full mt-4 bg-blue-600 text-white font-semibold px-5 py-2 rounded-lg hover:bg-blue-700 transition duration-300 text-center">Book Training</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 text-white pt-28 pb-20">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="mb-6">
+                        <span class="bg-blue-500/20 text-blue-100 px-4 py-2 rounded-full text-sm font-medium">Productivity & Performance</span>
+                    </div>
+                    <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">Time Management Training</h1>
+                    <p class="text-xl text-blue-100 mb-8">
+                        Master the art of time management to boost productivity, reduce stress, and achieve better work-life balance through proven strategies and techniques.
+                    </p>
+
+                    <div class="grid grid-cols-3 gap-6 mb-8">
+                        <div class="text-center p-4 bg-white/10 rounded-lg">
+                            <div class="text-2xl font-bold text-white">1-2</div>
+                            <div class="text-blue-100 text-sm">Days Duration</div>
+                        </div>
+                        <div class="text-center p-4 bg-white/10 rounded-lg">
+                            <div class="text-2xl font-bold text-white">All</div>
+                            <div class="text-blue-100 text-sm">Levels</div>
+                        </div>
+                        <div class="text-center p-4 bg-white/10 rounded-lg">
+                            <div class="text-2xl font-bold text-white">✓</div>
+                            <div class="text-blue-100 text-sm">Certificate</div>
+                        </div>
+                    </div>
+
+                    <a href="../home.html#contact" class="bg-white text-blue-600 font-bold py-4 px-8 rounded-lg hover:bg-gray-100 transition duration-300 inline-flex items-center">
+                        <i data-lucide="calendar" class="w-5 h-5 mr-2"></i>
+                        Book This Training
+                    </a>
+                </div>
+
+                <div class="relative">
+                    <img src="https://images.pexels.com/photos/3760069/pexels-photo-3760069.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                         alt="Professional planning and time management"
+                         class="rounded-2xl shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Overview -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Time Management Overview</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Learn practical time management techniques that will transform your productivity and help you achieve more in less time.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-2xl shadow-lg p-8 card-hover transition-all duration-300">
+                    <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mb-6">
+                        <i data-lucide="target" class="w-8 h-8 text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Goal Setting & Prioritization</h3>
+                    <p class="text-gray-600">Learn to set SMART goals, prioritize tasks using proven frameworks, and focus on high-impact activities.</p>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg p-8 card-hover transition-all duration-300">
+                    <div class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mb-6">
+                        <i data-lucide="calendar" class="w-8 h-8 text-green-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Planning & Scheduling</h3>
+                    <p class="text-gray-600">Master effective planning techniques, time blocking, and scheduling methods to maximize your daily productivity.</p>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg p-8 card-hover transition-all duration-300">
+                    <div class="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center mb-6">
+                        <i data-lucide="zap" class="w-8 h-8 text-purple-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Productivity Techniques</h3>
+                    <p class="text-gray-600">Discover powerful productivity methods like Pomodoro Technique, Getting Things Done (GTD), and time boxing.</p>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg p-8 card-hover transition-all duration-300">
+                    <div class="w-16 h-16 bg-orange-100 rounded-2xl flex items-center justify-center mb-6">
+                        <i data-lucide="shield-off" class="w-8 h-8 text-orange-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Distraction Management</h3>
+                    <p class="text-gray-600">Identify and eliminate time wasters, manage interruptions, and create focused work environments.</p>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg p-8 card-hover transition-all duration-300">
+                    <div class="w-16 h-16 bg-red-100 rounded-2xl flex items-center justify-center mb-6">
+                        <i data-lucide="users" class="w-8 h-8 text-red-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Delegation & Communication</h3>
+                    <p class="text-gray-600">Learn effective delegation strategies and communication techniques to optimize team productivity.</p>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg p-8 card-hover transition-all duration-300">
+                    <div class="w-16 h-16 bg-teal-100 rounded-2xl flex items-center justify-center mb-6">
+                        <i data-lucide="balance-scale" class="w-8 h-8 text-teal-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Work-Life Balance</h3>
+                    <p class="text-gray-600">Achieve sustainable productivity while maintaining healthy boundaries and personal well-being.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What You'll Learn -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">Key Learning Outcomes</h2>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i data-lucide="check" class="w-4 h-4 text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-900 mb-2">Time Assessment & Analysis</h3>
+                                <p class="text-gray-600">Analyze your current time usage patterns and identify opportunities for improvement.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i data-lucide="check" class="w-4 h-4 text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-900 mb-2">Priority Matrix Implementation</h3>
+                                <p class="text-gray-600">Master the Eisenhower Matrix and other prioritization frameworks for better decision-making.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i data-lucide="check" class="w-4 h-4 text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-900 mb-2">Digital Tools & Systems</h3>
+                                <p class="text-gray-600">Leverage technology and digital tools to automate and streamline your workflow.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i data-lucide="check" class="w-4 h-4 text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-900 mb-2">Stress Reduction Strategies</h3>
+                                <p class="text-gray-600">Develop techniques to manage deadline pressure and maintain productivity under stress.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <img src="https://images.pexels.com/photos/3184298/pexels-photo-3184298.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                         alt="Productive workspace and planning tools"
+                         class="rounded-2xl shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Training Methods -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Training Methods</h2>
+                <p class="text-xl text-gray-600">Interactive and practical approaches to learning time management skills.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white rounded-2xl shadow-lg p-6 text-center">
+                    <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="presentation" class="w-8 h-8 text-blue-600"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-2">Interactive Workshops</h3>
+                    <p class="text-gray-600">Hands-on exercises and real-world scenarios</p>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg p-6 text-center">
+                    <div class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="users" class="w-8 h-8 text-green-600"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-2">Group Discussions</h3>
+                    <p class="text-gray-600">Share experiences and learn from peers</p>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg p-6 text-center">
+                    <div class="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="clipboard-check" class="w-8 h-8 text-purple-600"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-2">Self-Assessment Tools</h3>
+                    <p class="text-gray-600">Evaluate your time management habits</p>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg p-6 text-center">
+                    <div class="w-16 h-16 bg-orange-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="target" class="w-8 h-8 text-orange-600"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-2">Action Planning</h3>
+                    <p class="text-gray-600">Create personalized implementation strategies</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Details -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Training Details</h2>
+                <p class="text-xl text-gray-600">Comprehensive time management training designed for busy professionals.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white rounded-2xl shadow-lg p-6 text-center">
+                    <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="clock" class="w-8 h-8 text-blue-600"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-2">Duration</h3>
+                    <p class="text-gray-600">1-2 Days Intensive</p>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg p-6 text-center">
+                    <div class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="users" class="w-8 h-8 text-green-600"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-2">Group Size</h3>
+                    <p class="text-gray-600">Max 16 Participants</p>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg p-6 text-center">
+                    <div class="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="award" class="w-8 h-8 text-purple-600"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-2">Certificate</h3>
+                    <p class="text-gray-600">Completion Certificate</p>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg p-6 text-center">
+                    <div class="w-16 h-16 bg-orange-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="laptop" class="w-8 h-8 text-orange-600"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-2">Format</h3>
+                    <p class="text-gray-600">Interactive Workshop</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-20 bg-gradient-to-r from-blue-600 to-blue-800">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Master Your Time?</h2>
+            <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+                Transform your productivity and achieve better work-life balance with our comprehensive time management training program.
+            </p>
+            <a href="../home.html#contact" class="bg-white text-blue-600 font-bold py-4 px-8 rounded-lg hover:bg-gray-100 transition duration-300 inline-flex items-center">
+                <i data-lucide="mail" class="w-5 h-5 mr-2"></i>
+                Get Training Information
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <img src="../SpecCon2.png" alt="SpecCon Holdings Logo" class="h-12 mr-3">
+                        <div>
+                            <h3 class="text-xl font-bold">SpecCon Holdings</h3>
+                            <p class="text-gray-400">Time Management Training</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 mb-4">Building productive professionals through effective time management training.</p>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="../home.html" class="text-gray-400 hover:text-white transition duration-200">Home</a></li>
+                        <li><a href="professional-development.html" class="text-gray-400 hover:text-white transition duration-200">Professional Development</a></li>
+                        <li><a href="../home.html#contact" class="text-gray-400 hover:text-white transition duration-200">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Get Started</h4>
+                    <ul class="space-y-2">
+                        <li><a href="../home.html#contact" class="text-gray-400 hover:text-white transition duration-200">Book Training</a></li>
+                        <li><a href="../home.html#contact" class="text-gray-400 hover:text-white transition duration-200">Get Information</a></li>
+                        <li><a href="mailto:help@speccon.co.za" class="text-gray-400 hover:text-white transition duration-200">Email Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2025 SpecCon Holdings. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        const mobileNavLinks = mobileMenu.querySelectorAll('a');
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>

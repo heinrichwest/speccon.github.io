@@ -1,0 +1,77 @@
+QUALIFICATION DETAILS
+=====================
+
+Qualification Name: Occupational Certificate: Quality Manager
+SETA: SERVICES
+NQF Level: 6
+Minimum Credits: 270
+Qualification NLRD ID: 118768
+Learning Programme NLRD ID: N/A
+Expiry Date: 15-May-30
+Status: Accredited
+Reference Sheet: QCTO Lyttleton
+
+MODULES AND UNITS
+=================
+Module 1 - Fundamental Management Principles (Credits 12)
+? Fundamental Management Principles, Level 5, 4 Credits (132107-000-00-00-KM-04)
+? Quality Management, NQF Level 6, Credits 8 (132107-000-00-00-KM-08)
+
+Module 2 - Quality Management and Quality Management Systems (Credits 17)
+? Quality Management and Quality Management Systems, Level 5, 11 Credits (132107-000-00-00-KM-01)
+? System Management and Leadership, NQF Level 6, Credits 6 (9.	132107-000-00-00-KM-09)
+
+Module 3 - Quality Management and the 4th Industrial Revolution (Credits 3)
+? Quality Management and the 4th Industrial Revolution, Level 5, 3 Credits ( 132107-000-00-00-KM-02)
+
+Module 4 - Managing a Quality Assurance Department (Credits 58)
+? Managing Quality Assurance Department or Business Unit, Level 5, 8 Credits (132107-000-00-00-KM-05)
+? Lead and Manage Wellbeing and Performance of Staff and Effectiveness of Teams, Level 5, 2 Credits (132107-000-00-00-PM-07)
+? Develop Quality Business Unit Plans and Control the Achievement of Targets, NQF Level 6, Credits 4 (132107-000-00-00-PM-11)
+? Manage Human Capital of the Quality Management Business Unit, NQF Level 6, Credits 4 (132107-000-00-00-PM-12)
+? Plan and Control Targets and Performance Standards in Accordance with Workplace Processes and Procedures, NQF Level 6, Credits 24 (132107-000-00-00-WM-05)
+? Maintain Productive and Effective Work Teams for a Quality Business Unit, Level 5, 16 Credits (132107-000-00-00-WM-02)
+
+Module 5 - Ethics and Accountability (Credits 8)
+? Apply Principles of Business Ethics and Accountability, NQF Level 5, Credits 2 (132107-000-00-00-PM-08)
+? Apply Business Ethics, Accountability and Liability to Uphold Company Reputation, NQF Level 6, Credits 6 (132107-000-00-00-PM-18)
+
+Module 6 - Process Management (Credits 20)
+? Process Management, Level 5, 6 Credits (132107-000-00-00-KM-03)
+? Implement and Maintain Quality Assurance Processes in Compliance with Regulatory and Customer Requirements, Level 5, 4 Credits (132107-000-00-00-PM-01)
+? Standards and Statutory and Regulatory Requirements, NQF Level 6, Credits 10 (132107-000-00-00-KM-11)
+
+Module 7 - Internal and External Stakeholders (Credits 4)
+? Internal and External Stakeholders, Level 5, 2 Credits (132107-000-00-00-KM-07
+? Introduce new Products/Service, Level 5, 2 Credits (132107-000-00-00-PM-05)
+
+
+
+Module 8 - Risk Profiling and Audits (Credits 8)
+? Risk Profiling, Level 5, 4 Credits (132107-000-00-00-KM-06)
+? Conduct Internal Audits of the Quality Management System Policies and Procedures, Level 5, 4 Credits (132107-000-00-00-PM-09)
+
+Module 9 - The Design of Quality Measurement (Credits 10)
+? Design of Quality Measurement, NQF Level 6, Credits 10 (132107-000-00-00-KM-12)
+
+Module 10 - Quality Management Finances (Credits 40)
+? Management of Resources, NQF Level 6, Credits 6 (132107-000-00-00-KM-10)
+? Quality Management Finances, NQF Level 6, Credits 6 (132107-000-00-00-KM-13)
+? Compile a Budget for Operational Expenses for the Quality Business Unit, NQF Level 6, Credits 4 (132107-000-00-00-PM-13)
+? Identify, Acquire and Manage Necessary Resources for Execution of the Quality Function, NQF Level 6, Credits 4 (132107-000-00-00-PM-14)
+? Attend to Standard Financial Planning, Monitoring and Controlling Procedures of the Quality Business Unit, NQF Level 6, Credits 20 (132107-000-00-00-WM-04)
+
+Module 11 - Conduct Quality Assurance (Credits 76)
+? Plan the Quality Management Function and Activities, NQF Level 6, Credits 4 (132107-000-00-00-PM-10)
+? Conduct Quality Assurance to Ensure Product/Service Conforms to Standards and Regulatory Requirements, Level 5, 4 Credits (132107-000-00-00-PM-02)
+? Manage Documentation and Records within Quality Assurance Processes, Level 5, 2 Credits (132107-000-00-00-PM-03)
+? Manage Quality Management System, NQF Level 6, Credits 6 (132107-000-00-00-PM-15)
+? Manage Quality Assurance Activities, NQF Level 6, Credits 8 (132107-000-00-00-PM-19)
+? Conduct Quality Assurance at Various Stages of the Process, Level 5, 28 Credits (132107-000-00-00-WM-01)
+? Render Quality Planning, Monitoring and Communication Services, NQF Level 6, Credits 24 (132107-000-00-00-WM-03)
+
+Module 12 - Analysis and process improvement (Credits 14)
+? Critically Analyse Qualitative and Quantitative Data and Use Information for Improvements, Level 5, 2 Credits (132107-000-00-00-PM-06)
+? Improve the Effectiveness and Efficiency of Quality Assurance Processes, Level 5, 2 Credits (132107-000-00-00-PM-04)
+? Analyse and Evaluate Information and Report on Quality Management Functions, NQF Level 6, Credits 4 (132107-000-00-00-PM-17)
+? Execute Continuous Improvement and New Product/Service Implementation, NQF Level 6, Credits 6 (132107-000-00-00-PM-16)

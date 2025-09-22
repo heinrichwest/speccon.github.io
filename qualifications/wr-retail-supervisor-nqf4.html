@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retail Supervisor NQF Level 4 | W&R SETA | SpecCon Holdings</title>
+    <meta name="description" content="Develop supervisory and leadership skills with our NQF Level 4 Retail Supervisor qualification accredited by W&R SETA. 100 credits, workplace-ready training.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 10px 10px -5px rgb(0 0 0 / 0.04);
+        }
+        /* Sticky Banner Styles */
+        .sticky-banner {
+            position: fixed;
+            top: 100px;
+            right: 20px;
+            background: linear-gradient(135deg, #12265E 0%, #4A90E2 100%);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            z-index: 1000;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            font-weight: 600;
+            font-size: 14px;
+            backdrop-filter: blur(10px);
+        }
+        .sticky-banner:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+            background: linear-gradient(135deg, #0d1a47 0%, #3a7bc8 100%);
+        }
+        .banner-popup {
+            position: fixed;
+            top: 160px;
+            right: 20px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            z-index: 999;
+            overflow: hidden;
+            transform: translateY(-20px);
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.3s ease;
+            max-width: 420px;
+            width: 90vw;
+        }
+        .banner-popup.show {
+            transform: translateY(0);
+            opacity: 1;
+            pointer-events: all;
+        }
+        .animate-scroll {
+            animation: scroll 30s linear infinite;
+        }
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-900">
+    <!-- Header -->
+    <header class="bg-white/95 backdrop-blur-md shadow-lg fixed w-full z-50 top-0">
+        <div class="container mx-auto px-4 lg:px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <a href="../index.html">
+                        <img src="../images/Logo.png" alt="SpecCon Holdings Logo" class="h-12">
+                    </a>
+                    <div class="ml-3">
+                        <h1 class="text-xl font-bold text-gray-900">SpecCon Holdings</h1>
+                        <p class="text-sm text-gray-600">Retail Supervisor Qualification</p>
+                    </div>
+                </div>
+
+                <nav class="hidden lg:flex items-center space-x-8">
+                    <a href="../index.html" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300">Home</a>
+                    <a href="../setas/wr-seta.html" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300">W&R SETA</a>
+                    <a href="../index.html#qualifications" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300">All Qualifications</a>
+                    <a href="../index.html#contact" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300">Contact Us</a>
+                </nav>
+
+                <div class="hidden lg:block">
+                    <a href="../index.html#apply" class="bg-gradient-to-r from-orange-600 to-red-600 text-white font-semibold px-6 py-3 rounded-lg hover:from-orange-700 hover:to-red-700 transition duration-300 shadow-lg">
+                        Apply Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <section class="pt-24 pb-8 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <nav class="text-sm text-gray-600">
+                <a href="../index.html" class="hover:text-blue-600">Home</a>
+                <span class="mx-2">/</span>
+                <a href="../setas/wr-seta.html" class="hover:text-blue-600">W&R SETA</a>
+                <span class="mx-2">/</span>
+                <span class="text-gray-900">Retail Supervisor NQF Level 4</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="py-16 bg-gradient-to-br from-orange-50 to-white">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-orange-100 rounded-2xl flex items-center justify-center mr-6">
+                            <i data-lucide="clipboard-list" class="w-8 h-8 text-orange-600"></i>
+                        </div>
+                        <div>
+                            <span class="text-orange-600 font-semibold">NQF Level 4 | W&R SETA</span>
+                            <h1 class="text-4xl md:text-5xl font-bold text-gray-900">Retail Supervisor</h1>
+                        </div>
+                    </div>
+                    <p class="text-lg text-gray-600 leading-relaxed mb-8">
+                        Advanced qualification for retail supervisory roles, covering team management, operations oversight, and customer service enhancement.
+                        Develop supervisory skills for leading retail teams and managing store operations.
+                    </p>
+                    <div class="grid grid-cols-3 gap-4 mb-8">
+                        <div class="text-center p-4 bg-white rounded-lg shadow">
+                            <div class="text-xl font-bold text-orange-600">100</div>
+                            <div class="text-sm text-gray-600">Credits</div>
+                        </div>
+                        <div class="text-center p-4 bg-white rounded-lg shadow">
+                            <div class="text-xl font-bold text-blue-600">18-24</div>
+                            <div class="text-sm text-gray-600">Months</div>
+                        </div>
+                        <div class="text-center p-4 bg-white rounded-lg shadow">
+                            <div class="text-xl font-bold text-purple-600">NQF 4</div>
+                            <div class="text-sm text-gray-600">Level</div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="../index.html#apply" class="bg-gradient-to-r from-orange-600 to-red-600 text-white font-semibold px-8 py-4 rounded-lg hover:from-orange-700 hover:to-red-700 transition duration-300 text-center">
+                            Apply for this Qualification
+                        </a>
+                        <a href="../index.html#contact" class="border-2 border-orange-600 text-orange-600 font-semibold px-8 py-4 rounded-lg hover:bg-orange-600 hover:text-white transition duration-300 text-center">
+                            Get More Info
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <img src="https://images.pexels.com/photos/3184405/pexels-photo-3184405.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Retail Supervisor" class="rounded-2xl shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Qualification Details -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-3 gap-12">
+                <!-- Main Content -->
+                <div class="lg:col-span-2">
+                    <!-- Overview -->
+                    <div class="mb-12">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-6">Qualification Overview</h2>
+                        <div class="prose prose-lg text-gray-700">
+                            <p>The Occupational Certificate: Retail Supervisor (NQF Level 4) provides comprehensive knowledge and skills for supervisory roles in retail and wholesale environments. This qualification is designed for individuals seeking leadership positions in retail operations, team management, and customer service enhancement.</p>
+                            <p>Students will gain advanced skills in team supervision, performance monitoring, operations management, customer relationship management, and complaints resolution while developing essential leadership competencies for the retail industry.</p>
+                        </div>
+                    </div>
+
+                    <!-- Learning Modules -->
+                    <div class="mb-12">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-8">Learning Modules</h2>
+                        <div class="space-y-6">
+                            <!-- Module 1 -->
+                            <div class="bg-gray-50 rounded-xl p-6">
+                                <h3 class="text-xl font-semibold text-gray-900 mb-4">Module 1: Team Supervision (50 Credits)</h3>
+                                <ul class="space-y-2 text-gray-700">
+                                    <li>• Concepts and principles of supervising wholesale or retail staff (10 Credits)</li>
+                                    <li>• Supervise retail or wholesale staff (6 Credits)</li>
+                                    <li>• Processes and procedures for supervising wholesale or retail staff (30 Credits)</li>
+                                    <li>• Supervise operations (4 Credits)</li>
+                                </ul>
+                            </div>
+
+                            <!-- Module 2 -->
+                            <div class="bg-gray-50 rounded-xl p-6">
+                                <h3 class="text-xl font-semibold text-gray-900 mb-4">Module 2: Monitoring and Evaluation (10 Credits)</h3>
+                                <ul class="space-y-2 text-gray-700">
+                                    <li>• Concepts and principles of monitoring and improving performance (4 Credits)</li>
+                                    <li>• Monitor and control the work performance of a team (6 Credits)</li>
+                                </ul>
+                            </div>
+
+                            <!-- Module 3 -->
+                            <div class="bg-gray-50 rounded-xl p-6">
+                                <h3 class="text-xl font-semibold text-gray-900 mb-4">Module 3: Implementation and Maintenance (23 Credits)</h3>
+                                <ul class="space-y-2 text-gray-700">
+                                    <li>• Concepts and principles for the implementation and maintenance of retail or wholesale operations (3 Credits)</li>
+                                    <li>• Processes and procedures for supervising, implementing and maintaining processes in a wholesale or retail outlet (20 Credits)</li>
+                                </ul>
+                            </div>
+
+                            <!-- Module 4 -->
+                            <div class="bg-gray-50 rounded-xl p-6">
+                                <h3 class="text-xl font-semibold text-gray-900 mb-4">Module 4: Customer Relationship Management (15 Credits)</h3>
+                                <ul class="space-y-2 text-gray-700">
+                                    <li>• Concepts and principles of enhancing customer service (3 Credits)</li>
+                                    <li>• Supervise service to internal and external retail and wholesale customers (2 Credits)</li>
+                                    <li>• Processes and procedures for enhancing customer service in a wholesale or retail outlet (10 Credits)</li>
+                                </ul>
+                            </div>
+
+                            <!-- Module 5 -->
+                            <div class="bg-gray-50 rounded-xl p-6">
+                                <h3 class="text-xl font-semibold text-gray-900 mb-4">Module 5: Complaints Management (2 Credits)</h3>
+                                <ul class="space-y-2 text-gray-700">
+                                    <li>• Resolve queries and complaints from internal and external retail and wholesale customers (2 Credits)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="lg:col-span-1">
+                    <!-- Quick Facts -->
+                    <div class="bg-orange-50 rounded-2xl p-8 mb-8">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-6">Quick Facts</h3>
+                        <div class="space-y-4">
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">SETA:</span>
+                                <span class="font-semibold">W&R SETA</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">NQF Level:</span>
+                                <span class="font-semibold">4</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Credits:</span>
+                                <span class="font-semibold">100</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">NLRD ID:</span>
+                                <span class="font-semibold">99573</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Status:</span>
+                                <span class="font-semibold">Accredited</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Expiry Date:</span>
+                                <span class="font-semibold">14-May-29</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Career Opportunities -->
+                    <div class="bg-white border border-gray-200 rounded-2xl p-8 mb-8">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-6">Career Opportunities</h3>
+                        <ul class="space-y-3 text-gray-700">
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-orange-500 mr-3 mt-0.5"></i>
+                                Retail Supervisor
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-orange-500 mr-3 mt-0.5"></i>
+                                Team Leader
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-orange-500 mr-3 mt-0.5"></i>
+                                Department Supervisor
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-orange-500 mr-3 mt-0.5"></i>
+                                Store Operations Coordinator
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-orange-500 mr-3 mt-0.5"></i>
+                                Customer Service Manager
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Related Qualifications -->
+                    <div class="bg-white border border-gray-200 rounded-2xl p-8">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-6">Related Qualifications</h3>
+                        <div class="space-y-4">
+                            <a href="wr-sales-assistant-nqf3.html" class="block p-4 border border-gray-200 rounded-lg hover:border-orange-300 hover:bg-orange-50 transition duration-300">
+                                <div class="font-semibold text-gray-900">Sales Assistant NQF 3</div>
+                                <div class="text-sm text-gray-600">Advanced sales role</div>
+                            </a>
+                            <a href="wr-retail-manager-nqf5.html" class="block p-4 border border-gray-200 rounded-lg hover:border-orange-300 hover:bg-orange-50 transition duration-300">
+                                <div class="font-semibold text-gray-900">Retail Manager NQF 5</div>
+                                <div class="text-sm text-gray-600">Management level</div>
+                            </a>
+                            <a href="wr-retail-buyer-nqf5.html" class="block p-4 border border-gray-200 rounded-lg hover:border-orange-300 hover:bg-orange-50 transition duration-300">
+                                <div class="font-semibold text-gray-900">Retail Buyer NQF 5</div>
+                                <div class="text-sm text-gray-600">Procurement specialist</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-gradient-to-r from-orange-600 to-red-600 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Lead a Retail Team?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto opacity-90">
+                Join our Retail Supervisor qualification and develop the leadership skills needed for a successful supervisory career in retail.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="../index.html#apply" class="bg-white text-orange-600 font-semibold px-8 py-4 rounded-lg hover:bg-gray-100 transition duration-300">
+                    Apply Now
+                </a>
+                <a href="../index.html#contact" class="border-2 border-white text-white font-semibold px-8 py-4 rounded-lg hover:bg-white hover:text-orange-600 transition duration-300">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">SpecCon Holdings</h3>
+                    <p class="text-gray-400">Empowering futures through quality education and training.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="../index.html" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="../index.html#about" class="text-gray-400 hover:text-white transition-colors">About</a></li>
+                        <li><a href="../index.html#qualifications" class="text-gray-400 hover:text-white transition-colors">Qualifications</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">W&R SETA</h4>
+                    <ul class="space-y-2">
+                        <li><a href="../setas/wr-seta.html" class="text-gray-400 hover:text-white transition-colors">All W&R SETA Qualifications</a></li>
+                        <li><a href="wr-sales-assistant-nqf3.html" class="text-gray-400 hover:text-white transition-colors">Sales Assistant NQF 3</a></li>
+                        <li><a href="wr-retail-manager-nqf5.html" class="text-gray-400 hover:text-white transition-colors">Retail Manager NQF 5</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact</h4>
+                    <p class="text-gray-400">Email: info@speccon.co.za</p>
+                    <p class="text-gray-400">Phone: +27 (0)11 123 4567</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+    <script>
+        // Sticky Banner Functionality
+        const stickyBanner = document.getElementById("stickyBanner");
+        const bannerPopup = document.getElementById("bannerPopup");
+        const closePopup = document.getElementById("closePopup");
+        let isPopupOpen = false;
+
+        // Show banner immediately when page loads
+        stickyBanner.style.display = "block";
+
+        // Toggle popup on banner hover/click
+        stickyBanner.addEventListener("mouseenter", function() {
+            if (!isPopupOpen) {
+                bannerPopup.classList.add("show");
+                isPopupOpen = true;
+            }
+        });
+
+        stickyBanner.addEventListener("click", function() {
+            bannerPopup.classList.toggle("show");
+            isPopupOpen = !isPopupOpen;
+        });
+
+        // Close popup
+        closePopup.addEventListener("click", function() {
+            bannerPopup.classList.remove("show");
+            isPopupOpen = false;
+        });
+
+        // Close popup when clicking outside
+        document.addEventListener("click", function(e) {
+            if (!stickyBanner.contains(e.target) && !bannerPopup.contains(e.target)) {
+                bannerPopup.classList.remove("show");
+                isPopupOpen = false;
+            }
+        });
+    </script>
+</body>
+</html>

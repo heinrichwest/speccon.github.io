@@ -1,0 +1,2405 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpecCon Holdings | Accredited Training & Learnerships</title>
+    <link rel="icon" type="image/png" href="images/Logo.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #12265E 0%, #92abc4 100%);
+        }
+
+        /* SpecCon Brand Colors */
+        .speccon-blue { background-color: #12265E; }
+        .speccon-blue { background-color: #4A90E2; }
+        .speccon-light-blue { background-color: #92abc4; }
+        .text-speccon-blue { color: #12265E; }
+        .text-speccon-blue { color: #4A90E2; }
+        .text-speccon-light-blue { color: #92abc4; }
+        .border-speccon-blue { border-color: #12265E; }
+        .border-speccon-blue { border-color: #4A90E2; }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 10px 10px -5px rgb(0 0 0 / 0.04);
+        }
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        .dropdown-menu {
+            display: none;
+        }
+        /* Dropdown styling for better hover stability and alignment */
+        .dropdown {
+            padding-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+        .dropdown button {
+            display: flex;
+            align-items: center;
+        }
+        .dropdown-menu {
+            top: 100%;
+            margin-top: 0;
+            padding-top: 8px;
+        }
+        .hero-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        /* Video background styling */
+        .video-fallback {
+            display: none;
+        }
+
+        /* Show fallback if video fails to load */
+        video:not([data-loaded="true"]) + .video-fallback {
+            display: block;
+        }
+
+        /* Ensure video fills container properly */
+        video {
+            z-index: 1;
+        }
+
+        /* Client Testimonials Carousel */
+        .carousel-container {
+            overflow: hidden;
+        }
+
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        /* Scrolling logos animation */
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .animate-scroll {
+            animation: scroll 30s linear infinite;
+        }
+
+        .animate-scroll:hover {
+            animation-play-state: paused;
+        }
+
+        /* Team Testimonials Carousel */
+        #teamCarousel {
+            will-change: transform;
+        }
+
+        .team-card {
+            flex: 0 0 280px;
+            transition: transform 0.3s ease;
+        }
+
+        .team-card:hover {
+            transform: translateY(-4px);
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-900">
+    <!-- Header -->
+    <header class="bg-white/95 backdrop-blur-md shadow-lg fixed w-full z-50 top-0">
+        <div class="container mx-auto px-4 lg:px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <img src="images/Logo.png" alt="SpecCon Holdings Logo" class="h-12">
+                    <div class="ml-3">
+                        <h1 class="text-xl font-bold text-gray-900">SpecCon Holdings</h1>
+                        <p class="text-sm text-gray-600">Accredited Training Solutions</p>
+                    </div>
+                </div>
+
+                <nav class="hidden lg:flex items-center space-x-8">
+                    <a href="#about" class="text-gray-700 hover:text-[#12265E] font-medium transition duration-300">Why Choose Us</a>
+                    <a href="#qualifications" class="text-gray-700 hover:text-[#12265E] font-medium transition duration-300">Qualifications</a>
+                    <a href="#accreditations" class="text-gray-700 hover:text-[#12265E] font-medium transition duration-300">Accreditations</a>
+                    <a href="#classroom-training" class="text-gray-700 hover:text-[#12265E] font-medium transition duration-300">Classroom Training</a>
+
+                    <div class="relative dropdown">
+                        <button class="text-gray-700 hover:text-[#12265E] font-medium transition duration-300 inline-flex items-center">
+                            Other Products <i data-lucide="chevron-down" class="w-4 h-4 ml-1"></i>
+                        </button>
+                        <div class="dropdown-menu absolute left-0 w-64 bg-white rounded-lg shadow-xl py-2 z-20 border">
+                            <a href="https://elearning.co.za/" target="_blank" class="block px-4 py-3 text-sm text-gray-700 hover:bg-[#12265E]/10 hover:text-[#12265E] transition duration-200">
+                                <i data-lucide="monitor" class="w-4 h-4 inline mr-2"></i>Online Training
+                            </a>
+                            <a href="https://employmentequityact.co.za/" target="_blank" class="block px-4 py-3 text-sm text-gray-700 hover:bg-[#12265E]/10 hover:text-[#12265E] transition duration-200">
+                                <i data-lucide="shield-check" class="w-4 h-4 inline mr-2"></i>Employment Equity
+                            </a>
+                            <a href="https://learningmanagementsystem.co.za/" target="_blank" class="block px-4 py-3 text-sm text-gray-700 hover:bg-[#12265E]/10 hover:text-[#12265E] transition duration-200">
+                                <i data-lucide="graduation-cap" class="w-4 h-4 inline mr-2"></i>Learning Management System
+                            </a>
+                            <a href="https://skillsdevelopment.co.za/" target="_blank" class="block px-4 py-3 text-sm text-gray-700 hover:bg-[#12265E]/10 hover:text-[#12265E] transition duration-200">
+                                <i data-lucide="trending-up" class="w-4 h-4 inline mr-2"></i>Skills Development
+                            </a>
+                            <a href="https://www.specconacademy.co.za/" target="_blank" class="block px-4 py-3 text-sm text-gray-700 hover:bg-[#12265E]/10 hover:text-[#12265E] transition duration-200">
+                                <i data-lucide="school" class="w-4 h-4 inline mr-2"></i>SpecCon Academy
+                            </a>
+                            <a href="https://bbbee.co.za/" target="_blank" class="block px-4 py-3 text-sm text-gray-700 hover:bg-[#12265E]/10 hover:text-[#12265E] transition duration-200">
+                                <i data-lucide="award" class="w-4 h-4 inline mr-2"></i>BBBEE Consulting
+                            </a>
+                        </div>
+                    </div>
+
+                    <a href="#contact" class="text-gray-700 hover:text-[#12265E] font-medium transition duration-300">Contact Us</a>
+                </nav>
+
+                <div class="hidden lg:block">
+                    <button id="apply-btn-desktop" class="bg-gradient-to-r from-[#12265E] to-[#4A90E2] text-white font-semibold px-6 py-3 rounded-lg hover:from-[#0d1a47] hover:to-[#3a7bc8] transition duration-300 shadow-lg">
+                        Apply for a Learnership
+                    </button>
+                </div>
+
+                <button id="mobile-menu-button" class="lg:hidden">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden lg:hidden mt-4 pb-4">
+                <div class="space-y-3">
+                    <a href="#about" class="block py-2 text-gray-700 hover:text-[#12265E] font-medium">Why Choose Us</a>
+                    <a href="#qualifications" class="block py-2 text-gray-700 hover:text-[#12265E] font-medium">Qualifications</a>
+                    <a href="#accreditations" class="block py-2 text-gray-700 hover:text-[#12265E] font-medium">Accreditations</a>
+                    <a href="#classroom-training" class="block py-2 text-gray-700 hover:text-[#12265E] font-medium">Classroom Training</a>
+                    <a href="http://elearning.co.za" target="_blank" class="block py-2 text-gray-700 hover:text-[#12265E] font-medium">Online Training</a>
+                    <a href="#contact" class="block py-2 text-gray-700 hover:text-[#12265E] font-medium">Contact Us</a>
+                    <button id="apply-btn-mobile" class="w-full mt-4 bg-gradient-to-r from-[#12265E] to-[#4A90E2] text-white font-semibold px-6 py-3 rounded-lg">
+                        Apply for a Learnership
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <!-- Video Background -->
+        <video autoplay muted loop class="absolute inset-0 w-full h-full object-cover">
+            <source src="Videos/Banner_Video_For_Specconcoza.mp4" type="video/mp4">
+            <!-- Fallback for browsers that don't support video -->
+            <div class="absolute inset-0 gradient-bg hero-pattern"></div>
+        </video>
+
+        <!-- Fallback gradient background for browsers without video support -->
+        <div class="absolute inset-0 gradient-bg hero-pattern video-fallback"></div>
+
+        <!-- Dark overlay for better text readability -->
+        <div class="absolute inset-0 bg-black/40"></div>
+
+        <div class="relative z-20 container mx-auto px-6 text-center text-white">
+            <div class="max-w-4xl mx-auto">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+                    Unlock Your <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">Potential</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-200 mb-8 leading-relaxed">
+                    Transform your career with our accredited learnerships and training programs.
+                    We provide nationally recognised qualifications designed for workplace-ready skills.
+                </p>
+                <div class="flex justify-center">
+                    <button id="apply-btn-hero" class="bg-gradient-to-r from-[#12265E] to-[#4A90E2] text-white font-bold py-4 px-8 rounded-lg text-lg hover:from-[#0d1a47] hover:to-[#3a7bc8] transition duration-300 shadow-xl transform hover:scale-105">
+                        Apply for a Learnership
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Animated Elements -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <i data-lucide="chevron-down" class="w-8 h-8 text-white"></i>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Why Choose SpecCon Holdings</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">From 1 employee to 150+ employees - Our journey of empowerment and growth</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
+                <div class="space-y-6">
+                    <div class="bg-gradient-to-r from-[#12265E] to-[#4A90E2] text-white p-6 rounded-xl mb-6">
+                        <h3 class="text-2xl font-bold mb-2">Our Story Since 2013</h3>
+                        <p class="text-lg opacity-90">From humble beginnings to becoming South Africa's leading learning solutions provider</p>
+                    </div>
+
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        <strong>SpecCon was established in 2013</strong> and has grown remarkably from just <strong>1 employee to over 150 employees</strong>.
+                        What makes us truly proud is that <strong>more than 50% of our current employees came from our own learnerships</strong> -
+                        and many of them are now thriving in management positions today.
+                    </p>
+
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        We've transformed from an Excel training company to <strong>South Africa's leading learnerships, QCTO,
+                        learning management system and online training company</strong>. Today, we operate from <strong>6 offices across South Africa</strong>,
+                        making quality education accessible nationwide.
+                    </p>
+
+                </div>
+                <div class="relative max-w-md mx-auto">
+                    <img src="https://images.pexels.com/photos/3184431/pexels-photo-3184431.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=2"
+                         alt="Professional training environment"
+                         class="rounded-2xl shadow-2xl w-full h-auto">
+                    <div class="absolute -bottom-4 -right-4 bg-gradient-to-r from-[#12265E] to-[#4A90E2] text-white p-4 rounded-2xl shadow-xl">
+                        <div class="text-2xl font-bold">11</div>
+                        <div class="text-xs">SETA Accreditations</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- What We're Proud About -->
+            <div class="mb-12">
+                <h3 class="text-3xl font-bold text-gray-900 text-center mb-8">What We're Proud About</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="text-center p-6 bg-white rounded-2xl shadow-lg card-hover transition-all duration-300">
+                        <div class="w-16 h-16 bg-gradient-to-r from-[#12265E] to-[#4A90E2] rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="award" class="w-8 h-8 text-white"></i>
+                        </div>
+                        <div class="text-3xl font-bold text-[#12265E] mb-2">55</div>
+                        <h4 class="text-lg font-bold text-gray-900 mb-2">Accredited Qualifications</h4>
+                        <p class="text-gray-600 text-sm">Including 27 QCTO qualifications</p>
+                    </div>
+
+                    <div class="text-center p-6 bg-white rounded-2xl shadow-lg card-hover transition-all duration-300">
+                        <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="smartphone" class="w-8 h-8 text-white"></i>
+                        </div>
+                        <div class="text-2xl font-bold text-green-600 mb-2">WhatsApp</div>
+                        <h4 class="text-lg font-bold text-gray-900 mb-2">Learning Innovation</h4>
+                        <p class="text-gray-600 text-sm">First in SA to deliver 300+ courses via WhatsApp</p>
+                    </div>
+
+                    <div class="text-center p-6 bg-white rounded-2xl shadow-lg card-hover transition-all duration-300">
+                        <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="brain" class="w-8 h-8 text-white"></i>
+                        </div>
+                        <div class="text-2xl font-bold text-purple-600 mb-2">AI</div>
+                        <h4 class="text-lg font-bold text-gray-900 mb-2">AI-Powered Learning</h4>
+                        <p class="text-gray-600 text-sm">First SA company with AI-marked assessments</p>
+                    </div>
+
+                    <div class="text-center p-6 bg-white rounded-2xl shadow-lg card-hover transition-all duration-300">
+                        <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="monitor" class="w-8 h-8 text-white"></i>
+                        </div>
+                        <div class="text-2xl font-bold text-blue-600 mb-2">LMS</div>
+                        <h4 class="text-lg font-bold text-gray-900 mb-2">Easiest LMS Worldwide</h4>
+                        <p class="text-gray-600 text-sm">Create courses, quizzes & exams effortlessly</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Management & Success Stories -->
+            <div class="bg-gradient-to-r from-[#12265E] to-[#4A90E2] text-white rounded-2xl p-8 text-center">
+                <h3 class="text-2xl font-bold mb-4">Our Leadership & Success</h3>
+                <div class="grid md:grid-cols-2 gap-8 text-center">
+                    <div>
+                        <i data-lucide="users" class="w-12 h-12 mx-auto mb-4 opacity-90"></i>
+                        <h4 class="text-xl font-semibold mb-2">Strongest Management Team</h4>
+                        <p class="opacity-90">Built over the last 10 years with unmatched industry experience</p>
+                    </div>
+                    <div>
+                        <i data-lucide="star" class="w-12 h-12 mx-auto mb-4 opacity-90"></i>
+                        <h4 class="text-xl font-semibold mb-2">Unbelievable Success Stories</h4>
+                        <p class="opacity-90">Countless people who seized the opportunity and transformed their lives</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Employee Success Stories Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Our Employee Success Stories</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">From learners to leaders - Real journeys of transformation and growth</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+                <!-- Employee Testimonial 1 -->
+                <div class="bg-gradient-to-br from-blue-50 to-indigo-100 p-8 rounded-2xl shadow-lg card-hover transition-all duration-300">
+                    <div class="flex items-center mb-6">
+                         <img src="../Images/Anthony.png"
+                             alt="Tumetsi Kgoroba" class="w-16 h-16 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="text-xl font-bold text-gray-900">Anthony Batsalelwang</h4>
+                            <p class="text-[#12265E] font-semibold">Learnership Supervisor</p>
+                            <p class="text-gray-600 text-sm">Started as Learner • 2020</p>
+                        </div>
+                    </div>
+                    <blockquote class="text-gray-700 italic mb-4">
+                        "From general worker to Learnership Supervisor - when I joined SpecCon in 2020 as a learnership student,
+                        I had no idea this would be the beginning of a life-changing journey. The company saw potential in me even when I didn't see it myself."
+                    </blockquote>
+                    <div class="flex items-center text-[#4A90E2]">
+                        <i data-lucide="quote" class="w-5 h-5 mr-2"></i>
+                        <span class="text-sm font-medium">General Worker → Learnership Supervisor</span>
+                    </div>
+                </div>
+
+                <!-- Employee Testimonial 2 -->
+                <div class="bg-gradient-to-br from-green-50 to-emerald-100 p-8 rounded-2xl shadow-lg card-hover transition-all duration-300">
+                    <div class="flex items-center mb-6">
+                        <img src="../Images/Tumetsi.png"
+                             alt="Tumetsi Kgoroba" class="w-16 h-16 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="text-xl font-bold text-gray-900">Tumetsi Kgoroba</h4>
+                            <p class="text-[#12265E] font-semibold">HR Officer</p>
+                            <p class="text-gray-600 text-sm">Fresh Graduate • 1 Year 1 Month</p>
+                        </div>
+                    </div>
+                    <blockquote class="text-gray-700 italic mb-4">
+                        "Joining SpecCon was a game-changer for me. As a fresh graduate, this company gave me the opportunity to apply my skills in the real world.
+                        The leadership team is like a family - they guide, correct, and build you into a better professional."
+                    </blockquote>
+                    <div class="flex items-center text-[#4A90E2]">
+                        <i data-lucide="quote" class="w-5 h-5 mr-2"></i>
+                        <span class="text-sm font-medium">Fresh Graduate → HR Officer</span>
+                    </div>
+                </div>
+
+                <!-- Employee Testimonial 3 -->
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-2xl shadow-lg card-hover transition-all duration-300">
+                    <div class="flex items-center mb-6">
+                        <img src="../Images/Shadrack.png"
+                             alt="Shadrack Mahlangu" class="w-16 h-16 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="text-xl font-bold text-gray-900">Shadrack Mahlangu</h4>
+                            <p class="text-[#12265E] font-semibold">Learning Centre Manager</p>
+                            <p class="text-gray-600 text-sm">Started as IT Learner</p>
+                        </div>
+                    </div>
+                    <blockquote class="text-gray-700 italic mb-4">
+                        "Joining SpecCon through an IT Systems Support learnership was the start of a life-changing journey. With Heinrich's guidance and the team's support,
+                        I discovered my passion for facilitation and today serve as Learning Centre Manager. SpecCon is more than a company—it's a family."
+                    </blockquote>
+                    <div class="flex items-center text-[#4A90E2]">
+                        <i data-lucide="quote" class="w-5 h-5 mr-2"></i>
+                        <span class="text-sm font-medium">IT Learner → Learning Centre Manager</span>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <!-- Stats about employee growth -->
+            <div class="bg-gradient-to-r from-[#12265E] to-[#4A90E2] text-white rounded-2xl p-8 text-center">
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div>
+                        <div class="text-4xl font-bold mb-2">50%+</div>
+                        <p class="text-lg opacity-90">Of our employees started as learners</p>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold mb-2">150+</div>
+                        <p class="text-lg opacity-90">Current employees growing with us</p>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold mb-2">10+</div>
+                        <p class="text-lg opacity-90">Years of building careers</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Success Stories Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Trusted by leading companies across South Africa</p>
+            </div>
+
+            <!-- Client Testimonials Carousel -->
+            <div class="relative mb-16">
+                <div class="overflow-hidden">
+                    <div id="clientCarousel" class="flex transition-transform duration-500 ease-in-out">
+                        <!-- Client Reference 1 - AVI -->
+                        <div class="w-full md:w-1/3 flex-shrink-0 px-4">
+                            <div class="bg-white p-6 rounded-2xl shadow-lg h-full">
+                                <div class="flex items-center mb-4">
+                                    <img src="Client Logos/AVI.PNG" alt="AVI" class="w-12 h-12 object-contain mr-4">
+                                    <div>
+                                        <h4 class="text-lg font-bold text-gray-900">AVI</h4>
+                                        <p class="text-gray-600 text-sm">Since March 2021</p>
+                                    </div>
+                                </div>
+                                <blockquote class="text-gray-700 italic mb-4 text-sm">
+                                    "SpecCon Holdings is knowledgeable, passionate and an expert in their field. They understand our business and always respond to our queries timeously. They always go the extra mile to ensure individual attention and customization."
+                                </blockquote>
+                                <div class="text-right">
+                                    <p class="font-semibold text-gray-900">Neteske Gerber</p>
+                                    <p class="text-gray-600 text-xs">Group Skills and Transformation Manager</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Client Reference 2 - Isuzu -->
+                        <div class="w-full md:w-1/3 flex-shrink-0 px-4">
+                            <div class="bg-white p-6 rounded-2xl shadow-lg h-full">
+                                <div class="flex items-center mb-4">
+                                    <img src="Client Logos/isuzu.PNG" alt="Isuzu" class="w-12 h-12 object-contain mr-4">
+                                    <div>
+                                        <h4 class="text-lg font-bold text-gray-900">Isuzu Motors</h4>
+                                        <p class="text-gray-600 text-sm">2.5+ years partnership</p>
+                                    </div>
+                                </div>
+                                <blockquote class="text-gray-700 italic mb-4 text-sm">
+                                    "The SpecCon LMS has transformed our training approach. All our onsite and e-Learning interventions can be managed through this system. The support team is excellent and available beyond working hours."
+                                </blockquote>
+                                <div class="text-right">
+                                    <p class="font-semibold text-gray-900">Lisa van Aswegen</p>
+                                    <p class="text-gray-600 text-xs">Dealer Training Manager</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Client Reference 3 - Imperial -->
+                        <div class="w-full md:w-1/3 flex-shrink-0 px-4">
+                            <div class="bg-white p-6 rounded-2xl shadow-lg h-full">
+                                <div class="flex items-center mb-4">
+                                    <img src="Client Logos/imperial.PNG" alt="Imperial" class="w-12 h-12 object-contain mr-4">
+                                    <div>
+                                        <h4 class="text-lg font-bold text-gray-900">Imperial Logistics</h4>
+                                        <p class="text-gray-600 text-sm">Since 2017</p>
+                                    </div>
+                                </div>
+                                <blockquote class="text-gray-700 italic mb-4 text-sm">
+                                    "The level of service we have received is truly exceptional. The combination of on-site training and e-Learning support is remarkable. SpecCon consistently goes above and beyond to meet our needs."
+                                </blockquote>
+                                <div class="text-right">
+                                    <p class="font-semibold text-gray-900">Belinda Sneddon</p>
+                                    <p class="text-gray-600 text-xs">Training and Development Specialist</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Client Reference 4 - AFGRI -->
+                        <div class="w-full md:w-1/3 flex-shrink-0 px-4">
+                            <div class="bg-white p-6 rounded-2xl shadow-lg h-full">
+                                <div class="flex items-center mb-4">
+                                    <img src="Client Logos/Afgri.png" alt="AFGRI" class="w-12 h-12 object-contain mr-4">
+                                    <div>
+                                        <h4 class="text-lg font-bold text-gray-900">AFGRI</h4>
+                                        <p class="text-gray-600 text-sm">Multiple years partnership</p>
+                                    </div>
+                                </div>
+                                <blockquote class="text-gray-700 italic mb-4 text-sm">
+                                    "SpecCon has provided all of our MS Excel and MS Word training for several years. Their trainers are extremely knowledgeable and helpful. I cannot find any fault with SpecCon."
+                                </blockquote>
+                                <div class="text-right">
+                                    <p class="font-semibold text-gray-900">Lucas Mahlangu</p>
+                                    <p class="text-gray-600 text-xs">Learning and Development</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Client Reference 5 - Servest -->
+                        <div class="w-full md:w-1/3 flex-shrink-0 px-4">
+                            <div class="bg-white p-6 rounded-2xl shadow-lg h-full">
+                                <div class="flex items-center mb-4">
+                                    <img src="Client Logos/servest.png" alt="Servest" class="w-12 h-12 object-contain mr-4">
+                                    <div>
+                                        <h4 class="text-lg font-bold text-gray-900">Servest</h4>
+                                        <p class="text-gray-600 text-sm">Multiple learnership programmes</p>
+                                    </div>
+                                </div>
+                                <blockquote class="text-gray-700 italic mb-4 text-sm">
+                                    "The SpecCon LMS allows management to monitor progress and proactively identify learning gaps. The technical support team is always professional and work hand in hand with management."
+                                </blockquote>
+                                <div class="text-right">
+                                    <p class="font-semibold text-gray-900">Boitumelo Moseki</p>
+                                    <p class="text-gray-600 text-xs">Learning and Development</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Client Reference 6 - LabourNet -->
+                        <div class="w-full md:w-1/3 flex-shrink-0 px-4">
+                            <div class="bg-white p-6 rounded-2xl shadow-lg h-full">
+                                <div class="flex items-center mb-4">
+                                    <img src="Client Logos/labournet.png" alt="LabourNet" class="w-12 h-12 object-contain mr-4">
+                                    <div>
+                                        <h4 class="text-lg font-bold text-gray-900">LabourNet</h4>
+                                        <p class="text-gray-600 text-sm">4+ years partnership</p>
+                                    </div>
+                                </div>
+                                <blockquote class="text-gray-700 italic mb-4 text-sm">
+                                    "SpecCon has been core in creating further value to our clients as an affiliate Training Provider. Their ability to understand our needs and deliver solutions that exceed our requirements is commendable."
+                                </blockquote>
+                                <div class="text-right">
+                                    <p class="font-semibold text-gray-900">Kyle Wesemann</p>
+                                    <p class="text-gray-600 text-xs">National Transformation Manager</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carousel Navigation -->
+                <button id="prevBtn" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white shadow-lg rounded-full p-3 hover:bg-gray-50 transition-colors">
+                    <i data-lucide="chevron-left" class="w-6 h-6 text-gray-600"></i>
+                </button>
+                <button id="nextBtn" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white shadow-lg rounded-full p-3 hover:bg-gray-50 transition-colors">
+                    <i data-lucide="chevron-right" class="w-6 h-6 text-gray-600"></i>
+                </button>
+            </div>
+
+            <!-- Client Logos Scrolling Bar -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold text-gray-900 text-center mb-8">Trusted by Leading Companies</h3>
+                <div class="overflow-hidden relative">
+                    <div id="logoCarousel" class="flex animate-scroll">
+                        <div class="flex space-x-8 min-w-max">
+                            <img src="Client Logos/AVI.PNG" alt="AVI" class="h-12 object-contain grayscale hover:grayscale-0 transition-all">
+                            <img src="Client Logos/isuzu.PNG" alt="Isuzu" class="h-12 object-contain grayscale hover:grayscale-0 transition-all">
+                            <img src="Client Logos/imperial.PNG" alt="Imperial" class="h-12 object-contain grayscale hover:grayscale-0 transition-all">
+                            <img src="Client Logos/Afgri.png" alt="AFGRI" class="h-12 object-contain grayscale hover:grayscale-0 transition-all">
+                            <img src="Client Logos/servest.png" alt="Servest" class="h-12 object-contain grayscale hover:grayscale-0 transition-all">
+                            <img src="Client Logos/labournet.png" alt="LabourNet" class="h-12 object-contain grayscale hover:grayscale-0 transition-all">
+                            <img src="Client Logos/absa.png" alt="ABSA" class="h-12 object-contain grayscale hover:grayscale-0 transition-all">
+                            <img src="Client Logos/Heinekin.PNG" alt="Heineken" class="h-12 object-contain grayscale hover:grayscale-0 transition-all">
+                            <img src="Client Logos/hollard.PNG" alt="Hollard" class="h-12 object-contain grayscale hover:grayscale-0 transition-all">
+                            <img src="Client Logos/pepkor.PNG" alt="Pepkor" class="h-12 object-contain grayscale hover:grayscale-0 transition-all">
+                            <img src="Client Logos/Randwater.png" alt="Randwater" class="h-12 object-contain grayscale hover:grayscale-0 transition-all">
+                            <img src="Client Logos/nashua.PNG" alt="Nashua" class="h-12 object-contain grayscale hover:grayscale-0 transition-all">
+                        </div>
+                        <!-- Duplicate for seamless loop -->
+                        <div class="flex space-x-8 min-w-max">
+                            <img src="Client Logos/AVI.PNG" alt="AVI" class="h-12 object-contain grayscale hover:grayscale-0 transition-all">
+                            <img src="Client Logos/isuzu.PNG" alt="Isuzu" class="h-12 object-contain grayscale hover:grayscale-0 transition-all">
+                            <img src="Client Logos/imperial.PNG" alt="Imperial" class="h-12 object-contain grayscale hover:grayscale-0 transition-all">
+                            <img src="Client Logos/Afgri.png" alt="AFGRI" class="h-12 object-contain grayscale hover:grayscale-0 transition-all">
+                            <img src="Client Logos/servest.png" alt="Servest" class="h-12 object-contain grayscale hover:grayscale-0 transition-all">
+                            <img src="Client Logos/labournet.png" alt="LabourNet" class="h-12 object-contain grayscale hover:grayscale-0 transition-all">
+                            <img src="Client Logos/absa.png" alt="ABSA" class="h-12 object-contain grayscale hover:grayscale-0 transition-all">
+                            <img src="Client Logos/Heinekin.PNG" alt="Heineken" class="h-12 object-contain grayscale hover:grayscale-0 transition-all">
+                            <img src="Client Logos/hollard.PNG" alt="Hollard" class="h-12 object-contain grayscale hover:grayscale-0 transition-all">
+                            <img src="Client Logos/pepkor.PNG" alt="Pepkor" class="h-12 object-contain grayscale hover:grayscale-0 transition-all">
+                            <img src="Client Logos/Randwater.png" alt="Randwater" class="h-12 object-contain grayscale hover:grayscale-0 transition-all">
+                            <img src="Client Logos/nashua.PNG" alt="Nashua" class="h-12 object-contain grayscale hover:grayscale-0 transition-all">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- What SpecCon Means to Our Team Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">What SpecCon Means to Our Team</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Hear from our employees about the SpecCon culture and values</p>
+            </div>
+
+            <!-- Team Testimonials Scrolling Container -->
+            <div class="relative mb-16">
+                <div class="overflow-hidden">
+                    <div id="teamCarousel" class="flex gap-4 transition-transform duration-500 ease-in-out">
+                        <!-- Team Member 1 -->
+                        <div class="min-w-[280px] team-card text-center p-4 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-xl shadow-lg">
+                            <img src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&dpr=2"
+                                 alt="David Nkomo" class="w-16 h-16 rounded-full object-cover mx-auto mb-3">
+                            <h4 class="text-lg font-bold text-gray-900 mb-1">David Nkomo</h4>
+                            <p class="text-[#12265E] font-semibold mb-3 text-sm">Senior Developer</p>
+                            <blockquote class="text-gray-700 italic text-xs leading-relaxed">
+                                "SpecCon is more than a workplace - it's a family that invests in your growth. The opportunities for learning
+                                and advancement here are endless."
+                            </blockquote>
+                        </div>
+
+                        <!-- Team Member 2 -->
+                        <div class="min-w-[280px] team-card text-center p-4 bg-gradient-to-br from-green-50 to-emerald-100 rounded-xl shadow-lg">
+                            <img src="https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&dpr=2"
+                                 alt="Priya Patel" class="w-16 h-16 rounded-full object-cover mx-auto mb-3">
+                            <h4 class="text-lg font-bold text-gray-900 mb-1">Priya Patel</h4>
+                            <p class="text-[#12265E] font-semibold mb-3 text-sm">Quality Assurance Lead</p>
+                            <blockquote class="text-gray-700 italic text-xs leading-relaxed">
+                                "What I love about SpecCon is the culture of empowerment. Everyone's voice matters, and innovation is
+                                encouraged at every level."
+                            </blockquote>
+                        </div>
+
+                        <!-- Team Member 3 -->
+                        <div class="min-w-[280px] team-card text-center p-4 bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl shadow-lg">
+                            <img src="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&dpr=2"
+                                 alt="Michael van der Merwe" class="w-16 h-16 rounded-full object-cover mx-auto mb-3">
+                            <h4 class="text-lg font-bold text-gray-900 mb-1">Michael van der Merwe</h4>
+                            <p class="text-[#12265E] font-semibold mb-3 text-sm">Account Manager</p>
+                            <blockquote class="text-gray-700 italic text-xs leading-relaxed">
+                                "SpecCon stands for opportunity, growth, and making a real difference in people's lives. I'm proud to be
+                                part of this incredible journey."
+                            </blockquote>
+                        </div>
+
+                        <!-- Team Member 4 -->
+                        <div class="min-w-[280px] team-card text-center p-4 bg-gradient-to-br from-purple-50 to-violet-100 rounded-xl shadow-lg">
+                            <img src="https://images.pexels.com/photos/2381069/pexels-photo-2381069.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&dpr=2"
+                                 alt="Sarah Johnson" class="w-16 h-16 rounded-full object-cover mx-auto mb-3">
+                            <h4 class="text-lg font-bold text-gray-900 mb-1">Sarah Johnson</h4>
+                            <p class="text-[#12265E] font-semibold mb-3 text-sm">Learning Specialist</p>
+                            <blockquote class="text-gray-700 italic text-xs leading-relaxed">
+                                "At SpecCon, we don't just create training programs - we transform lives. Every day brings new opportunities
+                                to make a meaningful impact."
+                            </blockquote>
+                        </div>
+
+                        <!-- Team Member 5 -->
+                        <div class="min-w-[280px] team-card text-center p-4 bg-gradient-to-br from-cyan-50 to-teal-100 rounded-xl shadow-lg">
+                            <img src="https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&dpr=2"
+                                 alt="James Molefe" class="w-16 h-16 rounded-full object-cover mx-auto mb-3">
+                            <h4 class="text-lg font-bold text-gray-900 mb-1">James Molefe</h4>
+                            <p class="text-[#12265E] font-semibold mb-3 text-sm">Project Coordinator</p>
+                            <blockquote class="text-gray-700 italic text-xs leading-relaxed">
+                                "The collaborative spirit here is incredible. SpecCon has given me the platform to grow professionally
+                                while contributing to something greater."
+                            </blockquote>
+                        </div>
+
+                        <!-- Team Member 6 -->
+                        <div class="min-w-[280px] team-card text-center p-4 bg-gradient-to-br from-rose-50 to-pink-100 rounded-xl shadow-lg">
+                            <img src="https://images.pexels.com/photos/1516680/pexels-photo-1516680.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&dpr=2"
+                                 alt="Nomsa Mthembu" class="w-16 h-16 rounded-full object-cover mx-auto mb-3">
+                            <h4 class="text-lg font-bold text-gray-900 mb-1">Nomsa Mthembu</h4>
+                            <p class="text-[#12265E] font-semibold mb-3 text-sm">Training Administrator</p>
+                            <blockquote class="text-gray-700 italic text-xs leading-relaxed">
+                                "SpecCon values diversity and individual contributions. Here, your unique perspective is not just
+                                welcomed - it's celebrated and nurtured."
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation Buttons -->
+                <button id="teamPrevBtn" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white shadow-lg rounded-full p-2 hover:bg-gray-50 transition-colors z-10">
+                    <i data-lucide="chevron-left" class="w-5 h-5 text-gray-600"></i>
+                </button>
+                <button id="teamNextBtn" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white shadow-lg rounded-full p-2 hover:bg-gray-50 transition-colors z-10">
+                    <i data-lucide="chevron-right" class="w-5 h-5 text-gray-600"></i>
+                </button>
+            </div>
+
+            <!-- Company values highlight -->
+            <div class="mt-16 bg-gradient-to-r from-[#12265E] to-[#4A90E2] text-white rounded-2xl p-8">
+                <h3 class="text-3xl font-bold text-center mb-8">Our Values in Action</h3>
+                <div class="grid md:grid-cols-4 gap-6 text-center">
+                    <div>
+                        <i data-lucide="heart" class="w-12 h-12 mx-auto mb-4 opacity-90"></i>
+                        <h4 class="text-lg font-semibold mb-2">Empowerment</h4>
+                        <p class="text-sm opacity-90">We believe in lifting each other up</p>
+                    </div>
+                    <div>
+                        <i data-lucide="target" class="w-12 h-12 mx-auto mb-4 opacity-90"></i>
+                        <h4 class="text-lg font-semibold mb-2">Excellence</h4>
+                        <p class="text-sm opacity-90">We strive for the highest standards</p>
+                    </div>
+                    <div>
+                        <i data-lucide="users" class="w-12 h-12 mx-auto mb-4 opacity-90"></i>
+                        <h4 class="text-lg font-semibold mb-2">Community</h4>
+                        <p class="text-sm opacity-90">We are stronger together</p>
+                    </div>
+                    <div>
+                        <i data-lucide="lightbulb" class="w-12 h-12 mx-auto mb-4 opacity-90"></i>
+                        <h4 class="text-lg font-semibold mb-2">Innovation</h4>
+                        <p class="text-sm opacity-90">We embrace change and growth</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Qualifications Section -->
+    <section id="qualifications" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Our Qualifications</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Practical, workplace-ready skills across NQF Levels 1-6</p>
+            </div>
+
+            <!-- Stats Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+                <div class="text-center p-8 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl">
+                    <div class="text-4xl font-bold text-blue-600 mb-2">51</div>
+                    <div class="text-gray-700 font-medium">Accredited Qualifications</div>
+                </div>
+                <div class="text-center p-8 bg-gradient-to-br from-green-50 to-green-100 rounded-2xl">
+                    <div class="text-4xl font-bold text-green-600 mb-2">26</div>
+                    <div class="text-gray-700 font-medium">QCTO Qualifications</div>
+                </div>
+                <div class="text-center p-8 bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl">
+                    <div class="text-4xl font-bold text-purple-600 mb-2">7</div>
+                    <div class="text-gray-700 font-medium">SETA Accreditations</div>
+                </div>
+                <div class="text-center p-8 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl">
+                    <div class="text-4xl font-bold text-blue-600 mb-2">144</div>
+                    <div class="text-gray-700 font-medium">Average Credits</div>
+                </div>
+            </div>
+
+            <!-- Qualification Details -->
+            <div class="bg-gradient-to-r from-gray-50 to-blue-50 rounded-2xl p-8 mb-12">
+                <div class="grid lg:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6">About Our Qualifications</h3>
+                        <div class="space-y-4 text-gray-700">
+                            <p>We offer <strong>51 accredited qualifications</strong>, designed for practical, workplace-ready skills.</p>
+                            <p>Our training is accredited across <strong>7 SETAs</strong>, giving you confidence in quality and national recognition.</p>
+                            <p>We currently have <strong>26 QCTO qualification(s)</strong>.</p>
+                            <p>Programmes cover <strong>NQF Levels 1–6</strong>, catering for entry-level to advanced pathways.</p>
+                            <p>Typical programme size is around <strong>144 credits</strong>, with options to suit different study commitments.</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6">Why Learn With Us</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <i data-lucide="check-circle" class="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0"></i>
+                                <span class="text-gray-700">Industry-aligned curricula and assessments</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i data-lucide="check-circle" class="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0"></i>
+                                <span class="text-gray-700">Blended delivery options for working professionals</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i data-lucide="check-circle" class="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0"></i>
+                                <span class="text-gray-700">Dedicated learner support from enrolment to certification</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i data-lucide="check-circle" class="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0"></i>
+                                <span class="text-gray-700">Clear pathways to further study and employment</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Accreditations Section -->
+    <section id="accreditations" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Our Seta's</h2>
+                <p class="text-lg text-gray-600 mb-6">Click to view list</p>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Key SETA accreditations ensuring quality and national recognition</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-8">
+                <a href="setas/services-seta.html" class="bg-white p-8 rounded-2xl shadow-lg card-hover transition-all duration-300 text-center hover:shadow-2xl cursor-pointer block">
+                    <div class="w-20 h-20 bg-white rounded-2xl flex items-center justify-center mx-auto mb-4 border border-gray-200">
+                        <img src="images/Services-Seta-300x300-1.png" alt="Services SETA Logo" class="w-16 h-16 object-contain">
+                    </div>
+                    <h3 class="font-bold text-lg text-gray-900 mb-2">Services SETA</h3>
+                    <p class="text-3xl font-bold text-blue-600 mb-1">15</p>
+                    <p class="text-gray-600 text-sm">Qualifications</p>
+                </a>
+
+                <a href="setas/etdp-seta.html" class="bg-white p-8 rounded-2xl shadow-lg card-hover transition-all duration-300 text-center hover:shadow-2xl cursor-pointer block">
+                    <div class="w-20 h-20 bg-white rounded-2xl flex items-center justify-center mx-auto mb-4 border border-gray-200">
+                        <img src="images/ETDP-SETA-300x300-1.png" alt="ETDP SETA Logo" class="w-16 h-16 object-contain">
+                    </div>
+                    <h3 class="font-bold text-lg text-gray-900 mb-2">ETDP SETA</h3>
+                    <p class="text-3xl font-bold text-green-600 mb-1">1</p>
+                    <p class="text-gray-600 text-sm">Qualifications</p>
+                </a>
+
+                <a href="setas/wr-seta.html" class="bg-white p-8 rounded-2xl shadow-lg card-hover transition-all duration-300 text-center hover:shadow-2xl cursor-pointer block">
+                    <div class="w-20 h-20 bg-white rounded-2xl flex items-center justify-center mx-auto mb-4 border border-gray-200">
+                        <img src="images/WRSETA-300x300-1.png" alt="W&R SETA Logo" class="w-16 h-16 object-contain">
+                    </div>
+                    <h3 class="font-bold text-lg text-gray-900 mb-2">W&R SETA</h3>
+                    <p class="text-3xl font-bold text-purple-600 mb-1">8</p>
+                    <p class="text-gray-600 text-sm">Qualifications</p>
+                </a>
+
+                <a href="setas/mict-seta.html" class="bg-white p-8 rounded-2xl shadow-lg card-hover transition-all duration-300 text-center hover:shadow-2xl cursor-pointer block">
+                    <div class="w-20 h-20 bg-white rounded-2xl flex items-center justify-center mx-auto mb-4 border border-gray-200">
+                        <img src="images/MICTSETA-300x300-1.png" alt="MICT SETA Logo" class="w-16 h-16 object-contain">
+                    </div>
+                    <h3 class="font-bold text-lg text-gray-900 mb-2">MICT SETA</h3>
+                    <p class="text-3xl font-bold text-blue-600 mb-1">7</p>
+                    <p class="text-gray-600 text-sm">Qualifications</p>
+                </a>
+
+                <a href="setas/agriseta.html" class="bg-white p-8 rounded-2xl shadow-lg card-hover transition-all duration-300 text-center hover:shadow-2xl cursor-pointer block">
+                    <div class="w-20 h-20 bg-white rounded-2xl flex items-center justify-center mx-auto mb-4 border border-gray-200">
+                        <img src="images/AgriSETA-300x300-1.png" alt="AgriSETA Logo" class="w-16 h-16 object-contain">
+                    </div>
+                    <h3 class="font-bold text-lg text-gray-900 mb-2">AgriSETA</h3>
+                    <p class="text-3xl font-bold text-teal-600 mb-1">12</p>
+                    <p class="text-gray-600 text-sm">Qualifications</p>
+                </a>
+                <a href="setas/fasset.html" class="bg-white p-8 rounded-2xl shadow-lg card-hover transition-all duration-300 text-center hover:shadow-2xl cursor-pointer block">
+                    <div class="w-20 h-20 bg-white rounded-2xl flex items-center justify-center mx-auto mb-4 border border-gray-200">
+                        <img src="images/fasset seta.png" alt="FASSET Logo" class="w-16 h-16 object-contain">
+                    </div>
+                    <h3 class="font-bold text-lg text-gray-900 mb-2">FASSET</h3>
+                    <p class="text-3xl font-bold text-indigo-600 mb-1">1</p>
+                    <p class="text-gray-600 text-sm">Qualifications</p>
+                </a>
+                <a href="setas/teta-seta.html" class="bg-white p-8 rounded-2xl shadow-lg card-hover transition-all duration-300 text-center hover:shadow-2xl cursor-pointer block">
+                    <div class="w-20 h-20 bg-white rounded-2xl flex items-center justify-center mx-auto mb-4 border border-gray-200">
+                        <img src="images/TETA-300x300-1.png" alt="TETA Logo" class="w-16 h-16 object-contain">
+                    </div>
+                    <h3 class="font-bold text-lg text-gray-900 mb-2">TETA</h3>
+                    <p class="text-3xl font-bold text-cyan-600 mb-1">1</p>
+                    <p class="text-gray-600 text-sm">Qualifications</p>
+                </a>
+                <a href="setas/inseta.html" class="bg-white p-8 rounded-2xl shadow-lg card-hover transition-all duration-300 text-center hover:shadow-2xl cursor-pointer block">
+                    <div class="w-20 h-20 bg-white rounded-2xl flex items-center justify-center mx-auto mb-4 border border-gray-200">
+                        <img src="images/Inseta.png" alt="INSETA Logo" class="w-16 h-16 object-contain">
+                    </div>
+                    <h3 class="font-bold text-lg text-gray-900 mb-2">INSETA</h3>
+                    <p class="text-3xl font-bold text-red-600 mb-1">5</p>
+                    <p class="text-gray-600 text-sm">Qualifications</p>
+                </a>
+                <a href="setas/mer-seta.html" class="bg-white p-8 rounded-2xl shadow-lg card-hover transition-all duration-300 text-center hover:shadow-2xl cursor-pointer block">
+                    <div class="w-20 h-20 bg-white rounded-2xl flex items-center justify-center mx-auto mb-4 border border-gray-200">
+                        <img src="images/merSETA-300x300-1.png" alt="MER SETA Logo" class="w-16 h-16 object-contain">
+                    </div>
+                    <h3 class="font-bold text-lg text-gray-900 mb-2">MER SETA</h3>
+                    <p class="text-3xl font-bold text-amber-600 mb-1">1</p>
+                    <p class="text-gray-600 text-sm">Qualifications</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Adds Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Value-Added Benefits</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">You can get these value adds for free when you do learnerships with Speccon</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-2xl card-hover transition-all duration-300">
+                    <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="layout-template" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">White Labelled LMS</h3>
+                    <p class="text-gray-700">A complete Learning Management System branded for your company with full administrative control.</p>
+                </div>
+
+                <div class="bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-2xl card-hover transition-all duration-300">
+                    <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="book-open" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">300+ Online Courses</h3>
+                    <p class="text-gray-700">Access to our comprehensive library of over 300 online courses across various disciplines.</p>
+                </div>
+
+                <div class="bg-gradient-to-br from-purple-50 to-purple-100 p-8 rounded-2xl card-hover transition-all duration-300">
+                    <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="users" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Employment Equity System</h3>
+                    <p class="text-gray-700">Comprehensive system to help manage your Employment Equity compliance and reporting.</p>
+                </div>
+
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-2xl card-hover transition-all duration-300">
+                    <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="clipboard-check" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">10+ Work Assessments</h3>
+                    <p class="text-gray-700">Including valuable tools like Excel proficiency tests and other workplace skill assessments.</p>
+                </div>
+
+                <div class="bg-gradient-to-br from-red-50 to-red-100 p-8 rounded-2xl card-hover transition-all duration-300">
+                    <div class="w-16 h-16 bg-gradient-to-r from-red-500 to-red-600 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="shield-check" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Compliance Training</h3>
+                    <p class="text-gray-700">Online accredited compliance training including First Aid, Fire Fighter, and OHS courses.</p>
+                </div>
+
+                <div class="bg-gradient-to-br from-teal-50 to-teal-100 p-8 rounded-2xl card-hover transition-all duration-300">
+                    <div class="w-16 h-16 bg-gradient-to-r from-teal-500 to-teal-600 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="graduation-cap" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Academy Access</h3>
+                    <p class="text-gray-700">Learning resources and educational content for the children of all your staff members.</p>
+                </div>
+
+                <div class="bg-gradient-to-br from-orange-50 to-orange-100 p-8 rounded-2xl card-hover transition-all duration-300">
+                    <div class="w-16 h-16 bg-gradient-to-r from-orange-500 to-orange-600 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="briefcase" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">SDF Service</h3>
+                    <p class="text-gray-700">Skills Development Facilitator support to maximize your training investment and compliance benefits.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Classroom Training Section -->
+    <section id="classroom-training" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Classroom Training</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Interactive, instructor-led training courses to enhance your team's skills</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Compliance Training Category -->
+                <a href="short-courses/compliance-courses.html" class="bg-white rounded-2xl shadow-lg p-8 card-hover transition-all duration-300 block hover:shadow-2xl">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-red-100 rounded-2xl flex items-center justify-center mr-6">
+                            <i data-lucide="shield-check" class="w-8 h-8 text-red-600"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-xl text-gray-900">Compliance Training</h3>
+                            <span class="text-sm text-red-600 font-medium">Legal & Regulatory</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">Essential training courses to ensure your organization meets all legal and regulatory requirements for workplace compliance.</p>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i data-lucide="file-text" class="w-4 h-4 mr-2 text-gray-400"></i>
+                            <span>Employment Equity</span>
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i data-lucide="balance-scale" class="w-4 h-4 mr-2 text-gray-400"></i>
+                            <span>Disciplinary Procedures</span>
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i data-lucide="award" class="w-4 h-4 mr-2 text-gray-400"></i>
+                            <span>DoL Approved</span>
+                        </div>
+                    </div>
+                    <div class="text-red-600 font-medium">Learn More →</div>
+                </a>
+
+                <!-- Computer Skills Category -->
+                <a href="short-courses/computer-courses.html" class="bg-white rounded-2xl shadow-lg p-8 card-hover transition-all duration-300 block hover:shadow-2xl">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mr-6">
+                            <i data-lucide="monitor" class="w-8 h-8 text-blue-600"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-xl text-gray-900">Computer Skills</h3>
+                            <span class="text-sm text-blue-600 font-medium">Digital Literacy</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">Comprehensive computer training from basic office applications to advanced data analysis and business intelligence tools.</p>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i data-lucide="spreadsheet" class="w-4 h-4 mr-2 text-gray-400"></i>
+                            <span>Microsoft Excel</span>
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i data-lucide="bar-chart-3" class="w-4 h-4 mr-2 text-gray-400"></i>
+                            <span>Power BI Analytics</span>
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i data-lucide="award" class="w-4 h-4 mr-2 text-gray-400"></i>
+                            <span>Microsoft Aligned</span>
+                        </div>
+                    </div>
+                    <div class="text-blue-600 font-medium">Learn More →</div>
+                </a>
+
+                <!-- Professional Development Category -->
+                <a href="short-courses/professional-development.html" class="bg-white rounded-2xl shadow-lg p-8 card-hover transition-all duration-300 block hover:shadow-2xl">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mr-6">
+                            <i data-lucide="trending-up" class="w-8 h-8 text-green-600"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-xl text-gray-900">Professional Development</h3>
+                            <span class="text-sm text-green-600 font-medium">Soft Skills</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">Business and leadership skills training to enhance professional capabilities and drive career advancement.</p>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i data-lucide="target" class="w-4 h-4 mr-2 text-gray-400"></i>
+                            <span>Sales Training</span>
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i data-lucide="bar-chart" class="w-4 h-4 mr-2 text-gray-400"></i>
+                            <span>Finance for Managers</span>
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i data-lucide="award" class="w-4 h-4 mr-2 text-gray-400"></i>
+                            <span>Certificate</span>
+                        </div>
+                    </div>
+                    <div class="text-green-600 font-medium">Learn More →</div>
+                </a>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Popup Modal -->
+    <div id="contactModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
+        <div class="flex items-center justify-center min-h-screen p-4">
+            <div class="bg-white rounded-2xl shadow-2xl max-w-md w-full max-h-[90vh] overflow-y-auto">
+                <div class="p-6">
+                    <!-- Modal Header -->
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-2xl font-bold text-gray-900">Contact Us</h3>
+                        <button id="closeModal" class="text-gray-400 hover:text-gray-600 transition-colors">
+                            <i data-lucide="x" class="w-6 h-6"></i>
+                        </button>
+                    </div>
+
+                    <!-- Disclaimer -->
+                    <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-6">
+                        <p class="text-sm text-yellow-800">
+                            <strong>If you want to apply for a learnership, please don't use this form.</strong>
+                            <a href="#" id="learnership-link" class="text-blue-600 hover:text-blue-700 underline">Click here</a> to apply for a learnership.
+                        </p>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <form id="contactForm" class="space-y-4">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label for="popup_name" class="block text-sm font-medium text-gray-700 mb-1">Name*</label>
+                                <input type="text" id="popup_name" required class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-200">
+                            </div>
+                            <div>
+                                <label for="popup_surname" class="block text-sm font-medium text-gray-700 mb-1">Surname*</label>
+                                <input type="text" id="popup_surname" required class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-200">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="popup_email" class="block text-sm font-medium text-gray-700 mb-1">Email*</label>
+                            <input type="email" id="popup_email" required class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-200">
+                        </div>
+
+                        <div>
+                            <label for="popup_phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number*</label>
+                            <input type="tel" id="popup_phone" required class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-200">
+                        </div>
+
+                        <div>
+                            <label for="popup_job_title" class="block text-sm font-medium text-gray-700 mb-1">Job Title</label>
+                            <input type="text" id="popup_job_title" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-200">
+                        </div>
+
+                        <div>
+                            <label for="popup_company" class="block text-sm font-medium text-gray-700 mb-1">Company</label>
+                            <input type="text" id="popup_company" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-200">
+                        </div>
+
+                        <div>
+                            <label for="popup_reason" class="block text-sm font-medium text-gray-700 mb-1">Reason we should contact you*</label>
+                            <textarea id="popup_reason" rows="3" required placeholder="Please describe why you'd like us to contact you..." class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-200"></textarea>
+                        </div>
+
+                        <div class="flex gap-3 pt-4">
+                            <button type="button" id="cancelForm" class="flex-1 px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition duration-200">
+                                Cancel
+                            </button>
+                            <button type="submit" class="flex-1 bg-gradient-to-r from-[#12265E] to-[#4A90E2] text-white font-semibold px-4 py-2 rounded-lg hover:from-[#0d1a47] hover:to-[#3a7bc8] transition duration-300">
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <img src="images/Logo.png" alt="SpecCon Holdings Logo" class="h-12 mr-3">
+                        <div>
+                            <h3 class="text-xl font-bold">SpecCon Holdings</h3>
+                            <p class="text-gray-400">Accredited Training Solutions</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 mb-4">Empowering individuals and organizations through high-quality, accredited education and training solutions.</p>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition duration-200">Why Choose Us</a></li>
+                        <li><a href="#qualifications" class="text-gray-400 hover:text-white transition duration-200">Qualifications</a></li>
+                        <li><a href="#accreditations" class="text-gray-400 hover:text-white transition duration-200">Accreditations</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition duration-200">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#classroom-training" class="text-gray-400 hover:text-white transition duration-200">Classroom Training</a></li>
+                        <li><a href="http://elearning.co.za" target="_blank" class="text-gray-400 hover:text-white transition duration-200">Online Training</a></li>
+                        <li><a href="http://employmentequityact.za" target="_blank" class="text-gray-400 hover:text-white transition duration-200">Employment Equity</a></li>
+                        <li><a href="http://LMS.co.za" target="_blank" class="text-gray-400 hover:text-white transition duration-200">LMS Solutions</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2025 SpecCon Holdings. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Application Modal (will be populated from Application form.txt) -->
+    <div id="application-modal" class="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4 opacity-0 pointer-events-none z-50 transition-opacity duration-300">
+        <div class="bg-white rounded-2xl shadow-2xl w-full max-w-6xl max-h-[90vh] overflow-y-auto transform scale-95 transition-transform duration-300" id="modal-content">
+            <div class="sticky top-0 bg-white border-b border-gray-200 p-6 rounded-t-2xl">
+                <div class="flex justify-between items-center">
+                    <h3 class="text-3xl font-bold text-gray-900">Learnership Application</h3>
+                    <button id="close-modal-btn" class="text-gray-500 hover:text-gray-700 transition duration-200">
+                        <i data-lucide="x" class="w-8 h-8"></i>
+                    </button>
+                </div>
+            </div>
+            <div id="modal-body" class="p-8">
+                <!-- Application form will be inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Contact Popup functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactModal = document.getElementById('contactModal');
+            const closeModal = document.getElementById('closeModal');
+            const cancelForm = document.getElementById('cancelForm');
+            const contactForm = document.getElementById('contactForm');
+
+            // Function to open the contact popup
+            function openContactPopup() {
+                contactModal.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            }
+
+            // Function to close the contact popup
+            function closeContactPopup() {
+                contactModal.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+                contactForm.reset();
+            }
+
+            // Event listeners for closing the popup
+            closeModal.addEventListener('click', closeContactPopup);
+            cancelForm.addEventListener('click', closeContactPopup);
+
+            // Close popup when clicking outside the modal content
+            contactModal.addEventListener('click', function(e) {
+                if (e.target === contactModal) {
+                    closeContactPopup();
+                }
+            });
+
+            // Handle form submission
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                // Here you would typically send the form data to your server
+                alert('Thank you for your message! We will contact you soon.');
+                closeContactPopup();
+            });
+
+            // Update all contact links to open popup instead
+            const contactLinks = document.querySelectorAll('a[href="#contact"], a[href*="#contact"]');
+            contactLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    openContactPopup();
+                });
+            });
+
+            // Handle learnership link in contact popup
+            const learnershipLink = document.getElementById('learnership-link');
+            if (learnershipLink) {
+                learnershipLink.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    closeContactPopup();
+                    // Wait a bit for the contact popup to close, then open learnership modal
+                    setTimeout(() => {
+                        if (window.loadApplicationForm && window.openModal) {
+                            loadApplicationForm();
+                            window.openModal();
+                        }
+                    }, 300);
+                });
+            }
+        });
+
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+
+                // Close mobile menu when clicking on links
+                const mobileNavLinks = mobileMenu.querySelectorAll('a');
+                mobileNavLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                    });
+                });
+            }
+        });
+
+        // Client Testimonials Carousel
+        document.addEventListener('DOMContentLoaded', function() {
+            const carousel = document.getElementById('clientCarousel');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+
+        let currentIndex = 0;
+        const totalSlides = 6; // Total number of testimonials
+        const slidesToShow = window.innerWidth >= 768 ? 3 : 1; // Show 3 on desktop, 1 on mobile
+        const maxIndex = Math.max(0, totalSlides - slidesToShow);
+
+        // Auto-scroll interval
+        let autoScrollInterval;
+
+        function updateCarousel() {
+            const slideWidth = 100 / slidesToShow;
+            const translateX = -(currentIndex * slideWidth);
+            carousel.style.transform = `translateX(${translateX}%)`;
+        }
+
+        function nextSlide() {
+            currentIndex = currentIndex >= maxIndex ? 0 : currentIndex + 1;
+            updateCarousel();
+        }
+
+        function prevSlide() {
+            currentIndex = currentIndex <= 0 ? maxIndex : currentIndex - 1;
+            updateCarousel();
+        }
+
+        function startAutoScroll() {
+            autoScrollInterval = setInterval(nextSlide, 4000); // Auto-scroll every 4 seconds
+        }
+
+        function stopAutoScroll() {
+            clearInterval(autoScrollInterval);
+        }
+
+        // Initialize carousel
+        updateCarousel();
+        startAutoScroll();
+
+        // Event listeners for navigation buttons
+        nextBtn.addEventListener('click', () => {
+            stopAutoScroll();
+            nextSlide();
+            startAutoScroll();
+        });
+
+        prevBtn.addEventListener('click', () => {
+            stopAutoScroll();
+            prevSlide();
+            startAutoScroll();
+        });
+
+        // Pause auto-scroll on hover
+        const carouselContainer = carousel.parentElement.parentElement;
+        carouselContainer.addEventListener('mouseenter', stopAutoScroll);
+        carouselContainer.addEventListener('mouseleave', startAutoScroll);
+
+        // Handle window resize
+        window.addEventListener('resize', () => {
+            const newSlidesToShow = window.innerWidth >= 768 ? 3 : 1;
+            if (newSlidesToShow !== slidesToShow) {
+                location.reload(); // Simple solution for responsive changes
+            }
+        });
+        });
+
+        // Team Testimonials Carousel
+        document.addEventListener('DOMContentLoaded', function() {
+            const teamCarousel = document.getElementById('teamCarousel');
+            const teamPrevBtn = document.getElementById('teamPrevBtn');
+            const teamNextBtn = document.getElementById('teamNextBtn');
+
+        let teamCurrentIndex = 0;
+        const teamTotalSlides = 6; // Total number of team members
+        const teamSlidesToShow = Math.min(5, Math.floor(window.innerWidth / 290)); // Show 5 on desktop, adjust for smaller screens
+        const teamMaxIndex = Math.max(0, teamTotalSlides - teamSlidesToShow);
+
+        function updateTeamCarousel() {
+            const slideWidth = 290; // Each card is 280px + 10px gap
+            const translateX = -(teamCurrentIndex * slideWidth);
+            teamCarousel.style.transform = `translateX(${translateX}px)`;
+        }
+
+        function nextTeamSlide() {
+            teamCurrentIndex = teamCurrentIndex >= teamMaxIndex ? 0 : teamCurrentIndex + 1;
+            updateTeamCarousel();
+        }
+
+        function prevTeamSlide() {
+            teamCurrentIndex = teamCurrentIndex <= 0 ? teamMaxIndex : teamCurrentIndex - 1;
+            updateTeamCarousel();
+        }
+
+        // Initialize team carousel
+        updateTeamCarousel();
+
+        // Event listeners for team navigation buttons
+        if (teamNextBtn) {
+            teamNextBtn.addEventListener('click', nextTeamSlide);
+        }
+
+        if (teamPrevBtn) {
+            teamPrevBtn.addEventListener('click', prevTeamSlide);
+        }
+
+        // Handle window resize for team carousel
+        window.addEventListener('resize', () => {
+            const newTeamSlidesToShow = Math.min(5, Math.floor(window.innerWidth / 290));
+            updateTeamCarousel();
+        });
+        });
+
+        // Fix classroom training course links - ensure clicks anywhere in the card work
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('#classroom-training a[href^="short-courses/"]').forEach(link => {
+                // Remove any existing click event listeners
+                link.style.position = 'relative';
+                link.style.zIndex = '1';
+
+                // Add click handler to ensure navigation works
+                link.addEventListener('click', function(e) {
+                    // Don't prevent default - let the link navigate naturally
+                    console.log('Navigating to:', this.href);
+                    window.location.href = this.href;
+                });
+            });
+        });
+
+        // Modal Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const modal = document.getElementById('application-modal');
+            const modalContent = document.getElementById('modal-content');
+            const openModalButtons = [
+                document.getElementById('apply-btn-desktop'),
+                document.getElementById('apply-btn-mobile'),
+                document.getElementById('apply-btn-hero')
+            ];
+            const closeModalBtn = document.getElementById('close-modal-btn');
+
+            const openModal = () => {
+                modal.classList.remove('opacity-0', 'pointer-events-none');
+                modalContent.classList.remove('scale-95');
+                document.body.style.overflow = 'hidden';
+            };
+
+            const closeModal = () => {
+                modal.classList.add('opacity-0', 'pointer-events-none');
+                modalContent.classList.add('scale-95');
+                document.body.style.overflow = 'auto';
+            };
+
+            openModalButtons.forEach(btn => {
+                if (btn) {
+                    btn.addEventListener('click', () => {
+                        loadApplicationForm();
+                        openModal();
+                    });
+                }
+            });
+
+            if (closeModalBtn) {
+                closeModalBtn.addEventListener('click', closeModal);
+            }
+
+            if (modal) {
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) {
+                        closeModal();
+                    }
+                });
+            }
+
+            // Make functions available globally
+            window.openModal = openModal;
+            window.closeModal = closeModal;
+        });
+
+        // Smooth scrolling for anchor links
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+
+        // Load application form
+        async function loadApplicationForm() {
+            const modalBody = document.getElementById('modal-body');
+            modalBody.innerHTML = `
+                <style>
+                    .form-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 1rem; }
+                    .col-12 { grid-column: span 12; }
+                    .col-6 { grid-column: span 6; }
+                    .col-4 { grid-column: span 4; }
+                    .col-3 { grid-column: span 3; }
+                    .form-fieldset { border: 1px solid #e5e7eb; padding: 1.5rem; border-radius: 0.75rem; margin: 1rem 0; }
+                    .form-legend { padding: 0 0.5rem; font-weight: 700; color: #1f2937; }
+                    .form-radios { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 0.5rem; }
+                    .form-hidden { display: none !important; }
+                    @media (max-width: 768px) {
+                        .col-6, .col-4, .col-3 { grid-column: span 12; }
+                    }
+                </style>
+
+                <!-- Important Notice Section -->
+                <div class="bg-amber-50 border-l-4 border-amber-400 p-6 mb-6 rounded-r-lg">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0">
+                            <svg class="h-6 w-6 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.732-.833-2.5 0L4.232 16.5c-.77.833.192 2.5 1.732 2.5z" />
+                            </svg>
+                        </div>
+                        <div class="ml-3">
+                            <h3 class="text-lg font-semibold text-amber-800 mb-3">Important - Please Read Before Applying</h3>
+                            <div class="text-amber-700 space-y-3">
+                                <p class="leading-relaxed">
+                                    <strong>Please note:</strong> A Learnership is not an opportunity to earn money for 12 months. It is a learning opportunity.
+                                    Although a stipend will cover your expenses, your main reason should be to learn, gain experience and find a permanent job.
+                                    <strong>Please do not apply if your reason for applying is different than this.</strong> There are thousands of people applying daily.
+                                </p>
+                                <p class="leading-relaxed">
+                                    We receive thousands of applications per day. <strong>If you have not received any reply within 14 days,
+                                    then your application was unsuccessful.</strong> Due to the high volume, we cannot respond to every application individually.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="text-gray-600 mb-6">Fields marked with * are required. Your application may be automatically declined based on eligibility rules.</p>
+
+                <form id="learnershipForm" method="post" action="/learnerships/save_application.php" novalidate>
+                    <!-- Hidden fields populated by JS before submit -->
+                    <input type="hidden" name="preliminary_status" id="preliminary_status" value="Applied" />
+                    <input type="hidden" name="decline_reasons" id="decline_reasons" value="" />
+                    <input type="hidden" name="birthdate" id="birthdate" value="" />
+                    <input type="hidden" name="age_at_application" id="age_at_application" value="" />
+
+                    <fieldset class="form-fieldset">
+                        <legend class="form-legend">Personal Details</legend>
+                        <div class="form-grid">
+                            <div class="col-6">
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-2">First Name *</label>
+                                <input id="name" name="name" type="text" required minlength="2" maxlength="50" pattern="[A-Za-z\s]+" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" title="Please enter a valid first name (letters only, 2-50 characters)">
+                                <div class="validation-message text-red-600 text-sm hidden"></div>
+                            </div>
+                            <div class="col-6">
+                                <label for="surname" class="block text-sm font-medium text-gray-700 mb-2">Surname *</label>
+                                <input id="surname" name="surname" type="text" required minlength="2" maxlength="50" pattern="[A-Za-z\s]+" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" title="Please enter a valid surname (letters only, 2-50 characters)">
+                                <div class="validation-message text-red-600 text-sm hidden"></div>
+                            </div>
+                            <div class="col-6">
+                                <label for="id_number" class="block text-sm font-medium text-gray-700 mb-2">South African ID Number *</label>
+                                <input id="id_number" name="id_number" type="text" inputmode="numeric" pattern="^\\d{13}$" required minlength="13" maxlength="13" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" title="Please enter a valid 13-digit South African ID number">
+                                <small class="text-gray-500">13 digits. We use this to verify age eligibility.</small>
+                                <div class="validation-message text-red-600 text-sm hidden"></div>
+                            </div>
+                            <div class="col-6">
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Gender *</label>
+                                <div class="form-radios">
+                                    <label class="flex items-center"><input type="radio" name="gender" value="Male" required class="mr-2"> Male</label>
+                                    <label class="flex items-center"><input type="radio" name="gender" value="Female" required class="mr-2"> Female</label>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Race *</label>
+                                <div class="form-radios">
+                                    <label class="flex items-center"><input type="radio" name="race" value="African" required class="mr-2"> African</label>
+                                    <label class="flex items-center"><input type="radio" name="race" value="Coloured" required class="mr-2"> Coloured</label>
+                                    <label class="flex items-center"><input type="radio" name="race" value="Indian" required class="mr-2"> Indian</label>
+                                    <label class="flex items-center"><input type="radio" name="race" value="White" required class="mr-2"> White</label>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email *</label>
+                                <input id="email" name="email" type="email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" title="Please enter a valid email address">
+                                <div class="validation-message text-red-600 text-sm hidden"></div>
+                            </div>
+                            <div class="col-6">
+                                <label for="contact_no1" class="block text-sm font-medium text-gray-700 mb-2">Contact Number *</label>
+                                <input id="contact_no1" name="contact_no1" type="tel" inputmode="tel" pattern="^\\d{10}$" required minlength="10" maxlength="10" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" title="Please enter a valid 10-digit contact number">
+                                <small class="text-gray-500">10 digits</small>
+                                <div class="validation-message text-red-600 text-sm hidden"></div>
+                            </div>
+                            <div class="col-6">
+                                <label for="contact_no2" class="block text-sm font-medium text-gray-700 mb-2">Additional Contact Number</label>
+                                <input id="contact_no2" name="contact_no2" type="tel" inputmode="tel" pattern="^\\d{10}$" minlength="10" maxlength="10" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" title="Please enter a valid 10-digit contact number (optional)">
+                                <div class="validation-message text-red-600 text-sm hidden"></div>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="form-fieldset">
+                        <legend class="form-legend">Address</legend>
+                        <div class="form-grid">
+                            <div class="col-12">
+                                <label for="address_street" class="block text-sm font-medium text-gray-700 mb-2">Street Name & Number *</label>
+                                <input id="address_street" name="address_street" type="text" required minlength="5" maxlength="100" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" title="Please enter your street name and number">
+                                <div class="validation-message text-red-600 text-sm hidden"></div>
+                            </div>
+                            <div class="col-6">
+                                <label for="address_suburb" class="block text-sm font-medium text-gray-700 mb-2">Suburb *</label>
+                                <input id="address_suburb" name="address_suburb" type="text" required minlength="2" maxlength="50" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" title="Please enter your suburb">
+                                <div class="validation-message text-red-600 text-sm hidden"></div>
+                            </div>
+                            <div class="col-6">
+                                <label for="address_city" class="block text-sm font-medium text-gray-700 mb-2">Town/City *</label>
+                                <input id="address_city" name="address_city" type="text" required minlength="2" maxlength="50" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" title="Please enter your town/city">
+                                <div class="validation-message text-red-600 text-sm hidden"></div>
+                            </div>
+                            <div class="col-6">
+                                <label for="address_province" class="block text-sm font-medium text-gray-700 mb-2">Province *</label>
+                                <select id="address_province" name="address_province" required class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                    <option value="">Select…</option>
+                                    <option>Eastern Cape</option>
+                                    <option>Free State</option>
+                                    <option>Gauteng</option>
+                                    <option>Kwazulu-Natal</option>
+                                    <option>Limpopo</option>
+                                    <option>Mpumalanga</option>
+                                    <option>Northern Cape</option>
+                                    <option>North-West</option>
+                                    <option>Western Cape</option>
+                                </select>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="form-fieldset">
+                        <legend class="form-legend">Eligibility</legend>
+                        <div class="form-grid">
+                            <div class="col-6">
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Do you have a criminal record? *</label>
+                                <div class="form-radios">
+                                    <label class="flex items-center"><input type="radio" name="criminal_record" value="Yes" required class="mr-2"> Yes</label>
+                                    <label class="flex items-center"><input type="radio" name="criminal_record" value="No" required class="mr-2"> No</label>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <label for="highest_qualification" class="block text-sm font-medium text-gray-700 mb-2">Highest Qualification *</label>
+                                <select name="highest_qualification" id="highest_qualification" required class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                    <option value="">Select…</option>
+                                    <option>Grade 10</option>
+                                    <option>Grade 11</option>
+                                    <option>Grade 12 (Matric)</option>
+                                    <option>National Certificate (NQF 5)</option>
+                                    <option>Diploma</option>
+                                    <option>Bachelor's</option>
+                                </select>
+                            </div>
+                            <div class="col-6">
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Employment Status *</label>
+                                <div class="form-radios">
+                                    <label class="flex items-center"><input type="radio" name="employment_status" value="Employed" required class="mr-2"> Employed</label>
+                                    <label class="flex items-center"><input type="radio" name="employment_status" value="Unemployed" required class="mr-2"> Unemployed</label>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Learnership Status *</label>
+                                <div class="space-y-2">
+                                    <label class="flex items-start"><input type="radio" name="learnership_status" value="Never" required class="mr-2 mt-1"> I have never been on a learnership</label>
+                                    <label class="flex items-start"><input type="radio" name="learnership_status" value="Current" required class="mr-2 mt-1"> I am currently on a learnership</label>
+                                    <label class="flex items-start"><input type="radio" name="learnership_status" value="Completed" required class="mr-2 mt-1"> I have been on a learnership and have completed it</label>
+                                </div>
+                            </div>
+                            <div id="previousLearnershipBlock" class="col-12 form-hidden">
+                                <div class="form-grid border-t pt-4">
+                                    <div class="col-6">
+                                        <label for="previous_learnership" class="block text-sm font-medium text-gray-700 mb-2">Name of Learnership *</label>
+                                        <input id="previous_learnership" name="previous_learnership" type="text" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                    </div>
+                                    <div class="col-3">
+                                        <label for="previous_learnership_completion_date" class="block text-sm font-medium text-gray-700 mb-2">Date of completion *</label>
+                                        <input id="previous_learnership_completion_date" name="previous_learnership_completion_date" type="date" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                    </div>
+                                    <div class="col-3">
+                                        <label class="block text-sm font-medium text-gray-700 mb-2">Was a certificate issued? *</label>
+                                        <div class="form-radios">
+                                            <label class="flex items-center"><input type="radio" name="certificate_issued" value="Yes" class="mr-2"> Yes</label>
+                                            <label class="flex items-center"><input type="radio" name="certificate_issued" value="No" class="mr-2"> No</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="form-fieldset">
+                        <legend class="form-legend">Work Readiness</legend>
+                        <div class="form-grid">
+                            <div class="col-6">
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Are you able to work from home? *</label>
+                                <div class="form-radios">
+                                    <label class="flex items-center"><input type="radio" name="able_to_work_from_home" value="Yes" required class="mr-2"> Yes</label>
+                                    <label class="flex items-center"><input type="radio" name="able_to_work_from_home" value="No" required class="mr-2"> No</label>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Do you have access to a computer/smart phone and internet? *</label>
+                                <div class="form-radios">
+                                    <label class="flex items-center"><input type="radio" name="online_access" value="Yes" required class="mr-2"> Yes</label>
+                                    <label class="flex items-center"><input type="radio" name="online_access" value="No" required class="mr-2"> No</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label for="current_skills" class="block text-sm font-medium text-gray-700 mb-2">Which of the following best describes your current skills? *</label>
+                                <select id="current_skills" name="current_skills" required class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                    <option value="">Select…</option>
+                                    <option>Website development / design</option>
+                                    <option>IT Systems Development</option>
+                                    <option>Marketing</option>
+                                    <option>Sales / Retail</option>
+                                    <option>Graphical Design</option>
+                                    <option>Administration</option>
+                                    <option>Stores / Warehousing</option>
+                                    <option>Finance</option>
+                                    <option>Farming</option>
+                                    <option>Contact Centre</option>
+                                    <option>General</option>
+                                </select>
+                                <small class="text-gray-500">We'll send you an assessment that matches your selection.</small>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="form-fieldset">
+                        <legend class="form-legend">Ability & Location</legend>
+                        <div class="form-grid">
+                            <div class="col-6">
+                                <label class="block text-sm font-medium text-gray-700 mb-2">What is your current status? *</label>
+                                <div class="space-y-2">
+                                    <label class="flex items-center"><input type="radio" name="ability" value="Abled" required class="mr-2"> Abled</label>
+                                    <label class="flex items-center"><input type="radio" name="ability" value="Disabled" required class="mr-2"> Disabled (Certified by Medical Practitioner)</label>
+                                </div>
+                            </div>
+
+                            <div id="abledAreas" class="col-6 form-hidden">
+                                <label for="applied_for_abled" class="block text-sm font-medium text-gray-700 mb-2">Which learnership area are you interested in? *</label>
+                                <select id="applied_for_abled" name="applied_for_abled" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                    <option value="">Select…</option>
+                                    <option>Centurion – Abled</option>
+                                    <option>Bellville – Abled</option>
+                                    <option>Mbombella – Abled</option>
+                                    <option>Pinetown – Abled</option>
+                                </select>
+                            </div>
+
+                            <div id="disabilityBlock" class="col-12 form-hidden">
+                                <div class="form-grid">
+                                    <div class="col-6">
+                                        <label for="disability_type" class="block text-sm font-medium text-gray-700 mb-2">What is the nature of your disability? *</label>
+                                        <select id="disability_type" name="disability_type" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                            <option value="">Select…</option>
+                                            <option>Communication (talking / listening)</option>
+                                            <option>Sight (even with glasses)</option>
+                                            <option>Hearing (even with a hearing aid)</option>
+                                            <option>Physical (moving/standing/grasping)</option>
+                                            <option>Emotional (behavioural/psychological)</option>
+                                            <option>Intellectual (learning difficulty)</option>
+                                            <option>Other</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-6">
+                                        <label for="special_requirements" class="block text-sm font-medium text-gray-700 mb-2">Do you have any access requirement to support your disability? *</label>
+                                        <textarea id="special_requirements" name="special_requirements" rows="3" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
+                                    </div>
+                                    <div class="col-6">
+                                        <label for="applied_for_disabled" class="block text-sm font-medium text-gray-700 mb-2">Which learnership area are you interested in? *</label>
+                                        <select id="applied_for_disabled" name="applied_for_disabled" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                            <option value="">Select…</option>
+                                            <option>Centurion – Disabled</option>
+                                            <option>Bellville – Disabled</option>
+                                            <option>Mbombella – Disabled</option>
+                                            <option>Pinetown – Disabled</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="form-fieldset">
+                        <legend class="form-legend">Motivation & Readiness Check</legend>
+                        <p class="text-gray-600 mb-4">Answer all correctly to proceed.</p>
+                        <div class="space-y-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Why are you applying for this learnership? *</label>
+                                <div class="space-y-2">
+                                    <label class="flex items-start"><input type="radio" name="q28" value="wrong" required class="mr-2 mt-1"> It offers a stipend and I need money.</label>
+                                    <label class="flex items-start"><input type="radio" name="q28" value="correct" required class="mr-2 mt-1"> I want to gain experience that will help me find a job.</label>
+                                    <label class="flex items-start"><input type="radio" name="q28" value="wrong" required class="mr-2 mt-1"> My family told me to apply.</label>
+                                    <label class="flex items-start"><input type="radio" name="q28" value="wrong" required class="mr-2 mt-1"> I am bored at home.</label>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">What do you expect to have by completing this learnership? *</label>
+                                <div class="space-y-2">
+                                    <label class="flex items-start"><input type="radio" name="q29" value="wrong" required class="mr-2 mt-1"> Enough stipends to support myself for a year</label>
+                                    <label class="flex items-start"><input type="radio" name="q29" value="wrong" required class="mr-2 mt-1"> A certificate to keep for later</label>
+                                    <label class="flex items-start"><input type="radio" name="q29" value="correct" required class="mr-2 mt-1"> Practical experience and proof of my work skills</label>
+                                    <label class="flex items-start"><input type="radio" name="q29" value="wrong" required class="mr-2 mt-1"> Time to figure out what I want to do</label>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">What would you do if you didn't get paid for a month due to admin delays? *</label>
+                                <div class="space-y-2">
+                                    <label class="flex items-start"><input type="radio" name="q30" value="wrong" required class="mr-2 mt-1"> Quit – I can't work without being paid</label>
+                                    <label class="flex items-start"><input type="radio" name="q30" value="correct" required class="mr-2 mt-1"> Continue learning and working while resolving the issue professionally</label>
+                                    <label class="flex items-start"><input type="radio" name="q30" value="wrong" required class="mr-2 mt-1"> Do the minimum until payment is made</label>
+                                    <label class="flex items-start"><input type="radio" name="q30" value="wrong" required class="mr-2 mt-1"> Stop working and look for another learnership elsewhere</label>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">How will you use this learnership to find employment? *</label>
+                                <div class="space-y-2">
+                                    <label class="flex items-start"><input type="radio" name="q31" value="correct" required class="mr-2 mt-1"> I'll use the experience and references to apply for a job</label>
+                                    <label class="flex items-start"><input type="radio" name="q31" value="wrong" required class="mr-2 mt-1"> I'll try to join another learnership</label>
+                                    <label class="flex items-start"><input type="radio" name="q31" value="wrong" required class="mr-2 mt-1"> I haven't really thought about it</label>
+                                    <label class="flex items-start"><input type="radio" name="q31" value="wrong" required class="mr-2 mt-1"> I expect the company to offer me a job automatically</label>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">If you are offered another learnership with a bigger stipend but no practical work, what would you do? *</label>
+                                <div class="space-y-2">
+                                    <label class="flex items-start"><input type="radio" name="q32" value="wrong" required class="mr-2 mt-1"> Take the one with more money</label>
+                                    <label class="flex items-start"><input type="radio" name="q32" value="wrong" required class="mr-2 mt-1"> Try to do both at the same time</label>
+                                    <label class="flex items-start"><input type="radio" name="q32" value="correct" required class="mr-2 mt-1"> Stay with the one that give me work experience</label>
+                                    <label class="flex items-start"><input type="radio" name="q32" value="wrong" required class="mr-2 mt-1"> Leave it for my family to decide for me</label>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">If you are currently on a learnership, will your current company allow you to register for another learnership? *</label>
+                                <div class="space-y-2">
+                                    <label class="flex items-start"><input type="radio" name="q33" value="wrong" required class="mr-2 mt-1"> No, they will not allow me</label>
+                                    <label class="flex items-start"><input type="radio" name="q33" value="wrong" required class="mr-2 mt-1"> I haven't completed, but I'm not attending anymore</label>
+                                    <label class="flex items-start"><input type="radio" name="q33" value="wrong" required class="mr-2 mt-1"> Yes, they will not have a problem</label>
+                                    <label class="flex items-start"><input type="radio" name="q33" value="correct" required class="mr-2 mt-1"> I am not registered on another learnership</label>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <div id="statusMsg" class="hidden p-4 rounded-lg mb-4"></div>
+
+                    <!-- TAP Assessment Requirements -->
+                    <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6">
+                        <div class="flex items-start mb-4">
+                            <div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center mr-3 mt-1">
+                                <i data-lucide="alert-circle" class="w-4 h-4 text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-blue-900 mb-2">Important: TAP Assessment Requirements</h4>
+                                <p class="text-blue-800 mb-4">
+                                    You will be required to do additional assessments on TAP. You will also not be considered if you did not complete your CV on TAP.
+                                    Please register a free account on <a href="https://app.tap.co.za/registration" target="_blank" class="text-blue-600 underline hover:text-blue-800">https://app.tap.co.za/registration</a>.
+                                </p>
+
+                                <div class="mb-4">
+                                    <label for="tap_email" class="block text-sm font-medium text-blue-900 mb-2">
+                                        Fill in your email you used to register on TAP, so that we can trace your assessment results:
+                                    </label>
+                                    <input type="email" id="tap_email" name="tap_email"
+                                           class="w-full px-4 py-2 border border-blue-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                           placeholder="Enter your TAP email address">
+                                </div>
+
+                                <div class="bg-white rounded-lg p-4 border border-blue-200">
+                                    <h5 class="font-semibold text-blue-900 mb-3">You must complete the following assessments on TAP:</h5>
+                                    <ul class="space-y-2 text-sm text-blue-800">
+                                        <li class="flex items-center">
+                                            <i data-lucide="check-circle" class="w-4 h-4 text-green-600 mr-2"></i>
+                                            Basic Excel Assessment
+                                        </li>
+                                        <li class="flex items-center">
+                                            <i data-lucide="check-circle" class="w-4 h-4 text-green-600 mr-2"></i>
+                                            Typing Test Assessment
+                                        </li>
+                                        <li class="flex items-center">
+                                            <i data-lucide="check-circle" class="w-4 h-4 text-green-600 mr-2"></i>
+                                            Literacy Assessment
+                                        </li>
+                                        <li class="flex items-center">
+                                            <i data-lucide="check-circle" class="w-4 h-4 text-green-600 mr-2"></i>
+                                            Mathematical Assessment
+                                        </li>
+                                    </ul>
+                                    <p class="text-xs text-blue-700 mt-3 italic">
+                                        We will automatically track these assessments to your application.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-6">
+                        <button type="submit" class="w-full bg-gradient-to-r from-[#12265E] to-[#4A90E2] text-white font-bold py-4 px-6 rounded-lg hover:from-[#0d1a47] hover:to-[#3a7bc8] transition duration-300 shadow-lg text-lg">
+                            Submit Application
+                        </button>
+                    </div>
+                </form>
+            `;
+
+            // Initialize form functionality
+            initializeApplicationForm();
+        }
+
+        // Initialize application form functionality
+        function initializeApplicationForm() {
+            // === Utility: SA ID validation (length/date + Luhn) ===
+            function luhnCheck(id) {
+                let sum = 0, alt = false;
+                for (let i = id.length - 1; i >= 0; i--) {
+                    let n = parseInt(id.charAt(i), 10);
+                    if (alt) { n *= 2; if (n > 9) n -= 9; }
+                    sum += n; alt = !alt;
+                }
+                return sum % 10 === 0;
+            }
+
+            function parseDOBFromID(id) {
+                const yy = parseInt(id.substring(0,2),10);
+                const mm = parseInt(id.substring(2,4),10);
+                const dd = parseInt(id.substring(4,6),10);
+                const now = new Date();
+                const currentYY = now.getFullYear() % 100;
+                const century = yy > currentYY ? 1900 : 2000;
+                const year = century + yy;
+                const dob = new Date(year, mm-1, dd);
+                // basic validity check
+                if (dob.getFullYear() !== year || (dob.getMonth()+1) !== mm || dob.getDate() !== dd) return null;
+                return dob;
+            }
+
+            function ageOn(date, dob) {
+                let a = date.getFullYear() - dob.getFullYear();
+                const m = date.getMonth() - dob.getMonth();
+                if (m < 0 || (m === 0 && date.getDate() < dob.getDate())) a--;
+                return a;
+            }
+
+            // Skills → assessment link placeholder (replace with real links)
+            const ASSESSMENT_LINKS = {
+                "Website development / design": "https://example.com/assess/web",
+                "IT Systems Development": "https://example.com/assess/it",
+                "Marketing": "https://example.com/assess/mkt",
+                "Sales / Retail": "https://example.com/assess/sales",
+                "Graphical Design": "https://example.com/assess/design",
+                "Administration": "https://example.com/assess/admin",
+                "Stores / Warehousing": "https://example.com/assess/stores",
+                "Finance": "https://example.com/assess/finance",
+                "Farming": "https://example.com/assess/farming",
+                "Contact Centre": "https://example.com/assess/contact",
+                "General": "https://example.com/assess/general"
+            };
+
+            const form = document.getElementById('learnershipForm');
+            const statusMsg = document.getElementById('statusMsg');
+
+            function show(el){el.classList.remove('form-hidden')}
+            function hide(el){el.classList.add('form-hidden')}
+
+            // Enhanced validation functions
+            function showValidationMessage(element, message) {
+                const validationDiv = element.parentElement.querySelector('.validation-message');
+                if (validationDiv) {
+                    validationDiv.textContent = message;
+                    validationDiv.classList.remove('hidden');
+                }
+                element.classList.add('border-red-500');
+                element.classList.remove('border-gray-300');
+            }
+
+            function hideValidationMessage(element) {
+                const validationDiv = element.parentElement.querySelector('.validation-message');
+                if (validationDiv) {
+                    validationDiv.classList.add('hidden');
+                }
+                element.classList.remove('border-red-500');
+                element.classList.add('border-gray-300');
+            }
+
+            function validateTextField(element, fieldName, minLength = 2, maxLength = 50, pattern = null) {
+                const value = element.value.trim();
+
+                if (!value) {
+                    showValidationMessage(element, `${fieldName} is required.`);
+                    return false;
+                }
+
+                if (value.length < minLength) {
+                    showValidationMessage(element, `${fieldName} must be at least ${minLength} characters.`);
+                    return false;
+                }
+
+                if (value.length > maxLength) {
+                    showValidationMessage(element, `${fieldName} must not exceed ${maxLength} characters.`);
+                    return false;
+                }
+
+                if (pattern && !pattern.test(value)) {
+                    showValidationMessage(element, `Please enter a valid ${fieldName.toLowerCase()}.`);
+                    return false;
+                }
+
+                hideValidationMessage(element);
+                return true;
+            }
+
+            function validateIDNumber(element) {
+                const value = element.value.trim();
+
+                if (!value) {
+                    showValidationMessage(element, 'ID Number is required.');
+                    return false;
+                }
+
+                if (!/^\d{13}$/.test(value)) {
+                    showValidationMessage(element, 'ID Number must be exactly 13 digits.');
+                    return false;
+                }
+
+                if (!luhnCheck(value)) {
+                    showValidationMessage(element, 'Invalid ID Number format.');
+                    return false;
+                }
+
+                const dob = parseDOBFromID(value);
+                if (!dob) {
+                    showValidationMessage(element, 'Invalid date in ID Number.');
+                    return false;
+                }
+
+                // Check age eligibility (30 or older within next 12 months)
+                const now = new Date();
+                const in12m = new Date(now.getFullYear(), now.getMonth() + 12, now.getDate());
+                const thirtieth = new Date(dob.getFullYear() + 30, dob.getMonth(), dob.getDate());
+
+                if (thirtieth <= in12m) {
+                    showValidationMessage(element, 'You must be under 30 years old within the next 12 months to qualify.');
+                    return false;
+                }
+
+                hideValidationMessage(element);
+                return true;
+            }
+
+            function validateEmail(element) {
+                const value = element.value.trim();
+                const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+                if (!value) {
+                    showValidationMessage(element, 'Email is required.');
+                    return false;
+                }
+
+                if (!emailPattern.test(value)) {
+                    showValidationMessage(element, 'Please enter a valid email address.');
+                    return false;
+                }
+
+                hideValidationMessage(element);
+                return true;
+            }
+
+            function validatePhoneNumber(element, isRequired = true) {
+                const value = element.value.trim();
+
+                if (!value && isRequired) {
+                    showValidationMessage(element, 'Contact number is required.');
+                    return false;
+                }
+
+                if (value && !/^\d{10}$/.test(value)) {
+                    showValidationMessage(element, 'Contact number must be exactly 10 digits.');
+                    return false;
+                }
+
+                hideValidationMessage(element);
+                return true;
+            }
+
+            function validateRadioGroup(groupName, fieldName) {
+                const radios = form.querySelectorAll(`input[name="${groupName}"]`);
+                const checked = form.querySelector(`input[name="${groupName}"]:checked`);
+
+                if (!checked) {
+                    // Show error near the first radio button
+                    const firstRadio = radios[0];
+                    if (firstRadio) {
+                        showValidationMessage(firstRadio, `${fieldName} is required.`);
+                    }
+                    return false;
+                }
+
+                // Hide error messages for all radios in the group
+                radios.forEach(radio => hideValidationMessage(radio));
+                return true;
+            }
+
+            function validateSelectField(element, fieldName) {
+                const value = element.value;
+
+                if (!value || value === '') {
+                    showValidationMessage(element, `${fieldName} is required.`);
+                    return false;
+                }
+
+                hideValidationMessage(element);
+                return true;
+            }
+
+            // Real-time validation event listeners
+            function setupRealTimeValidation() {
+                // Text fields
+                form.name.addEventListener('blur', () => {
+                    validateTextField(form.name, 'First Name', 2, 50, /^[A-Za-z\s]+$/);
+                });
+
+                form.surname.addEventListener('blur', () => {
+                    validateTextField(form.surname, 'Surname', 2, 50, /^[A-Za-z\s]+$/);
+                });
+
+                form.id_number.addEventListener('blur', () => {
+                    validateIDNumber(form.id_number);
+                });
+
+                // Restrict ID number input to digits only
+                form.id_number.addEventListener('input', (e) => {
+                    e.target.value = e.target.value.replace(/\D/g, '').substring(0, 13);
+                });
+
+                form.email.addEventListener('blur', () => {
+                    validateEmail(form.email);
+                });
+
+                form.contact_no1.addEventListener('blur', () => {
+                    validatePhoneNumber(form.contact_no1, true);
+                });
+
+                // Restrict phone input to digits only
+                [form.contact_no1, form.contact_no2].forEach(phoneField => {
+                    phoneField.addEventListener('input', (e) => {
+                        e.target.value = e.target.value.replace(/\D/g, '').substring(0, 10);
+                    });
+                });
+
+                form.contact_no2.addEventListener('blur', () => {
+                    validatePhoneNumber(form.contact_no2, false);
+                });
+
+                // Address fields
+                form.address_street.addEventListener('blur', () => {
+                    validateTextField(form.address_street, 'Street Name & Number', 5, 100);
+                });
+
+                form.address_suburb.addEventListener('blur', () => {
+                    validateTextField(form.address_suburb, 'Suburb', 2, 50);
+                });
+
+                form.address_city.addEventListener('blur', () => {
+                    validateTextField(form.address_city, 'Town/City', 2, 50);
+                });
+
+                // Select fields
+                form.address_province.addEventListener('change', () => {
+                    validateSelectField(form.address_province, 'Province');
+                });
+
+                form.highest_qualification.addEventListener('change', () => {
+                    validateSelectField(form.highest_qualification, 'Highest Qualification');
+                });
+
+                form.current_skills.addEventListener('change', () => {
+                    validateSelectField(form.current_skills, 'Current Skills');
+                });
+
+                // Radio groups
+                ['gender', 'race', 'criminal_record', 'employment_status', 'learnership_status',
+                 'able_to_work_from_home', 'online_access', 'ability'].forEach(groupName => {
+                    const radios = form.querySelectorAll(`input[name="${groupName}"]`);
+                    radios.forEach(radio => {
+                        radio.addEventListener('change', () => {
+                            hideValidationMessage(radio);
+                        });
+                    });
+                });
+            }
+
+            const learnershipRadios = form.querySelectorAll('input[name="learnership_status"]');
+            const prevBlock = document.getElementById('previousLearnershipBlock');
+            learnershipRadios.forEach(r => r.addEventListener('change', () => {
+                if (r.checked && r.value === 'Completed') {
+                    show(prevBlock);
+                    // mark required when shown
+                    form.previous_learnership.required = true;
+                    form.previous_learnership_completion_date.required = true;
+                    [...form.querySelectorAll('input[name="certificate_issued"]')].forEach(inp => inp.required = true);
+                } else if (r.checked) {
+                    hide(prevBlock);
+                    form.previous_learnership.required = false;
+                    form.previous_learnership_completion_date.required = false;
+                    [...form.querySelectorAll('input[name="certificate_issued"]')].forEach(inp => inp.required = false);
+                }
+            }));
+
+            const abilityRadios = form.querySelectorAll('input[name="ability"]');
+            const abledAreas = document.getElementById('abledAreas');
+            const disabilityBlock = document.getElementById('disabilityBlock');
+            abilityRadios.forEach(r => r.addEventListener('change', () => {
+                if (r.checked && r.value === 'Abled') {
+                    show(abledAreas); hide(disabilityBlock);
+                    form.applied_for_abled.required = true;
+                    form.applied_for_disabled.required = false;
+                    if (form.disability_type) form.disability_type.required = false;
+                    if (form.special_requirements) form.special_requirements.required = false;
+                } else if (r.checked) {
+                    hide(abledAreas); show(disabilityBlock);
+                    form.applied_for_abled.required = false;
+                    form.applied_for_disabled.required = true;
+                    if (form.disability_type) form.disability_type.required = true;
+                    if (form.special_requirements) form.special_requirements.required = true;
+                }
+            }));
+
+            function computeEligibility() {
+                const reasons = [];
+                const id = form.id_number.value.trim();
+                if (!/^\\d{13}$/.test(id) || !luhnCheck(id)) reasons.push('ID number is invalid.');
+                const dob = parseDOBFromID(id);
+                if (!dob) reasons.push('Birthdate in ID is invalid.');
+                else {
+                    const now = new Date();
+                    const in12m = new Date(now.getFullYear(), now.getMonth()+12, now.getDate());
+                    const thirtieth = new Date(dob.getFullYear()+30, dob.getMonth(), dob.getDate());
+                    if (thirtieth <= in12m) reasons.push('Age 30 or older within the next 12 months.');
+                    // fill hidden fields
+                    document.getElementById('birthdate').value = dob.toISOString().slice(0,10);
+                    document.getElementById('age_at_application').value = ageOn(now, dob);
+                }
+                const crim = form.querySelector('input[name="criminal_record"]:checked');
+                if (crim && crim.value === 'Yes') reasons.push('Criminal record.');
+                const ls = form.querySelector('input[name="learnership_status"]:checked');
+                if (ls && ls.value === 'Current') reasons.push('Currently on a learnership.');
+                // Quiz 28-33 must all be correct
+                ['q28','q29','q30','q31','q32','q33'].forEach(q => {
+                    const a = form.querySelector(`input[name="${q}"]:checked`);
+                    if (!a || a.value !== 'correct') reasons.push(`Question ${q.replace('q','')} answered incorrectly.`);
+                });
+                // applied_for value (depending on ability)
+                let appliedFor = '';
+                const ability = form.querySelector('input[name="ability"]:checked');
+                if (ability && ability.value === 'Abled') appliedFor = form.applied_for_abled.value;
+                if (ability && ability.value === 'Disabled') appliedFor = form.applied_for_disabled.value;
+                // ensure area chosen
+                if (!appliedFor) reasons.push('Learnership area not selected.');
+                return reasons;
+            }
+
+            // Comprehensive form validation function
+            function validateCompleteForm() {
+                let isValid = true;
+
+                // Validate all fields
+                if (!validateTextField(form.name, 'First Name', 2, 50, /^[A-Za-z\s]+$/)) isValid = false;
+                if (!validateTextField(form.surname, 'Surname', 2, 50, /^[A-Za-z\s]+$/)) isValid = false;
+                if (!validateIDNumber(form.id_number)) isValid = false;
+                if (!validateEmail(form.email)) isValid = false;
+                if (!validatePhoneNumber(form.contact_no1, true)) isValid = false;
+                if (!validatePhoneNumber(form.contact_no2, false)) isValid = false;
+
+                // Address validation
+                if (!validateTextField(form.address_street, 'Street Name & Number', 5, 100)) isValid = false;
+                if (!validateTextField(form.address_suburb, 'Suburb', 2, 50)) isValid = false;
+                if (!validateTextField(form.address_city, 'Town/City', 2, 50)) isValid = false;
+                if (!validateSelectField(form.address_province, 'Province')) isValid = false;
+
+                // Radio group validations
+                if (!validateRadioGroup('gender', 'Gender')) isValid = false;
+                if (!validateRadioGroup('race', 'Race')) isValid = false;
+                if (!validateRadioGroup('criminal_record', 'Criminal Record')) isValid = false;
+                if (!validateSelectField(form.highest_qualification, 'Highest Qualification')) isValid = false;
+                if (!validateRadioGroup('employment_status', 'Employment Status')) isValid = false;
+                if (!validateRadioGroup('learnership_status', 'Learnership Status')) isValid = false;
+
+                // Conditional validations for previous learnership
+                const learnershipStatus = form.querySelector('input[name="learnership_status"]:checked');
+                if (learnershipStatus && learnershipStatus.value === 'Completed') {
+                    if (!validateTextField(form.previous_learnership, 'Previous Learnership Name', 2, 100)) isValid = false;
+                    if (!form.previous_learnership_completion_date.value) {
+                        showValidationMessage(form.previous_learnership_completion_date, 'Completion date is required.');
+                        isValid = false;
+                    }
+                    if (!validateRadioGroup('certificate_issued', 'Certificate Issued')) isValid = false;
+                }
+
+                // Work readiness validation
+                if (!validateRadioGroup('able_to_work_from_home', 'Work From Home')) isValid = false;
+                if (!validateRadioGroup('online_access', 'Online Access')) isValid = false;
+                if (!validateSelectField(form.current_skills, 'Current Skills')) isValid = false;
+
+                // Ability and location validation
+                if (!validateRadioGroup('ability', 'Current Status')) isValid = false;
+
+                const ability = form.querySelector('input[name="ability"]:checked');
+                if (ability) {
+                    if (ability.value === 'Abled') {
+                        if (!validateSelectField(form.applied_for_abled, 'Learnership Area')) isValid = false;
+                    } else if (ability.value === 'Disabled') {
+                        if (!validateSelectField(form.disability_type, 'Disability Type')) isValid = false;
+                        if (!validateTextField(form.special_requirements, 'Access Requirements', 5, 500)) isValid = false;
+                        if (!validateSelectField(form.applied_for_disabled, 'Learnership Area')) isValid = false;
+                    }
+                }
+
+                // Motivation questions validation
+                ['q28', 'q29', 'q30', 'q31', 'q32', 'q33'].forEach(q => {
+                    if (!validateRadioGroup(q, `Question ${q.replace('q', '')}`)) isValid = false;
+                });
+
+                return isValid;
+            }
+
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                statusMsg.classList.add('hidden');
+
+                // Run comprehensive validation first
+                if (!validateCompleteForm()) {
+                    statusMsg.textContent = 'Please correct all highlighted fields before submitting.';
+                    statusMsg.className = 'p-4 rounded-lg mb-4 bg-red-50 border border-red-200 text-red-800';
+                    statusMsg.classList.remove('hidden');
+
+                    // Scroll to first error
+                    const firstError = form.querySelector('.border-red-500');
+                    if (firstError) {
+                        firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
+                    return;
+                }
+
+                const reasons = computeEligibility();
+                const prelim = reasons.length ? 'Declined' : 'Applied';
+                document.getElementById('preliminary_status').value = prelim;
+                document.getElementById('decline_reasons').value = reasons.join('; ');
+
+                if (!form.reportValidity()) {
+                    statusMsg.textContent = 'Please fix the highlighted fields.';
+                    statusMsg.className = 'p-4 rounded-lg mb-4 bg-red-50 border border-red-200 text-red-800';
+                    statusMsg.classList.remove('hidden');
+                    return;
+                }
+
+                // Construct FormData and set derived applied_for
+                const fd = new FormData(form);
+                const ability = form.querySelector('input[name="ability"]:checked');
+                let appliedFor = '';
+                if (ability && ability.value === 'Abled') appliedFor = form.applied_for_abled.value;
+                if (ability && ability.value === 'Disabled') appliedFor = form.applied_for_disabled.value;
+                fd.append('applied_for', appliedFor);
+                // include assessment link hint
+                const skill = form.current_skills.value;
+                fd.append('assessment_link_hint', ASSESSMENT_LINKS[skill] || '');
+
+                // Submit to server (demo mode - show success message)
+                try {
+                    // Simulate API call
+                    await new Promise(resolve => setTimeout(resolve, 1000));
+
+                    statusMsg.innerHTML = `✅ Application submitted successfully! <span class="inline-block bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-sm ml-2">Status: ${prelim}</span>`;
+                    statusMsg.className = 'p-4 rounded-lg mb-4 bg-green-50 border border-green-200 text-green-800';
+                    statusMsg.classList.remove('hidden');
+
+                    // Reset form after successful submission
+                    setTimeout(() => {
+                        form.reset();
+                        hide(document.getElementById('previousLearnershipBlock'));
+                        hide(document.getElementById('abledAreas'));
+                        hide(document.getElementById('disabilityBlock'));
+                        closeModal();
+                    }, 3000);
+                } catch (err) {
+                    statusMsg.textContent = 'Network or server error. Please try again.';
+                    statusMsg.className = 'p-4 rounded-lg mb-4 bg-red-50 border border-red-200 text-red-800';
+                    statusMsg.classList.remove('hidden');
+                }
+            });
+
+            // Initialize real-time validation
+            setupRealTimeValidation();
+        }
+
+        // Global function for opening application modal (called from buttons)
+        window.openApplicationModal = function() {
+            loadApplicationForm();
+            openModal();
+        };
+
+        // Add scroll effect to header
+        document.addEventListener('DOMContentLoaded', function() {
+            window.addEventListener('scroll', () => {
+                const header = document.querySelector('header');
+                if (header) {
+                    if (window.scrollY > 100) {
+                        header.classList.add('shadow-lg');
+                    } else {
+                        header.classList.remove('shadow-lg');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

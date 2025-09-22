@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Occupational Health and Safety Training | SpecCon Holdings</title>
+    <meta name="description" content="Comprehensive OHS training course covering workplace hazard identification, risk assessment, safety protocols, and legal compliance.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="../js/centralized-modals.js"></script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 10px 10px -5px rgb(0 0 0 / 0.04);
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-900">
+    <!-- Header -->
+    <header class="bg-white/95 backdrop-blur-md shadow-lg fixed w-full z-50 top-0">
+        <div class="container mx-auto px-4 lg:px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <a href="../index.html">
+                        <img src="../images/Logo.png" alt="SpecCon Holdings Logo" class="h-12">
+                    </a>
+                    <div class="ml-3">
+                        <h1 class="text-xl font-bold text-gray-900">SpecCon Holdings</h1>
+                        <p class="text-sm text-gray-600">OHS Training</p>
+                    </div>
+                </div>
+
+                <nav class="hidden lg:flex items-center space-x-8">
+                    <a href="../index.html" class="text-gray-700 hover:text-[#12265E] font-medium transition duration-300">Home</a>
+                    <a href="../index.html#about" class="text-gray-700 hover:text-[#12265E] font-medium transition duration-300">Why Choose Us</a>
+                    <a href="../index.html#qualifications" class="text-gray-700 hover:text-[#12265E] font-medium transition duration-300">Qualifications</a>
+                    <a href="../index.html#accreditations" class="text-gray-700 hover:text-[#12265E] font-medium transition duration-300">Accreditations</a>
+                    <a href="../index.html#classroom-training" class="text-gray-700 hover:text-[#12265E] font-medium transition duration-300">Classroom Training</a>
+                    <a href="../index.html#contact" class="text-gray-700 hover:text-[#12265E] font-medium transition duration-300">Contact Us</a>
+                </nav>
+
+                <div class="hidden lg:block">
+                    <button data-modal="book" data-course="OHS Training" class="bg-gradient-to-r from-green-500 to-green-600 text-white font-semibold px-6 py-3 rounded-lg hover:from-green-600 hover:to-green-700 transition duration-300 shadow-lg">
+                        Book Training
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <section class="pt-24 pb-8 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <nav class="text-sm text-gray-600">
+                <a href="../index.html" class="hover:text-blue-600">Home</a>
+                <span class="mx-2">/</span>
+                <a href="../index.html#classroom-training" class="hover:text-blue-600">Classroom Training</a>
+                <span class="mx-2">/</span>
+                <span class="text-gray-900">OHS Training</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="py-16 bg-gradient-to-br from-green-50 to-blue-50">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mr-6">
+                            <i data-lucide="shield-check" class="w-8 h-8 text-green-600"></i>
+                        </div>
+                        <div>
+                            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-2">Occupational Health & Safety</h1>
+                            <p class="text-xl text-green-600 font-semibold">Workplace Safety & Legal Compliance</p>
+                        </div>
+                    </div>
+                    <p class="text-lg text-gray-600 leading-relaxed mb-8">
+                        Create a safe, productive, and positive work environment. Learn workplace hazard identification,
+                        risk assessment, safety protocols, emergency preparedness, and legal compliance.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="text-center p-4 bg-white rounded-lg shadow">
+                            <div class="text-2xl font-bold text-green-600">4h 30m</div>
+                            <div class="text-sm text-gray-600">Duration</div>
+                        </div>
+                        <div class="text-center p-4 bg-white rounded-lg shadow">
+                            <div class="text-2xl font-bold text-blue-600">Certificate</div>
+                            <div class="text-sm text-gray-600">Upon Completion</div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <img src="https://images.pexels.com/photos/7534555/pexels-photo-7534555.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=1"
+                         alt="Workplace safety training session"
+                         class="rounded-2xl shadow-2xl w-full h-auto max-w-lg mx-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Overview -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Course Overview</h2>
+                    <p class="text-xl text-gray-600">Essential workplace safety and health training</p>
+                </div>
+
+                <div class="bg-gray-50 rounded-2xl p-8 mb-12">
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        Workplace hazard identification, risk assessment, safety protocols, emergency preparedness, and
+                        legal compliance. Additionally, you'll learn strategies for promoting a safe work environment,
+                        understanding health and safety regulations, and implementing measures to prevent accidents and
+                        injuries in the workplace.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8 mb-12">
+                    <div class="bg-white border border-gray-200 rounded-xl p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Why This Training Matters</h3>
+                        <p class="text-gray-600 mb-4">
+                            Occupational health and safety is essential for creating a safe, productive, and positive work
+                            environment. It benefits employees, employers, and the overall organisation by preventing injuries,
+                            illnesses, and legal issues, while promoting a culture of well-being and responsible business
+                            practices.
+                        </p>
+                    </div>
+
+                    <div class="bg-white border border-gray-200 rounded-xl p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Key Benefits</h3>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-center">
+                                <i data-lucide="check" class="w-4 h-4 text-green-600 mr-2"></i>
+                                Prevent workplace accidents and injuries
+                            </li>
+                            <li class="flex items-center">
+                                <i data-lucide="check" class="w-4 h-4 text-green-600 mr-2"></i>
+                                Ensure legal compliance and avoid penalties
+                            </li>
+                            <li class="flex items-center">
+                                <i data-lucide="check" class="w-4 h-4 text-green-600 mr-2"></i>
+                                Create a positive safety culture
+                            </li>
+                            <li class="flex items-center">
+                                <i data-lucide="check" class="w-4 h-4 text-green-600 mr-2"></i>
+                                Reduce insurance costs and liability
+                            </li>
+                            <li class="flex items-center">
+                                <i data-lucide="check" class="w-4 h-4 text-green-600 mr-2"></li>
+                                Improve employee morale and productivity
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Content -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Course Content</h2>
+                    <p class="text-xl text-gray-600">Comprehensive curriculum covering all essential OHS areas</p>
+                </div>
+
+                <div class="space-y-6">
+                    <!-- Unit 1 -->
+                    <div class="bg-white rounded-xl p-6 shadow-sm">
+                        <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
+                            <span class="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center mr-3">
+                                <span class="text-green-600 font-bold">1</span>
+                            </span>
+                            Introduction to Safety in the Workplace
+                        </h3>
+                        <ul class="space-y-2 text-gray-600 ml-11">
+                            <li>• Unsafe acts</li>
+                            <li>• Participants in the prevention of accidents</li>
+                            <li>• Steps in safety training</li>
+                            <li>• Preventing future accidents</li>
+                            <li>• Loss control</li>
+                        </ul>
+                    </div>
+
+                    <!-- Unit 2 -->
+                    <div class="bg-white rounded-xl p-6 shadow-sm">
+                        <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
+                            <span class="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center mr-3">
+                                <span class="text-green-600 font-bold">2</span>
+                            </span>
+                            Identify Potential Hazards
+                        </h3>
+                        <ul class="space-y-2 text-gray-600 ml-11">
+                            <li>• Statutory requirements</li>
+                            <li>• Identify potential hazards</li>
+                            <li>• Protective clothing</li>
+                            <li>• Safeguarding machinery and equipment</li>
+                        </ul>
+                    </div>
+
+                    <!-- Unit 3 -->
+                    <div class="bg-white rounded-xl p-6 shadow-sm">
+                        <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
+                            <span class="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center mr-3">
+                                <span class="text-green-600 font-bold">3</span>
+                            </span>
+                            Limit Damage to Person's Property
+                        </h3>
+                        <ul class="space-y-2 text-gray-600 ml-11">
+                            <li>• Fire prevention and fire protection</li>
+                            <li>• Emergency procedure</li>
+                        </ul>
+                    </div>
+
+                    <!-- Unit 4 -->
+                    <div class="bg-white rounded-xl p-6 shadow-sm">
+                        <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
+                            <span class="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center mr-3">
+                                <span class="text-green-600 font-bold">4</span>
+                            </span>
+                            Safety Procedures
+                        </h3>
+                        <ul class="space-y-2 text-gray-600 ml-11">
+                            <li>• Role of management</li>
+                            <li>• Basic safety rules</li>
+                            <li>• Loss control programme</li>
+                            <li>• Incidents</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learning Outcomes -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">What You'll Learn</h2>
+                    <p class="text-xl text-gray-600">Comprehensive safety knowledge and practical skills</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mt-1">
+                                <i data-lucide="check" class="w-3 h-3 text-green-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Hazard Identification</h4>
+                                <p class="text-gray-600">Learn to identify and assess workplace hazards effectively</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mt-1">
+                                <i data-lucide="check" class="w-3 h-3 text-green-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Risk Assessment</h4>
+                                <p class="text-gray-600">Understand risk assessment methodologies and implementation</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mt-1">
+                                <i data-lucide="check" class="w-3 h-3 text-green-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Safety Protocols</h4>
+                                <p class="text-gray-600">Develop and implement effective safety procedures</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mt-1">
+                                <i data-lucide="check" class="w-3 h-3 text-green-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Emergency Preparedness</h4>
+                                <p class="text-gray-600">Plan and prepare for workplace emergencies</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mt-1">
+                                <i data-lucide="check" class="w-3 h-3 text-green-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Legal Compliance</h4>
+                                <p class="text-gray-600">Understand OHS legislation and compliance requirements</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mt-1">
+                                <i data-lucide="check" class="w-3 h-3 text-green-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Incident Management</h4>
+                                <p class="text-gray-600">Handle workplace incidents and near-misses effectively</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mt-1">
+                                <i data-lucide="check" class="w-3 h-3 text-green-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Safety Culture</h4>
+                                <p class="text-gray-600">Promote a positive safety culture in your organization</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mt-1">
+                                <i data-lucide="check" class="w-3 h-3 text-green-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Management Systems</h4>
+                                <p class="text-gray-600">Implement and maintain OHS management systems</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Details -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="text-center p-6 bg-white rounded-xl">
+                        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="clock" class="w-6 h-6 text-blue-600"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">Duration</h3>
+                        <p class="text-gray-600">4 hours 30 minutes</p>
+                    </div>
+
+                    <div class="text-center p-6 bg-white rounded-xl">
+                        <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="monitor" class="w-6 h-6 text-green-600"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">Delivery</h3>
+                        <p class="text-gray-600">Classroom/Online/Blended</p>
+                    </div>
+
+                    <div class="text-center p-6 bg-white rounded-xl">
+                        <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="calendar" class="w-6 h-6 text-purple-600"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">Access Period</h3>
+                        <p class="text-gray-600">12 Months</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-gradient-to-r from-green-500 to-green-600">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Create a Safer Workplace?</h2>
+            <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+                Invest in your team's safety and your organization's success with comprehensive OHS training.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="../index.html#contact" class="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition duration-300">
+                    Book This Course
+                </a>
+                <a href="../index.html#contact" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition duration-300">
+                    Get More Information
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">SpecCon Holdings</h3>
+                    <p class="text-gray-400">Empowering futures through quality education and training.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="../index.html" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="../index.html#about" class="text-gray-400 hover:text-white transition-colors">About</a></li>
+                        <li><a href="../index.html#qualifications" class="text-gray-400 hover:text-white transition-colors">Qualifications</a></li>
+                        <li><a href="../index.html#accreditations" class="text-gray-400 hover:text-white transition-colors">Accreditations</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Training</h4>
+                    <ul class="space-y-2">
+                        <li><a href="../index.html#classroom-training" class="text-gray-400 hover:text-white transition-colors">Classroom Training</a></li>
+                        <li><a href="http://elearning.co.za" target="_blank" class="text-gray-400 hover:text-white transition-colors">Online Training</a></li>
+                        <li><a href="compliance-courses.html" class="text-gray-400 hover:text-white transition-colors">Compliance Courses</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact</h4>
+                    <p class="text-gray-400">Email: info@speccon.co.za</p>
+                    <p class="text-gray-400">Phone: +27 (0)11 123 4567</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2024 SpecCon Holdings. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

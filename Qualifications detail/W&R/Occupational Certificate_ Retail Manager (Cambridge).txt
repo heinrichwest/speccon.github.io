@@ -1,0 +1,53 @@
+QUALIFICATION DETAILS
+=====================
+
+Qualification Name: Occupational Certificate: Retail Manager (Retail Chain Store Manager)
+SETA: W&R
+NQF Level: 5
+Minimum Credits: 106
+Qualification NLRD ID: 103145
+Learning Programme NLRD ID: N/A
+Expiry Date: 4-Jan-29
+Status: Accredited
+Reference Sheet: QCTO Cambridge
+
+MODULES AND UNITS
+=================
+
+Module 1 - Leadership
+• 142103001-KM-03, Concepts and principles of leading teams in a retail chain store environment, NQF Level 5, 7 Credits
+• 142103001-PM-01, Manage retail chain store employee performance, NQF Level 5, 3 Credits
+• 142103001-WM-02, Processes and procedures for leading teams in a retail chain store environment, NQF Level 4, 8 Credits
+
+Module 2 - Stakeholder relations
+• 142103001-KM-02, Concept and principles of communication in retail, NQF Level 4, 4 Credits
+• 142103001-PM-04, Maintain effective retail chain store stakeholder relations, NQF Level 5, 2 Credits
+• 142103001-WM-04, Processes and procedures for maintaining effective retail chain store stakeholder relations, NQF Level 5, 4 Credits
+
+Module 3 - Operations Management
+• 142103001-KM-01, Concept and principles of retail operations management, NQF Level 5, 4 Credits
+• 142103001-PM-02, Manage retail chain store operational processes, NQF Level 5, 2 Credits
+• 142103001-WM-01, Processes and procedures for planning and implementing retail chain store operations, NQF Level 5, 9 Credits
+
+Module 4 - Managing service standards
+• 142103001-KM-04, Concept and principles of managing service standards of a retail chain store, NQF Level 5, 2 Credits
+• 142103001-PM-03, Manage retail chain store service standards, NQF Level 5, 2 Credits
+• 142103001-WM-03, Processes and procedures for managing retail chain store service standards, NQF Level 5, 8 Credits
+
+Module 5 - Sales and Marketing
+• 142103001-KM-06, Concept and principles of implementing promotional activities in a retail chain store, NQF Level 5, 3 Credits
+• 142103001-PM-06, Propose improvements to a retail chain store's range and layout, NQF Level 5, 2 Credits
+• 142103001-PM-07, Implement plans to improve sales in a retail chain store, NQF Level 5, 2 Credits
+• 142103001-WM-07, Processes and procedures for managing sales and promotional activities, NQF Level 5, 6 Credits
+
+Module 6 - Financial Management
+• 142103001-KM-07, Concept and principles of improving the financial performance of a retail chain store, NQF Level 5, 3 Credits
+• 142103001-PM-08, Implement plans to improve a retail chain store's financial performance, NQF Level 5, 2 Credits
+• 142103001-WM-06, Processes and procedures for improving the retail chain store's bottom line, NQF Level 5, 8 Credits
+
+Module 7 - Asset and Stock Management
+• 142103001-KM-05, Concepts and principles of stock control in a retail chain store, NQF Level 5, 3 Credits
+• 142103001-PM-05, Manage stock control in a retail chain store, NQF Level 5, 3 Credits
+• 142103001-PM-09, Manage risk and maintain assets in a retail chain store, NQF Level 5, 3 Credits
+• 142103001-WM-05, Processes and procedures for managing stock levels and influencing store range and layout, NQF Level 5, 8 Credits
+• 142103001-WM-08, Processes and procedures for managing risk and maintaining assets in a retail chain store, NQF Level 5, 8 Credits

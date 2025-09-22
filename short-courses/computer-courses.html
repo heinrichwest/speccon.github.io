@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Courses - SpecCon Holdings</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen">
+    <!-- Header -->
+    <header class="bg-white/95 backdrop-blur-md shadow-lg fixed w-full z-50 top-0">
+        <div class="container mx-auto px-4 lg:px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <a href="../index.html">
+                        <img src="../images/Logo.png" alt="SpecCon Holdings Logo" class="h-12">
+                    </a>
+                    <div class="ml-3">
+                        <h1 class="text-xl font-bold text-gray-900">SpecCon Holdings</h1>
+                        <p class="text-sm text-gray-600">Computer Training Courses</p>
+                    </div>
+                </div>
+
+                <nav class="hidden lg:flex items-center space-x-8">
+                    <a href="../index.html" class="text-gray-700 hover:text-[#12265E] font-medium transition duration-300">Home</a>
+                    <a href="../index.html#about" class="text-gray-700 hover:text-[#12265E] font-medium transition duration-300">Why Choose Us</a>
+                    <a href="../index.html#qualifications" class="text-gray-700 hover:text-[#12265E] font-medium transition duration-300">Qualifications</a>
+                    <a href="../index.html#accreditations" class="text-gray-700 hover:text-[#12265E] font-medium transition duration-300">Accreditations</a>
+                    <a href="../index.html#classroom-training" class="text-gray-700 hover:text-[#12265E] font-medium transition duration-300">Classroom Training</a>
+                    <a href="../index.html#contact" class="text-gray-700 hover:text-[#12265E] font-medium transition duration-300">Contact Us</a>
+                </nav>
+
+                <div class="hidden lg:block">
+                    <button data-modal="book" data-course="Computer Training" class="bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold px-6 py-3 rounded-lg hover:from-blue-600 hover:to-blue-700 transition duration-300 shadow-lg">
+                        Book Training
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="container mx-auto px-4 py-4">
+        <nav class="text-sm">
+            <ol class="list-none p-0 inline-flex">
+                <li class="flex items-center">
+                    <a href="../index.html" class="text-blue-600 hover:text-blue-800">Home</a>
+                    <i data-lucide="chevron-right" class="w-4 h-4 mx-2 text-gray-400"></i>
+                </li>
+                <li class="flex items-center">
+                    <a href="../index.html#classroom-training" class="text-blue-600 hover:text-blue-800">Training</a>
+                    <i data-lucide="chevron-right" class="w-4 h-4 mx-2 text-gray-400"></i>
+                </li>
+                <li class="text-gray-500">Computer Courses</li>
+            </ol>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Header Section -->
+        <div class="bg-white rounded-2xl shadow-xl p-8 mb-8">
+            <div class="flex items-center space-x-6 mb-6">
+                <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl flex items-center justify-center">
+                    <i data-lucide="monitor" class="w-8 h-8 text-white"></i>
+                </div>
+                <div>
+                    <h1 class="text-4xl font-bold text-gray-800 mb-2">Computer Courses</h1>
+                    <p class="text-xl text-gray-600">Essential digital skills for the modern workplace</p>
+                </div>
+            </div>
+            <p class="text-gray-700 leading-relaxed">
+                Enhance your digital competency with our comprehensive computer training courses. From basic Excel to advanced
+                AI applications, our hands-on training programs are designed to boost productivity and career advancement in today's
+                technology-driven workplace.
+            </p>
+        </div>
+
+        <!-- Course Grid -->
+        <div class="mb-8">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">Available Courses</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Excel Training, Basic to Advanced -->
+                <a href="excel-training.html" class="bg-white rounded-2xl shadow-lg p-8 card-hover transition-all duration-300 block hover:shadow-2xl">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mr-6">
+                            <i data-lucide="file-spreadsheet" class="w-8 h-8 text-green-600"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-xl text-gray-900">Excel Training, Basic to Advanced</h3>
+                            <span class="text-sm text-green-600 font-medium">All Levels</span>
+                            <p class="text-xs text-gray-500 mt-1">Free Excel Assessment for all employees</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">Comprehensive Excel training from foundation skills to advanced features including formulas, pivot tables, macros, and VBA programming.</p>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i data-lucide="clock" class="w-4 h-4 mr-2 text-gray-400"></i>
+                            <span>Duration: 1 day</span>
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i data-lucide="users" class="w-4 h-4 mr-2 text-gray-400"></i>
+                            <span>Max 12 participants</span>
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i data-lucide="award" class="w-4 h-4 mr-2 text-gray-400"></i>
+                            <span>Certificate included</span>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <div class="text-green-600 font-medium">Learn More →</div>
+                        <button data-modal="book" data-course="Excel Training" data-course-value="excel-basic"
+                                class="bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-green-700 transition-colors"
+                                onclick="event.stopPropagation(); event.preventDefault();">
+                            Book Now
+                        </button>
+                    </div>
+                </a>
+
+                <!-- Power BI Training -->
+                <a href="power-bi-training.html" class="bg-white rounded-2xl shadow-lg p-8 card-hover transition-all duration-300 block hover:shadow-2xl">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-orange-100 rounded-2xl flex items-center justify-center mr-6">
+                            <i data-lucide="database" class="w-8 h-8 text-orange-600"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-xl text-gray-900">Power BI Training</h3>
+                            <span class="text-sm text-orange-600 font-medium">Data Analytics</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">Learn to create interactive dashboards and reports using Microsoft Power BI for data visualization.</p>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i data-lucide="clock" class="w-4 h-4 mr-2 text-gray-400"></i>
+                            <span>Duration: 3 days</span>
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i data-lucide="users" class="w-4 h-4 mr-2 text-gray-400"></i>
+                            <span>Max 10 participants</span>
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i data-lucide="award" class="w-4 h-4 mr-2 text-gray-400"></i>
+                            <span>Certificate included</span>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <div class="text-orange-600 font-medium">Learn More →</div>
+                        <button data-modal="book" data-course="Power BI Training" data-course-value="power-bi"
+                                class="bg-orange-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-orange-700 transition-colors"
+                                onclick="event.stopPropagation(); event.preventDefault();">
+                            Book Now
+                        </button>
+                    </div>
+                </a>
+
+                <!-- AI Training -->
+                <a href="ai-training.html" class="bg-white rounded-2xl shadow-lg p-8 card-hover transition-all duration-300 block hover:shadow-2xl">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-cyan-100 rounded-2xl flex items-center justify-center mr-6">
+                            <i data-lucide="brain" class="w-8 h-8 text-cyan-600"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-xl text-gray-900">AI Training</h3>
+                            <span class="text-sm text-cyan-600 font-medium">Basic & Advanced</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">Comprehensive AI training from basics to advanced applications and business implementation.</p>
+
+                    <!-- Training Levels Table -->
+                    <div class="mb-6">
+                        <table class="w-full text-sm">
+                            <thead>
+                                <tr class="border-b border-gray-200">
+                                    <th class="text-left py-2 text-gray-800 font-semibold">Level</th>
+                                    <th class="text-left py-2 text-gray-800 font-semibold">Duration</th>
+                                    <th class="text-left py-2 text-gray-800 font-semibold">Focus</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b border-gray-100">
+                                    <td class="py-2 text-cyan-600 font-medium">Basic</td>
+                                    <td class="py-2 text-gray-600">1 day</td>
+                                    <td class="py-2 text-gray-600">AI basics & productivity tools</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 text-indigo-600 font-medium">Advanced</td>
+                                    <td class="py-2 text-gray-600">2 days</td>
+                                    <td class="py-2 text-gray-600">Machine learning & business solutions</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i data-lucide="users" class="w-4 h-4 mr-2 text-gray-400"></i>
+                            <span>Max 15 participants</span>
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i data-lucide="award" class="w-4 h-4 mr-2 text-gray-400"></i>
+                            <span>Certificate included</span>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <div class="text-cyan-600 font-medium">Learn More →</div>
+                        <button data-modal="book" data-course="AI Training" data-course-value="ai-basic"
+                                class="bg-cyan-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-cyan-700 transition-colors"
+                                onclick="event.stopPropagation(); event.preventDefault();">
+                            Book Now
+                        </button>
+                    </div>
+                </a>
+
+                <!-- Cyber Security -->
+                <a href="cyber-security-training.html" class="bg-white rounded-2xl shadow-lg p-8 card-hover transition-all duration-300 block hover:shadow-2xl">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-red-100 rounded-2xl flex items-center justify-center mr-6">
+                            <i data-lucide="shield" class="w-8 h-8 text-red-600"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-xl text-gray-900">Cyber Security</h3>
+                            <span class="text-sm text-red-600 font-medium">Security Awareness</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">Essential cybersecurity awareness, threat identification, and best practices for protecting digital assets.</p>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i data-lucide="clock" class="w-4 h-4 mr-2 text-gray-400"></i>
+                            <span>Duration: 1 day</span>
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i data-lucide="users" class="w-4 h-4 mr-2 text-gray-400"></i>
+                            <span>Max 15 participants</span>
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i data-lucide="award" class="w-4 h-4 mr-2 text-gray-400"></i>
+                            <span>Certificate included</span>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <div class="text-red-600 font-medium">Learn More →</div>
+                        <button data-modal="book" data-course="Cyber Security Training" data-course-value="cyber-security"
+                                class="bg-red-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-red-700 transition-colors"
+                                onclick="event.stopPropagation(); event.preventDefault();">
+                            Book Now
+                        </button>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- Course Benefits -->
+        <div class="bg-white rounded-2xl shadow-xl p-8 mb-8">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">Why Choose Our Computer Courses?</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="text-center">
+                    <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="users" class="w-6 h-6 text-blue-600"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-800 mb-2">Expert Instructors</h3>
+                    <p class="text-gray-600 text-sm">Industry professionals with real-world experience</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="monitor" class="w-6 h-6 text-green-600"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-800 mb-2">Hands-On Learning</h3>
+                    <p class="text-gray-600 text-sm">Practical exercises with real business scenarios</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="award" class="w-6 h-6 text-purple-600"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-800 mb-2">Certification</h3>
+                    <p class="text-gray-600 text-sm">Recognized certificates for career advancement</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="headphones" class="w-6 h-6 text-orange-600"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-800 mb-2">Post-Course Support</h3>
+                    <p class="text-gray-600 text-sm">Ongoing assistance and resource access</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="bg-gradient-to-r from-blue-600 to-cyan-500 text-white rounded-2xl p-8 text-center">
+            <h2 class="text-3xl font-bold mb-4">Ready to Boost Your Digital Skills?</h2>
+            <p class="text-xl mb-6 opacity-90">
+                Transform your productivity and career prospects with our comprehensive computer training courses.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button data-modal="book" data-course="Computer Training Courses" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                    Book Training
+                </button>
+                <button data-modal="contact" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+                    Contact Us
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">SpecCon Holdings</h3>
+                    <p class="text-gray-400">Empowering futures through quality education and training.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="../index.html" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="../index.html#about" class="text-gray-400 hover:text-white transition-colors">About</a></li>
+                        <li><a href="../index.html#qualifications" class="text-gray-400 hover:text-white transition-colors">Qualifications</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Training</h4>
+                    <ul class="space-y-2">
+                        <li><a href="compliance-courses.html" class="text-gray-400 hover:text-white transition-colors">Compliance Courses</a></li>
+                        <li><a href="computer-courses.html" class="text-gray-400 hover:text-white transition-colors">Computer Courses</a></li>
+                        <li><a href="professional-development.html" class="text-gray-400 hover:text-white transition-colors">Professional Development</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact</h4>
+                    <p class="text-gray-400">Email: info@speccon.co.za</p>
+                    <p class="text-gray-400">Phone: +27 (0)11 123 4567</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Include centralized modal system -->
+    <script src="../js/centralized-modals.js"></script>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>

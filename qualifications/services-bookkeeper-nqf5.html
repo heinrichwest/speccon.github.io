@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookkeeper NQF Level 5 | Services SETA | SpecCon Holdings</title>
+    <meta name="description" content="Professional bookkeeping skills with our NQF Level 5 Bookkeeper qualification accredited by Services SETA. 364 credits, comprehensive financial training.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 10px 10px -5px rgb(0 0 0 / 0.04);
+        }
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        .dropdown-menu {
+            display: none;
+        }
+        /* Dropdown styling for better hover stability and alignment */
+        .dropdown {
+            padding-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+        .dropdown button {
+            display: flex;
+            align-items: center;
+        }
+        .dropdown-menu {
+            top: 100%;
+            margin-top: 0;
+            padding-top: 8px;
+        }
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        .dropdown-menu {
+            display: none;
+        }
+        /* Sticky Banner Styles */
+        .sticky-banner {
+            position: fixed;
+            top: 100px;
+            right: 20px;
+            background: linear-gradient(135deg, #12265E 0%, #4A90E2 100%);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            z-index: 1000;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            font-weight: 600;
+            font-size: 14px;
+            backdrop-filter: blur(10px);
+        }
+        .sticky-banner:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+            background: linear-gradient(135deg, #0d1a47 0%, #3a7bc8 100%);
+        }
+        .banner-popup {
+            position: fixed;
+            top: 160px;
+            right: 20px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            z-index: 999;
+            overflow: hidden;
+            transform: translateY(-20px);
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.3s ease;
+            max-width: 420px;
+            width: 90vw;
+        }
+        .banner-popup.show {
+            transform: translateY(0);
+            opacity: 1;
+            pointer-events: all;
+        }
+        .animate-scroll {
+            animation: scroll 30s linear infinite;
+        }
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+
+        /* Enquiry Popup Modal Styles */
+        .enquiry-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        .enquiry-modal.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        .enquiry-modal-content {
+            background: white;
+            border-radius: 20px;
+            max-width: 500px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+            transform: translateY(20px);
+            transition: transform 0.3s ease;
+        }
+        .enquiry-modal.show .enquiry-modal-content {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-900">
+    <!-- Header -->
+    <header class="bg-white/95 backdrop-blur-md shadow-lg fixed w-full z-50 top-0">
+        <div class="container mx-auto px-4 lg:px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <a href="../index.html">
+                        <img src="../images/Logo.png" alt="SpecCon Holdings Logo" class="h-12">
+                    </a>
+                    <div class="ml-3">
+                        <h1 class="text-xl font-bold text-gray-900">SpecCon Holdings</h1>
+                        <p class="text-sm text-gray-600">Services SETA Qualifications</p>
+                    </div>
+                </div>
+
+                <nav class="hidden lg:flex items-center space-x-8">
+                    <a href="../index.html#about" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300">Why Choose Us</a>
+                    <a href="../index.html#qualifications" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300">Qualifications</a>
+                    <a href="../index.html#accreditations" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300">Accreditations</a>
+                    <a href="../index.html#classroom-training" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300">Classroom Training</a>
+                    <div class="relative dropdown">
+                        <button class="text-gray-700 hover:text-blue-600 font-medium transition duration-300 inline-flex items-center">
+                            Other Products <i data-lucide="chevron-down" class="w-4 h-4 ml-1"></i>
+                        </button>
+                        <div class="dropdown-menu absolute left-0 w-64 bg-white rounded-lg shadow-xl py-2 z-20 border">
+                            <a href="https://elearning.co.za/" target="_blank" class="block px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition duration-200">
+                                <i data-lucide="monitor" class="w-4 h-4 inline mr-2"></i>Online Training
+                            </a>
+                            <a href="https://employmentequityact.co.za/" target="_blank" class="block px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition duration-200">
+                                <i data-lucide="shield-check" class="w-4 h-4 inline mr-2"></i>Employment Equity
+                            </a>
+                            <a href="https://learningmanagementsystem.co.za/" target="_blank" class="block px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition duration-200">
+                                <i data-lucide="graduation-cap" class="w-4 h-4 inline mr-2"></i>Learning Management System
+                            </a>
+                            <a href="https://skillsdevelopment.co.za/" target="_blank" class="block px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition duration-200">
+                                <i data-lucide="trending-up" class="w-4 h-4 inline mr-2"></i>Skills Development
+                            </a>
+                            <a href="https://www.specconacademy.co.za/" target="_blank" class="block px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition duration-200">
+                                <i data-lucide="school" class="w-4 h-4 inline mr-2"></i>SpecCon Academy
+                            </a>
+                            <a href="https://bbbee.co.za/" target="_blank" class="block px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition duration-200">
+                                <i data-lucide="award" class="w-4 h-4 inline mr-2"></i>BBBEE Consulting
+                            </a>
+                        </div>
+                    </div>
+                </nav>
+
+                <div class="hidden lg:block">
+                    <button onclick="openEnquiryModal()" class="bg-gradient-to-r from-[#12265E] to-[#4A90E2] text-white font-semibold px-6 py-3 rounded-lg hover:from-[#0d1a47] hover:to-[#3a7bc8] transition duration-300 shadow-lg">
+                        Enquire Now
+                    </button>
+                </div>
+
+                <button id="mobile-menu-button" class="lg:hidden">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden lg:hidden mt-4">
+                <a href="../index.html#about" class="block py-2 text-gray-600 hover:text-blue-600">About Us</a>
+                <a href="../index.html#qualifications" class="block py-2 text-gray-600 hover:text-blue-600">Qualifications</a>
+                <a href="../index.html#accreditations" class="block py-2 text-gray-600 hover:text-blue-600">Accreditations</a>
+                <a href="../index.html#classroom-training" class="block py-2 text-gray-600 hover:text-blue-600">Classroom Training</a>
+                <button onclick="openEnquiryModal()" class="mt-2 w-full bg-gradient-to-r from-[#12265E] to-[#4A90E2] text-white font-semibold px-5 py-2 rounded-lg hover:from-[#0d1a47] hover:to-[#3a7bc8] transition duration-300 shadow-lg text-center block">
+                    Enquire Now
+                </button>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Breadcrumb -->
+    <section class="pt-24 pb-8 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <nav class="text-sm text-gray-600">
+                <a href="../index.html" class="hover:text-blue-600">Home</a>
+                <span class="mx-2">/</span>
+                <a href="../setas/services-seta.html" class="hover:text-blue-600">Services SETA</a>
+                <span class="mx-2">/</span>
+                <span class="text-gray-900">Bookkeeper NQF Level 5</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="py-16 bg-gradient-to-br from-emerald-50 to-white">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-emerald-100 rounded-2xl flex items-center justify-center mr-6">
+                            <i data-lucide="calculator" class="w-8 h-8 text-emerald-600"></i>
+                        </div>
+                        <div>
+                            <span class="text-emerald-600 font-semibold">NQF Level 5 | Services SETA</span>
+                            <h1 class="text-4xl md:text-5xl font-bold text-gray-900">Bookkeeper</h1>
+                        </div>
+                    </div>
+                    <p class="text-lg text-gray-600 leading-relaxed mb-8">
+                        Develop professional bookkeeping skills for financial record management and accounting support.
+                        This comprehensive qualification prepares you for a career in financial services and accounting.
+                    </p>
+                    <div class="grid grid-cols-3 gap-4 mb-8">
+                        <div class="text-center p-4 bg-white rounded-lg shadow">
+                            <div class="text-xl font-bold text-emerald-600">364</div>
+                            <div class="text-sm text-gray-600">Credits</div>
+                        </div>
+                        <div class="text-center p-4 bg-white rounded-lg shadow">
+                            <div class="text-xl font-bold text-green-600">36</div>
+                            <div class="text-sm text-gray-600">Months</div>
+                        </div>
+                        <div class="text-center p-4 bg-white rounded-lg shadow">
+                            <div class="text-xl font-bold text-purple-600">NQF 5</div>
+                            <div class="text-sm text-gray-600">Level</div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <img src="https://images.pexels.com/photos/6693661/pexels-photo-6693661.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                         alt="Professional bookkeeper at work"
+                         class="rounded-2xl shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Qualification Details -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-3 gap-12">
+                <!-- Main Content -->
+                <div class="lg:col-span-2">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-8">Qualification Overview</h2>
+
+                    <div class="prose max-w-none mb-12">
+                        <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                            This Bookkeeper qualification provides comprehensive training in financial record-keeping, accounting principles,
+                            and business financial management. The program combines theoretical knowledge with practical skills needed
+                            to maintain accurate financial records and support business decision-making processes.
+                        </p>
+
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Learning Outcomes</h3>
+                        <p class="text-gray-600 mb-6">Upon completion of this qualification, learners will be able to:</p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0"></i>
+                                <span>Record and process financial transactions using accounting software</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0"></i>
+                                <span>Prepare and reconcile financial statements and reports</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0"></i>
+                                <span>Manage accounts payable and receivable</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0"></i>
+                                <span>Process payroll and handle tax compliance</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0"></i>
+                                <span>Apply principles of cost and management accounting</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0"></i>
+                                <span>Maintain proper filing systems and financial records</span>
+                            </li>
+                        </ul>
+
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Career Opportunities</h3>
+                        <p class="text-gray-600 mb-6">This qualification opens doors to various financial opportunities including:</p>
+                        <div class="grid md:grid-cols-2 gap-4 mb-8">
+                            <div class="flex items-center">
+                                <i data-lucide="briefcase" class="w-5 h-5 text-blue-600 mr-3"></i>
+                                <span>Professional Bookkeeper</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i data-lucide="briefcase" class="w-5 h-5 text-blue-600 mr-3"></i>
+                                <span>Accounts Clerk</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i data-lucide="briefcase" class="w-5 h-5 text-blue-600 mr-3"></i>
+                                <span>Financial Assistant</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i data-lucide="briefcase" class="w-5 h-5 text-blue-600 mr-3"></i>
+                                <span>Payroll Clerk</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i data-lucide="briefcase" class="w-5 h-5 text-blue-600 mr-3"></i>
+                                <span>Accounting Technician</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i data-lucide="briefcase" class="w-5 h-5 text-blue-600 mr-3"></i>
+                                <span>Small Business Financial Advisor</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modules -->
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Core Modules</h3>
+                    <div class="space-y-6 mb-12">
+                        <div class="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-xl">
+                            <h4 class="font-bold text-lg text-gray-900 mb-3">Module 1: Computer Skills</h4>
+                            <ul class="space-y-2 text-sm text-gray-600">
+                                <li>• End user computing and digital literacy</li>
+                                <li>• Accounting software proficiency (Pastel, SAGE)</li>
+                                <li>• Spreadsheet applications for financial analysis</li>
+                                <li>• Database management and reporting tools</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-gradient-to-r from-green-50 to-emerald-50 p-6 rounded-xl">
+                            <h4 class="font-bold text-lg text-gray-900 mb-3">Module 2: Introduction to Bookkeeping</h4>
+                            <ul class="space-y-2 text-sm text-gray-600">
+                                <li>• Accounting system fundamentals and principles</li>
+                                <li>• Bookkeeping practice and double-entry system</li>
+                                <li>• Financial accounting concepts and standards</li>
+                                <li>• Chart of accounts and ledger management</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-gradient-to-r from-purple-50 to-pink-50 p-6 rounded-xl">
+                            <h4 class="font-bold text-lg text-gray-900 mb-3">Module 3: Management Accounting</h4>
+                            <ul class="space-y-2 text-sm text-gray-600">
+                                <li>• Cost accounting principles and methodologies</li>
+                                <li>• Management accounting techniques and analysis</li>
+                                <li>• Budgeting and financial planning processes</li>
+                                <li>• Variance analysis and performance measurement</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-gradient-to-r from-teal-50 to-cyan-50 p-6 rounded-xl">
+                            <h4 class="font-bold text-lg text-gray-900 mb-3">Module 4: Taxation</h4>
+                            <ul class="space-y-2 text-sm text-gray-600">
+                                <li>• Basic taxation principles and legislation</li>
+                                <li>• VAT calculations and compliance procedures</li>
+                                <li>• Income tax basics and PAYE administration</li>
+                                <li>• Tax compliance and statutory reporting</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-gradient-to-r from-orange-50 to-red-50 p-6 rounded-xl">
+                            <h4 class="font-bold text-lg text-gray-900 mb-3">Module 5: Financial Analysis</h4>
+                            <ul class="space-y-2 text-sm text-gray-600">
+                                <li>• Business calculations and financial mathematics</li>
+                                <li>• Financial techniques for bookkeeping duties</li>
+                                <li>• Ratio analysis and financial interpretation</li>
+                                <li>• Cash flow management and forecasting</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-gradient-to-r from-yellow-50 to-amber-50 p-6 rounded-xl">
+                            <h4 class="font-bold text-lg text-gray-900 mb-3">Module 6: Business Communication</h4>
+                            <ul class="space-y-2 text-sm text-gray-600">
+                                <li>• Professional communication and correspondence</li>
+                                <li>• Customer service excellence in financial services</li>
+                                <li>• Report writing and presentation skills</li>
+                                <li>• Stakeholder communication and relationship building</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Workplace Modules -->
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Workplace Experience Modules</h3>
+                    <div class="bg-blue-50 p-6 rounded-xl mb-8">
+                        <h4 class="font-bold text-lg text-gray-900 mb-4">Year 3 Workplace Training</h4>
+                        <div class="space-y-3">
+                            <div class="flex items-start">
+                                <i data-lucide="circle-dot" class="w-4 h-4 text-blue-600 mr-3 mt-1.5 flex-shrink-0"></i>
+                                <span class="text-gray-700 text-sm">Record and calculate financial transactions using accounting systems</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i data-lucide="circle-dot" class="w-4 h-4 text-blue-600 mr-3 mt-1.5 flex-shrink-0"></i>
+                                <span class="text-gray-700 text-sm">Reconcile records of sales and financial transactions</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i data-lucide="circle-dot" class="w-4 h-4 text-blue-600 mr-3 mt-1.5 flex-shrink-0"></i>
+                                <span class="text-gray-700 text-sm">Develop and use spreadsheets for financial calculations</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i data-lucide="circle-dot" class="w-4 h-4 text-blue-600 mr-3 mt-1.5 flex-shrink-0"></i>
+                                <span class="text-gray-700 text-sm">Assist with operational budget preparation</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i data-lucide="circle-dot" class="w-4 h-4 text-blue-600 mr-3 mt-1.5 flex-shrink-0"></i>
+                                <span class="text-gray-700 text-sm">Prepare financial reports and statutory returns</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i data-lucide="circle-dot" class="w-4 h-4 text-blue-600 mr-3 mt-1.5 flex-shrink-0"></i>
+                                <span class="text-gray-700 text-sm">Process payroll transactions using computerized software</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="lg:col-span-1">
+                    <div class="bg-white border border-gray-200 rounded-2xl shadow-lg p-8 sticky top-24">
+                        <h3 class="text-xl font-bold text-gray-900 mb-6">Qualification Details</h3>
+
+                        <div class="space-y-4 mb-8">
+                            <div class="flex justify-between items-center py-3 border-b border-gray-100">
+                                <span class="text-gray-600">SETA</span>
+                                <span class="font-semibold">Services SETA</span>
+                            </div>
+                            <div class="flex justify-between items-center py-3 border-b border-gray-100">
+                                <span class="text-gray-600">NQF Level</span>
+                                <span class="font-semibold">Level 5</span>
+                            </div>
+                            <div class="flex justify-between items-center py-3 border-b border-gray-100">
+                                <span class="text-gray-600">Credits</span>
+                                <span class="font-semibold">364 Credits</span>
+                            </div>
+                            <div class="flex justify-between items-center py-3 border-b border-gray-100">
+                                <span class="text-gray-600">Duration</span>
+                                <span class="font-semibold">36 Months</span>
+                            </div>
+                            <div class="flex justify-between items-center py-3 border-b border-gray-100">
+                                <span class="text-gray-600">Delivery Mode</span>
+                                <span class="font-semibold">Blended Learning</span>
+                            </div>
+                            <div class="flex justify-between items-center py-3 border-b border-gray-100">
+                                <span class="text-gray-600">Assessment</span>
+                                <span class="font-semibold">Competency Based</span>
+                            </div>
+                            <div class="flex justify-between items-center py-3 border-b border-gray-100">
+                                <span class="text-gray-600">NLRD ID</span>
+                                <span class="font-semibold">98959</span>
+                            </div>
+                            <div class="flex justify-between items-center py-3 border-b border-gray-100">
+                                <span class="text-gray-600">Status</span>
+                                <span class="font-semibold">Accredited</span>
+                            </div>
+                            <div class="flex justify-between items-center py-3 border-b border-gray-100">
+                                <span class="text-gray-600">Provider</span>
+                                <span class="font-semibold">SpecCon</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Qualifications -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Related Qualifications</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Explore other Services SETA qualifications</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <a href="services-business-administration-nqf4.html" class="bg-white rounded-2xl shadow-lg p-6 card-hover transition-all duration-300 block">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mr-4">
+                            <i data-lucide="folder" class="w-6 h-6 text-teal-600"></i>
+                        </div>
+                        <div>
+                            <span class="text-sm text-teal-600 font-medium">NQF Level 4</span>
+                            <h3 class="font-bold text-lg text-gray-900">Business Administration</h3>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm">Advanced business administration for professional environments.</p>
+                </a>
+
+                <a href="services-project-manager-nqf5.html" class="bg-white rounded-2xl shadow-lg p-6 card-hover transition-all duration-300 block">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mr-4">
+                            <i data-lucide="gantt-chart" class="w-6 h-6 text-red-600"></i>
+                        </div>
+                        <div>
+                            <span class="text-sm text-red-600 font-medium">NQF Level 5</span>
+                            <h3 class="font-bold text-lg text-gray-900">Project Manager</h3>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm">Lead projects from initiation to completion with expertise.</p>
+                </a>
+
+                <a href="services-quality-manager-nqf6.html" class="bg-white rounded-2xl shadow-lg p-6 card-hover transition-all duration-300 block">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-rose-100 rounded-lg flex items-center justify-center mr-4">
+                            <i data-lucide="award" class="w-6 h-6 text-rose-600"></i>
+                        </div>
+                        <div>
+                            <span class="text-sm text-rose-600 font-medium">NQF Level 6</span>
+                            <h3 class="font-bold text-lg text-gray-900">Quality Manager</h3>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm">Manage quality systems and improvement initiatives.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sticky Banner -->
+    <div id="stickyBanner" class="sticky-banner">
+        <i data-lucide="gift" class="w-4 h-4 inline mr-2"></i>
+        Our Free Value Adds
+    </div>
+
+    <!-- Banner Popup -->
+    <div id="bannerPopup" class="banner-popup">
+        <div class="p-6">
+            <div class="flex items-center justify-between mb-4">
+                <h3 class="text-xl font-bold text-gray-900">Value-Added Benefits</h3>
+                <button id="closePopup" class="text-gray-400 hover:text-gray-600">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+            <p class="text-gray-600 text-sm mb-6">You can get these value adds for free when you do learnerships with SpecCon</p>
+            <!-- Value Adds Grid -->
+            <div class="grid grid-cols-1 gap-4 mb-6">
+                <div class="flex items-center p-3 bg-blue-50 rounded-lg">
+                    <div class="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center mr-3">
+                        <i data-lucide="layout-template" class="w-4 h-4 text-white"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-sm text-gray-900">White Labelled LMS</h4>
+                        <p class="text-xs text-gray-600">Complete Learning Management System</p>
+                    </div>
+                </div>
+                <div class="flex items-center p-3 bg-green-50 rounded-lg">
+                    <div class="w-8 h-8 bg-green-500 rounded-lg flex items-center justify-center mr-3">
+                        <i data-lucide="book-open" class="w-4 h-4 text-white"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-sm text-gray-900">300+ Online Courses</h4>
+                        <p class="text-xs text-gray-600">Comprehensive course library</p>
+                    </div>
+                </div>
+                <div class="flex items-center p-3 bg-purple-50 rounded-lg">
+                    <div class="w-8 h-8 bg-purple-500 rounded-lg flex items-center justify-center mr-3">
+                        <i data-lucide="users" class="w-4 h-4 text-white"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-sm text-gray-900">Employment Equity System</h4>
+                        <p class="text-xs text-gray-600">Compliance and reporting</p>
+                    </div>
+                </div>
+                <div class="flex items-center p-3 bg-orange-50 rounded-lg">
+                    <div class="w-8 h-8 bg-orange-500 rounded-lg flex items-center justify-center mr-3">
+                        <i data-lucide="clipboard-check" class="w-4 h-4 text-white"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-sm text-gray-900">10+ Work Assessments</h4>
+                        <p class="text-xs text-gray-600">Excel & workplace skills tests</p>
+                    </div>
+                </div>
+                <div class="flex items-center p-3 bg-red-50 rounded-lg">
+                    <div class="w-8 h-8 bg-red-500 rounded-lg flex items-center justify-center mr-3">
+                        <i data-lucide="shield-check" class="w-4 h-4 text-white"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-sm text-gray-900">Compliance Training</h4>
+                        <p class="text-xs text-gray-600">First Aid, Fire Fighter, OHS</p>
+                    </div>
+                </div>
+                <div class="flex items-center p-3 bg-teal-50 rounded-lg">
+                    <div class="w-8 h-8 bg-teal-500 rounded-lg flex items-center justify-center mr-3">
+                        <i data-lucide="graduation-cap" class="w-4 h-4 text-white"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-sm text-gray-900">Academy Access</h4>
+                        <p class="text-xs text-gray-600">Resources for staff children</p>
+                    </div>
+                </div>
+                <div class="flex items-center p-3 bg-indigo-50 rounded-lg">
+                    <div class="w-8 h-8 bg-indigo-500 rounded-lg flex items-center justify-center mr-3">
+                        <i data-lucide="user-check" class="w-4 h-4 text-white"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-sm text-gray-900">SDF Service</h4>
+                        <p class="text-xs text-gray-600">Skills Development Facilitator support</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Client Testimonials -->
+            <div class="border-t pt-4">
+                <h4 class="font-bold text-gray-900 mb-3 text-sm">What Our Clients Say</h4>
+                <div class="space-y-3">
+                    <div class="flex items-start space-x-3">
+                        <img src="../Client Logos/AVI.PNG" alt="AVI" class="w-8 h-8 object-contain">
+                        <div>
+                            <p class="text-xs text-gray-700 italic">"SpecCon is knowledgeable, passionate and always goes the extra mile..."</p>
+                            <p class="text-xs text-gray-500 mt-1">- Neteske Gerber, AVI</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-3">
+                        <img src="../Client Logos/isuzu.PNG" alt="Isuzu" class="w-8 h-8 object-contain">
+                        <div>
+                            <p class="text-xs text-gray-700 italic">"The SpecCon LMS has transformed our training approach..."</p>
+                            <p class="text-xs text-gray-500 mt-1">- Lisa van Aswegen, Isuzu</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Client Logos Scrolling Bar -->
+            <div class="border-t pt-4 mt-4">
+                <p class="text-xs text-gray-500 text-center mb-2">Trusted by Leading Companies</p>
+                <div class="overflow-hidden">
+                    <div class="flex animate-scroll">
+                        <div class="flex space-x-4 min-w-max">
+                            <img src="../Client Logos/AVI.PNG" alt="AVI" class="h-6 object-contain grayscale">
+                            <img src="../Client Logos/isuzu.PNG" alt="Isuzu" class="h-6 object-contain grayscale">
+                            <img src="../Client Logos/afgri.PNG" alt="Afgri" class="h-6 object-contain grayscale">
+                            <img src="../Client Logos/engen.PNG" alt="Engen" class="h-6 object-contain grayscale">
+                            <img src="../Client Logos/capitec.PNG" alt="Capitec" class="h-6 object-contain grayscale">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Enquiry Button -->
+            <div class="border-t pt-4 mt-4 text-center">
+                <button onclick="closePopup(); openEnquiryModal();" class="bg-gradient-to-r from-[#12265E] to-[#4A90E2] text-white px-6 py-3 rounded-lg font-semibold hover:from-[#0d1a47] hover:to-[#3a7bc8] transition duration-300 shadow-lg inline-block">
+                    Enquiry Now
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Enquiry Modal -->
+    <div id="enquiryModal" class="enquiry-modal">
+        <div class="enquiry-modal-content">
+            <div class="p-8">
+                <div class="flex items-center justify-between mb-6">
+                    <h2 class="text-2xl font-bold text-gray-900">Enquire About Bookkeeper NQF5</h2>
+                    <button onclick="closeEnquiryModal()" class="text-gray-400 hover:text-gray-600 text-xl">
+                        <i data-lucide="x" class="w-6 h-6"></i>
+                    </button>
+                </div>
+
+                <div class="mb-6 p-4 bg-blue-50 rounded-lg border border-blue-200">
+                    <p class="text-blue-700 text-sm">
+                        <i data-lucide="info" class="w-4 h-4 inline mr-2"></i>
+                        If you are applying for a learnership, please <a href="../index.html#apply" class="font-semibold underline hover:text-blue-800">click here</a>.
+                    </p>
+                </div>
+
+                <form id="enquiryForm" onsubmit="submitEnquiry(event)">
+                    <div class="grid md:grid-cols-2 gap-4 mb-4">
+                        <div>
+                            <label for="firstName" class="block text-sm font-medium text-gray-700 mb-2">Name *</label>
+                            <input type="text" id="firstName" name="firstName" required
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                        <div>
+                            <label for="surname" class="block text-sm font-medium text-gray-700 mb-2">Surname *</label>
+                            <input type="text" id="surname" name="surname" required
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-4 mb-4">
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email *</label>
+                            <input type="email" id="email" name="email" required
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="company" class="block text-sm font-medium text-gray-700 mb-2">Company *</label>
+                        <input type="text" id="company" name="company" required
+                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                    </div>
+
+                    <div class="mb-6">
+                        <label for="reason" class="block text-sm font-medium text-gray-700 mb-2">Reason for Enquiry *</label>
+                        <textarea id="reason" name="reason" rows="4" required
+                                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
+                                  placeholder="Please tell us about your enquiry and how we can help you..."></textarea>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-3">
+                        <button type="submit" class="flex-1 bg-gradient-to-r from-[#12265E] to-[#4A90E2] text-white font-semibold py-3 px-6 rounded-lg hover:from-[#0d1a47] hover:to-[#3a7bc8] transition duration-300">
+                            <i data-lucide="send" class="w-4 h-4 inline mr-2"></i>
+                            Send Enquiry
+                        </button>
+                        <button type="button" onclick="closeEnquiryModal()" class="flex-1 bg-gray-500 text-white font-semibold py-3 px-6 rounded-lg hover:bg-gray-600 transition duration-300">
+                            Cancel
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <img src="../images/Logo.png" alt="SpecCon Holdings Logo" class="h-12 mr-3">
+                        <div>
+                            <h3 class="text-xl font-bold">SpecCon Holdings</h3>
+                            <p class="text-gray-400">Bookkeeper Qualification</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 mb-4">Building financial expertise through comprehensive bookkeeping training.</p>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="../index.html" class="text-gray-400 hover:text-white transition duration-200">Home</a></li>
+                        <li><a href="../setas/services-seta.html" class="text-gray-400 hover:text-white transition duration-200">Services SETA</a></li>
+                        <li><a href="../index.html#qualifications" class="text-gray-400 hover:text-white transition duration-200">All Qualifications</a></li>
+                        <li><a href="../index.html#contact" class="text-gray-400 hover:text-white transition duration-200">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Get Started</h4>
+                    <ul class="space-y-2">
+                        <li><a href="../index.html#contact" class="text-gray-400 hover:text-white transition duration-200">Get Information</a></li>
+                        <li><a href="mailto:help@speccon.co.za" class="text-gray-400 hover:text-white transition duration-200">Email Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2025 SpecCon Holdings. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Enquiry Modal Functions (defined first to be available immediately)
+        function openEnquiryModal() {
+            const modal = document.getElementById('enquiryModal');
+            if (modal) {
+                modal.classList.add('show');
+                document.body.style.overflow = 'hidden';
+                console.log('Opening enquiry modal');
+            } else {
+                console.error('Enquiry modal not found');
+            }
+        }
+
+        function closeEnquiryModal() {
+            const modal = document.getElementById('enquiryModal');
+            if (modal) {
+                modal.classList.remove('show');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        function closePopup() {
+            const bannerPopup = document.getElementById('bannerPopup');
+            if (bannerPopup) {
+                bannerPopup.classList.remove('show');
+                // Also set the popup state
+                if (typeof isPopupOpen !== 'undefined') {
+                    isPopupOpen = false;
+                }
+            }
+        }
+
+        function submitEnquiry(event) {
+            event.preventDefault();
+
+            // Get form data
+            const formData = new FormData(event.target);
+            const enquiryData = {
+                firstName: formData.get('firstName'),
+                surname: formData.get('surname'),
+                email: formData.get('email'),
+                phone: formData.get('phone'),
+                company: formData.get('company'),
+                reason: formData.get('reason'),
+                qualification: 'Bookkeeper NQF Level 5'
+            };
+
+            // For now, just show success message and close modal
+            alert('Thank you for your enquiry! We will get back to you soon.');
+            closeEnquiryModal();
+
+            // Reset form
+            event.target.reset();
+
+            // In a real implementation, you would send this data to your server
+            console.log('Enquiry submitted:', enquiryData);
+        }
+
+        // Initialize everything when DOM is ready
+        document.addEventListener('DOMContentLoaded', function() {
+            lucide.createIcons();
+
+            // Mobile menu toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+
+        // Sticky banner functionality
+        const stickyBanner = document.getElementById('stickyBanner');
+        const bannerPopup = document.getElementById('bannerPopup');
+        const closePopup = document.getElementById('closePopup');
+        let isPopupOpen = false;
+
+        // Show banner immediately when page loads
+        stickyBanner.style.display = 'block';
+
+        // Toggle popup on banner hover/click
+        stickyBanner.addEventListener('mouseenter', function() {
+            if (!isPopupOpen) {
+                bannerPopup.classList.add('show');
+                isPopupOpen = true;
+            }
+        });
+
+        stickyBanner.addEventListener('click', function() {
+            bannerPopup.classList.toggle('show');
+            isPopupOpen = !isPopupOpen;
+        });
+
+        // Close popup
+        closePopup.addEventListener('click', function() {
+            bannerPopup.classList.remove('show');
+            isPopupOpen = false;
+        });
+
+        // Close popup when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!stickyBanner.contains(e.target) && !bannerPopup.contains(e.target)) {
+                bannerPopup.classList.remove('show');
+                isPopupOpen = false;
+            }
+        });
+
+
+            // Close modal when clicking outside
+            const enquiryModal = document.getElementById('enquiryModal');
+            if (enquiryModal) {
+                enquiryModal.addEventListener('click', function(e) {
+                    if (e.target === this) {
+                        closeEnquiryModal();
+                    }
+                });
+            }
+
+            // Close modal with Escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    closeEnquiryModal();
+                }
+            });
+        });
+
+    </script>
+</body>
+</html>

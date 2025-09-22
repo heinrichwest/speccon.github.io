@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Finance Management | SpecCon Holdings</title>
+    <meta name="description" content="Comprehensive personal finance management training covering budgeting, investing, retirement planning, and building financial security.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="../js/centralized-modals.js"></script>
+    <link rel="icon" type="image/png" href="../images/Logo.png">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 10px 10px -5px rgb(0 0 0 / 0.04);
+        }
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        .dropdown-menu {
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-900">
+    <!-- Header -->
+    <header class="bg-white/90 backdrop-blur-md shadow-sm fixed w-full z-50 top-0">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex items-center justify-between">
+                <a href="../home.html">
+                    <img src="../SpecCon2.png" alt="SpecCon Holdings Logo" class="h-12">
+                </a>
+
+                <nav class="hidden lg:flex items-center space-x-8">
+                    <a href="../home.html#about" class="text-gray-600 hover:text-blue-600 transition duration-300">About Us</a>
+                    <a href="../home.html#qualifications" class="text-gray-600 hover:text-blue-600 transition duration-300">Qualifications</a>
+                    <a href="../home.html#accreditations" class="text-gray-600 hover:text-blue-600 transition duration-300">Accreditations</a>
+                    <div class="relative dropdown">
+                        <button class="text-gray-600 hover:text-blue-600 transition duration-300 flex items-center">
+                            Other Products <i data-lucide="chevron-down" class="w-4 h-4 ml-1"></i>
+                        </button>
+                        <div class="dropdown-menu absolute -left-16 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-20">
+                            <a href="professional-development.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Professional Development</a>
+                            <a href="short-courses/intro-to-ai-training.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">AI Training Courses</a>
+                            <a href="short-courses/cyber-security-training.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Cyber Security Training</a>
+                            <a href="short-courses/compliance-courses.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Compliance Training</a>
+                        </div>
+                    </div>
+                    <a href="../home.html#contact" class="text-gray-600 hover:text-blue-600 transition duration-300">Contact Us</a>
+                </nav>
+
+                <div class="hidden lg:block">
+                    <button data-modal="book" data-course="Personal Finance Management" class="bg-blue-600 text-white font-semibold px-5 py-2 rounded-lg hover:bg-blue-700 transition duration-300 shadow">Book Training</button>
+                </div>
+
+                <button id="mobile-menu-button" class="lg:hidden">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden lg:hidden mt-4">
+                <a href="../home.html#about" class="block py-2 text-gray-600 hover:text-blue-600">About Us</a>
+                <a href="../home.html#qualifications" class="block py-2 text-gray-600 hover:text-blue-600">Qualifications</a>
+                <a href="../home.html#accreditations" class="block py-2 text-gray-600 hover:text-blue-600">Accreditations</a>
+                <a href="professional-development.html" class="block py-2 text-gray-600 hover:text-blue-600">Professional Development</a>
+                <a href="../home.html#contact" class="block py-2 text-gray-600 hover:text-blue-600">Contact Us</a>
+                <button onclick="window.location.href='../home.html#contact'" class="mt-2 w-full bg-blue-600 text-white font-semibold px-5 py-2 rounded-lg hover:bg-blue-700 transition duration-300">Book Training</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-emerald-600 via-emerald-700 to-emerald-800 text-white pt-28 pb-20">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="mb-6">
+                        <span class="bg-emerald-500/20 text-emerald-100 px-4 py-2 rounded-full text-sm font-medium">Financial Wellness</span>
+                    </div>
+                    <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">Personal Finance Management</h1>
+                    <p class="text-xl text-emerald-100 mb-8">
+                        Take control of your financial future with comprehensive training in budgeting, investing, debt management, and retirement planning strategies.
+                    </p>
+
+                    <div class="grid grid-cols-3 gap-6 mb-8">
+                        <div class="text-center p-4 bg-white/10 rounded-lg">
+                            <div class="text-2xl font-bold text-white">1-2</div>
+                            <div class="text-emerald-100 text-sm">Days Duration</div>
+                        </div>
+                        <div class="text-center p-4 bg-white/10 rounded-lg">
+                            <div class="text-2xl font-bold text-white">All</div>
+                            <div class="text-emerald-100 text-sm">Levels</div>
+                        </div>
+                        <div class="text-center p-4 bg-white/10 rounded-lg">
+                            <div class="text-2xl font-bold text-white">✓</div>
+                            <div class="text-emerald-100 text-sm">Certificate</div>
+                        </div>
+                    </div>
+
+                    <a href="../home.html#contact" class="bg-white text-emerald-600 font-bold py-4 px-8 rounded-lg hover:bg-gray-100 transition duration-300 inline-flex items-center">
+                        <i data-lucide="calendar" class="w-5 h-5 mr-2"></i>
+                        Book This Training
+                    </a>
+                </div>
+
+                <div class="relative">
+                    <img src="https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                         alt="Financial planning and personal finance management"
+                         class="rounded-2xl shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Overview -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Financial Management Overview</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Comprehensive training to build financial literacy, create sustainable wealth, and secure your financial future through proven strategies.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-2xl shadow-lg p-8 card-hover transition-all duration-300">
+                    <div class="w-16 h-16 bg-emerald-100 rounded-2xl flex items-center justify-center mb-6">
+                        <i data-lucide="calculator" class="w-8 h-8 text-emerald-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Budgeting & Planning</h3>
+                    <p class="text-gray-600">Master effective budgeting techniques, expense tracking, and financial goal setting for long-term success.</p>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg p-8 card-hover transition-all duration-300">
+                    <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mb-6">
+                        <i data-lucide="credit-card" class="w-8 h-8 text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Debt Management</h3>
+                    <p class="text-gray-600">Learn strategies to eliminate debt, improve credit scores, and avoid financial pitfalls that drain wealth.</p>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg p-8 card-hover transition-all duration-300">
+                    <div class="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center mb-6">
+                        <i data-lucide="trending-up" class="w-8 h-8 text-purple-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Investment Strategies</h3>
+                    <p class="text-gray-600">Understand different investment options, risk management, and portfolio diversification for wealth building.</p>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg p-8 card-hover transition-all duration-300">
+                    <div class="w-16 h-16 bg-orange-100 rounded-2xl flex items-center justify-center mb-6">
+                        <i data-lucide="piggy-bank" class="w-8 h-8 text-orange-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Savings & Emergency Funds</h3>
+                    <p class="text-gray-600">Build robust savings strategies and emergency funds to protect against financial uncertainties.</p>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg p-8 card-hover transition-all duration-300">
+                    <div class="w-16 h-16 bg-red-100 rounded-2xl flex items-center justify-center mb-6">
+                        <i data-lucide="shield" class="w-8 h-8 text-red-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Insurance & Protection</h3>
+                    <p class="text-gray-600">Understand insurance needs, risk protection strategies, and safeguarding your financial assets.</p>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg p-8 card-hover transition-all duration-300">
+                    <div class="w-16 h-16 bg-teal-100 rounded-2xl flex items-center justify-center mb-6">
+                        <i data-lucide="calendar" class="w-8 h-8 text-teal-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Retirement Planning</h3>
+                    <p class="text-gray-600">Plan for retirement with pension funds, retirement annuities, and long-term wealth accumulation strategies.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What You'll Learn -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">Key Learning Outcomes</h2>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-emerald-100 rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-900 mb-2">Financial Assessment & Analysis</h3>
+                                <p class="text-gray-600">Evaluate your current financial position and identify areas for improvement and growth.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-emerald-100 rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-900 mb-2">Smart Budgeting Techniques</h3>
+                                <p class="text-gray-600">Implement proven budgeting methods including 50/30/20 rule and zero-based budgeting.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-emerald-100 rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-900 mb-2">Investment Portfolio Building</h3>
+                                <p class="text-gray-600">Create diversified investment portfolios aligned with your risk tolerance and financial goals.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-emerald-100 rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-900 mb-2">Financial Goal Achievement</h3>
+                                <p class="text-gray-600">Set SMART financial goals and create actionable plans to achieve short and long-term objectives.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <img src="https://images.pexels.com/photos/3833052/pexels-photo-3833052.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                         alt="Investment planning and financial growth"
+                         class="rounded-2xl shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Financial Tools -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Financial Tools & Resources</h2>
+                <p class="text-xl text-gray-600">Practical tools and resources you'll master during the training.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white rounded-2xl shadow-lg p-6 text-center">
+                    <div class="w-16 h-16 bg-emerald-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="spreadsheet" class="w-8 h-8 text-emerald-600"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-2">Budget Spreadsheets</h3>
+                    <p class="text-gray-600">Customizable budget templates and tracking tools</p>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg p-6 text-center">
+                    <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="smartphone" class="w-8 h-8 text-blue-600"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-2">Financial Apps</h3>
+                    <p class="text-gray-600">Recommended apps for expense tracking and investing</p>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg p-6 text-center">
+                    <div class="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="calculator" class="w-8 h-8 text-purple-600"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-2">Financial Calculators</h3>
+                    <p class="text-gray-600">Retirement, investment, and loan calculators</p>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg p-6 text-center">
+                    <div class="w-16 h-16 bg-orange-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="book-open" class="w-8 h-8 text-orange-600"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-2">Resource Library</h3>
+                    <p class="text-gray-600">Financial guides, templates, and checklists</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Modules -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Training Modules</h2>
+                <p class="text-xl text-gray-600">Structured learning path covering all aspects of personal finance management.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-gradient-to-r from-emerald-50 to-green-50 rounded-2xl p-8">
+                    <h3 class="text-xl font-bold text-gray-900 mb-6">Day 1: Foundation & Assessment</h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-center">
+                            <i data-lucide="circle-dot" class="w-4 h-4 text-emerald-600 mr-3"></i>
+                            Financial literacy fundamentals
+                        </li>
+                        <li class="flex items-center">
+                            <i data-lucide="circle-dot" class="w-4 h-4 text-emerald-600 mr-3"></i>
+                            Personal financial assessment
+                        </li>
+                        <li class="flex items-center">
+                            <i data-lucide="circle-dot" class="w-4 h-4 text-emerald-600 mr-3"></i>
+                            Budgeting basics and tools
+                        </li>
+                        <li class="flex items-center">
+                            <i data-lucide="circle-dot" class="w-4 h-4 text-emerald-600 mr-3"></i>
+                            Debt analysis and management
+                        </li>
+                        <li class="flex items-center">
+                            <i data-lucide="circle-dot" class="w-4 h-4 text-emerald-600 mr-3"></i>
+                            Emergency fund planning
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8">
+                    <h3 class="text-xl font-bold text-gray-900 mb-6">Day 2: Growth & Protection</h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-center">
+                            <i data-lucide="circle-dot" class="w-4 h-4 text-blue-600 mr-3"></i>
+                            Investment principles and options
+                        </li>
+                        <li class="flex items-center">
+                            <i data-lucide="circle-dot" class="w-4 h-4 text-blue-600 mr-3"></i>
+                            Risk assessment and management
+                        </li>
+                        <li class="flex items-center">
+                            <i data-lucide="circle-dot" class="w-4 h-4 text-blue-600 mr-3"></i>
+                            Retirement planning strategies
+                        </li>
+                        <li class="flex items-center">
+                            <i data-lucide="circle-dot" class="w-4 h-4 text-blue-600 mr-3"></i>
+                            Insurance needs analysis
+                        </li>
+                        <li class="flex items-center">
+                            <i data-lucide="circle-dot" class="w-4 h-4 text-blue-600 mr-3"></i>
+                            Action plan development
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Details -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Training Details</h2>
+                <p class="text-xl text-gray-600">Comprehensive personal finance training for individuals and families.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white rounded-2xl shadow-lg p-6 text-center">
+                    <div class="w-16 h-16 bg-emerald-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="clock" class="w-8 h-8 text-emerald-600"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-2">Duration</h3>
+                    <p class="text-gray-600">1-2 Days Practical</p>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg p-6 text-center">
+                    <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="users" class="w-8 h-8 text-blue-600"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-2">Group Size</h3>
+                    <p class="text-gray-600">Max 14 Participants</p>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg p-6 text-center">
+                    <div class="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="award" class="w-8 h-8 text-purple-600"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-2">Certificate</h3>
+                    <p class="text-gray-600">Finance Certificate</p>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg p-6 text-center">
+                    <div class="w-16 h-16 bg-orange-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="laptop" class="w-8 h-8 text-orange-600"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-2">Format</h3>
+                    <p class="text-gray-600">Interactive Workshop</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-20 bg-gradient-to-r from-emerald-600 to-emerald-800">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Secure Your Financial Future</h2>
+            <p class="text-xl text-emerald-100 mb-8 max-w-2xl mx-auto">
+                Take control of your finances and build lasting wealth with our comprehensive personal finance management training program.
+            </p>
+            <a href="../home.html#contact" class="bg-white text-emerald-600 font-bold py-4 px-8 rounded-lg hover:bg-gray-100 transition duration-300 inline-flex items-center">
+                <i data-lucide="mail" class="w-5 h-5 mr-2"></i>
+                Get Training Information
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <img src="../SpecCon2.png" alt="SpecCon Holdings Logo" class="h-12 mr-3">
+                        <div>
+                            <h3 class="text-xl font-bold">SpecCon Holdings</h3>
+                            <p class="text-gray-400">Personal Finance Management</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 mb-4">Building financial literacy through comprehensive personal finance training.</p>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="../home.html" class="text-gray-400 hover:text-white transition duration-200">Home</a></li>
+                        <li><a href="professional-development.html" class="text-gray-400 hover:text-white transition duration-200">Professional Development</a></li>
+                        <li><a href="../home.html#contact" class="text-gray-400 hover:text-white transition duration-200">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Get Started</h4>
+                    <ul class="space-y-2">
+                        <li><a href="../home.html#contact" class="text-gray-400 hover:text-white transition duration-200">Book Training</a></li>
+                        <li><a href="../home.html#contact" class="text-gray-400 hover:text-white transition duration-200">Get Information</a></li>
+                        <li><a href="mailto:help@speccon.co.za" class="text-gray-400 hover:text-white transition duration-200">Email Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2025 SpecCon Holdings. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

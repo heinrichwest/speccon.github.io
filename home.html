@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpecCon Holdings | Accredited Training & Learnerships</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .section-bg {
+            background-color: #f9fafb;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px M-3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        .dropdown-menu {
+            display: none;
+        }
+        .modal {
+            transition: opacity 0.25s ease;
+        }
+        .modal-active {
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-800">
+
+    <!-- Header -->
+    <header id="home" class="bg-white/90 backdrop-blur-md shadow-sm fixed w-full z-50 top-0">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex items-center justify-between">
+                <a href="#home">
+                    <img src="SpecCon2.png" alt="SpecCon Holdings Logo" class="h-12">
+                </a>
+                <nav class="hidden lg:flex items-center space-x-8">
+                    <a href="#about" class="text-gray-600 hover:text-blue-600 transition duration-300">About Us</a>
+                    <a href="#qualifications" class="text-gray-600 hover:text-blue-600 transition duration-300">Qualifications</a>
+                    <a href="#accreditations" class="text-gray-600 hover:text-blue-600 transition duration-300">Accreditations</a>
+                    <div class="relative dropdown">
+                        <button class="text-gray-600 hover:text-blue-600 transition duration-300 flex items-center">
+                            Other Products <i data-lucide="chevron-down" class="w-4 h-4 ml-1"></i>
+                        </button>
+                        <div class="dropdown-menu absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-20">
+                            <a href="#classroom-training" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Classroom Training</a>
+                            <a href="http://elearning.co.za" target="_blank" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Online Training</a>
+                            <a href="http://employmentequityact.za" target="_blank" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Employment Equity</a>
+                            <a href="http://LMS.co.za" target="_blank" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Learner Management System</a>
+                        </div>
+                    </div>
+                    <a href="#contact" class="text-gray-600 hover:text-blue-600 transition duration-300">Contact Us</a>
+                </nav>
+                <div class="hidden lg:block">
+                     <button id="apply-btn-desktop" class="bg-blue-600 text-white font-semibold px-5 py-2 rounded-lg hover:bg-blue-700 transition duration-300 shadow">Apply for a Learnership</button>
+                </div>
+                <button id="mobile-menu-button" class="lg:hidden">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+             <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden lg:hidden mt-4">
+                <a href="#about" class="block py-2 text-gray-600 hover:text-blue-600">About Us</a>
+                <a href="#qualifications" class="block py-2 text-gray-600 hover:text-blue-600">Qualifications</a>
+                <a href="#accreditations" class="block py-2 text-gray-600 hover:text-blue-600">Accreditations</a>
+                <a href="#classroom-training" class="block py-2 text-gray-600 hover:text-blue-600">Classroom Training</a>
+                <a href="http://elearning.co.za" target="_blank" class="block py-2 text-gray-600 hover:text-blue-600">Online Training</a>
+                <a href="#contact" class="block py-2 text-gray-600 hover:text-blue-600">Contact Us</a>
+                <button id="apply-btn-mobile" class="w-full mt-4 bg-blue-600 text-white font-semibold px-5 py-2 rounded-lg hover:bg-blue-700 transition duration-300 text-center">Apply for a Learnership</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative text-white min-h-screen flex items-center justify-center overflow-hidden">
+             <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.pexels.com/photos/3184431/pexels-photo-3184431.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');"></div>
+             <div class="absolute inset-0 bg-gray-900 opacity-60 z-10"></div>
+            <div class="relative z-20 container mx-auto px-6 text-center">
+                <div class="max-w-3xl mx-auto">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-4">Unlock Your Potential with Accredited Training</h1>
+                    <p class="text-lg md:text-xl text-gray-200 mb-8">We provide nationally recognised qualifications and learnerships designed to build workplace-ready skills.</p>
+                    <button id="apply-btn-hero" class="bg-blue-600 text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-blue-700 transition duration-300 shadow-lg transform hover:scale-105">Apply for a Learnership</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="py-20">
+            <div class="container mx-auto px-6">
+                 <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">About SpecCon</h2>
+                    <p class="text-lg text-gray-600 mt-2">Your Partner in Skills Development and Compliance</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <img src="https://images.pexels.com/photos/1181298/pexels-photo-1181298.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="A team collaborating" class="rounded-xl shadow-lg w-full">
+                    </div>
+                    <div>
+                        <p class="text-gray-600 leading-relaxed mb-6">SpecCon is a leading provider of training and development solutions in South Africa. We are a 51% Black Woman-Owned (BWO) company, committed to empowering individuals and organisations through high-quality, accredited education. Our focus is on delivering practical skills that enhance employability and drive business success, while ensuring our partners meet their B-BBEE compliance objectives.</p>
+                         <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <i data-lucide="award" class="w-6 h-6 text-blue-500 mr-3 flex-shrink-0 mt-1"></i>
+                                <span><strong class="font-semibold">Accredited Quality:</strong> Fully accredited with numerous SETAs and the QCTO for your peace of mind.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="users" class="w-6 h-6 text-blue-500 mr-3 flex-shrink-0 mt-1"></i>
+                                <span><strong class="font-semibold">Learner-Centric Approach:</strong> Dedicated support from enrolment to certification.</span>
+                            </li>
+                             <li class="flex items-start">
+                                <i data-lucide="briefcase" class="w-6 h-6 text-blue-500 mr-3 flex-shrink-0 mt-1"></i>
+                                <span><strong class="font-semibold">Industry Aligned:</strong> Curricula designed for practical, workplace-ready skills.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Qualifications Section -->
+        <section id="qualifications" class="py-20 section-bg">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Our Accredited Qualifications</h2>
+                    <p class="text-lg text-gray-600 mt-2">Practical, workplace-ready skills across NQF Levels 1-6.</p>
+                </div>
+                <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 text-center mb-12">
+                    <div class="bg-white p-6 rounded-xl shadow">
+                        <p class="text-4xl font-bold text-blue-600">56</p>
+                        <p class="text-gray-600">Accredited Qualifications</p>
+                    </div>
+                     <div class="bg-white p-6 rounded-xl shadow">
+                        <p class="text-4xl font-bold text-blue-600">31</p>
+                        <p class="text-gray-600">QCTO Qualifications</p>
+                    </div>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- MERseta Qualification -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg card-hover transition-all duration-300">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+                                <i data-lucide="car" class="w-6 h-6 text-blue-600"></i>
+                            </div>
+                            <div>
+                                <span class="text-sm text-blue-600 font-medium">NQF Level 4 | MERseta</span>
+                                <h3 class="font-bold text-lg text-gray-900">Automotive Sales Advisor</h3>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4">Professional automotive sales and customer advisory skills for the motor industry.</p>
+                        <div class="flex justify-between items-center text-sm text-gray-500 mb-4">
+                            <span>224 Credits</span>
+                            <span>18 Months</span>
+                        </div>
+                        <a href="qualifications/merseta-automotive-sales-advisor-nqf4.html" class="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium text-sm">
+                            Learn More <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                        </a>
+                    </div>
+
+                    <!-- Services SETA Examples -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg card-hover transition-all duration-300">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4">
+                                <i data-lucide="headphones" class="w-6 h-6 text-green-600"></i>
+                            </div>
+                            <div>
+                                <span class="text-sm text-green-600 font-medium">NQF Level 2 | Services SETA</span>
+                                <h3 class="font-bold text-lg text-gray-900">Customer Service</h3>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4">Essential customer service skills for various business environments.</p>
+                        <div class="flex justify-between items-center text-sm text-gray-500 mb-4">
+                            <span>144 Credits</span>
+                            <span>12 Months</span>
+                        </div>
+                        <a href="qualifications/services-customer-service-nqf2.html" class="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium text-sm">
+                            Learn More <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                        </a>
+                    </div>
+
+                    <!-- TETA Transport Clerk -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg card-hover transition-all duration-300">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mr-4">
+                                <i data-lucide="truck" class="w-6 h-6 text-orange-600"></i>
+                            </div>
+                            <div>
+                                <span class="text-sm text-orange-600 font-medium">NQF Level 4 | TETA</span>
+                                <h3 class="font-bold text-lg text-gray-900">Transport Clerk</h3>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4">Plan transportation schedules, coordinate drivers, and monitor transport operations.</p>
+                        <div class="flex justify-between items-center text-sm text-gray-500 mb-4">
+                            <span>121 Credits</span>
+                            <span>18 Months</span>
+                        </div>
+                        <a href="qualifications/teta-transport-clerk-nqf4.html" class="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium text-sm">
+                            Learn More <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Accreditations Section -->
+        <section id="accreditations" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Confidence in Quality & Recognition</h2>
+                    <p class="text-lg text-gray-600 mt-2">We are accredited across 11 SETAs, ensuring national recognition for our training.</p>
+                </div>
+                <div class="max-w-7xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-11 gap-4 text-center">
+                    <div class="bg-white p-6 rounded-xl shadow card-hover transition-all duration-300 flex flex-col justify-between">
+                        <img src="https://gostudy.net/wp-content/uploads/2022/12/Services-SETA-Logo.png" alt="Services SETA Logo" class="h-16 mx-auto mb-4 object-contain">
+                        <div>
+                            <h3 class="font-bold text-lg">Services SETA</h3>
+                            <p class="text-gray-500">13 Qualifications</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow card-hover transition-all duration-300 flex flex-col justify-between">
+                        <img src="https://www.sasseta.org.za/wp-content/uploads/2023/12/Sasseta-logo-main.png" alt="SSETA Logo" class="h-16 mx-auto mb-4 object-contain">
+                        <div>
+                            <h3 class="font-bold text-lg">SSETA</h3>
+                            <p class="text-gray-500">11 Qualifications</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow card-hover transition-all duration-300 flex flex-col justify-between">
+                        <img src="https://www.wrseta.org.za/images/logo.png" alt="W&R SETA Logo" class="h-16 mx-auto mb-4 object-contain">
+                        <div>
+                            <h3 class="font-bold text-lg">W&R SETA</h3>
+                            <p class="text-gray-500">10 Qualifications</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow card-hover transition-all duration-300 flex flex-col justify-between">
+                        <img src="https://mict.org.za/wp-content/uploads/2022/07/MICT-SETA-LOGO-1.png" alt="MICT SETA Logo" class="h-16 mx-auto mb-4 object-contain">
+                        <div>
+                            <h3 class="font-bold text-lg">MICT SETA</h3>
+                            <p class="text-gray-500">7 Qualifications</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow card-hover transition-all duration-300 flex flex-col justify-between">
+                        <img src="https://www.agriseta.co.za/wp-content/uploads/2022/03/AgriSETA_Logo_2021.png" alt="AgriSETA Logo" class="h-16 mx-auto mb-4 object-contain">
+                        <div>
+                            <h3 class="font-bold text-lg">AgriSETA</h3>
+                            <p class="text-gray-500">5 Qualifications</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow card-hover transition-all duration-300 flex flex-col justify-between">
+                        <img src="https://www.teta.org.za/images/logo.png" alt="TETA Logo" class="h-16 mx-auto mb-4 object-contain">
+                        <div>
+                            <h3 class="font-bold text-lg">TETA</h3>
+                            <p class="text-gray-500">1 Qualification</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow card-hover transition-all duration-300 flex flex-col justify-between">
+                        <img src="https://www.inseta.org.za/images/logo.png" alt="INSETA Logo" class="h-16 mx-auto mb-4 object-contain">
+                        <div>
+                            <h3 class="font-bold text-lg">INSETA</h3>
+                            <p class="text-gray-500">5 Qualifications</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow card-hover transition-all duration-300 flex flex-col justify-between">
+                        <img src="https://www.merseta.org.za/images/logo.png" alt="MERSETA Logo" class="h-16 mx-auto mb-4 object-contain">
+                        <div>
+                            <h3 class="font-bold text-lg">MERSETA</h3>
+                            <p class="text-gray-500">1 Qualification</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow card-hover transition-all duration-300 flex flex-col justify-between">
+                        <img src="https://www.fasset.org.za/images/logo.png" alt="FASSET Logo" class="h-16 mx-auto mb-4 object-contain">
+                        <div>
+                            <h3 class="font-bold text-lg">FASSET</h3>
+                            <p class="text-gray-500">1 Qualification</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow card-hover transition-all duration-300 flex flex-col justify-between">
+                        <img src="https://www.etdpseta.org.za/images/logo.png" alt="ETDP SETA Logo" class="h-16 mx-auto mb-4 object-contain">
+                        <div>
+                            <h3 class="font-bold text-lg">ETDP SETA</h3>
+                            <p class="text-gray-500">3 Qualifications</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Value Adds Section -->
+        <section id="value-adds" class="py-20 section-bg">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Exclusive Value for Your Entire Team</h2>
+                    <p class="text-lg text-gray-600 mt-2">Enrolling in our learnerships unlocks these free benefits for all your staff.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-xl shadow flex items-start">
+                        <i data-lucide="layout-template" class="w-8 h-8 text-blue-600 mr-4 flex-shrink-0"></i>
+                        <div>
+                            <h3 class="font-semibold text-lg">White-Labelled LMS</h3>
+                            <p class="text-gray-600 text-sm">A learning management system branded for your company.</p>
+                        </div>
+                    </div>
+                     <div class="bg-white p-6 rounded-xl shadow flex items-start">
+                        <i data-lucide="book-open-check" class="w-8 h-8 text-blue-600 mr-4 flex-shrink-0"></i>
+                        <div>
+                            <h3 class="font-semibold text-lg">300+ Online Courses</h3>
+                            <p class="text-gray-600 text-sm">Access to a vast library of e-learning content.</p>
+                        </div>
+                    </div>
+                     <div class="bg-white p-6 rounded-xl shadow flex items-start">
+                        <i data-lucide="users-2" class="w-8 h-8 text-blue-600 mr-4 flex-shrink-0"></i>
+                        <div>
+                            <h3 class="font-semibold text-lg">Employment Equity System</h3>
+                            <p class="text-gray-600 text-sm">A tool to help manage your EE compliance.</p>
+                        </div>
+                    </div>
+                     <div class="bg-white p-6 rounded-xl shadow flex items-start">
+                        <i data-lucide="clipboard-list" class="w-8 h-8 text-blue-600 mr-4 flex-shrink-0"></i>
+                        <div>
+                            <h3 class="font-semibold text-lg">10+ Work Assessments</h3>
+                            <p class="text-gray-600 text-sm">Includes valuable tools like Excel proficiency tests.</p>
+                        </div>
+                    </div>
+                     <div class="bg-white p-6 rounded-xl shadow flex items-start">
+                        <i data-lucide="shield-plus" class="w-8 h-8 text-blue-600 mr-4 flex-shrink-0"></i>
+                        <div>
+                            <h3 class="font-semibold text-lg">Online Compliance Training</h3>
+                            <p class="text-gray-600 text-sm">Courses like First Aid, Fire Fighter, and OHS.</p>
+                        </div>
+                    </div>
+                     <div class="bg-white p-6 rounded-xl shadow flex items-start">
+                        <i data-lucide="school-2" class="w-8 h-8 text-blue-600 mr-4 flex-shrink-0"></i>
+                        <div>
+                            <h3 class="font-semibold text-lg">Academy Access for Kids</h3>
+                            <p class="text-gray-600 text-sm">Learning resources for the children of your staff members.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Classroom Training Section -->
+        <section id="classroom-training" class="py-20">
+            <div class="container mx-auto px-6">
+                 <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Classroom Courses</h2>
+                     <p class="text-lg text-gray-600 mt-2">Interactive, instructor-led training to boost skills.</p>
+                </div>
+                 <div class="bg-yellow-50 border-l-4 border-yellow-500 p-6 rounded-r-lg text-yellow-800 mb-12 max-w-5xl mx-auto">
+                    <h4 class="font-bold text-lg mb-2">Coming Soon</h4>
+                    <p>A detailed list of our classroom courses is being prepared. Please provide the content from the "Classroom Courses.zip" file so I can list them here, categorized for easy browsing.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 section-bg">
+            <div class="container mx-auto px-6">
+                 <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Get in Touch</h2>
+                    <p class="text-lg text-gray-600 mt-2">We're here to help with your training and compliance needs.</p>
+                </div>
+                <div class="grid lg:grid-cols-2 gap-12">
+                    <div class="bg-white p-8 rounded-xl shadow-lg">
+                        <h3 class="text-2xl font-bold mb-6">Send a Message</h3>
+                        <form action="#" class="space-y-6">
+                            <div>
+                                <label for="name" class="font-medium text-gray-700">Your Name</label>
+                                <input type="text" id="name" class="w-full mt-2 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            <div>
+                                <label for="email" class="font-medium text-gray-700">Email Address</label>
+                                <input type="email" id="email" class="w-full mt-2 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                             <div>
+                                <label for="message" class="font-medium text-gray-700">Message</label>
+                                <textarea id="message" rows="5" class="w-full mt-2 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-blue-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-700 transition duration-300">Submit</button>
+                        </form>
+                    </div>
+                    <div class="space-y-8">
+                         <div class="bg-white p-8 rounded-xl shadow-lg">
+                            <h3 class="text-2xl font-bold mb-4">Contact Details</h3>
+                            <div class="space-y-4 text-gray-600">
+                                <p class="flex items-center"><i data-lucide="mail" class="w-5 h-5 mr-3 text-blue-600"></i> <a href="mailto:help@speccon.co.za" class="hover:text-blue-600">help@speccon.co.za</a></p>
+                                <p class="flex items-center"><i data-lucide="linkedin" class="w-5 h-5 mr-3 text-blue-600"></i> <a href="#" class="hover:text-blue-600">LinkedIn</a></p>
+                                <p class="flex items-start"><i data-lucide="map-pin" class="w-5 h-5 mr-3 text-blue-600 mt-1"></i> <span>Suite W003 & W004, Midlands Office Park West, 1 Mount Quray Street, Midstream, 1692</span></p>
+                            </div>
+                        </div>
+                        <div class="rounded-xl shadow-lg overflow-hidden h-64">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3588.373299175368!2d28.18871131504176!3d-25.924945983573547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDU1JzI5LjgiUyAyOMKwMTEnMjguMiJF!5e0!3m2!1sen!2sus!4v1634557890123!5m2!1sen!2sus&q=Suite+W003+%26+W004%2C+Midlands+Office+Park+West%2C+1+Mount+Quray+Street%2C+Midstream%2C+1692" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto px-6 py-8 text-center">
+            <img src="SpecCon2.png" alt="SpecCon Holdings Logo" class="h-12 mx-auto mb-4">
+            <p>&copy; 2025 SpecCon Holdings. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+    <!-- Application Modal -->
+    <div id="application-modal" class="modal fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center p-4 opacity-0 pointer-events-none z-50">
+        <div class="bg-white rounded-xl shadow-2xl w-full max-w-5xl max-h-full overflow-y-auto transform scale-95 transition-transform duration-300" id="modal-content">
+            <div class="flex justify-between items-center p-6 border-b">
+                <h3 class="text-2xl font-bold">Learnership Application</h3>
+                <button id="close-modal-btn" class="text-gray-500 hover:text-gray-800">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+            <div class="p-8">
+                <p class="text-gray-600 mb-6">Fields marked with * are required. Your application may be automatically declined based on eligibility rules.</p>
+                <form id="learnershipForm" method="post" action="/learnerships/save_application.php" novalidate class="space-y-6">
+                    <!-- Hidden fields populated by JS before submit -->
+                    <input type="hidden" name="preliminary_status" id="preliminary_status" value="Applied" />
+                    <input type="hidden" name="decline_reasons" id="decline_reasons" value="" />
+                    <input type="hidden" name="birthdate" id="birthdate" value="" />
+                    <input type="hidden" name="age_at_application" id="age_at_application" value="" />
+
+                    <!-- Personal Details -->
+                    <div class="border border-gray-200 rounded-lg p-6">
+                        <h4 class="text-lg font-semibold mb-4">Personal Details</h4>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="font-medium text-gray-700">First Name *</label>
+                                <input id="name" name="name" type="text" required class="w-full mt-2 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            <div>
+                                <label for="surname" class="font-medium text-gray-700">Surname *</label>
+                                <input id="surname" name="surname" type="text" required class="w-full mt-2 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            <div>
+                                <label for="id_number" class="font-medium text-gray-700">South African ID Number *</label>
+                                <input id="id_number" name="id_number" type="text" inputmode="numeric" pattern="^\d{13}$" required class="w-full mt-2 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                <small class="text-gray-500">13 digits. We use this to verify age eligibility.</small>
+                            </div>
+                            <div>
+                                <label class="font-medium text-gray-700">Gender *</label>
+                                <div class="flex gap-4 mt-2">
+                                    <label class="flex items-center"><input type="radio" name="gender" value="Male" required class="mr-2"> Male</label>
+                                    <label class="flex items-center"><input type="radio" name="gender" value="Female" required class="mr-2"> Female</label>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="font-medium text-gray-700">Race *</label>
+                                <div class="flex flex-wrap gap-4 mt-2">
+                                    <label class="flex items-center"><input type="radio" name="race" value="African" required class="mr-2"> African</label>
+                                    <label class="flex items-center"><input type="radio" name="race" value="Coloured" required class="mr-2"> Coloured</label>
+                                    <label class="flex items-center"><input type="radio" name="race" value="Indian" required class="mr-2"> Indian</label>
+                                    <label class="flex items-center"><input type="radio" name="race" value="White" required class="mr-2"> White</label>
+                                </div>
+                            </div>
+                            <div>
+                                <label for="email" class="font-medium text-gray-700">Email *</label>
+                                <input id="email" name="email" type="email" required class="w-full mt-2 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            <div>
+                                <label for="contact_no1" class="font-medium text-gray-700">Contact Number *</label>
+                                <input id="contact_no1" name="contact_no1" type="tel" inputmode="tel" pattern="^\d{10}$" required class="w-full mt-2 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                <small class="text-gray-500">10 digits</small>
+                            </div>
+                            <div>
+                                <label for="contact_no2" class="font-medium text-gray-700">Additional Contact Number</label>
+                                <input id="contact_no2" name="contact_no2" type="tel" inputmode="tel" pattern="^\d{10}$" class="w-full mt-2 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Address -->
+                    <div class="border border-gray-200 rounded-lg p-6">
+                        <h4 class="text-lg font-semibold mb-4">Address</h4>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="md:col-span-2">
+                                <label for="address_street" class="font-medium text-gray-700">Street Name & Number *</label>
+                                <input id="address_street" name="address_street" type="text" required class="w-full mt-2 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            <div>
+                                <label for="address_suburb" class="font-medium text-gray-700">Suburb *</label>
+                                <input id="address_suburb" name="address_suburb" type="text" required class="w-full mt-2 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            <div>
+                                <label for="address_city" class="font-medium text-gray-700">Town/City *</label>
+                                <input id="address_city" name="address_city" type="text" required class="w-full mt-2 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            <div>
+                                <label for="address_province" class="font-medium text-gray-700">Province *</label>
+                                <select id="address_province" name="address_province" required class="w-full mt-2 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                    <option value="">Select…</option>
+                                    <option>Eastern Cape</option>
+                                    <option>Free State</option>
+                                    <option>Gauteng</option>
+                                    <option>Kwazulu-Natal</option>
+                                    <option>Limpopo</option>
+                                    <option>Mpumalanga</option>
+                                    <option>Northern Cape</option>
+                                    <option>North-West</option>
+                                    <option>Western Cape</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Eligibility -->
+                    <div class="border border-gray-200 rounded-lg p-6">
+                        <h4 class="text-lg font-semibold mb-4">Eligibility</h4>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="font-medium text-gray-700">Do you have a criminal record? *</label>
+                                <div class="flex gap-4 mt-2">
+                                    <label class="flex items-center"><input type="radio" name="criminal_record" value="Yes" required class="mr-2"> Yes</label>
+                                    <label class="flex items-center"><input type="radio" name="criminal_record" value="No" required class="mr-2"> No</label>
+                                </div>
+                            </div>
+                            <div>
+                                <label for="highest_qualification" class="font-medium text-gray-700">Highest Qualification *</label>
+                                <select name="highest_qualification" id="highest_qualification" required class="w-full mt-2 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                    <option value="">Select…</option>
+                                    <option>Grade 10</option>
+                                    <option>Grade 11</option>
+                                    <option>Grade 12 (Matric)</option>
+                                    <option>National Certificate (NQF 5)</option>
+                                    <option>Diploma</option>
+                                    <option>Bachelor's</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="font-medium text-gray-700">Employment Status *</label>
+                                <div class="flex gap-4 mt-2">
+                                    <label class="flex items-center"><input type="radio" name="employment_status" value="Employed" required class="mr-2"> Employed</label>
+                                    <label class="flex items-center"><input type="radio" name="employment_status" value="Unemployed" required class="mr-2"> Unemployed</label>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="font-medium text-gray-700">Learnership Status *</label>
+                                <div class="space-y-2 mt-2">
+                                    <label class="flex items-center"><input type="radio" name="learnership_status" value="Never" required class="mr-2"> I have never been on a learnership</label>
+                                    <label class="flex items-center"><input type="radio" name="learnership_status" value="Current" required class="mr-2"> I am currently on a learnership</label>
+                                    <label class="flex items-center"><input type="radio" name="learnership_status" value="Completed" required class="mr-2"> I have been on a learnership and have completed it</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="previousLearnershipBlock" class="hidden mt-6 border-t pt-6">
+                            <div class="grid md:grid-cols-3 gap-6">
+                                <div>
+                                    <label for="previous_learnership" class="font-medium text-gray-700">Name of Learnership *</label>
+                                    <input id="previous_learnership" name="previous_learnership" type="text" class="w-full mt-2 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                </div>
+                                <div>
+                                    <label for="previous_learnership_completion_date" class="font-medium text-gray-700">Date of completion *</label>
+                                    <input id="previous_learnership_completion_date" name="previous_learnership_completion_date" type="date" class="w-full mt-2 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                </div>
+                                <div>
+                                    <label class="font-medium text-gray-700">Was a certificate issued? *</label>
+                                    <div class="flex gap-4 mt-2">
+                                        <label class="flex items-center"><input type="radio" name="certificate_issued" value="Yes" class="mr-2"> Yes</label>
+                                        <label class="flex items-center"><input type="radio" name="certificate_issued" value="No" class="mr-2"> No</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Work Readiness -->
+                    <div class="border border-gray-200 rounded-lg p-6">
+                        <h4 class="text-lg font-semibold mb-4">Work Readiness</h4>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="font-medium text-gray-700">Are you able to work from home? *</label>
+                                <div class="flex gap-4 mt-2">
+                                    <label class="flex items-center"><input type="radio" name="able_to_work_from_home" value="Yes" required class="mr-2"> Yes</label>
+                                    <label class="flex items-center"><input type="radio" name="able_to_work_from_home" value="No" required class="mr-2"> No</label>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="font-medium text-gray-700">Do you have access to a computer/smart phone and internet? *</label>
+                                <div class="flex gap-4 mt-2">
+                                    <label class="flex items-center"><input type="radio" name="online_access" value="Yes" required class="mr-2"> Yes</label>
+                                    <label class="flex items-center"><input type="radio" name="online_access" value="No" required class="mr-2"> No</label>
+                                </div>
+                            </div>
+                            <div class="md:col-span-2">
+                                <label for="current_skills" class="font-medium text-gray-700">Which of the following best describes your current skills? *</label>
+                                <select id="current_skills" name="current_skills" required class="w-full mt-2 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                    <option value="">Select…</option>
+                                    <option>Website development / design</option>
+                                    <option>IT Systems Development</option>
+                                    <option>Marketing</option>
+                                    <option>Sales / Retail</option>
+                                    <option>Graphical Design</option>
+                                    <option>Administration</option>
+                                    <option>Stores / Warehousing</option>
+                                    <option>Finance</option>
+                                    <option>Farming</option>
+                                    <option>Contact Centre</option>
+                                    <option>General</option>
+                                </select>
+                                <small class="text-gray-500">We'll send you an assessment that matches your selection.</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ability & Location -->
+                    <div class="border border-gray-200 rounded-lg p-6">
+                        <h4 class="text-lg font-semibold mb-4">Ability & Location</h4>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="font-medium text-gray-700">What is your current status? *</label>
+                                <div class="space-y-2 mt-2">
+                                    <label class="flex items-center"><input type="radio" name="ability" value="Abled" required class="mr-2"> Abled</label>
+                                    <label class="flex items-center"><input type="radio" name="ability" value="Disabled" required class="mr-2"> Disabled (Certified by Medical Practitioner)</label>
+                                </div>
+                            </div>
+                            <div id="abledAreas" class="hidden">
+                                <label for="applied_for_abled" class="font-medium text-gray-700">Which learnership area are you interested in? *</label>
+                                <select id="applied_for_abled" name="applied_for_abled" class="w-full mt-2 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                    <option value="">Select…</option>
+                                    <option>Centurion – Abled</option>
+                                    <option>Bellville – Abled</option>
+                                    <option>Mbombella – Abled</option>
+                                    <option>Pinetown – Abled</option>
+                                </select>
+                            </div>
+                            <div id="disabilityBlock" class="hidden md:col-span-2">
+                                <div class="grid md:grid-cols-2 gap-6">
+                                    <div>
+                                        <label for="disability_type" class="font-medium text-gray-700">What is the nature of your disability? *</label>
+                                        <select id="disability_type" name="disability_type" class="w-full mt-2 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                            <option value="">Select…</option>
+                                            <option>Communication (talking / listening)</option>
+                                            <option>Sight (even with glasses)</option>
+                                            <option>Hearing (even with a hearing aid)</option>
+                                            <option>Physical (moving/standing/grasping)</option>
+                                            <option>Emotional (behavioural/psychological)</option>
+                                            <option>Intellectual (learning difficulty)</option>
+                                            <option>Other</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label for="special_requirements" class="font-medium text-gray-700">Do you have any access requirement to support your disability? *</label>
+                                        <textarea id="special_requirements" name="special_requirements" rows="3" class="w-full mt-2 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                                    </div>
+                                    <div>
+                                        <label for="applied_for_disabled" class="font-medium text-gray-700">Which learnership area are you interested in? *</label>
+                                        <select id="applied_for_disabled" name="applied_for_disabled" class="w-full mt-2 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                            <option value="">Select…</option>
+                                            <option>Centurion – Disabled</option>
+                                            <option>Bellville – Disabled</option>
+                                            <option>Mbombella – Disabled</option>
+                                            <option>Pinetown – Disabled</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Motivation & Readiness Check -->
+                    <div class="border border-gray-200 rounded-lg p-6">
+                        <h4 class="text-lg font-semibold mb-4">Motivation & Readiness Check</h4>
+                        <p class="text-gray-600 mb-4">Answer all correctly to proceed.</p>
+                        <div class="space-y-6">
+                            <div>
+                                <label class="font-medium text-gray-700">Why are you applying for this learnership? *</label>
+                                <div class="space-y-2 mt-2">
+                                    <label class="flex items-start"><input type="radio" name="q28" value="wrong" required class="mr-2 mt-1"> It offers a stipend and I need money.</label>
+                                    <label class="flex items-start"><input type="radio" name="q28" value="correct" required class="mr-2 mt-1"> I want to gain experience that will help me find a job.</label>
+                                    <label class="flex items-start"><input type="radio" name="q28" value="wrong" required class="mr-2 mt-1"> My family told me to apply.</label>
+                                    <label class="flex items-start"><input type="radio" name="q28" value="wrong" required class="mr-2 mt-1"> I am bored at home.</label>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="font-medium text-gray-700">What do you expect to have by completing this learnership? *</label>
+                                <div class="space-y-2 mt-2">
+                                    <label class="flex items-start"><input type="radio" name="q29" value="wrong" required class="mr-2 mt-1"> Enough stipends to support myself for a year</label>
+                                    <label class="flex items-start"><input type="radio" name="q29" value="wrong" required class="mr-2 mt-1"> A certificate to keep for later</label>
+                                    <label class="flex items-start"><input type="radio" name="q29" value="correct" required class="mr-2 mt-1"> Practical experience and proof of my work skills</label>
+                                    <label class="flex items-start"><input type="radio" name="q29" value="wrong" required class="mr-2 mt-1"> Time to figure out what I want to do</label>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="font-medium text-gray-700">What would you do if you didn't get paid for a month due to admin delays? *</label>
+                                <div class="space-y-2 mt-2">
+                                    <label class="flex items-start"><input type="radio" name="q30" value="wrong" required class="mr-2 mt-1"> Quit – I can't work without being paid</label>
+                                    <label class="flex items-start"><input type="radio" name="q30" value="correct" required class="mr-2 mt-1"> Continue learning and working while resolving the issue professionally</label>
+                                    <label class="flex items-start"><input type="radio" name="q30" value="wrong" required class="mr-2 mt-1"> Do the minimum until payment is made</label>
+                                    <label class="flex items-start"><input type="radio" name="q30" value="wrong" required class="mr-2 mt-1"> Stop working and look for another learnership elsewhere</label>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="font-medium text-gray-700">How will you use this learnership to find employment? *</label>
+                                <div class="space-y-2 mt-2">
+                                    <label class="flex items-start"><input type="radio" name="q31" value="correct" required class="mr-2 mt-1"> I'll use the experience and references to apply for a job</label>
+                                    <label class="flex items-start"><input type="radio" name="q31" value="wrong" required class="mr-2 mt-1"> I'll try to join another learnership</label>
+                                    <label class="flex items-start"><input type="radio" name="q31" value="wrong" required class="mr-2 mt-1"> I haven't really thought about it</label>
+                                    <label class="flex items-start"><input type="radio" name="q31" value="wrong" required class="mr-2 mt-1"> I expect the company to offer me a job automatically</label>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="font-medium text-gray-700">If you are offered another learnership with a bigger stipend but no practical work, what would you do? *</label>
+                                <div class="space-y-2 mt-2">
+                                    <label class="flex items-start"><input type="radio" name="q32" value="wrong" required class="mr-2 mt-1"> Take the one with more money</label>
+                                    <label class="flex items-start"><input type="radio" name="q32" value="wrong" required class="mr-2 mt-1"> Try to do both at the same time</label>
+                                    <label class="flex items-start"><input type="radio" name="q32" value="correct" required class="mr-2 mt-1"> Stay with the one that give me work experience</label>
+                                    <label class="flex items-start"><input type="radio" name="q32" value="wrong" required class="mr-2 mt-1"> Leave it for my family to decide for me</label>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="font-medium text-gray-700">If you are currently on a learnership, will your current company allow you to register for another learnership? *</label>
+                                <div class="space-y-2 mt-2">
+                                    <label class="flex items-start"><input type="radio" name="q33" value="wrong" required class="mr-2 mt-1"> No, they will not allow me</label>
+                                    <label class="flex items-start"><input type="radio" name="q33" value="wrong" required class="mr-2 mt-1"> I haven't completed, but I'm not attending anymore</label>
+                                    <label class="flex items-start"><input type="radio" name="q33" value="wrong" required class="mr-2 mt-1"> Yes, they will not have a problem</label>
+                                    <label class="flex items-start"><input type="radio" name="q33" value="correct" required class="mr-2 mt-1"> I am not registered on another learnership</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p id="statusMsg" class="hidden"></p>
+
+                    <div class="pt-4">
+                        <button type="submit" class="w-full bg-blue-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-700 transition duration-300">Submit Application</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        lucide.createIcons();
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        const mobileNavLinks = mobileMenu.querySelectorAll('a');
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Modal Logic
+        const modal = document.getElementById('application-modal');
+        const modalContent = document.getElementById('modal-content');
+        const openModalButtons = [
+            document.getElementById('apply-btn-desktop'),
+            document.getElementById('apply-btn-mobile'),
+            document.getElementById('apply-btn-hero')
+        ];
+        const closeModalBtn = document.getElementById('close-modal-btn');
+
+        const openModal = () => {
+            modal.classList.remove('opacity-0', 'pointer-events-none');
+            modalContent.classList.remove('scale-95');
+            document.body.classList.add('modal-active');
+        };
+
+        const closeModal = () => {
+            modalContent.classList.add('scale-95');
+            modal.classList.add('opacity-0', 'pointer-events-none');
+            document.body.classList.remove('modal-active');
+        };
+
+        openModalButtons.forEach(btn => btn.addEventListener('click', openModal));
+        closeModalBtn.addEventListener('click', closeModal);
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        // === Application Form Logic ===
+
+        // === Utility: SA ID validation (length/date + Luhn) ===
+        function luhnCheck(id) {
+            let sum = 0, alt = false;
+            for (let i = id.length - 1; i >= 0; i--) {
+                let n = parseInt(id.charAt(i), 10);
+                if (alt) { n *= 2; if (n > 9) n -= 9; }
+                sum += n; alt = !alt;
+            }
+            return sum % 10 === 0;
+        }
+
+        function parseDOBFromID(id) {
+            const yy = parseInt(id.substring(0,2),10);
+            const mm = parseInt(id.substring(2,4),10);
+            const dd = parseInt(id.substring(4,6),10);
+            const now = new Date();
+            const currentYY = now.getFullYear() % 100;
+            const century = yy > currentYY ? 1900 : 2000;
+            const year = century + yy;
+            const dob = new Date(year, mm-1, dd);
+            // basic validity check
+            if (dob.getFullYear() !== year || (dob.getMonth()+1) !== mm || dob.getDate() !== dd) return null;
+            return dob;
+        }
+
+        function ageOn(date, dob) {
+            let a = date.getFullYear() - dob.getFullYear();
+            const m = date.getMonth() - dob.getMonth();
+            if (m < 0 || (m === 0 && date.getDate() < dob.getDate())) a--;
+            return a;
+        }
+
+        // Skills → assessment link placeholder (replace with real links)
+        const ASSESSMENT_LINKS = {
+            "Website development / design": "https://example.com/assess/web",
+            "IT Systems Development": "https://example.com/assess/it",
+            "Marketing": "https://example.com/assess/mkt",
+            "Sales / Retail": "https://example.com/assess/sales",
+            "Graphical Design": "https://example.com/assess/design",
+            "Administration": "https://example.com/assess/admin",
+            "Stores / Warehousing": "https://example.com/assess/stores",
+            "Finance": "https://example.com/assess/finance",
+            "Farming": "https://example.com/assess/farming",
+            "Contact Centre": "https://example.com/assess/contact",
+            "General": "https://example.com/assess/general"
+        };
+
+        const form = document.getElementById('learnershipForm');
+        const statusMsg = document.getElementById('statusMsg');
+
+        function show(el){el.classList.remove('hidden')}
+        function hide(el){el.classList.add('hidden')}
+
+        const learnershipRadios = form.querySelectorAll('input[name="learnership_status"]');
+        const prevBlock = document.getElementById('previousLearnershipBlock');
+        learnershipRadios.forEach(r => r.addEventListener('change', () => {
+            if (r.checked && r.value === 'Completed') {
+                show(prevBlock);
+                // mark required when shown
+                form.previous_learnership.required = true;
+                form.previous_learnership_completion_date.required = true;
+                [...form.querySelectorAll('input[name="certificate_issued"]')].forEach(inp => inp.required = true);
+            } else if (r.checked) {
+                hide(prevBlock);
+                form.previous_learnership.required = false;
+                form.previous_learnership_completion_date.required = false;
+                [...form.querySelectorAll('input[name="certificate_issued"]')].forEach(inp => inp.required = false);
+            }
+        }));
+
+        const abilityRadios = form.querySelectorAll('input[name="ability"]');
+        const abledAreas = document.getElementById('abledAreas');
+        const disabilityBlock = document.getElementById('disabilityBlock');
+        abilityRadios.forEach(r => r.addEventListener('change', () => {
+            if (r.checked && r.value === 'Abled') {
+                show(abledAreas); hide(disabilityBlock);
+                form.applied_for_abled.required = true;
+                form.applied_for_disabled.required = false;
+                if (form.disability_type) form.disability_type.required = false;
+                if (form.special_requirements) form.special_requirements.required = false;
+            } else if (r.checked) {
+                hide(abledAreas); show(disabilityBlock);
+                form.applied_for_abled.required = false;
+                form.applied_for_disabled.required = true;
+                if (form.disability_type) form.disability_type.required = true;
+                if (form.special_requirements) form.special_requirements.required = true;
+            }
+        }));
+
+        function computeEligibility() {
+            const reasons = [];
+            const id = form.id_number.value.trim();
+            if (!/^\d{13}$/.test(id) || !luhnCheck(id)) reasons.push('ID number is invalid.');
+            const dob = parseDOBFromID(id);
+            if (!dob) reasons.push('Birthdate in ID is invalid.');
+            else {
+                const now = new Date();
+                const in12m = new Date(now.getFullYear(), now.getMonth()+12, now.getDate());
+                const thirtieth = new Date(dob.getFullYear()+30, dob.getMonth(), dob.getDate());
+                if (thirtieth <= in12m) reasons.push('Age 30 or older within the next 12 months.');
+                // fill hidden fields
+                document.getElementById('birthdate').value = dob.toISOString().slice(0,10);
+                document.getElementById('age_at_application').value = ageOn(now, dob);
+            }
+            const crim = form.querySelector('input[name="criminal_record"]:checked');
+            if (crim && crim.value === 'Yes') reasons.push('Criminal record.');
+            const ls = form.querySelector('input[name="learnership_status"]:checked');
+            if (ls && ls.value === 'Current') reasons.push('Currently on a learnership.');
+            // Quiz 28-33 must all be correct
+            ['q28','q29','q30','q31','q32','q33'].forEach(q => {
+                const a = form.querySelector(`input[name="${q}"]:checked`);
+                if (!a || a.value !== 'correct') reasons.push(`Question ${q.replace('q','')} answered incorrectly.`);
+            });
+            // applied_for value (depending on ability)
+            let appliedFor = '';
+            const ability = form.querySelector('input[name="ability"]:checked');
+            if (ability && ability.value === 'Abled') appliedFor = form.applied_for_abled.value;
+            if (ability && ability.value === 'Disabled') appliedFor = form.applied_for_disabled.value;
+            // ensure area chosen
+            if (!appliedFor) reasons.push('Learnership area not selected.');
+            return reasons;
+        }
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            statusMsg.classList.add('hidden');
+            const reasons = computeEligibility();
+            const prelim = reasons.length ? 'Declined' : 'Applied';
+            document.getElementById('preliminary_status').value = prelim;
+            document.getElementById('decline_reasons').value = reasons.join('; ');
+
+            if (!form.reportValidity()) {
+                statusMsg.textContent = 'Please fix the highlighted fields.';
+                statusMsg.className = 'bg-red-50 border border-red-200 text-red-800 p-4 rounded-lg';
+                statusMsg.classList.remove('hidden');
+                return;
+            }
+
+            // Construct FormData and set derived applied_for
+            const fd = new FormData(form);
+            const ability = form.querySelector('input[name="ability"]:checked');
+            let appliedFor = '';
+            if (ability && ability.value === 'Abled') appliedFor = form.applied_for_abled.value;
+            if (ability && ability.value === 'Disabled') appliedFor = form.applied_for_disabled.value;
+            fd.append('applied_for', appliedFor);
+            // include assessment link hint
+            const skill = form.current_skills.value;
+            fd.append('assessment_link_hint', ASSESSMENT_LINKS[skill] || '');
+
+            // Submit to server
+            try {
+                const resp = await fetch(form.action, { method: 'POST', body: fd });
+                const data = await resp.json();
+                if (data.success) {
+                    statusMsg.innerHTML = `✅ Application submitted. <span class="inline-block bg-blue-100 text-blue-800 px-2 py-1 rounded">Status: ${data.application_status}</span> OTP: <strong>${data.otp}</strong>`;
+                    statusMsg.className = 'bg-green-50 border border-green-200 text-green-800 p-4 rounded-lg';
+                    statusMsg.classList.remove('hidden');
+                    form.reset();
+                    // Hide conditional blocks again
+                    hide(document.getElementById('previousLearnershipBlock'));
+                    hide(document.getElementById('abledAreas'));
+                    hide(document.getElementById('disabilityBlock'));
+                } else {
+                    statusMsg.textContent = 'Submission failed: ' + (data.error || 'Unknown error');
+                    statusMsg.className = 'bg-red-50 border border-red-200 text-red-800 p-4 rounded-lg';
+                    statusMsg.classList.remove('hidden');
+                }
+            } catch (err) {
+                statusMsg.textContent = 'Network or server error. Please try again.';
+                statusMsg.className = 'bg-red-50 border border-red-200 text-red-800 p-4 rounded-lg';
+                statusMsg.classList.remove('hidden');
+            }
+        });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Advisor NQF Level 6 | INSETA | SpecCon Holdings</title>
+    <meta name="description" content="Comprehensive financial advisory skills with our NQF Level 6 Financial Advisor qualification accredited by INSETA. 515 credits, professional investment and retirement planning.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="../js/value-adds-popup.js"></script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 10px 10px -5px rgb(0 0 0 / 0.04);
+        }
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        .dropdown-menu {
+            display: none;
+        }
+        /* Dropdown styling for better hover stability and alignment */
+        .dropdown {
+            padding-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+        .dropdown button {
+            display: flex;
+            align-items: center;
+        }
+        .dropdown-menu {
+            top: 100%;
+            margin-top: 0;
+            padding-top: 8px;
+        }
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        .dropdown-menu {
+            display: none;
+        }
+        /* Sticky Banner Styles */
+        .sticky-banner {
+            position: fixed;
+            top: 100px;
+            right: 20px;
+            background: linear-gradient(135deg, #12265E 0%, #4A90E2 100%);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            z-index: 1000;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            font-weight: 600;
+            font-size: 14px;
+            backdrop-filter: blur(10px);
+        }
+        .sticky-banner:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+            background: linear-gradient(135deg, #0d1a47 0%, #3a7bc8 100%);
+        }
+        .banner-popup {
+            position: fixed;
+            top: 160px;
+            right: 20px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            z-index: 999;
+            overflow: hidden;
+            transform: translateY(-20px);
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.3s ease;
+            max-width: 420px;
+            width: 90vw;
+        }
+        .banner-popup.show {
+            transform: translateY(0);
+            opacity: 1;
+            pointer-events: all;
+        }
+        .animate-scroll {
+            animation: scroll 30s linear infinite;
+        }
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+        /* Enquiry Popup Modal Styles */
+        .enquiry-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        .enquiry-modal.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        .enquiry-modal-content {
+            background: white;
+            border-radius: 20px;
+            max-width: 500px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+            transform: translateY(20px);
+            transition: transform 0.3s ease;
+        }
+        .enquiry-modal.show .enquiry-modal-content {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-900">
+    <!-- Header -->
+    <header class="bg-white/95 backdrop-blur-md shadow-lg fixed w-full z-50 top-0">
+        <div class="container mx-auto px-4 lg:px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <a href="../index.html">
+                        <img src="../images/Logo.png" alt="SpecCon Holdings Logo" class="h-12">
+                    </a>
+                    <div class="ml-3">
+                        <h1 class="text-xl font-bold text-gray-900">SpecCon Holdings</h1>
+                        <p class="text-sm text-gray-600">Financial Advisor Qualification</p>
+                    </div>
+                </div>
+
+                <nav class="hidden lg:flex items-center space-x-8">
+                    <a href="../index.html" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300">Home</a>
+                    <a href="../setas/inseta.html" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300">INSETA</a>
+                    <a href="../index.html#qualifications" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300">All Qualifications</a>
+                    <a href="../index.html#contact" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300">Contact Us</a>
+                </nav>
+
+                <div class="hidden lg:block">
+                    <button onclick="openEnquiryModal()" class="bg-gradient-to-r from-[#12265E] to-[#4A90E2] text-white font-semibold px-6 py-3 rounded-lg hover:from-[#0d1a47] hover:to-[#3a7bc8] transition duration-300 shadow-lg">
+                        Enquire Now
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <section class="pt-24 pb-8 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <nav class="text-sm text-gray-600">
+                <a href="../index.html" class="hover:text-blue-600">Home</a>
+                <span class="mx-2">/</span>
+                <a href="../setas/inseta.html" class="hover:text-blue-600">INSETA</a>
+                <span class="mx-2">/</span>
+                <span class="text-gray-900">Financial Advisor NQF Level 6</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="py-16 bg-gradient-to-br from-teal-50 to-white">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-teal-100 rounded-2xl flex items-center justify-center mr-6">
+                            <i data-lucide="trending-up" class="w-8 h-8 text-teal-600"></i>
+                        </div>
+                        <div>
+                            <span class="text-teal-600 font-semibold">NQF Level 6 | INSETA</span>
+                            <h1 class="text-4xl md:text-5xl font-bold text-gray-900">Financial Advisor</h1>
+                        </div>
+                    </div>
+                    <p class="text-lg text-gray-600 leading-relaxed mb-8">
+                        Provide comprehensive financial advisory services including investments, retirement planning, and wealth management.
+                        This advanced qualification prepares you for senior advisory roles in the financial services industry.
+                    </p>
+                    <div class="grid grid-cols-3 gap-4 mb-8">
+                        <div class="text-center p-4 bg-white rounded-lg shadow">
+                            <div class="text-xl font-bold text-teal-600">515</div>
+                            <div class="text-sm text-gray-600">Credits</div>
+                        </div>
+                        <div class="text-center p-4 bg-white rounded-lg shadow">
+                            <div class="text-xl font-bold text-blue-600">48</div>
+                            <div class="text-sm text-gray-600">Months</div>
+                        </div>
+                        <div class="text-center p-4 bg-white rounded-lg shadow">
+                            <div class="text-xl font-bold text-purple-600">NQF 6</div>
+                            <div class="text-sm text-gray-600">Level</div>
+                        </div>
+                    </div>
+                    <a href="../index.html#apply" class="bg-gradient-to-r from-[#12265E] to-[#4A90E2] text-white font-bold py-3 px-8 rounded-lg hover:from-[#0d1a47] hover:to-[#3a7bc8] transition duration-300 shadow-lg">
+                        Apply for This Qualification
+                    </a>
+                </div>
+                <div>
+                    <img src="https://images.pexels.com/photos/3760263/pexels-photo-3760263.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                         alt="Financial advisor consulting with clients"
+                         class="rounded-2xl shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Qualification Details -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-3 gap-12">
+                <!-- Main Content -->
+                <div class="lg:col-span-2">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-8">Qualification Overview</h2>
+
+                    <div class="prose max-w-none mb-12">
+                        <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                            This Financial Advisor qualification provides comprehensive training in investment advisory services,
+                            retirement planning, and wealth management. The program combines theoretical knowledge with practical
+                            skills needed to provide professional financial advice and support complex client needs.
+                        </p>
+
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Learning Outcomes</h3>
+                        <p class="text-gray-600 mb-6">Upon completion of this qualification, learners will be able to:</p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0"></i>
+                                <span>Analyze client long-term wealth creation and protection needs</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0"></i>
+                                <span>Evaluate investment opportunities and conduct due diligence</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0"></i>
+                                <span>Provide advice on retirement funds and employee benefits</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0"></i>
+                                <span>Advise on health care benefits and medical aid programs</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0"></i>
+                                <span>Facilitate implementation of investment decisions</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0"></i>
+                                <span>Apply regulatory requirements for insurance and investments</span>
+                            </li>
+                        </ul>
+
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Career Opportunities</h3>
+                        <p class="text-gray-600 mb-6">This qualification opens doors to senior financial advisory roles including:</p>
+                        <div class="grid md:grid-cols-2 gap-4 mb-8">
+                            <div class="flex items-center">
+                                <i data-lucide="briefcase" class="w-5 h-5 text-blue-600 mr-3"></i>
+                                <span>Senior Financial Advisor</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i data-lucide="briefcase" class="w-5 h-5 text-blue-600 mr-3"></i>
+                                <span>Investment Consultant</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i data-lucide="briefcase" class="w-5 h-5 text-blue-600 mr-3"></i>
+                                <span>Wealth Management Advisor</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i data-lucide="briefcase" class="w-5 h-5 text-blue-600 mr-3"></i>
+                                <span>Retirement Planning Specialist</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i data-lucide="briefcase" class="w-5 h-5 text-blue-600 mr-3"></i>
+                                <span>Employee Benefits Consultant</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i data-lucide="briefcase" class="w-5 h-5 text-blue-600 mr-3"></i>
+                                <span>Financial Planning Manager</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modules -->
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Core Modules</h3>
+                    <div class="space-y-6 mb-12">
+                        <div class="bg-gray-50 p-6 rounded-xl">
+                            <h4 class="font-bold text-lg text-gray-900 mb-3">Introduction to Investment Advisory Industry (43 credits)</h4>
+                            <p class="text-gray-600 text-sm mb-2">Overview of the investment advisory industry and fundamentals of investments</p>
+                            <ul class="text-sm text-gray-500 space-y-1 ml-4">
+                                <li>• Investment Advisory Industry Overview (13 credits)</li>
+                                <li>• Fundamentals of Investments (30 credits)</li>
+                            </ul>
+                        </div>
+                        <div class="bg-gray-50 p-6 rounded-xl">
+                            <h4 class="font-bold text-lg text-gray-900 mb-3">Principles of Providing Advice (62 credits)</h4>
+                            <p class="text-gray-600 text-sm mb-2">Regulatory requirements and principles for client advisory services</p>
+                            <ul class="text-sm text-gray-500 space-y-1 ml-4">
+                                <li>• Regulatory Requirements for Advising Clients (17 credits)</li>
+                                <li>• Insurance, Savings and Retirement Planning Advice (16 credits)</li>
+                                <li>• Investment Advice Principles (29 credits)</li>
+                            </ul>
+                        </div>
+                        <div class="bg-gray-50 p-6 rounded-xl">
+                            <h4 class="font-bold text-lg text-gray-900 mb-3">Analysis and Evaluation of Investment Opportunities (100 credits)</h4>
+                            <p class="text-gray-600 text-sm mb-2">Comprehensive analysis of client needs and investment options</p>
+                            <ul class="text-sm text-gray-500 space-y-1 ml-4">
+                                <li>• Analyze Client Long-term Wealth Creation Needs (31 credits)</li>
+                                <li>• Evaluate Wealth Creation/Protection Options (27 credits)</li>
+                                <li>• Research and Due-diligence of Investment Opportunities (42 credits)</li>
+                            </ul>
+                        </div>
+                        <div class="bg-gray-50 p-6 rounded-xl">
+                            <h4 class="font-bold text-lg text-gray-900 mb-3">Retirement Funds and Employee Benefits (80 credits)</h4>
+                            <p class="text-gray-600 text-sm mb-2">Specialized knowledge in employee benefits and retirement planning</p>
+                            <ul class="text-sm text-gray-500 space-y-1 ml-4">
+                                <li>• Employee and Pension Fund Benefits Advice (20 credits)</li>
+                                <li>• Analyze Retirement Fund Needs (11 credits)</li>
+                                <li>• Evaluate Employee Benefit Options (8 credits)</li>
+                                <li>• Advise on Retirement Fund Structuring (18 credits)</li>
+                                <li>• Support Employee Benefits Advisory (23 credits)</li>
+                            </ul>
+                        </div>
+                        <div class="bg-gray-50 p-6 rounded-xl">
+                            <h4 class="font-bold text-lg text-gray-900 mb-3">Health Care Benefits (72 credits)</h4>
+                            <p class="text-gray-600 text-sm mb-2">Comprehensive health care benefits advisory services</p>
+                            <ul class="text-sm text-gray-500 space-y-1 ml-4">
+                                <li>• Health Care Benefits Advisory Services (15 credits)</li>
+                                <li>• Analyze Health Care Benefits Needs (17 credits)</li>
+                                <li>• Provide Health Care Benefit Programme Advice (26 credits)</li>
+                                <li>• Participate in Health Care Benefit Implementation (14 credits)</li>
+                            </ul>
+                        </div>
+                        <div class="bg-gray-50 p-6 rounded-xl">
+                            <h4 class="font-bold text-lg text-gray-900 mb-3">Facilitation and Implementation of Investment Decisions (158 credits)</h4>
+                            <p class="text-gray-600 text-sm mb-2">Advanced implementation and ongoing advisory services</p>
+                            <ul class="text-sm text-gray-500 space-y-1 ml-4">
+                                <li>• Facilitate Implementation of Investment Decisions (9 credits)</li>
+                                <li>• Recommend and Implement Wealth Creation Options (26 credits)</li>
+                                <li>• Advise on Investment Opportunities (41 credits)</li>
+                                <li>• Participate in Wealth Creation Processes (50 credits)</li>
+                                <li>• Participate in Investment Decision Advisory (32 credits)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="lg:col-span-1">
+                    <div class="bg-gray-50 p-8 rounded-2xl mb-8 sticky top-24">
+                        <h3 class="text-xl font-bold text-gray-900 mb-6">Qualification Details</h3>
+                        <div class="space-y-4">
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">SETA:</span>
+                                <span class="font-semibold">INSETA</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">NQF Level:</span>
+                                <span class="font-semibold">6</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Credits:</span>
+                                <span class="font-semibold">515</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">NLRD ID:</span>
+                                <span class="font-semibold">105026</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Duration:</span>
+                                <span class="font-semibold">48 Months</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Status:</span>
+                                <span class="font-semibold text-green-600">Accredited</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Expiry:</span>
+                                <span class="font-semibold">23-May-29</span>
+                            </div>
+                        </div>
+
+                        <hr class="my-6">
+
+                        <div class="text-center">
+                            <a href="../index.html#apply" class="bg-gradient-to-r from-[#12265E] to-[#4A90E2] text-white font-bold py-3 px-6 rounded-lg hover:from-[#0d1a47] hover:to-[#3a7bc8] transition duration-300 shadow-lg block">
+                                Apply Now
+                            </a>
+                            <p class="text-sm text-gray-500 mt-3">Start your financial advisory career today</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Qualifications -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-gray-900 text-center mb-12">Other INSETA Qualifications</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <a href="inseta-health-care-benefits-advisor-nqf5.html" class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                        <i data-lucide="heart-pulse" class="w-6 h-6 text-purple-600"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-2">Health Care Benefits Advisor</h3>
+                    <p class="text-sm text-gray-600 mb-3">NQF Level 5 • 102 Credits</p>
+                    <span class="text-purple-600 text-sm font-medium">Learn More →</span>
+                </a>
+
+                <a href="inseta-insurance-underwriter-nqf5.html" class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
+                        <i data-lucide="file-search" class="w-6 h-6 text-orange-600"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-2">Insurance Underwriter</h3>
+                    <p class="text-sm text-gray-600 mb-3">NQF Level 5 • 163 Credits</p>
+                    <span class="text-orange-600 text-sm font-medium">Learn More →</span>
+                </a>
+
+                <a href="inseta-insurance-claims-administrator-assessor-nqf4.html" class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                        <i data-lucide="clipboard-check" class="w-6 h-6 text-blue-600"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-2">Insurance Claims Administrator/Assessor</h3>
+                    <p class="text-sm text-gray-600 mb-3">NQF Level 4 • 131 Credits</p>
+                    <span class="text-blue-600 text-sm font-medium">Learn More →</span>
+                </a>
+
+                <a href="inseta-long-term-insurance-advisor-nqf4.html" class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+                        <i data-lucide="shield" class="w-6 h-6 text-green-600"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-2">Long Term Insurance Advisor</h3>
+                    <p class="text-sm text-gray-600 mb-3">NQF Level 4 • 121 Credits</p>
+                    <span class="text-green-600 text-sm font-medium">Learn More →</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-r from-[#12265E] to-[#4A90E2] text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to Become a Financial Advisor?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Join the ranks of professional financial advisors and make a meaningful impact on people's financial futures.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button onclick="openEnquiryModal()" class="bg-white text-blue-600 font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition duration-300">
+                    Enquire Now
+                </button>
+                <a href="../index.html#contact" class="border-2 border-white text-white font-bold py-3 px-8 rounded-lg hover:bg-white hover:text-blue-600 transition duration-300">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sticky Banner -->
+    <div id="stickyBanner" class="sticky-banner">
+        <i data-lucide="gift" class="w-4 h-4 inline mr-2"></i>
+        Our Free Value Adds
+    </div>
+
+    <!-- Banner Popup -->
+    <div id="bannerPopup" class="banner-popup">
+        <div class="p-6">
+            <div class="flex items-center justify-between mb-4">
+                <h3 class="text-xl font-bold text-gray-900">Value-Added Benefits</h3>
+                <button id="closePopup" class="text-gray-400 hover:text-gray-600">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+            <p class="text-gray-600 text-sm mb-6">You can get these value adds for free when you do learnerships with SpecCon</p>
+            <!-- Value Adds Grid -->
+            <div class="grid grid-cols-1 gap-4 mb-6">
+                <div class="flex items-center p-3 bg-blue-50 rounded-lg">
+                    <div class="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center mr-3">
+                        <i data-lucide="layout-template" class="w-4 h-4 text-white"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-sm text-gray-900">White Labelled LMS</h4>
+                        <p class="text-xs text-gray-600">Complete Learning Management System</p>
+                    </div>
+                </div>
+                <div class="flex items-center p-3 bg-green-50 rounded-lg">
+                    <div class="w-8 h-8 bg-green-500 rounded-lg flex items-center justify-center mr-3">
+                        <i data-lucide="book-open" class="w-4 h-4 text-white"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-sm text-gray-900">300+ Online Courses</h4>
+                        <p class="text-xs text-gray-600">Comprehensive course library</p>
+                    </div>
+                </div>
+                <div class="flex items-center p-3 bg-purple-50 rounded-lg">
+                    <div class="w-8 h-8 bg-purple-500 rounded-lg flex items-center justify-center mr-3">
+                        <i data-lucide="users" class="w-4 h-4 text-white"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-sm text-gray-900">Employment Equity System</h4>
+                        <p class="text-xs text-gray-600">Compliance and reporting</p>
+                    </div>
+                </div>
+                <div class="flex items-center p-3 bg-orange-50 rounded-lg">
+                    <div class="w-8 h-8 bg-orange-500 rounded-lg flex items-center justify-center mr-3">
+                        <i data-lucide="clipboard-check" class="w-4 h-4 text-white"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-sm text-gray-900">10+ Work Assessments</h4>
+                        <p class="text-xs text-gray-600">Excel & workplace skills tests</p>
+                    </div>
+                </div>
+                <div class="flex items-center p-3 bg-red-50 rounded-lg">
+                    <div class="w-8 h-8 bg-red-500 rounded-lg flex items-center justify-center mr-3">
+                        <i data-lucide="shield-check" class="w-4 h-4 text-white"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-sm text-gray-900">Compliance Training</h4>
+                        <p class="text-xs text-gray-600">First Aid, Fire Fighter, OHS</p>
+                    </div>
+                </div>
+                <div class="flex items-center p-3 bg-teal-50 rounded-lg">
+                    <div class="w-8 h-8 bg-teal-500 rounded-lg flex items-center justify-center mr-3">
+                        <i data-lucide="graduation-cap" class="w-4 h-4 text-white"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-sm text-gray-900">Academy Access</h4>
+                        <p class="text-xs text-gray-600">Resources for staff children</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Client Testimonials -->
+            <div class="border-t pt-4">
+                <h4 class="font-bold text-gray-900 mb-3 text-sm">What Our Clients Say</h4>
+                <div class="space-y-3">
+                    <div class="flex items-start space-x-3">
+                        <img src="../Client Logos/AVI.PNG" alt="AVI" class="w-8 h-8 object-contain">
+                        <div>
+                            <p class="text-xs text-gray-700 italic">"SpecCon is knowledgeable, passionate and always goes the extra mile..."</p>
+                            <p class="text-xs text-gray-500 mt-1">- Neteske Gerber, AVI</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-3">
+                        <img src="../Client Logos/isuzu.PNG" alt="Isuzu" class="w-8 h-8 object-contain">
+                        <div>
+                            <p class="text-xs text-gray-700 italic">"The SpecCon LMS has transformed our training approach..."</p>
+                            <p class="text-xs text-gray-500 mt-1">- Lisa van Aswegen, Isuzu</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Client Logos Scrolling Bar -->
+            <div class="border-t pt-4 mt-4">
+                <p class="text-xs text-gray-500 text-center mb-2">Trusted by Leading Companies</p>
+                <div class="overflow-hidden">
+                    <div class="flex animate-scroll">
+                        <div class="flex space-x-4 min-w-max">
+                            <img src="../Client Logos/AVI.PNG" alt="AVI" class="h-6 object-contain grayscale">
+                            <img src="../Client Logos/isuzu.PNG" alt="Isuzu" class="h-6 object-contain grayscale">
+                            <img src="../Client Logos/afgri.PNG" alt="Afgri" class="h-6 object-contain grayscale">
+                            <img src="../Client Logos/engen.PNG" alt="Engen" class="h-6 object-contain grayscale">
+                            <img src="../Client Logos/capitec.PNG" alt="Capitec" class="h-6 object-contain grayscale">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Enquiry Button -->
+            <div class="border-t pt-4 mt-4 text-center">
+                <a href="../index.html#contact" class="bg-gradient-to-r from-[#12265E] to-[#4A90E2] text-white px-6 py-3 rounded-lg font-semibold hover:from-[#0d1a47] hover:to-[#3a7bc8] transition duration-300 shadow-lg inline-block">
+                    Enquiry Now
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Enquiry Modal -->
+    <div id="enquiryModal" class="enquiry-modal">
+        <div class="enquiry-modal-content">
+            <div class="p-8">
+                <div class="flex items-center justify-between mb-6">
+                    <h2 class="text-2xl font-bold text-gray-900">Enquire About This Qualification</h2>
+                    <button onclick="closeEnquiryModal()" class="text-gray-400 hover:text-gray-600 text-xl">
+                        <i data-lucide="x" class="w-6 h-6"></i>
+                    </button>
+                </div>
+
+                <div class="mb-6 p-4 bg-blue-50 rounded-lg border border-blue-200">
+                    <p class="text-blue-700 text-sm">
+                        <i data-lucide="info" class="w-4 h-4 inline mr-2"></i>
+                        If you are applying for a learnership, please <a href="../index.html#apply" class="font-semibold underline hover:text-blue-800">click here</a>.
+                    </p>
+                </div>
+
+                <form id="enquiryForm" onsubmit="submitEnquiry(event)">
+                    <div class="grid md:grid-cols-2 gap-4 mb-4">
+                        <div>
+                            <label for="firstName" class="block text-sm font-medium text-gray-700 mb-2">Name *</label>
+                            <input type="text" id="firstName" name="firstName" required
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                        <div>
+                            <label for="surname" class="block text-sm font-medium text-gray-700 mb-2">Surname *</label>
+                            <input type="text" id="surname" name="surname" required
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-4 mb-4">
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email *</label>
+                            <input type="email" id="email" name="email" required
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="company" class="block text-sm font-medium text-gray-700 mb-2">Company *</label>
+                        <input type="text" id="company" name="company" required
+                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                    </div>
+
+                    <div class="mb-6">
+                        <label for="reason" class="block text-sm font-medium text-gray-700 mb-2">Reason for Enquiry *</label>
+                        <textarea id="reason" name="reason" rows="4" required
+                                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
+                                  placeholder="Please tell us about your enquiry and how we can help you..."></textarea>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-3">
+                        <button type="submit" class="flex-1 bg-gradient-to-r from-[#12265E] to-[#4A90E2] text-white font-semibold py-3 px-6 rounded-lg hover:from-[#0d1a47] hover:to-[#3a7bc8] transition duration-300">
+                            <i data-lucide="send" class="w-4 h-4 inline mr-2"></i>
+                            Send Enquiry
+                        </button>
+                        <button type="button" onclick="closeEnquiryModal()" class="flex-1 bg-gray-500 text-white font-semibold py-3 px-6 rounded-lg hover:bg-gray-600 transition duration-300">
+                            Cancel
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <img src="../images/Logo.png" alt="SpecCon Holdings Logo" class="h-12 mr-3">
+                        <div>
+                            <h3 class="text-xl font-bold">SpecCon Holdings</h3>
+                            <p class="text-gray-400">Financial Advisor Training</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 mb-4">Building advanced financial advisory expertise through comprehensive professional training.</p>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="../index.html" class="text-gray-400 hover:text-white transition duration-200">Home</a></li>
+                        <li><a href="../setas/inseta.html" class="text-gray-400 hover:text-white transition duration-200">INSETA Qualifications</a></li>
+                        <li><a href="../index.html#qualifications" class="text-gray-400 hover:text-white transition duration-200">All Qualifications</a></li>
+                        <li><a href="../index.html#contact" class="text-gray-400 hover:text-white transition duration-200">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Other SETAs</h4>
+                    <ul class="space-y-2">
+                        <li><a href="../setas/services-seta.html" class="text-gray-400 hover:text-white transition duration-200">Services SETA</a></li>
+                        <li><a href="../setas/etdp-seta.html" class="text-gray-400 hover:text-white transition duration-200">ETDP SETA</a></li>
+                        <li><a href="../setas/wr-seta.html" class="text-gray-400 hover:text-white transition duration-200">W&R SETA</a></li>
+                        <li><a href="../setas/agriseta.html" class="text-gray-400 hover:text-white transition duration-200">AgriSETA</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2025 SpecCon Holdings. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+
+        // Sticky banner functionality
+        const stickyBanner = document.getElementById('stickyBanner');
+        const bannerPopup = document.getElementById('bannerPopup');
+        const closePopup = document.getElementById('closePopup');
+        let isPopupOpen = false;
+
+        // Show banner immediately when page loads
+        stickyBanner.style.display = 'block';
+
+        // Toggle popup on banner hover/click
+        stickyBanner.addEventListener('mouseenter', function() {
+            if (!isPopupOpen) {
+                bannerPopup.classList.add('show');
+                isPopupOpen = true;
+            }
+        });
+
+        stickyBanner.addEventListener('click', function() {
+            bannerPopup.classList.toggle('show');
+            isPopupOpen = !isPopupOpen;
+        });
+
+        // Close popup
+        closePopup.addEventListener('click', function() {
+            bannerPopup.classList.remove('show');
+            isPopupOpen = false;
+        });
+
+        // Close popup when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!stickyBanner.contains(e.target) && !bannerPopup.contains(e.target)) {
+                bannerPopup.classList.remove('show');
+                isPopupOpen = false;
+            }
+        });
+
+        // Enquiry Modal Functions
+        function openEnquiryModal() {
+            const modal = document.getElementById('enquiryModal');
+            modal.classList.add('show');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeEnquiryModal() {
+            const modal = document.getElementById('enquiryModal');
+            modal.classList.remove('show');
+            document.body.style.overflow = 'auto';
+        }
+
+        function submitEnquiry(event) {
+            event.preventDefault();
+
+            // Get form data
+            const formData = new FormData(event.target);
+            const enquiryData = {
+                firstName: formData.get('firstName'),
+                surname: formData.get('surname'),
+                email: formData.get('email'),
+                phone: formData.get('phone'),
+                company: formData.get('company'),
+                reason: formData.get('reason'),
+                qualification: 'Financial Advisor NQF Level 6 (INSETA)'
+            };
+
+            // For now, just show success message and close modal
+            alert('Thank you for your enquiry! We will get back to you soon.');
+            closeEnquiryModal();
+
+            // Reset form
+            event.target.reset();
+
+            // In a real implementation, you would send this data to your server
+            console.log('Enquiry submitted:', enquiryData);
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('enquiryModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeEnquiryModal();
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeEnquiryModal();
+            }
+        });
+    </script>
+</body>
+</html>

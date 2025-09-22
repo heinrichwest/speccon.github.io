@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Production NQF Level 4 | AgriSETA | SpecCon Holdings</title>
+    <meta name="description" content="Master comprehensive plant production management with our advanced NQF Level 4 qualification. 142 credits, management and leadership focus.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 10px 10px -5px rgb(0 0 0 / 0.04);
+        }
+        /* Sticky Banner Styles */
+        .sticky-banner {
+            position: fixed;
+            top: 100px;
+            right: 20px;
+            background: linear-gradient(135deg, #12265E 0%, #4A90E2 100%);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            z-index: 1000;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            font-weight: 600;
+            font-size: 14px;
+            backdrop-filter: blur(10px);
+        }
+        .sticky-banner:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+            background: linear-gradient(135deg, #0d1a47 0%, #3a7bc8 100%);
+        }
+        .banner-popup {
+            position: fixed;
+            top: 160px;
+            right: 20px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            z-index: 999;
+            overflow: hidden;
+            transform: translateY(-20px);
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.3s ease;
+            max-width: 420px;
+            width: 90vw;
+        }
+        .banner-popup.show {
+            transform: translateY(0);
+            opacity: 1;
+            pointer-events: all;
+        }
+        .animate-scroll {
+            animation: scroll 30s linear infinite;
+        }
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-900">
+    <!-- Header -->
+    <header class="bg-white/95 backdrop-blur-md shadow-lg fixed w-full z-50 top-0">
+        <div class="container mx-auto px-4 lg:px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <a href="../index.html">
+                        <img src="../images/Logo.png" alt="SpecCon Holdings Logo" class="h-12">
+                    </a>
+                    <div class="ml-3">
+                        <h1 class="text-xl font-bold text-gray-900">SpecCon Holdings</h1>
+                        <p class="text-sm text-gray-600">Plant Production Qualification</p>
+                    </div>
+                </div>
+
+                <nav class="hidden lg:flex items-center space-x-8">
+                    <a href="../index.html" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300">Home</a>
+                    <a href="../setas/agriseta.html" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300">AgriSETA</a>
+                    <a href="../index.html#qualifications" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300">All Qualifications</a>
+                    <a href="../index.html#contact" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300">Contact Us</a>
+                </nav>
+
+                <div class="hidden lg:block">
+                    <a href="../index.html#apply" class="bg-gradient-to-r from-[#12265E] to-[#4A90E2] text-white font-semibold px-6 py-3 rounded-lg hover:from-[#0d1a47] hover:to-[#3a7bc8] transition duration-300 shadow-lg">
+                        Apply Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <section class="pt-24 pb-8 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <nav class="text-sm text-gray-600">
+                <a href="../index.html" class="hover:text-blue-600">Home</a>
+                <span class="mx-2">/</span>
+                <a href="../setas/agriseta.html" class="hover:text-blue-600">AgriSETA</a>
+                <span class="mx-2">/</span>
+                <span class="text-gray-900">Plant Production NQF Level 4</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="py-16 bg-gradient-to-br from-green-50 to-white">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mr-6">
+                            <i data-lucide="leaf" class="w-8 h-8 text-[#12265E]"></i>
+                        </div>
+                        <div>
+                            <span class="text-[#12265E] font-semibold">NQF Level 4 | AgriSETA</span>
+                            <h1 class="text-4xl md:text-5xl font-bold text-gray-900">Plant Production</h1>
+                        </div>
+                    </div>
+                    <p class="text-lg text-gray-600 leading-relaxed mb-8">
+                        Comprehensive management qualification for plant production professionals. Master advanced agricultural management, business planning, and technical expertise for senior leadership roles.
+                    </p>
+                    <div class="grid grid-cols-3 gap-4 mb-8">
+                        <div class="text-center p-4 bg-white rounded-lg shadow">
+                            <div class="text-xl font-bold text-[#12265E]">142</div>
+                            <div class="text-sm text-gray-600">Credits</div>
+                        </div>
+                        <div class="text-center p-4 bg-white rounded-lg shadow">
+                            <div class="text-xl font-bold text-blue-600">12</div>
+                            <div class="text-sm text-gray-600">Months</div>
+                        </div>
+                        <div class="text-center p-4 bg-white rounded-lg shadow">
+                            <div class="text-xl font-bold text-purple-600">NQF 4</div>
+                            <div class="text-sm text-gray-600">Level</div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="../index.html#apply" class="bg-gradient-to-r from-[#12265E] to-[#4A90E2] text-white font-semibold px-8 py-4 rounded-lg hover:from-[#0d1a47] hover:to-[#3a7bc8] transition duration-300 text-center">
+                            Apply for this Qualification
+                        </a>
+                        <a href="../index.html#contact" class="border-2 border-green-600 text-[#12265E] font-semibold px-8 py-4 rounded-lg hover:bg-green-600 hover:text-white transition duration-300 text-center">
+                            Get More Info
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <img src="https://images.pexels.com/photos/2518861/pexels-photo-2518861.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Plant Production Management" class="rounded-2xl shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Qualification Details -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-3 gap-12">
+                <!-- Main Content -->
+                <div class="lg:col-span-2">
+                    <!-- Overview -->
+                    <div class="mb-12">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-6">Qualification Overview</h2>
+                        <div class="prose prose-lg text-gray-700">
+                            <p>This advanced qualification provides comprehensive training for plant production management professionals. The curriculum covers fundamental competencies, agri-business management, agricultural practices, and specialized plant production techniques.</p>
+                            <p>Students will develop skills in communication, mathematical analysis, data collection, environmental management, quality control, marketing, financial planning, human resources management, and advanced plant production technologies.</p>
+                        </div>
+                    </div>
+
+                    <!-- Learning Competencies -->
+                    <div class="mb-12">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-8">Core Competencies</h2>
+                        <div class="space-y-6">
+                            <!-- Fundamental Competencies -->
+                            <div class="bg-gray-50 rounded-xl p-6">
+                                <h3 class="text-xl font-semibold text-gray-900 mb-4">Fundamental Competencies</h3>
+                                <ul class="space-y-2 text-gray-700">
+                                    <li>• Apply communication skills in an agricultural environment</li>
+                                    <li>• Apply mathematical calculations within the agricultural environment</li>
+                                    <li>• Implement a data collection plan in the agricultural sector</li>
+                                    <li>• Plan and maintain environmentally sound agricultural processes by identifying knowledge processes and patterns of the environment in the region, and understanding the limitations of resources and how their management contributes to sustainable interactive agriculture, using environmental indicators</li>
+                                </ul>
+                            </div>
+
+                            <!-- Agri-business -->
+                            <div class="bg-gray-50 rounded-xl p-6">
+                                <h3 class="text-xl font-semibold text-gray-900 mb-4">Agri-business</h3>
+                                <ul class="space-y-2 text-gray-700">
+                                    <li>• Manage stores and agro-inputs in stores</li>
+                                    <li>• Implement quality control aspects of an agribusiness</li>
+                                    <li>• Demonstrate ability to development of an integrated marketing plan</li>
+                                    <li>• Demonstrate the ability to develop an integrated whole farm budget</li>
+                                    <li>• Apply principles of human resources management in an agricultural environment</li>
+                                    <li>• Participate in the analysis, planning and management of an agri-business</li>
+                                    <li>• Describe the historical and current structure of the relevant industry within secondary agriculture</li>
+                                    <li>• Evaluate and adjust the enterprise and production processes of animal and crop enterprises</li>
+                                </ul>
+                            </div>
+
+                            <!-- Agricultural Practices -->
+                            <div class="bg-gray-50 rounded-xl p-6">
+                                <h3 class="text-xl font-semibold text-gray-900 mb-4">Agricultural Practices</h3>
+                                <ul class="space-y-2 text-gray-700">
+                                    <li>• Implement a management system related to food safety, production practices, as well as demonstrate environmental and social awareness within the agricultural supply chain</li>
+                                    <li>• Apply principles to design, prepare and implement basic operational procedures for the maintenance and storage of equipment, implements and infrastructure</li>
+                                    <li>• Implement corrective actions to ensure water quality</li>
+                                    <li>• Implement a natural resource management plan of the farm in relation to area wide planning</li>
+                                    <li>• Maintain the most appropriate land-use on a farm by continuously assessing the natural resource base</li>
+                                </ul>
+                            </div>
+
+                            <!-- Plant Production -->
+                            <div class="bg-gray-50 rounded-xl p-6">
+                                <h3 class="text-xl font-semibold text-gray-900 mb-4">Plant Production</h3>
+                                <ul class="space-y-2 text-gray-700">
+                                    <li>• Explain the different physiological processes involved in the growth and development of the plant</li>
+                                    <li>• Establish and supervise the implementation of soil preparation procedures</li>
+                                    <li>• Propagate plants in a variety of situations</li>
+                                    <li>• Demonstrate an understanding of an integrated pest management system</li>
+                                    <li>• Develop a harvesting plan for crops</li>
+                                    <li>• Implement a plant manipulation management plan using a broad range of techniques</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="lg:col-span-1">
+                    <!-- Quick Facts -->
+                    <div class="bg-green-50 rounded-2xl p-8 mb-8">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-6">Quick Facts</h3>
+                        <div class="space-y-4">
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">SETA:</span>
+                                <span class="font-semibold">AgriSETA</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">NQF Level:</span>
+                                <span class="font-semibold">4</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Credits:</span>
+                                <span class="font-semibold">142</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">NLRD ID:</span>
+                                <span class="font-semibold">49009</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Status:</span>
+                                <span class="font-semibold">Legacy extended</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Expiry Date:</span>
+                                <span class="font-semibold">30-Jun-26</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Duration:</span>
+                                <span class="font-semibold">12 Months</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Delivery:</span>
+                                <span class="font-semibold">Classroom/Online/Blended</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Career Opportunities -->
+                    <div class="bg-white border border-gray-200 rounded-2xl p-8 mb-8">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-6">Career Opportunities</h3>
+                        <ul class="space-y-3 text-gray-700">
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-500 mr-3 mt-0.5"></i>
+                                Farm Manager
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-500 mr-3 mt-0.5"></i>
+                                Agricultural Operations Director
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-500 mr-3 mt-0.5"></i>
+                                Crop Production Manager
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-500 mr-3 mt-0.5"></i>
+                                Agricultural Consultant
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-500 mr-3 mt-0.5"></i>
+                                Agribusiness Entrepreneur
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Related Qualifications -->
+                    <div class="bg-white border border-gray-200 rounded-2xl p-8">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-6">Related Qualifications</h3>
+                        <div class="space-y-4">
+                            <a href="agri-plant-production-nqf3.html" class="block p-4 border border-gray-200 rounded-lg hover:border-green-300 hover:bg-green-50 transition duration-300">
+                                <div class="font-semibold text-gray-900">Plant Production NQF 3</div>
+                                <div class="text-sm text-gray-600">Supervisory level</div>
+                            </a>
+                            <a href="agri-animal-production-nqf4.html" class="block p-4 border border-gray-200 rounded-lg hover:border-green-300 hover:bg-green-50 transition duration-300">
+                                <div class="font-semibold text-gray-900">Animal Production NQF 4</div>
+                                <div class="text-sm text-gray-600">Animal management</div>
+                            </a>
+                            <a href="agri-mixed-farming-nqf2.html" class="block p-4 border border-gray-200 rounded-lg hover:border-green-300 hover:bg-green-50 transition duration-300">
+                                <div class="font-semibold text-gray-900">Mixed Farming NQF 2</div>
+                                <div class="text-sm text-gray-600">Integrated systems</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-gradient-to-r from-[#12265E] to-[#4A90E2] text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Master Agricultural Leadership</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto opacity-90">
+                Achieve comprehensive plant production management expertise and lead agricultural enterprises toward sustainable success.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="../index.html#apply" class="bg-white text-[#12265E] font-semibold px-8 py-4 rounded-lg hover:bg-gray-100 transition duration-300">
+                    Apply Now
+                </a>
+                <a href="../index.html#contact" class="border-2 border-white text-white font-semibold px-8 py-4 rounded-lg hover:bg-white hover:text-[#12265E] transition duration-300">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">SpecCon Holdings</h3>
+                    <p class="text-gray-400">Empowering futures through quality education and training.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="../index.html" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="../index.html#about" class="text-gray-400 hover:text-white transition-colors">About</a></li>
+                        <li><a href="../index.html#qualifications" class="text-gray-400 hover:text-white transition-colors">Qualifications</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">AgriSETA</h4>
+                    <ul class="space-y-2">
+                        <li><a href="../setas/agriseta.html" class="text-gray-400 hover:text-white transition-colors">All AgriSETA Qualifications</a></li>
+                        <li><a href="agri-plant-production-nqf3.html" class="text-gray-400 hover:text-white transition-colors">Plant Production NQF 3</a></li>
+                        <li><a href="agri-animal-production-nqf4.html" class="text-gray-400 hover:text-white transition-colors">Animal Production NQF 4</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact</h4>
+                    <p class="text-gray-400">Email: info@speccon.co.za</p>
+                    <p class="text-gray-400">Phone: +27 (0)11 123 4567</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+    <script>
+        // Sticky Banner Functionality
+        const stickyBanner = document.getElementById("stickyBanner");
+        const bannerPopup = document.getElementById("bannerPopup");
+        const closePopup = document.getElementById("closePopup");
+        let isPopupOpen = false;
+
+        // Show banner immediately when page loads
+        stickyBanner.style.display = "block";
+
+        // Toggle popup on banner hover/click
+        stickyBanner.addEventListener("mouseenter", function() {
+            if (!isPopupOpen) {
+                bannerPopup.classList.add("show");
+                isPopupOpen = true;
+            }
+        });
+
+        stickyBanner.addEventListener("click", function() {
+            bannerPopup.classList.toggle("show");
+            isPopupOpen = !isPopupOpen;
+        });
+
+        // Close popup
+        closePopup.addEventListener("click", function() {
+            bannerPopup.classList.remove("show");
+            isPopupOpen = false;
+        });
+
+        // Close popup when clicking outside
+        document.addEventListener("click", function(e) {
+            if (!stickyBanner.contains(e.target) && !bannerPopup.contains(e.target)) {
+                bannerPopup.classList.remove("show");
+                isPopupOpen = false;
+            }
+        });
+    </script>
+</body>
+</html>
