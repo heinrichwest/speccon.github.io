@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farming NQF Level 1 | AgriSETA | SpecCon Holdings</title>
+    <meta name="description" content="Start your farming career with our foundational NQF Level 1 Farming qualification accredited by AgriSETA. 120 credits, comprehensive agricultural training.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="icon" type="image/png" href="../images/Logo.png">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 10px 10px -5px rgb(0 0 0 / 0.04);
+        }
+        /* Enhanced Dropdown Menu Styles */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: calc(100% + 8px);
+            left: 0;
+            min-width: 16rem;
+            background: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e5e7eb;
+            z-index: 1000;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: opacity 0.2s ease, transform 0.2s ease;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Invisible bridge to prevent menu closing when moving cursor */
+        .dropdown::before {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            height: 12px;
+            z-index: 999;
+        }
+
+        .dropdown button {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            padding: 0;
+            font-size: inherit;
+            font-family: inherit;
+            color: inherit;
+        }
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        .dropdown-menu {
+            display: none;
+        }
+        .animate-scroll {
+            animation: scroll 30s linear infinite;
+        }
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+        /* Enquiry Popup Modal Styles */
+        .enquiry-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        .enquiry-modal.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        .enquiry-modal-content {
+            background: white;
+            border-radius: 20px;
+            max-width: 500px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+            transform: translateY(20px);
+            transition: transform 0.3s ease;
+        }
+        .enquiry-modal.show .enquiry-modal-content {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-900">
+    <!-- Header -->
+    <header class="bg-white/95 backdrop-blur-md shadow-lg fixed w-full z-50 top-0">
+        <div class="container mx-auto px-4 lg:px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <a href="../index.html">
+                        <img src="../images/Logo.png" alt="SpecCon Holdings Logo" class="h-12">
+                    </a>
+                    <div class="ml-3">
+                        <h1 class="text-xl font-bold text-gray-900">SpecCon Holdings</h1>
+                        <p class="text-sm text-gray-600">AgriSETA Qualifications</p>
+                    </div>
+                </div>
+
+                <nav class="hidden lg:flex items-center space-x-8">
+                    <a href="../index.html#about" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300">Why Choose Us</a>
+                    <a href="../index.html#qualifications" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300">Qualifications</a>
+                    <a href="../index.html#accreditations" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300">Accreditations</a>
+                    <a href="../index.html#classroom-training" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300">Classroom Training</a>
+                    <div class="relative dropdown">
+                        <button class="text-gray-700 hover:text-blue-600 font-medium transition duration-300 inline-flex items-center">
+                            Other Products <i data-lucide="chevron-down" class="w-4 h-4 ml-1"></i>
+                        </button>
+                        <div class="dropdown-menu absolute left-0 w-64 bg-white rounded-lg shadow-xl py-2 z-20 border">
+                            <a href="https://elearning.co.za/" target="_blank" class="block px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition duration-200">
+                                <i data-lucide="monitor" class="w-4 h-4 inline mr-2"></i>Online Training
+                            </a>
+                            <a href="https://employmentequityact.co.za/" target="_blank" class="block px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition duration-200">
+                                <i data-lucide="shield-check" class="w-4 h-4 inline mr-2"></i>Employment Equity
+                            </a>
+                            <a href="https://learningmanagementsystem.co.za/" target="_blank" class="block px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition duration-200">
+                                <i data-lucide="graduation-cap" class="w-4 h-4 inline mr-2"></i>Learning Management System
+                            </a>
+                            <a href="https://skillsdevelopment.co.za/" target="_blank" class="block px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition duration-200">
+                                <i data-lucide="trending-up" class="w-4 h-4 inline mr-2"></i>Skills Development
+                            </a>
+                            <a href="https://www.specconacademy.co.za/" target="_blank" class="block px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition duration-200">
+                                <i data-lucide="school" class="w-4 h-4 inline mr-2"></i>SpecCon Academy
+                            </a>
+                            <a href="https://bbbee.co.za/" target="_blank" class="block px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition duration-200">
+                                <i data-lucide="award" class="w-4 h-4 inline mr-2"></i>BBBEE Consulting
+                            </a>
+                        </div>
+                    </div>
+                </nav>
+
+                <div class="hidden lg:block">
+                    <button onclick="openEnquiryModal()" class="bg-gradient-to-r from-[#12265E] to-[#4A90E2] text-white font-semibold px-6 py-3 rounded-lg hover:from-[#0d1a47] hover:to-[#3a7bc8] transition duration-300 shadow-lg">
+                        Enquire Now
+                    </button>
+                </div>
+
+                <button id="mobile-menu-button" class="lg:hidden">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden lg:hidden mt-4">
+                <a href="../index.html#about" class="block py-2 text-gray-600 hover:text-blue-600">About Us</a>
+                <a href="../index.html#qualifications" class="block py-2 text-gray-600 hover:text-blue-600">Qualifications</a>
+                <a href="../index.html#accreditations" class="block py-2 text-gray-600 hover:text-blue-600">Accreditations</a>
+                <a href="../index.html#classroom-training" class="block py-2 text-gray-600 hover:text-blue-600">Classroom Training</a>
+                <a href="../index.html#contact" class="block py-2 text-gray-600 hover:text-blue-600">Contact Us</a>
+                <button onclick="openEnquiryModal()" class="mt-2 w-full bg-gradient-to-r from-[#12265E] to-[#4A90E2] text-white font-semibold px-5 py-2 rounded-lg hover:from-[#0d1a47] hover:to-[#3a7bc8] transition duration-300 shadow-lg text-center block">
+                    Enquire Now
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <section class="pt-24 pb-8 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <nav class="text-sm text-gray-600">
+                <a href="../index.html" class="hover:text-blue-600">Home</a>
+                <span class="mx-2">/</span>
+                <a href="../setas/agriseta.html" class="hover:text-blue-600">AgriSETA</a>
+                <span class="mx-2">/</span>
+                <span class="text-gray-900">Farming NQF Level 1</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="py-16 bg-gradient-to-br from-green-50 to-white">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mr-6">
+                            <i data-lucide="wheat" class="w-8 h-8 text-[#12265E]"></i>
+                        </div>
+                        <div>
+                            <span class="text-[#12265E] font-semibold">NQF Level 1 | AgriSETA</span>
+                            <h1 class="text-4xl md:text-5xl font-bold text-gray-900">Farming</h1>
+                        </div>
+                    </div>
+                    <p class="text-lg text-gray-600 leading-relaxed mb-8">
+                        Foundation qualification in farming, covering essential agricultural principles and practices. Develop fundamental skills for entry-level positions in general farming operations.
+                    </p>
+                    <div class="grid grid-cols-3 gap-4 mb-8">
+                        <div class="text-center p-4 bg-white rounded-lg shadow">
+                            <div class="text-xl font-bold text-[#12265E]">120</div>
+                            <div class="text-sm text-gray-600">Credits</div>
+                        </div>
+
+                        <div class="text-center p-4 bg-white rounded-lg shadow">
+                            <div class="text-xl font-bold text-blue-600">12</div>
+                            <div class="text-sm text-gray-600">Months</div>
+                        </div>
+                        <div class="text-center p-4 bg-white rounded-lg shadow">
+                            <div class="text-xl font-bold text-purple-600">NQF 1</div>
+                            <div class="text-sm text-gray-600">Level</div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button onclick="openEnquiryModal()" class="bg-gradient-to-r from-[#12265E] to-[#4A90E2] text-white font-semibold px-8 py-4 rounded-lg hover:from-[#0d1a47] hover:to-[#3a7bc8] transition duration-300 text-center">Apply for this Qualification</button>
+                        <button onclick="openContactModal()" class="border-2 border-green-600 text-[#12265E] font-semibold px-8 py-4 rounded-lg hover:bg-green-600 hover:text-white transition duration-300 text-center">
+                            Get More Info
+                        </button>
+                    </div>
+                </div>
+                <div>
+                    <img src="https://images.pexels.com/photos/574919/pexels-photo-574919.jpeg?auto=compress&cs=tinysrgb&w=600" alt="General Farming" class="rounded-2xl shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Qualification Details -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-3 gap-12">
+                <!-- Main Content -->
+                <div class="lg:col-span-2">
+                    <!-- Overview -->
+                    <div class="mb-12">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-6">Qualification Overview</h2>
+                        <div class="prose prose-lg text-gray-700">
+                            <p>The National Certificate: Farming (NQF Level 1) provides foundational knowledge and skills in general agricultural practices. This qualification is designed for individuals entering the agricultural sector with a broad focus on farming operations.</p>
+                            <p>Students will gain practical skills in crop production, farm management, agricultural business principles, and safety practices while developing essential communication and mathematical literacy skills.</p>
+                        </div>
+                    </div>
+
+                    <!-- Learning Modules -->
+                    <div class="mb-12">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-8">Learning Modules</h2>
+                        <div class="space-y-6">
+                            <!-- Module 1 -->
+                            <div class="bg-green-50 rounded-xl p-6">
+                                <h3 class="text-xl font-semibold text-gray-900 mb-4">Module 1: Mathematical Literacy</h3>
+                                <ul class="space-y-2 text-gray-700">
+                                    <li>• Analyse cultural products and processes as representations of shape, space and time</li>
+                                    <li>• Describe and represent objects and the environment in terms of shape, space, time and motion</li>
+                                    <li>• Critically analyse how mathematics is used in social, political and economic relations</li>
+                                    <li>• Demonstrate an understanding of and use the numbering system</li>
+                                    <li>• Use maps to access and communicate information concerning routes, location and direction</li>
+                                    <li>• Working with numbers in various contexts</li>
+                                </ul>
+                            </div>
+
+                            <!-- Module 2 -->
+                            <div class="bg-blue-50 rounded-xl p-6">
+                                <h3 class="text-xl font-semibold text-gray-900 mb-4">Module 2: Communication</h3>
+                                <ul class="space-y-2 text-gray-700">
+                                    <li>• Engage with aesthetic, effective, cultural and social values in texts</li>
+                                    <li>• Explore and use a variety of strategies to learn (revised)</li>
+                                    <li>• Read and respond to a range of text types</li>
+                                    <li>• Show a critical awareness of language usage</li>
+                                    <li>• Use appropriate communication skills, conventions and structures for specific purposes and situations</li>
+                                </ul>
+                            </div>
+
+                            <!-- Module 3 -->
+                            <div class="bg-yellow-50 rounded-xl p-6">
+                                <h3 class="text-xl font-semibold text-gray-900 mb-4">Module 3: Farming Principles</h3>
+                                <ul class="space-y-2 text-gray-700">
+                                    <li>• Demonstrate a critical understanding of the role and impact of technology in society</li>
+                                    <li>• Demonstrate an understanding of agricultural production management practices in relation to the socio-economic environment</li>
+                                    <li>• Demonstrate an understanding of the physical and biological environment and its relationship to sustainable crop production</li>
+                                    <li>• Show, explain, discuss and analyse the relationship between society and the natural environment</li>
+                                    <li>• Demonstrate an understanding of soil preparation</li>
+                                    <li>• Demonstrate an understanding of the cultivation of soil and the control of weeds</li>
+                                </ul>
+                            </div>
+
+                            <!-- Module 4 -->
+                            <div class="bg-red-50 rounded-xl p-6">
+                                <h3 class="text-xl font-semibold text-gray-900 mb-4">Module 4: Agricultural Business</h3>
+                                <ul class="space-y-2 text-gray-700">
+                                    <li>• Demonstrate an understanding of contracts and their sources</li>
+                                    <li>• Demonstrate an understanding of how scientific skills and knowledge could contribute to the sustainable use of resources</li>
+                                    <li>• Demonstrate an understanding of the principles of supply and demand, and the concept of production</li>
+                                    <li>• Discuss development, utilisation, and management of human and natural resources</li>
+                                    <li>• Operate in a team</li>
+                                </ul>
+                            </div>
+
+                            <!-- Module 5 -->
+                            <div class="bg-brown-50 rounded-xl p-6">
+                                <h3 class="text-xl font-semibold text-gray-900 mb-4">Module 5: Health and Safety Principles</h3>
+                                <ul class="space-y-2 text-gray-700">
+                                    <li>• Demonstrate skills that relate to a safe and secure environment</li>
+                                    <li>• Demonstrate an understanding of HIV/AIDS and its implications</li>
+                                    <li>• Maintain occupational health and safety</li>
+                                    <li>• Demonstrate an understanding of occupational health, safety and environmental legislation relevant to the food or beverage environment</li>
+                                </ul>
+                            </div>
+
+                            <!-- Module 6 -->
+                            <div class="bg-gray-50 rounded-xl p-6">
+                                <h3 class="text-xl font-semibold text-gray-900 mb-4">Module 6: Farming Practices</h3>
+                                <ul class="space-y-2 text-gray-700">
+                                    <li>• Erect and maintain wire fencing</li>
+                                    <li>• Harvest crops manually</li>
+                                    <li>• Irrigate crops to maintain a predetermined moisture content</li>
+                                    <li>• Control weeds, pests and plant diseases in an agricultural field using chemicals</li>
+                                    <li>• Apply fertiliser manually</li>
+                                    <li>• Control nematodes manually using chemicals</li>
+                                    <li>• Control weeds manually</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="lg:col-span-1">
+                    <!-- Quick Facts -->
+                    <div class="bg-green-50 rounded-2xl p-8 mb-8">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-6">Quick Facts</h3>
+                        <div class="space-y-4">
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">SETA:</span>
+                                <span class="font-semibold">AgriSETA</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">NQF Level:</span>
+                                <span class="font-semibold">1</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Credits:</span>
+                                <span class="font-semibold">120</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">NLRD ID:</span>
+                                <span class="font-semibold">20287</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Status:</span>
+                                <span class="font-semibold">Legacy Extended</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Expiry Date:</span>
+                                <span class="font-semibold">30-Jun-26</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Career Opportunities -->
+                    <div class="bg-white border border-gray-200 rounded-2xl p-8 mb-8">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-6">Career Opportunities</h3>
+                        <ul class="space-y-3 text-gray-700">
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-500 mr-3 mt-0.5"></i>
+                                Farm Worker
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-500 mr-3 mt-0.5"></i>
+                                Agricultural Assistant
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-500 mr-3 mt-0.5"></i>
+                                Crop Production Helper
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-500 mr-3 mt-0.5"></i>
+                                Farm Labourer
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-500 mr-3 mt-0.5"></i>
+                                Agricultural Trainee
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Related Qualifications -->
+                    <div class="bg-white border border-gray-200 rounded-2xl p-8">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-6">Related Qualifications</h3>
+                        <div class="space-y-4">
+                            <a href="agri-farming-nqf2.html" class="block p-4 border border-gray-200 rounded-lg hover:border-green-300 hover:bg-green-50 transition duration-300">
+                                <div class="font-semibold text-gray-900">Farming NQF 2</div>
+                                <div class="text-sm text-gray-600">Intermediate level</div>
+                            </a>
+                            <a href="agri-plant-production-nqf1.html" class="block p-4 border border-gray-200 rounded-lg hover:border-green-300 hover:bg-green-50 transition duration-300">
+                                <div class="font-semibold text-gray-900">Plant Production NQF 1</div>
+                                <div class="text-sm text-gray-600">Specialized plant focus</div>
+                            </a>
+                            <a href="agri-mixed-farming-nqf1.html" class="block p-4 border border-gray-200 rounded-lg hover:border-green-300 hover:bg-green-50 transition duration-300">
+                                <div class="font-semibold text-gray-900">Mixed Farming NQF 1</div>
+                                <div class="text-sm text-gray-600">Combined systems</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-gradient-to-r from-[#12265E] to-[#4A90E2] text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Start Your Farming Journey Today</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto opacity-90">
+                Join our Farming qualification and develop the foundational skills needed for a successful career in agriculture.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button onclick="openEnquiryModal()" class="bg-white text-[#12265E] font-semibold px-8 py-4 rounded-lg hover:bg-gray-100 transition duration-300">Apply Now</button>
+                <button onclick="openContactModal()" class="border-2 border-white text-white font-semibold px-8 py-4 rounded-lg hover:bg-white hover:text-[#12265E] transition duration-300">
+                    Contact Us
+                </button>
+            </div>
+        </div>
+    </section>
+                <section><br></section>
+
+    <!-- Footer -->
+    
+    <footer class="bg-gradient-to-r from-[#12265E] to-[#4A90E2] text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <img src="../images/SpecCon-LOGO.png" alt="SpecCon Holdings Logo" class="h-12">
+                        <div>
+                            <h3 class="text-xl font-bold">SpecCon Holdings</h3>
+                            <p class="text-white/80">Accredited Training Solutions</p>
+                        </div>
+                    </div>
+                    <p class="text-white/80 mb-4">Empowering individuals and organizations through high-quality, accredited education and training solutions.</p>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="/index.html#about" class="text-white/80 hover:text-[#ff9c2a] transition duration-200">Why Choose Us</a></li>
+                        <li><a href="/index.html#qualifications" class="text-white/80 hover:text-[#ff9c2a] transition duration-200">Qualifications</a></li>
+                        <li><a href="/index.html#accreditations" class="text-white/80 hover:text-[#ff9c2a] transition duration-200">Accreditations</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Us</h4>
+                    <ul class="space-y-2">
+                        <li><p class="text-white/80">Phone: 012 667 4962</p></li>
+                        <li><p class="text-white/80">Email: <a href="mailto:help@speccon.co.za" class="text-white/80 hover:text-white transition duration-200">help@speccon.co.za</a></p></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-white/80">&copy; 2025 SpecCon Holdings. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+
+    <!-- Enquiry Modal -->
+    <div id="enquiryModal" class="enquiry-modal">
+        <div class="enquiry-modal-content">
+            <div class="p-8">
+                <div class="flex items-center justify-between mb-6">
+                    <h2 class="text-2xl font-bold text-gray-900">Enquire About Farming NQF Level 1</h2>
+                    <button onclick="closeEnquiryModal()" class="text-gray-400 hover:text-gray-600 text-xl">
+                        <i data-lucide="x" class="w-6 h-6"></i>
+                    </button>
+                </div>
+
+                <div class="mb-6 p-4 bg-blue-50 rounded-lg border border-blue-200">
+                    <p class="text-blue-700 text-sm">
+                        <i data-lucide="info" class="w-4 h-4 inline mr-2"></i>
+                        If you are applying for a learnership, please <a href="../learnership-application.html" class="font-semibold underline hover:text-blue-800">click here</a>.
+                    </p>
+                </div>
+
+                <form id="enquiryForm" onsubmit="submitEnquiry(event)">
+                    <div class="grid md:grid-cols-2 gap-4 mb-4">
+                        <div>
+                            <label for="firstName" class="block text-sm font-medium text-gray-700 mb-en2">Name *</label>
+                            <input type="text" id="firstName" name="firstName" required
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                        <div>
+                            <label for="surname" class="block text-sm font-medium text-gray-700 mb-2">Surname *</label>
+                            <input type="text" id="surname" name="surname" required
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-4 mb-4">
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email *</label>
+                            <input type="email" id="email" name="email" required
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="company" class="block text-sm font-medium text-gray-700 mb-2">Company *</label>
+                        <input type="text" id="company" name="company" required
+                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                    </div>
+
+                    <div class="mb-6">
+                        <label for="reason" class="block text-sm font-medium text-gray-700 mb-2">Reason for Enquiry *</label>
+                        <textarea id="reason" name="reason" rows="4" required
+                                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
+                                  placeholder="Please tell us about your enquiry and how we can help you..."></textarea>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-3">
+                        <button type="submit" class="flex-1 bg-gradient-to-r from-[#12265E] to-[#4A90E2] text-white font-semibold py-3 px-6 rounded-lg hover:from-[#0d1a47] hover:to-[#3a7bc8] transition duration-300">
+                            <i data-lucide="send" class="w-4 h-4 inline mr-2"></i>
+                            Send Enquiry
+                        </button>
+                        <button type="button" onclick="closeEnquiryModal()" class="flex-1 bg-gray-500 text-white font-semibold py-3 px-6 rounded-lg hover:bg-gray-600 transition duration-300">
+                            Cancel
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        lucide.createIcons();
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+
+        // Sticky banner functionality
+        const stickyBanner = document.getElementById('stickyBanner');
+        const bannerPopup = document.getElementById('bannerPopup');
+        const closePopup = document.getElementById('closePopup');
+        let isPopupOpen = false;
+
+        // Show banner immediately when page loads
+        if (stickyBanner) {
+            stickyBanner.style.display = 'block';
+        }
+
+        // Toggle popup on banner hover/click
+        if (stickyBanner) {
+            stickyBanner.addEventListener('mouseenter', function() {
+                if (!isPopupOpen) {
+                    bannerPopup.classList.add('show');
+                    isPopupOpen = true;
+                }
+            });
+
+            stickyBanner.addEventListener('click', function() {
+                bannerPopup.classList.toggle('show');
+                isPopupOpen = !isPopupOpen;
+            });
+        }
+
+        // Close popup
+        if (closePopup) {
+            closePopup.addEventListener('click', function() {
+                bannerPopup.classList.remove('show');
+                isPopupOpen = false;
+            });
+        }
+
+        // Close popup when clicking outside
+        document.addEventListener('click', function(e) {
+            if (bannerPopup && stickyBanner && !stickyBanner.contains(e.target) && !bannerPopup.contains(e.target)) {
+                bannerPopup.classList.remove('show');
+                isPopupOpen = false;
+            }
+        });
+        
+        // Enquiry Modal Functions
+        function openEnquiryModal() {
+            const modal = document.getElementById('enquiryModal');
+            if (modal) {
+                modal.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeEnquiryModal() {
+            const modal = document.getElementById('enquiryModal');
+            if (modal) {
+                modal.classList.remove('show');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        function submitEnquiry(event) {
+            event.preventDefault();
+            const formData = new FormData(event.target);
+            const enquiryData = {
+                firstName: formData.get('firstName'),
+                surname: formData.get('surname'),
+                email: formData.get('email'),
+                phone: formData.get('phone'),
+                company: formData.get('company'),
+                reason: formData.get('reason'),
+                qualification: 'Farming NQF Level 1'
+            };
+            console.log('Enquiry submitted:', enquiryData);
+            alert('Thank you for your enquiry! We will get back to you soon.');
+            closeEnquiryModal();
+            event.target.reset();
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const enquiryModal = document.getElementById('enquiryModal');
+            if (enquiryModal) {
+                enquiryModal.addEventListener('click', function(e) {
+                    if (e.target === this) {
+                        closeEnquiryModal();
+                    }
+                });
+            }
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    closeEnquiryModal();
+                }
+            });
+        });
+
+    </script>
+
+    <script src="../js/centralized-modals.js"></script>
+    <script src="../js/value-adds-popup.js"></script>
+
+    <!-- Enhanced Dropdown Menu JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const dropdown = document.querySelector('.dropdown');
+            const dropdownButton = document.querySelector('.dropdown button');
+            const dropdownMenu = document.querySelector('.dropdown-menu');
+
+            if (dropdown && dropdownButton) {
+                // Handle click to toggle dropdown
+                dropdownButton.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+                    if (dropdownMenu.style.display === 'block') {
+                        dropdownMenu.style.opacity = '1';
+                        dropdownMenu.style.transform = 'translateY(0)';
+                    }
+                });
+
+                // Close dropdown when clicking outside
+                document.addEventListener('click', function(e) {
+                    if (!dropdown.contains(e.target)) {
+                        dropdownMenu.style.display = 'none';
+                    }
+                });
+
+                // Ensure dropdown works on touch devices
+                dropdownButton.addEventListener('touchstart', function(e) {
+                    e.preventDefault();
+                    dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

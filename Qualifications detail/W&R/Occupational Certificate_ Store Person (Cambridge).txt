@@ -1,0 +1,32 @@
+QUALIFICATION DETAILS
+=====================
+
+Qualification Name: Occupational Certificate: Store Person
+SETA: W&R
+NQF Level: 2
+Minimum Credits: 41
+Qualification NLRD ID: 99703
+Learning Programme NLRD ID: N/A
+Expiry Date: 14-May-29
+Status: Accredited
+Reference Sheet: QCTO Cambridge
+
+MODULES AND UNITS
+=================
+
+Module 1 - Stock Movement
+• 833402000-KM-01, Concepts of moving and packing stock in a stock storage area, Level 2, 3 Credits
+• 833402000-PM-01, Move stock in and out of stock storage areas, Level 2, 3 Credits
+• 833402000-WM-01, Processes and procedures for moving and packing different types of stock, Level 2, 9 Credits
+
+Module 2 - Stock Counting
+• 833402000-KM-02, Concepts and methods of picking and counting stock, Level 2, 3 Credits
+• 833402000-PM-04, Count stock, Level 2, 2 Credits
+• 833402000-WM-02, Processes and procedures for picking and counting stock, Level 2, 6 Credits
+
+Module 3 - Stock Storage
+• 833402000-KM-03, Principles of maintaining a stock storage area, Level 2, 3 Credits
+• 833402000-PM-02, Pack stock in a stock storage area, Level 2, 3 Credits
+• 833402000-PM-03, Pick stock from a stock storage area, Level 2, 3 Credits
+• 833402000-PM-05, Maintain the stock storage area, Level 2, 2 Credits
+• 833402000-WM-03, Processes and procedures for performing housekeeping, maintaining a safe stock storage area, Level 2, 4 Credits

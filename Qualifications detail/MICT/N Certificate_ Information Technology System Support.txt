@@ -1,0 +1,36 @@
+QUALIFICATION DETAILS
+=====================
+
+Qualification Name: N certitificate: Information Technology: System Support
+SETA: MICT
+NQF Level: 5
+Minimum Credits: 147
+Qualification NLRD ID: 48573
+Learning Programme NLRD ID: N/A
+Expiry Date: 30-Jun-26
+Status: Legacy extended
+Reference Sheet: SpecCon MICT Seta
+
+MODULES AND UNITS
+=================
+- Use a logical methodology to troubleshoot the common types of hardware and software problems typically encountered in the day-to-day operations of a department in an organisation.
+
+- Understand the role of technology in the business context.
+
+- Demonstrate basic application support skills
+
+- Demonstrate operating system support skills
+
+- Demonstrate network support skills
+
+- Relate business problems and information technology solutions
+
+- Demonstrate appropriate technical reporting skills
+
+- Demonstrate appropriate customer care in the context of IT support
+
+- Function appropriately in a change management process within a support team
+
+- Demonstrate hardware support skills for server computers
+
+- Demonstrate an understanding of Systems Support contextualised within a selected work area

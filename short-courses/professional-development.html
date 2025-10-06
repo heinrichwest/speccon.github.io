@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Development Courses - SpecCon Holdings</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="../js/centralized-modals.js"></script>
+    <script src="../js/value-adds-popup.js"></script>
+    <style>
+        /* Enhanced Dropdown Menu Styles */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: calc(100% + 8px);
+            left: 0;
+            min-width: 16rem;
+            background: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+            padding: 0.5rem 0;
+            z-index: 50;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: opacity 0.2s ease, transform 0.2s ease;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Invisible bridge to prevent menu closing when moving cursor */
+        .dropdown::before {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            height: 8px;
+        }
+
+        .dropdown button {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        .dropdown-menu a {
+            transition: all 0.2s ease;
+        }
+
+        .dropdown-menu a:hover {
+            background-color: rgba(18, 38, 94, 0.1);
+            color: #12265E;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen">
+    <!-- Header -->
+    <header class="bg-white/95 backdrop-blur-md shadow-lg fixed w-full z-50 top-0">
+        <div class="container mx-auto px-4 lg:px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <a href="../index.html">
+                        <img src="../images/Logo.png" alt="SpecCon Holdings Logo" class="h-12">
+                    </a>
+                    <div class="ml-3">
+                        <h1 class="text-xl font-bold text-gray-900">SpecCon Holdings</h1>
+                        <p class="text-sm text-gray-600">Services SETA Qualifications</p>
+                    </div>
+                </div>
+
+                <nav class="hidden lg:flex items-center space-x-4">
+                    <a href="../index.html" class="text-gray-700 hover:text-[#12265E] font-medium transition duration-300 text-sm whitespace-nowrap">Home</a>
+                    <a href="../index.html#about" class="text-gray-700 hover:text-[#12265E] font-medium transition duration-300 text-sm whitespace-nowrap">Why Choose Us</a>
+                    <a href="../index.html#qualifications" class="text-gray-700 hover:text-[#12265E] font-medium transition duration-300 text-sm whitespace-nowrap">Qualifications</a>
+                    <a href="../index.html#accreditations" class="text-gray-700 hover:text-[#12265E] font-medium transition duration-300 text-sm whitespace-nowrap">Accreditations</a>
+                    <a href="../index.html#classroom-training" class="text-gray-700 hover:text-[#12265E] font-medium transition duration-300 text-sm whitespace-nowrap">Classroom Training</a>
+                    <div class="relative dropdown">
+                        <button class="text-gray-700 hover:text-[#12265E] font-medium transition duration-300 flex items-center text-sm whitespace-nowrap">
+                            Other Products <i data-lucide="chevron-down" class="w-4 h-4 ml-1"></i>
+                        </button>
+                        <div class="dropdown-menu absolute -left-16 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-20">
+                            <a href="professional-development.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Professional Development</a>
+                            <a href="intro-to-ai-training.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">AI Training Courses</a>
+                            <a href="cyber-security-training.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Cyber Security Training</a>
+                            <a href="compliance-courses.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Compliance Training</a>
+                        </div>
+                    </div>
+                </nav>
+
+                <div class="hidden lg:block">
+                    <button onclick="openBookNowModal()" data-modal="book" data-course="Professional Development" class="bg-gradient-to-r from-green-500 to-green-600 text-white font-semibold px-6 py-3 rounded-lg hover:from-green-600 hover:to-green-700 transition duration-300 shadow-lg">
+                        Book Training
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="container mx-auto px-4 py-4">
+        <nav class="text-sm">
+            <ol class="list-none p-0 inline-flex">
+                <li class="flex items-center">
+                    <a href="../index.html" class="text-blue-600 hover:text-blue-800">Home</a>
+                    <i data-lucide="chevron-right" class="w-4 h-4 mx-2 text-gray-400"></i>
+                </li>
+                <li class="flex items-center">
+                    <a href="../index.html#classroom-training" class="text-blue-600 hover:text-blue-800">Training</a>
+                    <i data-lucide="chevron-right" class="w-4 h-4 mx-2 text-gray-400"></i>
+                </li>
+                <li class="text-gray-500">Professional Development</li>
+            </ol>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Header Section -->
+        <div class="bg-white rounded-2xl shadow-xl p-8 mb-8">
+            <div class="flex items-center space-x-6 mb-6">
+                <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 rounded-xl flex items-center justify-center">
+                    <i data-lucide="users" class="w-8 h-8 text-white"></i>
+                </div>
+                <div>
+                    <h1 class="text-4xl font-bold text-gray-800 mb-2">Professional Development</h1>
+                    <p class="text-xl text-gray-600">Advance your career with essential business skills</p>
+                </div>
+            </div>
+            <p class="text-gray-700 leading-relaxed">
+                Elevate your professional capabilities with our comprehensive development courses. From leadership and sales
+                to financial literacy and compliance, our training programs are designed to enhance your business acumen
+                and accelerate career growth.
+            </p>
+        </div>
+
+        <!-- Course Grid -->
+        <div class="mb-8">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">Available Courses</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Sales Training -->
+                <a href="sales-training.html" class="bg-white rounded-2xl shadow-lg p-8 card-hover transition-all duration-300 block hover:shadow-2xl">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mr-6">
+                            <i data-lucide="trending-up" class="w-8 h-8 text-green-600"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-xl text-gray-900">Sales Training</h3>
+                            <span class="text-sm text-green-600 font-medium">Professional Development</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">Master the art of selling with proven techniques, customer psychology, and relationship building strategies.</p>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i data-lucide="clock" class="w-4 h-4 mr-2 text-gray-400"></i>
+                            <span>Duration: 2 days</span>
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i data-lucide="users" class="w-4 h-4 mr-2 text-gray-400"></i>
+                            <span>Max 15 participants</span>
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i data-lucide="award" class="w-4 h-4 mr-2 text-gray-400"></i>
+                            <span>Certificate included</span>
+                        </div>
+                    </div>
+                    <div class="text-green-600 font-medium">Learn More →</div>
+                </a>
+
+                <!-- Finance for Non-Financial Managers -->
+                <a href="finance-for-non-financial-managers.html" class="bg-white rounded-2xl shadow-lg p-8 card-hover transition-all duration-300 block hover:shadow-2xl">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mr-6">
+                            <i data-lucide="calculator" class="w-8 h-8 text-blue-600"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-xl text-gray-900">Finance for Non-Financial Managers</h3>
+                            <span class="text-sm text-blue-600 font-medium">Business Finance</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">Understand financial statements, budgeting, and key financial metrics for better business decisions.</p>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i data-lucide="clock" class="w-4 h-4 mr-2 text-gray-400"></i>
+                            <span>Duration: 2 days</span>
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i data-lucide="users" class="w-4 h-4 mr-2 text-gray-400"></i>
+                            <span>Max 12 participants</span>
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i data-lucide="award" class="w-4 h-4 mr-2 text-gray-400"></i>
+                            <span>Certificate included</span>
+                        </div>
+                    </div>
+                    <div class="text-blue-600 font-medium">Learn More →</div>
+                </a>
+
+                <!-- Time Management -->
+                <a href="time-management-training.html" class="bg-white rounded-2xl shadow-lg p-8 card-hover transition-all duration-300 block hover:shadow-2xl">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-orange-100 rounded-2xl flex items-center justify-center mr-6">
+                            <i data-lucide="clock" class="w-8 h-8 text-orange-600"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-xl text-gray-900">Time Management</h3>
+                            <span class="text-sm text-orange-600 font-medium">Productivity Skills</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">Enhance productivity with proven time management techniques, prioritization, and work-life balance strategies.</p>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i data-lucide="timer" class="w-4 h-4 mr-2 text-gray-400"></i>
+                            <span>Duration: 1 day</span>
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i data-lucide="users" class="w-4 h-4 mr-2 text-gray-400"></i>
+                            <span>Max 15 participants</span>
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i data-lucide="award" class="w-4 h-4 mr-2 text-gray-400"></i>
+                            <span>Certificate included</span>
+                        </div>
+                    </div>
+                    <div class="text-orange-600 font-medium">Learn More →</div>
+                </a>
+
+                <!-- Stress Management -->
+                <a href="stress-management-training.html" class="bg-white rounded-2xl shadow-lg p-8 card-hover transition-all duration-300 block hover:shadow-2xl">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-red-100 rounded-2xl flex items-center justify-center mr-6">
+                            <i data-lucide="heart" class="w-8 h-8 text-red-600"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-xl text-gray-900">Stress Management</h3>
+                            <span class="text-sm text-red-600 font-medium">Wellbeing</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">Learn to identify, manage, and reduce workplace stress for improved wellbeing and performance.</p>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i data-lucide="clock" class="w-4 h-4 mr-2 text-gray-400"></i>
+                            <span>Duration: 1 day</span>
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i data-lucide="users" class="w-4 h-4 mr-2 text-gray-400"></i>
+                            <span>Max 15 participants</span>
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i data-lucide="award" class="w-4 h-4 mr-2 text-gray-400"></i>
+                            <span>Certificate included</span>
+                        </div>
+                    </div>
+                    <div class="text-red-600 font-medium">Learn More →</div>
+                </a>
+
+                <!-- B-BBEE Training -->
+                <a href="b-bbee-training.html" class="bg-white rounded-2xl shadow-lg p-8 card-hover transition-all duration-300 block hover:shadow-2xl">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-teal-100 rounded-2xl flex items-center justify-center mr-6">
+                            <i data-lucide="globe" class="w-8 h-8 text-teal-600"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-xl text-gray-900">B-BBEE Training</h3>
+                            <span class="text-sm text-teal-600 font-medium">Compliance</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">Comprehensive understanding of Broad-Based Black Economic Empowerment legislation and compliance requirements.</p>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i data-lucide="clock" class="w-4 h-4 mr-2 text-gray-400"></i>
+                            <span>Duration: 1 day</span>
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i data-lucide="users" class="w-4 h-4 mr-2 text-gray-400"></i>
+                            <span>Max 20 participants</span>
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i data-lucide="award" class="w-4 h-4 mr-2 text-gray-400"></i>
+                            <span>Certificate included</span>
+                        </div>
+                    </div>
+                    <div class="text-teal-600 font-medium">Learn More →</div>
+                </a>
+
+                <!-- Personal Finance Management -->
+                <a href="personal-finance-management.html" class="bg-white rounded-2xl shadow-lg p-8 card-hover transition-all duration-300 block hover:shadow-2xl">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-yellow-100 rounded-2xl flex items-center justify-center mr-6">
+                            <i data-lucide="piggy-bank" class="w-8 h-8 text-yellow-600"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-xl text-gray-900">Personal Finance Management</h3>
+                            <span class="text-sm text-yellow-600 font-medium">Financial Literacy</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">Build financial literacy with budgeting, saving, investing, and debt management strategies for personal wealth.</p>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i data-lucide="clock" class="w-4 h-4 mr-2 text-gray-400"></i>
+                            <span>Duration: 1 day</span>
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i data-lucide="users" class="w-4 h-4 mr-2 text-gray-400"></i>
+                            <span>Max 15 participants</span>
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i data-lucide="award" class="w-4 h-4 mr-2 text-gray-400"></i>
+                            <span>Certificate included</span>
+                        </div>
+                    </div>
+                    <div class="text-yellow-600 font-medium">Learn More →</div>
+                </a>
+
+                <!-- Disciplinary Procedures -->
+                <a href="disciplinary-procedures-training.html" class="bg-white rounded-2xl shadow-lg p-8 card-hover transition-all duration-300 block hover:shadow-2xl">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mr-6">
+                            <i data-lucide="scale" class="w-8 h-8 text-gray-600"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-xl text-gray-900">Disciplinary Procedures</h3>
+                            <span class="text-sm text-gray-600 font-medium">HR Management</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">Navigate workplace discipline correctly with legal procedures, documentation, and fair process implementation.</p>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i data-lucide="clock" class="w-4 h-4 mr-2 text-gray-400"></i>
+                            <span>Duration: 1 day</span>
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i data-lucide="users" class="w-4 h-4 mr-2 text-gray-400"></i>
+                            <span>Max 12 participants</span>
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i data-lucide="award" class="w-4 h-4 mr-2 text-gray-400"></i>
+                            <span>Certificate included</span>
+                        </div>
+                    </div>
+                    <div class="text-gray-600 font-medium">Learn More →</div>
+                </a>
+            </div>
+        </div>
+
+        <!-- Course Benefits -->
+        <div class="bg-white rounded-2xl shadow-xl p-8 mb-8">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">Why Invest in Professional Development?</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="text-center">
+                    <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="trending-up" class="w-6 h-6 text-purple-600"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-800 mb-2">Career Advancement</h3>
+                    <p class="text-gray-600 text-sm">Develop skills that lead to promotions and new opportunities</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="target" class="w-6 h-6 text-green-600"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-800 mb-2">Enhanced Performance</h3>
+                    <p class="text-gray-600 text-sm">Improve productivity and effectiveness in your role</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="lightbulb" class="w-6 h-6 text-blue-600"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-800 mb-2">Strategic Thinking</h3>
+                    <p class="text-gray-600 text-sm">Develop business acumen and decision-making skills</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="network" class="w-6 h-6 text-orange-600"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-800 mb-2">Professional Network</h3>
+                    <p class="text-gray-600 text-sm">Connect with like-minded professionals and experts</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Customized Training -->
+        <div class="bg-gradient-to-r from-purple-50 to-blue-50 rounded-2xl p-8 mb-8">
+            <div class="text-center">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Need Customized Training?</h2>
+                <p class="text-lg text-gray-600 mb-6">
+                    We can tailor our professional development courses to meet your organization's specific needs and objectives.
+                </p>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="text-center">
+                        <i data-lucide="building" class="w-8 h-8 text-purple-600 mx-auto mb-2"></i>
+                        <h3 class="font-semibold text-gray-800 mb-2">On-Site Training</h3>
+                        <p class="text-gray-600 text-sm">Training at your premises for convenience</p>
+                    </div>
+                    <div class="text-center">
+                        <i data-lucide="calendar" class="w-8 h-8 text-blue-600 mx-auto mb-2"></i>
+                        <h3 class="font-semibold text-gray-800 mb-2">Flexible Scheduling</h3>
+                        <p class="text-gray-600 text-sm">Courses scheduled around your business needs</p>
+                    </div>
+                    <div class="text-center">
+                        <i data-lucide="edit" class="w-8 h-8 text-green-600 mx-auto mb-2"></i>
+                        <h3 class="font-semibold text-gray-800 mb-2">Custom Content</h3>
+                        <p class="text-gray-600 text-sm">Content adapted to your industry and challenges</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="bg-gradient-to-r from-purple-600 to-indigo-500 text-white rounded-2xl p-8 text-center">
+            <h2 class="text-3xl font-bold mb-4">Invest in Your Professional Growth</h2>
+            <p class="text-xl mb-6 opacity-90">
+                Accelerate your career with our comprehensive professional development courses designed for today's business environment.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button onclick="openBookNowModal()" data-modal="book" data-course="Professional Development" 
+        class="flex items-center gap-2 bg-white text-purple-600 font-bold py-4 px-8 rounded-lg hover:bg-gray-100-semibold px-6 py-3 rounded-lg hover:from-blue-600 hover:to-blue-700 transition duration-300 shadow-lg">
+    <i data-lucide="calendar" class="w-5 h-5"></i>
+    Schedule Training 
+</button>
+               <button onclick="openBookNowModal()" data-modal="contact" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+                    Contact Us
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    
+    <footer class="bg-gradient-to-r from-[#12265E] to-[#4A90E2] text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <img src="../images/SpecCon-LOGO.png" alt="SpecCon Holdings Logo" class="h-12 mr-3">
+                        <div>
+                            <h3 class="text-xl font-bold">SpecCon Holdings</h3>
+                            <p class="text-white/80">Accredited Training Solutions</p>
+                        </div>
+                    </div>
+                    <p class="text-white/80 mb-4">Empowering individuals and organizations through high-quality, accredited education and training solutions.</p>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="/index.html#about" class="text-white/80 hover:text-[#ff9c2a] transition duration-200">Why Choose Us</a></li>
+                        <li><a href="/index.html#qualifications" class="text-white/80 hover:text-[#ff9c2a] transition duration-200">Qualifications</a></li>
+                        <li><a href="/index.html#accreditations" class="text-white/80 hover:text-[#ff9c2a] transition duration-200">Accreditations</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Us</h4>
+                    <ul class="space-y-2">
+                        <li><p class="text-white/80">Phone: 012 667 4962</p></li>
+                         <p class="text-white/80">
+    Email: <a href="mailto:help@speccon.co.za" class="underline hover:text-orange">help@speccon.co.za</a>
+  </p>    
+</li>
+                    </ul>
+
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-white/80">&copy; 2025 SpecCon Holdings. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Application modal function (placeholder)
+        function openApplicationModal() {
+            alert('Training booking modal would open here. This will be connected to the main booking system.');
+        }
+
+        // Dropdown functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const dropdown = document.querySelector('.dropdown');
+            const dropdownButton = document.querySelector('.dropdown button');
+            const dropdownMenu = document.querySelector('.dropdown-menu');
+
+            if (dropdown && dropdownButton) {
+                // Handle click to toggle dropdown
+                dropdownButton.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+
+                    if (dropdownMenu.style.display === 'block') {
+                        dropdownMenu.style.display = 'none';
+                    } else {
+                        dropdownMenu.style.display = 'block';
+                        dropdownMenu.style.opacity = '1';
+                        dropdownMenu.style.transform = 'translateY(0)';
+                    }
+                });
+
+                // Close dropdown when clicking outside
+                document.addEventListener('click', function(e) {
+                    if (!dropdown.contains(e.target)) {
+                        dropdownMenu.style.display = 'none';
+                    }
+                });
+
+                // Keep dropdown open when hovering over it
+                dropdownMenu.addEventListener('mouseenter', function() {
+                    dropdownMenu.style.display = 'block';
+                    dropdownMenu.style.opacity = '1';
+                    dropdownMenu.style.transform = 'translateY(0)';
+                });
+            }
+        });
+    </script>
+
+    <!-- Book Now Modal -->
+    <div id="bookNowModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+            <div class="p-8">
+                <div class="flex items-center justify-between mb-6">
+                    <h2 class="text-2xl font-bold text-gray-900">Book This Training</h2>
+                    <button onclick="closeBookNowModal()" class="text-gray-400 hover:text-gray-600">
+                        <i data-lucide="x" class="w-6 h-6"></i>
+                    </button>
+                </div>
+
+                <form id="bookNowForm" onsubmit="submitBooking(event)">
+                    <div class="grid md:grid-cols-2 gap-4 mb-4">
+                        <div>
+                            <label for="firstName" class="block text-sm font-medium text-gray-700 mb-2">First Name *</label>
+                            <input type="text" id="firstName" name="firstName" required
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                        <div>
+                            <label for="lastName" class="block text-sm font-medium text-gray-700 mb-2">Last Name *</label>
+                            <input type="text" id="lastName" name="lastName" required
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-4 mb-4">
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email *</label>
+                            <input type="email" id="email" name="email" required
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="company" class="block text-sm font-medium text-gray-700 mb-2">Company Name *</label>
+                        <input type="text" id="company" name="company" required
+                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="numberOfParticipants" class="block text-sm font-medium text-gray-700 mb-2">Number of Participants *</label>
+                        <select id="numberOfParticipants" name="numberOfParticipants" required
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                            <option value="">Select number of participants</option>
+                            <option value="1">1 participant</option>
+                            <option value="2-5">2-5 participants</option>
+                            <option value="6-10">6-10 participants</option>
+                            <option value="11-20">11-20 participants</option>
+                            <option value="20+">More than 20 participants</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="preferredDate" class="block text-sm font-medium text-gray-700 mb-2">Preferred Training Date</label>
+                        <input type="date" id="preferredDate" name="preferredDate"
+                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                    </div>
+
+                    <div class="mb-6">
+                        <label for="additionalInfo" class="block text-sm font-medium text-gray-700 mb-2">Additional Information</label>
+                        <textarea id="additionalInfo" name="additionalInfo" rows="4"
+                                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
+                                  placeholder="Any specific requirements or questions about the training..."></textarea>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-3">
+                        <button type="submit" class="flex-1 bg-gradient-to-r from-[#12265E] to-[#4A90E2] text-white font-semibold py-3 px-6 rounded-lg hover:from-[#0d1a47] hover:to-[#3a7bc8] transition duration-300">
+                            <i data-lucide="send" class="w-4 h-4 inline mr-2"></i>
+                            Submit Booking Request
+                        </button>
+                        <button type="button" onclick="closeBookNowModal()" class="flex-1 bg-gray-500 text-white font-semibold py-3 px-6 rounded-lg hover:bg-gray-600 transition duration-300">
+                            Cancel
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Book Now Modal Functions
+        function openBookNowModal() {
+            const modal = document.getElementById('bookNowModal');
+            if (modal) {
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeBookNowModal() {
+            const modal = document.getElementById('bookNowModal');
+            if (modal) {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        function submitBooking(event) {
+            event.preventDefault();
+
+            // Get form data
+            const formData = new FormData(event.target);
+            const bookingData = {
+                firstName: formData.get('firstName'),
+                lastName: formData.get('lastName'),
+                email: formData.get('email'),
+                phone: formData.get('phone'),
+                company: formData.get('company'),
+                numberOfParticipants: formData.get('numberOfParticipants'),
+                preferredDate: formData.get('preferredDate'),
+                additionalInfo: formData.get('additionalInfo'),
+                trainingCourse: document.title.split('|')[0].trim()
+            };
+
+            // Show success message
+            alert('Thank you for your booking request! We will contact you shortly to confirm the details.');
+            closeBookNowModal();
+
+            // Reset form
+            event.target.reset();
+
+            // In a real implementation, you would send this data to your server
+            console.log('Booking submitted:', bookingData);
+        }
+
+        // Close modal when clicking outside
+        document.addEventListener('DOMContentLoaded', function() {
+            const bookNowModal = document.getElementById('bookNowModal');
+            if (bookNowModal) {
+                bookNowModal.addEventListener('click', function(e) {
+                    if (e.target === this) {
+                        closeBookNowModal();
+                    }
+                });
+            }
+
+            // Close modal with Escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    closeBookNowModal();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
