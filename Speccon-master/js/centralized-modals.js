@@ -97,11 +97,6 @@ const CONTACT_MODAL_HTML = `
                         </p>
                     </div>
 
-                    <!-- reCAPTCHA -->
-                    <div class="flex justify-center">
-                        <div class="g-recaptcha" data-sitekey="6LfYourSiteKeyHere"></div>
-                    </div>
-
                     <!-- Action Buttons -->
                     <div class="flex space-x-3 pt-4">
                         <button type="button" id="cancelContactForm"
@@ -187,11 +182,6 @@ const ENQUIRE_NOW_MODAL_HTML = `
                         <textarea id="enquireMessage" name="message" rows="3"
                             class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFA600] focus:border-transparent"
                             placeholder="Tell us more about your training needs..."></textarea>
-                    </div>
-
-                    <!-- reCAPTCHA -->
-                    <div class="flex justify-center">
-                        <div class="g-recaptcha" data-sitekey="6LfYourSiteKeyHere"></div>
                     </div>
 
                     <!-- Action Buttons -->
@@ -337,11 +327,6 @@ const BOOK_NOW_MODAL_HTML = `
                             placeholder="Any specific requirements, accessibility needs, or questions about the training..."></textarea>
                     </div>
 
-                    <!-- reCAPTCHA -->
-                    <div class="flex justify-center">
-                        <div class="g-recaptcha" data-sitekey="6LfYourSiteKeyHere"></div>
-                    </div>
-
                     <!-- Action Buttons -->
                     <div class="flex space-x-3 pt-4">
                         <button type="button" id="cancelBookingForm"
@@ -435,15 +420,7 @@ function setupContactModal() {
         form.addEventListener('submit', (e) => {
             e.preventDefault();
 
-            // Validate reCAPTCHA
-            const recaptchaResponse = grecaptcha.getResponse();
-            if (!recaptchaResponse) {
-                alert('Please complete the reCAPTCHA verification.');
-                return;
-            }
-
             alert('Thank you for your message! We will contact you soon.');
-            grecaptcha.reset();
             closeContactModal();
         });
     }
@@ -487,15 +464,7 @@ function setupEnquireModal() {
         form.addEventListener('submit', (e) => {
             e.preventDefault();
 
-            // Validate reCAPTCHA
-            const recaptchaResponse = grecaptcha.getResponse(1);
-            if (!recaptchaResponse) {
-                alert('Please complete the reCAPTCHA verification.');
-                return;
-            }
-
             alert('Thank you for your enquiry! We will contact you within 24 hours.');
-            grecaptcha.reset(1);
             closeEnquireModal();
         });
     }
@@ -539,15 +508,7 @@ function setupBookNowModal() {
         form.addEventListener('submit', (e) => {
             e.preventDefault();
 
-            // Validate reCAPTCHA
-            const recaptchaResponse = grecaptcha.getResponse(2);
-            if (!recaptchaResponse) {
-                alert('Please complete the reCAPTCHA verification.');
-                return;
-            }
-
             alert('Thank you for your booking request! We will contact you within 24 hours to confirm details and pricing.');
-            grecaptcha.reset(2);
             closeBookNowModal();
         });
     }
