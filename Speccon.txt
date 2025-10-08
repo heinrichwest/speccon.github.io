@@ -1,0 +1,108 @@
+Header should be. 
+- Apply for a learnership
+- About us
+- Qualifications
+- Accreditations
+- Other Products
+	- Classroom Training
+	- Online Training
+	- Employment Equity
+	- Learner Management system
+- Contact us
+
+
+
+Apply for learnership
+	- Open up form to fill in (see separate HTML upload for application form code) "C:\Users\Asus\OneDrive - Speccon Holdings (Pty) Ltd\Websites\Speccon\Application form.txt"
+
+About us: look under https://speccon.co.za/about-us/ for content
+
+Qualifications: 
+Detail at C:\Users\Asus\OneDrive - Speccon Holdings (Pty) Ltd\Website Content\Learnerships\Qualifications detail
+
+About our qualifications
+
+We offer 56 accredited qualifications, designed for practical, workplace-ready skills.
+Our training is accredited across 11 SETAs, giving you confidence in quality and national recognition.
+We currently have 31 QCTO qualification(s).
+
+Programmes cover NQF Levels 1–6, catering for entry-level to advanced pathways.
+Typical programme size is around 144 credits, with options to suit different study commitments.
+
+Our strongest areas
+Key SETA accreditations:
+⦁	Services — 13 qualification(s)
+⦁	SSETA — 11 qualification(s)
+⦁	W&R — 10 qualification(s)
+⦁	MICT — 7 qualification(s)
+⦁	AgriSETA — 5 qualification(s)
+Why learn with us
+⦁	Industry-aligned curricula and assessments
+⦁	Blended delivery options for working professionals
+⦁	Dedicated learner support from enrolment to certification
+⦁	Clear pathways to further study and employment
+
+Value adds (free stuff) you get when doing learnerships with us for all staff members
+- White Labelled Learning Management System
+- Access to over 300 online courses 
+- Employment Equity System
+- Over 10 work related assessments (including Excel Assessment)
+- Online Accredited Compliance Training (First Aid, Fire Fighter and OHS)
+- Academy Access to all staff kids
+
+
+
+Look for qualification categories per seta and detail per qualification file
+
+Other Products:
+Classroom Training (detail at C:\Users\Asus\OneDrive - Speccon Holdings (Pty) Ltd\Website Content\Classroom Courses)
+- Compliance courses
+	- First Aid
+	- Fire Fighter
+	- Occupational Health and Safety
+	- Forklift (missing detail)
+	- POPI Act
+- Computer courses
+	- Excel
+		- Basic Excel
+		- Intermediate Excel
+		- Advanced Excel
+	- Power BI (missing detail)
+	- Introduction to AI (missing detail)
+	- Advanced AI (missing detail)
+	- Cyber Security	
+- Other courses
+	- Sales
+	- Finance for non financial managers
+	- Time Management
+	- Stress Management
+	- BBBEE
+	- Manage your personal finance
+	- Fair and Effective Disciplinary Procedures
+	- Employment Equity (missing detail)
+
+Online Training
+- Link to elearning.co.za
+
+Employment Equity
+- Link to employmentequityact.za
+
+Learning Management System
+- Link to LMS.co.za
+
+SDF Functions
+- Link to skillsdevelopment.co.za
+
+School Academy
+- Link to specconacademy.co.za
+
+Content Development
+- TAP Create info
+
+
+Why speccon
+References
+
+	
+
+

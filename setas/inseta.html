@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INSETA Qualifications | SpecCon Holdings</title>
+    <meta name="description" content="Explore our 5 INSETA accredited qualifications. Professional development and skills training in the insurance and finance sector.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="../js/value-adds-popup.js"></script>
+    <link rel="icon" type="image/png" href="../Images/Logo.png">
+
+    <style>
+        nav { font-family: 'Roboto', sans-serif; }
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        /* SpecCon Brand Colors */
+        .speccon-blue { background-color: #12265E; }
+        .speccon-blue-secondary { background-color: #4A90E2; }
+        .speccon-light-blue { background-color: #92abc4; }
+        .text-speccon-blue { color: #12265E; }
+        .text-speccon-blue-secondary { color: #4A90E2; }
+        .text-speccon-light-blue { color: #92abc4; }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 10px 10px -5px rgb(0 0 0 / 0.04);
+        }
+        /* Enhanced Dropdown Menu Styles */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: calc(100% + 8px);
+            left: 0;
+            min-width: 16rem;
+            background: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e5e7eb;
+            z-index: 1000;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: opacity 0.2s ease, transform 0.2s ease;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Invisible bridge to prevent menu closing when moving cursor */
+        .dropdown::before {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            height: 12px;
+            z-index: 999;
+        }
+
+        .dropdown button {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            padding: 0;
+            font-size: inherit;
+            font-family: inherit;
+            color: inherit;
+        }
+
+
+        .animate-scroll {
+            animation: scroll 30s linear infinite;
+        }
+
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+
+        /* Sticky Banner Styles */
+        .sticky-banner {
+            position: fixed;
+            top: 100px;
+            right: 20px;
+            background: linear-gradient(135deg, #12265E 0%, #4A90E2 100%);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 50px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+            cursor: pointer;
+            z-index: 998;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            font-size: 14px;
+            backdrop-filter: blur(10px);
+        }
+
+        .sticky-banner:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+            background: linear-gradient(135deg, #0d1a47 0%, #3a7bc8 100%);
+        }
+
+        .banner-popup {
+            position: fixed;
+            top: 160px;
+            right: 20px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            z-index: 999;
+            overflow-y: auto;
+            transform: translateY(-20px);
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.3s ease;
+            max-width: 420px;
+            width: 90vw;
+            max-height: 80vh;
+        }
+
+        .banner-popup.show {
+            transform: translateY(0);
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        /* Enquiry Popup Modal Styles */
+        .enquiry-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        .enquiry-modal.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        .enquiry-modal-content {
+            background: white;
+            border-radius: 20px;
+            max-width: 500px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+            transform: translateY(20px);
+            transition: transform 0.3s ease;
+        }
+        .enquiry-modal.show .enquiry-modal-content {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-900">
+    <!-- Header -->
+    <header class="bg-white/95 backdrop-blur-md shadow-lg fixed w-full z-50 top-0">
+        <div class="container mx-auto px-4 lg:px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <a href="../index.html">
+                        <img src="../Images/Logo.png" alt="SpecCon Holdings Logo" class="h-12">
+                    </a>
+                    <div class="ml-3">
+                        <h1 class="text-xl font-bold text-[#12265E]">SpecCon Holdings</h1>
+                        <p class="text-sm text-[#ffa600]">INSETA Qualifications</p>
+                    </div>
+                </div>
+
+                <nav class="hidden lg:flex items-center space-x-8">
+                    <a href="../index.html#about" class="text-[#12265E] hover:text-[#FFA600] font-medium transition duration-300">Why Choose Us</a>
+                    <a href="../index.html#qualifications" class="text-[#12265E] hover:text-[#FFA600] font-medium transition duration-300">Qualifications</a>
+                    <a href="../index.html#accreditations" class="text-[#12265E] hover:text-[#FFA600] font-medium transition duration-300">Accreditations</a>
+                    <a href="../index.html#classroom-training" class="text-[#12265E] hover:text-[#FFA600] font-medium transition duration-300">Classroom Training</a>
+                    <div class="relative dropdown">
+                        <button class="text-[#12265E] hover:text-[#FFA600] font-medium transition duration-300 inline-flex items-center">
+                            Other Products <i data-lucide="chevron-down" class="w-4 h-4 ml-1"></i>
+                        </button>
+                        <div class="dropdown-menu absolute left-0 w-64 bg-white rounded-lg shadow-xl py-2 z-20 border">
+                            <a href="https://elearning.co.za/" target="_blank" class="block px-4 py-3 text-sm text-gray-700 hover:bg-[#12265E]/10 hover:text-[#12265E] transition duration-200">
+                                <i data-lucide="monitor" class="w-4 h-4 inline mr-2"></i>Online Training
+                            </a>
+                            <a href="https://employmentequityact.co.za/" target="_blank" class="block px-4 py-3 text-sm text-gray-700 hover:bg-[#12265E]/10 hover:text-[#12265E] transition duration-200">
+                                <i data-lucide="shield-check" class="w-4 h-4 inline mr-2"></i>Employment Equity
+                            </a>
+                            <a href="https://learningmanagementsystem.co.za/" target="_blank" class="block px-4 py-3 text-sm text-gray-700 hover:bg-[#12265E]/10 hover:text-[#12265E] transition duration-200">
+                                <i data-lucide="graduation-cap" class="w-4 h-4 inline mr-2"></i>Learning Management System
+                            </a>
+                            <a href="https://skillsdevelopment.co.za/" target="_blank" class="block px-4 py-3 text-sm text-gray-700 hover:bg-[#12265E]/10 hover:text-[#12265E] transition duration-200">
+                                <i data-lucide="trending-up" class="w-4 h-4 inline mr-2"></i>Skills Development
+                            </a>
+                            <a href="https://www.specconacademy.co.za/" target="_blank" class="block px-4 py-3 text-sm text-gray-700 hover:bg-[#12265E]/10 hover:text-[#12265E] transition duration-200">
+                                <i data-lucide="school" class="w-4 h-4 inline mr-2"></i>SpecCon Academy
+                            </a>
+                            <a href="https://bbbee.co.za/" target="_blank" class="block px-4 py-3 text-sm text-gray-700 hover:bg-[#12265E]/10 hover:text-[#12265E] transition duration-200">
+                                <i data-lucide="award" class="w-4 h-4 inline mr-2"></i>BBBEE Consulting
+                            </a>
+                        </div>
+                    </div>
+                    
+                </nav>
+
+                <div class="hidden lg:block">
+                    <button onclick="openEnquiryModal()" class="bg-gradient-to-r from-[#12265E] to-[#92ABC4] text-white font-semibold px-6 py-3 rounded-lg hover:from-[#0d1a47] hover:to-[#3a7bc8] transition duration-300 shadow-lg">
+                        Enquire Now
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="lg:hidden text-[#12265E] focus:outline-none">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-white border-t border-gray-200">
+            <div class="container mx-auto px-4 py-4">
+                <nav class="flex flex-col space-y-3">
+                    <a href="../index.html#about" class="text-[#12265E] hover:text-[#FFA600] font-medium py-2 transition duration-300">Why Choose Us</a>
+                    <a href="../index.html#qualifications" class="text-[#12265E] hover:text-[#FFA600] font-medium py-2 transition duration-300">Qualifications</a>
+                    <a href="../index.html#accreditations" class="text-[#12265E] hover:text-[#FFA600] font-medium py-2 transition duration-300">Accreditations</a>
+                    <a href="../index.html#classroom-training" class="text-[#12265E] hover:text-[#FFA600] font-medium py-2 transition duration-300">Classroom Training</a>
+
+                    <!-- Mobile Dropdown -->
+                    <div class="border-t border-gray-200 pt-3">
+                        <p class="text-sm font-semibold text-gray-500 mb-2">Other Products</p>
+                        <a href="https://elearning.co.za/" target="_blank" class="block text-[#12265E] hover:text-[#FFA600] py-2 pl-4 transition duration-300">
+                            <i data-lucide="monitor" class="w-4 h-4 inline mr-2"></i>Online Training
+                        </a>
+                        <a href="https://employmentequityact.co.za/" target="_blank" class="block text-[#12265E] hover:text-[#FFA600] py-2 pl-4 transition duration-300">
+                            <i data-lucide="shield-check" class="w-4 h-4 inline mr-2"></i>Employment Equity
+                        </a>
+                        <a href="https://learningmanagementsystem.co.za/" target="_blank" class="block text-[#12265E] hover:text-[#FFA600] py-2 pl-4 transition duration-300">
+                            <i data-lucide="graduation-cap" class="w-4 h-4 inline mr-2"></i>Learning Management System
+                        </a>
+                        <a href="https://skillsdevelopment.co.za/" target="_blank" class="block text-[#12265E] hover:text-[#FFA600] py-2 pl-4 transition duration-300">
+                            <i data-lucide="trending-up" class="w-4 h-4 inline mr-2"></i>Skills Development
+                        </a>
+                        <a href="https://www.specconacademy.co.za/" target="_blank" class="block text-[#12265E] hover:text-[#FFA600] py-2 pl-4 transition duration-300">
+                            <i data-lucide="school" class="w-4 h-4 inline mr-2"></i>SpecCon Academy
+                        </a>
+                        <a href="https://bbbee.co.za/" target="_blank" class="block text-[#12265E] hover:text-[#FFA600] py-2 pl-4 transition duration-300">
+                            <i data-lucide="award" class="w-4 h-4 inline mr-2"></i>BBBEE Consulting
+                        </a>
+                    </div>
+
+                    <button onclick="openEnquiryModal()" class="bg-gradient-to-r from-[#12265E] to-[#92ABC4] text-white font-semibold px-6 py-3 rounded-lg hover:from-[#0d1a47] hover:to-[#3a7bc8] transition duration-300 shadow-lg mt-4">
+                        Enquire Now
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <section class="pt-24 pb-8 bg-gradient-to-b from-white to-[#92ABC4]/5">
+        <div class="container mx-auto px-6">
+            <nav class="text-sm text-gray-600">
+                <a href="../index.html" class="hover:text-[#FFA600]">Home</a>
+                <span class="mx-2">/</span>
+                <a href="../index.html#accreditations" class="hover:text-[#FFA600]">Accreditations</a>
+                <span class="mx-2">/</span>
+                <span class="text-gray-900">INSETA</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="py-16 bg-gradient-to-br from-blue-50 to-white">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <img src="../Images/Inseta.png" alt="INSETA Logo" class="w-20 h-20 object-contain mr-6">
+                        <div>
+                            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-2">INSETA</h1>
+                            <p class="text-xl text-[#FFA600] font-semibold">5 Accredited Qualifications</p>
+                        </div>
+                    </div>
+                    <p class="text-lg text-gray-600 leading-relaxed mb-8">
+                        The Insurance Sector Education and Training Authority (INSETA) is responsible for education, training, and skills development in the insurance and financial services sector.
+                        Our accredited qualifications prepare learners for successful careers in insurance, financial advisory, and related fields.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="text-center p-4 bg-[#12265E] rounded-lg shadow">
+                            <div class="text-2xl font-bold text-[#ffa600]">5</div>
+                            <div class="text-sm text-[#ffffff]">Qualifications</div>
+                        </div>
+                        <div class="text-center p-4 bg-[#92abc4] rounded-lg shadow">
+                            <div class="text-2xl font-bold text-[#ffffff]">NQF 4-6</div>
+                            <div class="text-sm font-bold text-[#12265E]">Levels</div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <video src="../Videos/inseta.mp4"
+                           alt="Services sector professionals"
+                           class="rounded-2xl shadow-2xl w-full h-auto"
+                           autoplay
+                           muted
+                           loop>
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Qualifications List -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#12265E] mb-4">Available Qualifications</h2>
+                <p class="text-xl text-[#ffa600] max-w-3xl mx-auto">Choose from our range of INSETA accredited qualifications</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- NQF Level 4 -->
+                <a href="../qualifications/inseta-insurance-claims-administrator-assessor-nqf4.html" class="bg-[#12265E] rounded-2xl shadow-lg p-8 card-hover transition-all duration-300 block hover:shadow-2xl relative">
+                    <div class="absolute top-4 right-4 bg-[#FFA600] text-white px-2 py-1 rounded-md text-xs font-bold">QCTO</div>
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-[#ffffff]/70 rounded-lg flex items-center justify-center mr-4">
+                            <i data-lucide="clipboard-check" class="w-6 h-6 text-[#ffa600]"></i>
+                        </div>
+                        <div>
+                            <span class="text-sm text-[#FFA600] font-medium">NQF Level 4</span>
+                            <h3 class="font-bold text-lg text-white">Insurance Claims Administrator/Assessor</h3>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-4">Process and assess insurance claims with professional expertise and regulatory compliance.</p>
+                    <div class="flex justify-between items-center text-sm text-gray-500">
+                        <span>131 Credits</span>
+                        <span class="text-[#FFA600] font-medium">Learn More →</span>
+                    </div>
+                </a>
+
+                <a href="../qualifications/inseta-long-term-insurance-advisor-nqf4.html" class="bg-[#92abc4] rounded-2xl shadow-lg p-8 card-hover transition-all duration-300 block hover:shadow-2xl relative">
+                    <div class="absolute top-4 right-4 bg-[#FFA600] text-white px-2 py-1 rounded-md text-xs font-bold">QCTO</div>
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-[#ffffff]/70 rounded-lg flex items-center justify-center mr-4">
+                            <i data-lucide="shield" class="w-6 h-6 text-[#ffa600]"></i>
+                        </div>
+                        <div>
+                            <span class="text-sm text-green-600 font-medium">NQF Level 4</span>
+                            <h3 class="font-bold text-lg text-[#12265E]">Long Term Insurance Advisor</h3>
+                        </div>
+                    </div>
+                    <p class="text-[#12265E] mb-4">Provide expert advice on long-term insurance products and wealth protection solutions.</p>
+                    <div class="flex justify-between items-center text-sm text-gray-500">
+                        <span>121 Credits</span>
+                        <span class="text-[#FFA600] font-medium">Learn More →</span>
+                    </div>
+                </a>
+
+                <!-- NQF Level 5 -->
+                <a href="../qualifications/inseta-health-care-benefits-advisor-nqf5.html" class="bg-[#12265E] rounded-2xl shadow-lg p-8 card-hover transition-all duration-300 block hover:shadow-2xl relative">
+                    <div class="absolute top-4 right-4 bg-[#FFA600] text-white px-2 py-1 rounded-md text-xs font-bold">QCTO</div>
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-[#ffffff]/70 rounded-lg flex items-center justify-center mr-4">
+                            <i data-lucide="heart-pulse" class="w-6 h-6 text-[#ffa600]"></i>
+                        </div>
+                        <div>
+                            <span class="text-sm text-purple-600 font-medium">NQF Level 5</span>
+                            <h3 class="font-bold text-lg text-white">Health Care Benefits Advisor</h3>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-4">Advise clients on health care benefit programs and medical insurance solutions.</p>
+                    <div class="flex justify-between items-center text-sm text-gray-500">
+                        <span>102 Credits</span>
+                        <span class="text-[#FFA600] font-medium">Learn More →</span>
+                    </div>
+                </a>
+
+                <a href="../qualifications/inseta-insurance-underwriter-nqf5.html" class="bg-[#92abc4] rounded-2xl shadow-lg p-8 card-hover transition-all duration-300 block hover:shadow-2xl relative">
+                    <div class="absolute top-4 right-4 bg-[#FFA600] text-white px-2 py-1 rounded-md text-xs font-bold">QCTO</div>
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-[#ffffff]/70 rounded-lg flex items-center justify-center mr-4">
+                            <i data-lucide="file-search" class="w-6 h-6 text-[#ffa600]"></i>
+                        </div>
+                        <div>
+                            <span class="text-sm text-[#FFA600] font-medium">NQF Level 5</span>
+                            <h3 class="font-bold text-lg text-[#12265E]">Insurance Underwriter</h3>
+                        </div>
+                    </div>
+                    <p class="text-[#12265E] mb-4">Evaluate insurance risks and make informed underwriting decisions for profitable business.</p>
+                    <div class="flex justify-between items-center text-sm text-gray-500">
+                        <span>163 Credits</span>
+                        <span class="text-[#FFA600] font-medium">Learn More →</span>
+                    </div>
+                </a>
+
+                <!-- NQF Level 6 -->
+                <a href="../qualifications/inseta-financial-advisor-nqf6.html" class="bg-[#12265E] rounded-2xl shadow-lg p-8 card-hover transition-all duration-300 block hover:shadow-2xl relative">
+                    <div class="absolute top-4 right-4 bg-[#FFA600] text-white px-2 py-1 rounded-md text-xs font-bold">QCTO</div>
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-[#ffffff]/70 rounded-lg flex items-center justify-center mr-4">
+                            <i data-lucide="trending-up" class="w-6 h-6 text-[#ffa600]"></i>
+                        </div>
+                        <div>
+                            <span class="text-sm text-teal-600 font-medium">NQF Level 6</span>
+                            <h3 class="font-bold text-lg text-white">Financial Advisor</h3>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-4">Provide comprehensive financial advisory services including investments, retirement, and wealth planning.</p>
+                    <div class="flex justify-between items-center text-sm text-gray-500">
+                        <span>515 Credits</span>
+                        <span class="text-[#FFA600] font-medium">Learn More →</span>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Why Choose INSETA -->
+    <section class="py-20 bg-gradient-to-b from-white to-[#92ABC4]/5">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#12265E] mb-4">Why Choose INSETA Qualifications?</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">Industry-recognized credentials for insurance and financial services excellence</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center p-8 bg-[#92abc4] rounded-2xl shadow-lg">
+                    <div class="w-16 h-16 bg-[#ffffff]/70 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i data-lucide="award" class="w-8 h-8 text-[#ffa600]"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-[#12265E] mb-4">Financial Sector Authority</h3>
+                    <p class="text-[#12265E]">Gain credibility in the insurance and financial services sector with INSETA recognition.</p>
+                </div>
+
+                <div class="text-center p-8 bg-[#92abc4] rounded-2xl shadow-lg">
+                    <div class="w-16 h-16 bg-[#ffffff]/70 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i data-lucide="trending-up" class="w-8 h-8 text-[#ffa600]"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-[#12265E] mb-4">Career Advancement</h3>
+                    <p class="text-[#12265E]">Clear pathways for progression from entry-level to senior advisory roles in finance.</p>
+                </div>
+
+                <div class="text-center p-8 bg-[#92abc4] rounded-2xl shadow-lg">
+                    <div class="w-16 h-16 bg-[#ffffff]/70 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i data-lucide="shield-check" class="w-8 h-8 text-[#ffa600]"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-[#12265E] mb-4">Regulatory Compliance</h3>
+                    <p class="text-[#12265E]">Stay current with financial services regulations and professional standards.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-16 bg-gradient-to-b from-white to-[#92ABC4]/5">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#12265E] mb-6">About INSETA</h2>
+                <p class="text-lg text-[#12265E] leading-relaxed mb-8">
+                    The Insurance Sector Education and Training Authority (INSETA) is responsible for skills development in the insurance and financial services sector.
+                    Our qualifications are designed to meet industry standards and prepare professionals for the complex challenges of modern financial services.
+                </p>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-[#ffffff]/70 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="shield-check" class="w-8 h-8 text-[#ffa600]"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-[#12265E] mb-2">Industry Standards</h3>
+                        <p class="text-[#12265E]">Qualifications aligned with insurance and financial services requirements</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-[#ffffff]/70 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="award" class="w-8 h-8 text-[#ffa600]"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-[#12265E] mb-2">Professional Recognition</h3>
+                        <p class="text-[#12265E]">INSETA accredited qualifications with industry relevance</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-[#ffffff]/70 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="trending-up" class="w-8 h-8 text-[#ffa600]"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-[#12265E] mb-2">Career Advancement</h3>
+                        <p class="text-[#12265E]">Clear pathways for growth in insurance and financial careers</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sticky Banner and Popup will be generated by centralized script -->
+
+    <!-- Enquiry Modal -->
+    <div id="enquiryModal" class="enquiry-modal">
+        <div class="enquiry-modal-content">
+            <div class="p-8">
+                <div class="flex items-center justify-between mb-6">
+                    <h2 class="text-2xl font-bold text-[#12265E]">Enquire About INSETA Qualifications</h2>
+                    <button onclick="closeEnquiryModal()" class="text-gray-400 hover:text-gray-300 text-xl">
+                        <i data-lucide="x" class="w-6 h-6"></i>
+                    </button>
+                </div>
+
+                <div class="mb-6 p-4 bg-[#92abc4]/10 rounded-lg border border-[#92ABC4]">
+                    <p class="text-[#12265E] text-sm">
+                        <i data-lucide="info" class="w-4 h-4 inline mr-2"></i>
+                        If you are applying for a learnership, please <a href="../index.html#apply" class="font-semibold underline hover:text-blue-800">click here</a>.
+                    </p>
+                </div>
+
+                <form id="enquiryForm" onsubmit="submitEnquiry(event)">
+                    <div class="grid md:grid-cols-2 gap-4 mb-4">
+                        <div>
+                             <label for="firstName" class="block text-sm font-medium mb-2" style="color: #12265E !important">Name *</label>
+                            <input type="text" id="firstName" name="firstName" required
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFA600] focus:border-transparent">
+                        </div>
+                        <div>
+                            <label for="surname" class="block text-sm font-medium mb-2" style="color: #12265E !important">Surname *</label>
+                            <input type="text" id="surname" name="surname" required
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFA600] focus:border-transparent">
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-4 mb-4">
+                        <div>
+                            <label for="email" class="block text-sm font-medium mb-2" style="color: #12265E !important">Email *</label>
+                            <input type="email" id="email" name="email" required
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFA600] focus:border-transparent">
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-sm font-medium mb-2" style="color: #12265E !important">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFA600] focus:border-transparent">
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="company" class="block text-sm font-medium mb-2" style="color: #12265E !important">Company *</label>
+                        <input type="text" id="company" name="company" required
+                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFA600] focus:border-transparent">
+                    </div>
+
+                    <div class="mb-6">
+                        <label for="reason" class="block text-sm font-medium mb-2" style="color: #12265E !important">Reason for Enquiry *</label>
+                        <textarea id="reason" name="reason" rows="4" required
+                                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFA600] focus:border-transparent resize-none"
+                                  placeholder="Please tell us about your enquiry and how we can help you..."></textarea>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-3">
+                        <button type="submit" class="flex-1 bg-gradient-to-r from-[#12265E] to-[#92ABC4] text-white font-semibold py-3 px-6 rounded-lg hover:from-[#0d1a47] hover:to-[#3a7bc8] transition duration-300">
+                            <i data-lucide="send" class="w-4 h-4 inline mr-2"></i>
+                            Send Enquiry
+                        </button>
+                        <button type="button" onclick="closeEnquiryModal()" class="flex-1 bg-gradient-to-r from-[#12265E] to-[#92ABC4] text-white font-semibold py-3 px-6 rounded-lg hover:from-[#0d1a47] hover:to-[#3a7bc8] transition duration-300">
+                            Cancel
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    
+    <footer class="bg-gradient-to-r from-[#12265E] to-[#92ABC4] text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <img src="../Images/SpecCon-LOGO.png" alt="SpecCon Holdings Logo" class="h-12 mr-3">
+                        <div>
+                            <h3 class="text-xl font-bold">SpecCon Holdings</h3>
+                            <p class="text-white/80">Accredited Training Solutions</p>
+                        </div>
+                    </div>
+                    <p class="text-white/80 mb-4">Empowering individuals and organizations through high-quality, accredited education and training solutions.</p>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="/index.html#about" class="text-white/80 hover:text-[#FFA600] transition duration-200">Why Choose Us</a></li>
+                        <li><a href="/index.html#qualifications" class="text-white/80 hover:text-[#FFA600] transition duration-200">Qualifications</a></li>
+                        <li><a href="/index.html#accreditations" class="text-white/80 hover:text-[#FFA600] transition duration-200">Accreditations</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                  <h4 class="text-lg font-semibold mb-4">Contact Us</h4>
+                    <ul class="space-y-2">
+                        <li><p class="text-white/80">Phone: 012 667 4962</p></li>
+                         <p class="text-white/80">
+    Email: <a href="mailto:help@speccon.co.za" class="underline hover:text-orange">help@speccon.co.za</a>
+  </p>    
+</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-white/80">&copy; 2025 SpecCon Holdings. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+
+    <script>
+        lucide.createIcons();
+
+        // Popup functionality
+        const stickyBanner = document.getElementById('stickyBanner');
+        const bannerPopup = document.getElementById('bannerPopup');
+        const closePopup = document.getElementById('closePopup');
+
+        if (stickyBanner && bannerPopup && closePopup) {
+            // Show popup when banner is hovered
+            stickyBanner.addEventListener('mouseenter', () => {
+                bannerPopup.classList.add('show');
+            });
+
+            // Show popup when banner is clicked (backup)
+            stickyBanner.addEventListener('click', () => {
+                bannerPopup.classList.add('show');
+            });
+
+            // Hide popup when mouse leaves both banner and popup
+            let hideTimeout;
+            const hidePopup = () => {
+                hideTimeout = setTimeout(() => {
+                    bannerPopup.classList.remove('show');
+                }, 300);
+            };
+
+            const cancelHide = () => {
+                if (hideTimeout) {
+                    clearTimeout(hideTimeout);
+                    hideTimeout = null;
+                }
+            };
+
+            stickyBanner.addEventListener('mouseleave', hidePopup);
+            bannerPopup.addEventListener('mouseenter', cancelHide);
+            bannerPopup.addEventListener('mouseleave', hidePopup);
+
+            // Hide popup when close button is clicked
+            closePopup.addEventListener('click', () => {
+                bannerPopup.classList.remove('show');
+            });
+
+            // Hide popup when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!bannerPopup.contains(e.target) && !stickyBanner.contains(e.target)) {
+                    bannerPopup.classList.remove('show');
+                }
+            });
+        }
+
+        // Enquiry Modal Functions
+        function openEnquiryModal() {
+            const modal = document.getElementById('enquiryModal');
+            modal.classList.add('show');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeEnquiryModal() {
+            const modal = document.getElementById('enquiryModal');
+            modal.classList.remove('show');
+            document.body.style.overflow = 'auto';
+        }
+
+        function submitEnquiry(event) {
+            event.preventDefault();
+
+            // Get form data
+            const formData = new FormData(event.target);
+            const enquiryData = {
+                firstName: formData.get('firstName'),
+                surname: formData.get('surname'),
+                email: formData.get('email'),
+                phone: formData.get('phone'),
+                company: formData.get('company'),
+                reason: formData.get('reason'),
+                qualification: 'INSETA Qualifications'
+            };
+
+            // For now, just show success message and close modal
+            alert('Thank you for your enquiry! We will get back to you soon.');
+            closeEnquiryModal();
+
+            // Reset form
+            event.target.reset();
+
+            // In a real implementation, you would send this data to your server
+            console.log('Enquiry submitted:', enquiryData);
+        }
+
+        // Set up modal event listeners after DOM is ready
+        document.addEventListener('DOMContentLoaded', function() {
+            // Close modal when clicking outside
+            const enquiryModal = document.getElementById('enquiryModal');
+            if (enquiryModal) {
+                enquiryModal.addEventListener('click', function(e) {
+                    if (e.target === this) {
+                        closeEnquiryModal();
+                    }
+                });
+            }
+
+            // Close modal with Escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    closeEnquiryModal();
+                }
+            });
+        });
+    </script>
+
+    <!-- Enhanced Dropdown Menu JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const dropdown = document.querySelector('.dropdown');
+            const dropdownButton = document.querySelector('.dropdown button');
+            const dropdownMenu = document.querySelector('.dropdown-menu');
+
+            if (dropdown && dropdownButton) {
+                // Handle click to toggle dropdown
+                dropdownButton.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+                    if (dropdownMenu.style.display === 'block') {
+                        dropdownMenu.style.opacity = '1';
+                        dropdownMenu.style.transform = 'translateY(0)';
+                    }
+                });
+
+                // Close dropdown when clicking outside
+                document.addEventListener('click', function(e) {
+                    if (!dropdown.contains(e.target)) {
+                        dropdownMenu.style.display = 'none';
+                    }
+                });
+
+                // Ensure dropdown works on touch devices
+                dropdownButton.addEventListener('touchstart', function(e) {
+                    e.preventDefault();
+                    dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+                });
+            }
+        });
+    </script>
+
+    <!-- Mobile Menu Toggle JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+        });
+    </script>
+</body>
+</html>

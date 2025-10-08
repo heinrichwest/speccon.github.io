@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Security Training | SpecCon Holdings</title>
+    <meta name="description" content="Comprehensive cyber security training covering threat detection, risk assessment, and security best practices for modern organizations.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="../js/centralized-modals.js"></script>
+    <link rel="icon" type="image/png" href="../Images/Logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        nav { font-family: 'Roboto', sans-serif; }
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 10px 10px -5px rgb(0 0 0 / 0.04);
+        }
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        .dropdown-menu {
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-900">
+    <!-- Header -->
+    <header class="bg-white/95 backdrop-blur-md shadow-lg fixed w-full z-50 top-0">
+        <div class="container mx-auto px-4 lg:px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <a href="../index.html">
+                        <img src="../Images/Logo.png" alt="SpecCon Holdings Logo" class="h-12">
+                    </a>
+                    <div class="ml-3">
+                        <h1 class="text-xl font-bold text-[#12265E]">SpecCon Holdings</h1>
+                        <p class="text-sm text-[#ffa600]">Services SETA Qualifications</p>
+                    </div>
+                </div>
+
+                <nav class="hidden lg:flex items-center space-x-4">
+                    <a href="../index.html" class="text-[#12265E] hover:text-[#FFA600] font-medium transition duration-300 text-sm whitespace-nowrap">Home</a>
+                    <a href="../index.html#about" class="text-[#12265E] hover:text-[#FFA600] font-medium transition duration-300 text-sm whitespace-nowrap">Why Choose Us</a>
+                    <a href="../index.html#qualifications" class="text-[#12265E] hover:text-[#FFA600] font-medium transition duration-300 text-sm whitespace-nowrap">Qualifications</a>
+                    <a href="../index.html#accreditations" class="text-[#12265E] hover:text-[#FFA600] font-medium transition duration-300 text-sm whitespace-nowrap">Accreditations</a>
+                    <a href="../index.html#classroom-training" class="text-[#12265E] hover:text-[#FFA600] font-medium transition duration-300 text-sm whitespace-nowrap">Classroom Training</a>
+                    <div class="relative dropdown">
+                        <button class="text-[#12265E] hover:text-[#FFA600] font-medium transition duration-300 inline-flex items-center">
+                            Other Products <i data-lucide="chevron-down" class="w-4 h-4 ml-1"></i>
+                        </button>
+                        <div class="dropdown-menu absolute left-0 w-64 bg-white rounded-lg shadow-xl py-2 z-20 border">
+                            <a href="https://elearning.co.za/" target="_blank" class="block px-4 py-3 text-sm text-gray-700 hover:bg-[#12265E]/10 hover:text-[#12265E] transition duration-200">
+                                <i data-lucide="monitor" class="w-4 h-4 inline mr-2"></i>Online Training
+                            </a>
+                            <a href="https://employmentequityact.co.za/" target="_blank" class="block px-4 py-3 text-sm text-gray-700 hover:bg-[#12265E]/10 hover:text-[#12265E] transition duration-200">
+                                <i data-lucide="shield-check" class="w-4 h-4 inline mr-2"></i>Employment Equity
+                            </a>
+                            <a href="https://learningmanagementsystem.co.za/" target="_blank" class="block px-4 py-3 text-sm text-gray-700 hover:bg-[#12265E]/10 hover:text-[#12265E] transition duration-200">
+                                <i data-lucide="graduation-cap" class="w-4 h-4 inline mr-2"></i>Learning Management System
+                            </a>
+                            <a href="https://skillsdevelopment.co.za/" target="_blank" class="block px-4 py-3 text-sm text-gray-700 hover:bg-[#12265E]/10 hover:text-[#12265E] transition duration-200">
+                                <i data-lucide="trending-up" class="w-4 h-4 inline mr-2"></i>Skills Development
+                            </a>
+                            <a href="https://www.specconacademy.co.za/" target="_blank" class="block px-4 py-3 text-sm text-gray-700 hover:bg-[#12265E]/10 hover:text-[#12265E] transition duration-200">
+                                <i data-lucide="school" class="w-4 h-4 inline mr-2"></i>SpecCon Academy
+                            </a>
+                            <a href="https://bbbee.co.za/" target="_blank" class="block px-4 py-3 text-sm text-gray-700 hover:bg-[#12265E]/10 hover:text-[#12265E] transition duration-200">
+                                <i data-lucide="award" class="w-4 h-4 inline mr-2"></i>BBBEE Consulting
+                            </a>
+                        </div>
+                    </div>
+                </nav>
+
+                <div class="hidden lg:block">
+                    <button onclick="openBookNowModal()" data-modal="book" data-course="Cyber Security Training" class="bg-red-600 text-white font-semibold px-5 py-2 rounded-lg hover:bg-red-700 transition duration-300 shadow">Book Training</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-red-600 via-red-700 to-red-800 text-white pt-28 pb-20">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="mb-6">
+                        <span class="bg-red-500/20 text-red-100 px-4 py-2 rounded-full text-sm font-medium">Security & Compliance</span>
+                    </div>
+                    <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">Cyber Security Training</h1>
+                    <p class="text-xl text-red-100 mb-8">
+                        Comprehensive cyber security training to protect your organization from evolving digital threats and ensure regulatory compliance.
+                    </p>
+
+                    <div class="grid grid-cols-3 gap-6 mb-8">
+                        <div class="text-center p-4 bg-white/10 rounded-lg">
+                            <div class="text-2xl font-bold text-white">3-5</div>
+                            <div class="text-red-100 text-sm">Days Duration</div>
+                        </div>
+                        <div class="text-center p-4 bg-white/10 rounded-lg">
+                            <div class="text-2xl font-bold text-white">All</div>
+                            <div class="text-red-100 text-sm">Levels</div>
+                        </div>
+                        <div class="text-center p-4 bg-white/10 rounded-lg">
+                            <div class="text-2xl font-bold text-white">✓</div>
+                            <div class="text-red-100 text-sm">Certificate</div>
+                        </div>
+                    </div>
+
+                    <button onclick="openBookNowModal()" class="bg-white text-red-600 font-bold py-4 px-8 rounded-lg hover:bg-gray-100 transition duration-300 inline-flex items-center">
+                        <i data-lucide="calendar" class="w-5 h-5 mr-2"></i>
+                        Book This Training
+                    </button>
+                </div>
+
+                <div class="relative">
+                    <img src="https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                         alt="Cyber security protection and defense"
+                         class="rounded-2xl shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Overview -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#12265E] mb-4">Security Training Overview</h2>
+                <p class="text-xl text-[#ffa600]"> max-w-3xl mx-auto">
+                    Comprehensive cyber security training covering threat detection, prevention strategies, and incident response for modern organizations.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-2xl shadow-lg p-8 card-hover transition-all duration-300">
+                    <div class="w-16 h-16 bg-red-100 rounded-2xl flex items-center justify-center mb-6">
+                        <i data-lucide="shield" class="w-8 h-8 text-red-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-[#12265E] mb-4">Threat Identification</h3>
+                    <p class="text-[#ffa600]">Learn to identify, assess, and classify various cyber threats including malware, phishing, and social engineering attacks.</p>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg p-8 card-hover transition-all duration-300">
+                    <div class="w-16 h-16 bg-orange-100 rounded-2xl flex items-center justify-center mb-6">
+                        <i data-lucide="lock" class="w-8 h-8 text-orange-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-[#12265E] mb-4">Access Control</h3>
+                    <p class="text-[#ffa600]">Implement robust authentication systems, access controls, and privilege management to secure organizational assets.</p>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg p-8 card-hover transition-all duration-300">
+                    <div class="w-16 h-16 bg-yellow-100 rounded-2xl flex items-center justify-center mb-6">
+                        <i data-lucide="search" class="w-8 h-8 text-yellow-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-[#12265E] mb-4">Vulnerability Assessment</h3>
+                    <p class="text-[#ffa600]">Conduct systematic security assessments and penetration testing to identify and remediate system vulnerabilities.</p>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg p-8 card-hover transition-all duration-300">
+                    <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mb-6">
+                        <i data-lucide="alert-triangle" class="w-8 h-8 text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-[#12265E] mb-4">Incident Response</h3>
+                    <p class="text-[#ffa600]">Develop comprehensive incident response plans and learn effective containment, eradication, and recovery procedures.</p>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg p-8 card-hover transition-all duration-300">
+                    <div class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mb-6">
+                        <i data-lucide="file-text" class="w-8 h-8 text-green-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-[#12265E] mb-4">Compliance & Governance</h3>
+                    <p class="text-[#ffa600]">Understand regulatory requirements, compliance frameworks, and governance structures for security management.</p>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg p-8 card-hover transition-all duration-300">
+                    <div class="w-16 h-16 bg-[#ffffff]/70 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <i data-lucide="users" class="w-8 h-8 text-[#ffa600]"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-[#12265E] mb-4">Security Awareness</h3>
+                    <p class="text-[#ffa600]">Build organization-wide security awareness and train employees to recognize and respond to security threats.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What You'll Learn -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-[#12265E] mb-8">Security Learning Outcomes</h2>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i data-lucide="check" class="w-4 h-4 text-red-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-[#12265E] mb-2">Risk Assessment & Management</h3>
+                                <p class="text-[#ffa600]">Conduct comprehensive security risk assessments and develop effective risk mitigation strategies.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i data-lucide="check" class="w-4 h-4 text-red-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-[#12265E] mb-2">Network Security Implementation</h3>
+                                <p class="text-[#ffa600]">Deploy and configure firewalls, intrusion detection systems, and secure network architectures.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i data-lucide="check" class="w-4 h-4 text-red-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-[#12265E] mb-2">Data Protection & Privacy</h3>
+                                <p class="text-[#ffa600]">Implement data encryption, secure data handling practices, and privacy protection measures.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i data-lucide="check" class="w-4 h-4 text-red-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-[#12265E] mb-2">Security Policy Development</h3>
+                                <p class="text-[#ffa600]">Create comprehensive security policies, procedures, and guidelines for organizational compliance.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <img src="https://images.pexels.com/photos/5380641/pexels-photo-5380641.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                         alt="Cyber security monitoring and analysis"
+                         class="rounded-2xl shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- Course Details -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#12265E] mb-4">Training Details</h2>
+                <p class="text-xl text-[#ffa600]">Comprehensive security training designed for all organizational levels.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white rounded-2xl shadow-lg p-6 text-center">
+                    <div class="w-16 h-16 bg-red-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="clock" class="w-8 h-8 text-red-600"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-2">Duration</h3>
+                    <p class="text-[#ffa600]">3-5 Days Flexible</p>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg p-6 text-center">
+                    <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="users" class="w-8 h-8 text-blue-600"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-2">Group Size</h3>
+                    <p class="text-[#ffa600]">Max 20 Participants</p>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg p-6 text-center">
+                    <div class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="award" class="w-8 h-8 text-green-600"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-2">Certificate</h3>
+                    <p class="text-[#ffa600]">Security Certificate</p>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg p-6 text-center">
+                    <div class="w-16 h-16 bg-orange-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="laptop" class="w-8 h-8 text-orange-600"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-2">Format</h3>
+                    <p class="text-[#ffa600]">Interactive Training</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-20 bg-gradient-to-r from-red-600 to-red-800">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Secure Your Organization Today</h2>
+            <p class="text-xl text-red-100 mb-8 max-w-2xl mx-auto">
+                Protect your business from cyber threats with our comprehensive security training program designed for the modern threat landscape.
+            </p>
+            <button data-modal="contact" class="bg-white text-red-600 font-bold py-4 px-8 rounded-lg hover:bg-gray-100 transition duration-300 inline-flex items-center"><i data-lucide="mail" class="w-5 h-5 mr-2"></i>
+                Get Training Information</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    
+    <footer class="bg-gradient-to-r from-[#12265E] to-[#92ABC4] text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <img src="../Images/SpecCon-LOGO.png" alt="SpecCon Holdings Logo" class="h-12 mr-3">
+                        <div>
+                            <h3 class="text-xl font-bold">SpecCon Holdings</h3>
+                            <p class="text-white/80">Accredited Training Solutions</p>
+                        </div>
+                    </div>
+                    <p class="text-white/80 mb-4">Empowering individuals and organizations through high-quality, accredited education and training solutions.</p>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="/index.html#about" class="text-white/80 hover:text-[#FFA600] transition duration-200">Why Choose Us</a></li>
+                        <li><a href="/index.html#qualifications" class="text-white/80 hover:text-[#FFA600] transition duration-200">Qualifications</a></li>
+                        <li><a href="/index.html#accreditations" class="text-white/80 hover:text-[#FFA600] transition duration-200">Accreditations</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                 <h4 class="text-lg font-semibold mb-4">Contact Us</h4>
+                    <ul class="space-y-2">
+                        <li><p class="text-white/80">Phone: 012 667 4962</p></li>
+                         <p class="text-white/80">
+    Email: <a href="mailto:help@speccon.co.za" class="underline hover:text-orange">help@speccon.co.za</a>
+  </p>    
+</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-white/80">&copy; 2025 SpecCon Holdings. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+
+    <script>
+        lucide.createIcons();
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+    <!-- Enhanced Dropdown Menu JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const dropdown = document.querySelector('.dropdown');
+            const dropdownButton = document.querySelector('.dropdown button');
+            const dropdownMenu = document.querySelector('.dropdown-menu');
+
+            if (dropdown && dropdownButton) {
+                // Handle click to toggle dropdown
+                dropdownButton.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+                    if (dropdownMenu.style.display === 'block') {
+                        dropdownMenu.style.opacity = '1';
+                        dropdownMenu.style.transform = 'translateY(0)';
+                    }
+                });
+
+                // Close dropdown when clicking outside
+                document.addEventListener('click', function(e) {
+                    if (!dropdown.contains(e.target)) {
+                        dropdownMenu.style.display = 'none';
+                    }
+                });
+
+                // Ensure dropdown works on touch devices
+                dropdownButton.addEventListener('touchstart', function(e) {
+                    e.preventDefault();
+                    dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+                });
+            }
+        });
+    </script>
+
+    <!-- Book Now Modal -->
+    <div id="bookNowModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+            <div class="p-8">
+                <div class="flex items-center justify-between mb-6">
+                    <h2 class="text-2xl font-bold text-[#12265E]">Book This Training</h2>
+                    <button onclick="closeBookNowModal()" class="text-gray-400 hover:text-gray-600">
+                        <i data-lucide="x" class="w-6 h-6"></i>
+                    </button>
+                </div>
+
+                <form id="bookNowForm" onsubmit="submitBooking(event)">
+                    <div class="grid md:grid-cols-2 gap-4 mb-4">
+                        <div>
+                            <label for="firstName" class="block text-sm font-medium text-gray-700 mb-2">First Name *</label>
+                            <input type="text" id="firstName" name="firstName" required
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                        <div>
+                            <label for="lastName" class="block text-sm font-medium text-gray-700 mb-2">Last Name *</label>
+                            <input type="text" id="lastName" name="lastName" required
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-4 mb-4">
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email *</label>
+                            <input type="email" id="email" name="email" required
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="company" class="block text-sm font-medium text-gray-700 mb-2">Company Name *</label>
+                        <input type="text" id="company" name="company" required
+                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="numberOfParticipants" class="block text-sm font-medium text-gray-700 mb-2">Number of Participants *</label>
+                        <select id="numberOfParticipants" name="numberOfParticipants" required
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                            <option value="">Select number of participants</option>
+                            <option value="1">1 participant</option>
+                            <option value="2-5">2-5 participants</option>
+                            <option value="6-10">6-10 participants</option>
+                            <option value="11-20">11-20 participants</option>
+                            <option value="20+">More than 20 participants</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="preferredDate" class="block text-sm font-medium text-gray-700 mb-2">Preferred Training Date</label>
+                        <input type="date" id="preferredDate" name="preferredDate"
+                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                    </div>
+
+                    <div class="mb-6">
+                        <label for="additionalInfo" class="block text-sm font-medium text-gray-700 mb-2">Additional Information</label>
+                        <textarea id="additionalInfo" name="additionalInfo" rows="4"
+                                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
+                                  placeholder="Any specific requirements or questions about the training..."></textarea>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-3">
+                        <button type="submit" class="flex-1 bg-gradient-to-r from-[#12265E] to-[#92ABC4] text-white font-semibold py-3 px-6 rounded-lg hover:from-[#0d1a47] hover:to-[#3a7bc8] transition duration-300">
+                            <i data-lucide="send" class="w-4 h-4 inline mr-2"></i>
+                            Submit Booking Request
+                        </button>
+                        <button type="button" onclick="closeBookNowModal()" class="flex-1 bg-gray-500 text-white font-semibold py-3 px-6 rounded-lg hover:bg-gray-600 transition duration-300">
+                            Cancel
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Book Now Modal Functions
+        function openBookNowModal() {
+            const modal = document.getElementById('bookNowModal');
+            if (modal) {
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeBookNowModal() {
+            const modal = document.getElementById('bookNowModal');
+            if (modal) {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        function submitBooking(event) {
+            event.preventDefault();
+
+            // Get form data
+            const formData = new FormData(event.target);
+            const bookingData = {
+                firstName: formData.get('firstName'),
+                lastName: formData.get('lastName'),
+                email: formData.get('email'),
+                phone: formData.get('phone'),
+                company: formData.get('company'),
+                numberOfParticipants: formData.get('numberOfParticipants'),
+                preferredDate: formData.get('preferredDate'),
+                additionalInfo: formData.get('additionalInfo'),
+                trainingCourse: document.title.split('|')[0].trim()
+            };
+
+            // Show success message
+            alert('Thank you for your booking request! We will contact you shortly to confirm the details.');
+            closeBookNowModal();
+
+            // Reset form
+            event.target.reset();
+
+            // In a real implementation, you would send this data to your server
+            console.log('Booking submitted:', bookingData);
+        }
+
+        // Close modal when clicking outside
+        document.addEventListener('DOMContentLoaded', function() {
+            const bookNowModal = document.getElementById('bookNowModal');
+            if (bookNowModal) {
+                bookNowModal.addEventListener('click', function(e) {
+                    if (e.target === this) {
+                        closeBookNowModal();
+                    }
+                });
+            }
+
+            // Close modal with Escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    closeBookNowModal();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

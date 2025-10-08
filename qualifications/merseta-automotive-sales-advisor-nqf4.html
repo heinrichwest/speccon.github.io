@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automotive Sales Advisor NQF Level 4 | MERseta | SpecCon Holdings</title>
+    <meta name="description" content="Develop professional automotive sales and advisory skills with our NQF Level 4 Automotive Sales Advisor qualification accredited by MERseta. 224 credits, workplace-ready training.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="icon" type="image/png" href="../Images/Logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        nav { font-family: 'Roboto', sans-serif; }
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 10px 10px -5px rgb(0 0 0 / 0.04);
+        }
+        .animate-scroll {
+            animation: scroll 30s linear infinite;
+        }
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+    
+        /* Enquiry Modal Styles */
+        .enquiry-modal {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(4px);
+        }
+
+        .enquiry-modal.show {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .enquiry-modal-content {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-900">
+    <!-- Header -->
+    <header class="bg-white/95 backdrop-blur-md shadow-lg fixed w-full z-50 top-0">
+        <div class="container mx-auto px-4 lg:px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <a href="../home.html">
+                        <img src="../Images/Logo.png" alt="SpecCon Holdings Logo" class="h-12">
+                    </a>
+                    <div class="ml-3">
+                        <h1 class="text-xl font-bold text-[#12265E]">SpecCon Holdings</h1>
+                        <p class="text-sm text-gray-600">Automotive Sales Advisor Qualification</p>
+                    </div>
+                </div>
+
+                <nav class="hidden lg:flex items-center space-x-8">
+                    <a href="../home.html" class="text-[#12265E] hover:text-[#FFA600] font-medium transition duration-300">Home</a>
+                    <a href="../setas/merseta.html" class="text-[#12265E] hover:text-[#FFA600] font-medium transition duration-300">MERseta</a>
+                    <a href="../home.html#qualifications" class="text-[#12265E] hover:text-[#FFA600] font-medium transition duration-300">All Qualifications</a>
+                    <button onclick="openEnquiryModal()" class="text-[#12265E] hover:text-[#FFA600] font-medium transition duration-300">Contact Us</button>
+                </nav>
+
+                <div class="hidden lg:block">
+                    <button onclick="openEnquiryModal()" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold px-6 py-3 rounded-lg hover:from-blue-700 hover:to-purple-700 transition duration-300 shadow-lg">
+                        Apply Now
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <section class="pt-24 pb-8 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <nav class="text-sm text-gray-600">
+                <a href="../home.html" class="hover:text-[#ffa600]">Home</a>
+                <span class="mx-2">/</span>
+                <a href="../setas/merseta.html" class="hover:text-blue-600">MERseta</a>
+                <span class="mx-2">/</span>
+                <span class="text-[#12265E] font-semibold">Automotive Sales Advisor NQF Level 4</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="py-16 bg-gradient-to-br from-blue-50 to-white">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-[#ffffff]/70 rounded-2xl flex items-center justify-center mr-6">
+                            <i data-lucide="car" class="w-8 h-8 text-[#ffa600]"></i>
+                        </div>
+                        <div>
+                            <span class="text-[#ffa600] font-semibold">NQF Level 4 | MERseta</span>
+                            <h1 class="text-4xl md:text-5xl font-bold text-[#12265E]">Automotive Sales Advisor</h1>
+                        </div>
+                    </div>
+                    <p class="text-lg text-gray-600 leading-relaxed mb-8">
+                        Develop professional automotive sales and customer advisory skills for the motor industry.
+                        This qualification prepares you for advanced sales roles in automotive dealerships and related businesses.
+                    </p>
+                    <div class="grid grid-cols-3 gap-4 mb-8">
+                        <div class="text-center p-4 bg-[#12265E] rounded-lg shadow">
+                            <div class="text-xl font-bold text-white">224</div>
+                            <div class="text-sm text-gray-600">Credits</div>
+                        </div>
+                        <div class="text-center p-4 bg-[#92abc4] rounded-lg shadow">
+                            <div class="text-xl font-bold text-[#12265E]">18</div>
+                            <div class="text-sm text-[#12265E]/80">Months</div>
+                        </div>
+                        <div class="text-center p-4 bg-[#12265E] rounded-lg shadow">
+                            <div class="text-xl font-bold text-white">NQF 4</div>
+                            <div class="text-sm text-white/80">Level</div>
+                        </div>
+                    </div>
+                    <button onclick="openEnquiryModal()" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold py-3 px-8 rounded-lg hover:from-blue-700 hover:to-purple-700 transition duration-300 shadow-lg">
+                        Apply for This Qualification
+                    </button>
+                </div>
+                <div>
+                    <img src="https://images.pexels.com/photos/3822864/pexels-photo-3822864.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                         alt="Automotive sales professional with customer"
+                         class="rounded-2xl shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Qualification Details -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-3 gap-12">
+                <!-- Main Content -->
+                <div class="lg:col-span-2">
+                    <h2 class="text-3xl font-bold text-[#12265E] mb-8">Qualification Overview</h2>
+
+                    <div class="prose max-w-none mb-12">
+                        <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                            The Automotive Sales Advisor qualification is designed for individuals who want to excel in automotive sales and customer advisory roles.
+                            This comprehensive program covers advanced sales techniques, product knowledge, customer relationship management,
+                            and the specialized skills needed to succeed in the automotive industry.
+                        </p>
+
+                        <h3 class="text-2xl font-bold text-[#12265E] mb-4">Learning Outcomes</h3>
+                        <p class="text-gray-600 mb-6">Upon completion of this qualification, learners will be able to:</p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-6 h-6 text-[#ffa600] mr-3 mt-1 flex-shrink-0"></i>
+                                <span>Apply advanced automotive sales techniques and strategies</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-6 h-6 text-[#ffa600] mr-3 mt-1 flex-shrink-0"></i>
+                                <span>Demonstrate comprehensive knowledge of automotive products and features</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-6 h-6 text-[#ffa600] mr-3 mt-1 flex-shrink-0"></i>
+                                <span>Provide expert customer advisory services throughout the sales process</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-6 h-6 text-[#ffa600] mr-3 mt-1 flex-shrink-0"></i>
+                                <span>Manage customer relationships and build long-term business partnerships</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-6 h-6 text-[#ffa600] mr-3 mt-1 flex-shrink-0"></i>
+                                <span>Navigate financing options and insurance products for customers</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-6 h-6 text-[#ffa600] mr-3 mt-1 flex-shrink-0"></i>
+                                <span>Comply with automotive industry regulations and standards</span>
+                            </li>
+                        </ul>
+
+                        <h3 class="text-2xl font-bold text-[#12265E] mb-4">Career Opportunities</h3>
+                        <p class="text-gray-600 mb-6">This qualification opens doors to various career opportunities including:</p>
+                        <div class="grid md:grid-cols-2 gap-4 mb-8">
+                            <div class="flex items-center">
+                                <i data-lucide="briefcase" class="w-5 h-5 text-[#ffa600] mr-3"></i>
+                                <span>Automotive Sales Consultant</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i data-lucide="briefcase" class="w-5 h-5 text-[#ffa600] mr-3"></i>
+                                <span>Vehicle Sales Advisor</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i data-lucide="briefcase" class="w-5 h-5 text-[#ffa600] mr-3"></i>
+                                <span>Automotive Sales Manager</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i data-lucide="briefcase" class="w-5 h-5 text-[#ffa600] mr-3"></i>
+                                <span>Motor Industry Specialist</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i data-lucide="briefcase" class="w-5 h-5 text-[#ffa600] mr-3"></i>
+                                <span>Customer Relationship Manager</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i data-lucide="briefcase" class="w-5 h-5 text-[#ffa600] mr-3"></i>
+                                <span>Fleet Sales Coordinator</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modules -->
+                    <h3 class="text-2xl font-bold text-[#12265E] mb-6">Core Modules</h3>
+                    <div class="bg-yellow-50 border-l-4 border-yellow-500 p-6 rounded-r-lg text-yellow-800 mb-8">
+                        <h4 class="font-bold text-lg mb-2">Module Details Coming Soon</h4>
+                        <p>The detailed curriculum modules are currently being finalized. This section will be updated with comprehensive module information once available.</p>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="lg:col-span-1">
+                    <div class="bg-white border border-gray-200 rounded-2xl shadow-lg p-8 sticky top-24">
+                        <h3 class="text-xl font-bold text-[#12265E] mb-6">Qualification Details</h3>
+
+                        <div class="space-y-4 mb-8">
+                            <div class="flex justify-between items-center py-3 border-b border-gray-100">
+                                <span class="text-gray-600">SETA</span>
+                                <span class="font-semibold">MERseta</span>
+                            </div>
+                            <div class="flex justify-between items-center py-3 border-b border-gray-100">
+                                <span class="text-gray-600">NQF Level</span>
+                                <span class="font-semibold">Level 4</span>
+                            </div>
+                            <div class="flex justify-between items-center py-3 border-b border-gray-100">
+                                <span class="text-gray-600">Credits</span>
+                                <span class="font-semibold">224 Credits</span>
+                            </div>
+                            <div class="flex justify-between items-center py-3 border-b border-gray-100">
+                                <span class="text-gray-600">Duration</span>
+                                <span class="font-semibold">18 Months</span>
+                            </div>
+                            <div class="flex justify-between items-center py-3 border-b border-gray-100">
+                                <span class="text-gray-600">Qualification ID</span>
+                                <span class="font-semibold">118097</span>
+                            </div>
+                            <div class="flex justify-between items-center py-3 border-b border-gray-100">
+                                <span class="text-gray-600">Expiry Date</span>
+                                <span class="font-semibold">14-May-29</span>
+                            </div>
+                            <div class="flex justify-between items-center py-3 border-b border-gray-100">
+                                <span class="text-gray-600">Status</span>
+                                <span class="font-semibold text-green-600">Accredited</span>
+                            </div>
+                            <div class="flex justify-between items-center py-3 border-b border-gray-100">
+                                <span class="text-gray-600">Reference</span>
+                                <span class="font-semibold">QCTO Cambridge</span>
+                            </div>
+                        </div>
+
+                        <div class="space-y-4">
+                            <a href="../learnership-application.html" class="block w-full bg-gradient-to-r from-[#12265E] to-[#92ABC4] text-white font-bold py-3 px-6 rounded-lg text-center hover:from-[#0d1a47] hover:to-[#7a95af] transition duration-300">
+                                Apply for Learnership
+                            </a>
+                            <button onclick="openEnquireModal()" class="block w-full border-2 border-[#12265E] text-[#12265E] font-bold py-3 px-6 rounded-lg text-center hover:bg-[#12265E] hover:text-white transition duration-300">
+                                Request Information
+                            </button>
+                        </div>
+
+                        <div class="mt-8 p-4 bg-[#92abc4] rounded-lg">
+                            <h4 class="font-bold text-[#12265E] mb-2">Need Help?</h4>
+                            <p class="text-sm text-gray-600 mb-3">Contact our qualification specialists for guidance.</p>
+                            <a href="mailto:help@speccon.co.za" class="text-[#ffa600] hover:text-[#ffa600] font-medium text-sm">help@speccon.co.za</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Qualifications -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#12265E] mb-4">Related Qualifications</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Explore other qualifications from different SETAs</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <a href="services-customer-service-nqf2.html" class="bg-white rounded-2xl shadow-lg p-6 card-hover transition-all duration-300 block">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-[#ffffff]/70 rounded-lg flex items-center justify-center mr-4">
+                            <i data-lucide="headphones" class="w-6 h-6 text-[#ffa600]"></i>
+                        </div>
+                        <div>
+                            <span class="text-sm text-[#ffa600] font-medium">NQF Level 2</span>
+                            <h3 class="font-bold text-lg text-[#12265E]">Customer Service</h3>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm">Essential customer service skills for various business environments.</p>
+                </a>
+
+                <a href="services-business-administration-nqf4.html" class="bg-white rounded-2xl shadow-lg p-6 card-hover transition-all duration-300 block">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-[#ffffff]/70 rounded-lg flex items-center justify-center mr-4">
+                            <i data-lucide="briefcase" class="w-6 h-6 text-[#ffa600]"></i>
+                        </div>
+                        <div>
+                            <span class="text-sm text-[#ffa600] font-medium">NQF Level 4</span>
+                            <h3 class="font-bold text-lg text-[#12265E]">Business Administration</h3>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm">Advanced business and administrative management skills.</p>
+                </a>
+
+                <a href="wr-retail-operations-nqf2.html" class="bg-white rounded-2xl shadow-lg p-6 card-hover transition-all duration-300 block">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-[#ffffff]/70 rounded-lg flex items-center justify-center mr-4">
+                            <i data-lucide="shopping-cart" class="w-6 h-6 text-[#ffa600]"></i>
+                        </div>
+                        <div>
+                            <span class="text-sm text-[#ffa600] font-medium">NQF Level 2</span>
+                            <h3 class="font-bold text-lg text-[#12265E]">Retail Operations</h3>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm">Fundamental retail operations and customer service skills.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    
+    <footer class="bg-gradient-to-r from-[#12265E] to-[#92ABC4] text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <img src="Images/SpecCon-LOGO.png" alt="SpecCon Holdings Logo" class="h-12">
+                        <div>
+                            <h3 class="text-xl font-bold">SpecCon Holdings</h3>
+                            <p class="text-white/80">Accredited Training Solutions</p>
+                        </div>
+                    </div>
+                    <p class="text-white/80 mb-4">Empowering individuals and organizations through high-quality, accredited education and training solutions.</p>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="/index.html#about" class="text-white/80 hover:text-[#FFA600] transition duration-200">Why Choose Us</a></li>
+                        <li><a href="/index.html#qualifications" class="text-white/80 hover:text-[#FFA600] transition duration-200">Qualifications</a></li>
+                        <li><a href="/index.html#accreditations" class="text-white/80 hover:text-[#FFA600] transition duration-200">Accreditations</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Us</h4>
+                    <ul class="space-y-2">
+                        <li><p class="text-white/80">Phone: 012 667 4962</p></li>
+                        <li><p class="text-white/80">Email: <a href="mailto:help@speccon.co.za" class="text-white/80 hover:text-white transition duration-200">help@speccon.co.za</a></p></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-white/80">&copy; 2025 SpecCon Holdings. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+
+    <script>
+        lucide.createIcons();
+    </script>
+    <script>
+
+        stickyBanner.addEventListener("click", function() {
+            bannerPopup.classList.toggle("show");
+            isPopupOpen = !isPopupOpen;
+        });
+
+        // Close popup
+        closePopup.addEventListener("click", function() {
+            bannerPopup.classList.remove("show");
+            isPopupOpen = false;
+        });
+
+        // Close popup when clicking outside
+        document.addEventListener("click", function(e) {
+            if (!stickyBanner.contains(e.target) && !bannerPopup.contains(e.target)) {
+                bannerPopup.classList.remove("show");
+                isPopupOpen = false;
+            }
+        });
+    </script>
+
+    <!-- Enquiry Modal -->
+    <div id="enquiry-modal" class="enquiry-modal">
+        <div class="enquiry-modal-content">
+            <div class="flex justify-between items-center p-6 border-b">
+                <h2 class="text-2xl font-bold text-gray-800">Enquire Now</h2>
+                <button onclick="closeEnquiryModal()" class="text-gray-400 hover:text-gray-600 text-xl">
+                    <span>&times;</span>
+                </button>
+            </div>
+            <div class="p-6">
+                <form id="enquiry-form" class="space-y-4">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">First Name *</label>
+                            <input type="text" name="firstName" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Last Name *</label>
+                            <input type="text" name="lastName" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Email *</label>
+                            <input type="email" name="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Phone *</label>
+                            <input type="tel" name="phone" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Company</label>
+                        <input type="text" name="company" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                        <textarea name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"></textarea>
+                    </div>
+                    <div class="flex gap-4 pt-4">
+                        <button type="submit" class="flex-1 bg-gradient-to-r from-[#12265E] to-[#92ABC4] text-white font-semibold py-3 px-6 rounded-lg hover:from-[#0d1a47] hover:to-[#3a7bc8] transition duration-300">
+                            Submit Enquiry
+                        </button>
+                        <button type="button" onclick="closeEnquiryModal()" class="flex-1 bg-gray-500 text-white font-semibold py-3 px-6 rounded-lg hover:bg-gray-600 transition duration-300">
+                            Cancel
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Enquiry Modal Script -->
+    <script>
+        function openEnquiryModal() {
+            const modal = document.getElementById('enquiry-modal');
+            if (modal) {
+                modal.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeEnquiryModal() {
+            const modal = document.getElementById('enquiry-modal');
+            if (modal) {
+                modal.classList.remove('show');
+                document.body.style.overflow = '';
+            }
+        }
+
+        // Handle form submission
+        document.getElementById('enquiry-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your enquiry! We will contact you soon.');
+            closeEnquiryModal();
+            this.reset();
+        });
+
+        // Close modal when clicking outside
+        document.getElementById('enquiry-modal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeEnquiryModal();
+            }
+        });
+    </script>
+
+    <script src="../js/centralized-modals.js"></script>
+    <script src="../js/value-adds-popup.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forklift Operations Training | SpecCon Holdings</title>
+    <meta name="description" content="Professional forklift operations training course. Learn safe forklift operation, pre-operational checks, load handling, and workplace safety protocols.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="../js/centralized-modals.js"></script>
+
+    <style>
+        nav { font-family: 'Roboto', sans-serif; }
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 10px 10px -5px rgb(0 0 0 / 0.04);
+        }
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        .dropdown-menu {
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-900">
+    <!-- Header -->
+    <header class="bg-white/95 backdrop-blur-md shadow-lg fixed w-full z-50 top-0">
+        <div class="container mx-auto px-4 lg:px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <a href="../index.html">
+                        <img src="../Images/Logo.png" alt="SpecCon Holdings Logo" class="h-12">
+                    </a>
+                    <div class="ml-3">
+                        <h1 class="text-xl font-bold text-[#12265E]">SpecCon Holdings</h1>
+                        <p class="text-sm text-[#ffa600]">Services SETA Qualifications</p>
+                    </div>
+                </div>
+
+                <nav class="hidden lg:flex items-center space-x-4">
+                    <a href="../index.html" class="text-[#12265E] hover:text-[#FFA600] font-medium transition duration-300 text-sm whitespace-nowrap">Home</a>
+                    <a href="../index.html#about" class="text-[#12265E] hover:text-[#FFA600] font-medium transition duration-300 text-sm whitespace-nowrap">Why Choose Us</a>
+                    <a href="../index.html#qualifications" class="text-[#12265E] hover:text-[#FFA600] font-medium transition duration-300 text-sm whitespace-nowrap">Qualifications</a>
+                    <a href="../index.html#accreditations" class="text-[#12265E] hover:text-[#FFA600] font-medium transition duration-300 text-sm whitespace-nowrap">Accreditations</a>
+                    <a href="../index.html#classroom-training" class="text-[#12265E] hover:text-[#FFA600] font-medium transition duration-300 text-sm whitespace-nowrap">Classroom Training</a>
+                    <div class="relative dropdown">
+                        <button class="text-[#12265E] hover:text-[#FFA600] font-medium transition duration-300 flex items-center text-sm whitespace-nowrap">
+                            Other Products <i data-lucide="chevron-down" class="w-4 h-4 ml-1"></i>
+                        </button>
+                        <div class="dropdown-menu absolute -left-16 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-20">
+                            <a href="professional-development.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Professional Development</a>
+                            <a href="intro-to-ai-training.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">AI Training Courses</a>
+                            <a href="cyber-security-training.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Cyber Security Training</a>
+                            <a href="compliance-courses.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Compliance Training</a>
+                        </div>
+                    </div>
+                </nav>
+
+                <div class="hidden lg:block">
+                    <button onclick="openBookNowModal()" data-modal="book" data-course="Forklift Operations" class="bg-gradient-to-r from-yellow-500 to-orange-600 text-white font-semibold px-6 py-3 rounded-lg hover:from-yellow-600 hover:to-orange-700 transition duration-300 shadow-lg">
+                        Book Training
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <section class="pt-24 pb-8 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <nav class="text-sm text-gray-600">
+                <a href="../index.html" class="hover:text-blue-600">Home</a>
+                <span class="mx-2">/</span>
+                <a href="../index.html#classroom-training" class="hover:text-blue-600">Classroom Training</a>
+                <span class="mx-2">/</span>
+                <span class="text-gray-900">Forklift Operations Training</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="py-16 bg-gradient-to-br from-yellow-50 to-orange-50">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-yellow-100 rounded-2xl flex items-center justify-center mr-6">
+                            <i data-lucide="truck" class="w-8 h-8 text-yellow-600"></i>
+                        </div>
+                        <div>
+                            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-2">Forklift Operations</h1>
+                            <p class="text-xl text-yellow-600 font-semibold">Professional Equipment Operation Training</p>
+                        </div>
+                    </div>
+                    <p class="text-lg text-gray-600 leading-relaxed mb-8">
+                        Master safe and efficient forklift operation with comprehensive training covering safety protocols,
+                        pre-operational checks, load handling techniques, and regulatory compliance for warehouse and
+                        industrial environments.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="text-center p-4 bg-white rounded-lg shadow">
+                            <div class="text-2xl font-bold text-yellow-600">3 Days</div>
+                            <div class="text-sm text-gray-600">Duration</div>
+                        </div>
+                        <div class="text-center p-4 bg-white rounded-lg shadow">
+                            <div class="text-2xl font-bold text-green-600">Certified</div>
+                            <div class="text-sm text-gray-600">Upon Completion</div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <img src="https://images.pexels.com/photos/1267338/pexels-photo-1267338.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                         alt="Forklift operating in warehouse"
+                         class="rounded-2xl shadow-2xl w-full h-auto max-w-lg mx-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Overview -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-[#12265E] mb-4">What This Course About?</h2>
+                    <p class="text-xl text-[#ffa600]">Comprehensive forklift operation and safety training</p>
+                </div>
+
+                <div class="bg-gray-50 rounded-2xl p-8 mb-12">
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        This comprehensive forklift operations course provides essential training for safe and efficient
+                        forklift operation in warehouse and industrial environments. Participants will learn proper operating
+                        techniques, safety protocols, pre-operational inspections, load handling procedures, and regulatory
+                        compliance requirements. The course combines theoretical knowledge with practical hands-on training
+                        to ensure operators can work safely and effectively while minimizing workplace accidents and equipment damage.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8 mb-12">
+                    <div class="bg-white border border-gray-200 rounded-xl p-6">
+                        <h3 class="text-xl font-bold text-[#12265E] mb-4">Why Take This Course?</h3>
+                        <ul class="space-y-3 text-gray-600">
+                            <li class="flex items-center">
+                                <i data-lucide="check" class="w-4 h-4 text-green-600 mr-2"></i>
+                                Legal requirement for forklift operators
+                            </li>
+                            <li class="flex items-center">
+                                <i data-lucide="check" class="w-4 h-4 text-green-600 mr-2"></i>
+                                Reduce workplace accidents and injuries
+                            </li>
+                            <li class="flex items-center">
+                                <i data-lucide="check" class="w-4 h-4 text-green-600 mr-2"></i>
+                                Improve operational efficiency
+                            </li>
+                            <li class="flex items-center">
+                                <i data-lucide="check" class="w-4 h-4 text-green-600 mr-2"></i>
+                                Minimize equipment damage and costs
+                            </li>
+                            <li class="flex items-center">
+                                <i data-lucide="check" class="w-4 h-4 text-green-600 mr-2"></i>
+                                Career advancement opportunities
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-white border border-gray-200 rounded-xl p-6">
+                        <h3 class="text-xl font-bold text-[#12265E] mb-4">Who Should Attend</h3>
+                        <ul class="space-y-3 text-gray-600">
+                            <li class="flex items-center">
+                                <i data-lucide="user" class="w-4 h-4 text-blue-600 mr-2"></i>
+                                New forklift operators
+                            </li>
+                            <li class="flex items-center">
+                                <i data-lucide="user" class="w-4 h-4 text-blue-600 mr-2"></i>
+                                Warehouse personnel
+                            </li>
+                            <li class="flex items-center">
+                                <i data-lucide="user" class="w-4 h-4 text-blue-600 mr-2"></i>
+                                Manufacturing workers
+                            </li>
+                            <li class="flex items-center">
+                                <i data-lucide="user" class="w-4 h-4 text-blue-600 mr-2"></i>
+                                Logistics coordinators
+                            </li>
+                            <li class="flex items-center">
+                                <i data-lucide="user" class="w-4 h-4 text-blue-600 mr-2"></i>
+                                Safety supervisors
+                            </li>
+                            <li class="flex items-center">
+                                <i data-lucide="user" class="w-4 h-4 text-blue-600 mr-2"></i>
+                                Anyone requiring forklift certification
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Content -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-[#12265E] mb-4">Course Content</h2>
+                    <p class="text-xl text-[#ffa600]">Comprehensive curriculum covering all aspects of forklift operations</p>
+                </div>
+
+                <div class="space-y-6">
+                    <!-- Module 1 -->
+                    <div class="bg-white rounded-xl p-6 shadow-sm">
+                        <h3 class="text-xl font-bold text-[#12265E] mb-4 flex items-center">
+                            <span class="w-8 h-8 bg-yellow-100 rounded-lg flex items-center justify-center mr-3">
+                                <span class="text-yellow-600 font-bold">1</span>
+                            </span>
+                            Introduction to Forklift Operations
+                        </h3>
+                        <ul class="space-y-2 text-gray-600 ml-11">
+                            <li>• Types of forklifts and their applications</li>
+                            <li>• Forklift components and controls</li>
+                            <li>• Legal requirements and regulations</li>
+                            <li>• Operator responsibilities and qualifications</li>
+                            <li>• Workplace safety standards</li>
+                        </ul>
+                    </div>
+
+                    <!-- Module 2 -->
+                    <div class="bg-white rounded-xl p-6 shadow-sm">
+                        <h3 class="text-xl font-bold text-[#12265E] mb-4 flex items-center">
+                            <span class="w-8 h-8 bg-yellow-100 rounded-lg flex items-center justify-center mr-3">
+                                <span class="text-yellow-600 font-bold">2</span>
+                            </span>
+                            Pre-Operational Safety Checks
+                        </h3>
+                        <ul class="space-y-2 text-gray-600 ml-11">
+                            <li>• Daily inspection procedures</li>
+                            <li>• Hydraulic system checks</li>
+                            <li>• Brake and steering system inspection</li>
+                            <li>• Tire and wheel condition assessment</li>
+                            <li>• Safety equipment verification</li>
+                            <li>• Documentation and reporting</li>
+                        </ul>
+                    </div>
+
+                    <!-- Module 3 -->
+                    <div class="bg-white rounded-xl p-6 shadow-sm">
+                        <h3 class="text-xl font-bold text-[#12265E] mb-4 flex items-center">
+                            <span class="w-8 h-8 bg-yellow-100 rounded-lg flex items-center justify-center mr-3">
+                                <span class="text-yellow-600 font-bold">3</span>
+                            </span>
+                            Operating Techniques and Procedures
+                        </h3>
+                        <ul class="space-y-2 text-gray-600 ml-11">
+                            <li>• Starting and stopping procedures</li>
+                            <li>• Steering and maneuvering techniques</li>
+                            <li>• Speed control and safe driving practices</li>
+                            <li>• Turning and cornering safely</li>
+                            <li>• Operating on ramps and inclines</li>
+                            <li>• Parking and securing procedures</li>
+                        </ul>
+                    </div>
+
+                    <!-- Module 4 -->
+                    <div class="bg-white rounded-xl p-6 shadow-sm">
+                        <h3 class="text-xl font-bold text-[#12265E] mb-4 flex items-center">
+                            <span class="w-8 h-8 bg-yellow-100 rounded-lg flex items-center justify-center mr-3">
+                                <span class="text-yellow-600 font-bold">4</span>
+                            </span>
+                            Load Handling and Lifting Operations
+                        </h3>
+                        <ul class="space-y-2 text-gray-600 ml-11">
+                            <li>• Load capacity and stability principles</li>
+                            <li>• Proper lifting and lowering techniques</li>
+                            <li>• Load positioning and securing</li>
+                            <li>• Center of gravity considerations</li>
+                            <li>• Handling different types of loads</li>
+                            <li>• Stacking and de-stacking procedures</li>
+                        </ul>
+                    </div>
+
+                    <!-- Module 5 -->
+                    <div class="bg-white rounded-xl p-6 shadow-sm">
+                        <h3 class="text-xl font-bold text-[#12265E] mb-4 flex items-center">
+                            <span class="w-8 h-8 bg-yellow-100 rounded-lg flex items-center justify-center mr-3">
+                                <span class="text-yellow-600 font-bold">5</span>
+                            </span>
+                            Workplace Safety and Hazard Management
+                        </h3>
+                        <ul class="space-y-2 text-gray-600 ml-11">
+                            <li>• Identifying workplace hazards</li>
+                            <li>• Pedestrian safety and right-of-way</li>
+                            <li>• Working around other equipment</li>
+                            <li>• Overhead obstacles and clearances</li>
+                            <li>• Emergency procedures and responses</li>
+                            <li>• Accident prevention strategies</li>
+                        </ul>
+                    </div>
+
+                    <!-- Module 6 -->
+                    <div class="bg-white rounded-xl p-6 shadow-sm">
+                        <h3 class="text-xl font-bold text-[#12265E] mb-4 flex items-center">
+                            <span class="w-8 h-8 bg-yellow-100 rounded-lg flex items-center justify-center mr-3">
+                                <span class="text-yellow-600 font-bold">6</span>
+                            </span>
+                            Maintenance and Troubleshooting
+                        </h3>
+                        <ul class="space-y-2 text-gray-600 ml-11">
+                            <li>• Basic maintenance procedures</li>
+                            <li>• Identifying common problems</li>
+                            <li>• When to seek professional help</li>
+                            <li>• Battery care and charging (electric forklifts)</li>
+                            <li>• Fuel handling and safety (gas/diesel forklifts)</li>
+                            <li>• Record keeping and documentation</li>
+                        </ul>
+                    </div>
+
+                    <!-- Module 7 -->
+                    <div class="bg-white rounded-xl p-6 shadow-sm">
+                        <h3 class="text-xl font-bold text-[#12265E] mb-4 flex items-center">
+                            <span class="w-8 h-8 bg-yellow-100 rounded-lg flex items-center justify-center mr-3">
+                                <span class="text-yellow-600 font-bold">7</span>
+                            </span>
+                            Practical Training and Assessment
+                        </h3>
+                        <ul class="space-y-2 text-gray-600 ml-11">
+                            <li>• Hands-on forklift operation</li>
+                            <li>• Load handling exercises</li>
+                            <li>• Maneuvering through obstacle courses</li>
+                            <li>• Emergency scenario simulations</li>
+                            <li>• Practical skill assessment</li>
+                            <li>• Written examination</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learning Outcomes -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-[#12265E] mb-4">Learning Outcomes</h2>
+                    <p class="text-xl text-[#ffa600]">Upon completion, participants will be able to:</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 bg-[#ffffff]/70 rounded-full flex items-center justify-center mt-1">
+                                <i data-lucide="check" class="w-3 h-3 text-green-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-[#12265E]">Safe Operation</h4>
+                                <p class="text-[#ffa600]">Operate forklifts safely in various workplace environments</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 bg-[#ffffff]/70 rounded-full flex items-center justify-center mt-1">
+                                <i data-lucide="check" class="w-3 h-3 text-green-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-[#12265E]">Pre-Operational Checks</h4>
+                                <p class="text-[#ffa600]">Conduct thorough pre-operational safety inspections</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 bg-[#ffffff]/70 rounded-full flex items-center justify-center mt-1">
+                                <i data-lucide="check" class="w-3 h-3 text-green-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-[#12265E]">Load Handling</h4>
+                                <p class="text-[#ffa600]">Handle various types of loads safely and efficiently</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 bg-[#ffffff]/70 rounded-full flex items-center justify-center mt-1">
+                                <i data-lucide="check" class="w-3 h-3 text-green-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-[#12265E]">Regulatory Compliance</h4>
+                                <p class="text-[#ffa600]">Understand and comply with safety regulations</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 bg-[#ffffff]/70 rounded-full flex items-center justify-center mt-1">
+                                <i data-lucide="check" class="w-3 h-3 text-green-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-[#12265E]">Hazard Recognition</h4>
+                                <p class="text-[#ffa600]">Identify and manage workplace hazards effectively</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 bg-[#ffffff]/70 rounded-full flex items-center justify-center mt-1">
+                                <i data-lucide="check" class="w-3 h-3 text-green-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-[#12265E]">Emergency Response</h4>
+                                <p class="text-[#ffa600]">Respond appropriately to emergency situations</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 bg-[#ffffff]/70 rounded-full flex items-center justify-center mt-1">
+                                <i data-lucide="check" class="w-3 h-3 text-green-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-[#12265E]">Maintenance Awareness</h4>
+                                <p class="text-[#ffa600]">Perform basic maintenance and troubleshooting</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 bg-[#ffffff]/70 rounded-full flex items-center justify-center mt-1">
+                                <i data-lucide="check" class="w-3 h-3 text-green-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-[#12265E]">Documentation</h4>
+                                <p class="text-[#ffa600]">Maintain proper records and documentation</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Details -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="text-center p-6 bg-white rounded-xl">
+                        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="clock" class="w-6 h-6 text-blue-600"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-[#12265E] mb-2">Duration</h3>
+                        <p class="text-[#ffa600]">3 Days (24 Hours)</p>
+                    </div>
+
+                    <div class="text-center p-6 bg-white rounded-xl">
+                        <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="users" class="w-6 h-6 text-green-600"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-[#12265E] mb-2">Delivery</h3>
+                        <p class="text-[#ffa600]">Classroom & Practical</p>
+                    </div>
+
+                    <div class="text-center p-6 bg-white rounded-xl">
+                        <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="award" class="w-6 h-6 text-[#ffa600]"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-[#12265E] mb-2">Certification</h3>
+                        <p class="text-[#ffa600]">Valid for 3 Years</p>
+                    </div>
+                </div>
+
+                <div class="mt-12 bg-yellow-50 rounded-xl p-6 border border-yellow-200">
+                    <div class="flex items-start space-x-3">
+                        <i data-lucide="alert-triangle" class="w-6 h-6 text-yellow-600 mt-1"></i>
+                        <div>
+                            <h4 class="font-semibold text-[#12265E] mb-2">Prerequisites</h4>
+                            <ul class="text-gray-700 space-y-1">
+                                <li>• Minimum age of 18 years</li>
+                                <li>• Valid driver's license preferred</li>
+                                <li>• Basic understanding of workplace safety</li>
+                                <li>• Physical ability to operate machinery</li>
+                                <li>• Clear vision and hearing (corrected vision acceptable)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-gradient-to-r from-yellow-500 to-orange-600">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Get Certified?</h2>
+            <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+                Start your forklift operator certification today and advance your career in logistics and warehousing.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button onclick="openBookNowModal()" data-modal="book" data-course="Forklift Operations" class="bg-white text-yellow-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition duration-300">
+                    Book This Course
+                </button>
+                <button onclick="openBookNowModal()" data-modal="book" data-course="Forklift Operations" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-orange-600 transition duration-300">Get More Information</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    
+    <footer class="bg-gradient-to-r from-[#12265E] to-[#92ABC4] text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <img src="../Images/SpecCon-LOGO.png" alt="SpecCon Holdings Logo" class="h-12 mr-3">
+                        <div>
+                            <h3 class="text-xl font-bold">SpecCon Holdings</h3>
+                            <p class="text-white/80">Accredited Training Solutions</p>
+                        </div>
+                    </div>
+                    <p class="text-white/80 mb-4">Empowering individuals and organizations through high-quality, accredited education and training solutions.</p>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="/index.html#about" class="text-white/80 hover:text-[#FFA600] transition duration-200">Why Choose Us</a></li>
+                        <li><a href="/index.html#qualifications" class="text-white/80 hover:text-[#FFA600] transition duration-200">Qualifications</a></li>
+                        <li><a href="/index.html#accreditations" class="text-white/80 hover:text-[#FFA600] transition duration-200">Accreditations</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Us</h4>
+                    <ul class="space-y-2">
+                        <li><p class="text-white/80">Phone: 012 667 4962</p></li>
+                         <p class="text-white/80">
+    Email: <a href="mailto:help@speccon.co.za" class="underline hover:text-orange">help@speccon.co.za</a>
+  </p>    
+</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-white/80">&copy; 2025 SpecCon Holdings. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+
+    <script>
+        lucide.createIcons();
+    </script>
+
+    <!-- Enquiry Modal Script -->
+    <script>
+        function openEnquiryModal() {
+            const modal = document.getElementById('enquiry-modal');
+            if (modal) {
+                modal.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeEnquiryModal() {
+            const modal = document.getElementById('enquiry-modal');
+            if (modal) {
+                modal.classList.remove('show');
+                document.body.style.overflow = '';
+            }
+        }
+    </script>
+
+
+    <!-- Book Now Modal -->
+    <div id="bookNowModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+            <div class="p-8">
+                <div class="flex items-center justify-between mb-6">
+                    <h2 class="text-2xl font-bold text-[#12265E]">Book This Training</h2>
+                    <button onclick="closeBookNowModal()" class="text-gray-400 hover:text-gray-600">
+                        <i data-lucide="x" class="w-6 h-6"></i>
+                    </button>
+                </div>
+
+                <form id="bookNowForm" onsubmit="submitBooking(event)">
+                    <div class="grid md:grid-cols-2 gap-4 mb-4">
+                        <div>
+                            <label for="firstName" class="block text-sm font-medium text-gray-700 mb-2">First Name *</label>
+                            <input type="text" id="firstName" name="firstName" required
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                        <div>
+                            <label for="lastName" class="block text-sm font-medium text-gray-700 mb-2">Last Name *</label>
+                            <input type="text" id="lastName" name="lastName" required
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-4 mb-4">
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email *</label>
+                            <input type="email" id="email" name="email" required
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="company" class="block text-sm font-medium text-gray-700 mb-2">Company Name *</label>
+                        <input type="text" id="company" name="company" required
+                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="numberOfParticipants" class="block text-sm font-medium text-gray-700 mb-2">Number of Participants *</label>
+                        <select id="numberOfParticipants" name="numberOfParticipants" required
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                            <option value="">Select number of participants</option>
+                            <option value="1">1 participant</option>
+                            <option value="2-5">2-5 participants</option>
+                            <option value="6-10">6-10 participants</option>
+                            <option value="11-20">11-20 participants</option>
+                            <option value="20+">More than 20 participants</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="preferredDate" class="block text-sm font-medium text-gray-700 mb-2">Preferred Training Date</label>
+                        <input type="date" id="preferredDate" name="preferredDate"
+                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                    </div>
+
+                    <div class="mb-6">
+                        <label for="additionalInfo" class="block text-sm font-medium text-gray-700 mb-2">Additional Information</label>
+                        <textarea id="additionalInfo" name="additionalInfo" rows="4"
+                                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
+                                  placeholder="Any specific requirements or questions about the training..."></textarea>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-3">
+                        <button type="submit" class="flex-1 bg-gradient-to-r from-[#12265E] to-[#92ABC4] text-white font-semibold py-3 px-6 rounded-lg hover:from-[#0d1a47] hover:to-[#3a7bc8] transition duration-300">
+                            <i data-lucide="send" class="w-4 h-4 inline mr-2"></i>
+                            Submit Booking Request
+                        </button>
+                        <button type="button" onclick="closeBookNowModal()" class="flex-1 bg-gray-500 text-white font-semibold py-3 px-6 rounded-lg hover:bg-gray-600 transition duration-300">
+                            Cancel
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Book Now Modal Functions
+        function openBookNowModal() {
+            const modal = document.getElementById('bookNowModal');
+            if (modal) {
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeBookNowModal() {
+            const modal = document.getElementById('bookNowModal');
+            if (modal) {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        function submitBooking(event) {
+            event.preventDefault();
+
+            // Get form data
+            const formData = new FormData(event.target);
+            const bookingData = {
+                firstName: formData.get('firstName'),
+                lastName: formData.get('lastName'),
+                email: formData.get('email'),
+                phone: formData.get('phone'),
+                company: formData.get('company'),
+                numberOfParticipants: formData.get('numberOfParticipants'),
+                preferredDate: formData.get('preferredDate'),
+                additionalInfo: formData.get('additionalInfo'),
+                trainingCourse: document.title.split('|')[0].trim()
+            };
+
+            // Show success message
+            alert('Thank you for your booking request! We will contact you shortly to confirm the details.');
+            closeBookNowModal();
+
+            // Reset form
+            event.target.reset();
+
+            // In a real implementation, you would send this data to your server
+            console.log('Booking submitted:', bookingData);
+        }
+
+        // Close modal when clicking outside
+        document.addEventListener('DOMContentLoaded', function() {
+            const bookNowModal = document.getElementById('bookNowModal');
+            if (bookNowModal) {
+                bookNowModal.addEventListener('click', function(e) {
+                    if (e.target === this) {
+                        closeBookNowModal();
+                    }
+                });
+            }
+
+            // Close modal with Escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    closeBookNowModal();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

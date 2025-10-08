@@ -1,0 +1,28 @@
+QUALIFICATION DETAILS
+=====================
+
+Qualification Name: Occupational Certificate: Planner
+SETA: W&R
+NQF Level: 5
+Minimum Credits: 53
+Qualification NLRD ID: 103151
+Learning Programme NLRD ID: N/A
+Expiry Date: 14-May-29
+Status: Accredited
+Reference Sheet: QCTO Cambridge
+
+MODULES AND UNITS
+=================
+
+Module 1 - Supplier Management and Merchandising
+• 332301-000-00-00-KM-01, Concepts and principles for managing supplier relationships and the performance of merchandise, Level 6, 10 Credits
+
+Module 2 - Supplier Management and Stock Performance
+• 332301-000-00-00-PM-01, Manage supplier and stock performance, Level 5, 10 Credits
+• 332301-000-00-00-WM-01, Processes and procedures for the management of supplier and stock performance, Level 5, 8 Credits
+
+Module 3 - Planning and Stock Allocation
+• 332301-000-00-00-KM-04, Concepts and principles for allocating stock to stores, Level 5, 3 Credits
+• 332301-000-00-00-PM-02, Manage stock through the supply chain, Level 5, 4 Credits
+• 332301-000-00-00-PM-06, Plan and allocate stock to stores, Level 5, 6 Credits
+• 332301-000-00-00-WM-05, Processes and procedures for allocating stock to stores, Level 5, 12 Credits

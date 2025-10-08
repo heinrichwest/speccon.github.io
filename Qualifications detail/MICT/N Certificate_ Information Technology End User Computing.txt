@@ -1,0 +1,41 @@
+QUALIFICATION DETAILS
+=====================
+
+Qualification Name: N certitificate: Information Technology: End user Computing
+SETA: MICT
+NQF Level: 3
+Minimum Credits: 130
+Qualification NLRD ID: 49077
+Learning Programme NLRD ID: N/A
+Expiry Date: 30-Jun-26
+Status: Legacy extended
+Reference Sheet: SpecCon MICT Seta
+
+MODULES AND UNITS
+=================
+PURPOSE
+The purpose of the qualification is to build the knowledge and skills required by learners in information technology: end user computing. It is intended to empower learners to acquire knowledge, skills, attitudes and values required to operate confidently in the end user computing course environment in the South African community and to respond to the challenges of the economic environment. 
+
+COURSE CONTENT
+Module 1 – Basic Computer Skills
+▼
+Module 2 – Excel
+▼
+Module 3 – Outlook and PowerPoint
+▼
+Module 4 – Word
+▼
+Use a Graphical User Interface (GUI)-based word processor to format documents
+Use a GUI-based word processor to create merged documents
+Use a GUI-based word processor to enhance a document through the use of tables and columns
+Module 5 – Access and Basic Communication Skills
+▼
+Module 6 – Basic Skills for Working on Projects
+▼
+Module 7 – Mathematical and Finance Essentials
+▼
+Module 8 – Research, Analyze and Present
+▼
+DELIVERY
+Duration: 12 Months
+Delivery: Classroom/Online/Blended

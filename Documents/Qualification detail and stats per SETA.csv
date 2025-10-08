@@ -1,0 +1,63 @@
+SETA,Count,,,,,
+AgriSETA,12,,,,,
+EDTP,1,,,,,
+FASSET,1,,,,,
+INSETA,5,,,,,
+MERSETA,1,,,,,
+MICT,7,,,,,
+Services,15,,,,,
+TETA,1,,,,,
+W&R,8,,,,,
+,,,,,,
+SETA,Name,Link,NQF Level,Min Credits,Type,Qual NLRD
+AgriSETA,Animal Production NQF 1,/qualifications/agri-animal-production-nqf1.html,1,120,Legacy,48970
+,Animal Production NQF 2,/qualifications/agri-animal-production-nqf2.html,2,120,Legacy,48976
+,Animal Production NQF 4,/qualifications/agri-animal-production-nqf4.html,4,140,Legacy,48979
+,Farming NQF 1,/qualifications/agri-farming-nqf1.html,1,120,Legacy,20287
+,Farming NQF 2,/qualifications/agri-farming-nqf2.html,2,120,Legacy,20288
+,Fruit Packaging and Grading Processes NQF 3,/qualifications/agri-fruit-packaging-nqf3.html,3,120,Legacy,48848
+,Mixed Farming Systems NQF 1,/qualifications/agri-mixed-farming-nqf1.html,1,120,Legacy,48971
+,Mixed Farming Systems NQF 2,/qualifications/agri-mixed-farming-nqf2.html,2,120,Legacy,48977
+,Plant Production NQF 1,/qualifications/agri-plant-production-nqf1.html,1,120,Legacy,48972
+,Plant Production NQF 2,/qualifications/agri-plant-production-nqf2.html,2,120,Legacy,48975
+,Plant Production NQF 3,/qualifications/agri-plant-production-nqf3.html,3,120,Legacy,49052
+,Plant Production NQF 4,/qualifications/agri-plant-production-nqf4.html,4,142,Legacy,49009
+EDTP,Occupationally Directed Educational Training and Development Practices NQF 5,/qualifications/etdp-education-training-nqf5.html,5,120,Legacy,50334
+FASSET,Computer Technician NQF 5,/qualifications/fasset-computer-technician-nqf5.html,5,282,QCTO,101408
+INSETA,Financial Advisor NQF 6,/qualifications/inseta-financial-advisor-nqf6.html,6,515,QCTO,105026
+,Health Care benefits Advisor NQF 5,/qualifications/inseta-health-care-benefits-advisor-nqf5.html,5,102,QCTO,105030
+,Insurance Claims Administrator/Assessor NQF 4,/qualifications/inseta-insurance-claims-administrator-assessor-nqf4.html,4,131,QCTO,99668
+,Insurance Underwriter NQF 5,/qualifications/inseta-insurance-underwriter-nqf5.html,5,163,QCTO,117329
+,Long term Insurance Advisor NQF 4,/qualifications/inseta-long-term-insurance-advisor-nqf4.html,4,121,QCTO,105022
+MERSETA,Automotive Sales Advisor NQF 4,/qualifications/mer-automotive-sales-advisor-nqf4.html,4,224,QCTO,118097
+MICT,Business Analysis NQF 6,/qualifications/mict-business-analysis-nqf6.html,6,149,Legacy,63909
+,Design Thinking Practitioner NQF 4,/qualifications/mict-design-thinking-nqf4.html,4,100,QCTO,118705
+,Information Technology: End user Computing NQF 3,/qualifications/mict-end-user-computing-nqf3.html,3,130,Legacy,49077
+,Information Technology: System Support NQF 5,/qualifications/mict-System-Support-NQF5.html,5,147,Legacy,48573
+,Information Technology: Systems Development NQF 4,/qualifications/mict-systems-development-nqf4.html,4,165,Legacy,78965
+,Software Engineer NQF 6,/qualifications/mict-software-engineer-nqf6.html,6,240,QCTO,119458
+,Software tester NQF 5,/qualifications/mict-software-tester-nqf5.html,5,70,QCTO,119438
+Services,Bookkeeper NQF 5,/qualifications/services-bookkeeper-nqf5.html,5,364,QCTO,98959
+,Business Administration Services NQF 3,/qualifications/services-business-administration-nqf3.html,3,120,Legacy,67465
+,Business Administration Services NQF 4,/qualifications/services-business-administration-nqf4.html,4,140,Legacy,61595
+,Business Process Outsourcing Support NQF 3,/qualifications/services-business-process-outsourcing-nqf3.html,3,124,Legacy,93997
+,Contact Centre Manager NQF 5,/qualifications/services-contact-centre-manager-nqf5.html,5,285,QCTO,99687
+,Generic Management NQF 4,/qualifications/services-generic-management-nqf4.html,4,150,Legacy,57712
+,Generic Management NQF 5,/qualifications/services-generic-management-nqf5.html,5,162,Legacy,59201
+,Management NQF 3,/qualifications/services-management-nqf3.html,3,120,Legacy,83946
+,Marketing Coordinator NQF 5,/qualifications/services-marketing-coordinator-nqf5.html,5,175,QCTO,118706
+,New Venture Creation (SMME) NQF 2,/qualifications/services-new-venture-creation-smme-nqf2.html,2,138,Legacy,49648
+,New Venture Creation NQF 4,/qualifications/services-new-venture-creation-nqf4.html,4,149,Legacy,66249
+,Office Supervision NQF 5,/qualifications/services-office-supervision-nqf5.html,5,240,QCTO,118740
+,Project Manager NQF 5,/qualifications/services-project-manager-nqf5.html,5,240,QCTO,101869
+,Quality Assurer NQF 5,/qualifications/services-quality-assurer-nqf5.html,5,106,QCTO,118769
+,Quality Manager NQF 6,/qualifications/services-quality-manager-nqf6.html,6,270,QCTO,118768
+TETA,Transport Clerk NQF 4,/qualifications/teta-transport-clerk-nqf4.html,4,121,QCTO,94025
+W&R,Planner NQF 5,/qualifications/wr-planner-nqf5.html,5,53,QCTO,103151
+,Retail Buyer NQF 5,/qualifications/wr-retail-buyer-nqf5.html,5,106,QCTO,103145
+,Retail Manager (Retail Chain Store Manager) NQF 5,/qualifications/wr-retail-manager-nqf5.html,5,131,QCTO,103150
+,Retail Supervisor NQF 4,/qualifications/wr-retail-supervisor-nqf4.html,4,100,QCTO,99573
+,Sales Assistant NQF 3,/qualifications/wr-sales-assistant-nqf3.html,3,54,QCTO,99669
+,Service Station Assistant NQF 2,/qualifications/wr-service-station-assistant-nqf2.html,2,28,QCTO,99708
+,Store Person NQF 2,/qualifications/wr-store-person-nqf2.html,2,41,QCTO,99703
+,Visual Merchandiser NQF 3,/qualifications/wr-visual-merchandiser-nqf3.html,3,30,QCTO,99688

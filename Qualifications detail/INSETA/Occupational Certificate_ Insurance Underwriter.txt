@@ -1,0 +1,37 @@
+QUALIFICATION DETAILS
+=====================
+
+Qualification Name: Occupational Certificate: Insurance Underwriter
+SETA: INSETA
+NQF Level: 5
+Minimum Credits: 163
+Qualification NLRD ID: 117329
+Learning Programme NLRD ID: N/A
+Expiry Date: 23-May-29
+Status: Accredited
+Reference Sheet: QCTO Cambridge
+
+MODULES AND UNITS
+=================
+
+• **Module 1: Principles of Insurance (26 credits)**
+  - 332101-001-01-00-KM-03: Application of legal and Insurance principles (NQF Level 5, 8 credits)
+  - 32101-001-01-00-PM03: Apply basic legal and insurance principles to underwriting recommendations (NQF Level 5, 6 credits)
+  - 332101-001-01-00-WM03: Application of legal and insurance principles to underwriting processes (NQF Level 5, 12 credits)
+
+• **Module 2: Records Management (16 credits)**
+  - 332101-001-01-00-KM-01: Administration and record keeping in Insurance (NQF Level 4, 16 credits)
+
+• **Module 3: Administration Policies and Procedures (32 credits)**
+  - 332101-001-01-00-PM01: Apply and adhere to operational and administrative procedures and practices (NQF Level 5, 15 credits)
+  - 32101-001-01-00-WM01: Exposure to operational and administrative underwriting procedures and practices (NQF Level 5, 17 credits)
+
+• **Module 4: Product Pricing (48 credits)**
+  - 32101-001-01-00-KM-04: Rating and Pricing of insurance risks and products (NQF Level 5, 8 credits)
+  - 332101-001-01-00-PM04: Apply knowledge of product and pricing to underwrite profitable risks (NQF Level 5, 13 credits)
+  - 32101-001-01-00-WM04: Exposure to processes and factors leading up to final underwriting decision (NQF Level 5, 27 credits)
+
+• **Module 5: Risk Management (41 credits)**
+  - 332101-001-01-00-KM-02: Insurance Risk Management for Underwriters (NQF Level 5, 16 credits)
+  - 32101-001-01-00-PM02: Evaluate risk information to determine risk profile and manage risk exposure (NQF Level 5, 8 credits)
+  - 32101-001-01-00-WM02: Evaluation and management of risk profile and/or exposure (NQF Level 5, 17 credits)
