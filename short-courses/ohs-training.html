@@ -5,18 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Occupational Health and Safety Training | SpecCon Holdings</title>
     <meta name="description" content="Comprehensive OHS training course covering workplace hazard identification, risk assessment, safety protocols, and legal compliance.">
+    <link rel="icon" type="image/png" href="../Images/Logo.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="../js/centralized-modals.js"></script>
 
     <style>
-        nav { font-family: \'Roboto\', sans-serif; }
+        nav { font-family: 'Roboto', sans-serif; }
         body {
             font-family: 'Roboto', sans-serif;
         }
@@ -24,11 +22,54 @@
             transform: translateY(-8px);
             box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 10px 10px -5px rgb(0 0 0 / 0.04);
         }
-        .dropdown:hover .dropdown-menu {
-            display: block;
+        .dropdown {
+            position: relative;
+            display: inline-block;
         }
+
         .dropdown-menu {
             display: none;
+            position: absolute;
+            top: calc(100% + 8px);
+            left: 0;
+            min-width: 16rem;
+            background: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e5e7eb;
+            z-index: 1000;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: opacity 0.2s ease, transform 0.2s ease;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Invisible bridge to prevent menu closing when moving cursor */
+        .dropdown::before {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            height: 12px;
+            z-index: 999;
+        }
+
+        .dropdown button {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            padding: 0;
+            font-size: inherit;
+            font-family: inherit;
+            color: inherit;
         }
     </style>
 </head>
@@ -44,50 +85,47 @@
                     </a>
                     <div class="ml-3">
                         <h1 class="text-xl font-bold text-[#12265E]">SpecCon Holdings</h1>
-                        <p class="text-sm text-[#ffa600]">Services SETA Qualifications</p>
+                        <p class="text-sm text-[#ffa600]">Accredited Training Solutions</p>
                     </div>
                 </div>
 
                 <nav class="hidden lg:flex items-center space-x-4">
-                    <a href="../index.html" class="text-[#12265E] hover:text-[#FFA600] font-medium transition duration-300 text-sm whitespace-nowrap">Home</a>
                     <a href="../index.html#about" class="text-[#12265E] hover:text-[#FFA600] font-medium transition duration-300 text-sm whitespace-nowrap">Why Choose Us</a>
                     <a href="../index.html#qualifications" class="text-[#12265E] hover:text-[#FFA600] font-medium transition duration-300 text-sm whitespace-nowrap">Qualifications</a>
                     <a href="../index.html#accreditations" class="text-[#12265E] hover:text-[#FFA600] font-medium transition duration-300 text-sm whitespace-nowrap">Accreditations</a>
                     <a href="../index.html#classroom-training" class="text-[#12265E] hover:text-[#FFA600] font-medium transition duration-300 text-sm whitespace-nowrap">Classroom Training</a>
                     <div class="relative dropdown">
-                        <button class="text-[#12265E] hover:text-[#FFA600] font-medium transition duration-300 flex items-center text-sm whitespace-nowrap">
+                        <button class="text-[#12265E] hover:text-[#FFA600] font-medium transition duration-300 inline-flex items-center">
                             Other Products <i data-lucide="chevron-down" class="w-4 h-4 ml-1"></i>
                         </button>
-                        <div class="dropdown-menu absolute -left-16 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-20">
-                            <a href="professional-development.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Professional Development</a>
-                            <a href="intro-to-ai-training.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">AI Training Courses</a>
-                            <a href="cyber-security-training.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Cyber Security Training</a>
-                            <a href="compliance-courses.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Compliance Training</a>
+                        <div class="dropdown-menu absolute left-0 w-64 bg-white rounded-lg shadow-xl py-2 z-20 border">
+                            <a href="https://elearning.co.za/" target="_blank" class="block px-4 py-3 text-sm text-gray-700 hover:bg-[#12265E]/10 hover:text-[#12265E] transition duration-200">
+                                <i data-lucide="monitor" class="w-4 h-4 inline mr-2"></i>Online Training
+                            </a>
+                            <a href="https://employmentequityact.co.za/" target="_blank" class="block px-4 py-3 text-sm text-gray-700 hover:bg-[#12265E]/10 hover:text-[#12265E] transition duration-200">
+                                <i data-lucide="shield-check" class="w-4 h-4 inline mr-2"></i>Employment Equity
+                            </a>
+                            <a href="https://learningmanagementsystem.co.za/" target="_blank" class="block px-4 py-3 text-sm text-gray-700 hover:bg-[#12265E]/10 hover:text-[#12265E] transition duration-200">
+                                <i data-lucide="graduation-cap" class="w-4 h-4 inline mr-2"></i>Learning Management System
+                            </a>
+                            <a href="https://skillsdevelopment.co.za/" target="_blank" class="block px-4 py-3 text-sm text-gray-700 hover:bg-[#12265E]/10 hover:text-[#12265E] transition duration-200">
+                                <i data-lucide="trending-up" class="w-4 h-4 inline mr-2"></i>Skills Development
+                            </a>
+                            <a href="https://www.specconacademy.co.za/" target="_blank" class="block px-4 py-3 text-sm text-gray-700 hover:bg-[#12265E]/10 hover:text-[#12265E] transition duration-200">
+                                <i data-lucide="school" class="w-4 h-4 inline mr-2"></i>SpecCon Academy
+                            </a>
+                            <a href="https://bbbee.co.za/" target="_blank" class="block px-4 py-3 text-sm text-gray-700 hover:bg-[#12265E]/10 hover:text-[#12265E] transition duration-200">
+                                <i data-lucide="award" class="w-4 h-4 inline mr-2"></i>BBBEE Consulting
+                            </a>
                         </div>
                     </div>
                 </nav>
 
                 <div class="hidden lg:block">
-                    <button onclick="openBookNowModal()" data-modal="book" data-course="OHS Training" class="bg-gradient-to-r from-green-500 to-green-600 text-white font-semibold px-6 py-3 rounded-lg hover:from-green-600 hover:to-green-700 transition duration-300 shadow-lg">
+                    <button onclick="openBookNowModal()" data-modal="book" data-course="OHS Training" class="bg-[#12265E] text-white font-semibold px-6 py-3 rounded-lg hover:bg-[#92abc4] transition duration-300 shadow-lg">
                         Book Training
                     </button>
                 </div>
-
-                <button onclick="openBookNowModal()" id="mobile-menu-button" class="lg:hidden">
-                    <i data-lucide="menu" class="w-6 h-6"></i>
-                </button>
-            </div>
-
-            <!-- Mobile Menu -->
-            <div id="mobile-menu" class="hidden lg:hidden mt-4">
-                <a href="../index.html" class="block py-2 text-[#12265E] hover:text-[#FFA600]">Home</a>
-                <a href="../index.html#about" class="block py-2 text-[#12265E] hover:text-[#FFA600]">About Us</a>
-                <a href="../index.html#qualifications" class="block py-2 text-[#12265E] hover:text-[#FFA600]">Qualifications</a>
-                <a href="../index.html#accreditations" class="block py-2 text-[#12265E] hover:text-[#FFA600]">Accreditations</a>
-                <a href="../index.html#classroom-training" class="block py-2 text-[#12265E] hover:text-[#FFA600]">Classroom Training</a>
-<button onclick="openBookNowModal()" data-modal="book" data-course="OHS Training" class="mt-2 w-full bg-gradient-to-r from-green-500 to-green-600 text-white font-semibold px-5 py-2 rounded-lg hover:from-green-600 hover:to-green-700 transition duration-300 shadow-lg text-center block">
-                    Book Training
-                </button>
             </div>
         </div>
     </header>
@@ -96,27 +134,27 @@
     <section class="pt-24 pb-8 bg-gray-50">
         <div class="container mx-auto px-6">
             <nav class="text-sm text-gray-600">
-                <a href="../index.html" class="hover:text-blue-600">Home</a>
+                <a href="../index.html" class="hover:text-[#ffa600]">Home</a>
                 <span class="mx-2">/</span>
-                <a href="../index.html#classroom-training" class="hover:text-blue-600">Classroom Training</a>
+                <a href="../index.html#classroom-training" class="hover:text-[#ffa600]">Classroom Training</a>
                 <span class="mx-2">/</span>
-                <span class="text-gray-900">OHS Training</span>
+                <span class="text-[#12265E] font-semibold">OHS Training</span>
             </nav>
         </div>
     </section>
 
     <!-- Hero Section -->
-    <section class="py-16 bg-gradient-to-br from-green-50 to-blue-50">
+    <section class="py-16 bg-gradient-to-br from-[#12265E]/10 to-white">
         <div class="container mx-auto px-6">
             <div class="grid lg:grid-cols-2 gap-12 items-center">
                 <div>
                     <div class="flex items-center mb-6">
-                        <div class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mr-6">
-                            <i data-lucide="shield-check" class="w-8 h-8 text-green-600"></i>
+                        <div class="w-16 h-16 bg-[#ffa600]/20 rounded-2xl flex items-center justify-center mr-6">
+                            <i data-lucide="shield-check" class="w-8 h-8 text-[#ffa600]"></i>
                         </div>
                         <div>
-                            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-2">Occupational Health & Safety</h1>
-                            <p class="text-xl text-green-600 font-semibold">Workplace Safety & Legal Compliance</p>
+                            <h1 class="text-4xl md:text-5xl font-bold text-[#12265E] mb-2">Occupational Health & Safety</h1>
+                            <p class="text-xl text-[#ffa600] font-semibold">Workplace Safety & Legal Compliance</p>
                         </div>
                     </div>
                     <p class="text-lg text-gray-600 leading-relaxed mb-8">
@@ -125,11 +163,11 @@
                     </p>
                     <div class="grid grid-cols-2 gap-6">
                         <div class="text-center p-4 bg-white rounded-lg shadow">
-                            <div class="text-2xl font-bold text-green-600">4h 30m</div>
+                            <div class="text-2xl font-bold text-[#12265E]">4h 30m</div>
                             <div class="text-sm text-gray-600">Duration</div>
                         </div>
                         <div class="text-center p-4 bg-white rounded-lg shadow">
-                            <div class="text-2xl font-bold text-blue-600">Certificate</div>
+                            <div class="text-2xl font-bold text-[#ffa600]">Certificate</div>
                             <div class="text-sm text-gray-600">Upon Completion</div>
                         </div>
                     </div>
@@ -152,10 +190,10 @@
                     <p class="text-xl text-[#ffa600]">Essential workplace safety and health training</p>
                 </div>
 
-                <div class="bg-gradient-to-br from-gray-50 to-blue-50 rounded-2xl p-8 mb-12 border border-gray-200">
+                <div class="bg-gradient-to-br from-[#12265E]/5 to-[#92abc4]/10 rounded-2xl p-8 mb-12 border border-gray-200">
                     <div class="flex items-start space-x-4 mb-6">
-                        <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                            <i data-lucide="shield-check" class="w-6 h-6 text-green-600"></i>
+                        <div class="w-12 h-12 bg-[#ffa600]/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="shield-check" class="w-6 h-6 text-[#ffa600]"></i>
                         </div>
                         <div>
                             <h3 class="text-xl font-semibold text-[#12265E] mb-3">Comprehensive Safety Training Program</h3>
@@ -164,7 +202,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="border-l-4 border-green-500 pl-6">
+                    <div class="border-l-4 border-[#ffa600] pl-6">
                         <p class="text-lg text-gray-700 leading-relaxed">
                             You'll learn strategies for promoting a positive safety culture, understanding current health and safety regulations, implementing effective safety management systems, and developing measures to prevent accidents and injuries. The training emphasizes practical application through real-world scenarios and case studies.
                         </p>
@@ -172,22 +210,22 @@
                 </div>
 
                 <!-- Statistics Section -->
-                <div class="bg-white border border-red-200 rounded-xl p-6 mb-8">
+                <div class="bg-white border border-[#ffa600]/30 rounded-xl p-6 mb-8">
                     <h3 class="text-xl font-bold text-[#12265E] mb-4 flex items-center">
-                        <i data-lucide="alert-triangle" class="w-6 h-6 text-red-500 mr-2"></i>
+                        <i data-lucide="alert-triangle" class="w-6 h-6 text-[#ffa600] mr-2"></i>
                         The Reality of Workplace Safety in South Africa
                     </h3>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-4">
-                        <div class="text-center p-4 bg-red-50 rounded-lg">
-                            <div class="text-2xl font-bold text-red-600">200,000+</div>
+                        <div class="text-center p-4 bg-[#ffa600]/10 rounded-lg">
+                            <div class="text-2xl font-bold text-[#ffa600]">200,000+</div>
                             <div class="text-sm text-gray-600">Annual workplace injuries</div>
                         </div>
-                        <div class="text-center p-4 bg-orange-50 rounded-lg">
-                            <div class="text-2xl font-bold text-orange-600">R60bn+</div>
+                        <div class="text-center p-4 bg-[#12265E]/10 rounded-lg">
+                            <div class="text-2xl font-bold text-[#12265E]">R60bn+</div>
                             <div class="text-sm text-gray-600">Annual cost to economy</div>
                         </div>
-                        <div class="text-center p-4 bg-yellow-50 rounded-lg">
-                            <div class="text-2xl font-bold text-yellow-600">85%</div>
+                        <div class="text-center p-4 bg-[#92abc4]/20 rounded-lg">
+                            <div class="text-2xl font-bold text-[#92abc4]">85%</div>
                             <div class="text-sm text-gray-600">Are preventable</div>
                         </div>
                     </div>
@@ -211,23 +249,23 @@
                         <h3 class="text-xl font-bold text-[#12265E] mb-4">Key Benefits</h3>
                         <ul class="space-y-2 text-gray-600">
                             <li class="flex items-center">
-                                <i data-lucide="check" class="w-4 h-4 text-green-600 mr-2"></i>
+                                <i data-lucide="check" class="w-4 h-4 text-[#ffa600] mr-2"></i>
                                 Prevent workplace accidents and injuries
                             </li>
                             <li class="flex items-center">
-                                <i data-lucide="check" class="w-4 h-4 text-green-600 mr-2"></i>
+                                <i data-lucide="check" class="w-4 h-4 text-[#ffa600] mr-2"></i>
                                 Ensure legal compliance and avoid penalties
                             </li>
                             <li class="flex items-center">
-                                <i data-lucide="check" class="w-4 h-4 text-green-600 mr-2"></i>
+                                <i data-lucide="check" class="w-4 h-4 text-[#ffa600] mr-2"></i>
                                 Create a positive safety culture
                             </li>
                             <li class="flex items-center">
-                                <i data-lucide="check" class="w-4 h-4 text-green-600 mr-2"></i>
+                                <i data-lucide="check" class="w-4 h-4 text-[#ffa600] mr-2"></i>
                                 Reduce insurance costs and liability
                             </li>
                             <li class="flex items-center">
-                                <i data-lucide="check" class="w-4 h-4 text-green-600 mr-2"></i>
+                                <i data-lucide="check" class="w-4 h-4 text-[#ffa600] mr-2"></i>
                                 Improve employee morale and productivity
                             </li>
                         </ul>
@@ -248,10 +286,10 @@
 
                 <div class="space-y-6">
                     <!-- Unit 1 -->
-                    <div class="bg-white rounded-xl p-6 shadow-sm">
+                    <div class="bg-white rounded-xl p-6 shadow-sm border-l-4 border-[#ffa600]">
                         <h3 class="text-xl font-bold text-[#12265E] mb-4 flex items-center">
-                            <span class="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center mr-3">
-                                <span class="text-green-600 font-bold">1</span>
+                            <span class="w-8 h-8 bg-[#ffa600]/20 rounded-lg flex items-center justify-center mr-3">
+                                <span class="text-[#ffa600] font-bold">1</span>
                             </span>
                             Introduction to Safety in the Workplace
                         </h3>
@@ -265,10 +303,10 @@
                     </div>
 
                     <!-- Unit 2 -->
-                    <div class="bg-white rounded-xl p-6 shadow-sm">
+                    <div class="bg-white rounded-xl p-6 shadow-sm border-l-4 border-[#12265E]">
                         <h3 class="text-xl font-bold text-[#12265E] mb-4 flex items-center">
-                            <span class="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center mr-3">
-                                <span class="text-green-600 font-bold">2</span>
+                            <span class="w-8 h-8 bg-[#12265E]/20 rounded-lg flex items-center justify-center mr-3">
+                                <span class="text-[#12265E] font-bold">2</span>
                             </span>
                             Identify Potential Hazards
                         </h3>
@@ -281,10 +319,10 @@
                     </div>
 
                     <!-- Unit 3 -->
-                    <div class="bg-white rounded-xl p-6 shadow-sm">
+                    <div class="bg-white rounded-xl p-6 shadow-sm border-l-4 border-[#92abc4]">
                         <h3 class="text-xl font-bold text-[#12265E] mb-4 flex items-center">
-                            <span class="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center mr-3">
-                                <span class="text-green-600 font-bold">3</span>
+                            <span class="w-8 h-8 bg-[#92abc4]/30 rounded-lg flex items-center justify-center mr-3">
+                                <span class="text-[#12265E] font-bold">3</span>
                             </span>
                             Limit Damage to Person's Property
                         </h3>
@@ -295,10 +333,10 @@
                     </div>
 
                     <!-- Unit 4 -->
-                    <div class="bg-white rounded-xl p-6 shadow-sm">
+                    <div class="bg-white rounded-xl p-6 shadow-sm border-l-4 border-[#ffa600]">
                         <h3 class="text-xl font-bold text-[#12265E] mb-4 flex items-center">
-                            <span class="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center mr-3">
-                                <span class="text-green-600 font-bold">4</span>
+                            <span class="w-8 h-8 bg-[#ffa600]/20 rounded-lg flex items-center justify-center mr-3">
+                                <span class="text-[#ffa600] font-bold">4</span>
                             </span>
                             Safety Procedures
                         </h3>
@@ -326,84 +364,84 @@
                 <div class="grid md:grid-cols-2 gap-8">
                     <div class="space-y-4">
                         <div class="flex items-start space-x-3">
-                            <div class="w-6 h-6 bg-[#ffffff]/70 rounded-full flex items-center justify-center mt-1">
-                                <i data-lucide="check" class="w-3 h-3 text-green-600"></i>
+                            <div class="w-6 h-6 bg-[#ffa600]/20 rounded-full flex items-center justify-center mt-1">
+                                <i data-lucide="check" class="w-3 h-3 text-[#ffa600]"></i>
                             </div>
                             <div>
                                 <h4 class="font-semibold text-[#12265E]">Hazard Identification</h4>
-                                <p class="text-[#ffa600]">Learn to identify and assess workplace hazards effectively</p>
+                                <p class="text-gray-600">Learn to identify and assess workplace hazards effectively</p>
                             </div>
                         </div>
 
                         <div class="flex items-start space-x-3">
-                            <div class="w-6 h-6 bg-[#ffffff]/70 rounded-full flex items-center justify-center mt-1">
-                                <i data-lucide="check" class="w-3 h-3 text-green-600"></i>
+                            <div class="w-6 h-6 bg-[#ffa600]/20 rounded-full flex items-center justify-center mt-1">
+                                <i data-lucide="check" class="w-3 h-3 text-[#ffa600]"></i>
                             </div>
                             <div>
                                 <h4 class="font-semibold text-[#12265E]">Risk Assessment</h4>
-                                <p class="text-[#ffa600]">Understand risk assessment methodologies and implementation</p>
+                                <p class="text-gray-600">Understand risk assessment methodologies and implementation</p>
                             </div>
                         </div>
 
                         <div class="flex items-start space-x-3">
-                            <div class="w-6 h-6 bg-[#ffffff]/70 rounded-full flex items-center justify-center mt-1">
-                                <i data-lucide="check" class="w-3 h-3 text-green-600"></i>
+                            <div class="w-6 h-6 bg-[#ffa600]/20 rounded-full flex items-center justify-center mt-1">
+                                <i data-lucide="check" class="w-3 h-3 text-[#ffa600]"></i>
                             </div>
                             <div>
                                 <h4 class="font-semibold text-[#12265E]">Safety Protocols</h4>
-                                <p class="text-[#ffa600]">Develop and implement effective safety procedures</p>
+                                <p class="text-gray-600">Develop and implement effective safety procedures</p>
                             </div>
                         </div>
 
                         <div class="flex items-start space-x-3">
-                            <div class="w-6 h-6 bg-[#ffffff]/70 rounded-full flex items-center justify-center mt-1">
-                                <i data-lucide="check" class="w-3 h-3 text-green-600"></i>
+                            <div class="w-6 h-6 bg-[#ffa600]/20 rounded-full flex items-center justify-center mt-1">
+                                <i data-lucide="check" class="w-3 h-3 text-[#ffa600]"></i>
                             </div>
                             <div>
                                 <h4 class="font-semibold text-[#12265E]">Emergency Preparedness</h4>
-                                <p class="text-[#ffa600]">Plan and prepare for workplace emergencies</p>
+                                <p class="text-gray-600">Plan and prepare for workplace emergencies</p>
                             </div>
                         </div>
                     </div>
 
                     <div class="space-y-4">
                         <div class="flex items-start space-x-3">
-                            <div class="w-6 h-6 bg-[#ffffff]/70 rounded-full flex items-center justify-center mt-1">
-                                <i data-lucide="check" class="w-3 h-3 text-green-600"></i>
+                            <div class="w-6 h-6 bg-[#ffa600]/20 rounded-full flex items-center justify-center mt-1">
+                                <i data-lucide="check" class="w-3 h-3 text-[#ffa600]"></i>
                             </div>
                             <div>
                                 <h4 class="font-semibold text-[#12265E]">Legal Compliance</h4>
-                                <p class="text-[#ffa600]">Understand OHS legislation and compliance requirements</p>
+                                <p class="text-gray-600">Understand OHS legislation and compliance requirements</p>
                             </div>
                         </div>
 
                         <div class="flex items-start space-x-3">
-                            <div class="w-6 h-6 bg-[#ffffff]/70 rounded-full flex items-center justify-center mt-1">
-                                <i data-lucide="check" class="w-3 h-3 text-green-600"></i>
+                            <div class="w-6 h-6 bg-[#ffa600]/20 rounded-full flex items-center justify-center mt-1">
+                                <i data-lucide="check" class="w-3 h-3 text-[#ffa600]"></i>
                             </div>
                             <div>
                                 <h4 class="font-semibold text-[#12265E]">Incident Management</h4>
-                                <p class="text-[#ffa600]">Handle workplace incidents and near-misses effectively</p>
+                                <p class="text-gray-600">Handle workplace incidents and near-misses effectively</p>
                             </div>
                         </div>
 
                         <div class="flex items-start space-x-3">
-                            <div class="w-6 h-6 bg-[#ffffff]/70 rounded-full flex items-center justify-center mt-1">
-                                <i data-lucide="check" class="w-3 h-3 text-green-600"></i>
+                            <div class="w-6 h-6 bg-[#ffa600]/20 rounded-full flex items-center justify-center mt-1">
+                                <i data-lucide="check" class="w-3 h-3 text-[#ffa600]"></i>
                             </div>
                             <div>
                                 <h4 class="font-semibold text-[#12265E]">Safety Culture</h4>
-                                <p class="text-[#ffa600]">Promote a positive safety culture in your organization</p>
+                                <p class="text-gray-600">Promote a positive safety culture in your organization</p>
                             </div>
                         </div>
 
                         <div class="flex items-start space-x-3">
-                            <div class="w-6 h-6 bg-[#ffffff]/70 rounded-full flex items-center justify-center mt-1">
-                                <i data-lucide="check" class="w-3 h-3 text-green-600"></i>
+                            <div class="w-6 h-6 bg-[#ffa600]/20 rounded-full flex items-center justify-center mt-1">
+                                <i data-lucide="check" class="w-3 h-3 text-[#ffa600]"></i>
                             </div>
                             <div>
                                 <h4 class="font-semibold text-[#12265E]">Management Systems</h4>
-                                <p class="text-[#ffa600]">Implement and maintain OHS management systems</p>
+                                <p class="text-gray-600">Implement and maintain OHS management systems</p>
                             </div>
                         </div>
                     </div>
@@ -417,24 +455,24 @@
         <div class="container mx-auto px-6">
             <div class="max-w-4xl mx-auto">
                 <div class="grid md:grid-cols-3 gap-8">
-                    <div class="text-center p-6 bg-white rounded-xl">
-                        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                            <i data-lucide="clock" class="w-6 h-6 text-blue-600"></i>
+                    <div class="text-center p-6 bg-white rounded-xl shadow-lg">
+                        <div class="w-12 h-12 bg-[#12265E]/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="clock" class="w-6 h-6 text-[#12265E]"></i>
                         </div>
                         <h3 class="text-lg font-bold text-[#12265E] mb-2">Duration</h3>
                         <p class="text-[#ffa600]">4 hours 30 minutes</p>
                     </div>
 
-                    <div class="text-center p-6 bg-white rounded-xl">
-                        <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                            <i data-lucide="monitor" class="w-6 h-6 text-green-600"></i>
+                    <div class="text-center p-6 bg-white rounded-xl shadow-lg">
+                        <div class="w-12 h-12 bg-[#92abc4]/30 rounded-lg flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="monitor" class="w-6 h-6 text-[#12265E]"></i>
                         </div>
                         <h3 class="text-lg font-bold text-[#12265E] mb-2">Delivery</h3>
                         <p class="text-[#ffa600]">Classroom/Online/Blended</p>
                     </div>
 
-                    <div class="text-center p-6 bg-white rounded-xl">
-                        <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <div class="text-center p-6 bg-white rounded-xl shadow-lg">
+                        <div class="w-12 h-12 bg-[#ffa600]/20 rounded-lg flex items-center justify-center mx-auto mb-4">
                             <i data-lucide="calendar" class="w-6 h-6 text-[#ffa600]"></i>
                         </div>
                         <h3 class="text-lg font-bold text-[#12265E] mb-2">Access Period</h3>
@@ -446,23 +484,24 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="py-16 bg-gradient-to-r from-green-500 to-green-600">
+    <section class="py-16 bg-gradient-to-r from-[#12265E] to-[#92abc4]">
         <div class="container mx-auto px-6 text-center">
             <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Create a Safer Workplace?</h2>
             <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
                 Invest in your team's safety and your organization's success with comprehensive OHS training.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <button onclick="openBookNowModal()" data-modal="book" data-course="OHS Training" class="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition duration-300">
+                <button onclick="openBookNowModal()" data-modal="book" data-course="OHS Training" class="bg-[#ffa600] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#ffa600]/90 transition duration-300">
                     Book This Course
                 </button>
-                <button onclick="openBookNowModal()" data-modal="book" data-course="OHS Training" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition duration-300">Get More Information</button>
+                <button onclick="openBookNowModal()" data-modal="book" data-course="OHS Training" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-[#12265E] transition duration-300">
+                    Get More Information
+                </button>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    
     <footer class="bg-gradient-to-r from-[#12265E] to-[#92ABC4] text-white py-12">
         <div class="container mx-auto px-6">
             <div class="grid md:grid-cols-4 gap-8">
@@ -480,20 +519,17 @@
                 <div>
                     <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
                     <ul class="space-y-2">
-                        <li><a href="/index.html#about" class="text-white/80 hover:text-[#FFA600] transition duration-200">Why Choose Us</a></li>
-                        <li><a href="/index.html#qualifications" class="text-white/80 hover:text-[#FFA600] transition duration-200">Qualifications</a></li>
-                        <li><a href="/index.html#accreditations" class="text-white/80 hover:text-[#FFA600] transition duration-200">Accreditations</a></li>
+                        <li><a href="../index.html#about" class="text-white/80 hover:text-[#FFA600] transition duration-200">Why Choose Us</a></li>
+                        <li><a href="../index.html#qualifications" class="text-white/80 hover:text-[#FFA600] transition duration-200">Qualifications</a></li>
+                        <li><a href="../index.html#accreditations" class="text-white/80 hover:text-[#FFA600] transition duration-200">Accreditations</a></li>
                     </ul>
                 </div>
 
                 <div>
-                     <h4 class="text-lg font-semibold mb-4">Contact Us</h4>
+                    <h4 class="text-lg font-semibold mb-4">Contact Us</h4>
                     <ul class="space-y-2">
                         <li><p class="text-white/80">Phone: 012 667 4962</p></li>
-                         <p class="text-white/80">
-    Email: <a href="mailto:help@speccon.co.za" class="underline hover:text-orange">help@speccon.co.za</a>
-  </p>    
-</li>
+                        <li><p class="text-white/80">Email: <a href="mailto:help@speccon.co.za" class="underline hover:text-[#FFA600]">help@speccon.co.za</a></p></li>
                     </ul>
                 </div>
             </div>
@@ -503,23 +539,10 @@
             </div>
         </div>
     </footer>
-    
 
     <script>
         lucide.createIcons();
-
-        // Mobile menu toggle
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        if (mobileMenuButton && mobileMenu) {
-            mobileMenuButton.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-        }
     </script>
-
-
 
     <!-- Book Now Modal -->
     <div id="bookNowModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden items-center justify-center p-4">
@@ -537,12 +560,12 @@
                         <div>
                             <label for="firstName" class="block text-sm font-medium text-gray-700 mb-2">First Name *</label>
                             <input type="text" id="firstName" name="firstName" required
-                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#12265E] focus:border-transparent">
                         </div>
                         <div>
                             <label for="lastName" class="block text-sm font-medium text-gray-700 mb-2">Last Name *</label>
                             <input type="text" id="lastName" name="lastName" required
-                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#12265E] focus:border-transparent">
                         </div>
                     </div>
 
@@ -550,25 +573,25 @@
                         <div>
                             <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email *</label>
                             <input type="email" id="email" name="email" required
-                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#12265E] focus:border-transparent">
                         </div>
                         <div>
                             <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Phone Number *</label>
                             <input type="tel" id="phone" name="phone" required
-                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#12265E] focus:border-transparent">
                         </div>
                     </div>
 
                     <div class="mb-4">
                         <label for="company" class="block text-sm font-medium text-gray-700 mb-2">Company Name *</label>
                         <input type="text" id="company" name="company" required
-                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#12265E] focus:border-transparent">
                     </div>
 
                     <div class="mb-4">
                         <label for="numberOfParticipants" class="block text-sm font-medium text-gray-700 mb-2">Number of Participants *</label>
                         <select id="numberOfParticipants" name="numberOfParticipants" required
-                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#12265E] focus:border-transparent">
                             <option value="">Select number of participants</option>
                             <option value="1">1 participant</option>
                             <option value="2-5">2-5 participants</option>
@@ -581,13 +604,13 @@
                     <div class="mb-4">
                         <label for="preferredDate" class="block text-sm font-medium text-gray-700 mb-2">Preferred Training Date</label>
                         <input type="date" id="preferredDate" name="preferredDate"
-                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#12265E] focus:border-transparent">
                     </div>
 
                     <div class="mb-6">
                         <label for="additionalInfo" class="block text-sm font-medium text-gray-700 mb-2">Additional Information</label>
                         <textarea id="additionalInfo" name="additionalInfo" rows="4"
-                                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
+                                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#12265E] focus:border-transparent resize-none"
                                   placeholder="Any specific requirements or questions about the training..."></textarea>
                     </div>
 
@@ -613,6 +636,7 @@
                 modal.classList.remove('hidden');
                 modal.classList.add('flex');
                 document.body.style.overflow = 'hidden';
+                lucide.createIcons();
             }
         }
 
