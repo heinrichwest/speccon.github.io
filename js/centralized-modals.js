@@ -12,7 +12,7 @@ const CONTACT_MODAL_HTML = `
             <div class="p-6">
                 <!-- Modal Header -->
                 <div class="flex justify-between items-center mb-4">
-                    <h3 class="text-2xl font-bold text-gray-900">Contact Us</h3>
+                    <h3 class="text-2xl font-bold text-[#12265E]">Contact Us</h3>
                     <button id="closeContactModal" class="text-gray-400 hover:text-gray-600 transition-colors">
                         <i data-lucide="x" class="w-6 h-6"></i>
                     </button>
@@ -30,45 +30,45 @@ const CONTACT_MODAL_HTML = `
                 <form id="contactForm" class="space-y-4">
                     <div class="grid grid-cols-2 gap-4">
                         <div>
-                            <label for="contactName" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                            <label for="contactName" class="block text-sm font-medium mb-1" style="color: #12265E !important">Name</label>
                             <input type="text" id="contactName" name="name" required
-                                class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFA600] focus:border-transparent">
                         </div>
                         <div>
-                            <label for="contactSurname" class="block text-sm font-medium text-gray-700 mb-1">Surname</label>
+                            <label for="contactSurname" class="block text-sm font-medium mb-1" style="color: #12265E !important">Surname</label>
                             <input type="text" id="contactSurname" name="surname" required
-                                class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFA600] focus:border-transparent">
                         </div>
                     </div>
 
                     <div>
-                        <label for="contactEmail" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                        <label for="contactEmail" class="block text-sm font-medium mb-1" style="color: #12265E !important">Email</label>
                         <input type="email" id="contactEmail" name="email" required
-                            class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                            class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFA600] focus:border-transparent">
                     </div>
 
                     <div>
-                        <label for="contactPhone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                        <label for="contactPhone" class="block text-sm font-medium mb-1" style="color: #12265E !important">Phone Number</label>
                         <input type="tel" id="contactPhone" name="phone" required
-                            class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                            class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFA600] focus:border-transparent">
                     </div>
 
                     <div>
-                        <label for="contactJobTitle" class="block text-sm font-medium text-gray-700 mb-1">Job Title</label>
+                        <label for="contactJobTitle" class="block text-sm font-medium mb-1" style="color: #12265E !important">Job Title</label>
                         <input type="text" id="contactJobTitle" name="jobTitle"
-                            class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                            class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFA600] focus:border-transparent">
                     </div>
 
                     <div>
-                        <label for="contactCompany" class="block text-sm font-medium text-gray-700 mb-1">Company</label>
+                        <label for="contactCompany" class="block text-sm font-medium mb-1" style="color: #12265E !important">Company</label>
                         <input type="text" id="contactCompany" name="company"
-                            class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                            class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFA600] focus:border-transparent">
                     </div>
 
                     <div>
-                        <label for="contactReason" class="block text-sm font-medium text-gray-700 mb-1">Reason for Contact</label>
+                        <label for="contactReason" class="block text-sm font-medium mb-1" style="color: #12265E !important">Reason for Contact</label>
                         <select id="contactReason" name="reason" required
-                            class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                            class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFA600] focus:border-transparent">
                             <option value="">Select a reason</option>
                             <option value="general">General Inquiry</option>
                             <option value="qualification">Qualification Information</option>
@@ -81,9 +81,9 @@ const CONTACT_MODAL_HTML = `
                     </div>
 
                     <div>
-                        <label for="contactMessage" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                        <label for="contactMessage" class="block text-sm font-medium mb-1" style="color: #12265E !important">Message</label>
                         <textarea id="contactMessage" name="message" rows="4"
-                            class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                            class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFA600] focus:border-transparent"
                             placeholder="Please provide details about your inquiry..."></textarea>
                     </div>
 
@@ -97,14 +97,19 @@ const CONTACT_MODAL_HTML = `
                         </p>
                     </div>
 
+                    <!-- reCAPTCHA -->
+                    <div class="flex justify-center">
+                        <div class="g-recaptcha" data-sitekey="6LfYourSiteKeyHere"></div>
+                    </div>
+
                     <!-- Action Buttons -->
                     <div class="flex space-x-3 pt-4">
                         <button type="button" id="cancelContactForm"
-                            class="flex-1 px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors">
+                            class="flex-1 px-4 py-2 bg-[#12265E] text-white font-semibold rounded-lg hover:bg-[#0d1a47] transition-colors">
                             Cancel
                         </button>
                         <button type="submit"
-                            class="flex-1 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold px-4 py-2 rounded-lg hover:from-blue-700 hover:to-blue-800 transition duration-300">
+                            class="flex-1 bg-gradient-to-r from-[#12265E] to-[#12265E] text-white font-semibold px-4 py-2 rounded-lg hover:from-[#FFA600] hover:to-[#FFA600] transition duration-300">
                             Send Message
                         </button>
                     </div>
@@ -124,7 +129,7 @@ const ENQUIRE_NOW_MODAL_HTML = `
             <div class="p-6">
                 <!-- Modal Header -->
                 <div class="flex justify-between items-center mb-4">
-                    <h3 class="text-2xl font-bold text-gray-900">Quick Enquiry</h3>
+                    <h3 class="text-2xl font-bold text-[#12265E]">Quick Enquiry</h3>
                     <button id="closeEnquireModal" class="text-gray-400 hover:text-gray-600 transition-colors">
                         <i data-lucide="x" class="w-6 h-6"></i>
                     </button>
@@ -134,39 +139,39 @@ const ENQUIRE_NOW_MODAL_HTML = `
                 <form id="enquireForm" class="space-y-4">
                     <div class="grid grid-cols-2 gap-4">
                         <div>
-                            <label for="enquireName" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                            <label for="enquireName" class="block text-sm font-medium mb-1" style="color: #12265E !important">Name</label>
                             <input type="text" id="enquireName" name="name" required
-                                class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFA600] focus:border-transparent">
                         </div>
                         <div>
-                            <label for="enquireSurname" class="block text-sm font-medium text-gray-700 mb-1">Surname</label>
+                            <label for="enquireSurname" class="block text-sm font-medium mb-1" style="color: #12265E !important">Surname</label>
                             <input type="text" id="enquireSurname" name="surname" required
-                                class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFA600] focus:border-transparent">
                         </div>
                     </div>
 
                     <div>
-                        <label for="enquireEmail" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                        <label for="enquireEmail" class="block text-sm font-medium mb-1" style="color: #12265E !important">Email</label>
                         <input type="email" id="enquireEmail" name="email" required
-                            class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                            class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFA600] focus:border-transparent">
                     </div>
 
                     <div>
-                        <label for="enquirePhone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                        <label for="enquirePhone" class="block text-sm font-medium mb-1" style="color: #12265E !important">Phone Number</label>
                         <input type="tel" id="enquirePhone" name="phone" required
-                            class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                            class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFA600] focus:border-transparent">
                     </div>
 
                     <div>
-                        <label for="enquireCompany" class="block text-sm font-medium text-gray-700 mb-1">Company</label>
+                        <label for="enquireCompany" class="block text-sm font-medium mb-1" style="color: #12265E !important">Company</label>
                         <input type="text" id="enquireCompany" name="company"
-                            class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                            class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFA600] focus:border-transparent">
                     </div>
 
                     <div>
-                        <label for="enquireInterest" class="block text-sm font-medium text-gray-700 mb-1">I'm interested in</label>
+                        <label for="enquireInterest" class="block text-sm font-medium mb-1" style="color: #12265E !important">I'm interested in</label>
                         <select id="enquireInterest" name="interest" required
-                            class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                            class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFA600] focus:border-transparent">
                             <option value="">Select your interest</option>
                             <option value="learnerships">Learnership Programs</option>
                             <option value="qualifications">Professional Qualifications</option>
@@ -178,20 +183,25 @@ const ENQUIRE_NOW_MODAL_HTML = `
                     </div>
 
                     <div>
-                        <label for="enquireMessage" class="block text-sm font-medium text-gray-700 mb-1">Additional Details (Optional)</label>
+                        <label for="enquireMessage" class="block text-sm font-medium mb-1" style="color: #12265E !important">Additional Details (Optional)</label>
                         <textarea id="enquireMessage" name="message" rows="3"
-                            class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                            class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFA600] focus:border-transparent"
                             placeholder="Tell us more about your training needs..."></textarea>
+                    </div>
+
+                    <!-- reCAPTCHA -->
+                    <div class="flex justify-center">
+                        <div class="g-recaptcha" data-sitekey="6LfYourSiteKeyHere"></div>
                     </div>
 
                     <!-- Action Buttons -->
                     <div class="flex space-x-3 pt-4">
                         <button type="button" id="cancelEnquireForm"
-                            class="flex-1 px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors">
+                            class="flex-1 px-4 py-2 bg-[#12265E] text-white font-semibold rounded-lg hover:bg-[#0d1a47] transition-colors">
                             Cancel
                         </button>
                         <button type="submit"
-                            class="flex-1 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold px-4 py-2 rounded-lg hover:from-blue-700 hover:to-blue-800 transition duration-300">
+                            class="flex-1 bg-gradient-to-r from-[#12265E] to-[#12265E] text-white font-semibold px-4 py-2 rounded-lg hover:from-[#FFA600] hover:to-[#FFA600] transition duration-300">
                             Submit Enquiry
                         </button>
                     </div>
@@ -211,7 +221,7 @@ const BOOK_NOW_MODAL_HTML = `
             <div class="p-6">
                 <!-- Modal Header -->
                 <div class="flex justify-between items-center mb-4">
-                    <h3 class="text-2xl font-bold text-gray-900">Book Training</h3>
+                    <h3 class="text-2xl font-bold text-[#12265E]">Book Training</h3>
                     <button id="closeBookNowModal" class="text-gray-400 hover:text-gray-600 transition-colors">
                         <i data-lucide="x" class="w-6 h-6"></i>
                     </button>
@@ -226,39 +236,39 @@ const BOOK_NOW_MODAL_HTML = `
 
                     <div class="grid grid-cols-2 gap-4">
                         <div>
-                            <label for="bookingName" class="block text-sm font-medium text-gray-700 mb-1">Name *</label>
+                            <label for="bookingName" class="block text-sm font-medium mb-1" style="color: #12265E !important">Name *</label>
                             <input type="text" id="bookingName" name="name" required
-                                class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFA600] focus:border-transparent">
                         </div>
                         <div>
-                            <label for="bookingSurname" class="block text-sm font-medium text-gray-700 mb-1">Surname *</label>
+                            <label for="bookingSurname" class="block text-sm font-medium mb-1" style="color: #12265E !important">Surname *</label>
                             <input type="text" id="bookingSurname" name="surname" required
-                                class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFA600] focus:border-transparent">
                         </div>
                     </div>
 
                     <div>
-                        <label for="bookingEmail" class="block text-sm font-medium text-gray-700 mb-1">Email *</label>
+                        <label for="bookingEmail" class="block text-sm font-medium mb-1" style="color: #12265E !important">Email *</label>
                         <input type="email" id="bookingEmail" name="email" required
-                            class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                            class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFA600] focus:border-transparent">
                     </div>
 
                     <div>
-                        <label for="bookingPhone" class="block text-sm font-medium text-gray-700 mb-1">Contact Number *</label>
+                        <label for="bookingPhone" class="block text-sm font-medium mb-1" style="color: #12265E !important">Contact Number *</label>
                         <input type="tel" id="bookingPhone" name="phone" required
-                            class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                            class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFA600] focus:border-transparent">
                     </div>
 
                     <div>
-                        <label for="bookingCompany" class="block text-sm font-medium text-gray-700 mb-1">Company *</label>
+                        <label for="bookingCompany" class="block text-sm font-medium mb-1" style="color: #12265E !important">Company *</label>
                         <input type="text" id="bookingCompany" name="company" required
-                            class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                            class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFA600] focus:border-transparent">
                     </div>
 
                     <div>
-                        <label for="shortCourseSelect" class="block text-sm font-medium text-gray-700 mb-1">Short Course *</label>
+                        <label for="shortCourseSelect" class="block text-sm font-medium mb-1" style="color: #12265E !important">Short Course *</label>
                         <select id="shortCourseSelect" name="short_course" required
-                            class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                            class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFA600] focus:border-transparent">
                             <option value="">Select a short course</option>
                             <optgroup label="Computer Courses">
                                 <option value="excel-basic">Excel Training - Basic</option>
@@ -285,9 +295,9 @@ const BOOK_NOW_MODAL_HTML = `
                     </div>
 
                     <div>
-                        <label for="participantCount" class="block text-sm font-medium text-gray-700 mb-1">Number of People *</label>
+                        <label for="participantCount" class="block text-sm font-medium mb-1" style="color: #12265E !important">Number of People *</label>
                         <select id="participantCount" name="participants" required
-                            class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                            class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFA600] focus:border-transparent">
                             <option value="">Select number of participants</option>
                             <option value="1">1 participant</option>
                             <option value="2">2 participants</option>
@@ -302,9 +312,9 @@ const BOOK_NOW_MODAL_HTML = `
                     </div>
 
                     <div>
-                        <label for="trainingLocation" class="block text-sm font-medium text-gray-700 mb-1">Location of Training *</label>
+                        <label for="trainingLocation" class="block text-sm font-medium mb-1" style="color: #12265E !important">Location of Training *</label>
                         <select id="trainingLocation" name="location" required
-                            class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                            class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFA600] focus:border-transparent">
                             <option value="">Select training location</option>
                             <option value="client-premises">At client premises</option>
                             <option value="speccon-offices">At SpecCon offices</option>
@@ -315,26 +325,31 @@ const BOOK_NOW_MODAL_HTML = `
                     </div>
 
                     <div>
-                        <label for="preferredDate" class="block text-sm font-medium text-gray-700 mb-1">Preferred Training Date</label>
+                        <label for="preferredDate" class="block text-sm font-medium mb-1" style="color: #12265E !important">Preferred Training Date</label>
                         <input type="date" id="preferredDate" name="preferred_date"
-                            class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                            class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFA600] focus:border-transparent">
                     </div>
 
                     <div>
-                        <label for="bookingNotes" class="block text-sm font-medium text-gray-700 mb-1">Additional Requirements</label>
+                        <label for="bookingNotes" class="block text-sm font-medium mb-1" style="color: #12265E !important">Additional Requirements</label>
                         <textarea id="bookingNotes" name="notes" rows="3"
-                            class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                            class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFA600] focus:border-transparent"
                             placeholder="Any specific requirements, accessibility needs, or questions about the training..."></textarea>
+                    </div>
+
+                    <!-- reCAPTCHA -->
+                    <div class="flex justify-center">
+                        <div class="g-recaptcha" data-sitekey="6LfYourSiteKeyHere"></div>
                     </div>
 
                     <!-- Action Buttons -->
                     <div class="flex space-x-3 pt-4">
                         <button type="button" id="cancelBookingForm"
-                            class="flex-1 px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors">
+                            class="flex-1 px-4 py-2 bg-[#12265E] text-white font-semibold rounded-lg hover:bg-[#0d1a47] transition-colors">
                             Cancel
                         </button>
                         <button type="submit"
-                            class="flex-1 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold px-4 py-2 rounded-lg hover:from-blue-700 hover:to-blue-800 transition duration-300">
+                            class="flex-1 bg-gradient-to-r from-[#12265E] to-[#12265E] text-white font-semibold px-4 py-2 rounded-lg hover:from-[#FFA600] hover:to-[#FFA600] transition duration-300">
                             Submit Training Request
                         </button>
                     </div>
@@ -419,7 +434,16 @@ function setupContactModal() {
         // Handle form submission
         form.addEventListener('submit', (e) => {
             e.preventDefault();
+
+            // Validate reCAPTCHA
+            const recaptchaResponse = grecaptcha.getResponse();
+            if (!recaptchaResponse) {
+                alert('Please complete the reCAPTCHA verification.');
+                return;
+            }
+
             alert('Thank you for your message! We will contact you soon.');
+            grecaptcha.reset();
             closeContactModal();
         });
     }
@@ -462,7 +486,16 @@ function setupEnquireModal() {
         // Handle form submission
         form.addEventListener('submit', (e) => {
             e.preventDefault();
+
+            // Validate reCAPTCHA
+            const recaptchaResponse = grecaptcha.getResponse(1);
+            if (!recaptchaResponse) {
+                alert('Please complete the reCAPTCHA verification.');
+                return;
+            }
+
             alert('Thank you for your enquiry! We will contact you within 24 hours.');
+            grecaptcha.reset(1);
             closeEnquireModal();
         });
     }
@@ -505,7 +538,16 @@ function setupBookNowModal() {
         // Handle form submission
         form.addEventListener('submit', (e) => {
             e.preventDefault();
+
+            // Validate reCAPTCHA
+            const recaptchaResponse = grecaptcha.getResponse(2);
+            if (!recaptchaResponse) {
+                alert('Please complete the reCAPTCHA verification.');
+                return;
+            }
+
             alert('Thank you for your booking request! We will contact you within 24 hours to confirm details and pricing.');
+            grecaptcha.reset(2);
             closeBookNowModal();
         });
     }
