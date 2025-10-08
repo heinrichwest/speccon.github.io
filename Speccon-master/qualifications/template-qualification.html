@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{QUALIFICATION_TITLE}} | {{SETA_NAME}} | SpecCon Holdings</title>
+    <meta name="description" content="{{QUALIFICATION_DESCRIPTION}}">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        nav { font-family: 'Roboto', sans-serif; }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 10px 10px -5px rgb(0 0 0 / 0.04);
+        }
+        .animate-scroll {
+            animation: scroll 30s linear infinite;
+        }
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-900">
+    <!-- Header -->
+    <header class="bg-white/95 backdrop-blur-md shadow-lg fixed w-full z-50 top-0">
+        <div class="container mx-auto px-4 lg:px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <a href="../index.html">
+                        <img src="../Images/Logo.png" alt="SpecCon Holdings Logo" class="h-12">
+                    </a>
+                    <div class="ml-3">
+                        <h1 class="text-xl font-bold text-gray-900">SpecCon Holdings</h1>
+                        <p class="text-sm text-gray-600">{{QUALIFICATION_TITLE}}</p>
+                    </div>
+                </div>
+
+                <nav class="hidden lg:flex items-center space-x-8">
+                    <a href="../index.html" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300">Home</a>
+                    <a href="../setas/{{SETA_URL}}.html" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300">{{SETA_NAME}}</a>
+                    <a href="../index.html#qualifications" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300">All Qualifications</a>
+                    <a href="../index.html#contact" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300">Contact Us</a>
+                </nav>
+
+                <div class="hidden lg:block">
+                    <a href="../index.html#apply" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold px-6 py-3 rounded-lg hover:from-blue-700 hover:to-purple-700 transition duration-300 shadow-lg">
+                        Apply Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <section class="pt-24 pb-8 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <nav class="text-sm text-gray-600">
+                <a href="../index.html" class="hover:text-blue-600">Home</a>
+                <span class="mx-2">/</span>
+                <a href="../setas/{{SETA_URL}}.html" class="hover:text-blue-600">{{SETA_NAME}}</a>
+                <span class="mx-2">/</span>
+                <span class="text-gray-900">{{QUALIFICATION_TITLE}}</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="py-16 bg-gradient-to-br from-{{HERO_COLOR}}-50 to-white">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-{{HERO_COLOR}}-100 rounded-2xl flex items-center justify-center mr-6">
+                            <i data-lucide="{{ICON_NAME}}" class="w-8 h-8 text-{{HERO_COLOR}}-600"></i>
+                        </div>
+                        <div>
+                            <span class="text-{{HERO_COLOR}}-600 font-semibold">NQF Level {{NQF_LEVEL}} | {{SETA_NAME}}</span>
+                            <h1 class="text-4xl md:text-5xl font-bold text-gray-900">{{QUALIFICATION_NAME}}</h1>
+                        </div>
+                    </div>
+                    <p class="text-lg text-gray-600 leading-relaxed mb-8">
+                        {{QUALIFICATION_SUMMARY}}
+                    </p>
+                    <div class="grid grid-cols-3 gap-4 mb-8">
+                        <div class="text-center p-4 bg-white rounded-lg shadow">
+                            <div class="text-xl font-bold text-{{HERO_COLOR}}-600">{{CREDITS}}</div>
+                            <div class="text-sm text-gray-600">Credits</div>
+                        </div>
+                        <div class="text-center p-4 bg-white rounded-lg shadow">
+                            <div class="text-xl font-bold text-green-600">{{DURATION}}</div>
+                            <div class="text-sm text-gray-600">Months</div>
+                        </div>
+                        <div class="text-center p-4 bg-white rounded-lg shadow">
+                            <div class="text-xl font-bold text-purple-600">NQF {{NQF_LEVEL}}</div>
+                            <div class="text-sm text-gray-600">Level</div>
+                        </div>
+                    </div>
+                    <a href="../index.html#apply" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold py-3 px-8 rounded-lg hover:from-blue-700 hover:to-purple-700 transition duration-300 shadow-lg">
+                        Apply for This Qualification
+                    </a>
+                </div>
+                <div>
+                    <img src="{{HERO_IMAGE_URL}}"
+                         alt="{{QUALIFICATION_NAME}} professional working"
+                         class="rounded-2xl shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Qualification Details -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-3 gap-12">
+                <!-- Main Content -->
+                <div class="lg:col-span-2">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-8">Qualification Overview</h2>
+
+                    <div class="prose max-w-none mb-12">
+                        <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                            {{DETAILED_OVERVIEW}}
+                        </p>
+
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Learning Outcomes</h3>
+                        <p class="text-gray-600 mb-6">Upon completion of this qualification, learners will be able to:</p>
+                        <ul class="space-y-3 mb-8">
+                            {{LEARNING_OUTCOMES}}
+                        </ul>
+
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Career Opportunities</h3>
+                        <p class="text-gray-600 mb-6">This qualification opens doors to various career opportunities including:</p>
+                        <div class="grid md:grid-cols-2 gap-4 mb-8">
+                            {{CAREER_OPPORTUNITIES}}
+                        </div>
+                    </div>
+
+                    <!-- Modules -->
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Core Modules</h3>
+                    <div class="space-y-6 mb-12">
+                        {{CORE_MODULES}}
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="lg:col-span-1">
+                    <div class="bg-white border border-gray-200 rounded-2xl shadow-lg p-8 sticky top-24">
+                        <h3 class="text-xl font-bold text-gray-900 mb-6">Qualification Details</h3>
+
+                        <div class="space-y-4 mb-8">
+                            <div class="flex justify-between items-center py-3 border-b border-gray-100">
+                                <span class="text-gray-600">SETA</span>
+                                <span class="font-semibold">{{SETA_NAME}}</span>
+                            </div>
+                            <div class="flex justify-between items-center py-3 border-b border-gray-100">
+                                <span class="text-gray-600">NQF Level</span>
+                                <span class="font-semibold">Level {{NQF_LEVEL}}</span>
+                            </div>
+                            <div class="flex justify-between items-center py-3 border-b border-gray-100">
+                                <span class="text-gray-600">Credits</span>
+                                <span class="font-semibold">{{CREDITS}} Credits</span>
+                            </div>
+                            <div class="flex justify-between items-center py-3 border-b border-gray-100">
+                                <span class="text-gray-600">Duration</span>
+                                <span class="font-semibold">{{DURATION}} Months</span>
+                            </div>
+                            <div class="flex justify-between items-center py-3 border-b border-gray-100">
+                                <span class="text-gray-600">Delivery Mode</span>
+                                <span class="font-semibold">{{DELIVERY_MODE}}</span>
+                            </div>
+                            <div class="flex justify-between items-center py-3 border-b border-gray-100">
+                                <span class="text-gray-600">Assessment</span>
+                                <span class="font-semibold">{{ASSESSMENT_METHOD}}</span>
+                            </div>
+                            <div class="flex justify-between items-center py-3 border-b border-gray-100">
+                                <span class="text-gray-600">NLRD ID</span>
+                                <span class="font-semibold">{{NLRD_ID}}</span>
+                            </div>
+                            <div class="flex justify-between items-center py-3 border-b border-gray-100">
+                                <span class="text-gray-600">Status</span>
+                                <span class="font-semibold">{{STATUS}}</span>
+                            </div>
+                            <div class="flex justify-between items-center py-3 border-b border-gray-100">
+                                <span class="text-gray-600">Provider</span>
+                                <span class="font-semibold">SpecCon</span>
+                            </div>
+                        </div>
+
+                        <div class="space-y-4">
+                            <a href="../learnership-application.html" class="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold py-3 px-6 rounded-lg text-center hover:from-blue-700 hover:to-purple-700 transition duration-300">
+                                Apply for Learnership
+                            </a>
+                            <button onclick="openEnquireModal()" class="block w-full border-2 border-blue-600 text-blue-600 font-bold py-3 px-6 rounded-lg text-center hover:bg-blue-600 hover:text-white transition duration-300">
+                                Request Information
+                            </button>
+                        </div>
+
+                        <div class="mt-8 p-4 bg-blue-50 rounded-lg">
+                            <h4 class="font-bold text-gray-900 mb-2">Need Help?</h4>
+                            <p class="text-sm text-gray-600 mb-3">Contact our qualification specialists for guidance.</p>
+                            <a href="mailto:help@speccon.co.za" class="text-blue-600 hover:text-blue-700 font-medium text-sm">help@speccon.co.za</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Qualifications -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Related Qualifications</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Explore other {{SETA_NAME}} qualifications</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                {{RELATED_QUALIFICATIONS}}
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    
+    <footer class="bg-gradient-to-r from-[#12265E] to-[#92ABC4] text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <img src="Images/SpecCon-LOGO.png" alt="SpecCon Holdings Logo" class="h-12">
+                        <div>
+                            <h3 class="text-xl font-bold">SpecCon Holdings</h3>
+                            <p class="text-white/80">Accredited Training Solutions</p>
+                        </div>
+                    </div>
+                    <p class="text-white/80 mb-4">Empowering individuals and organizations through high-quality, accredited education and training solutions.</p>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="/index.html#about" class="text-white/80 hover:text-[#FFA600] transition duration-200">Why Choose Us</a></li>
+                        <li><a href="/index.html#qualifications" class="text-white/80 hover:text-[#FFA600] transition duration-200">Qualifications</a></li>
+                        <li><a href="/index.html#accreditations" class="text-white/80 hover:text-[#FFA600] transition duration-200">Accreditations</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Us</h4>
+                    <ul class="space-y-2">
+                        <li><p class="text-white/80">Phone: 012 667 4962</p></li>
+                        <li><p class="text-white/80">Email: Help@speccon.co.za</p></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-white/80">&copy; 2025 SpecCon Holdings. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+
+    <script>
+        lucide.createIcons();
+    </script>
+    <script>
+
+        stickyBanner.addEventListener("click", function() {
+            bannerPopup.classList.toggle("show");
+            isPopupOpen = !isPopupOpen;
+        });
+
+        // Close popup
+        closePopup.addEventListener("click", function() {
+            bannerPopup.classList.remove("show");
+            isPopupOpen = false;
+        });
+
+        // Close popup when clicking outside
+        document.addEventListener("click", function(e) {
+            if (!stickyBanner.contains(e.target) && !bannerPopup.contains(e.target)) {
+                bannerPopup.classList.remove("show");
+                isPopupOpen = false;
+            }
+        });
+    </script>
+
+    <script src="../js/centralized-modals.js"></script>
+    <script src="../js/value-adds-popup.js"></script>
+</body>
+
+</html>

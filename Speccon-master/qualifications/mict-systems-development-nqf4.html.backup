@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information Technology: Systems Development NQF Level 4 | MICT SETA | SpecCon Holdings</title>
+    <meta name="description" content="Foundational qualification in IT Systems Development covering programming, database design, and fundamental IT concepts. 165 credits, MICT SETA accredited.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 10px 10px -5px rgb(0 0 0 / 0.04);
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-900">
+    <!-- Header -->
+    <header class="bg-white/95 backdrop-blur-md shadow-lg fixed w-full z-50 top-0">
+        <div class="container mx-auto px-4 lg:px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <a href="../index.html">
+                        <img src="../images/Logo.png" alt="SpecCon Holdings Logo" class="h-12">
+                    </a>
+                    <div class="ml-3">
+                        <h1 class="text-xl font-bold text-gray-900">SpecCon Holdings</h1>
+                        <p class="text-sm text-gray-600">IT Systems Development Qualification</p>
+                    </div>
+                </div>
+
+                <nav class="hidden lg:flex items-center space-x-8">
+                    <a href="../index.html" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300">Home</a>
+                    <a href="../setas/mict-seta.html" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300">MICT SETA</a>
+                    <a href="../index.html#qualifications" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300">All Qualifications</a>
+                    <a href="../index.html#contact" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300">Contact Us</a>
+                </nav>
+
+                <div class="hidden lg:block">
+                    <a href="../index.html#apply" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold px-6 py-3 rounded-lg hover:from-blue-700 hover:to-purple-700 transition duration-300 shadow-lg">
+                        Apply Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <section class="pt-24 pb-8 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <nav class="text-sm text-gray-600">
+                <a href="../index.html" class="hover:text-blue-600">Home</a>
+                <span class="mx-2">/</span>
+                <a href="../setas/mict-seta.html" class="hover:text-blue-600">MICT SETA</a>
+                <span class="mx-2">/</span>
+                <span class="text-gray-900">Information Technology: Systems Development NQF Level 4</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="py-16 bg-gradient-to-br from-blue-50 to-white">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mr-6">
+                            <i data-lucide="monitor" class="w-8 h-8 text-blue-600"></i>
+                        </div>
+                        <div>
+                            <span class="text-blue-600 font-semibold">NQF Level 4 | MICT SETA</span>
+                            <h1 class="text-4xl md:text-5xl font-bold text-gray-900">Information Technology: Systems Development</h1>
+                        </div>
+                    </div>
+                    <p class="text-lg text-gray-600 leading-relaxed mb-8">
+                        Build a foundational entry into Computer Sciences and Information Technology, specifically in Systems Development.
+                        This comprehensive qualification covers programming fundamentals, database design, and essential IT concepts for modern development environments.
+                    </p>
+                    <div class="grid grid-cols-3 gap-4 mb-8">
+                        <div class="text-center p-4 bg-white rounded-lg shadow">
+                            <div class="text-xl font-bold text-blue-600">165</div>
+                            <div class="text-sm text-gray-600">Credits</div>
+                        </div>
+                        <div class="text-center p-4 bg-white rounded-lg shadow">
+                            <div class="text-xl font-bold text-green-600">18-24</div>
+                            <div class="text-sm text-gray-600">Months</div>
+                        </div>
+                        <div class="text-center p-4 bg-white rounded-lg shadow">
+                            <div class="text-xl font-bold text-purple-600">NQF 4</div>
+                            <div class="text-sm text-gray-600">Level</div>
+                        </div>
+                    </div>
+                    <a href="../index.html#apply" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold py-3 px-8 rounded-lg hover:from-blue-700 hover:to-purple-700 transition duration-300 shadow-lg">
+                        Apply for This Qualification
+                    </a>
+                </div>
+                <div>
+                    <img src="https://images.pexels.com/photos/4709285/pexels-photo-4709285.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                         alt="IT systems development professional working"
+                         class="rounded-2xl shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Qualification Details -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-3 gap-12">
+                <!-- Main Content -->
+                <div class="lg:col-span-2">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-8">Qualification Overview</h2>
+
+                    <div class="prose max-w-none mb-12">
+                        <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                            The Information Technology: Systems Development qualification provides learners with foundational knowledge
+                            and skills in computer programming, systems analysis, and software development. This comprehensive
+                            program combines theoretical understanding with practical application, preparing graduates for entry-level
+                            positions in the rapidly growing IT industry.
+                        </p>
+
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Learning Outcomes</h3>
+                        <p class="text-gray-600 mb-6">Upon completion of this qualification, learners will be able to:</p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0"></i>
+                                <span>Communicate effectively with IT staff and system users</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0"></i>
+                                <span>Understand different computer systems and their business applications</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0"></i>
+                                <span>Apply problem-solving techniques in technical environments</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0"></i>
+                                <span>Demonstrate understanding of computer technology principles</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0"></i>
+                                <span>Understand programming principles and create functional programs</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0"></i>
+                                <span>Work effectively within software development teams</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0"></i>
+                                <span>Design and implement database solutions</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0"></i>
+                                <span>Apply mathematical concepts to programming problems</span>
+                            </li>
+                        </ul>
+
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Career Opportunities</h3>
+                        <p class="text-gray-600 mb-6">This qualification opens doors to various IT development opportunities including:</p>
+                        <div class="grid md:grid-cols-2 gap-4 mb-8">
+                            <div class="flex items-center">
+                                <i data-lucide="briefcase" class="w-5 h-5 text-blue-600 mr-3"></i>
+                                <span>Junior Software Developer</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i data-lucide="briefcase" class="w-5 h-5 text-blue-600 mr-3"></i>
+                                <span>Junior Programmer</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i data-lucide="briefcase" class="w-5 h-5 text-blue-600 mr-3"></i>
+                                <span>Systems Support Analyst</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i data-lucide="briefcase" class="w-5 h-5 text-blue-600 mr-3"></i>
+                                <span>Database Assistant</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i data-lucide="briefcase" class="w-5 h-5 text-blue-600 mr-3"></i>
+                                <span>IT Project Team Member</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i data-lucide="briefcase" class="w-5 h-5 text-blue-600 mr-3"></i>
+                                <span>Technical Support Specialist</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modules -->
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Core Modules</h3>
+                    <div class="space-y-6 mb-12">
+                        <div class="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-xl">
+                            <h4 class="font-bold text-lg text-gray-900 mb-3">Module 1: Fundamental Components</h4>
+                            <ul class="space-y-2 text-sm text-gray-600">
+                                <li>• Mathematical Literacy (16 credits)</li>
+                                <li>• Communication in First South African Language (20 credits)</li>
+                                <li>• Communication in Second South African Language (20 credits)</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-gradient-to-r from-green-50 to-emerald-50 p-6 rounded-xl">
+                            <h4 class="font-bold text-lg text-gray-900 mb-3">Module 2: Computer Programming Principles</h4>
+                            <ul class="space-y-2 text-sm text-gray-600">
+                                <li>• Fundamental programming concepts and logic</li>
+                                <li>• Object-oriented programming principles</li>
+                                <li>• Algorithm design and development</li>
+                                <li>• Code debugging and testing techniques</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-gradient-to-r from-purple-50 to-pink-50 p-6 rounded-xl">
+                            <h4 class="font-bold text-lg text-gray-900 mb-3">Module 3: Computer Technology Principles</h4>
+                            <ul class="space-y-2 text-sm text-gray-600">
+                                <li>• Computer hardware architecture and components</li>
+                                <li>• Operating systems and system software</li>
+                                <li>• Network fundamentals and connectivity</li>
+                                <li>• Information security basics</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-gradient-to-r from-teal-50 to-cyan-50 p-6 rounded-xl">
+                            <h4 class="font-bold text-lg text-gray-900 mb-3">Module 4: Systems Development</h4>
+                            <ul class="space-y-2 text-sm text-gray-600">
+                                <li>• Software development lifecycle (SDLC)</li>
+                                <li>• Requirements analysis and system design</li>
+                                <li>• Testing and quality assurance principles</li>
+                                <li>• Project management fundamentals</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-gradient-to-r from-orange-50 to-red-50 p-6 rounded-xl">
+                            <h4 class="font-bold text-lg text-gray-900 mb-3">Module 5: Database Design and Management</h4>
+                            <ul class="space-y-2 text-sm text-gray-600">
+                                <li>• Database design principles and normalization</li>
+                                <li>• SQL programming and query optimization</li>
+                                <li>• Data modeling and entity relationships</li>
+                                <li>• Database administration basics</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-gradient-to-r from-yellow-50 to-amber-50 p-6 rounded-xl">
+                            <h4 class="font-bold text-lg text-gray-900 mb-3">Module 6: Business Communication</h4>
+                            <ul class="space-y-2 text-sm text-gray-600">
+                                <li>• Technical documentation writing</li>
+                                <li>• Presentation skills for IT professionals</li>
+                                <li>• Team collaboration and communication</li>
+                                <li>• User support and training delivery</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-gradient-to-r from-indigo-50 to-blue-50 p-6 rounded-xl">
+                            <h4 class="font-bold text-lg text-gray-900 mb-3">Module 7: Elective Specializations</h4>
+                            <ul class="space-y-2 text-sm text-gray-600">
+                                <li>• Web development technologies</li>
+                                <li>• Mobile application development</li>
+                                <li>• Data analytics and reporting</li>
+                                <li>• Cybersecurity fundamentals</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="lg:col-span-1">
+                    <div class="bg-white border border-gray-200 rounded-2xl shadow-lg p-8 sticky top-24">
+                        <h3 class="text-xl font-bold text-gray-900 mb-6">Qualification Details</h3>
+
+                        <div class="space-y-4 mb-8">
+                            <div class="flex justify-between items-center py-3 border-b border-gray-100">
+                                <span class="text-gray-600">SETA</span>
+                                <span class="font-semibold">MICT SETA</span>
+                            </div>
+                            <div class="flex justify-between items-center py-3 border-b border-gray-100">
+                                <span class="text-gray-600">NQF Level</span>
+                                <span class="font-semibold">Level 4</span>
+                            </div>
+                            <div class="flex justify-between items-center py-3 border-b border-gray-100">
+                                <span class="text-gray-600">Credits</span>
+                                <span class="font-semibold">165 Credits</span>
+                            </div>
+                            <div class="flex justify-between items-center py-3 border-b border-gray-100">
+                                <span class="text-gray-600">Duration</span>
+                                <span class="font-semibold">18-24 Months</span>
+                            </div>
+                            <div class="flex justify-between items-center py-3 border-b border-gray-100">
+                                <span class="text-gray-600">Delivery Mode</span>
+                                <span class="font-semibold">Blended Learning</span>
+                            </div>
+                            <div class="flex justify-between items-center py-3 border-b border-gray-100">
+                                <span class="text-gray-600">Assessment</span>
+                                <span class="font-semibold">Competency Based</span>
+                            </div>
+                            <div class="flex justify-between items-center py-3 border-b border-gray-100">
+                                <span class="text-gray-600">NLRD ID</span>
+                                <span class="font-semibold">78965</span>
+                            </div>
+                            <div class="flex justify-between items-center py-3 border-b border-gray-100">
+                                <span class="text-gray-600">Status</span>
+                                <span class="font-semibold">Legacy Extended</span>
+                            </div>
+                            <div class="flex justify-between items-center py-3 border-b border-gray-100">
+                                <span class="text-gray-600">Provider</span>
+                                <span class="font-semibold">SpecCon</span>
+                            </div>
+                        </div>
+
+                        <div class="space-y-4">
+                            <a href="../index.html#apply" class="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold py-3 px-6 rounded-lg text-center hover:from-blue-700 hover:to-purple-700 transition duration-300">
+                                Apply for Learnership
+                            </a>
+                            <a href="../index.html#contact" class="block w-full border-2 border-blue-600 text-blue-600 font-bold py-3 px-6 rounded-lg text-center hover:bg-blue-600 hover:text-white transition duration-300">
+                                Request Information
+                            </a>
+                        </div>
+
+                        <div class="mt-8 p-4 bg-blue-50 rounded-lg">
+                            <h4 class="font-bold text-gray-900 mb-2">Need Help?</h4>
+                            <p class="text-sm text-gray-600 mb-3">Contact our qualification specialists for guidance.</p>
+                            <a href="mailto:help@speccon.co.za" class="text-blue-600 hover:text-blue-700 font-medium text-sm">help@speccon.co.za</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Qualifications -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Related Qualifications</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Explore other MICT SETA qualifications</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <a href="mict-software-engineer-nqf6.html" class="bg-white rounded-2xl shadow-lg p-6 card-hover transition-all duration-300 block">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+                            <i data-lucide="code" class="w-6 h-6 text-blue-600"></i>
+                        </div>
+                        <div>
+                            <span class="text-sm text-blue-600 font-medium">NQF Level 6</span>
+                            <h3 class="font-bold text-lg text-gray-900">Software Engineer</h3>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm">Advanced software engineering and development practices.</p>
+                </a>
+
+                <a href="mict-business-analysis-nqf6.html" class="bg-white rounded-2xl shadow-lg p-6 card-hover transition-all duration-300 block">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-4">
+                            <i data-lucide="bar-chart" class="w-6 h-6 text-purple-600"></i>
+                        </div>
+                        <div>
+                            <span class="text-sm text-purple-600 font-medium">NQF Level 6</span>
+                            <h3 class="font-bold text-lg text-gray-900">Business Analysis</h3>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm">Strategic business analysis and systems evaluation.</p>
+                </a>
+
+                <a href="../setas/mict-seta.html" class="bg-white rounded-2xl shadow-lg p-6 card-hover transition-all duration-300 block">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4">
+                            <i data-lucide="monitor" class="w-6 h-6 text-green-600"></i>
+                        </div>
+                        <div>
+                            <span class="text-sm text-green-600 font-medium">All Levels</span>
+                            <h3 class="font-bold text-lg text-gray-900">View All MICT</h3>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm">Explore all MICT SETA qualification offerings.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <img src="../images/Logo.png" alt="SpecCon Holdings Logo" class="h-12 mr-3">
+                        <div>
+                            <h3 class="text-xl font-bold">SpecCon Holdings</h3>
+                            <p class="text-gray-400">IT Systems Development Qualification</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 mb-4">Building the next generation of IT professionals through comprehensive systems development training.</p>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="../index.html" class="text-gray-400 hover:text-white transition duration-200">Home</a></li>
+                        <li><a href="../setas/mict-seta.html" class="text-gray-400 hover:text-white transition duration-200">MICT SETA</a></li>
+                        <li><a href="../index.html#qualifications" class="text-gray-400 hover:text-white transition duration-200">All Qualifications</a></li>
+                        <li><a href="../index.html#contact" class="text-gray-400 hover:text-white transition duration-200">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Get Started</h4>
+                    <ul class="space-y-2">
+                        <li><a href="../index.html#apply" class="text-gray-400 hover:text-white transition duration-200">Apply Now</a></li>
+                        <li><a href="../index.html#contact" class="text-gray-400 hover:text-white transition duration-200">Get Information</a></li>
+                        <li><a href="mailto:help@speccon.co.za" class="text-gray-400 hover:text-white transition duration-200">Email Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2025 SpecCon Holdings. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

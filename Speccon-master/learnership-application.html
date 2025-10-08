@@ -1,0 +1,2318 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learnership Application | SpecCon Holdings</title>
+    <meta name="description" content="Apply for a learnership with SpecCon Holdings. Complete assessments and submit your application for professional training and development.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        nav { font-family: 'Roboto', sans-serif; }
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 10px 10px -5px rgb(0 0 0 / 0.04);
+        }
+        /* Enhanced Dropdown Menu Styles */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: calc(100% + 8px);
+            left: 0;
+            min-width: 16rem;
+            background: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e5e7eb;
+            z-index: 1000;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: opacity 0.2s ease, transform 0.2s ease;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Invisible bridge to prevent menu closing when moving cursor */
+        .dropdown::before {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            height: 12px;
+            z-index: 999;
+        }
+
+        .dropdown button {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            padding: 0;
+            font-size: inherit;
+            font-family: inherit;
+            color: inherit;
+        }
+
+        /* Assessment Modal Styles */
+        .assessment-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        .assessment-modal.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        .assessment-modal-content {
+            background: white;
+            border-radius: 20px;
+            max-width: 800px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+            transform: translateY(20px);
+            transition: transform 0.3s ease;
+        }
+        .assessment-modal.show .assessment-modal-content {
+            transform: translateY(0);
+        }
+
+        /* Speed Typing Test Styles */
+        .typing-text {
+            font-family: 'Courier New', monospace;
+            line-height: 1.6;
+            padding: 20px;
+            border: 2px solid #e5e7eb;
+            border-radius: 10px;
+            background: #f9fafb;
+            margin: 10px 0;
+        }
+        .typing-input {
+            font-family: 'Courier New', monospace;
+            line-height: 1.6;
+            padding: 20px;
+            border: 2px solid #3b82f6;
+            border-radius: 10px;
+            width: 100%;
+            resize: none;
+        }
+        .correct-char {
+            background-color: #dcfce7;
+        }
+        .incorrect-char {
+            background-color: #fecaca;
+        }
+        .current-char {
+            background-color: #dbeafe;
+        }
+
+        /* Assessment Status Styles */
+        .assessment-completed {
+            background: #92abc4;
+            border: 2px solid #92abc4;
+        }
+        .assessment-pending {
+            background: #fef3c7;
+            border: 2px solid #d97706;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-900">
+    <!-- Header -->
+    <header class="bg-white/95 backdrop-blur-md shadow-lg fixed w-full z-50 top-0">
+        <div class="container mx-auto px-4 lg:px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <a href="index.html">
+                        <img src="Images/Logo.png" alt="SpecCon Holdings Logo" class="h-12">
+                    </a>
+                    <div class="ml-3">
+                        <h1 class="text-xl font-bold text-gray-900">SpecCon Holdings</h1>
+                        <p class="text-sm text-[#ffa600]">Professional Training & Development</p>
+                    </div>
+                </div>
+
+                <nav class="hidden lg:flex items-center space-x-4">
+                    <a href="index.html#about" class="text-[#12265E] hover:text-[#FFA600] font-medium transition duration-300">Why Choose Us</a>
+                    <a href="index.html#qualifications" class="text-[#12265E] hover:text-[#FFA600] font-medium transition duration-300">Qualifications</a>
+                    <a href="index.html#accreditations" class="text-[#12265E] hover:text-[#FFA600] font-medium transition duration-300">Accreditations</a>
+                    <a href="index.html#classroom-training" class="text-[#12265E] hover:text-[#FFA600] font-medium transition duration-300">Classroom Training</a>
+                    <div class="relative dropdown">
+                        <button class="text-[#12265E] hover:text-[#FFA600] font-medium transition duration-300 inline-flex items-center">
+                            Other Products <i data-lucide="chevron-down" class="w-4 h-4 ml-1"></i>
+                        </button>
+                        <div class="dropdown-menu absolute left-0 w-64 bg-white rounded-lg shadow-xl py-2 z-20 border">
+                            <a href="https://elearning.co.za/" target="_blank" class="block px-4 py-3 text-sm text-gray-700 hover:bg-[#12265E]/10 hover:text-[#12265E] transition duration-200">
+                                <i data-lucide="monitor" class="w-4 h-4 inline mr-2"></i>Online Training
+                            </a>
+                            <a href="https://employmentequityact.co.za/" target="_blank" class="block px-4 py-3 text-sm text-gray-700 hover:bg-[#12265E]/10 hover:text-[#12265E] transition duration-200">
+                                <i data-lucide="shield-check" class="w-4 h-4 inline mr-2"></i>Employment Equity
+                            </a>
+                            <a href="https://learningmanagementsystem.co.za/" target="_blank" class="block px-4 py-3 text-sm text-gray-700 hover:bg-[#12265E]/10 hover:text-[#12265E] transition duration-200">
+                                <i data-lucide="graduation-cap" class="w-4 h-4 inline mr-2"></i>Learning Management System
+                            </a>
+                            <a href="https://skillsdevelopment.co.za/" target="_blank" class="block px-4 py-3 text-sm text-gray-700 hover:bg-[#12265E]/10 hover:text-[#12265E] transition duration-200">
+                                <i data-lucide="trending-up" class="w-4 h-4 inline mr-2"></i>Skills Development
+                            </a>
+                            <a href="https://www.specconacademy.co.za/" target="_blank" class="block px-4 py-3 text-sm text-gray-700 hover:bg-[#12265E]/10 hover:text-[#12265E] transition duration-200">
+                                <i data-lucide="school" class="w-4 h-4 inline mr-2"></i>SpecCon Academy
+                            </a>
+                            <a href="https://bbbee.co.za/" target="_blank" class="block px-4 py-3 text-sm text-gray-700 hover:bg-[#12265E]/10 hover:text-[#12265E] transition duration-200">
+                                <i data-lucide="award" class="w-4 h-4 inline mr-2"></i>BBBEE Consulting
+                            </a>
+                        </div>
+                    </div>
+                </nav>
+
+                <div class="hidden lg:block">
+                    <a href="index.html" class="bg-[#12265E] text-white font-semibold px-6 py-3 rounded-lg hover:bg-[#92abc4] transition duration-300 shadow-lg">
+
+                        Back to Home
+                    </a>
+                </div>
+
+                <button id="mobile-menu-button" class="lg:hidden">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden lg:hidden mt-4">
+                <a href="index.html#about" class="block py-2 text-gray-600 hover:text-[#FFA600]">About Us</a>
+                <a href="index.html#qualifications" class="block py-2 text-gray-600 hover:text-[#FFA600]">Qualifications</a>
+                <a href="index.html#accreditations" class="block py-2 text-gray-600 hover:text-[#FFA600]">Accreditations</a>
+                <a href="index.html#classroom-training" class="block py-2 text-gray-600 hover:text-[#FFA600]">Classroom Training</a>
+                <a href="index.html" class="mt-2 w-full bg-gradient-to-r from-[#12265E] to-[#92ABC4] text-white font-semibold px-5 py-2 rounded-lg hover:from-[#0d1a47] hover:to-[#3a7bc8] transition duration-300 block text-center">Back to Home</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Banner Section -->
+    <section class="pt-24 relative">
+        <div class="relative h-96 md:h-[500px] overflow-hidden">
+            <img src="Images/Accredited Learnership.PNG" alt="Learnership Application - Start Your Career Journey"
+                 class="w-full h-full object-cover object-center">
+            <!-- Text Strip Overlay -->
+            <div class="absolute bottom-0 left-0 right-0 bg-[#12265E]/80 py-6">
+                <div class="container mx-auto px-6">
+                    <h2 class="text-2xl md:text-3xl font-bold text-white text-center">Start Your Career Journey</h2>
+                    <p class="text-white text-center mt-2 text-lg">Transform your future with our comprehensive learnership programs designed for success</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="py-16 bg-gradient-to-br from-white to-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-4xl mx-auto">
+                    <div class="flex items-center justify-center mb-6">
+                        <div class="w-16 h-16 bg-[#92ABC4] rounded-2xl flex items-center justify-center mr-6">
+                            <i data-lucide="graduation-cap" class="w-8 h-8 text-[#FFA600]"></i>
+                        </div>
+                        <div>
+                            <h1 class="text-4xl md:text-5xl font-bold text-[#12265E]">Learnership Application</h1>
+                            <p class="text-[#FFA600] font-semibold mt-2">Start Your Professional Development Journey</p>
+                        </div>
+                    </div>
+                    <p class="text-lg text-gray-600 leading-relaxed mb-8">
+                        Apply for our comprehensive learnership programs and take the first step towards advancing your career.
+                        Complete the required assessments and submit your application to join thousands of successful graduates.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Important Disclaimer -->
+        <section class="py-8 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto">
+                    <div class="bg-white rounded-xl shadow-lg border border-[#92ABC4] p-8">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <i data-lucide="alert-triangle" class="w-8 h-8 text-[#FFA600]"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-xl font-bold text-[#12265E] mb-4">Important Information - Please Read Carefully</h3>
+
+                                <!-- Red Fee Notice -->
+                                <div class="bg-red-100 border border-red-300 rounded-lg p-4 mb-4">
+                                    <p class="text-red-800 font-bold text-center">
+                                        ⚠️ SpecCon will never charge any fee for a learnership application. ⚠️
+                                    </p>
+                                </div>
+
+                                <div class="text-[#12265E] space-y-3">
+                                    <p class="leading-relaxed">
+                                        <strong>Please note:</strong> A Learnership is not an opportunity to earn money for 12 months. It is a learning opportunity.
+                                        Although a stipend will cover your expenses, your main reason should be to learn, gain experience and find a permanent job.
+                                        <strong>Please do not apply if your reason for applying is different than this.</strong> There are thousands of people applying daily.
+                                    </p>
+                                    <p class="leading-relaxed">
+                                        You must complete <strong>ALL FOUR assessments</strong> (Speed Typing, Literacy, Mathematical, and Excel Skills)
+                                        before you can submit your application.
+                                    </p>
+                                    <p class="leading-relaxed">
+                                        <strong>TAP Account Required:</strong> You must create a TAP account (it's free) and update your CV there.
+                                        <a href="https://app.tap.co.za/signup" target="_blank" class="text-[#FFA600] hover:text-[#12265E] font-semibold underline">https://app.tap.co.za/signup</a>
+                                        <br>
+                                        <strong>Important:</strong> Insert the same email you used for TAP account in this application form, so we can match it with your application.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Assessment Requirements -->
+        <section class="py-16">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl font-bold text-[#12265E] mb-4">Required Assessments</h2>
+                        <p class="text-gray-600">Complete all three assessments below before submitting your application</p>
+                    </div>
+
+                    <!-- Mathematical and Excel Tests (2-column grid) -->
+                    <div class="grid md:grid-cols-2 gap-6 mb-6">
+                        <!-- Mathematical Test -->
+                        <div id="math-assessment" class="p-6 rounded-xl shadow-lg border assessment-pending bg-[#12265E]">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-[#ffffff] rounded-lg flex items-center justify-center mr-4">
+                                    <i data-lucide="calculator" class="w-6 h-6 text-[#FFA600]"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-[#ffffff]">Mathematical Test</h3>
+                                    <p class="text-[#ffffff]">Complete the mathematical test</p>
+                                </div>
+                            </div>
+                            <p class="text-[#ffffff] mb-4">Test your numerical and problem-solving abilities.</p>
+                            <div id="math-result" class="mb-4 hidden">
+                                <div class="bg-[#ffffff] p-3 rounded-lg border border-green-200">
+                                    <p class="text-green-700 font-semibold">✓ Completed</p>
+                                    <p class="text-sm text-green-600 hidden">Score: <span id="math-score">0</span>%</p>
+                                </div>
+                            </div>
+                            <button onclick="startMathTest()" class="w-full bg-[#ffa600] text-white py-3 rounded-lg font-semibold hover:bg-[#92abc4] transition duration-300">
+                                Start Mathematical Test
+                            </button>
+                        </div>
+
+                        <!-- Excel Skills Test -->
+                        <div id="excel-assessment" class="p-6 rounded-xl shadow-lg border assessment-pending bg-[#12265E]">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-[#ffffff] rounded-lg flex items-center justify-center mr-4">
+                                    <i data-lucide="table" class="w-6 h-6 text-[#FFA600]"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-[#ffffff]">Excel Skills Test</h3>
+                                    <p class="text-[#ffffff]">Complete the Excel test</p>
+                                </div>
+                            </div>
+                            <p class="text-[#ffffff] mb-4">Demonstrate your Microsoft Excel knowledge and skills.</p>
+                            <div id="excel-result" class="mb-4 hidden">
+                                <div class="bg-green-50 p-3 rounded-lg border border-green-200">
+                                    <p class="text-green-700 font-semibold">✓ Completed</p>
+                                    <p class="text-sm text-green-600 hidden">Score: <span id="excel-score">0</span>%</p>
+                                </div>
+                            </div>
+                            <button onclick="startExcelTest()" class="w-full bg-[#ffa600] text-white py-3 rounded-lg font-semibold hover:bg-[#92abc4] transition duration-300">
+                                Start Excel Test
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Speed Typing Test (Full width below) -->
+                    <div class="mb-12">
+                        <div id="typing-assessment" class="p-8 rounded-xl shadow-lg border assessment-pending bg-[#12265E]">
+                            <div class="flex items-center mb-4">
+                                <div class="w-16 h-16 bg-[#ffffff] rounded-lg flex items-center justify-center mr-6">
+                                    <i data-lucide="keyboard" class="w-8 h-8 text-[#FFA600]"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-2xl font-bold text-[#ffffff]">Speed Typing Test</h3>
+                                    <p class="text-[#ffffff] text-lg">Complete the typing test</p>
+                                </div>
+                            </div>
+                            <p class="text-[#ffffff] mb-6 text-lg">Test your typing speed and accuracy with a 60-second typing challenge.</p>
+                            <div id="typing-result" class="mb-6 hidden">
+                                <div class="bg-green-50 p-4 rounded-lg border border-green-200">
+                                    <p class="text-green-700 font-semibold text-lg">✓ Completed</p>
+                                    <p class="text-sm text-green-600 hidden">Speed: <span id="typing-wpm">0</span> WPM | Accuracy: <span id="typing-accuracy">0</span>%</p>
+                                </div>
+                            </div>
+                            <button onclick="startTypingTest()" class="w-full md:w-auto md:px-12 bg-[#ffa600] text-white py-4 rounded-lg font-semibold hover:bg-[#92abc4] transition duration-300 text-lg">
+                                Start Typing Test
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Application Form -->
+                    <div class="bg-white rounded-xl shadow-lg border p-8">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-6">Learnership Application Form</h2>
+
+                        <form id="learnership-form" onsubmit="submitApplication(event)">
+                            <!-- Tell us about yourself -->
+                            <div class="mb-8">
+                                <h3 class="text-lg font-semibold text-gray-900 mb-4">Tell us about yourself</h3>
+                                <div id="literacy-assessment" class="p-6 rounded-xl bg-[#12265E] border border-[#12265E]">
+                                    <div class="flex items-center mb-4">
+                                        <div class="w-10 h-10 bg-[#ffffff] rounded-lg flex items-center justify-center mr-3">
+                                            <i data-lucide="book-open" class="w-5 h-5 text-[#FFA600]"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="text-base font-bold text-[#ffffff]">Tell us more about yourself by completing this form.</h4>
+                                            <p class="text-sm text-[#ffffff]">Write about yourself and demonstrate your communication skills</p>
+                                        </div>
+                                    </div>
+                                    <div id="literacy-result" class="mb-4 hidden">
+                                        <div class="bg-green-100 p-3 rounded-lg border border-green-300">
+                                            <p class="text-green-700 font-semibold">✓ Completed</p>
+                                            <p class="text-sm text-green-600 hidden">Score: <span id="literacy-score">0</span>%</p>
+                                        </div>
+                                    </div>
+                                    <button type="button" onclick="startLiteracyTest()" class="w-auto px-6 py-2 bg-[#ffa600] text-white text-sm rounded-lg font-semibold hover:bg-[#92abc4] transition duration-300">
+                                        Start
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Personal Information -->
+                            <div class="mb-8">
+                                <h3 class="text-lg font-semibold text-gray-900 mb-4">Personal Information</h3>
+                                <div class="grid md:grid-cols-2 gap-4">
+                                    <div>
+                                        <label for="firstName" class="block text-sm font-medium text-gray-700 mb-2">First Name *</label>
+                                        <input type="text" id="firstName" name="firstName" required
+                                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFA600] focus:border-transparent">
+                                    </div>
+                                    <div>
+                                        <label for="lastName" class="block text-sm font-medium text-gray-700 mb-2">Last Name *</label>
+                                        <input type="text" id="lastName" name="lastName" required
+                                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFA600] focus:border-transparent">
+                                    </div>
+                                    <div>
+                                        <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address *</label>
+                                        <input type="email" id="email" name="email" required
+                                               placeholder="Use the same email as your TAP account"
+                                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFA600] focus:border-transparent">
+                                        <p class="text-xs text-[#FFA600] mt-1">⚠️ Use the same email as your TAP account for application matching</p>
+                                    </div>
+                                    <div>
+                                        <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Phone Number *</label>
+                                        <input type="tel" id="phone" name="phone" required
+                                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFA600] focus:border-transparent">
+                                    </div>
+                                    <div>
+                                        <label for="idNumber" class="block text-sm font-medium text-gray-700 mb-2">ID Number *</label>
+                                        <input type="text" id="idNumber" name="idNumber" required pattern="[0-9]{13}"
+                                               placeholder="13-digit ID number"
+                                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFA600] focus:border-transparent">
+                                    </div>
+                                    <div>
+                                        <label for="dateOfBirth" class="block text-sm font-medium text-gray-700 mb-2">Date of Birth *</label>
+                                        <input type="date" id="dateOfBirth" name="dateOfBirth" required
+                                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFA600] focus:border-transparent">
+                                    </div>
+                                    <div>
+                                        <label for="gender" class="block text-sm font-medium text-gray-700 mb-2">Gender *</label>
+                                        <select id="gender" name="gender" required
+                                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFA600] focus:border-transparent">
+                                            <option value="">Select Gender</option>
+                                            <option value="male">Male</option>
+                                            <option value="female">Female</option>
+                                            <option value="other">Other</option>
+                                            <option value="prefer-not-to-say">Prefer not to say</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label for="race" class="block text-sm font-medium text-gray-700 mb-2">Race *</label>
+                                        <select id="race" name="race" required
+                                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFA600] focus:border-transparent">
+                                            <option value="">Select Race</option>
+                                            <option value="african">African</option>
+                                            <option value="coloured">Coloured</option>
+                                            <option value="indian">Indian</option>
+                                            <option value="white">White</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label for="nationality" class="block text-sm font-medium text-gray-700 mb-2">Nationality *</label>
+                                        <select id="nationality" name="nationality" required
+                                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFA600] focus:border-transparent">
+                                            <option value="">Select Nationality</option>
+                                            <option value="south-african">South African</option>
+                                            <option value="zimbabwean">Zimbabwean</option>
+                                            <option value="mozambican">Mozambican</option>
+                                            <option value="lesotho">Lesotho</option>
+                                            <option value="botswanan">Botswanan</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label for="disability" class="block text-sm font-medium text-gray-700 mb-2">Do you have a disability? *</label>
+                                        <select id="disability" name="disability" required
+                                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFA600] focus:border-transparent">
+                                            <option value="">Select Option</option>
+                                            <option value="no">No</option>
+                                            <option value="yes">Yes</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <!-- Disability Details (Hidden by default) -->
+                                <div id="disabilityDetails" class="mt-6 hidden">
+                                    <h4 class="text-md font-semibold text-gray-900 mb-4">Disability Information</h4>
+                                    <div class="grid md:grid-cols-2 gap-4">
+                                        <div>
+                                            <label for="disabilityType" class="block text-sm font-medium text-gray-700 mb-2">Type of Disability *</label>
+                                            <select id="disabilityType" name="disabilityType"
+                                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFA600] focus:border-transparent">
+                                                <option value="">Select Disability Type</option>
+                                                <option value="physical">Physical Disability</option>
+                                                <option value="visual">Visual Impairment</option>
+                                                <option value="hearing">Hearing Impairment</option>
+                                                <option value="intellectual">Intellectual Disability</option>
+                                                <option value="neurological">Neurological Disability</option>
+                                                <option value="psychosocial">Psychosocial Disability</option>
+                                                <option value="multiple">Multiple Disabilities</option>
+                                                <option value="other">Other</option>
+                                            </select>
+                                        </div>
+                                        <div>
+                                            <label for="assistiveTechnology" class="block text-sm font-medium text-gray-700 mb-2">Do you require assistive technology? *</label>
+                                            <select id="assistiveTechnology" name="assistiveTechnology"
+                                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFA600] focus:border-transparent">
+                                                <option value="">Select Option</option>
+                                                <option value="no">No</option>
+                                                <option value="yes">Yes</option>
+                                            </select>
+                                        </div>
+                                        <div class="md:col-span-2">
+                                            <label for="disabilityDescription" class="block text-sm font-medium text-gray-700 mb-2">Please describe your disability and any accommodations you may need</label>
+                                            <textarea id="disabilityDescription" name="disabilityDescription" rows="3"
+                                                    placeholder="Please provide details about your disability and any workplace accommodations you may require..."
+                                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFA600] focus:border-transparent"></textarea>
+                                        </div>
+                                        <div class="md:col-span-2">
+                                            <label for="accommodationNeeds" class="block text-sm font-medium text-gray-700 mb-2">Specific accommodation needs for training</label>
+                                            <textarea id="accommodationNeeds" name="accommodationNeeds" rows="2"
+                                                    placeholder="Describe any specific accommodations needed during training (e.g., wheelchair access, sign language interpreter, large print materials, etc.)..."
+                                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFA600] focus:border-transparent"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Address Information -->
+                                <div class="mt-6">
+                                    <h4 class="text-md font-semibold text-gray-900 mb-4">Address Information</h4>
+                                    <div class="grid md:grid-cols-2 gap-4">
+                                        <div class="md:col-span-2">
+                                            <label for="address" class="block text-sm font-medium text-gray-700 mb-2">Physical Address *</label>
+                                            <textarea id="address" name="address" required rows="3"
+                                                    placeholder="Enter your full physical address"
+                                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFA600] focus:border-transparent"></textarea>
+                                        </div>
+                                        <div>
+                                            <label for="city" class="block text-sm font-medium text-gray-700 mb-2">City *</label>
+                                            <input type="text" id="city" name="city" required
+                                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFA600] focus:border-transparent">
+                                        </div>
+                                        <div>
+                                            <label for="province" class="block text-sm font-medium text-gray-700 mb-2">Province *</label>
+                                            <select id="province" name="province" required
+                                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFA600] focus:border-transparent">
+                                                <option value="">Select Province</option>
+                                                <option value="eastern-cape">Eastern Cape</option>
+                                                <option value="free-state">Free State</option>
+                                                <option value="gauteng">Gauteng</option>
+                                                <option value="kwazulu-natal">KwaZulu-Natal</option>
+                                                <option value="limpopo">Limpopo</option>
+                                                <option value="mpumalanga">Mpumalanga</option>
+                                                <option value="northern-cape">Northern Cape</option>
+                                                <option value="north-west">North West</option>
+                                                <option value="western-cape">Western Cape</option>
+                                            </select>
+                                        </div>
+                                        <div>
+                                            <label for="postalCode" class="block text-sm font-medium text-gray-700 mb-2">Postal Code *</label>
+                                            <input type="text" id="postalCode" name="postalCode" required pattern="[0-9]{4}"
+                                                   placeholder="4-digit postal code"
+                                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFA600] focus:border-transparent">
+                                        </div>
+                                        <div>
+                                            <label for="alternativePhone" class="block text-sm font-medium text-gray-700 mb-2">Alternative Phone Number</label>
+                                            <input type="tel" id="alternativePhone" name="alternativePhone"
+                                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFA600] focus:border-transparent">
+                                        </div>
+                                    <div>
+                                        <label for="qualification" class="block text-sm font-medium text-gray-700 mb-2">Desired Qualification *</label>
+                                        <select id="qualification" name="qualification" required
+                                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFA600] focus:border-transparent">
+                                            <option value="">Select a qualification</option>
+
+                                            <!-- Services SETA -->
+                                            <optgroup label="Services SETA">
+                                                <option value="Business Administration NQF 3">Business Administration NQF 3</option>
+                                                <option value="Business Administration NQF 4">Business Administration NQF 4</option>
+                                                <option value="Business Process Outsourcing NQF 3">Business Process Outsourcing NQF 3</option>
+                                                <option value="Contact Centre Manager NQF 5">Contact Centre Manager NQF 5</option>
+                                                <option value="Customer Service NQF 2">Customer Service NQF 2</option>
+                                                <option value="Generic Management NQF 4">Generic Management NQF 4</option>
+                                                <option value="Generic Management NQF 5">Generic Management NQF 5</option>
+                                                <option value="Management NQF 3">Management NQF 3</option>
+                                                <option value="Marketing Coordinator NQF 5">Marketing Coordinator NQF 5</option>
+                                                <option value="New Venture Creation NQF 4">New Venture Creation NQF 4</option>
+                                                <option value="New Venture Creation SMME NQF 2">New Venture Creation SMME NQF 2</option>
+                                                <option value="Office Supervision NQF 5">Office Supervision NQF 5</option>
+                                                <option value="Project Manager NQF 5">Project Manager NQF 5</option>
+                                                <option value="Quality Assurer NQF 5">Quality Assurer NQF 5</option>
+                                                <option value="Quality Manager NQF 6">Quality Manager NQF 6</option>
+                                                <option value="Bookkeeper NQF 5">Bookkeeper NQF 5</option>
+                                            </optgroup>
+
+                                            <!-- AgriSETA -->
+                                            <optgroup label="AgriSETA">
+                                                <option value="Animal Production NQF 1">Animal Production NQF 1</option>
+                                                <option value="Animal Production NQF 2">Animal Production NQF 2</option>
+                                                <option value="Animal Production NQF 4">Animal Production NQF 4</option>
+                                                <option value="Farming NQF 1">Farming NQF 1</option>
+                                                <option value="Farming NQF 2">Farming NQF 2</option>
+                                                <option value="Fruit Packaging NQF 3">Fruit Packaging NQF 3</option>
+                                                <option value="Mixed Farming NQF 1">Mixed Farming NQF 1</option>
+                                                <option value="Mixed Farming NQF 2">Mixed Farming NQF 2</option>
+                                                <option value="Plant Production NQF 1">Plant Production NQF 1</option>
+                                                <option value="Plant Production NQF 2">Plant Production NQF 2</option>
+                                                <option value="Plant Production NQF 3">Plant Production NQF 3</option>
+                                                <option value="Plant Production NQF 4">Plant Production NQF 4</option>
+                                            </optgroup>
+
+                                            <!-- W&R SETA -->
+                                            <optgroup label="W&R SETA">
+                                                <option value="Planner NQF 5">Planner NQF 5</option>
+                                                <option value="Retail Buyer NQF 5">Retail Buyer NQF 5</option>
+                                                <option value="Retail Manager NQF 5">Retail Manager NQF 5</option>
+                                                <option value="Retail Operations NQF 2">Retail Operations NQF 2</option>
+                                                <option value="Retail Supervisor NQF 4">Retail Supervisor NQF 4</option>
+                                                <option value="Sales Assistant NQF 3">Sales Assistant NQF 3</option>
+                                                <option value="Sales Marketing NQF 3">Sales Marketing NQF 3</option>
+                                                <option value="Service Station Assistant NQF 2">Service Station Assistant NQF 2</option>
+                                                <option value="Store Person NQF 2">Store Person NQF 2</option>
+                                                <option value="Visual Merchandiser NQF 3">Visual Merchandiser NQF 3</option>
+                                            </optgroup>
+
+                                            <!-- MICT SETA -->
+                                            <optgroup label="MICT SETA">
+                                                <option value="Business Analysis NQF 6">Business Analysis NQF 6</option>
+                                                <option value="Design Thinking NQF 4">Design Thinking NQF 4</option>
+                                                <option value="End User Computing NQF 3">End User Computing NQF 3</option>
+                                                <option value="Software Engineer NQF 6">Software Engineer NQF 6</option>
+                                                <option value="Software Tester NQF 5">Software Tester NQF 5</option>
+                                                <option value="Systems Development NQF 4">Systems Development NQF 4</option>
+                                                <option value="System Support NQF 5">System Support NQF 5</option>
+                                            </optgroup>
+
+                                            <!-- INSETA -->
+                                            <optgroup label="INSETA">
+                                                <option value="Financial Advisor NQF 6">Financial Advisor NQF 6</option>
+                                                <option value="Health Care Benefits Advisor NQF 5">Health Care Benefits Advisor NQF 5</option>
+                                                <option value="Insurance Claims Administrator/Assessor NQF 4">Insurance Claims Administrator/Assessor NQF 4</option>
+                                                <option value="Insurance Underwriter NQF 5">Insurance Underwriter NQF 5</option>
+                                                <option value="Long Term Insurance Advisor NQF 4">Long Term Insurance Advisor NQF 4</option>
+                                            </optgroup>
+
+                                            <!-- MER SETA -->
+                                            <optgroup label="MER SETA">
+                                                <option value="Automotive Sales Advisor NQF 4">Automotive Sales Advisor NQF 4</option>
+                                            </optgroup>
+
+                                            <!-- TETA -->
+                                            <optgroup label="TETA">
+                                                <option value="Transport Clerk NQF 4">Transport Clerk NQF 4</option>
+                                            </optgroup>
+
+                                            <!-- ETDP SETA -->
+                                            <optgroup label="ETDP SETA">
+                                                <option value="Education Training NQF 5">Education Training NQF 5</option>
+                                                <option value="HR Management NQF 4">HR Management NQF 4</option>
+                                                <option value="Training Development NQF 3">Training Development NQF 3</option>
+                                            </optgroup>
+
+                                            <!-- FASSET -->
+                                            <optgroup label="FASSET">
+                                                <option value="Computer Technician NQF 5">Computer Technician NQF 5</option>
+                                            </optgroup>
+
+                                            <option value="Other">Other (please specify in motivation)</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Education Background -->
+                            <div class="mb-8">
+                                <h3 class="text-lg font-semibold text-gray-900 mb-4">Education Background</h3>
+                                <div class="grid md:grid-cols-2 gap-4">
+                                    <div>
+                                        <label for="highestQualification" class="block text-sm font-medium text-gray-700 mb-2">Highest Qualification *</label>
+                                        <select id="highestQualification" name="highestQualification" required
+                                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFA600] focus:border-transparent">
+                                            <option value="">Select qualification</option>
+                                            <option value="Grade 12 / Matric">Grade 12 / Matric</option>
+                                            <option value="Higher Certificate">Higher Certificate</option>
+                                            <option value="National Diploma">National Diploma</option>
+                                            <option value="Bachelor's Degree">Bachelor's Degree</option>
+                                            <option value="Honours Degree">Honours Degree</option>
+                                            <option value="Master's Degree">Master's Degree</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label for="institution" class="block text-sm font-medium text-gray-700 mb-2">Institution</label>
+                                        <input type="text" id="institution" name="institution"
+                                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFA600] focus:border-transparent">
+                                    </div>
+                                    <div>
+                                        <label for="yearCompleted" class="block text-sm font-medium text-gray-700 mb-2">Year Completed</label>
+                                        <input type="number" id="yearCompleted" name="yearCompleted" min="1980" max="2024"
+                                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFA600] focus:border-transparent">
+                                    </div>
+                                    <div>
+                                        <label for="mathsLevel" class="block text-sm font-medium text-gray-700 mb-2">Mathematics Level *</label>
+                                        <select id="mathsLevel" name="mathsLevel" required
+                                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFA600] focus:border-transparent">
+                                            <option value="">Select Mathematics Level</option>
+                                            <option value="core-mathematics">Core Mathematics</option>
+                                            <option value="mathematical-literacy">Mathematical Literacy</option>
+                                            <option value="pure-mathematics">Pure Mathematics</option>
+                                            <option value="mathematics">Mathematics</option>
+                                            <option value="no-maths">No Mathematics</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label for="englishLevel" class="block text-sm font-medium text-gray-700 mb-2">English Level *</label>
+                                        <select id="englishLevel" name="englishLevel" required
+                                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFA600] focus:border-transparent">
+                                            <option value="">Select English Level</option>
+                                            <option value="home-language">Home Language</option>
+                                            <option value="first-additional">First Additional Language</option>
+                                            <option value="second-additional">Second Additional Language</option>
+                                            <option value="no-english">No English</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Employment Information -->
+                            <div class="mb-8">
+                                <h3 class="text-lg font-semibold text-gray-900 mb-4">Employment Information</h3>
+                                <div class="grid md:grid-cols-2 gap-4">
+                                    <div>
+                                        <label for="employmentStatus" class="block text-sm font-medium text-gray-700 mb-2">Employment Status *</label>
+                                        <select id="employmentStatus" name="employmentStatus" required
+                                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFA600] focus:border-transparent">
+                                            <option value="">Select Employment Status</option>
+                                            <option value="employed">Employed</option>
+                                            <option value="unemployed">Unemployed</option>
+                                            <option value="self-employed">Self-employed</option>
+                                            <option value="student">Student</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label for="currentEmployer" class="block text-sm font-medium text-gray-700 mb-2">Current Employer</label>
+                                        <input type="text" id="currentEmployer" name="currentEmployer"
+                                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFA600] focus:border-transparent">
+                                    </div>
+                                    <div>
+                                        <label for="currentPosition" class="block text-sm font-medium text-gray-700 mb-2">Current Position</label>
+                                        <input type="text" id="currentPosition" name="currentPosition"
+                                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFA600] focus:border-transparent">
+                                    </div>
+                                    <div>
+                                        <label for="monthlySalary" class="block text-sm font-medium text-gray-700 mb-2">Monthly Salary</label>
+                                        <select id="monthlySalary" name="monthlySalary"
+                                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFA600] focus:border-transparent">
+                                            <option value="">Select Salary Range</option>
+                                            <option value="0">R0 - Unemployed</option>
+                                            <option value="1-3000">R1 - R3,000</option>
+                                            <option value="3001-5000">R3,001 - R5,000</option>
+                                            <option value="5001-8000">R5,001 - R8,000</option>
+                                            <option value="8001-12000">R8,001 - R12,000</option>
+                                            <option value="12001-20000">R12,001 - R20,000</option>
+                                            <option value="20000+">R20,000+</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label for="workExperience" class="block text-sm font-medium text-gray-700 mb-2">Years of Work Experience</label>
+                                        <select id="workExperience" name="workExperience"
+                                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFA600] focus:border-transparent">
+                                            <option value="">Select Experience</option>
+                                            <option value="0">No experience</option>
+                                            <option value="1">Less than 1 year</option>
+                                            <option value="1-2">1-2 years</option>
+                                            <option value="3-5">3-5 years</option>
+                                            <option value="6-10">6-10 years</option>
+                                            <option value="10+">10+ years</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label for="hasDriversLicense" class="block text-sm font-medium text-gray-700 mb-2">Do you have a valid driver's license? *</label>
+                                        <select id="hasDriversLicense" name="hasDriversLicense" required
+                                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFA600] focus:border-transparent">
+                                            <option value="">Select Option</option>
+                                            <option value="yes">Yes</option>
+                                            <option value="no">No</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label for="hasOwnTransport" class="block text-sm font-medium text-gray-700 mb-2">Do you have your own transport? *</label>
+                                        <select id="hasOwnTransport" name="hasOwnTransport" required
+                                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFA600] focus:border-transparent">
+                                            <option value="">Select Option</option>
+                                            <option value="yes">Yes</option>
+                                            <option value="no">No</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label for="criminalRecord" class="block text-sm font-medium text-gray-700 mb-2">Do you have a criminal record? *</label>
+                                        <select id="criminalRecord" name="criminalRecord" required
+                                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFA600] focus:border-transparent">
+                                            <option value="">Select Option</option>
+                                            <option value="no">No</option>
+                                            <option value="yes">Yes</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <!-- Computer Skills -->
+                                <div class="mt-6">
+                                    <h4 class="text-md font-semibold text-gray-900 mb-4">Computer Skills</h4>
+                                    <div class="grid md:grid-cols-3 gap-4">
+                                        <div>
+                                            <label for="computerSkills" class="block text-sm font-medium text-gray-700 mb-2">Overall Computer Skills *</label>
+                                            <select id="computerSkills" name="computerSkills" required
+                                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFA600] focus:border-transparent">
+                                                <option value="">Select Level</option>
+                                                <option value="none">No computer skills</option>
+                                                <option value="basic">Basic</option>
+                                                <option value="intermediate">Intermediate</option>
+                                                <option value="advanced">Advanced</option>
+                                            </select>
+                                        </div>
+                                        <div>
+                                            <label for="msOfficeSkills" class="block text-sm font-medium text-gray-700 mb-2">MS Office Skills</label>
+                                            <select id="msOfficeSkills" name="msOfficeSkills"
+                                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFA600] focus:border-transparent">
+                                                <option value="">Select Level</option>
+                                                <option value="none">No MS Office skills</option>
+                                                <option value="basic">Basic</option>
+                                                <option value="intermediate">Intermediate</option>
+                                                <option value="advanced">Advanced</option>
+                                            </select>
+                                        </div>
+                                        <div>
+                                            <label for="emailSkills" class="block text-sm font-medium text-gray-700 mb-2">Email Skills</label>
+                                            <select id="emailSkills" name="emailSkills"
+                                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFA600] focus:border-transparent">
+                                                <option value="">Select Level</option>
+                                                <option value="none">No email skills</option>
+                                                <option value="basic">Basic</option>
+                                                <option value="intermediate">Intermediate</option>
+                                                <option value="advanced">Advanced</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Motivation -->
+                            <div class="mb-8">
+                                <h3 class="text-lg font-semibold text-gray-900 mb-4">Motivation</h3>
+                                <div>
+                                    <label for="motivation" class="block text-sm font-medium text-gray-700 mb-2">Why do you want to participate in this learnership? *</label>
+                                    <textarea id="motivation" name="motivation" rows="4" required
+                                              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFA600] focus:border-transparent resize-none"
+                                              placeholder="Please explain your motivation for applying for this learnership..."></textarea>
+                                </div>
+                            </div>
+
+                            <!-- Assessment Status Summary -->
+                            <div class="mb-8 p-6 bg-gray-50 rounded-lg">
+                                <h3 class="text-lg font-semibold text-gray-900 mb-4">Assessment Status</h3>
+                                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                                    <div id="typing-status" class="text-center p-3 bg-yellow-100 rounded-lg">
+                                        <div class="w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-2">
+                                            <i data-lucide="clock" class="w-4 h-4 text-white"></i>
+                                        </div>
+                                        <p class="text-sm font-medium">Typing Test</p>
+                                        <p class="text-xs text-gray-600">Pending</p>
+                                    </div>
+                                    <div id="literacy-status" class="text-center p-3 bg-yellow-100 rounded-lg">
+                                        <div class="w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-2">
+                                            <i data-lucide="clock" class="w-4 h-4 text-white"></i>
+                                        </div>
+                                        <p class="text-sm font-medium">About yourself</p>
+                                        <p class="text-xs text-gray-600">Pending</p>
+                                    </div>
+                                    <div id="math-status" class="text-center p-3 bg-yellow-100 rounded-lg">
+                                        <div class="w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-2">
+                                            <i data-lucide="clock" class="w-4 h-4 text-white"></i>
+                                        </div>
+                                        <p class="text-sm font-medium">Math Test</p>
+                                        <p class="text-xs text-gray-600">Pending</p>
+                                    </div>
+                                    <div id="excel-status" class="text-center p-3 bg-yellow-100 rounded-lg">
+                                        <div class="w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-2">
+                                            <i data-lucide="clock" class="w-4 h-4 text-white"></i>
+                                        </div>
+                                        <p class="text-sm font-medium">Excel Test</p>
+                                        <p class="text-xs text-gray-600">Pending</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <div class="text-center">
+                                <button type="submit" id="submit-btn" disabled
+                                        class="bg-gray-400 text-white font-semibold py-4 px-8 rounded-lg cursor-not-allowed">
+                                    Complete All Assessments to Submit
+                                </button>
+                                <p class="text-sm text-gray-500 mt-2">All four assessments must be completed before submission</p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Assessment Modals -->
+    <!-- Typing Test Modal -->
+    <div id="typing-modal" class="assessment-modal">
+        <div class="assessment-modal-content">
+            <div class="p-8">
+                <div class="flex items-center justify-between mb-6">
+                    <h2 class="text-2xl font-bold text-gray-900">Speed Typing Test</h2>
+                    <button onclick="closeAssessmentModal('typing-modal')" class="text-gray-400 hover:text-gray-600 text-xl">
+                        <i data-lucide="x" class="w-6 h-6"></i>
+                    </button>
+                </div>
+
+                <div id="typing-instructions" class="mb-6">
+                    <p class="text-gray-600 mb-4">Type the following text as quickly and accurately as possible. You have 60 seconds to complete the test.</p>
+                    <div class="bg-blue-50 p-4 rounded-lg border border-blue-200 mb-4">
+                        <p class="text-[#12265E] text-sm">
+                            <i data-lucide="info" class="w-4 h-4 inline mr-2"></i>
+                            Click "Start Test" when you're ready. The timer will begin immediately.
+                        </p>
+                    </div>
+                    <button onclick="beginTypingTest()" class="bg-[#FFA600] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#ff9500] transition duration-300">
+                        Start Test
+                    </button>
+                </div>
+
+                <div id="typing-test-area" class="hidden">
+                    <div class="mb-4">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-sm font-medium">Time Remaining: <span id="typing-timer" class="text-[#FFA600]">60</span>s</span>
+                            <span class="text-sm font-medium">WPM: <span id="live-wpm" class="text-green-600">0</span></span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div id="typing-progress" class="bg-blue-600 h-2 rounded-full transition-all duration-1000" style="width: 0%"></div>
+                        </div>
+                    </div>
+
+                    <div id="typing-text-display" class="typing-text mb-4">
+                        <!-- Text will be inserted here -->
+                    </div>
+
+                    <textarea id="typing-input-area" class="typing-input" rows="4"
+                              placeholder="Start typing the text above..."
+                              oninput="checkTyping()" onpaste="return false"></textarea>
+
+                    <div id="typing-results" class="hidden mt-4 p-4 bg-green-50 rounded-lg border border-green-200">
+                        <h3 class="text-lg font-semibold text-green-800 mb-2">Test Completed!</h3>
+                        <div class="grid grid-cols-2 gap-4 text-sm">
+                            <div>
+                                <span class="font-medium">Words Per Minute:</span>
+                                <span id="final-wpm" class="text-green-600 font-bold">0</span>
+                            </div>
+                            <div>
+                                <span class="font-medium">Accuracy:</span>
+                                <span id="final-accuracy" class="text-green-600 font-bold">0%</span>
+                            </div>
+                        </div>
+                        <button onclick="completeTypingTest()" class="mt-4 bg-green-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-green-700 transition duration-300">
+                            Save Results
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Other Assessment Modals (Literacy, Math, Excel) will be similar structures -->
+    <!-- For brevity, I'll include simplified versions -->
+
+    <!-- About yourself Modal -->
+    <div id="literacy-modal" class="assessment-modal">
+        <div class="assessment-modal-content">
+            <div class="p-8">
+                <div class="flex items-center justify-between mb-6">
+                    <h2 class="text-2xl font-bold text-gray-900">About yourself</h2>
+                    <button onclick="closeAssessmentModal('literacy-modal')" class="text-gray-400 hover:text-gray-600 text-xl">
+                        <i data-lucide="x" class="w-6 h-6"></i>
+                    </button>
+                </div>
+                <div id="literacy-content">
+                    <!-- Literacy test content will be generated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Math Test Modal -->
+    <div id="math-modal" class="assessment-modal">
+        <div class="assessment-modal-content">
+            <div class="p-8">
+                <div class="flex items-center justify-between mb-6">
+                    <h2 class="text-2xl font-bold text-gray-900">Mathematical Test</h2>
+                    <button onclick="closeAssessmentModal('math-modal')" class="text-gray-400 hover:text-gray-600 text-xl">
+                        <i data-lucide="x" class="w-6 h-6"></i>
+                    </button>
+                </div>
+                <div id="math-content">
+                    <!-- Math test content will be generated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Excel Test Modal -->
+    <div id="excel-modal" class="assessment-modal">
+        <div class="assessment-modal-content">
+            <div class="p-8">
+                <div class="flex items-center justify-between mb-6">
+                    <h2 class="text-2xl font-bold text-gray-900">Excel Skills Test</h2>
+                    <button onclick="closeAssessmentModal('excel-modal')" class="text-gray-400 hover:text-gray-600 text-xl">
+                        <i data-lucide="x" class="w-6 h-6"></i>
+                    </button>
+                </div>
+                <div id="excel-content">
+                    <!-- Excel test content will be generated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    
+        <footer class="bg-gradient-to-r from-[#12265E] to-[#92ABC4] text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <img src="Images/SpecCon-LOGO.png" alt="SpecCon Holdings Logo" class="h-12">
+                        <div>
+                            <h3 class="text-xl font-bold">SpecCon Holdings</h3>
+                            <p class="text-white/80">Accredited Training Solutions</p>
+                        </div>
+                    </div>
+                    <p class="text-white/80 mb-4">Empowering individuals and organizations through high-quality, accredited education and training solutions.</p>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="/index.html#about" class="text-white/80 hover:text-[#FFA600] transition duration-200">Why Choose Us</a></li>
+                        <li><a href="/index.html#qualifications" class="text-white/80 hover:text-[#FFA600] transition duration-200">Qualifications</a></li>
+                        <li><a href="/index.html#accreditations" class="text-white/80 hover:text-[#FFA600] transition duration-200">Accreditations</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Us</h4>
+                    <ul class="space-y-2">
+                        <li><p class="text-white/80">Phone: 012 667 4962</p></li>
+                        <li><p class="text-white/80">Email: <a href="mailto:help@speccon.co.za" class="text-white/80 hover:text-white transition duration-200">help@speccon.co.za</a></p></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-white/80">&copy; 2025 SpecCon Holdings. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        lucide.createIcons();
+
+        // Assessment tracking
+        let assessmentResults = {
+            typing: { completed: false, wpm: 0, accuracy: 0 },
+            literacy: { completed: false, score: 0 },
+            math: { completed: false, score: 0 },
+            excel: { completed: false, score: 0 }
+        };
+
+        // Typing test variables
+        let typingTestText = "The quick brown fox jumps over the lazy dog. Professional development and training are essential for career advancement in today's competitive job market. SpecCon Holdings provides comprehensive learnership programs that equip individuals with the skills and knowledge needed to succeed in their chosen fields. Our programs combine theoretical learning with practical application, ensuring that graduates are well-prepared for the workplace.";
+        let typingStartTime;
+        let typingTimer;
+        let typingTimeLeft = 60;
+
+        // Open assessment modal
+        function startTypingTest() {
+            document.getElementById('typing-modal').classList.add('show');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function startLiteracyTest() {
+            generateLiteracyTest();
+            document.getElementById('literacy-modal').classList.add('show');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function startMathTest() {
+            generateMathTest();
+            document.getElementById('math-modal').classList.add('show');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function startExcelTest() {
+            generateExcelTest();
+            document.getElementById('excel-modal').classList.add('show');
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Close assessment modal
+        function closeAssessmentModal(modalId) {
+            document.getElementById(modalId).classList.remove('show');
+            document.body.style.overflow = 'auto';
+
+            // Reset typing test if closed
+            if (modalId === 'typing-modal') {
+                resetTypingTest();
+            }
+        }
+
+        // Typing Test Functions
+        function beginTypingTest() {
+            document.getElementById('typing-instructions').classList.add('hidden');
+            document.getElementById('typing-test-area').classList.remove('hidden');
+
+            // Display text with character highlighting
+            displayTypingText();
+
+            // Start timer
+            typingStartTime = Date.now();
+            typingTimeLeft = 60;
+            startTypingTimer();
+
+            // Focus on input
+            document.getElementById('typing-input-area').focus();
+        }
+
+        function displayTypingText() {
+            const textDisplay = document.getElementById('typing-text-display');
+            textDisplay.innerHTML = typingTestText.split('').map((char, index) =>
+                `<span id="char-${index}">${char}</span>`
+            ).join('');
+        }
+
+        function checkTyping() {
+            const input = document.getElementById('typing-input-area').value;
+            const chars = document.querySelectorAll('#typing-text-display span');
+
+            let correctChars = 0;
+
+            for (let i = 0; i < chars.length; i++) {
+                chars[i].className = '';
+
+                if (i < input.length) {
+                    if (input[i] === typingTestText[i]) {
+                        chars[i].classList.add('correct-char');
+                        correctChars++;
+                    } else {
+                        chars[i].classList.add('incorrect-char');
+                    }
+                } else if (i === input.length) {
+                    chars[i].classList.add('current-char');
+                }
+            }
+
+            // Calculate WPM
+            const timeElapsed = (60 - typingTimeLeft) / 60;
+            const wordsTyped = input.length / 5; // Standard: 5 characters = 1 word
+            const wpm = timeElapsed > 0 ? Math.round(wordsTyped / timeElapsed) : 0;
+
+            document.getElementById('live-wpm').textContent = wpm;
+        }
+
+        function startTypingTimer() {
+            typingTimer = setInterval(() => {
+                typingTimeLeft--;
+                document.getElementById('typing-timer').textContent = typingTimeLeft;
+
+                const progress = ((60 - typingTimeLeft) / 60) * 100;
+                document.getElementById('typing-progress').style.width = progress + '%';
+
+                if (typingTimeLeft <= 0) {
+                    clearInterval(typingTimer);
+                    finishTypingTest();
+                }
+            }, 1000);
+        }
+
+        function finishTypingTest() {
+            clearInterval(typingTimer);
+            document.getElementById('typing-input-area').disabled = true;
+
+            const input = document.getElementById('typing-input-area').value;
+            const timeElapsed = 60; // Full test duration
+            const wordsTyped = input.length / 5;
+            const wpm = Math.round(wordsTyped);
+
+            // Calculate accuracy (more stringent - must match expected text exactly)
+            let correctChars = 0;
+            const expectedLength = Math.min(input.length, typingTestText.length);
+
+            // Count correctly typed characters in sequence
+            for (let i = 0; i < expectedLength; i++) {
+                if (input[i] === typingTestText[i]) {
+                    correctChars++;
+                }
+            }
+
+            // Penalty for typing beyond expected text or too short
+            const lengthPenalty = Math.abs(input.length - expectedLength);
+            const adjustedCorrect = Math.max(0, correctChars - lengthPenalty);
+
+            // Calculate accuracy based on expected text length to prevent gaming
+            const accuracy = expectedLength > 0 ? Math.round((adjustedCorrect / Math.max(input.length, expectedLength)) * 100) : 0;
+
+            // Display results
+            document.getElementById('final-wpm').textContent = wpm;
+            document.getElementById('final-accuracy').textContent = accuracy + '%';
+            document.getElementById('typing-results').classList.remove('hidden');
+
+            // Store results temporarily
+            assessmentResults.typing.wpm = wpm;
+            assessmentResults.typing.accuracy = accuracy;
+        }
+
+        function completeTypingTest() {
+            assessmentResults.typing.completed = true;
+
+            // Update assessment card
+            const card = document.getElementById('typing-assessment');
+            card.className = 'p-6 rounded-xl shadow-lg border assessment-completed';
+
+            // Show results
+            document.getElementById('typing-result').classList.remove('hidden');
+            document.getElementById('typing-wpm').textContent = assessmentResults.typing.wpm;
+            document.getElementById('typing-accuracy').textContent = assessmentResults.typing.accuracy;
+
+            // Update status
+            updateAssessmentStatus('typing', true);
+
+            closeAssessmentModal('typing-modal');
+            checkAllAssessments();
+        }
+
+        function resetTypingTest() {
+            clearInterval(typingTimer);
+            document.getElementById('typing-instructions').classList.remove('hidden');
+            document.getElementById('typing-test-area').classList.add('hidden');
+            document.getElementById('typing-results').classList.add('hidden');
+            document.getElementById('typing-input-area').disabled = false;
+            document.getElementById('typing-input-area').value = '';
+            typingTimeLeft = 60;
+        }
+
+        // Writing Assessment Functions
+        function generateLiteracyTest() {
+            let html = `
+                <div class="mb-6">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Writing Assessment</h3>
+                    <p class="text-gray-600 mb-4">Please write a paragraph about yourself (minimum 50 words). Tell us about your background, interests, goals, and why you want to pursue this learnership.</p>
+
+                    <div class="bg-[#92ABC4]/20 border border-[#92ABC4] rounded-lg p-4 mb-4">
+                        <h4 class="font-semibold text-[#12265E] mb-2">We will assess:</h4>
+                        <ul class="text-[#12265E] text-sm space-y-1">
+                            <li>• Grammar and sentence structure</li>
+                            <li>• Spelling accuracy</li>
+                            <li>• Vocabulary usage</li>
+                            <li>• Writing clarity and organization</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <form id="literacy-test-form">
+                    <div class="mb-4">
+                        <label for="writing-sample" class="block text-sm font-medium text-gray-700 mb-2">Your Writing Sample *</label>
+                        <textarea
+                            id="writing-sample"
+                            name="writing-sample"
+                            rows="8"
+                            required
+                            minlength="50"
+                            placeholder="Write about yourself here... (minimum 50 words)"
+                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFA600] focus:border-transparent resize-none"
+                        ></textarea>
+                        <div class="flex justify-between mt-2">
+                            <span id="word-count" class="text-sm text-gray-500">0 words</span>
+                            <span id="char-count" class="text-sm text-gray-500">0 characters</span>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="flex justify-center">
+                    <button onclick="submitLiteracyTest()" id="submit-writing-btn" class="bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition duration-300 disabled:bg-gray-400 disabled:cursor-not-allowed">
+                        Analyze Writing
+                    </button>
+                </div>
+            `;
+
+            document.getElementById('literacy-content').innerHTML = html;
+
+            // Add real-time word/character count
+            const textarea = document.getElementById('writing-sample');
+            const wordCount = document.getElementById('word-count');
+            const charCount = document.getElementById('char-count');
+            const submitBtn = document.getElementById('submit-writing-btn');
+
+            textarea.addEventListener('input', function() {
+                const text = this.value;
+                const words = text.trim() ? text.trim().split(/\s+/).length : 0;
+                const chars = text.length;
+
+                wordCount.textContent = `${words} words`;
+                charCount.textContent = `${chars} characters`;
+
+                // Enable/disable submit button based on word count
+                if (words >= 50) {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Analyze Writing';
+                    wordCount.className = 'text-sm text-green-600';
+                } else {
+                    submitBtn.disabled = true;
+                    submitBtn.textContent = `Need ${50 - words} more words`;
+                    wordCount.className = 'text-sm text-red-600';
+                }
+            });
+        }
+
+        function submitLiteracyTest() {
+            const form = document.getElementById('literacy-test-form');
+            const formData = new FormData(form);
+            const writingSample = formData.get('writing-sample');
+
+            // Analyze the writing sample
+            const analysis = analyzeWriting(writingSample);
+
+            assessmentResults.literacy.completed = true;
+            assessmentResults.literacy.score = analysis.overallScore;
+            assessmentResults.literacy.writingSample = writingSample;
+            assessmentResults.literacy.analysis = analysis;
+
+            // Update assessment card
+            const card = document.getElementById('literacy-assessment');
+            card.className = 'p-6 rounded-xl shadow-lg border assessment-completed';
+
+            // Show detailed results
+            document.getElementById('literacy-result').classList.remove('hidden');
+            document.getElementById('literacy-score').innerHTML = `
+                <div class="space-y-2">
+                    <div class="font-semibold">Overall Score: ${analysis.overallScore}%</div>
+                    <div class="text-xs space-y-1">
+                        <div>Grammar: ${analysis.grammar}%</div>
+                        <div>Spelling: ${analysis.spelling}%</div>
+                        <div>Vocabulary: ${analysis.vocabulary}%</div>
+                        <div>Structure: ${analysis.structure}%</div>
+                    </div>
+                </div>
+            `;
+
+            // Update status
+            updateAssessmentStatus('literacy', true);
+
+            closeAssessmentModal('literacy-modal');
+            checkAllAssessments();
+        }
+
+        function analyzeWriting(text) {
+            const words = text.trim().split(/\s+/);
+            const sentences = text.split(/[.!?]+/).filter(s => s.trim().length > 0);
+
+            // Grammar Analysis - Much more comprehensive
+            let grammarScore = 100;
+            const grammarErrors = [];
+
+            // Check for basic grammar issues
+            if (text.includes(' i ') || text.startsWith('i ')) grammarErrors.push('Lowercase "i"');
+            if (!/^[A-Z]/.test(text.trim())) grammarErrors.push('No capital letter at start');
+            if (!/[.!?]$/.test(text.trim())) grammarErrors.push('No ending punctuation');
+
+            // Check for missing capitals after periods
+            const sentenceStartErrors = (text.match(/\. [a-z]/g) || []).length;
+            if (sentenceStartErrors > 0) grammarErrors.push('Missing capitals after periods');
+
+            // Check for run-on sentences (very long sentences)
+            let runOnCount = 0;
+            sentences.forEach(sentence => {
+                const sentenceWords = sentence.trim().split(/\s+/).length;
+                if (sentenceWords > 35) runOnCount++;
+            });
+            if (runOnCount > 0) grammarErrors.push('Run-on sentences detected');
+
+            // Deduct points for grammar errors
+            grammarScore = Math.max(30, 100 - (grammarErrors.length * 20) - (sentenceStartErrors * 10) - (runOnCount * 15));
+
+            // Spelling Analysis - Much more comprehensive
+            let spellingScore = 100;
+            const commonMisspellings = [
+                // Common words
+                ['teh', 'the'], ['adn', 'and'], ['wich', 'which'], ['wanna', 'want to'], ['gonna', 'going to'],
+                ['ur', 'your'], ['u', 'you'], ['dem', 'them'], ['gud', 'good'], ['pepol', 'people'],
+                ['lern', 'learn'], ['helpin', 'helping'], ['creativ', 'creative'], ['importent', 'important'],
+                ['impakt', 'impact'], ['tru', 'through'], ['frends', 'friends'], ['experians', 'experience'],
+                ['yers', 'years'], ['pasion', 'passion'], ['purpos', 'purpose'], ['makin', 'making'],
+                ['inspirin', 'inspiring'], ['belive', 'believe'], ['balanse', 'balance'],
+
+                // Professional words
+                ['recieve', 'receive'], ['seperate', 'separate'], ['occured', 'occurred'],
+                ['begining', 'beginning'], ['thier', 'their'], ['definately', 'definitely'],
+                ['accomodate', 'accommodate'], ['bussiness', 'business'], ['managment', 'management'],
+                ['achive', 'achieve'], ['suceed', 'succeed'], ['oportunity', 'opportunity']
+            ];
+
+            let spellingErrors = 0;
+            const foundErrors = [];
+
+            commonMisspellings.forEach(([wrong, correct]) => {
+                const regex = new RegExp('\\b' + wrong + '\\b', 'gi');
+                const matches = text.match(regex);
+                if (matches) {
+                    spellingErrors += matches.length;
+                    foundErrors.push(`"${wrong}" should be "${correct}"`);
+                }
+            });
+
+            // Check for text speak and informal contractions
+            const textSpeakPatterns = [
+                /\bu\b/gi, /\bur\b/gi, /\bthru\b/gi, /\bppl\b/gi, /\btho\b/gi,
+                /\bn\b/gi, /\bwanna\b/gi, /\bgonna\b/gi, /\bkinda\b/gi
+            ];
+
+            textSpeakPatterns.forEach(pattern => {
+                const matches = text.match(pattern);
+                if (matches) {
+                    spellingErrors += matches.length;
+                }
+            });
+
+            spellingScore = Math.max(20, 100 - (spellingErrors * 15));
+
+            // Vocabulary Analysis - More demanding
+            let vocabularyScore = 50; // Lower base score
+            const advancedWords = [
+                'experience', 'opportunity', 'development', 'professional', 'achievement',
+                'challenge', 'knowledge', 'skill', 'career', 'goal', 'aspiration',
+                'dedication', 'passion', 'expertise', 'innovative', 'efficient',
+                'competent', 'committed', 'motivated', 'enthusiastic', 'leadership'
+            ];
+
+            let advancedWordCount = 0;
+            advancedWords.forEach(word => {
+                if (text.toLowerCase().includes(word.toLowerCase())) {
+                    advancedWordCount++;
+                }
+            });
+
+            // Check for proper spelling of advanced words
+            let properAdvancedCount = 0;
+            const properWords = ['experience', 'professional', 'opportunity', 'achievement', 'knowledge'];
+            properWords.forEach(word => {
+                const regex = new RegExp('\\b' + word + '\\b', 'i');
+                if (regex.test(text)) {
+                    properAdvancedCount++;
+                }
+            });
+
+            vocabularyScore += (properAdvancedCount * 8) + (advancedWordCount * 3);
+            vocabularyScore = Math.min(100, vocabularyScore);
+
+            // Structure Analysis - More demanding
+            let structureScore = 40; // Lower base score
+
+            // Word count scoring
+            if (words.length >= 100) structureScore += 20;
+            else if (words.length >= 75) structureScore += 15;
+            else if (words.length >= 60) structureScore += 10;
+            else if (words.length >= 50) structureScore += 5;
+
+            // Sentence variety bonus - require proper sentences
+            const properSentences = sentences.filter(s => s.trim().length > 10);
+            if (properSentences.length >= 5) structureScore += 15;
+            else if (properSentences.length >= 4) structureScore += 10;
+            else if (properSentences.length >= 3) structureScore += 5;
+
+            // Average sentence length penalty for too short sentences
+            const avgSentenceLength = words.length / sentences.length;
+            if (avgSentenceLength >= 12 && avgSentenceLength <= 25) structureScore += 15;
+            else if (avgSentenceLength >= 8 && avgSentenceLength <= 30) structureScore += 8;
+            else if (avgSentenceLength < 6) structureScore -= 10; // Penalty for very short sentences
+
+            // Check for paragraph structure (periods indicate sentence endings)
+            const periodCount = (text.match(/\./g) || []).length;
+            if (periodCount >= 3) structureScore += 10;
+
+            structureScore = Math.max(20, Math.min(100, structureScore));
+
+            // Calculate overall score with weighted categories
+            const overallScore = Math.round((grammarScore * 0.3) + (spellingScore * 0.35) + (vocabularyScore * 0.2) + (structureScore * 0.15));
+
+            return {
+                overallScore,
+                grammar: grammarScore,
+                spelling: spellingScore,
+                vocabulary: vocabularyScore,
+                structure: structureScore,
+                wordCount: words.length,
+                sentenceCount: sentences.length,
+                grammarErrors,
+                spellingErrors,
+                foundErrors
+            };
+        }
+
+        // Math Test Functions
+        function generateMathTest() {
+            const questions = [
+                {
+                    text: "What is 15% of 200?",
+                    options: ["25", "30", "35", "40"],
+                    correct: 1
+                },
+                {
+                    text: "If a product costs R120 and is discounted by 25%, what is the new price?",
+                    options: ["R90", "R95", "R100", "R105"],
+                    correct: 0
+                },
+                {
+                    text: "What is 7 × 8 + 12 ÷ 4?",
+                    options: ["59", "56", "53", "62"],
+                    correct: 0
+                },
+                {
+                    text: "A company has 240 employees. If 60% are male, how many female employees are there?",
+                    options: ["96", "144", "120", "100"],
+                    correct: 0
+                },
+                {
+                    text: "What is the area of a rectangle with length 12m and width 8m?",
+                    options: ["96 m²", "40 m²", "20 m²", "48 m²"],
+                    correct: 0
+                },
+                {
+                    text: "Nomusa saves R450 every month. If her total monthly income is R3 000, what percentage of her income does she save?",
+                    options: ["10%", "15%", "20%", "25%"],
+                    correct: 1
+                },
+                {
+                    text: "A gardener wants to place a decorative border around a square flower bed. The length of one side of the flower bed is 4.5 metres. If the border material costs R50 per metre, what is the total cost of the border?",
+                    options: ["R225", "R450", "R900", "R1 000"],
+                    correct: 2
+                },
+                {
+                    text: "A tuck shop owner records the number of cold drinks sold over five days: Monday: 35, Tuesday: 42, Wednesday: 50, Thursday: 42, Friday: 61. What is the average (mean) number of cold drinks sold per day?",
+                    options: ["42", "46", "48", "50"],
+                    correct: 1
+                },
+                {
+                    text: "A builder needs to mix cement and sand in a ratio of 1:4. If he uses 3 bags of cement, how many bags of sand will he need?",
+                    options: ["4 bags", "7 bags", "12 bags", "15 bags"],
+                    correct: 2
+                },
+                {
+                    text: "A new smartphone is priced at R6 000. If the price is increased by 10%, what is the new price of the smartphone?",
+                    options: ["R600", "R6 010", "R6 600", "R7 000"],
+                    correct: 2
+                },
+                {
+                    text: "A bus travels at a constant speed of 90 km/h. How far will the bus travel in 4 hours?",
+                    options: ["22.5 km", "94 km", "180 km", "360 km"],
+                    correct: 3
+                },
+                {
+                    text: "A bag contains 12 red marbles, 6 blue marbles, and 2 yellow marbles. If you pick one marble at random, what is the probability that it will be a blue marble?",
+                    options: ["30%", "60%", "10%", "6%"],
+                    correct: 0
+                },
+                {
+                    text: "Andile wants to buy a video game that costs R800. He already has R350. He saves R50 per week from his pocket money. How many weeks will it take him to save the remaining money?",
+                    options: ["7 weeks", "8 weeks", "9 weeks", "10 weeks"],
+                    correct: 2
+                },
+                {
+                    text: "A rectangular swimming pool has a length of 10 metres, a width of 5 metres, and a depth of 2 metres. What is the total volume of the pool?",
+                    options: ["17 m³", "70 m³", "100 m³", "200 m³"],
+                    correct: 2
+                },
+                {
+                    text: "On a map with a scale of 1:50 000cm, the distance between two towns is 4 cm. What is the actual distance in kilometres?",
+                    options: ["2 km", "20 km", "200 km", "2 000 km"],
+                    correct: 0
+                }
+            ];
+
+            let html = `
+                <div class="mb-6">
+                    <p class="text-gray-600 mb-4">Solve all mathematical problems. You need 60% to pass.</p>
+                </div>
+                <form id="math-test-form">
+            `;
+
+            questions.forEach((q, index) => {
+                html += `
+                    <div class="mb-6 p-4 border rounded-lg">
+                        <h4 class="font-semibold mb-3">Question ${index + 1}:</h4>
+                        <p class="mb-4">${q.text}</p>
+                        <div class="space-y-2">
+                `;
+
+                q.options.forEach((option, optIndex) => {
+                    html += `
+                        <label class="flex items-center">
+                            <input type="radio" name="mq${index}" value="${optIndex}" class="mr-2">
+                            <span>${option}</span>
+                        </label>
+                    `;
+                });
+
+                html += `
+                        </div>
+                    </div>
+                `;
+            });
+
+            html += `
+                </form>
+                <button onclick="submitMathTest()" class="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition duration-300">
+                    Submit Test
+                </button>
+            `;
+
+            document.getElementById('math-content').innerHTML = html;
+        }
+
+        function submitMathTest() {
+            const form = document.getElementById('math-test-form');
+            const formData = new FormData(form);
+            const correctAnswers = [1, 0, 0, 0, 0, 1, 2, 1, 2, 2, 3, 0, 2, 2, 0]; // Correct answer indices
+
+            let score = 0;
+            let totalQuestions = correctAnswers.length;
+
+            for (let i = 0; i < totalQuestions; i++) {
+                const answer = parseInt(formData.get(`mq${i}`));
+                if (answer === correctAnswers[i]) {
+                    score++;
+                }
+            }
+
+            const percentage = Math.round((score / totalQuestions) * 100);
+
+            assessmentResults.math.completed = true;
+            assessmentResults.math.score = percentage;
+
+            // Update assessment card
+            const card = document.getElementById('math-assessment');
+            card.className = 'p-6 rounded-xl shadow-lg border assessment-completed';
+
+            // Show results
+            document.getElementById('math-result').classList.remove('hidden');
+            document.getElementById('math-score').textContent = percentage;
+
+            // Update status
+            updateAssessmentStatus('math', true);
+
+            closeAssessmentModal('math-modal');
+            checkAllAssessments();
+        }
+
+        // Excel Test Functions
+        function generateExcelTest() {
+            const questions = [
+                {
+                    text: "What function would you use to add up a range of cells in Excel?",
+                    options: ["ADD", "SUM", "TOTAL", "PLUS"],
+                    correct: 1
+                },
+                {
+                    text: "Which shortcut key combination is used to save a file in Excel?",
+                    options: ["Ctrl + S", "Ctrl + A", "Ctrl + C", "Ctrl + V"],
+                    correct: 0
+                },
+                {
+                    text: "What does the function =AVERAGE(A1:A10) do?",
+                    options: [
+                        "Finds the highest value in range A1:A10",
+                        "Calculates the average of values in range A1:A10",
+                        "Counts the number of cells in range A1:A10",
+                        "Finds the lowest value in range A1:A10"
+                    ],
+                    correct: 1
+                },
+                {
+                    text: "How do you create an absolute reference to cell A1?",
+                    options: ["A1", "$A$1", "#A#1", "&A&1"],
+                    correct: 1
+                },
+                {
+                    text: "What is the result of the formula =IF(5>3,\"Yes\",\"No\")?",
+                    options: ["Yes", "No", "5", "3"],
+                    correct: 0
+                }
+            ];
+
+            let html = `
+                <div class="mb-6">
+                    <p class="text-gray-600 mb-4">Test your Excel knowledge. You need 65% to pass.</p>
+                </div>
+                <form id="excel-test-form">
+            `;
+
+            questions.forEach((q, index) => {
+                html += `
+                    <div class="mb-6 p-4 border rounded-lg">
+                        <h4 class="font-semibold mb-3">Question ${index + 1}:</h4>
+                        <p class="mb-4">${q.text}</p>
+                        <div class="space-y-2">
+                `;
+
+                q.options.forEach((option, optIndex) => {
+                    html += `
+                        <label class="flex items-center">
+                            <input type="radio" name="eq${index}" value="${optIndex}" class="mr-2">
+                            <span>${option}</span>
+                        </label>
+                    `;
+                });
+
+                html += `
+                        </div>
+                    </div>
+                `;
+            });
+
+            html += `
+                </form>
+                <button onclick="submitExcelTest()" class="bg-emerald-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-emerald-700 transition duration-300">
+                    Submit Test
+                </button>
+            `;
+
+            document.getElementById('excel-content').innerHTML = html;
+        }
+
+        function submitExcelTest() {
+            const form = document.getElementById('excel-test-form');
+            const formData = new FormData(form);
+            const correctAnswers = [1, 0, 1, 1, 0]; // Correct answer indices
+
+            let score = 0;
+            let totalQuestions = correctAnswers.length;
+
+            for (let i = 0; i < totalQuestions; i++) {
+                const answer = parseInt(formData.get(`eq${i}`));
+                if (answer === correctAnswers[i]) {
+                    score++;
+                }
+            }
+
+            const percentage = Math.round((score / totalQuestions) * 100);
+
+            assessmentResults.excel.completed = true;
+            assessmentResults.excel.score = percentage;
+
+            // Update assessment card
+            const card = document.getElementById('excel-assessment');
+            card.className = 'p-6 rounded-xl shadow-lg border assessment-completed';
+
+            // Show results
+            document.getElementById('excel-result').classList.remove('hidden');
+            document.getElementById('excel-score').textContent = percentage;
+
+            // Update status
+            updateAssessmentStatus('excel', true);
+
+            closeAssessmentModal('excel-modal');
+            checkAllAssessments();
+        }
+
+        // Update assessment status indicators
+        function updateAssessmentStatus(assessment, completed) {
+            const statusElement = document.getElementById(`${assessment}-status`);
+            if (completed) {
+                statusElement.innerHTML = `
+                    <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-2">
+                        <i data-lucide="check" class="w-4 h-4 text-white"></i>
+                    </div>
+                    <p class="text-sm font-medium">${assessment.charAt(0).toUpperCase() + assessment.slice(1)} Test</p>
+                    <p class="text-xs text-green-600">Completed</p>
+                `;
+                statusElement.className = 'text-center p-3 bg-green-100 rounded-lg';
+            }
+            lucide.createIcons();
+        }
+
+        // Check if all assessments are completed
+        function checkAllAssessments() {
+            const allCompleted = assessmentResults.typing.completed &&
+                               assessmentResults.literacy.completed &&
+                               assessmentResults.math.completed &&
+                               assessmentResults.excel.completed;
+
+            const submitBtn = document.getElementById('submit-btn');
+            if (allCompleted) {
+                submitBtn.disabled = false;
+                submitBtn.className = 'bg-gradient-to-r from-[#12265E] to-[#92ABC4] text-white font-semibold py-4 px-8 rounded-lg hover:from-[#0d1a47] hover:to-[#3a7bc8] transition duration-300 cursor-pointer';
+                submitBtn.textContent = 'Submit Application';
+                submitBtn.nextElementSibling.textContent = 'All assessments completed! You can now submit your application.';
+                submitBtn.nextElementSibling.className = 'text-sm text-green-600 mt-2';
+            }
+        }
+
+        // Validation functions
+        function validateSouthAfricanID(idNumber) {
+            if (!/^\d{13}$/.test(idNumber)) {
+                return { valid: false, message: "ID number must be exactly 13 digits" };
+            }
+
+            // Extract date components
+            const year = parseInt(idNumber.substring(0, 2));
+            const month = parseInt(idNumber.substring(2, 4));
+            const day = parseInt(idNumber.substring(4, 6));
+
+            // Determine century
+            const currentYear = new Date().getFullYear();
+            const currentCentury = Math.floor(currentYear / 100) * 100;
+            const fullYear = year <= (currentYear - currentCentury) ? currentCentury + year : (currentCentury - 100) + year;
+
+            // Validate date
+            if (month < 1 || month > 12) {
+                return { valid: false, message: "Invalid month in ID number" };
+            }
+            if (day < 1 || day > 31) {
+                return { valid: false, message: "Invalid day in ID number" };
+            }
+
+            // Calculate age
+            const birthDate = new Date(fullYear, month - 1, day);
+            const age = Math.floor((new Date() - birthDate) / (365.25 * 24 * 60 * 60 * 1000));
+
+            if (age < 18) {
+                return { valid: false, message: "You must be at least 18 years old to apply" };
+            }
+            if (age > 35) {
+                return { valid: false, message: "Learnership applications are typically for ages 18-35" };
+            }
+
+            return { valid: true, age: age };
+        }
+
+        function validatePhoneNumber(phone) {
+            // Remove spaces and special characters
+            const cleanPhone = phone.replace(/[\s\-\(\)]/g, '');
+
+            // Check SA phone number patterns
+            if (!/^(0\d{9}|27\d{9}|\+27\d{9})$/.test(cleanPhone)) {
+                return { valid: false, message: "Please enter a valid South African phone number" };
+            }
+            return { valid: true };
+        }
+
+        function validateEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                return { valid: false, message: "Please enter a valid email address" };
+            }
+            return { valid: true };
+        }
+
+        function validateDateOfBirth(dateOfBirth) {
+            const birthDate = new Date(dateOfBirth);
+            const age = Math.floor((new Date() - birthDate) / (365.25 * 24 * 60 * 60 * 1000));
+
+            if (age < 18) {
+                return { valid: false, message: "You must be at least 18 years old" };
+            }
+            if (age > 35) {
+                return { valid: false, message: "Learnership applications are typically for ages 18-35" };
+            }
+            return { valid: true };
+        }
+
+        function validatePostalCode(postalCode) {
+            if (!/^\d{4}$/.test(postalCode)) {
+                return { valid: false, message: "Postal code must be exactly 4 digits" };
+            }
+            return { valid: true };
+        }
+
+        // Submit application with API call
+async function submitApplication(event) {
+    event.preventDefault();
+
+    // Check if all assessments are completed
+    const allCompleted = assessmentResults.typing.completed &&
+                       assessmentResults.literacy.completed &&
+                       assessmentResults.math.completed &&
+                       assessmentResults.excel.completed;
+
+    if (!allCompleted) {
+        alert('Please complete all assessments before submitting your application.');
+        return;
+    }
+
+    // Show loading state
+    const submitBtn = document.getElementById('submit-btn');
+    const originalText = submitBtn.textContent;
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Submitting Application...';
+    submitBtn.className = 'bg-gray-400 text-white font-semibold py-4 px-8 rounded-lg cursor-not-allowed';
+
+    try {
+        // Get form data
+        const formData = new FormData(event.target);
+
+        // Validate required fields
+        const validationErrors = [];
+
+        // Validate ID Number
+        const idNumber = formData.get('idNumber');
+        if (idNumber) {
+            const idValidation = validateSouthAfricanID(idNumber);
+            if (!idValidation.valid) {
+                validationErrors.push(idValidation.message);
+            }
+        }
+
+        // Validate Date of Birth
+        const dateOfBirth = formData.get('dateOfBirth');
+        if (dateOfBirth) {
+            const dobValidation = validateDateOfBirth(dateOfBirth);
+            if (!dobValidation.valid) {
+                validationErrors.push(dobValidation.message);
+            }
+        }
+
+        // Validate Phone Number
+        const phone = formData.get('phone');
+        if (phone) {
+            const phoneValidation = validatePhoneNumber(phone);
+            if (!phoneValidation.valid) {
+                validationErrors.push(phoneValidation.message);
+            }
+        }
+
+        // Validate Email
+        const email = formData.get('email');
+        if (email) {
+            const emailValidation = validateEmail(email);
+            if (!emailValidation.valid) {
+                validationErrors.push(emailValidation.message);
+            }
+        }
+
+        // Validate Postal Code
+        const postalCode = formData.get('postalCode');
+        if (postalCode) {
+            const postalValidation = validatePostalCode(postalCode);
+            if (!postalValidation.valid) {
+                validationErrors.push(postalValidation.message);
+            }
+        }
+
+        // Check for criminal record eligibility
+        const criminalRecord = formData.get('criminalRecord');
+        if (criminalRecord === 'yes') {
+            validationErrors.push('Unfortunately, applicants with criminal records are not eligible for this learnership program.');
+        }
+
+        // Validate motivation length
+        const motivation = formData.get('motivation');
+        if (motivation && motivation.length < 50) {
+            validationErrors.push('Please provide a more detailed motivation (minimum 50 characters).');
+        }
+
+        // Show validation errors if any
+        if (validationErrors.length > 0) {
+            throw new Error('Validation failed:\n\n' + validationErrors.join('\n'));
+        }
+
+        // Prepare application data for API
+        const applicationData = {
+            firstName: formData.get('firstName'),
+            lastName: formData.get('lastName'),
+            email: formData.get('email'),
+            phoneNumber: formData.get('phone'),
+            alternativeNumber: formData.get('alternativePhone') || '',
+            idNumber: formData.get('idNumber'),
+            gender: formData.get('gender'),
+            race: formData.get('race'),
+            nationality: formData.get('nationality'),
+            address: formData.get('address'),
+            city: formData.get('city'),
+            province: formData.get('province'),
+            postalCode: formData.get('postalCode'),
+            isDisabled: formData.get('disability') === 'yes',
+            desiredQualification: formData.get('qualification'),
+            highestQualification: formData.get('highestQualification'),
+            institution: formData.get('institution'),
+            yearCompleted: formData.get('yearCompleted'),
+            mathematicsLevel: formData.get('mathsLevel'),
+            englishLevel: formData.get('englishLevel'),
+            employmentStatus: formData.get('employmentStatus'),
+            currentEmployer: formData.get('currentEmployer') || '',
+            currentPosition: formData.get('currentPosition') || '',
+            monthlySalary: formData.get('monthlySalary') || '',
+            yearsOfExperience: formData.get('workExperience') || '',
+            hasDriversLicence: formData.get('hasDriversLicense') === 'yes',
+            hasOwnTransport: formData.get('hasOwnTransport') === 'yes',
+            hasCriminalRecord: formData.get('criminalRecord') === 'yes',
+            computerSkill: formData.get('computerSkills'),
+            emailSkill: formData.get('emailSkills'),
+            msOfficeSkill: formData.get('msOfficeSkills'),
+            motivation: formData.get('motivation'),
+            typingScore: assessmentResults.typing.wpm + ' WPM (' + assessmentResults.typing.accuracy + '% accuracy)',
+            excelScore: assessmentResults.excel.score + '%',
+            literacyScore: assessmentResults.literacy.score + '%',
+            mathScore: assessmentResults.math.score + '%',
+            disabilityType: formData.get('disabilityType'),
+            disabilityDescription: formData.get('disabilityDescription'),
+            assistiveTechnology: formData.get('assistiveTechnology') === 'yes',
+            accommodationNeeds: formData.get('accommodationNeeds'),
+            dateOfBirth: formData.get('dateOfBirth')
+        };
+
+        // Make API call to submit application
+        // TEMPORARY: Mock API response for testing (remove when backend is ready)
+        console.log('Application Data:', applicationData);
+
+        const response = await fetch('https://dev-service.speccon.co.za/api/learnershipapplication/create', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify(applicationData)
+        });
+        
+
+        // Handle response
+        if (!response.ok) {
+            const errorData = await response.json().catch(() => ({}));
+            throw new Error(errorData.message || `Server error: ${response.status} ${response.statusText}`);
+        }
+ // Simulate successful submission
+        const responseAfterAPI = {
+            ok: true,
+            json: async () => ({
+                success: true,
+                applicationId: 'APP-' + Date.now(),
+                message: 'Application received successfully'
+            })
+        };
+        const result = await responseAfterAPI.json();
+
+        // Show success message
+        alert(`Thank you for your application! 
+
+Your application has been successfully submitted with reference number: ${result.applicationId || 'N/A'}
+
+We have received your learnership application and assessment results. We will review your application and contact you within 5-7 business days at ${formData.get('email')}.
+
+Please save your reference number for future correspondence.`);
+
+        // Optional: Reset form or redirect
+        // event.target.reset();
+        // window.location.href = 'application-thank-you.html';
+
+        // Or you could redirect to a thank you page with the application ID
+        if (result.applicationId) {
+            window.location.href = `application-confirmation.html?id=${result.applicationId}`;
+        }
+
+    } catch (error) {
+        console.error('Error submitting application:', error);
+        
+        // Show user-friendly error message
+        if (error.message.includes('Validation failed')) {
+            alert(error.message);
+        } else if (error.message.includes('fetch')) {
+            alert('Network error: Please check your internet connection and try again.');
+        } else {
+            alert('Sorry, there was an error submitting your application. Please try again later or contact support if the problem persists.\n\nError: ' + error.message);
+        }
+    } finally {
+        // Reset button state
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalText;
+        submitBtn.className = 'bg-gradient-to-r from-[#12265E] to-[#92ABC4] text-white font-semibold py-4 px-8 rounded-lg hover:from-[#0d1a47] hover:to-[#3a7bc8] transition duration-300 cursor-pointer';
+    }
+}
+
+// Optional: Add a function to check application status
+async function checkApplicationStatus(applicationId) {
+    try {
+        const response = await fetch(`/api/learnershipapplication/GetApplicationById/${applicationId}`);
+        if (!response.ok) {
+            throw new Error('Failed to fetch application status');
+        }
+        const result = await response.json();
+        return result;
+    } catch (error) {
+        console.error('Error checking application status:', error);
+        throw error;
+    }
+}
+
+// Optional: Add a function to save draft data
+
+async function saveDraft() {
+    try {
+        const form = document.getElementById('learnership-form');
+        const formData = new FormData(form);
+        
+        const draftData = {};
+        for (let [key, value] of formData.entries()) {
+            draftData[key] = value;
+        }
+
+    } catch (error) {
+        console.error('Error saving draft:', error);
+    }
+} 
+
+// Optional: Auto-save draft every 2 minutes
+setInterval(saveDraft, 120000);
+
+        // Real-time validation setup
+        document.addEventListener('DOMContentLoaded', function() {
+            // ID Number validation
+            const idInput = document.getElementById('idNumber');
+            if (idInput) {
+                idInput.addEventListener('blur', function() {
+                    const value = this.value;
+                    if (value) {
+                        const validation = validateSouthAfricanID(value);
+                        showFieldValidation(this, validation);
+                    }
+                });
+            }
+
+            // Phone validation
+            const phoneInput = document.getElementById('phone');
+            if (phoneInput) {
+                phoneInput.addEventListener('blur', function() {
+                    const value = this.value;
+                    if (value) {
+                        const validation = validatePhoneNumber(value);
+                        showFieldValidation(this, validation);
+                    }
+                });
+            }
+
+            // Email validation
+            const emailInput = document.getElementById('email');
+            if (emailInput) {
+                emailInput.addEventListener('blur', function() {
+                    const value = this.value;
+                    if (value) {
+                        const validation = validateEmail(value);
+                        showFieldValidation(this, validation);
+                    }
+                });
+            }
+
+            // Date of Birth validation
+            const dobInput = document.getElementById('dateOfBirth');
+            if (dobInput) {
+                dobInput.addEventListener('change', function() {
+                    const value = this.value;
+                    if (value) {
+                        const validation = validateDateOfBirth(value);
+                        showFieldValidation(this, validation);
+                    }
+                });
+            }
+
+            // Postal Code validation
+            const postalInput = document.getElementById('postalCode');
+            if (postalInput) {
+                postalInput.addEventListener('blur', function() {
+                    const value = this.value;
+                    if (value) {
+                        const validation = validatePostalCode(value);
+                        showFieldValidation(this, validation);
+                    }
+                });
+            }
+
+            // Motivation length validation
+            const motivationInput = document.getElementById('motivation');
+            if (motivationInput) {
+                motivationInput.addEventListener('input', function() {
+                    const length = this.value.length;
+                    const counter = this.parentElement.querySelector('.char-counter') || document.createElement('div');
+                    counter.className = 'char-counter text-xs mt-1';
+
+                    if (length < 50) {
+                        counter.className += ' text-red-600';
+                        counter.textContent = `${length}/50 characters (minimum 50 required)`;
+                    } else {
+                        counter.className += ' text-green-600';
+                        counter.textContent = `${length} characters ✓`;
+                    }
+
+                    if (!this.parentElement.querySelector('.char-counter')) {
+                        this.parentElement.appendChild(counter);
+                    }
+                });
+            }
+
+            // Disability section toggle
+            const disabilitySelect = document.getElementById('disability');
+            const disabilityDetails = document.getElementById('disabilityDetails');
+            const disabilityType = document.getElementById('disabilityType');
+            const assistiveTechnology = document.getElementById('assistiveTechnology');
+
+            if (disabilitySelect && disabilityDetails) {
+                disabilitySelect.addEventListener('change', function() {
+                    if (this.value === 'yes') {
+                        disabilityDetails.classList.remove('hidden');
+                        // Make disability fields required when shown
+                        if (disabilityType) disabilityType.required = true;
+                        if (assistiveTechnology) assistiveTechnology.required = true;
+                    } else {
+                        disabilityDetails.classList.add('hidden');
+                        // Remove required attribute when hidden
+                        if (disabilityType) {
+                            disabilityType.required = false;
+                            disabilityType.value = '';
+                        }
+                        if (assistiveTechnology) {
+                            assistiveTechnology.required = false;
+                            assistiveTechnology.value = '';
+                        }
+                        // Clear text areas
+                        const disabilityDescription = document.getElementById('disabilityDescription');
+                        const accommodationNeeds = document.getElementById('accommodationNeeds');
+                        if (disabilityDescription) disabilityDescription.value = '';
+                        if (accommodationNeeds) accommodationNeeds.value = '';
+                    }
+                });
+            }
+
+            // Mobile menu toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+        });
+
+        function showFieldValidation(field, validation) {
+            // Remove existing validation message
+            const existingMessage = field.parentElement.querySelector('.validation-message');
+            if (existingMessage) {
+                existingMessage.remove();
+            }
+
+            // Create new validation message
+            const message = document.createElement('div');
+            message.className = 'validation-message text-xs mt-1';
+
+            if (validation.valid) {
+                message.className += ' text-green-600';
+                message.textContent = '✓ Valid';
+                field.className = field.className.replace('border-red-300', '').replace('border-green-300', '') + ' border-green-300';
+            } else {
+                message.className += ' text-red-600';
+                message.textContent = '⚠️ ' + validation.message;
+                field.className = field.className.replace('border-green-300', '').replace('border-red-300', '') + ' border-red-300';
+            }
+
+            field.parentElement.appendChild(message);
+        }
+
+        // Close modals when clicking outside
+        document.addEventListener('click', function(e) {
+            const modals = ['typing-modal', 'literacy-modal', 'math-modal', 'excel-modal'];
+            modals.forEach(modalId => {
+                const modal = document.getElementById(modalId);
+                if (e.target === modal) {
+                    closeAssessmentModal(modalId);
+                }
+            });
+        });
+
+        // Close modals with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                const modals = ['typing-modal', 'literacy-modal', 'math-modal', 'excel-modal'];
+                modals.forEach(modalId => {
+                    const modal = document.getElementById(modalId);
+                    if (modal.classList.contains('show')) {
+                        closeAssessmentModal(modalId);
+                    }
+                });
+            }
+        }); 
+    </script>
+</body>
+</html>

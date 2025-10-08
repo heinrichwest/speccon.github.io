@@ -1,0 +1,49 @@
+QUALIFICATION DETAILS
+=====================
+
+Qualification Name: Occupational Certificate: Financial Advisor
+SETA: INSETA
+NQF Level: 6
+Minimum Credits: 515
+Qualification NLRD ID: 105026
+Learning Programme NLRD ID: N/A
+Expiry Date: 23-May-29
+Status: Accredited
+Reference Sheet: QCTO Cambridge
+
+MODULES AND UNITS
+=================
+
+• **Module 1: Introduction to the Investment Advisory Industry (43 credits)**
+  - 241301001-KM-01: Overview of the Investment Advisory Industry (NQF Level 5, 13 credits)
+  - 241301001-KM-05: Fundamentals of Investments (NQF Level 5, 30 credits)
+
+• **Module 2: Principles of Providing Advice (62 credits)**
+  - 241301001-KM-02: Regulatory requirements for advising clients regarding insurance and investments (NQF Level 5, 17 credits)
+  - 241301001-KM-06: Principles of Providing advice to clients regarding Insurance, Savings and Retirement Planning (NQF Level 5, 16 credits)
+  - 241301001-KM-07: Principles of Providing Advice to clients regarding Investments (NQF Level 6, 29 credits)
+
+• **Module 3: Analysis and Evaluation of Investment Opportunities (100 credits)**
+  - 241301001-PM-01: Analyse clients long term wealth creation/protection needs (NQF Level 5, 31 credits)
+  - 241301001-PM-02: Evaluate available long term wealth creation/protection options (NQF Level 5, 27 credits)
+  - 241301001-PM-09: Research, analyse and conduct due-diligence of investment opportunities (NQF Level 6, 42 credits)
+
+• **Module 4: Retirement Funds and Employee Benefits (80 credits)**
+  - 241301001-KM-04: Principles of Providing advice to clients regarding the use of Employee and Pension Fund Benefits (NQF Level 5, 20 credits)
+  - 241301001-PM-04: Analyse the client organisations needs relating to retirement funds and employee benefits (NQF Level 5, 11 credits)
+  - 241301001-PM-05: Evaluate the availability of various employee benefit and retirement fund options and structures (NQF Level 5, 8 credits)
+  - 241301001-PM-06: Advise client on the most appropriate structuring of retirement funds and employee benefits (NQF Level 6, 18 credits)
+  - 241301001-WM-02: Support the provisioning of advice to clients on employee benefits and retirement structures for a period of three to six months (NQF Level 5, 23 credits)
+
+• **Module 5: Health Care Benefits (72 credits)**
+  - 241301001-KM-03: Health Care benefits advisory services (NQF Level 5, 15 credits)
+  - 241301001-PM-07: Analyse Client needs regarding Health Care Benefits (NQF Level 6, 17 credits)
+  - 241301001-PM-08: Provide advice on the introduction of Health Care benefit Programmes (NQF Level 6, 26 credits)
+  - 241301001-WM-03: Participate in the processes of providing advice regarding the implementation of Health Care Benefit Programmes (NQF Level 5, 14 credits)
+
+• **Module 6: Facilitation and Implementation of Investment Decisions (158 credits)**
+  - 241301001-PM-11: Facilitate the implementation of agreed investment decisions (NQF Level 6, 9 credits)
+  - 241301001-PM-03: Recommend and implement the most appropriate wealth creation/protection options (NQF Level 5, 26 credits)
+  - 241301001-PM-10: Advise clients regarding potential investment opportunities (NQF Level 6, 41 credits)
+  - 241301001-WM-01: Participate in the processes of wealth creation (NQF Level 5, 50 credits)
+  - 241301001-WM-04: Participate in the processes of advising on investment decisions over a period of six months (NQF Level 5, 32 credits)

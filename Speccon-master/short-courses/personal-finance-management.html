@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Finance Management | SpecCon Holdings</title>
+    <meta name="description" content="Comprehensive personal finance management training covering budgeting, investing, retirement planning, and building financial security.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="../js/centralized-modals.js"></script>
+    <link rel="icon" type="image/png" href="../Images/Logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        nav { font-family: 'Roboto', sans-serif; }
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 10px 10px -5px rgb(0 0 0 / 0.04);
+        }
+
+        /* Enhanced Dropdown Menu Styles */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: calc(100% + 8px);
+            left: 0;
+            min-width: 16rem;
+            background: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e5e7eb;
+            z-index: 1000;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: opacity 0.2s ease, transform 0.2s ease;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Invisible bridge to prevent menu closing when moving cursor */
+        .dropdown::before {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            height: 12px;
+            z-index: 999;
+        }
+
+        .dropdown button {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            padding: 0;
+            font-size: inherit;
+            font-family: inherit;
+            color: inherit;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-900">
+    <!-- Header -->
+    <header class="bg-white/95 backdrop-blur-md shadow-lg fixed w-full z-50 top-0">
+        <div class="container mx-auto px-4 lg:px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <a href="../index.html">
+                        <img src="../Images/Logo.png" alt="SpecCon Holdings Logo" class="h-12">
+                    </a>
+                    <div class="ml-3">
+                        <h1 class="text-xl font-bold text-[#12265E]">SpecCon Holdings</h1>
+                        <p class="text-sm text-[#ffa600]">Services SETA Qualifications</p>
+                    </div>
+                </div>
+
+                <nav class="hidden lg:flex items-center space-x-4">
+                    <a href="../index.html" class="text-[#12265E] hover:text-[#FFA600] font-medium transition duration-300 text-sm whitespace-nowrap">Home</a>
+                    <a href="../index.html#about" class="text-[#12265E] hover:text-[#FFA600] font-medium transition duration-300 text-sm whitespace-nowrap">Why Choose Us</a>
+                    <a href="../index.html#qualifications" class="text-[#12265E] hover:text-[#FFA600] font-medium transition duration-300 text-sm whitespace-nowrap">Qualifications</a>
+                    <a href="../index.html#accreditations" class="text-[#12265E] hover:text-[#FFA600] font-medium transition duration-300 text-sm whitespace-nowrap">Accreditations</a>
+                    <a href="../index.html#classroom-training" class="text-[#12265E] hover:text-[#FFA600] font-medium transition duration-300 text-sm whitespace-nowrap">Classroom Training</a>
+                    <div class="relative dropdown">
+                        <button class="text-[#12265E] hover:text-[#FFA600] font-medium transition duration-300 inline-flex items-center">
+                            Other Products <i data-lucide="chevron-down" class="w-4 h-4 ml-1"></i>
+                        </button>
+                        <div class="dropdown-menu absolute left-0 w-64 bg-white rounded-lg shadow-xl py-2 z-20 border">
+                            <a href="https://elearning.co.za/" target="_blank" class="block px-4 py-3 text-sm text-gray-700 hover:bg-[#12265E]/10 hover:text-[#12265E] transition duration-200">
+                                <i data-lucide="monitor" class="w-4 h-4 inline mr-2"></i>Online Training
+                            </a>
+                            <a href="https://employmentequityact.co.za/" target="_blank" class="block px-4 py-3 text-sm text-gray-700 hover:bg-[#12265E]/10 hover:text-[#12265E] transition duration-200">
+                                <i data-lucide="shield-check" class="w-4 h-4 inline mr-2"></i>Employment Equity
+                            </a>
+                            <a href="https://learningmanagementsystem.co.za/" target="_blank" class="block px-4 py-3 text-sm text-gray-700 hover:bg-[#12265E]/10 hover:text-[#12265E] transition duration-200">
+                                <i data-lucide="graduation-cap" class="w-4 h-4 inline mr-2"></i>Learning Management System
+                            </a>
+                            <a href="https://skillsdevelopment.co.za/" target="_blank" class="block px-4 py-3 text-sm text-gray-700 hover:bg-[#12265E]/10 hover:text-[#12265E] transition duration-200">
+                                <i data-lucide="trending-up" class="w-4 h-4 inline mr-2"></i>Skills Development
+                            </a>
+                            <a href="https://www.specconacademy.co.za/" target="_blank" class="block px-4 py-3 text-sm text-gray-700 hover:bg-[#12265E]/10 hover:text-[#12265E] transition duration-200">
+                                <i data-lucide="school" class="w-4 h-4 inline mr-2"></i>SpecCon Academy
+                            </a>
+                            <a href="https://bbbee.co.za/" target="_blank" class="block px-4 py-3 text-sm text-gray-700 hover:bg-[#12265E]/10 hover:text-[#12265E] transition duration-200">
+                                <i data-lucide="award" class="w-4 h-4 inline mr-2"></i>BBBEE Consulting
+                            </a>
+                        </div>
+                    </div>
+                </nav>
+
+                <div class="hidden lg:block">
+                    <button onclick="openBookNowModal()" data-modal="book" data-course="Personal Finance Management" class="bg-green-600 text-white font-semibold px-5 py-2 rounded-lg hover:bg-blue-700 transition duration-300 shadow">Book Training</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-[#12265E] via-[#92abc4] to-[#12265E] text-white pt-28 pb-20">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="mb-6">
+                        <span class="bg-[#ffa600]/20 text-[#ffa600] px-4 py-2 rounded-full text-sm font-medium">Financial Wellness</span>
+                    </div>
+                    <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">Personal Finance Management</h1>
+                    <p class="text-xl text-[#ffa600]"> mb-8">
+                        Take control of your financial future with comprehensive training in budgeting, investing, debt management, and retirement planning strategies.
+                    </p>
+
+                    <div class="grid grid-cols-3 gap-6 mb-8">
+                        <div class="text-center p-4 bg-white/10 rounded-lg">
+                            <div class="text-2xl font-bold text-white">1-2</div>
+                            <div class="text-[#ffa600] text-sm">Days Duration</div>
+                        </div>
+                        <div class="text-center p-4 bg-white/10 rounded-lg">
+                            <div class="text-2xl font-bold text-white">All</div>
+                            <div class="text-[#ffa600] text-sm">Levels</div>
+                        </div>
+                        <div class="text-center p-4 bg-white/10 rounded-lg">
+                            <div class="text-2xl font-bold text-white">✓</div>
+                            <div class="text-[#ffa600] text-sm">Certificate</div>
+                        </div>
+                    </div>
+
+                 <button onclick="openBookNowModal()" data-modal="book" data-course="Personal finance management" 
+        class="flex items-center gap-2 bg-white text-green-600 font-bold py-4 px-8 rounded-lg hover:bg-gray-100-semibold px-6 py-3 rounded-lg hover:from-blue-600 hover:to-blue-700 transition duration-300 shadow-lg">
+    <i data-lucide="calendar" class="w-5 h-5"></i>
+    Book This Training 
+</button>
+                </div>
+
+                <div class="relative">
+                    <img src="https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                         alt="Financial planning and personal finance management"
+                         class="rounded-2xl shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Overview -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#12265E] mb-4">Financial Management Overview</h2>
+                <p class="text-xl text-[#ffa600]"> max-w-3xl mx-auto">
+                    Comprehensive training to build financial literacy, create sustainable wealth, and secure your financial future through proven strategies.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-2xl shadow-lg p-8 card-hover transition-all duration-300">
+                    <div class="w-16 h-16 bg-[#ffffff]/70 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <i data-lucide="calculator" class="w-8 h-8 text-[#ffa600]"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-[#12265E] mb-4">Budgeting & Planning</h3>
+                    <p class="text-[#ffa600]">Master effective budgeting techniques, expense tracking, and financial goal setting for long-term success.</p>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg p-8 card-hover transition-all duration-300">
+                    <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mb-6">
+                        <i data-lucide="credit-card" class="w-8 h-8 text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-[#12265E] mb-4">Debt Management</h3>
+                    <p class="text-[#ffa600]">Learn strategies to eliminate debt, improve credit scores, and avoid financial pitfalls that drain wealth.</p>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg p-8 card-hover transition-all duration-300">
+                    <div class="w-16 h-16 bg-[#ffffff]/70 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <i data-lucide="trending-up" class="w-8 h-8 text-[#ffa600]"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-[#12265E] mb-4">Investment Strategies</h3>
+                    <p class="text-[#ffa600]">Understand different investment options, risk management, and portfolio diversification for wealth building.</p>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg p-8 card-hover transition-all duration-300">
+                    <div class="w-16 h-16 bg-orange-100 rounded-2xl flex items-center justify-center mb-6">
+                        <i data-lucide="piggy-bank" class="w-8 h-8 text-orange-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-[#12265E] mb-4">Savings & Emergency Funds</h3>
+                    <p class="text-[#ffa600]">Build robust savings strategies and emergency funds to protect against financial uncertainties.</p>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg p-8 card-hover transition-all duration-300">
+                    <div class="w-16 h-16 bg-red-100 rounded-2xl flex items-center justify-center mb-6">
+                        <i data-lucide="shield" class="w-8 h-8 text-red-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-[#12265E] mb-4">Insurance & Protection</h3>
+                    <p class="text-[#ffa600]">Understand insurance needs, risk protection strategies, and safeguarding your financial assets.</p>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg p-8 card-hover transition-all duration-300">
+                    <div class="w-16 h-16 bg-teal-100 rounded-2xl flex items-center justify-center mb-6">
+                        <i data-lucide="calendar" class="w-8 h-8 text-teal-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-[#12265E] mb-4">Retirement Planning</h3>
+                    <p class="text-[#ffa600]">Plan for retirement with pension funds, retirement annuities, and long-term wealth accumulation strategies.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What You'll Learn -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-[#12265E] mb-8">Key Learning Outcomes</h2>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-[#ffffff]/70 rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i data-lucide="check" class="w-4 h-4 text-[#ffa600]"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-[#12265E] mb-2">Financial Assessment & Analysis</h3>
+                                <p class="text-[#ffa600]">Evaluate your current financial position and identify areas for improvement and growth.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-[#ffffff]/70 rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i data-lucide="check" class="w-4 h-4 text-[#ffa600]"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-[#12265E] mb-2">Smart Budgeting Techniques</h3>
+                                <p class="text-[#ffa600]">Implement proven budgeting methods including 50/30/20 rule and zero-based budgeting.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-[#ffffff]/70 rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i data-lucide="check" class="w-4 h-4 text-[#ffa600]"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-[#12265E] mb-2">Investment Portfolio Building</h3>
+                                <p class="text-[#ffa600]">Create diversified investment portfolios aligned with your risk tolerance and financial goals.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-[#ffffff]/70 rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i data-lucide="check" class="w-4 h-4 text-[#ffa600]"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-[#12265E] mb-2">Financial Goal Achievement</h3>
+                                <p class="text-[#ffa600]">Set SMART financial goals and create actionable plans to achieve short and long-term objectives.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <img src="https://images.pexels.com/photos/3833052/pexels-photo-3833052.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                         alt="Investment planning and financial growth"
+                         class="rounded-2xl shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Financial Tools -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#12265E] mb-4">Financial Tools & Resources</h2>
+                <p class="text-xl text-[#ffa600]">Practical tools and resources you'll master during the training.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white rounded-2xl shadow-lg p-6 text-center">
+                    <div class="w-16 h-16 bg-[#ffffff]/70 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <i data-lucide="spreadsheet" class="w-8 h-8 text-[#ffa600]"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-2">Budget Spreadsheets</h3>
+                    <p class="text-[#ffa600]">Customizable budget templates and tracking tools</p>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg p-6 text-center">
+                    <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="smartphone" class="w-8 h-8 text-blue-600"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-2">Financial Apps</h3>
+                    <p class="text-[#ffa600]">Recommended apps for expense tracking and investing</p>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg p-6 text-center">
+                    <div class="w-16 h-16 bg-[#ffffff]/70 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <i data-lucide="calculator" class="w-8 h-8 text-[#ffa600]"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-2">Financial Calculators</h3>
+                    <p class="text-[#ffa600]">Retirement, investment, and loan calculators</p>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg p-6 text-center">
+                    <div class="w-16 h-16 bg-orange-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="book-open" class="w-8 h-8 text-orange-600"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-2">Resource Library</h3>
+                    <p class="text-[#ffa600]">Financial guides, templates, and checklists</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Modules -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#12265E] mb-4">Training Modules</h2>
+                <p class="text-xl text-[#ffa600]">Structured learning path covering all aspects of personal finance management.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-gradient-to-r from-emerald-50 to-green-50 rounded-2xl p-8">
+                    <h3 class="text-xl font-bold text-[#12265E] mb-6">Day 1: Foundation & Assessment</h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-center">
+                            <i data-lucide="circle-dot" class="w-4 h-4 text-emerald-600 mr-3"></i>
+                            Financial literacy fundamentals
+                        </li>
+                        <li class="flex items-center">
+                            <i data-lucide="circle-dot" class="w-4 h-4 text-emerald-600 mr-3"></i>
+                            Personal financial assessment
+                        </li>
+                        <li class="flex items-center">
+                            <i data-lucide="circle-dot" class="w-4 h-4 text-emerald-600 mr-3"></i>
+                            Budgeting basics and tools
+                        </li>
+                        <li class="flex items-center">
+                            <i data-lucide="circle-dot" class="w-4 h-4 text-emerald-600 mr-3"></i>
+                            Debt analysis and management
+                        </li>
+                        <li class="flex items-center">
+                            <i data-lucide="circle-dot" class="w-4 h-4 text-emerald-600 mr-3"></i>
+                            Emergency fund planning
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8">
+                    <h3 class="text-xl font-bold text-[#12265E] mb-6">Day 2: Growth & Protection</h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-center">
+                            <i data-lucide="circle-dot" class="w-4 h-4 text-blue-600 mr-3"></i>
+                            Investment principles and options
+                        </li>
+                        <li class="flex items-center">
+                            <i data-lucide="circle-dot" class="w-4 h-4 text-blue-600 mr-3"></i>
+                            Risk assessment and management
+                        </li>
+                        <li class="flex items-center">
+                            <i data-lucide="circle-dot" class="w-4 h-4 text-blue-600 mr-3"></i>
+                            Retirement planning strategies
+                        </li>
+                        <li class="flex items-center">
+                            <i data-lucide="circle-dot" class="w-4 h-4 text-blue-600 mr-3"></i>
+                            Insurance needs analysis
+                        </li>
+                        <li class="flex items-center">
+                            <i data-lucide="circle-dot" class="w-4 h-4 text-blue-600 mr-3"></i>
+                            Action plan development
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Details -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#12265E] mb-4">Training Details</h2>
+                <p class="text-xl text-[#ffa600]">Comprehensive personal finance training for individuals and families.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white rounded-2xl shadow-lg p-6 text-center">
+                    <div class="w-16 h-16 bg-[#ffffff]/70 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <i data-lucide="clock" class="w-8 h-8 text-[#ffa600]"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-2">Duration</h3>
+                    <p class="text-[#ffa600]">1-2 Days Practical</p>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg p-6 text-center">
+                    <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="users" class="w-8 h-8 text-blue-600"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-2">Group Size</h3>
+                    <p class="text-[#ffa600]">Max 14 Participants</p>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg p-6 text-center">
+                    <div class="w-16 h-16 bg-[#ffffff]/70 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <i data-lucide="award" class="w-8 h-8 text-[#ffa600]"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-2">Certificate</h3>
+                    <p class="text-[#ffa600]">Finance Certificate</p>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg p-6 text-center">
+                    <div class="w-16 h-16 bg-orange-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="laptop" class="w-8 h-8 text-orange-600"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-2">Format</h3>
+                    <p class="text-[#ffa600]">Interactive Workshop</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-20 bg-gradient-to-r from-emerald-600 to-emerald-800">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Secure Your Financial Future</h2>
+            <p class="text-xl text-[#ffa600]"> mb-8 max-w-2xl mx-auto">
+                Take control of your finances and build lasting wealth with our comprehensive personal finance management training program.
+            </p>
+            <button data-modal="contact" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+                    Get Training Information
+                </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    
+    <footer class="bg-gradient-to-r from-[#12265E] to-[#92ABC4] text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <img src="../Images/SpecCon-LOGO.png" alt="SpecCon Holdings Logo" class="h-12 mr-3">
+                        <div>
+                            <h3 class="text-xl font-bold">SpecCon Holdings</h3>
+                            <p class="text-white/80">Accredited Training Solutions</p>
+                        </div>
+                    </div>
+                    <p class="text-white/80 mb-4">Empowering individuals and organizations through high-quality, accredited education and training solutions.</p>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="/index.html#about" class="text-white/80 hover:text-[#FFA600] transition duration-200">Why Choose Us</a></li>
+                        <li><a href="/index.html#qualifications" class="text-white/80 hover:text-[#FFA600] transition duration-200">Qualifications</a></li>
+                        <li><a href="/index.html#accreditations" class="text-white/80 hover:text-[#FFA600] transition duration-200">Accreditations</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                     <h4 class="text-lg font-semibold mb-4">Contact Us</h4>
+                    <ul class="space-y-2">
+                        <li><p class="text-white/80">Phone: 012 667 4962</p></li>
+                         <p class="text-white/80">
+    Email: <a href="mailto:help@speccon.co.za" class="underline hover:text-orange">help@speccon.co.za</a>
+  </p>    
+</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-white/80">&copy; 2025 SpecCon Holdings. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+
+    <script>
+        lucide.createIcons();
+        
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+    <!-- Enhanced Dropdown Menu JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const dropdown = document.querySelector('.dropdown');
+            const dropdownButton = document.querySelector('.dropdown button');
+            const dropdownMenu = document.querySelector('.dropdown-menu');
+
+            if (dropdown && dropdownButton) {
+                // Handle click to toggle dropdown
+                dropdownButton.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+                    if (dropdownMenu.style.display === 'block') {
+                        dropdownMenu.style.opacity = '1';
+                        dropdownMenu.style.transform = 'translateY(0)';
+                    }
+                });
+
+                // Close dropdown when clicking outside
+                document.addEventListener('click', function(e) {
+                    if (!dropdown.contains(e.target)) {
+                        dropdownMenu.style.display = 'none';
+                    }
+                });
+
+                // Ensure dropdown works on touch devices
+                dropdownButton.addEventListener('touchstart', function(e) {
+                    e.preventDefault();
+                    dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+                });
+            }
+        });
+    </script>
+
+    <!-- Book Now Modal -->
+    <div id="bookNowModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+            <div class="p-8">
+                <div class="flex items-center justify-between mb-6">
+                    <h2 class="text-2xl font-bold text-[#12265E]">Book This Training</h2>
+                    <button onclick="closeBookNowModal()" class="text-gray-400 hover:text-gray-600">
+                        <i data-lucide="x" class="w-6 h-6"></i>
+                    </button>
+                </div>
+
+                <form id="bookNowForm" onsubmit="submitBooking(event)">
+                    <div class="grid md:grid-cols-2 gap-4 mb-4">
+                        <div>
+                            <label for="firstName" class="block text-sm font-medium text-gray-700 mb-2">First Name *</label>
+                            <input type="text" id="firstName" name="firstName" required
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                        <div>
+                            <label for="lastName" class="block text-sm font-medium text-gray-700 mb-2">Last Name *</label>
+                            <input type="text" id="lastName" name="lastName" required
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-4 mb-4">
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email *</label>
+                            <input type="email" id="email" name="email" required
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="company" class="block text-sm font-medium text-gray-700 mb-2">Company Name *</label>
+                        <input type="text" id="company" name="company" required
+                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="numberOfParticipants" class="block text-sm font-medium text-gray-700 mb-2">Number of Participants *</label>
+                        <select id="numberOfParticipants" name="numberOfParticipants" required
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                            <option value="">Select number of participants</option>
+                            <option value="1">1 participant</option>
+                            <option value="2-5">2-5 participants</option>
+                            <option value="6-10">6-10 participants</option>
+                            <option value="11-20">11-20 participants</option>
+                            <option value="20+">More than 20 participants</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="preferredDate" class="block text-sm font-medium text-gray-700 mb-2">Preferred Training Date</label>
+                        <input type="date" id="preferredDate" name="preferredDate"
+                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                    </div>
+
+                    <div class="mb-6">
+                        <label for="additionalInfo" class="block text-sm font-medium text-gray-700 mb-2">Additional Information</label>
+                        <textarea id="additionalInfo" name="additionalInfo" rows="4"
+                                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
+                                  placeholder="Any specific requirements or questions about the training..."></textarea>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-3">
+                        <button type="submit" class="flex-1 bg-gradient-to-r from-[#12265E] to-[#92ABC4] text-white font-semibold py-3 px-6 rounded-lg hover:from-[#0d1a47] hover:to-[#3a7bc8] transition duration-300">
+                            <i data-lucide="send" class="w-4 h-4 inline mr-2"></i>
+                            Submit Booking Request
+                        </button>
+                        <button type="button" onclick="closeBookNowModal()" class="flex-1 bg-gray-500 text-white font-semibold py-3 px-6 rounded-lg hover:bg-gray-600 transition duration-300">
+                            Cancel
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Book Now Modal Functions
+        function openBookNowModal() {
+            const modal = document.getElementById('bookNowModal');
+            if (modal) {
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeBookNowModal() {
+            const modal = document.getElementById('bookNowModal');
+            if (modal) {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        function submitBooking(event) {
+            event.preventDefault();
+
+            // Get form data
+            const formData = new FormData(event.target);
+            const bookingData = {
+                firstName: formData.get('firstName'),
+                lastName: formData.get('lastName'),
+                email: formData.get('email'),
+                phone: formData.get('phone'),
+                company: formData.get('company'),
+                numberOfParticipants: formData.get('numberOfParticipants'),
+                preferredDate: formData.get('preferredDate'),
+                additionalInfo: formData.get('additionalInfo'),
+                trainingCourse: document.title.split('|')[0].trim()
+            };
+
+            // Show success message
+            alert('Thank you for your booking request! We will contact you shortly to confirm the details.');
+            closeBookNowModal();
+
+            // Reset form
+            event.target.reset();
+
+            // In a real implementation, you would send this data to your server
+            console.log('Booking submitted:', bookingData);
+        }
+
+        // Close modal when clicking outside
+        document.addEventListener('DOMContentLoaded', function() {
+            const bookNowModal = document.getElementById('bookNowModal');
+            if (bookNowModal) {
+                bookNowModal.addEventListener('click', function(e) {
+                    if (e.target === this) {
+                        closeBookNowModal();
+                    }
+                });
+            }
+
+            // Close modal with Escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    closeBookNowModal();
+                }
+            });
+        });
+    </script>
+
+    <!-- Enhanced Dropdown Menu JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const dropdown = document.querySelector('.dropdown');
+            const dropdownButton = document.querySelector('.dropdown button');
+            const dropdownMenu = document.querySelector('.dropdown-menu');
+
+            if (dropdown && dropdownButton) {
+                // Handle click to toggle dropdown
+                dropdownButton.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+                    if (dropdownMenu.style.display === 'block') {
+                        dropdownMenu.style.opacity = '1';
+                        dropdownMenu.style.transform = 'translateY(0)';
+                    }
+                });
+
+                // Close dropdown when clicking outside
+                document.addEventListener('click', function(e) {
+                    if (!dropdown.contains(e.target)) {
+                        dropdownMenu.style.display = 'none';
+                    }
+                });
+
+                // Ensure dropdown works on touch devices
+                dropdownButton.addEventListener('touchstart', function(e) {
+                    e.preventDefault();
+                    dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+                });
+            }
+        });
+    </script>
+</body>
+</html>

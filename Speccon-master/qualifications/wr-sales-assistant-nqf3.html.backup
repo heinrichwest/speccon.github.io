@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Assistant NQF Level 3 | W&R SETA | SpecCon Holdings</title>
+    <meta name="description" content="Develop advanced sales and customer service skills with our NQF Level 3 Sales Assistant qualification accredited by W&R SETA. 54 credits, workplace-ready training.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 10px 10px -5px rgb(0 0 0 / 0.04);
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-900">
+    <!-- Header -->
+    <header class="bg-white/95 backdrop-blur-md shadow-lg fixed w-full z-50 top-0">
+        <div class="container mx-auto px-4 lg:px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <a href="../index.html">
+                        <img src="../images/Logo.png" alt="SpecCon Holdings Logo" class="h-12">
+                    </a>
+                    <div class="ml-3">
+                        <h1 class="text-xl font-bold text-gray-900">SpecCon Holdings</h1>
+                        <p class="text-sm text-gray-600">Sales Assistant Qualification</p>
+                    </div>
+                </div>
+
+                <nav class="hidden lg:flex items-center space-x-8">
+                    <a href="../index.html" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300">Home</a>
+                    <a href="../setas/wr-seta.html" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300">W&R SETA</a>
+                    <a href="../index.html#qualifications" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300">All Qualifications</a>
+                    <a href="../index.html#contact" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300">Contact Us</a>
+                </nav>
+
+                <div class="hidden lg:block">
+                    <a href="../index.html#apply" class="bg-gradient-to-r from-orange-600 to-red-600 text-white font-semibold px-6 py-3 rounded-lg hover:from-orange-700 hover:to-red-700 transition duration-300 shadow-lg">
+                        Apply Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <section class="pt-24 pb-8 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <nav class="text-sm text-gray-600">
+                <a href="../index.html" class="hover:text-blue-600">Home</a>
+                <span class="mx-2">/</span>
+                <a href="../setas/wr-seta.html" class="hover:text-blue-600">W&R SETA</a>
+                <span class="mx-2">/</span>
+                <span class="text-gray-900">Sales Assistant NQF Level 3</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="py-16 bg-gradient-to-br from-orange-50 to-white">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-orange-100 rounded-2xl flex items-center justify-center mr-6">
+                            <i data-lucide="users" class="w-8 h-8 text-orange-600"></i>
+                        </div>
+                        <div>
+                            <span class="text-orange-600 font-semibold">NQF Level 3 | W&R SETA</span>
+                            <h1 class="text-4xl md:text-5xl font-bold text-gray-900">Sales Assistant</h1>
+                        </div>
+                    </div>
+                    <p class="text-lg text-gray-600 leading-relaxed mb-8">
+                        Advanced qualification for retail and wholesale sales professionals, covering sales techniques, customer relationship management, and complaints handling.
+                        Develop intermediate sales skills for retail and wholesale environments.
+                    </p>
+                    <div class="grid grid-cols-3 gap-4 mb-8">
+                        <div class="text-center p-4 bg-white rounded-lg shadow">
+                            <div class="text-xl font-bold text-orange-600">54</div>
+                            <div class="text-sm text-gray-600">Credits</div>
+                        </div>
+                        <div class="text-center p-4 bg-white rounded-lg shadow">
+                            <div class="text-xl font-bold text-blue-600">10-12</div>
+                            <div class="text-sm text-gray-600">Months</div>
+                        </div>
+                        <div class="text-center p-4 bg-white rounded-lg shadow">
+                            <div class="text-xl font-bold text-purple-600">NQF 3</div>
+                            <div class="text-sm text-gray-600">Level</div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="../index.html#apply" class="bg-gradient-to-r from-orange-600 to-red-600 text-white font-semibold px-8 py-4 rounded-lg hover:from-orange-700 hover:to-red-700 transition duration-300 text-center">
+                            Apply for this Qualification
+                        </a>
+                        <a href="../index.html#contact" class="border-2 border-orange-600 text-orange-600 font-semibold px-8 py-4 rounded-lg hover:bg-orange-600 hover:text-white transition duration-300 text-center">
+                            Get More Info
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <img src="https://images.pexels.com/photos/5632402/pexels-photo-5632402.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Sales Assistant" class="rounded-2xl shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Qualification Details -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-3 gap-12">
+                <!-- Main Content -->
+                <div class="lg:col-span-2">
+                    <!-- Overview -->
+                    <div class="mb-12">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-6">Qualification Overview</h2>
+                        <div class="prose prose-lg text-gray-700">
+                            <p>The Occupational Certificate: Sales Assistant (NQF Level 3) provides advanced knowledge and skills for retail and wholesale sales operations. This qualification is designed for individuals seeking intermediate-level positions in sales environments and customer service roles.</p>
+                            <p>Students will gain comprehensive skills in advanced selling techniques, customer relationship building, complaints management, and service excellence while developing professional competencies for the retail and wholesale industry.</p>
+                        </div>
+                    </div>
+
+                    <!-- Learning Modules -->
+                    <div class="mb-12">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-8">Learning Modules</h2>
+                        <div class="space-y-6">
+                            <!-- Module 1 -->
+                            <div class="bg-gray-50 rounded-xl p-6">
+                                <h3 class="text-xl font-semibold text-gray-900 mb-4">Module 1: Sales and Marketing (25 Credits)</h3>
+                                <ul class="space-y-2 text-gray-700">
+                                    <li>• Concepts and principles of selling in a full service retail and wholesale environment (4 Credits)</li>
+                                    <li>• Interact with different types of customers and present a positive image (2 Credits)</li>
+                                    <li>• Sell products to customers using the sales cycle (3 Credits)</li>
+                                    <li>• Use advanced selling techniques (2 Credits)</li>
+                                    <li>• Processes and procedures for selling products using the sales cycle and advanced techniques (14 Credits)</li>
+                                </ul>
+                            </div>
+
+                            <!-- Module 2 -->
+                            <div class="bg-gray-50 rounded-xl p-6">
+                                <h3 class="text-xl font-semibold text-gray-900 mb-4">Module 2: Customer Relationship Management (13 Credits)</h3>
+                                <ul class="space-y-2 text-gray-700">
+                                    <li>• Principles of service excellence and building customer relationships in retail and wholesale sales (3 Credits)</li>
+                                    <li>• Provide customer service and build customer relationships (2 Credits)</li>
+                                    <li>• Processes and procedures for providing customer service (8 Credits)</li>
+                                </ul>
+                            </div>
+
+                            <!-- Module 3 -->
+                            <div class="bg-gray-50 rounded-xl p-6">
+                                <h3 class="text-xl font-semibold text-gray-900 mb-4">Module 3: Complaints Management (16 Credits)</h3>
+                                <ul class="space-y-2 text-gray-700">
+                                    <li>• Principles of attending to different types of customers and resolving customer queries impacting on sales (4 Credits)</li>
+                                    <li>• Handle customer queries and complaints (2 Credits)</li>
+                                    <li>• Processes and procedures for attending to different types of customers, handling queries and communicating with customers (10 Credits)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="lg:col-span-1">
+                    <!-- Quick Facts -->
+                    <div class="bg-orange-50 rounded-2xl p-8 mb-8">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-6">Quick Facts</h3>
+                        <div class="space-y-4">
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">SETA:</span>
+                                <span class="font-semibold">W&R SETA</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">NQF Level:</span>
+                                <span class="font-semibold">3</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Credits:</span>
+                                <span class="font-semibold">54</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">NLRD ID:</span>
+                                <span class="font-semibold">99669</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Status:</span>
+                                <span class="font-semibold">Accredited</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Expiry Date:</span>
+                                <span class="font-semibold">14-May-29</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Career Opportunities -->
+                    <div class="bg-white border border-gray-200 rounded-2xl p-8 mb-8">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-6">Career Opportunities</h3>
+                        <ul class="space-y-3 text-gray-700">
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-orange-500 mr-3 mt-0.5"></i>
+                                Retail Sales Consultant
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-orange-500 mr-3 mt-0.5"></i>
+                                Customer Service Representative
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-orange-500 mr-3 mt-0.5"></i>
+                                Wholesale Sales Assistant
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-orange-500 mr-3 mt-0.5"></i>
+                                Sales Floor Specialist
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-orange-500 mr-3 mt-0.5"></i>
+                                Product Specialist
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Related Qualifications -->
+                    <div class="bg-white border border-gray-200 rounded-2xl p-8">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-6">Related Qualifications</h3>
+                        <div class="space-y-4">
+                            <a href="wr-store-person-nqf2.html" class="block p-4 border border-gray-200 rounded-lg hover:border-orange-300 hover:bg-orange-50 transition duration-300">
+                                <div class="font-semibold text-gray-900">Store Person NQF 2</div>
+                                <div class="text-sm text-gray-600">Stock management</div>
+                            </a>
+                            <a href="wr-visual-merchandiser-nqf3.html" class="block p-4 border border-gray-200 rounded-lg hover:border-orange-300 hover:bg-orange-50 transition duration-300">
+                                <div class="font-semibold text-gray-900">Visual Merchandiser NQF 3</div>
+                                <div class="text-sm text-gray-600">Visual merchandising</div>
+                            </a>
+                            <a href="wr-retail-supervisor-nqf4.html" class="block p-4 border border-gray-200 rounded-lg hover:border-orange-300 hover:bg-orange-50 transition duration-300">
+                                <div class="font-semibold text-gray-900">Retail Supervisor NQF 4</div>
+                                <div class="text-sm text-gray-600">Supervisory level</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-gradient-to-r from-orange-600 to-red-600 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Advance Your Sales Career?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto opacity-90">
+                Join our Sales Assistant qualification and develop the advanced skills needed for a successful career in retail and wholesale sales.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="../index.html#apply" class="bg-white text-orange-600 font-semibold px-8 py-4 rounded-lg hover:bg-gray-100 transition duration-300">
+                    Apply Now
+                </a>
+                <a href="../index.html#contact" class="border-2 border-white text-white font-semibold px-8 py-4 rounded-lg hover:bg-white hover:text-orange-600 transition duration-300">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">SpecCon Holdings</h3>
+                    <p class="text-gray-400">Empowering futures through quality education and training.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="../index.html" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="../index.html#about" class="text-gray-400 hover:text-white transition-colors">About</a></li>
+                        <li><a href="../index.html#qualifications" class="text-gray-400 hover:text-white transition-colors">Qualifications</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">W&R SETA</h4>
+                    <ul class="space-y-2">
+                        <li><a href="../setas/wr-seta.html" class="text-gray-400 hover:text-white transition-colors">All W&R SETA Qualifications</a></li>
+                        <li><a href="wr-visual-merchandiser-nqf3.html" class="text-gray-400 hover:text-white transition-colors">Visual Merchandiser NQF 3</a></li>
+                        <li><a href="wr-retail-supervisor-nqf4.html" class="text-gray-400 hover:text-white transition-colors">Retail Supervisor NQF 4</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact</h4>
+                    <p class="text-gray-400">Email: info@speccon.co.za</p>
+                    <p class="text-gray-400">Phone: +27 (0)11 123 4567</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>

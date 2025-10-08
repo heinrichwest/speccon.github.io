@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compliance Training Courses | SpecCon Holdings</title>
+    <meta name="description" content="Professional compliance training courses including First Aid, Fire Fighter, OHS, Forklift Operations, and POPI Act training.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="../js/centralized-modals.js"></script>
+    <script src="../js/value-adds-popup.js"></script>
+    <link rel="icon" type="image/png" href="../Images/Logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        nav { font-family: 'Roboto', sans-serif; }
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 10px 10px -5px rgb(0 0 0 / 0.04);
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: calc(100% + 8px);
+            left: 0;
+            min-width: 16rem;
+            background: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e5e7eb;
+            z-index: 1000;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: opacity 0.2s ease, transform 0.2s ease;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Invisible bridge to prevent menu closing when moving cursor */
+        .dropdown::before {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            height: 12px;
+            z-index: 999;
+        }
+
+        .dropdown button {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            padding: 0;
+            font-size: inherit;
+            font-family: inherit;
+            color: inherit;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-900">
+    <!-- Header -->
+    <header class="bg-white/95 backdrop-blur-md shadow-lg fixed w-full z-50 top-0">
+        <div class="container mx-auto px-4 lg:px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <a href="../index.html">
+                        <img src="../Images/Logo.png" alt="SpecCon Holdings Logo" class="h-12">
+                    </a>
+                    <div class="ml-3">
+                        <h1 class="text-xl font-bold text-[#12265E]">SpecCon Holdings</h1>
+                        <p class="text-sm text-[#ffa600]">Services SETA Qualifications</p>
+                    </div>
+                </div>
+
+                <nav class="hidden lg:flex items-center space-x-4">
+                    <a href="../index.html" class="text-[#12265E] hover:text-[#FFA600] font-medium transition duration-300 text-sm whitespace-nowrap">Home</a>
+                    <a href="../index.html#about" class="text-[#12265E] hover:text-[#FFA600] font-medium transition duration-300 text-sm whitespace-nowrap">Why Choose Us</a>
+                    <a href="../index.html#qualifications" class="text-[#12265E] hover:text-[#FFA600] font-medium transition duration-300 text-sm whitespace-nowrap">Qualifications</a>
+                    <a href="../index.html#accreditations" class="text-[#12265E] hover:text-[#FFA600] font-medium transition duration-300 text-sm whitespace-nowrap">Accreditations</a>
+                    <a href="../index.html#classroom-training" class="text-[#12265E] hover:text-[#FFA600] font-medium transition duration-300 text-sm whitespace-nowrap">Classroom Training</a>
+                    <div class="relative dropdown">
+                        <button class="text-[#12265E] hover:text-[#FFA600] font-medium transition duration-300 inline-flex items-center">
+                            Other Products <i data-lucide="chevron-down" class="w-4 h-4 ml-1"></i>
+                        </button>
+                        <div class="dropdown-menu absolute left-0 w-64 bg-white rounded-lg shadow-xl py-2 z-20 border">
+                            <a href="https://elearning.co.za/" target="_blank" class="block px-4 py-3 text-sm text-gray-700 hover:bg-[#12265E]/10 hover:text-[#12265E] transition duration-200">
+                                <i data-lucide="monitor" class="w-4 h-4 inline mr-2"></i>Online Training
+                            </a>
+                            <a href="https://employmentequityact.co.za/" target="_blank" class="block px-4 py-3 text-sm text-gray-700 hover:bg-[#12265E]/10 hover:text-[#12265E] transition duration-200">
+                                <i data-lucide="shield-check" class="w-4 h-4 inline mr-2"></i>Employment Equity
+                            </a>
+                            <a href="https://learningmanagementsystem.co.za/" target="_blank" class="block px-4 py-3 text-sm text-gray-700 hover:bg-[#12265E]/10 hover:text-[#12265E] transition duration-200">
+                                <i data-lucide="graduation-cap" class="w-4 h-4 inline mr-2"></i>Learning Management System
+                            </a>
+                            <a href="https://skillsdevelopment.co.za/" target="_blank" class="block px-4 py-3 text-sm text-gray-700 hover:bg-[#12265E]/10 hover:text-[#12265E] transition duration-200">
+                                <i data-lucide="trending-up" class="w-4 h-4 inline mr-2"></i>Skills Development
+                            </a>
+                            <a href="https://www.specconacademy.co.za/" target="_blank" class="block px-4 py-3 text-sm text-gray-700 hover:bg-[#12265E]/10 hover:text-[#12265E] transition duration-200">
+                                <i data-lucide="school" class="w-4 h-4 inline mr-2"></i>SpecCon Academy
+                            </a>
+                            <a href="https://bbbee.co.za/" target="_blank" class="block px-4 py-3 text-sm text-gray-700 hover:bg-[#12265E]/10 hover:text-[#12265E] transition duration-200">
+                                <i data-lucide="award" class="w-4 h-4 inline mr-2"></i>BBBEE Consulting
+                            </a>
+                        </div>
+                    </div>
+                </nav>
+
+                <div class="hidden lg:block">
+                    <button onclick="openBookNowModal()" data-modal="book" data-course="Compliance Training" class="bg-gradient-to-r from-red-500 to-red-600 text-white font-semibold px-6 py-3 rounded-lg hover:from-red-600 hover:to-red-700 transition duration-300 shadow-lg">
+                        Book Training
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <section class="pt-24 pb-8 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <nav class="text-sm text-gray-600">
+                <a href="../index.html" class="hover:text-blue-600">Home</a>
+                <span class="mx-2">/</span>
+                <a href="../index.html#classroom-training" class="hover:text-blue-600">Classroom Training</a>
+                <span class="mx-2">/</span>
+                <span class="text-gray-900">Compliance Courses</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="py-16 bg-gradient-to-br from-red-50 to-white">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-red-100 rounded-2xl flex items-center justify-center mr-6">
+                            <i data-lucide="shield" class="w-8 h-8 text-red-600"></i>
+                        </div>
+                        <div>
+                            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-2">Compliance Training</h1>
+                            <p class="text-xl text-red-600 font-semibold">Professional Safety & Legal Compliance</p>
+                        </div>
+                    </div>
+                    <p class="text-lg text-gray-600 leading-relaxed mb-8">
+                        Ensure your workplace meets safety and legal requirements with our comprehensive compliance training courses.
+                        From health and safety to data protection, we cover all essential compliance areas.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="text-center p-4 bg-white rounded-lg shadow">
+                            <div class="text-2xl font-bold text-red-600">5</div>
+                            <div class="text-sm text-gray-600">Core Courses</div>
+                        </div>
+                        <div class="text-center p-4 bg-white rounded-lg shadow">
+                            <div class="text-2xl font-bold text-green-600">Certified</div>
+                            <div class="text-sm text-gray-600">Training</div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <img src="https://images.pexels.com/photos/5726794/pexels-photo-5726794.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                         alt="Safety training session"
+                         class="rounded-2xl shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course List -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#12265E] mb-4">Available Compliance Courses</h2>
+                <p class="text-xl text-[#ffa600]"> max-w-3xl mx-auto">Professional training to keep your organization compliant and safe</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- First Aid Training -->
+                <a href="first-aid-training.html" class="bg-white rounded-2xl shadow-lg p-8 card-hover transition-all duration-300 block hover:shadow-2xl">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-red-100 rounded-2xl flex items-center justify-center mr-6">
+                            <i data-lucide="heart" class="w-8 h-8 text-red-600"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-xl text-gray-900">First Aid Training</h3>
+                            <span class="text-sm text-red-600 font-medium">Level 1 & 2 Available</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">Learn essential first aid skills to respond effectively to workplace emergencies and medical situations.</p>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i data-lucide="clock" class="w-4 h-4 mr-2 text-gray-400"></i>
+                            <span>Duration: 1-2 Days</span>
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i data-lucide="users" class="w-4 h-4 mr-2 text-gray-400"></i>
+                            <span>Max 12 participants</span>
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i data-lucide="award" class="w-4 h-4 mr-2 text-gray-400"></i>
+                            <span>HWSETA Accredited</span>
+                        </div>
+                    </div>
+                    <div class="text-red-600 font-medium">Learn More →</div>
+                </a>
+
+                <!-- Fire Fighter Training -->
+                <a href="fire-fighter-training.html" class="bg-white rounded-2xl shadow-lg p-8 card-hover transition-all duration-300 block hover:shadow-2xl">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-orange-100 rounded-2xl flex items-center justify-center mr-6">
+                            <i data-lucide="flame" class="w-8 h-8 text-orange-600"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-xl text-gray-900">Fire Fighter Training</h3>
+                            <span class="text-sm text-orange-600 font-medium">Basic & Advanced</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">Comprehensive fire safety training including prevention, suppression, and emergency response procedures.</p>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i data-lucide="clock" class="w-4 h-4 mr-2 text-gray-400"></i>
+                            <span>Duration: 2-3 Days</span>
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i data-lucide="users" class="w-4 h-4 mr-2 text-gray-400"></i>
+                            <span>Max 10 participants</span>
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i data-lucide="award" class="w-4 h-4 mr-2 text-gray-400"></i>
+                            <span>SASSETA Accredited</span>
+                        </div>
+                    </div>
+                    <div class="text-orange-600 font-medium">Learn More →</div>
+                </a>
+
+                <!-- OHS Training -->
+                <a href="ohs-training.html" class="bg-white rounded-2xl shadow-lg p-8 card-hover transition-all duration-300 block hover:shadow-2xl">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mr-6">
+                            <i data-lucide="hard-hat" class="w-8 h-8 text-green-600"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-xl text-gray-900">Occupational Health & Safety</h3>
+                            <span class="text-sm text-green-600 font-medium">OHS Act Compliance</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">Comprehensive workplace health and safety training to ensure OHS Act compliance and create safe work environments.</p>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i data-lucide="clock" class="w-4 h-4 mr-2 text-gray-400"></i>
+                            <span>Duration: 1-3 Days</span>
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i data-lucide="users" class="w-4 h-4 mr-2 text-gray-400"></i>
+                            <span>Max 15 participants</span>
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i data-lucide="award" class="w-4 h-4 mr-2 text-gray-400"></i>
+                            <span>DoL Approved</span>
+                        </div>
+                    </div>
+                    <div class="text-green-600 font-medium">Learn More →</div>
+                </a>
+
+                <!-- Forklift Operations -->
+                <a href="forklift-operations.html" class="bg-white rounded-2xl shadow-lg p-8 card-hover transition-all duration-300 block hover:shadow-2xl">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mr-6">
+                            <i data-lucide="truck" class="w-8 h-8 text-blue-600"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-xl text-gray-900">Forklift Operations</h3>
+                            <span class="text-sm text-blue-600 font-medium">Operator Certification</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">Professional forklift operator training with certification for safe and efficient warehouse operations.</p>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i data-lucide="clock" class="w-4 h-4 mr-2 text-gray-400"></i>
+                            <span>Duration: 3-5 Days</span>
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i data-lucide="users" class="w-4 h-4 mr-2 text-gray-400"></i>
+                            <span>Max 8 participants</span>
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i data-lucide="award" class="w-4 h-4 mr-2 text-gray-400"></i>
+                            <span>Practical Assessment</span>
+                        </div>
+                    </div>
+                    <div class="text-blue-600 font-medium">Learn More →</div>
+                </a>
+
+                <!-- POPI Act Training -->
+                <a href="popi-act-training.html" class="bg-white rounded-2xl shadow-lg p-8 card-hover transition-all duration-300 block hover:shadow-2xl">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-[#ffffff]/70 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <i data-lucide="lock" class="w-8 h-8 text-[#ffa600]"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-xl text-gray-900">POPI Act Compliance</h3>
+                            <span class="text-sm text-[#ffa600] font-medium">Data Protection</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">Comprehensive training on the Protection of Personal Information Act and data privacy compliance.</p>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i data-lucide="clock" class="w-4 h-4 mr-2 text-gray-400"></i>
+                            <span>Duration: 1 Day</span>
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i data-lucide="users" class="w-4 h-4 mr-2 text-gray-400"></i>
+                            <span>Max 20 participants</span>
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i data-lucide="award" class="w-4 h-4 mr-2 text-gray-400"></i>
+                            <span>Certificate of Completion</span>
+                        </div>
+                    </div>
+                    <div class="text-purple-600 font-medium">Learn More →</div>
+                </a>
+
+                <!-- Custom Training -->
+                <div class="bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl p-8 flex flex-col justify-center items-center text-center">
+                    <div class="w-16 h-16 bg-gray-200 rounded-2xl flex items-center justify-center mb-6">
+                        <i data-lucide="plus" class="w-8 h-8 text-gray-600"></i>
+                    </div>
+                    <h3 class="font-bold text-xl text-gray-900 mb-4">Custom Compliance Training</h3>
+                    <p class="text-gray-600 mb-6">Need specific compliance training for your industry? We develop customized programs to meet your exact requirements.</p>
+            
+                    <button onclick="openBookNowModal()" data-modal="book" data-course="Compliance Training" class="bg-gradient-to-r from-red-500 to-red-600 text-white font-semibold px-6 py-3 rounded-lg hover:from-red-600 hover:to-red-700 transition duration-300 shadow-lg">
+                        Request Custom Training
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Our Compliance Training -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#12265E] mb-4">Why Choose Our Compliance Training?</h2>
+                <p class="text-xl text-[#ffa600]"> max-w-3xl mx-auto">Professional, accredited training that meets all regulatory requirements</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center p-6 bg-white rounded-2xl shadow-lg">
+                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i data-lucide="award" class="w-8 h-8 text-red-600"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-[#12265E] mb-3">Accredited Training</h3>
+                    <p class="text-gray-600 text-sm">All courses are accredited by relevant authorities and industry bodies.</p>
+                </div>
+
+                <div class="text-center p-6 bg-white rounded-2xl shadow-lg">
+                    <div class="w-16 h-16 bg-[#ffffff]/70 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i data-lucide="users" class="w-8 h-8 text-green-600"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-[#12265E] mb-3">Expert Instructors</h3>
+                    <p class="text-gray-600 text-sm">Learn from experienced professionals with real-world expertise.</p>
+                </div>
+
+                <div class="text-center p-6 bg-white rounded-2xl shadow-lg">
+                    <div class="w-16 h-16 bg-[#ffffff]/70 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i data-lucide="clipboard-check" class="w-8 h-8 text-blue-600"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-[#12265E] mb-3">Compliance Guaranteed</h3>
+                    <p class="text-gray-600 text-sm">Training designed to meet all current legal and regulatory requirements.</p>
+                </div>
+
+                <div class="text-center p-6 bg-white rounded-2xl shadow-lg">
+                    <div class="w-16 h-16 bg-[#ffffff]/70 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i data-lucide="map-pin" class="w-8 h-8 text-[#ffa600]"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-[#12265E] mb-3">On-site Available</h3>
+                    <p class="text-gray-600 text-sm">We can conduct training at your premises for groups of 6 or more.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-r from-red-500 to-red-600 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Keep Your Workplace Safe & Compliant</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Book comprehensive compliance training for your team today. Protect your business and your people.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button onclick="openBookNowModal()" data-modal="book" data-course="Compliance Training" class="bg-white text-red-600 font-bold py-3 px-8 rounded-lg hover:bg-gray-100 text-red font-semibold px-6 py-3 rounded-lg hover:from-red-600 hover:to-red-700 transition duration-300 shadow-lg">
+                        Book Training Now
+                    </button>
+                 <button onclick="openBookNowModal()" data-modal="book" data-course="Compliance Training" class="border-2 border-white text-white font-bold py-3 px-8 rounded-lg hover:bg-white hover:text-red-600 transition duration-300
+                     transition duration-300 shadow-lg">
+                       Request Quote
+                    </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    
+    <footer class="bg-gradient-to-r from-[#12265E] to-[#92ABC4] text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <img src="../Images/SpecCon-LOGO.png" alt="SpecCon Holdings Logo" class="h-12 mr-3">
+                        <div>
+                            <h3 class="text-xl font-bold">SpecCon Holdings</h3>
+                            <p class="text-white/80">Accredited Training Solutions</p>
+                        </div>
+                    </div>
+                    <p class="text-white/80 mb-4">Empowering individuals and organizations through high-quality, accredited education and training solutions.</p>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="/index.html#about" class="text-white/80 hover:text-[#FFA600] transition duration-200">Why Choose Us</a></li>
+                        <li><a href="/index.html#qualifications" class="text-white/80 hover:text-[#FFA600] transition duration-200">Qualifications</a></li>
+                        <li><a href="/index.html#accreditations" class="text-white/80 hover:text-[#FFA600] transition duration-200">Accreditations</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                     <h4 class="text-lg font-semibold mb-4">Contact Us</h4>
+                    <ul class="space-y-2">
+                        <li><p class="text-white/80">Phone: 012 667 4962</p></li>
+                         <p class="text-white/80">
+    Email: <a href="mailto:help@speccon.co.za" class="underline hover:text-orange">help@speccon.co.za</a>
+  </p>    
+</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-white/80">&copy; 2025 SpecCon Holdings. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+
+    <script>
+        lucide.createIcons();
+    </script>
+
+    <!-- Book Now Modal -->
+    <div id="bookNowModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+            <div class="p-8">
+                <div class="flex items-center justify-between mb-6">
+                    <h2 class="text-2xl font-bold text-[#12265E]">Book This Training</h2>
+                    <button onclick="closeBookNowModal()" class="text-gray-400 hover:text-gray-600">
+                        <i data-lucide="x" class="w-6 h-6"></i>
+                    </button>
+                </div>
+
+                <form id="bookNowForm" onsubmit="submitBooking(event)">
+                    <div class="grid md:grid-cols-2 gap-4 mb-4">
+                        <div>
+                            <label for="firstName" class="block text-sm font-medium text-gray-700 mb-2">First Name *</label>
+                            <input type="text" id="firstName" name="firstName" required
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                        <div>
+                            <label for="lastName" class="block text-sm font-medium text-gray-700 mb-2">Last Name *</label>
+                            <input type="text" id="lastName" name="lastName" required
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-4 mb-4">
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email *</label>
+                            <input type="email" id="email" name="email" required
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="company" class="block text-sm font-medium text-gray-700 mb-2">Company Name *</label>
+                        <input type="text" id="company" name="company" required
+                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="numberOfParticipants" class="block text-sm font-medium text-gray-700 mb-2">Number of Participants *</label>
+                        <select id="numberOfParticipants" name="numberOfParticipants" required
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                            <option value="">Select number of participants</option>
+                            <option value="1">1 participant</option>
+                            <option value="2-5">2-5 participants</option>
+                            <option value="6-10">6-10 participants</option>
+                            <option value="11-20">11-20 participants</option>
+                            <option value="20+">More than 20 participants</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="preferredDate" class="block text-sm font-medium text-gray-700 mb-2">Preferred Training Date</label>
+                        <input type="date" id="preferredDate" name="preferredDate"
+                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                    </div>
+
+                    <div class="mb-6">
+                        <label for="additionalInfo" class="block text-sm font-medium text-gray-700 mb-2">Additional Information</label>
+                        <textarea id="additionalInfo" name="additionalInfo" rows="4"
+                                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
+                                  placeholder="Any specific requirements or questions about the training..."></textarea>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-3">
+                        <button type="submit" class="flex-1 bg-gradient-to-r from-[#12265E] to-[#92ABC4] text-white font-semibold py-3 px-6 rounded-lg hover:from-[#0d1a47] hover:to-[#3a7bc8] transition duration-300">
+                            <i data-lucide="send" class="w-4 h-4 inline mr-2"></i>
+                            Submit Booking Request
+                        </button>
+                        <button type="button" onclick="closeBookNowModal()" class="flex-1 bg-gray-500 text-white font-semibold py-3 px-6 rounded-lg hover:bg-gray-600 transition duration-300">
+                            Cancel
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Book Now Modal Functions
+        function openBookNowModal() {
+            const modal = document.getElementById('bookNowModal');
+            if (modal) {
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeBookNowModal() {
+            const modal = document.getElementById('bookNowModal');
+            if (modal) {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        function submitBooking(event) {
+            event.preventDefault();
+
+            // Get form data
+            const formData = new FormData(event.target);
+            const bookingData = {
+                firstName: formData.get('firstName'),
+                lastName: formData.get('lastName'),
+                email: formData.get('email'),
+                phone: formData.get('phone'),
+                company: formData.get('company'),
+                numberOfParticipants: formData.get('numberOfParticipants'),
+                preferredDate: formData.get('preferredDate'),
+                additionalInfo: formData.get('additionalInfo'),
+                trainingCourse: document.title.split('|')[0].trim()
+            };
+
+            // Show success message
+            alert('Thank you for your booking request! We will contact you shortly to confirm the details.');
+            closeBookNowModal();
+
+            // Reset form
+            event.target.reset();
+
+            // In a real implementation, you would send this data to your server
+            console.log('Booking submitted:', bookingData);
+        }
+
+        // Close modal when clicking outside
+        document.addEventListener('DOMContentLoaded', function() {
+            const bookNowModal = document.getElementById('bookNowModal');
+            if (bookNowModal) {
+                bookNowModal.addEventListener('click', function(e) {
+                    if (e.target === this) {
+                        closeBookNowModal();
+                    }
+                });
+            }
+
+            // Close modal with Escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    closeBookNowModal();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+
+
+
+
+AgriSETA		
+	Animal Production NQF 1	
+		/qualifications/agri-animal-production-nqf1.html
+	Animal Production NQF 2	
+		/qualifications/agri-animal-production-nqf2.html
+	Animal Production NQF 4	
+		/qualifications/agri-animal-production-nqf4.html
+	Farming NQF 1	
+		/qualifications/agri-farming-nqf1.html
+	Farming NQF 2	
+		/qualifications/agri-farming-nqf2.html
+	Fruit Packaging and Grading Processes NQF 3	
+		/qualifications/agri-fruit-packaging-nqf3.html
+	Mixed Farming Systems NQF 1	
+		/qualifications/agri-mixed-farming-nqf1.html
+	Mixed Farming Systems NQF 2	
+		/qualifications/agri-mixed-farming-nqf2.html
+	Plant Production NQF 1	
+		/qualifications/agri-plant-production-nqf1.html
+	Plant Production NQF 2	
+		/qualifications/agri-plant-production-nqf2.html
+	Plant Production NQF 3	
+		/qualifications/agri-plant-production-nqf3.html
+	Plant Production NQF 4	
+		/qualifications/agri-plant-production-nqf4.html
+EDTP		
+	Occupationally Directed Educational Training and Development Practices NQF 5	
+		/qualifications/etdp-education-training-nqf5.html
+FASSET		
+	Computer Technician NQF 5	
+		/qualifications/fasset-computer-technician-nqf5.html
+INSETA		
+	Financial Advisor NQF 6	
+		/qualifications/inseta-financial-advisor-nqf6.html
+	Health Care benefits Advisor NQF 5	
+		/qualifications/inseta-health-care-benefits-advisor-nqf5.html
+	Insurance Claims Administrator/Assessor NQF 4	
+		/qualifications/inseta-insurance-claims-administrator-assessor-nqf4.html
+	Insurance Underwriter NQF 5	
+		/qualifications/inseta-insurance-underwriter-nqf5.html
+	Long term Insurance Advisor NQF 4	
+		/qualifications/inseta-long-term-insurance-advisor-nqf4.html
+MERSETA		
+	Automotive Sales Advisor NQF 4	
+		/qualifications/mer-automotive-sales-advisor-nqf4.html
+MICT		
+	Business Analysis NQF 6	
+		/qualifications/mict-business-analysis-nqf6.html
+	Design Thinking Practitioner NQF 4	
+		/qualifications/mict-design-thinking-nqf4.html
+	Information Technology: End user Computing NQF 3	
+		/qualifications/mict-end-user-computing-nqf3.html
+	Information Technology: System Support NQF 5	
+		/qualifications/mict-System-Support-NQF5.html
+	Information Technology: Systems Development NQF 4	
+		/qualifications/mict-systems-development-nqf4.html
+	Software Engineer NQF 6	
+		/qualifications/mict-software-engineer-nqf6.html
+	Software tester NQF 5	
+		/qualifications/mict-software-tester-nqf5.html
+Services		
+	Bookkeeper NQF 5	
+		/qualifications/services-bookkeeper-nqf5.html
+	Business Administration Services NQF 3	
+		/qualifications/services-business-administration-nqf3.html
+	Business Administration Services NQF 4	
+		/qualifications/services-business-administration-nqf4.html
+	Business Process Outsourcing Support NQF 3	
+		/qualifications/services-business-process-outsourcing-nqf3.html
+	Contact Centre Manager NQF 5	
+		/qualifications/services-contact-centre-manager-nqf5.html
+	Generic Management NQF 4	
+		/qualifications/services-generic-management-nqf4.html
+	Generic Management NQF 5	
+		/qualifications/services-generic-management-nqf5.html
+	Management NQF 3	
+		/qualifications/services-management-nqf3.html
+	Marketing Coordinator NQF 5	
+		/qualifications/services-marketing-coordinator-nqf5.html
+	New Venture Creation (SMME) NQF 2	
+		/qualifications/services-new-venture-creation-smme-nqf2.html
+	New Venture Creation NQF 4	
+		/qualifications/services-new-venture-creation-nqf4.html
+	Office Supervision NQF 5	
+		/qualifications/services-office-supervision-nqf5.html
+	Project Manager NQF 5	
+		/qualifications/services-project-manager-nqf5.html
+	Quality Assurer NQF 5	
+		/qualifications/services-quality-assurer-nqf5.html
+	Quality Manager NQF 6	
+		/qualifications/services-quality-manager-nqf6.html
+TETA		
+	Transport Clerk NQF 4	
+		/qualifications/teta-transport-clerk-nqf4.html
+W&R		
+	Planner NQF 5	
+		/qualifications/wr-planner-nqf5.html
+	Retail Buyer NQF 5	
+		/qualifications/wr-retail-buyer-nqf5.html
+	Retail Manager (Retail Chain Store Manager) NQF 5	
+		/qualifications/wr-retail-manager-nqf5.html
+	Retail Supervisor NQF 4	
+		/qualifications/wr-retail-supervisor-nqf4.html
+	Sales Assistant NQF 3	
+		/qualifications/wr-sales-assistant-nqf3.html
+	Service Station Assistant NQF 2	
+		/qualifications/wr-service-station-assistant-nqf2.html
+	Store Person NQF 2	
+		/qualifications/wr-store-person-nqf2.html
+	Visual Merchandiser NQF 3	
+		/qualifications/wr-visual-merchandiser-nqf3.html
+

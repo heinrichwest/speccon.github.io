@@ -1,0 +1,54 @@
+QUALIFICATION DETAILS
+=====================
+
+Qualification Name: Occupational Certificate: Insurance Claims Administrator/Assessor
+SETA: INSETA
+NQF Level: 4
+Minimum Credits: 131
+Qualification NLRD ID: 99668
+Learning Programme NLRD ID: N/A
+Expiry Date: 23-May-29
+Status: Accredited
+Reference Sheet: QCTO Cambridge
+
+MODULES AND UNITS
+=================
+
+**Compulsory Modules (1-4):**
+
+• **Module 1: Basics of Insurance (17 credits)**
+  - 431204001-KM-01: Basics of insurance (NQF Level 4, 17 credits)
+
+• **Module 2: Professional Behaviour and Financial Literacy (13 credits)**
+  - 431204001-KM-03: Professional Behaviour and Financial literacy (NQF Level 4, 13 credits)
+
+• **Module 3: Claims Handling Procedures (16 credits)**
+  - 431204001-KM-02: Claims handling procedures (NQF Level 4, 11 credits)
+  - 431204001-PM-04: Comment on risk improvements where applicable (NQF Level 4, 5 credits)
+
+• **Module 4: Claims Handling Processes (35 credits)**
+  - 431204001-PM-01: Receive a basic claim in order to assess the loss/damage and verify the validity of the contract (NQF Level 4, 20 credits)
+  - 431204001-PM-02: Assess the claim to determine validity (NQF Level 4, 10 credits)
+  - 431204001-PM-03: Recommend to settle, conditionally settle or reject the claim (NQF Level 4, 5 credits)
+
+**Specialisation Options (choose one):**
+
+• **Specialisation 1 - Module 5: Long-term Insurance (50 credits)**
+  - 431204001-WM-03: Receipt of notifications and verification processes regarding Long-term insurance (NQF Level 4, 15 credits)
+  - 431204001-WM-07: Assessment process regarding Long-term insurance (NQF Level 4, 20 credits)
+  - 431204001-WM-11: Decisions for payments to relevant stakeholders regarding Long-term insurance (NQF Level 4, 15 credits)
+
+• **Specialisation 2 - Module 6: Short-term Insurance (50 credits)**
+  - 431204001-WM-04: Verification processes regarding Short-term insurance (NQF Level 4, 15 credits)
+  - 431204001-WM-08: Participation of assessment process regarding Short-term insurance (NQF Level 4, 25 credits)
+  - 431204001-WM-12: Making recommendation regarding Short-term insurance (NQF Level 4, 10 credits)
+
+• **Specialisation 3 - Module 7: Statutory Claims (50 credits)**
+  - 431204001-WM-01: Verification processes regarding Statutory claims (NQF Level 4, 10 credits)
+  - 431204001-WM-05: Assessment processes regarding Statutory claims (NQF Level 4, 15 credits)
+  - 431204001-WM-09: Finalisation processes of Statutory claims (NQF Level 4, 25 credits)
+
+• **Specialisation 4 - Module 8: Health Care Claims (50 credits)**
+  - 431204001-WM-06: Assessment processes regarding Health Care claim (NQF Level 4, 25 credits)
+  - 431204001-WM-02: Receipt of notifications and verification processes regarding Health Care (NQF Level 4, 20 credits)
+  - 431204001-WM-10: Decisions for payments to relevant stakeholders regarding Health Care claims (NQF Level 4, 5 credits)

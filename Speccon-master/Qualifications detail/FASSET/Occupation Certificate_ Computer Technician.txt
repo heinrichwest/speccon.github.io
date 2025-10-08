@@ -1,0 +1,46 @@
+QUALIFICATION DETAILS
+=====================
+
+Qualification Name: Occupation Certificate: Computer Technician
+SETA: FASSET
+NQF Level: 5
+Minimum Credits: 282
+Qualification NLRD ID: 101408
+Learning Programme NLRD ID: N/A
+Expiry Date: 12-Jun-30
+Status: Accredited
+Reference Sheet: QCTO Lyttleton
+
+MODULES AND UNITS
+=================
+
+Module 1 - Foundational Digital Literacy and End-User Computing
+• 351201001-KM-06 - End User Computing, NQF Level 3, Credits 6
+• 351201001-KM-07 - Business Communication and Customer Services, NQF Level 5, Credits 8
+• 351201001-KM-05 - Social Media and Digital Literacy, NQF Level 4, Credits 5
+
+Module 2 - Sustainability and Green IT Awareness
+• 351201001-KM-04 - Basic Concepts of Sustainable Computer Environment and Green Technologies, NQF Level 4, Credits 10
+• 351201001-WM-04 - Identify the Potential Green Technologies Process and Procedures, NQF Level 4, Credits 10
+
+Module 3 - Computer Architecture - Hardware and Software
+• 351201001-KM-02 - Basics of Computer Architecture: Hardware, NQF Level 5, Credits 30
+• 351201001-KM-03 - Basics of Computer Architecture: Software, NQF Level 5, Credits 30
+• 351201001-PM-01 - Install Computer Software and Hardware, NQF Level 4, Credits 5
+
+Module 4 - Data Communication and Networking
+• 351201001-KM-01 - Introduction to Data Communication and Networking, NQF Level 5, Credits 15
+
+Module 5 - Troubleshooting and Support
+• 351201001-WM-02 - Set up Equipment, Check OS Performance, Ensure Proper Installation, NQF Level 5, Credits 25
+• 351201001-PM-02 - Troubleshoot Computer and Network Faults, NQF Level 5, Credits 30
+• 351201001-PM-03 - Maintain Computer and Network Security, NQF Level 4, Credits 8
+• 351201001-WM-01 - Respond to User Enquiries Regarding Fault Requests, NQF Level 5, Credits 30
+
+Module 6 - Customer and Technical Support Services
+• 351201001-PM-04 - Provide Support to End Users, NQF Level 5, Credits 30
+
+Module 7 - Work Standards, Maintenance, and Record Keeping
+• 351201001-KM-08 - Ready for Work Standards, NQF Level 4, Credits 5
+• 351201001-WM-03 - Process of Maintaining Computer Systems and Peripherals, NQF Level 5, Credits 15
+• 351201001-WM-05 - Maintain Records of Communication Transactions, Problems, Remedial Actions, NQF Level 4, Credits 20

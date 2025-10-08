@@ -1,0 +1,206 @@
+QUALIFICATION DETAILS
+=====================
+
+Qualification Name: FET Certificate: Information Technology: Systems Development
+SETA: MICT
+NQF Level: 4
+Minimum Credits: 165
+Qualification NLRD ID: 78965
+Learning Programme NLRD ID: N/A
+Expiry Date: 30-Jun-26
+Status: Legacy extended
+Reference Sheet: SpecCon MICT Seta
+
+MODULES AND UNITS
+=================
+PURPOSE AND RATIONALE OF THE QUALIFICATION 
+Purpose of the qualification:
+
+The purpose of this qualification is to build a foundational entry into the field of Computer Sciences and Information Technology, specifically into the field of Systems Development, covering basic knowledge needed for further study in the field of Systems Development at Higher Education Levels.
+
+The qualification can be acquired in the traditional way of formal study as well as in the workplace, through learnerships. Acquiring the qualification through learnerships has the potential of addressing the problems of the past, where newly qualified people getting into the industry struggled to get employment, because they were required to have practical experience. The workplace experience can now be gained while acquiring the qualification through the various learnership schemes that are planning to use this qualification.
+
+A qualifying learner at this level will be a well-rounded entry-level Systems Developer with a good fundamental knowledge of the Information Technology field, coupled with interpersonal and business skills, preparing for later specialisation in Systems Development fields.
+
+The qualification is designed to:
+provide learners with an entry level for further study in Information Technology and related fields, as well as for initial employment in the computer industry.
+allow many of the listed unit standards to be used in Learnership Schemes in the Information Systems and Technology sector, as well as other sectors where Information Technology is a key requirement.
+provide a foundational qualification for people who are pursuing a career in the computer industry, or related fields. People with this qualification have an introductory level of understanding about computer industry concepts and/or are able to work in areas of Information Technology with little technical complexity, for example entry-level computer programming, as junior project team member.
+allow the credits achieved in the National Certificates in Information Technology (Level 2 & 3) to be used as foundation (i.e. learning assumed to be in place) for the requirements of this qualification.
+have a flexible structure to allow for changing requirements in the computer industry, and to allow providers to create learning programmes with a predominantly Information Technology component but tailored to meet local, national or international needs.
+
+Rationale of the qualification:
+
+This qualification has been formulated such that it reflects the workplace-based needs of the Information Technology Industry as expressed by its stakeholders.
+The input has been used to ensure that the qualification provides the learner with accessibility to be employed within the IT Industry.
+
+The introduction of national qualifications in Information Technology based on unit standards will allow learners to qualify for a national qualification by accumulating the required credits via short learning programmes or workplace practical experience or both. It also allows learners to achieve the qualifications through recognition of prior learning and/or learnerships schemes, overcoming past barriers in the methods of achieving formal qualifications.
+
+Academically this National Certificate is intended to be an entry-level qualification in the area of Systems Development. The qualification builds on knowledge areas covered in National Certificates and short learning programmes at NQF level 2 to 4, and it facilitates entry into the Systems Development field. It aims to enhance readiness for further study in Information Technology and related fields at the Further Education level, provides a pathway into further study at Higher Education level, as well as providing for initial employment in the computer industry.
+
+One of the most important needs for this qualification is to provide for the recognition of prior learning. There are currently no unit standards based registered qualifications for Software Development. However, programs are written, installed, maintained and upgraded on a daily basis in a number of different industry sectors. People with workplace experience in the areas covered by this qualification will now be allowed to request assessment and get recognition for prior learning.
+
+The qualification provides the learner with the flexibility to articulate in the Telecommunications, Information Technology and Electronic Industries and other industries where IT is a key component, like the Financial Services Industry. 
+
+LEARNING ASSUMED TO BE IN PLACE AND RECOGNITION OF PRIOR LEARNING 
+It is assumed that the learner is competent in skills gained at the further education and training band, with exposure to computing as an advantage, but not a requirement. A learning assumption of this qualification is foundational skills in English and Mathematics at NQF level 3. Further learning assumed is the ability to use a personal computer competently, and competence in the unit standard, "Participate in formal meetings", NQF Level 2 (ID 14911).
+
+The assumed learning can be acquired in the traditional way of formal study as well as in the workplace. Acquiring the competencies in a workplace (either via formal learnerships or normal on-the-job training) has the potential of addressing the problems of the past, where formal qualifications were only obtainable by way of formal study.
+
+Recognition of prior learning (RPL):
+
+Many of the competencies used in the Information Technology profession have traditionally been acquired through short courses and on-the-job training, which did not provide formal recognition of the knowledge and skills acquired. These competencies are still today viewed by most industries as invaluable, with the sad reality that there is no formal recognition. The nature of the Information Technology field means that competence is developed experientially, therefore the assessment processes should recognise experience versus theoretical knowledge. Recognition of prior learning will now allow people with these valuable competencies to be assessed and recognised formally.
+
+Any learner wishing to be assessed may arrange to do so without having to attend further education or training. For recognition of prior learning the learner will be required to submit a portfolio of evidence of relevant experience, in a prescribed format, to be assessed for formal recognition. The assessor and learner will decide jointly on the most appropriate assessment procedures, subject to the assessment rules of the relevant ETQA. Learning assumed to be in place must be assessed by the assessor prior to any assessment relating to this qualification. 
+
+RECOGNISE PREVIOUS LEARNING? 
+Y 
+
+QUALIFICATION RULES 
+The Qualification consists of a Fundamental, a Core and an Elective Component.
+
+To be awarded the Qualification learners are required to obtain a minimum of 165 credits as detailed below.
+
+Fundamental Component
+
+The Fundamental Component consists of Unit Standards in:
+Mathematical Literacy at Level 4 to the value of 16 credits
+Communication at Level 4 in a First South African Language to the value of 20 credits
+Communication in a Second South African Language at Level 3 to the value of 20 credits
+
+It is compulsory therefore for learners to do Communication in two different South African languages, one at Level 4 and the other at Level 3
+
+All Unit Standards in the Fundamental Component are compulsory.
+
+The Fundamental Component consists of Unit Standards to the value of 56 credits all of which are compulsory.
+
+Core Component
+
+The Core Component consists of Unit Standards to the value of 63 credits all of which are compulsory.
+
+Elective Component
+
+For the achievement of the minimum 165 credits required, learners are required to do at least 46 credits in the elective component. 
+
+EXIT LEVEL OUTCOMES 
+A learner will be able to:
+
+1. Communicate effectively with fellow IT staff & users of information systems.
+2. Demonstrate an understanding of different types of computer systems and the use of computer technology in business.
+3. Demonstrate an understanding of problem solving techniques, and how to apply them in a technical environment.
+4. Demonstrate an understanding of Computer Technology Principles.
+5. Demonstrate an understanding of Computer Programming Principles.
+6. Work effectively as a team member within a development project environment.
+7. Carry out, under supervision, a small size task to demonstrate an understanding of the knowledge, techniques & skills needed to understand the fundamentals of Computer Programming. 
+
+ASSOCIATED ASSESSMENT CRITERIA 
+In particular, assessors should check that the learner is able to demonstrate an ability to consider a range of options and make decisions, meeting the following criteria:
+
+1. Effective Communication is demonstrated with fellow IT staff & with users of information systems, in the form of written and verbal communication.
+
+2. An understanding of different types of computer systems and the use of computer technology in business is demonstrated, being able to describe the different computers systems and associated hardware and network configurations and investigate (sometimes under supervision) its use within organisations.
+
+3. The ability to identify different problem solving techniques, and when and how to apply them, is demonstrated.
+
+4. A fundamental understanding of Computer Technology Principles are demonstrated by explaining computer architecture, networking and operating systems concepts, as well as different data storage methods.
+
+5. An understanding of Computer Programming Principles is demonstrated by producing program segments explaining various programming principles.
+
+6. Working effectively as a team member within a development project environment, taking part in team activities and understanding different roles within different support teams.
+
+7. Knowledge of the techniques & skills needed to understand fundamental programming principles are demonstrated by creating a computer program that combines the assessed outcomes in fundamental programming.
+
+Integrated Assessment:
+
+Development of the competencies may be through a combination of formal and informal learning, self-learning, training programmes and work-based application.
+
+The practical, applied, foundational and reflective competencies demonstrated for the group of assessment criteria in this qualification, must prove that the whole competence is more than the sum of the parts of the competencies.
+Providers should conduct diagnostic and formative assessment. Formative, continuous and diagnostic assessments should also take place in the work place, if applicable. The learner should also be able to assess him or herself and determine readiness for a summative assessment against this qualification.
+
+During integrated assessments the assessor should make use of formative and summative assessment methods and should assess combinations of practical, applied, foundational and reflective competencies. Input to completing the Integrated Assessment typically make use of combinations of the following assessment methods:
+1. Time-constrained written examinations
+2. Coursework Evaluations
+3. Continuous Evaluation
+4. Practical Evaluation. 
+
+INTERNATIONAL COMPARABILITY 
+The concept of qualifications based on unit standards is not unique to South Africa. This qualification and unit standards have been evaluated against, and are comparable to core knowledge and specialised knowledge elements found in the following International Qualifications Frameworks:
+New Zealand NQF,
+Australian NQF,
+British NVQs.
+
+Furthermore input to the development of the qualification has been benchmarked against the following International sources, where the outcomes and assessment criteria, degree of difficulty and notional learning time has been compared:
+City and Guilds Certificate and Diploma for Programmers (refer 7261 IT Scheme administered by ISETT),
+NCC Education's International Certificate and Diploma in Computer Studies for IT Professionals,
+Microsoft MCSD certification
+E-Skills
+This qualification combines the NQF principles and requirements, with Internationally accepted Knowledge Areas required in a System Development Qualification. 
+
+ARTICULATION OPTIONS 
+This qualification has been developed for professional practice across the industry and is intended to ensure professionalism within junior positions in the industry ensuring the upliftment of the standards in general. It is applicable to small and large businesses alike, and builds on other certificates from a range of sub-sectors and will provide articulation with a range of qualifications.
+
+Upon successful completion of the qualification, the learner will be a Systems Developer able to carry out competently the exit level outcomes in a business environment. The purpose of this qualification is stated as being a foundational qualification at the Further Education band, allowing for further study in Information Technology and related fields at Higher Education entry level (National Certificate). This will allow the qualified learner to progress to further qualifications either in Systems Development or other IT domains, or in other related industries where IT is a key component.
+
+In particular, this qualification has been designed to allow entry into either the National Certificates in Systems Support at NQF level 5 or the National Certificate in Systems Development at NQF level 5, but can also be used as foundational to other IT qualifications that will be defined in future. 
+
+MODERATION OPTIONS 
+Anyone assessing a learner or moderating the assessment of a learner against this Qualification must be registered as an assessor or moderator with the relevant ETQA.
+Any institution offering learning that will enable the achievement of this Qualification must be accredited as a provider with the relevant ETQA.
+Assessment and moderation of assessment will be overseen by the relevant ETQA according to the ETQA's policies and guidelines for assessment and moderation.
+Moderation must include both internal and external moderation of assessments at exit points of the qualification, unless ETQA policies specify otherwise.
+Moderation should also encompass achievement of the competence described both in individual unit standards as well as the integrated competence described in the qualification.
+Anyone wishing to be assessed against this Qualification may apply to be assessed by any assessment agency, assessor or provider institution that is accredited for assessment by the relevant ETQA.
+
+To ensure that national standards are maintained, the final assessment should be conducted on the following basis, which will be under the control of the relevant ETQAs (ISETT SETA or other relevant ETQAs):
+National assessment of written papers and/or practical assignments needs to be undertaken, by the relevant ETQA. This must include the necessary assessment tools (e.g. marking schemes) to ensure consistent assessment. This function can be performed by the ETQA itself or a nominated body or bodies.
+Assessment can be institutional or workplace based and must be done by a registered assessor.
+External moderation will be undertaken as required, to ensure that the quality of NQF standards is maintained nationally. 
+
+CRITERIA FOR THE REGISTRATION OF ASSESSORS 
+The criteria to register as an assessor include the following:
+Assessors should be registered as assessors with the relevant ETQA, in accordance with the policies and procedures defined by the ETQA.
+Have a relevant academic qualification or equivalent recognition, at a level higher than the qualification being assessed.
+All registered assessors must have met the requirements of the generic assessor standard, and should be certificated by the ETDP SETA or by the relevant ETQA in agreement with the ETDP SETA in this regard. 
+
+REREGISTRATION HISTORY 
+As per the SAQA Board decision/s at that time, this qualification was Reregistered in 2012; 2015. 
+
+NOTES 
+This qualification replaces qualification 24294, "Further Education and Training Certificate: Information Technology: Systems Development", Level 4, 165 credits.
+
+Knowledge Areas covered by the qualification
+
+This qualification addresses the following knowledge areas being developed for the IT qualifications framework, inter alia:
+Competence in creating program segments with no supervision or complete programs with limited supervision and direction from others
+Contributing to solving user application problems and meeting their support needs
+Investigating customer requirements and creating program designs
+Apply problem solving techniques to given customer requirements in creating program designs
+Analysing data and contributing to system testing, over a variety of application areas
+Understand the structure of a typical systems development project team, knowing the different roles and knowing when to ask for assistance in performing the above tasks.
+
+Level Description of the qualification
+The above knowledge areas listed display competences that are complex and non-routine, which are appropriate at this level. They involve the application of knowledge and skills in a limited range of varied work activities, performed in a wide variety of contexts. Some level of responsibility and autonomy is allowed, where control or guidance of others is often required, although complete responsibility is assumed for the quantity and quality of the individuals own outputs. Collaboration with others, perhaps through membership of a work group or team, may often be a requirement.
+
+This also supports the SAQA approved level descriptors at this level, as listed below:
+Foundational Competence
+Possession of wide-ranging scholastic/technical skills.
+Possession of a broad knowledge base incorporating some theoretical concepts.
+Demonstrate the ability to access, analyse and evaluate information independently.
+Employ a range of responses to well defined but often unfamiliar or unpredictable problems.
+
+Practical Competence
+Operate in a variety of familiar and unfamiliar contexts under broad guidance and evaluation.
+Select from a considerable choice of procedures.
+Give presentations to an audience.
+
+Reflexive Competence
+Complete responsibility for quantity and quality of output.
+Possible responsibility for the quantity and quality of output of others.
+
+Foundational Competence: Progression is manifested by the change from routine responses at level 3 to generation of responses at level 4.
+Practical Competence: There is evidence of progression in terms of the range of skills, choice of actions and the ability to present information to others.
+Reflexive Competence: Progression is marked by a significant increase in responsibility for individual outputs and the need to interact with others. At level 4, the learner can assume leadership roles of a limited nature.
+
+Qualification Naming and Specialisation Description:
+
+The Information Technology sub-field has been broken into various domains, of which Systems Development is one. Qualification names will be linked to these domains, with specialisation descriptions attached to the qualification certification document being produced. The reason for this is firstly to reduce the number of qualifications needed to be registered to a manageable level, and secondly to have the qualification linked to the typical structure of the Information Technology industry. Finally we want to have the qualification certification document to reflect fields of specialisation, for unit standards that has been achieved within listed fields of specialisation. These specialisation fields are defined as part of the elective unit standards for the qualification, which will allow flexibility in future to add new specialisation fields without having to redefine the whole qualification. This is very important to the IT industry which is a very dynamic and fast changing industry. 

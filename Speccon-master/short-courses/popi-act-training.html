@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POPI Act Training | SpecCon Holdings</title>
+    <meta name="description" content="Comprehensive POPI Act training course covering data protection, privacy compliance, and legal requirements under South African law.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="../js/centralized-modals.js"></script>
+
+    <style>
+        nav { font-family: 'Roboto', sans-serif; }
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 10px 10px -5px rgb(0 0 0 / 0.04);
+        }
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        .dropdown-menu {
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-900">
+    <!-- Header -->
+    <header class="bg-white/95 backdrop-blur-md shadow-lg fixed w-full z-50 top-0">
+        <div class="container mx-auto px-4 lg:px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <a href="../index.html">
+                        <img src="../Images/Logo.png" alt="SpecCon Holdings Logo" class="h-12">
+                    </a>
+                    <div class="ml-3">
+                        <h1 class="text-xl font-bold text-[#12265E]">SpecCon Holdings</h1>
+                        <p class="text-sm text-[#ffa600]">Services SETA Qualifications</p>
+                    </div>
+                </div>
+
+                <nav class="hidden lg:flex items-center space-x-4">
+                    <a href="../index.html" class="text-[#12265E] hover:text-[#FFA600] font-medium transition duration-300 text-sm whitespace-nowrap">Home</a>
+                    <a href="../index.html#about" class="text-[#12265E] hover:text-[#FFA600] font-medium transition duration-300 text-sm whitespace-nowrap">Why Choose Us</a>
+                    <a href="../index.html#qualifications" class="text-[#12265E] hover:text-[#FFA600] font-medium transition duration-300 text-sm whitespace-nowrap">Qualifications</a>
+                    <a href="../index.html#accreditations" class="text-[#12265E] hover:text-[#FFA600] font-medium transition duration-300 text-sm whitespace-nowrap">Accreditations</a>
+                    <a href="../index.html#classroom-training" class="text-[#12265E] hover:text-[#FFA600] font-medium transition duration-300 text-sm whitespace-nowrap">Classroom Training</a>
+                    <div class="relative dropdown">
+                        <button class="text-[#12265E] hover:text-[#FFA600] font-medium transition duration-300 flex items-center text-sm whitespace-nowrap">
+                            Other Products <i data-lucide="chevron-down" class="w-4 h-4 ml-1"></i>
+                        </button>
+                        <div class="dropdown-menu absolute -left-16 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-20">
+                            <a href="professional-development.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Professional Development</a>
+                            <a href="intro-to-ai-training.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">AI Training Courses</a>
+                            <a href="cyber-security-training.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Cyber Security Training</a>
+                            <a href="compliance-courses.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Compliance Training</a>
+                        </div>
+                    </div>
+                </nav>
+
+                <div class="hidden lg:block">
+                    <button onclick="openBookNowModal()" data-modal="book" data-course="POPI Act Training" class="bg-gradient-to-r from-[#12265E] to-[#92ABC4] text-white font-semibold px-6 py-3 rounded-lg hover:from-[#0d1a47] hover:to-[#3a7bc8] transition duration-300 shadow-lg">
+                        Book Training
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <section class="pt-24 pb-8 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <nav class="text-sm text-gray-600">
+                <a href="../index.html" class="hover:text-blue-600">Home</a>
+                <span class="mx-2">/</span>
+                <a href="../index.html#classroom-training" class="hover:text-blue-600">Classroom Training</a>
+                <span class="mx-2">/</span>
+                <span class="text-gray-900">POPI Act Training</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="py-16 bg-gradient-to-br from-purple-50 to-blue-50">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-[#ffffff]/70 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <i data-lucide="shield-check" class="w-8 h-8 text-[#ffa600]"></i>
+                        </div>
+                        <div>
+                            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-2">POPI Act Training</h1>
+                            <p class="text-xl text-purple-600 font-semibold">Protection of Personal Information Act</p>
+                        </div>
+                    </div>
+                    <p class="text-lg text-gray-600 leading-relaxed mb-8">
+                        Understand the importance of protecting personal information and learn how to correctly give informed
+                        consent in line with the Protection of Personal Information Act (POPIA). Essential training for
+                        compliance with South African data protection law.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="text-center p-4 bg-white rounded-lg shadow">
+                            <div class="text-2xl font-bold text-[#ffa600]">2h 50m</div>
+                            <div class="text-sm text-gray-600">Duration</div>
+                        </div>
+                        <div class="text-center p-4 bg-white rounded-lg shadow">
+                            <div class="text-2xl font-bold text-green-600">Certificate</div>
+                            <div class="text-sm text-gray-600">Upon Completion</div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <img src="https://images.pexels.com/photos/5668473/pexels-photo-5668473.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                         alt="Data protection and privacy training"
+                         class="rounded-2xl shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Overview -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-[#12265E] mb-4">Course Overview</h2>
+                    <p class="text-xl text-[#ffa600]">Essential data protection and privacy compliance training</p>
+                </div>
+
+                <div class="bg-gray-50 rounded-2xl p-8 mb-12">
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        POPI Act designed to help students understand the importance of protecting personal information
+                        and how to correctly give informed consent in line with the Protection of Personal Information Act
+                        (POPIA). Though the POPI Act is a South African law, it is highly relevant for students engaging with
+                        South African educational institutions, research projects, or online platforms that collect personal
+                        data.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8 mb-12">
+                    <div class="bg-white border border-gray-200 rounded-xl p-6">
+                        <h3 class="text-xl font-bold text-[#12265E] mb-4">What You'll Learn</h3>
+                        <ul class="space-y-3 text-gray-600">
+                            <li class="flex items-center">
+                                <i data-lucide="check" class="w-4 h-4 text-green-600 mr-2"></i>
+                                Introduction to Protection of Personal Information Act
+                            </li>
+                            <li class="flex items-center">
+                                <i data-lucide="check" class="w-4 h-4 text-green-600 mr-2"></i>
+                                Scope and application of protection of personal Information
+                            </li>
+                            <li class="flex items-center">
+                                <i data-lucide="check" class="w-4 h-4 text-green-600 mr-2"></i>
+                                Key principle of protection of personal Act
+                            </li>
+                            <li class="flex items-center">
+                                <i data-lucide="check" class="w-4 h-4 text-green-600 mr-2"></i>
+                                Individual rights under protection of personal Act
+                            </li>
+                            <li class="flex items-center">
+                                <i data-lucide="check" class="w-4 h-4 text-green-600 mr-2"></i>
+                                Consent and processing of processing information
+                            </li>
+                            <li class="flex items-center">
+                                <i data-lucide="check" class="w-4 h-4 text-green-600 mr-2"></i>
+                                Security measures and breach management
+                            </li>
+                            <li class="flex items-center">
+                                <i data-lucide="check" class="w-4 h-4 text-green-600 mr-2"></i>
+                                Compliance and enforcement
+                            </li>
+                            <li class="flex items-center">
+                                <i data-lucide="check" class="w-4 h-4 text-green-600 mr-2"></i>
+                                Practical Information of protection of personal information
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-white border border-gray-200 rounded-xl p-6">
+                        <h3 class="text-xl font-bold text-[#12265E] mb-4">Who Must Enroll</h3>
+                        <ul class="space-y-3 text-gray-600">
+                            <li class="flex items-center">
+                                <i data-lucide="user" class="w-4 h-4 text-blue-600 mr-2"></i>
+                                South African Students
+                            </li>
+                            <li class="flex items-center">
+                                <i data-lucide="user" class="w-4 h-4 text-blue-600 mr-2"></i>
+                                International Students Studying in South Africa
+                            </li>
+                            <li class="flex items-center">
+                                <i data-lucide="user" class="w-4 h-4 text-blue-600 mr-2"></i>
+                                Any Student Wanting to Know Their Rights
+                            </li>
+                            <li class="flex items-center">
+                                <i data-lucide="user" class="w-4 h-4 text-blue-600 mr-2"></i>
+                                Students Participating in Research
+                            </li>
+                            <li class="flex items-center">
+                                <i data-lucide="user" class="w-4 h-4 text-blue-600 mr-2"></i>
+                                Students Completing Administrative Forms
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bg-purple-50 rounded-2xl p-8 border border-purple-200">
+                    <h3 class="text-xl font-bold text-[#12265E] mb-4">By the End of the Course, You Will Be Able To:</h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-center">
+                            <i data-lucide="target" class="w-5 h-5 text-purple-600 mr-3"></i>
+                            Clearly understand how your personal data is protected under the POPI Act
+                        </li>
+                        <li class="flex items-center">
+                            <i data-lucide="target" class="w-5 h-5 text-purple-600 mr-3"></i>
+                            Confidently give or withhold consent when appropriate
+                        </li>
+                        <li class="flex items-center">
+                            <i data-lucide="target" class="w-5 h-5 text-purple-600 mr-3"></i>
+                            Draft or respond to POPIA consent
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Content -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-[#12265E] mb-4">Course Content</h2>
+                    <p class="text-xl text-[#ffa600]">Comprehensive curriculum covering all aspects of POPI Act compliance</p>
+                </div>
+
+                <div class="space-y-6">
+                    <!-- Unit 1 -->
+                    <div class="bg-white rounded-xl p-6 shadow-sm">
+                        <h3 class="text-xl font-bold text-[#12265E] mb-4 flex items-center">
+                            <span class="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center mr-3">
+                                <span class="text-[#ffa600] font-bold">1</span>
+                            </span>
+                            Introduction to Protection of Personal Information Act
+                        </h3>
+                        <ul class="space-y-2 text-gray-600 ml-11">
+                            <li>• Overview of Protection of Personal Information Act</li>
+                            <li>• Purpose and objectives of POPIA</li>
+                        </ul>
+                    </div>
+
+                    <!-- Unit 2 -->
+                    <div class="bg-white rounded-xl p-6 shadow-sm">
+                        <h3 class="text-xl font-bold text-[#12265E] mb-4 flex items-center">
+                            <span class="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center mr-3">
+                                <span class="text-[#ffa600] font-bold">2</span>
+                            </span>
+                            Scope and Application of Protection of Personal Information Act
+                        </h3>
+                        <ul class="space-y-2 text-gray-600 ml-11">
+                            <li>• Entities and individuals covered by POPIA</li>
+                            <li>• Types of personal information protected</li>
+                            <li>• Exemptions and exclusions under POPIA</li>
+                        </ul>
+                    </div>
+
+                    <!-- Unit 3 -->
+                    <div class="bg-white rounded-xl p-6 shadow-sm">
+                        <h3 class="text-xl font-bold text-[#12265E] mb-4 flex items-center">
+                            <span class="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center mr-3">
+                                <span class="text-[#ffa600] font-bold">3</span>
+                            </span>
+                            Key Principles of Protection of Personal Information Act
+                        </h3>
+                        <ul class="space-y-2 text-gray-600 ml-11">
+                            <li>• Lawfulness, fairness, and transparency</li>
+                            <li>• Consent and purpose specification</li>
+                            <li>• Disclosure and access rights</li>
+                            <li>• Ensuring data accuracy, minimisation and correctness</li>
+                            <li>• Accountability and responsible party obligations</li>
+                        </ul>
+                    </div>
+
+                    <!-- Unit 4 -->
+                    <div class="bg-white rounded-xl p-6 shadow-sm">
+                        <h3 class="text-xl font-bold text-[#12265E] mb-4 flex items-center">
+                            <span class="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center mr-3">
+                                <span class="text-[#ffa600] font-bold">4</span>
+                            </span>
+                            Individual Rights under Protection of Personal Information Act
+                        </h3>
+                        <ul class="space-y-2 text-gray-600 ml-11">
+                            <li>• Right to be informed</li>
+                            <li>• Right to access personal information</li>
+                            <li>• Right to rectify and update personal information</li>
+                            <li>• Right to erasure or destruction of personal information</li>
+                            <li>• Right to object to processing of personal information</li>
+                        </ul>
+                    </div>
+
+                    <!-- Unit 5 -->
+                    <div class="bg-white rounded-xl p-6 shadow-sm">
+                        <h3 class="text-xl font-bold text-[#12265E] mb-4 flex items-center">
+                            <span class="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center mr-3">
+                                <span class="text-[#ffa600] font-bold">5</span>
+                            </span>
+                            Consent and Processing of Personal Information
+                        </h3>
+                        <ul class="space-y-2 text-gray-600 ml-11">
+                            <li>• Understanding consent requirements under POPIA</li>
+                            <li>• Processing of special personal information categories</li>
+                        </ul>
+                    </div>
+
+                    <!-- Unit 6 -->
+                    <div class="bg-white rounded-xl p-6 shadow-sm">
+                        <h3 class="text-xl font-bold text-[#12265E] mb-4 flex items-center">
+                            <span class="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center mr-3">
+                                <span class="text-[#ffa600] font-bold">6</span>
+                            </span>
+                            Security Measures and Breach Management
+                        </h3>
+                        <ul class="space-y-2 text-gray-600 ml-11">
+                            <li>• Importance of data security and protection</li>
+                            <li>• Technical, physical, and administrative controls</li>
+                            <li>• Data breaches and incident management</li>
+                        </ul>
+                    </div>
+
+                    <!-- Unit 7 -->
+                    <div class="bg-white rounded-xl p-6 shadow-sm">
+                        <h3 class="text-xl font-bold text-[#12265E] mb-4 flex items-center">
+                            <span class="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center mr-3">
+                                <span class="text-[#ffa600] font-bold">7</span>
+                            </span>
+                            Compliance and Enforcement
+                        </h3>
+                        <ul class="space-y-2 text-gray-600 ml-11">
+                            <li>• Responsibilities of the responsible party and operator</li>
+                            <li>• Legal responsibilities and duties</li>
+                            <li>• Ensuring ongoing compliance and data protection</li>
+                        </ul>
+                    </div>
+
+                    <!-- Unit 8 -->
+                    <div class="bg-white rounded-xl p-6 shadow-sm">
+                        <h3 class="text-xl font-bold text-[#12265E] mb-4 flex items-center">
+                            <span class="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center mr-3">
+                                <span class="text-[#ffa600] font-bold">8</span>
+                            </span>
+                            Practical Implementation of Protection of Personal Information
+                        </h3>
+                        <ul class="space-y-2 text-gray-600 ml-11">
+                            <li>• Developing POPIA compliance framework</li>
+                            <li>• Employee training and awareness</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Legal Framework -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-[#12265E] mb-4">Understanding POPIA</h2>
+                    <p class="text-xl text-[#ffa600]">Comprehensive legal framework for data protection</p>
+                </div>
+
+                <div class="bg-gray-50 rounded-2xl p-8">
+                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        The Protection of Personal Information Act (POPIA) is a comprehensive legal framework designed to
+                        safeguard individuals' personal information and regulate how organisations collect, store, process,
+                        and share this data. The Act aims to ensure that personal information is handled with care, respecting
+                        privacy and confidentiality.
+                    </p>
+
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="text-lg font-bold text-[#12265E] mb-4">Key Objectives</h3>
+                            <ul class="space-y-2 text-gray-600">
+                                <li class="flex items-start">
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-green-600 mr-2 mt-1"></i>
+                                    Promote transparency in data handling
+                                </li>
+                                <li class="flex items-start">
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-green-600 mr-2 mt-1"></i>
+                                    Build trust between data subjects and processors
+                                </li>
+                                <li class="flex items-start">
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-green-600 mr-2 mt-1"></i>
+                                    Ensure security in personal data handling
+                                </li>
+                                <li class="flex items-start">
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-green-600 mr-2 mt-1"></i>
+                                    Provide individuals with control over their data
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h3 class="text-lg font-bold text-[#12265E] mb-4">Core Principles</h3>
+                            <ul class="space-y-2 text-gray-600">
+                                <li class="flex items-start">
+                                    <i data-lucide="shield" class="w-5 h-5 text-purple-600 mr-2 mt-1"></i>
+                                    Lawful processing of personal data
+                                </li>
+                                <li class="flex items-start">
+                                    <i data-lucide="shield" class="w-5 h-5 text-purple-600 mr-2 mt-1"></i>
+                                    Obtaining proper consent
+                                </li>
+                                <li class="flex items-start">
+                                    <i data-lucide="shield" class="w-5 h-5 text-purple-600 mr-2 mt-1"></i>
+                                    Ensuring data accuracy
+                                </li>
+                                <li class="flex items-start">
+                                    <i data-lucide="shield" class="w-5 h-5 text-purple-600 mr-2 mt-1"></i>
+                                    Implementing adequate security measures
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Details -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="text-center p-6 bg-white rounded-xl">
+                        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="clock" class="w-6 h-6 text-blue-600"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-[#12265E] mb-2">Duration</h3>
+                        <p class="text-[#ffa600]">2 hours 50 minutes</p>
+                    </div>
+
+                    <div class="text-center p-6 bg-white rounded-xl">
+                        <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="monitor" class="w-6 h-6 text-green-600"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-[#12265E] mb-2">Delivery</h3>
+                        <p class="text-[#ffa600]">Classroom/Online/Blended</p>
+                    </div>
+
+                    <div class="text-center p-6 bg-white rounded-xl">
+                        <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="calendar" class="w-6 h-6 text-[#ffa600]"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-[#12265E] mb-2">Access Period</h3>
+                        <p class="text-[#ffa600]">12 Months</p>
+                    </div>
+                </div>
+
+                <div class="mt-12 bg-blue-50 rounded-xl p-6 border border-blue-200">
+                    <div class="flex items-start space-x-3">
+                        <i data-lucide="info" class="w-6 h-6 text-blue-600 mt-1"></i>
+                        <div>
+                            <h4 class="font-semibold text-[#12265E] mb-2">Course Accreditation</h4>
+                            <p class="text-gray-700">Non-accredited: Short course only</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-gradient-to-r from-[#12265E] to-[#92ABC4]">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Ensure Data Protection Compliance?</h2>
+            <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+                Understand your rights and responsibilities under POPIA and ensure proper data protection practices.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            
+                <button onclick="openBookNowModal()" data-modal="book" data-course="Popi Act Training" 
+        class="flex items-center gap-2 bg-white text-[#ffa600] font-bold py-4 px-8 rounded-lg hover:bg-gray-100-semibold px-6 py-3 rounded-lg hover:from-blue-600 hover:to-blue-700 transition duration-300 shadow-lg">
+    <i data-lucide="calendar" class="w-5 h-5"></i>
+    Book This Course 
+</button>
+                <button data-modal="contact" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+                    Contact Us
+                </button> </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    
+    <footer class="bg-gradient-to-r from-[#12265E] to-[#92ABC4] text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <img src="../Images/SpecCon-LOGO.png" alt="SpecCon Holdings Logo" class="h-12 mr-3">
+                        <div>
+                            <h3 class="text-xl font-bold">SpecCon Holdings</h3>
+                            <p class="text-white/80">Accredited Training Solutions</p>
+                        </div>
+                    </div>
+                    <p class="text-white/80 mb-4">Empowering individuals and organizations through high-quality, accredited education and training solutions.</p>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="/index.html#about" class="text-white/80 hover:text-[#FFA600] transition duration-200">Why Choose Us</a></li>
+                        <li><a href="/index.html#qualifications" class="text-white/80 hover:text-[#FFA600] transition duration-200">Qualifications</a></li>
+                        <li><a href="/index.html#accreditations" class="text-white/80 hover:text-[#FFA600] transition duration-200">Accreditations</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                   <h4 class="text-lg font-semibold mb-4">Contact Us</h4>
+                    <ul class="space-y-2">
+                        <li><p class="text-white/80">Phone: 012 667 4962</p></li>
+                         <p class="text-white/80">
+    Email: <a href="mailto:help@speccon.co.za" class="underline hover:text-orange">help@speccon.co.za</a>
+  </p>    
+</li> <setion></setion>
+                    </ul>   
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-white/80">&copy; 2025 SpecCon Holdings. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+
+    <script>
+        lucide.createIcons();
+    </script>
+
+    <!-- Enquiry Modal Script -->
+    <script>
+        function openEnquiryModal() {
+            const modal = document.getElementById('enquiry-modal');
+            if (modal) {
+                modal.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeEnquiryModal() {
+            const modal = document.getElementById('enquiry-modal');
+            if (modal) {
+                modal.classList.remove('show');
+                document.body.style.overflow = '';
+            }
+        }
+    </script>
+
+
+    <!-- Book Now Modal -->
+    <div id="bookNowModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+            <div class="p-8">
+                <div class="flex items-center justify-between mb-6">
+                    <h2 class="text-2xl font-bold text-[#12265E]">Book This Training</h2>
+                    <button onclick="closeBookNowModal()" class="text-gray-400 hover:text-gray-600">
+                        <i data-lucide="x" class="w-6 h-6"></i>
+                    </button>
+                </div>
+
+                <form id="bookNowForm" onsubmit="submitBooking(event)">
+                    <div class="grid md:grid-cols-2 gap-4 mb-4">
+                        <div>
+                            <label for="firstName" class="block text-sm font-medium text-gray-700 mb-2">First Name *</label>
+                            <input type="text" id="firstName" name="firstName" required
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                        <div>
+                            <label for="lastName" class="block text-sm font-medium text-gray-700 mb-2">Last Name *</label>
+                            <input type="text" id="lastName" name="lastName" required
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-4 mb-4">
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email *</label>
+                            <input type="email" id="email" name="email" required
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="company" class="block text-sm font-medium text-gray-700 mb-2">Company Name *</label>
+                        <input type="text" id="company" name="company" required
+                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="numberOfParticipants" class="block text-sm font-medium text-gray-700 mb-2">Number of Participants *</label>
+                        <select id="numberOfParticipants" name="numberOfParticipants" required
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                            <option value="">Select number of participants</option>
+                            <option value="1">1 participant</option>
+                            <option value="2-5">2-5 participants</option>
+                            <option value="6-10">6-10 participants</option>
+                            <option value="11-20">11-20 participants</option>
+                            <option value="20+">More than 20 participants</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="preferredDate" class="block text-sm font-medium text-gray-700 mb-2">Preferred Training Date</label>
+                        <input type="date" id="preferredDate" name="preferredDate"
+                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                    </div>
+
+                    <div class="mb-6">
+                        <label for="additionalInfo" class="block text-sm font-medium text-gray-700 mb-2">Additional Information</label>
+                        <textarea id="additionalInfo" name="additionalInfo" rows="4"
+                                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
+                                  placeholder="Any specific requirements or questions about the training..."></textarea>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-3">
+                        <button type="submit" class="flex-1 bg-gradient-to-r from-[#12265E] to-[#92ABC4] text-white font-semibold py-3 px-6 rounded-lg hover:from-[#0d1a47] hover:to-[#3a7bc8] transition duration-300">
+                            <i data-lucide="send" class="w-4 h-4 inline mr-2"></i>
+                            Submit Booking Request
+                        </button>
+                        <button type="button" onclick="closeBookNowModal()" class="flex-1 bg-gray-500 text-white font-semibold py-3 px-6 rounded-lg hover:bg-gray-600 transition duration-300">
+                            Cancel
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Book Now Modal Functions
+        function openBookNowModal() {
+            const modal = document.getElementById('bookNowModal');
+            if (modal) {
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeBookNowModal() {
+            const modal = document.getElementById('bookNowModal');
+            if (modal) {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        function submitBooking(event) {
+            event.preventDefault();
+
+            // Get form data
+            const formData = new FormData(event.target);
+            const bookingData = {
+                firstName: formData.get('firstName'),
+                lastName: formData.get('lastName'),
+                email: formData.get('email'),
+                phone: formData.get('phone'),
+                company: formData.get('company'),
+                numberOfParticipants: formData.get('numberOfParticipants'),
+                preferredDate: formData.get('preferredDate'),
+                additionalInfo: formData.get('additionalInfo'),
+                trainingCourse: document.title.split('|')[0].trim()
+            };
+
+            // Show success message
+            alert('Thank you for your booking request! We will contact you shortly to confirm the details.');
+            closeBookNowModal();
+
+            // Reset form
+            event.target.reset();
+
+            // In a real implementation, you would send this data to your server
+            console.log('Booking submitted:', bookingData);
+        }
+
+        // Close modal when clicking outside
+        document.addEventListener('DOMContentLoaded', function() {
+            const bookNowModal = document.getElementById('bookNowModal');
+            if (bookNowModal) {
+                bookNowModal.addEventListener('click', function(e) {
+                    if (e.target === this) {
+                        closeBookNowModal();
+                    }
+                });
+            }
+
+            // Close modal with Escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    closeBookNowModal();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
