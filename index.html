@@ -1577,22 +1577,17 @@
             contactForm.addEventListener('submit', async function(e) {
                 e.preventDefault();
 
-                // Collect form data
-                const formData = new FormData(contactForm);
-
-                // Create applicationData object with form values
+                // Get form values directly by ID (fields don't have name attributes)
                 const applicationData = {
-                    name: formData.get('popup_name') || '',
-                    surname: formData.get('popup_surname') || '',
-                    email: formData.get('popup_email') || '',
-                    mobilenumber: formData.get('popup_phone') || '',
-                    jobTitle: formData.get('popup_job_Title') || '',
-                    companyname: formData.get('popup_company') || '',
-                    reason: formData.get('popup_reason') || '',
-                    //message: formData.get('message') || '',
+                    name: document.getElementById('popup_name')?.value || '',
+                    surname: document.getElementById('popup_surname')?.value || '',
+                    email: document.getElementById('popup_email')?.value || '',
+                    mobilenumber: document.getElementById('popup_phone')?.value || '',
+                    jobTitle: document.getElementById('popup_job_title')?.value || '',
+                    companyname: document.getElementById('popup_company')?.value || '',
+                    reason: document.getElementById('popup_reason')?.value || '',
                     type: 'contact',
-                    source: 'contactus',
-                   //submittedAt: new Date().toISOString()
+                    source: 'contactus'
                 };
 
                 // Save to localStorage for reference
