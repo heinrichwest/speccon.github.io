@@ -409,11 +409,61 @@ function setupContactModal() {
         }
 
         // Handle form submission
-        form.addEventListener('submit', (e) => {
+        form.addEventListener('submit', async (e) => {
             e.preventDefault();
 
-            alert('Thank you for your message! We will contact you soon.');
-            closeContactModal();
+            // Get form data
+            const formData = new FormData(form);
+            const submitButton = form.querySelector('button[type="submit"]');
+            const originalButtonText = submitButton.textContent;
+
+            // Disable submit button and show loading state
+            submitButton.disabled = true;
+            submitButton.textContent = 'Sending...';
+
+            try {
+                // Prepare data for API
+                const data = {
+                    name: formData.get('name'),
+                    surname: formData.get('surname'),
+                    email: formData.get('email'),
+                    phone: formData.get('phone'),
+                    jobTitle: formData.get('jobTitle') || '',
+                    company: formData.get('company') || '',
+                    reason: formData.get('reason'),
+                    message: formData.get('message') || '',
+                    type: 'contact',
+                    source: 'website',
+                    submittedAt: new Date().toISOString()
+                };
+
+                // Send to API
+                const response = await fetch('https://equiry.speccon.co.za/api/enquiry/submit', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data)
+                });
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+
+                const result = await response.json();
+
+                // Show success message
+                alert('Thank you for your message! We will contact you soon.\n\nReference: ' + (result.id || 'Submitted successfully'));
+                closeContactModal();
+
+            } catch (error) {
+                console.error('Error submitting contact form:', error);
+                alert('Sorry, there was an error sending your message. Please try again or contact us directly at help@speccon.co.za');
+
+                // Re-enable submit button
+                submitButton.disabled = false;
+                submitButton.textContent = originalButtonText;
+            }
         });
     }
 }
@@ -453,11 +503,60 @@ function setupEnquireModal() {
         });
 
         // Handle form submission
-        form.addEventListener('submit', (e) => {
+        form.addEventListener('submit', async (e) => {
             e.preventDefault();
 
-            alert('Thank you for your enquiry! We will contact you within 24 hours.');
-            closeEnquireModal();
+            // Get form data
+            const formData = new FormData(form);
+            const submitButton = form.querySelector('button[type="submit"]');
+            const originalButtonText = submitButton.textContent;
+
+            // Disable submit button and show loading state
+            submitButton.disabled = true;
+            submitButton.textContent = 'Submitting...';
+
+            try {
+                // Prepare data for API
+                const data = {
+                    name: formData.get('name'),
+                    surname: formData.get('surname'),
+                    email: formData.get('email'),
+                    phone: formData.get('phone'),
+                    company: formData.get('company') || '',
+                    interest: formData.get('interest'),
+                    message: formData.get('message') || '',
+                    type: 'enquiry',
+                    source: 'website',
+                    submittedAt: new Date().toISOString()
+                };
+
+                // Send to API
+                const response = await fetch('https://equiry.speccon.co.za/api/enquiry/submit', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data)
+                });
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+
+                const result = await response.json();
+
+                // Show success message
+                alert('Thank you for your enquiry! We will contact you within 24 hours.\n\nReference: ' + (result.id || 'Submitted successfully'));
+                closeEnquireModal();
+
+            } catch (error) {
+                console.error('Error submitting enquiry form:', error);
+                alert('Sorry, there was an error submitting your enquiry. Please try again or contact us directly at help@speccon.co.za');
+
+                // Re-enable submit button
+                submitButton.disabled = false;
+                submitButton.textContent = originalButtonText;
+            }
         });
     }
 }
@@ -497,11 +596,63 @@ function setupBookNowModal() {
         });
 
         // Handle form submission
-        form.addEventListener('submit', (e) => {
+        form.addEventListener('submit', async (e) => {
             e.preventDefault();
 
-            alert('Thank you for your booking request! We will contact you within 24 hours to confirm details and pricing.');
-            closeBookNowModal();
+            // Get form data
+            const formData = new FormData(form);
+            const submitButton = form.querySelector('button[type="submit"]');
+            const originalButtonText = submitButton.textContent;
+
+            // Disable submit button and show loading state
+            submitButton.disabled = true;
+            submitButton.textContent = 'Submitting...';
+
+            try {
+                // Prepare data for API
+                const data = {
+                    name: formData.get('name'),
+                    surname: formData.get('surname'),
+                    email: formData.get('email'),
+                    phone: formData.get('phone'),
+                    company: formData.get('company'),
+                    shortCourse: formData.get('short_course'),
+                    participants: formData.get('participants'),
+                    location: formData.get('location'),
+                    preferredDate: formData.get('preferred_date') || '',
+                    notes: formData.get('notes') || '',
+                    type: 'booking',
+                    source: 'website',
+                    submittedAt: new Date().toISOString()
+                };
+
+                // Send to API
+                const response = await fetch('https://equiry.speccon.co.za/api/enquiry/submit', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data)
+                });
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+
+                const result = await response.json();
+
+                // Show success message
+                alert('Thank you for your booking request! We will contact you within 24 hours to confirm details and pricing.\n\nReference: ' + (result.id || 'Submitted successfully'));
+                closeBookNowModal();
+
+            } catch (error) {
+                console.error('Error submitting booking form:', error);
+                alert('Sorry, there was an error submitting your booking request. Please try again or contact us directly at help@speccon.co.za');
+
+                // Re-enable submit button
+                submitButton.disabled = false;
+                submitButton.textContent = originalButtonText;
+            }
         });
     }
 }
