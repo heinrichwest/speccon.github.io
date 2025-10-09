@@ -2071,7 +2071,7 @@ async function submitApplication(event) {
         const result = await responseAfterAPI.json();
 
         // Show success message
-        alert(`Thank you for your application! 
+        alert(`Thank you for your application!
 
 Your application has been successfully submitted with reference number: ${result.applicationId || 'N/A'}
 
@@ -2079,14 +2079,8 @@ We have received your learnership application and assessment results. We will re
 
 Please save your reference number for future correspondence.`);
 
-        // Optional: Reset form or redirect
-        // event.target.reset();
-        // window.location.href = 'application-thank-you.html';
-
-        // Or you could redirect to a thank you page with the application ID
-        if (result.applicationId) {
-            window.location.href = `application-confirmation.html?id=${result.applicationId}`;
-        }
+        // Redirect to home page after successful submission
+        window.location.href = 'index.html';
 
     } catch (error) {
         console.error('Error submitting application:', error);
