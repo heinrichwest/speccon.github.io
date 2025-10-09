@@ -5,7 +5,7 @@ const VALUE_ADDS_POPUP_HTML = `
 <div id="bannerPopup" class="banner-popup">
     <div class="p-6">
         <div class="flex items-center justify-between mb-4">
-            <h3 class="text-xl font-bold text-gray-900">Value-Added Benefits</h3>
+            <h3 class="text-xl font-bold" style="color: #12265E;">Value Added Benefits</h3>
             <button id="closePopup" class="text-gray-400 hover:text-gray-600">
                 <i data-lucide="x" class="w-5 h-5"></i>
             </button>
@@ -14,67 +14,67 @@ const VALUE_ADDS_POPUP_HTML = `
 
         <!-- Value Adds Grid -->
         <div class="grid grid-cols-1 gap-4 mb-6">
-            <div class="flex items-center p-3 bg-blue-50 rounded-lg">
-                <div class="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center mr-3">
-                    <i data-lucide="layout-template" class="w-4 h-4 text-white"></i>
+            <div class="flex items-center p-3 rounded-lg" style="background-color: #12265E;">
+                <div class="w-8 h-8 rounded-lg flex items-center justify-center mr-3" style="background-color: #ffa600;">
+                    <i data-lucide="layout-template" class="w-4 h-4" style="color: #12265E;"></i>
                 </div>
                 <div>
-                    <h4 class="font-semibold text-sm text-gray-900">White Labelled LMS</h4>
-                    <p class="text-xs text-gray-600">Complete Learning Management System</p>
+                    <h4 class="font-semibold text-sm" style="color: #ffffff;">White Labelled LMS</h4>
+                    <p class="text-xs" style="color: #ffffff;">Complete Learning Management System</p>
                 </div>
             </div>
-            <div class="flex items-center p-3 bg-green-50 rounded-lg">
-                <div class="w-8 h-8 bg-green-500 rounded-lg flex items-center justify-center mr-3">
-                    <i data-lucide="book-open" class="w-4 h-4 text-white"></i>
+            <div class="flex items-center p-3 rounded-lg" style="background-color: #92abc4;">
+                <div class="w-8 h-8 rounded-lg flex items-center justify-center mr-3" style="background-color: #ffa600;">
+                    <i data-lucide="book-open" class="w-4 h-4" style="color: #12265E;"></i>
                 </div>
                 <div>
-                    <h4 class="font-semibold text-sm text-gray-900">300+ Online Courses</h4>
-                    <p class="text-xs text-gray-600">Comprehensive course library</p>
+                    <h4 class="font-semibold text-sm" style="color: #ffffff;">300+ Online Courses</h4>
+                    <p class="text-xs" style="color: #ffffff;">Comprehensive course library</p>
                 </div>
             </div>
-            <div class="flex items-center p-3 bg-purple-50 rounded-lg">
-                <div class="w-8 h-8 bg-purple-500 rounded-lg flex items-center justify-center mr-3">
-                    <i data-lucide="users" class="w-4 h-4 text-white"></i>
+            <div class="flex items-center p-3 rounded-lg" style="background-color: #12265E;">
+                <div class="w-8 h-8 rounded-lg flex items-center justify-center mr-3" style="background-color: #ffa600;">
+                    <i data-lucide="users" class="w-4 h-4" style="color: #12265E;"></i>
                 </div>
                 <div>
-                    <h4 class="font-semibold text-sm text-gray-900">Employment Equity System</h4>
-                    <p class="text-xs text-gray-600">Compliance and reporting</p>
+                    <h4 class="font-semibold text-sm" style="color: #ffffff;">Employment Equity System</h4>
+                    <p class="text-xs" style="color: #ffffff;">Compliance and reporting</p>
                 </div>
             </div>
-            <div class="flex items-center p-3 bg-blue-50 rounded-lg">
-                <div class="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center mr-3">
-                    <i data-lucide="clipboard-check" class="w-4 h-4 text-white"></i>
+            <div class="flex items-center p-3 rounded-lg" style="background-color: #92abc4;">
+                <div class="w-8 h-8 rounded-lg flex items-center justify-center mr-3" style="background-color: #ffa600;">
+                    <i data-lucide="clipboard-check" class="w-4 h-4" style="color: #12265E;"></i>
                 </div>
                 <div>
-                    <h4 class="font-semibold text-sm text-gray-900">10+ Work Assessments</h4>
-                    <p class="text-xs text-gray-600">Excel & workplace skills tests</p>
+                    <h4 class="font-semibold text-sm" style="color: #ffffff;">10+ Work Assessments</h4>
+                    <p class="text-xs" style="color: #ffffff;">Excel & workplace skills tests</p>
                 </div>
             </div>
-            <div class="flex items-center p-3 bg-red-50 rounded-lg">
-                <div class="w-8 h-8 bg-red-500 rounded-lg flex items-center justify-center mr-3">
-                    <i data-lucide="shield-check" class="w-4 h-4 text-white"></i>
+            <div class="flex items-center p-3 rounded-lg" style="background-color: #12265E;">
+                <div class="w-8 h-8 rounded-lg flex items-center justify-center mr-3" style="background-color: #ffa600;">
+                    <i data-lucide="shield-check" class="w-4 h-4" style="color: #12265E;"></i>
                 </div>
                 <div>
-                    <h4 class="font-semibold text-sm text-gray-900">Compliance Training</h4>
-                    <p class="text-xs text-gray-600">First Aid, Fire Fighter, OHS</p>
+                    <h4 class="font-semibold text-sm" style="color: #ffffff;">Compliance Training</h4>
+                    <p class="text-xs" style="color: #ffffff;">First Aid, Fire Fighter, OHS</p>
                 </div>
             </div>
-            <div class="flex items-center p-3 bg-teal-50 rounded-lg">
-                <div class="w-8 h-8 bg-teal-500 rounded-lg flex items-center justify-center mr-3">
-                    <i data-lucide="graduation-cap" class="w-4 h-4 text-white"></i>
+            <div class="flex items-center p-3 rounded-lg" style="background-color: #92abc4;">
+                <div class="w-8 h-8 rounded-lg flex items-center justify-center mr-3" style="background-color: #ffa600;">
+                    <i data-lucide="graduation-cap" class="w-4 h-4" style="color: #12265E;"></i>
                 </div>
                 <div>
-                    <h4 class="font-semibold text-sm text-gray-900">Academy Access</h4>
-                    <p class="text-xs text-gray-600">Resources for staff children</p>
+                    <h4 class="font-semibold text-sm" style="color: #ffffff;">Academy Access</h4>
+                    <p class="text-xs" style="color: #ffffff;">Resources for staff children</p>
                 </div>
             </div>
-            <div class="flex items-center p-3 bg-orange-50 rounded-lg">
-                <div class="w-8 h-8 bg-orange-500 rounded-lg flex items-center justify-center mr-3">
-                    <i data-lucide="briefcase" class="w-4 h-4 text-white"></i>
+            <div class="flex items-center p-3 rounded-lg" style="background-color: #12265E;">
+                <div class="w-8 h-8 rounded-lg flex items-center justify-center mr-3" style="background-color: #ffa600;">
+                    <i data-lucide="briefcase" class="w-4 h-4" style="color: #12265E;"></i>
                 </div>
                 <div>
-                    <h4 class="font-semibold text-sm text-gray-900">SDF Service</h4>
-                    <p class="text-xs text-gray-600">Skills Development Facilitator support</p>
+                    <h4 class="font-semibold text-sm" style="color: #ffffff;">SDF Service</h4>
+                    <p class="text-xs" style="color: #ffffff;">Skills Development Facilitator support</p>
                 </div>
             </div>
         </div>
