@@ -1645,15 +1645,18 @@
 
                 // Get form values directly by ID (fields don't have name attributes)
                 const applicationData = {
-                    name: document.getElementById('popup_name')?.value || '',
-                    surname: document.getElementById('popup_surname')?.value || '',
-                    email: document.getElementById('popup_email')?.value || '',
-                    mobilenumber: document.getElementById('popup_phone')?.value || '',
-                    jobTitle: document.getElementById('popup_job_title')?.value || '',
-                    companyname: document.getElementById('popup_company')?.value || '',
-                    reason: document.getElementById('popup_reason')?.value || '',
-                    type: 'contact',
-                    source: 'contactus'
+                    Name: document.getElementById('popup_name')?.value || '',
+                    Surname: document.getElementById('popup_surname')?.value || '',
+                    Email: document.getElementById('popup_email')?.value || '',
+                    MobileNumber: document.getElementById('popup_phone')?.value || '',
+                    JobTitle: document.getElementById('popup_job_title')?.value || '',
+                    CompanyName: document.getElementById('popup_company')?.value || '',
+                    NumEmployees: 0,
+                    Course: '',
+                    NumAttendees: 0,
+                    Location: '',
+                    Reason: document.getElementById('popup_reason')?.value || '',
+                    Source: 'contactus'
                 };
 
                 // Save to localStorage for reference
