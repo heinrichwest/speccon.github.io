@@ -713,15 +713,53 @@
             }
         }
 
-        function submitEnquiry(event) {
+        async function submitEnquiry(event) {
             event.preventDefault();
 
-            // Simulate form submission
-            setTimeout(function() {
-                closeEnquiryModal();
-                document.getElementById('successModal').classList.remove('hidden');
-                document.getElementById('enquiryForm').reset();
-            }, 1000);
+            // Get form data
+            const formData = new FormData(event.target);
+            const enquiryData = {
+                Name: formData.get('firstName') || '',
+                Surname: formData.get('surname') || '',
+                Email: formData.get('email') || '',
+                MobileNumber: formData.get('phone') || '',
+                JobTitle: '',
+                CompanyName: formData.get('company') || '',
+                NumEmployees: 0,
+                Course: 'Business Administration NQF Level 3',
+                NumAttendees: 0,
+                Location: '',
+                Reason: formData.get('reason') || '',
+                Source: 'services-business-administration-nqf3',
+                TrainingBookingDate: ''
+            };
+
+            // Save to localStorage for reference
+            localStorage.setItem('lastEnquiryData', JSON.stringify(enquiryData));
+
+            // Submit to API
+            try {
+                const response = await fetch('https://enquiry.speccon.co.za/api/enquiry/submit', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(enquiryData)
+                });
+
+                if (response.ok) {
+                    closeEnquiryModal();
+                    document.getElementById('successModal').classList.remove('hidden');
+                    document.getElementById('enquiryForm').reset();
+                } else {
+                    const errorData = await response.json();
+                    alert('There was an error submitting your enquiry. Please try again or contact us directly.');
+                    console.error('API Error:', errorData);
+                }
+            } catch (error) {
+                alert('There was an error submitting your enquiry. Please try again or contact us directly.');
+                console.error('Network Error:', error);
+            }
         }
 
         function closeSuccessModal() {
