@@ -604,15 +604,19 @@
 
             const formData = new FormData(event.target);
             const enquiryData = {
-                firstName: formData.get('firstName'),
-                surname: formData.get('surname'),
-                email: formData.get('email'),
-                phone: formData.get('phone'),
-                company: formData.get('company'),
-                reason: formData.get('reason'),
-                qualification: 'Occupational Certificate: Quality Manager NQF6 - NLRD ID: 118768'
-            ,
-                source: 'services-quality-manager-nqf6'
+                Name: formData.get('firstName') || '',
+                Surname: formData.get('surname') || '',
+                Email: formData.get('email') || '',
+                MobileNumber: formData.get('phone') || '',
+                JobTitle: '',
+                CompanyName: formData.get('company') || '',
+                NumEmployees: 0,
+                Course: 'Occupational Certificate: Quality Manager NQF Level 6',
+                NumAttendees: 0,
+                Location: '',
+                Reason: formData.get('reason') || '',
+                Source: 'services-quality-manager-nqf6',
+                TrainingBookingDate: ''
             };
 
             alert('Thank you for your enquiry! We will get back to you soon.');

@@ -710,15 +710,19 @@
             // Get form data
             const formData = new FormData(event.target);
             const enquiryData = {
-                firstName: formData.get('firstName'),
-                surname: formData.get('surname'),
-                email: formData.get('email'),
-                phone: formData.get('phone'),
-                company: formData.get('company'),
-                reason: formData.get('reason'),
-                qualification: 'Contact Centre Manager NQF 5'
-            ,
-                source: 'services-contact-centre-manager-nqf5'
+                Name: formData.get('firstName') || '',
+                Surname: formData.get('surname') || '',
+                Email: formData.get('email') || '',
+                MobileNumber: formData.get('phone') || '',
+                JobTitle: '',
+                CompanyName: formData.get('company') || '',
+                NumEmployees: 0,
+                Course: 'Contact Centre Manager NQF Level 5',
+                NumAttendees: 0,
+                Location: '',
+                Reason: formData.get('reason') || '',
+                Source: 'services-contact-centre-manager-nqf5',
+                TrainingBookingDate: ''
             };
 
             // Save to localStorage for reference (matching index.html behavior)

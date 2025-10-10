@@ -633,15 +633,19 @@
             event.preventDefault();
             const formData = new FormData(event.target);
             const enquiryData = {
-                firstName: formData.get('firstName'),
-                surname: formData.get('surname'),
-                email: formData.get('email'),
-                phone: formData.get('phone'),
-                company: formData.get('company'),
-                reason: formData.get('reason'),
-                qualification: 'Occupational Certificate: Automotive Sales Advisor NQF Level 4 - NLRD ID: 118097'
-            ,
-                source: 'mer-automotive-sales-advisor-nqf4'
+                Name: formData.get('firstName') || '',
+                Surname: formData.get('surname') || '',
+                Email: formData.get('email') || '',
+                MobileNumber: formData.get('phone') || '',
+                JobTitle: '',
+                CompanyName: formData.get('company') || '',
+                NumEmployees: 0,
+                Course: 'Occupational Certificate: Automotive Sales Advisor NQF Level 4',
+                NumAttendees: 0,
+                Location: '',
+                Reason: formData.get('reason') || '',
+                Source: 'mer-automotive-sales-advisor-nqf4',
+                TrainingBookingDate: ''
             };
             alert('Thank you for your enquiry! We will get back to you soon.');
             closeEnquiryModal();

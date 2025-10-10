@@ -590,15 +590,19 @@
 
             const formData = new FormData(event.target);
             const enquiryData = {
-                firstName: formData.get('firstName'),
-                surname: formData.get('surname'),
-                email: formData.get('email'),
-                phone: formData.get('phone'),
-                company: formData.get('company'),
-                reason: formData.get('reason'),
-                qualification: 'Management NQF3'
-            ,
-                source: 'services-management-nqf3'
+                Name: formData.get('firstName') || '',
+                Surname: formData.get('surname') || '',
+                Email: formData.get('email') || '',
+                MobileNumber: formData.get('phone') || '',
+                JobTitle: '',
+                CompanyName: formData.get('company') || '',
+                NumEmployees: 0,
+                Course: 'Management NQF Level 3',
+                NumAttendees: 0,
+                Location: '',
+                Reason: formData.get('reason') || '',
+                Source: 'services-management-nqf3',
+                TrainingBookingDate: ''
             };
 
             alert('Thank you for your enquiry! We will get back to you soon.');
