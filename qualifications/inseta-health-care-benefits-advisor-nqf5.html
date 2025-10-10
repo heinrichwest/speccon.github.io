@@ -229,7 +229,7 @@
                     </p>
                     <div class="grid grid-cols-3 gap-4 mb-8">
                         <div class="text-center p-4 bg-[#12265E] rounded-lg shadow">
-                            <div class="text-xl font-bold text-white">102</div>
+                            <div class="text-xl font-bold text-[#ffa600]">102</div>
                             <div class="text-sm text-white/80">Credits</div>
                         </div>
                         <div class="text-center p-4 bg-[#92abc4] rounded-lg shadow">
@@ -377,7 +377,7 @@
                             </div>
                             <div class="flex justify-between items-center py-3 border-b border-gray-100">
                                 <span class="text-gray-600">Duration</span>
-                                <span class="font-semibold">24 Months</span>
+                                <span class="font-semibold">12 Months</span>
                             </div>
                             <div class="flex justify-between items-center py-3 border-b border-gray-100">
                                 <span class="text-gray-600">Delivery Mode</span>
@@ -657,6 +657,9 @@
                 reason: formData.get('reason'),
                 qualification: 'Health Care Benefits Advisor NQF Level 5 (INSETA)'
             };
+
+            // Save to localStorage for reference (matching index.html behavior)
+            localStorage.setItem('lastEnquiryData', JSON.stringify(enquiryData));
 
             // For now, just show success message and close modal
             alert('Thank you for your enquiry! We will get back to you soon.');
