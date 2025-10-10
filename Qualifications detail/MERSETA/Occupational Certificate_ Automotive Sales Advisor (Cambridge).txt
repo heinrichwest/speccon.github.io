@@ -14,3 +14,35 @@ Reference Sheet: QCTO Cambridge
 MODULES AND UNITS
 =================
 [This section will be populated later with detailed curriculum information]
+
+Module 1 Stock Control
+●	522303000-KM-05 Handling stock, NQF Level 4, Cr 10
+●	522303000 PM-04 Control Inventory, NQF Level 4, Cr 10
+●	522303000-WM-03 Stock control processes, NQF Level 4 Credits 30
+
+Module 2 Merchandising and Promotional Activities
+●	522303000-KM-06 Merchandise, market and promote vehicle stock, NQF Level 4, Cr 15
+●	522303000 PM-03 Deal with and Promote Stock, NQF Level 4, Cr 10
+
+Module 3 Customer Service
+●	522303000-KM-03 Customer service, NQF Level 3, Cr 5
+
+Module 4 Sales and Marketing 
+●	522303000-KM-04 Sell products and services, NQF Level 3, Cr 10
+●	522303000 PM-02 Sell Automotive Products and Services, NQF Level 4, Cr 10
+●	522303000-KM-08 Finalise the sale, NQF Level 2, Cr 5
+●	522303000-WM-01 New and used car sales processes, NQF Level 4 Credits 30
+●	522303000-WM-02 Vehicle parts sales processes, NQF Level 4 Credits 30
+
+Module 5 Operational Processes
+●	522303000-KM-02 World of work fundamentals, NQF Level 2, Cr 3
+●	522303000 PM-05 Carry out Vehicle Service Operational Activities, NQF Level 4, Credits 15
+●	522303000-WM-04 Vehicle service control processes, NQF Level 4 Credits 30
+
+Module 6 Occupational Health and Safety 
+●	522303000-KM-01 Workplace safety, health, environment and quality practices, NQF Level 2, Cr 5
+●	522303000 PM-01 Work Safely, NQF Level 2, Cr 3
+
+Module 7 Vehicle Financing
+●	522303000-KM-07 Vehicle finance, NQF Level 3, Cr 3
+
