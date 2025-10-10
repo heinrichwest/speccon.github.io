@@ -1,0 +1,58 @@
+   [Required(ErrorMessage = "Name is required")]
+    [StringLength(100, ErrorMessage = "Name cannot exceed 100 characters")]
+    public string Name { get; set; } = string.Empty;
+ 
+    [Required(ErrorMessage = "Surname is required")]
+    [StringLength(100, ErrorMessage = "Surname cannot exceed 100 characters")]
+    public string Surname { get; set; } = string.Empty;
+ 
+    [Required(ErrorMessage = "Email is required")]
+    [EmailAddress(ErrorMessage = "Invalid email address")]
+    [StringLength(200, ErrorMessage = "Email cannot exceed 200 characters")]
+    public string Email { get; set; } = string.Empty;
+ 
+    [Required(ErrorMessage = "Mobile number is required")]
+    [Phone(ErrorMessage = "Invalid phone number")]
+    [StringLength(20, ErrorMessage = "Mobile number cannot exceed 20 characters")]
+    public string MobileNumber { get; set; } = string.Empty;
+ 
+    [StringLength(100, ErrorMessage = "Job title cannot exceed 100 characters")]
+    public string JobTitle { get; set; } = string.Empty;
+ 
+    [StringLength(200, ErrorMessage = "Company name cannot exceed 200 characters")]
+    public string CompanyName { get; set; } = string.Empty;
+ 
+    [Range(0, 1000000, ErrorMessage = "Number of employees must be between 0 and 1,000,000")]
+    public int NumEmployees { get; set; } = 0;
+ 
+    [Required(ErrorMessage = "Course is required")]
+    [StringLength(200, ErrorMessage = "Course cannot exceed 200 characters")]
+    public string Course { get; set; } = string.Empty;
+ 
+    [Range(1, 10000, ErrorMessage = "Number of attendees must be between 1 and 10,000")]
+    public int NumAttendees { get; set; } = 0;
+ 
+    [StringLength(200, ErrorMessage = "Location cannot exceed 200 characters")]
+    public string Location { get; set; } = string.Empty;
+ 
+    [StringLength(1000, ErrorMessage = "Reason cannot exceed 1000 characters")]
+    public string Reason { get; set; } = string.Empty;
+ 
+    [StringLength(100, ErrorMessage = "Source cannot exceed 100 characters")]
+    public string Source { get; set; } = string.Empty;
+
+
+{
+  "Name": "",
+  "Surname": "",
+  "Email": "",
+  "MobileNumber": "",
+  "JobTitle": "",
+  "CompanyName": "",
+  "NumEmployees": 0,
+  "Course": "",
+  "NumAttendees": 0,
+  "Location": "",
+  "Reason": "",
+  "Source": ""
+}

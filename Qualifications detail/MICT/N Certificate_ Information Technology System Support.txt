@@ -1,36 +1,123 @@
-QUALIFICATION DETAILS
-=====================
+Further Education and Training Certificate: Information Technology: System Support NQF 5 
 
-Qualification Name: N certitificate: Information Technology: System Support
-SETA: MICT
-NQF Level: 5
-Minimum Credits: 147
-Qualification NLRD ID: 48573
-Learning Programme NLRD ID: N/A
-Expiry Date: 30-Jun-26
-Status: Legacy extended
-Reference Sheet: SpecCon MICT Seta
+Purpose  
 
-MODULES AND UNITS
-=================
-- Use a logical methodology to troubleshoot the common types of hardware and software problems typically encountered in the day-to-day operations of a department in an organisation.
+The goal of Systems Support is to provide students with the necessary skills in relation to the career path’s skills profile. (The overriding aim is to generate a bigger base of skilled ICT professionals to underpin economic growth.) 
 
-- Understand the role of technology in the business context.
+ 
 
-- Demonstrate basic application support skills
+COURSE CONTENT 
 
-- Demonstrate operating system support skills
+Module 1: Personal Development 
 
-- Demonstrate network support skills
+Use computer technology to research a computer topic 
 
-- Relate business problems and information technology solutions
+Work as a project team member 
 
-- Demonstrate appropriate technical reporting skills
+Apply the principles of resolving problems for single-user and multi-user computer operating systems 
 
-- Demonstrate appropriate customer care in the context of IT support
+Conduct a technical practitioners meeting 
 
-- Function appropriately in a change management process within a support team
+Demonstrate an awareness of ethics and professionalism for the computer industry in South Africa 
 
-- Demonstrate hardware support skills for server computers
+Demonstrate an understanding of estimating a unit of work and the implications of late delivery 
 
-- Demonstrate an understanding of Systems Support contextualised within a selected work area
+Explain the principles of business and the role of information technology 
+
+Writing business reports in retail/wholesale practices 
+
+ 
+
+Module 2: Client-server Networking 
+
+Demonstrate an understanding of issues affecting the management of a local area computer network (LAN) 
+
+Demonstrate an understanding of the concepts of multi-user computer operating systems 
+
+ 
+
+Module 3: Configure, Operate and Administer Server Computer Peripherals 
+
+Administer a local area computer network 
+
+Install and configure a multi-user networked operating system 
+
+Monitor and maintain a multi-user networked operating system 
+
+Test networked IT systems against given specifications 
+
+ 
+
+Module 4: Database Access 
+
+Create database access for a computer application using structured query language 
+
+Demonstrate an understanding of Computer Database Management Systems 
+
+Administer security systems for a multi-user computer 
+
+ 
+
+Module 5: Design a LAN for the Developmental Office and Enterprise Development 
+
+Demonstrate appropriate customer care in the context of IT support, according to a Service Level Agreement 
+
+Describe enterprise systems management and its role in IT systems support 
+
+Design a local area computer network for a departmental office environment 
+
+ 
+
+Module 6: Network Concepts, Architecture, and Standards 
+
+Demonstrate an understanding of different computer network architectures and standards 
+
+Demonstrate an understanding of local area computer networks by installing a networked workstation 
+
+Demonstrate an understanding of Wide Area Computer Networks (WANs), comparing them with Local Area Networks (LANs) 
+
+Install and commission a local area computer network 
+
+ 
+
+DELIVERY 
+
+Duration: 12 Months 
+
+Delivery: Classroom/Online/Blended 
+
+ 
+
+ENTRY LEVEL REQUIREMENTS 
+
+English at NQF Level 4 
+
+Mathematics at NQF Level 4 
+
+ 
+
+CAREER POSSIBILITIES 
+
+Networking Support 
+
+Systems Support 
+
+IT Helpdesk support 
+
+IT Technician 
+
+ 
+
+ACCREDITATION 
+
+National Certificate: Information Technology: System Support 
+
+Accreditation: MICT SETA 
+
+SAQA ID: 48573 
+
+NQF Level: 5 
+
+Credits: 147 
+
+ 
