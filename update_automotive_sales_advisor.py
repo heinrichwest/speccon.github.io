@@ -1,4 +1,33 @@
-<!DOCTYPE html>
+#!/usr/bin/env python3
+"""
+Update mer-automotive-sales-advisor-nqf4.html with correct qualification details
+and structure similar to services-bookkeeper-nqf5.html:
+- Occupational Certificate: Automotive Sales Advisor
+- MERSETA
+- NQF Level 4
+- 224 Credits
+- NLRD ID: 118097
+"""
+
+from pathlib import Path
+
+# Read the bookkeeper file as template
+bookkeeper_file = Path('qualifications/services-bookkeeper-nqf5.html')
+automotive_file = Path('qualifications/mer-automotive-sales-advisor-nqf4.html')
+
+# Read current automotive file
+with open(automotive_file, 'r', encoding='utf-8') as f:
+    content = f.read()
+
+# Read bookkeeper for structure reference
+with open(bookkeeper_file, 'r', encoding='utf-8') as f:
+    bookkeeper_content = f.read()
+
+# Find the sections to replace - we'll recreate the entire qualification details section
+# Start by finding where the main content starts (after hero section)
+
+# Create new content matching bookkeeper structure
+new_content = '''<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
@@ -721,3 +750,19 @@
 </body>
 
 </html>
+'''
+
+# Write the new content
+with open(automotive_file, 'w', encoding='utf-8') as f:
+    f.write(new_content)
+
+print("Successfully updated mer-automotive-sales-advisor-nqf4.html")
+print("  - Structure: Matched services-bookkeeper-nqf5.html layout")
+print("  - Title: Occupational Certificate: Automotive Sales Advisor")
+print("  - SETA: MERSETA")
+print("  - NQF Level: 4")
+print("  - Credits: 224")
+print("  - Duration: 24 Months")
+print("  - NLRD ID: 118097")
+print("  - Modules: 7 core modules from official documentation")
+print("  - Styling: Flexbox bullet points for proper text wrapping")
