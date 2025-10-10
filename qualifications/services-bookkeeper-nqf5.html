@@ -732,8 +732,8 @@
                 NumAttendees: 0,
                 Location: '',
                 Reason: formData.get('reason') || '',
-                Source: 'services-bookkeeper-nqf5',
-                TrainingBookingDate: ''
+                Source: 'services-bookkeeper-nqf5'
+        
             };
 
             // Save to localStorage for reference (matching index.html behavior)
@@ -744,7 +744,8 @@
                 const response = await fetch('https://enquiry.speccon.co.za/api/enquiry/submit', {
                     method: 'POST',
                     headers: {
-                        'Content-Type': 'application/json',
+                             'Content-Type': 'application/json',
+                            'Accept': 'application/json'
                     },
                     body: JSON.stringify(enquiryData)
                 });
