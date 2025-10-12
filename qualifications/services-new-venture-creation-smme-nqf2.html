@@ -618,8 +618,7 @@
                 NumAttendees: 0,
                 Location: '',
                 Reason: formData.get('reason') || '',
-                Source: 'services-new-venture-creation-smme-nqf2',
-                TrainingBookingDate: ''
+                Source: 'services-new-venture-creation-smme-nqf2'
             };
 
             // Save to localStorage for reference
@@ -631,6 +630,7 @@
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
+                            'Accept': 'application/json',
                     },
                     body: JSON.stringify(enquiryData)
                 });

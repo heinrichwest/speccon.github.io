@@ -662,8 +662,7 @@
                 NumAttendees: 0,
                 Location: '',
                 Reason: formData.get('reason') || '',
-                Source: 'mict-software-engineer-nqf6',
-                TrainingBookingDate: ''
+                Source: 'mict-software-engineer-nqf6'
             };
 
             // Save to localStorage for reference
@@ -675,6 +674,7 @@
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
+                            'Accept': 'application/json',
                     },
                     body: JSON.stringify(enquiryData)
                 });

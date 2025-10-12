@@ -606,8 +606,7 @@
                 NumAttendees: 0,
                 Location: '',
                 Reason: formData.get('reason') || '',
-                Source: 'mict-end-user-computing-nqf3',
-                TrainingBookingDate: ''
+                Source: 'mict-end-user-computing-nqf3'
             };
 
             // Save to localStorage for reference
@@ -619,6 +618,7 @@
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
+                            'Accept': 'application/json',
                     },
                     body: JSON.stringify(enquiryData)
                 });

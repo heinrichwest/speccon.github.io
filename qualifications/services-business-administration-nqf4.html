@@ -730,8 +730,7 @@
                 NumAttendees: 0,
                 Location: '',
                 Reason: formData.get('reason') || '',
-                Source: 'services-business-administration-nqf4',
-                TrainingBookingDate: ''
+                Source: 'services-business-administration-nqf4'
             };
 
             // Save to localStorage for reference
@@ -743,6 +742,7 @@
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
+                            'Accept': 'application/json',
                     },
                     body: JSON.stringify(enquiryData)
                 });

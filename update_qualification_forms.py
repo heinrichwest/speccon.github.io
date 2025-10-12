@@ -1,106 +1,123 @@
 #!/usr/bin/env python3
 """
-Update all qualification page forms to save data to localStorage like index.html does.
-This script adds localStorage.setItem() functionality to save enquiry form data.
+Update all qualification pages to:
+1. Ensure 'Accept': 'application/json' is in all form submissions
+2. Update 'Get More Info' buttons to use openContactModal()
+3. Ensure centralized-modals.js is included
 """
 
 import os
 import re
-from pathlib import Path
+import glob
 
-def update_form_submission(content):
-    """
-    Add localStorage saving to the submitEnquiry function.
-    Adds localStorage.setItem after enquiryData is created and before the alert.
-    """
+def update_qualification_page(file_path):
+    """Update a single qualification page with the required changes."""
+    print(f"Processing: {os.path.basename(file_path)}")
 
-    # Pattern to find the submitEnquiry function with enquiryData object
-    # We want to add localStorage saving after the enquiryData object is created
-    pattern = r"(function submitEnquiry\(event\) \{[\s\S]*?const enquiryData = \{[\s\S]*?\};)\s*(\n\s*// For now, just show success message)"
+    try:
+        with open(file_path, 'r', encoding='utf-8') as f:
+            content = f.read()
 
-    # Check if localStorage saving already exists
-    if 'localStorage.setItem' in content:
-        return content, False
+        original_content = content
+        changes_made = []
 
-    # Replacement adds localStorage saving
-    replacement = r'''\1
+        # 1. Update "Get More Info" buttons to use openContactModal instead of openEnquiryModal
+        if 'openEnquiryModal()' in content:
+            # Find all instances where buttons call openEnquiryModal for "Get More Info"
+            content = content.replace('onclick="openEnquiryModal()"', 'onclick="openContactModal()"')
+            if content != original_content:
+                changes_made.append("Updated Get More Info button to openContactModal()")
+                original_content = content
 
-            // Save to localStorage for reference (matching index.html behavior)
-            localStorage.setItem('lastEnquiryData', JSON.stringify(enquiryData));
-\2'''
+        # 2. Add 'Accept': 'application/json' to fetch headers if missing
+        # Find fetch calls that don't have Accept header
+        fetch_pattern = r"fetch\('https://enquiry\.speccon\.co\.za/api/enquiry/submit',\s*\{[^}]*method:\s*'POST',\s*headers:\s*\{([^}]*)\},"
 
-    updated_content = re.sub(pattern, replacement, content)
+        matches = list(re.finditer(fetch_pattern, content, re.DOTALL))
+        for match in matches:
+            headers_content = match.group(1)
+            # Check if 'Accept' is already present
+            if "'Accept'" not in headers_content and '"Accept"' not in headers_content:
+                # Add Accept header
+                old_headers = match.group(0)
+                # Insert 'Accept': 'application/json' after 'Content-Type'
+                new_headers = old_headers.replace(
+                    "'Content-Type': 'application/json'",
+                    "'Content-Type': 'application/json',\n                            'Accept': 'application/json'"
+                )
+                content = content.replace(old_headers, new_headers)
+                if content != original_content:
+                    changes_made.append("Added 'Accept': 'application/json' header")
+                    original_content = content
 
-    # Check if update was made
-    was_updated = updated_content != content
+        # 3. Ensure centralized-modals.js is included (check if it's missing)
+        if '../js/centralized-modals.js' not in content:
+            # Find the closing </body> tag and add the script before it
+            script_tag = '    <script src="../js/centralized-modals.js"></script>'
 
-    return updated_content, was_updated
+            # Look for existing script tags before </body>
+            if '<script src="../js/value-adds-popup.js"></script>' in content:
+                # Add it after value-adds-popup.js
+                content = content.replace(
+                    '<script src="../js/value-adds-popup.js"></script>',
+                    '<script src="../js/value-adds-popup.js"></script>\n    <script src="../js/centralized-modals.js"></script>'
+                )
+            elif '</body>' in content:
+                # Add before closing body tag
+                content = content.replace('</body>', f'\n{script_tag}\n</body>')
 
-def update_qualification_files():
-    """Update all qualification HTML files to add localStorage saving."""
+            if content != original_content:
+                changes_made.append("Added centralized-modals.js script")
+                original_content = content
 
-    qualifications_dir = Path('qualifications')
+        # 4. Fix typo in API URL if present (equiry instead of enquiry)
+        if 'https://equiry.speccon.co.za' in content:
+            content = content.replace('https://equiry.speccon.co.za', 'https://enquiry.speccon.co.za')
+            if content != original_content:
+                changes_made.append("Fixed API URL typo")
+                original_content = content
 
-    if not qualifications_dir.exists():
-        print(f"Error: {qualifications_dir} directory not found")
-        return
+        # Write back if changes were made
+        if changes_made:
+            with open(file_path, 'w', encoding='utf-8') as f:
+                f.write(content)
+            print(f"  [+] Updated: {', '.join(changes_made)}")
+            return True
+        else:
+            print(f"  [-] No changes needed")
+            return False
 
-    # Get all HTML files
-    html_files = list(qualifications_dir.glob('*.html'))
+    except Exception as e:
+        print(f"  [!] Error: {e}")
+        return False
 
-    if not html_files:
-        print(f"No HTML files found in {qualifications_dir}")
-        return
+def main():
+    """Main function to update all qualification pages."""
+    # Get all HTML files in qualifications directory
+    qualifications_dir = os.path.join(os.path.dirname(__file__), 'qualifications')
+    html_files = glob.glob(os.path.join(qualifications_dir, '*.html'))
 
-    print(f"Found {len(html_files)} HTML files in qualifications folder\n")
+    print(f"Found {len(html_files)} qualification pages to check\n")
+    print("=" * 70)
 
     updated_count = 0
-    skipped_count = 0
-    error_count = 0
 
-    for html_file in sorted(html_files):
-        try:
-            # Read file
-            with open(html_file, 'r', encoding='utf-8') as f:
-                content = f.read()
+    for file_path in sorted(html_files):
+        # Skip template files
+        if 'template' in os.path.basename(file_path).lower():
+            print(f"Skipping template: {os.path.basename(file_path)}")
+            continue
 
-            # Check if file has submitEnquiry function
-            if 'function submitEnquiry' not in content:
-                skipped_count += 1
-                continue
+        if update_qualification_page(file_path):
+            updated_count += 1
+        print()
 
-            # Update content
-            updated_content, was_updated = update_form_submission(content)
-
-            if was_updated:
-                # Write updated content back to file
-                with open(html_file, 'w', encoding='utf-8') as f:
-                    f.write(updated_content)
-
-                print(f"[+] Updated: {html_file.name}")
-                updated_count += 1
-            else:
-                print(f"[-] Already has localStorage: {html_file.name}")
-                skipped_count += 1
-
-        except Exception as e:
-            print(f"[!] Error processing {html_file.name}: {str(e)}")
-            error_count += 1
-
-    # Summary
-    print(f"\n{'='*60}")
-    print(f"Summary:")
+    print("=" * 70)
+    print(f"\nSummary:")
+    print(f"  Total files processed: {len(html_files)}")
     print(f"  Files updated: {updated_count}")
-    print(f"  Files skipped: {skipped_count}")
-    print(f"  Errors: {error_count}")
-    print(f"  Total processed: {len(html_files)}")
-    print(f"{'='*60}")
-
-    if updated_count > 0:
-        print(f"\n[SUCCESS] Updated {updated_count} qualification page(s)")
-        print(f"  All enquiry forms now save to localStorage like index.html")
-    else:
-        print("\nNo files needed updating (all already have localStorage saving)")
+    print(f"  Files unchanged: {len(html_files) - updated_count}")
+    print("\nAll qualification pages have been updated successfully!")
 
 if __name__ == '__main__':
-    update_qualification_files()
+    main()

@@ -476,7 +476,7 @@
             <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to Become a Health Care Benefits Advisor?</h2>
             <p class="text-xl mb-8 max-w-2xl mx-auto">Join the specialized field of health care benefits advisory and help individuals and organizations optimize their health coverage.</p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <button onclick="openEnquiryModal()" class="bg-white text-blue-600 font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition duration-300">
+                <button onclick="openContactModal()" class="bg-white text-blue-600 font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition duration-300">
                     Enquire Now
                 </button>
                 <a href="../index.html#contact" class="border-2 border-white text-white font-bold py-3 px-8 rounded-lg hover:bg-white hover:text-blue-600 transition duration-300">
@@ -660,8 +660,7 @@
                 NumAttendees: 0,
                 Location: '',
                 Reason: formData.get('reason') || '',
-                Source: 'inseta-health-care-benefits-advisor-nqf5',
-                TrainingBookingDate: ''
+                Source: 'inseta-health-care-benefits-advisor-nqf5'
             };
 
             // Save to localStorage for reference (matching index.html behavior)
@@ -673,6 +672,7 @@
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
+                            'Accept': 'application/json',
                     },
                     body: JSON.stringify(enquiryData)
                 });

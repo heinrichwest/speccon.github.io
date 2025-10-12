@@ -721,8 +721,7 @@
                 NumAttendees: 0,
                 Location: '',
                 Reason: formData.get('reason') || '',
-                Source: 'services-contact-centre-manager-nqf5',
-                TrainingBookingDate: ''
+                Source: 'services-contact-centre-manager-nqf5'
             };
 
             // Save to localStorage for reference (matching index.html behavior)
@@ -734,6 +733,7 @@
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
+                            'Accept': 'application/json',
                     },
                     body: JSON.stringify(enquiryData)
                 });

@@ -593,8 +593,7 @@
                 NumAttendees: 0,
                 Location: '',
                 Reason: formData.get('reason') || '',
-                Source: 'mict-software-tester-nqf5',
-                TrainingBookingDate: ''
+                Source: 'mict-software-tester-nqf5'
             };
 
             // Save to localStorage for reference
@@ -606,6 +605,7 @@
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
+                            'Accept': 'application/json',
                     },
                     body: JSON.stringify(enquiryData)
                 });

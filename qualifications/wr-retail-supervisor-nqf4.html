@@ -441,7 +441,7 @@
             <div class="grid md:grid-cols-4 gap-8">
                 <div class="md:col-span-2">
                     <div class="flex items-center mb-4">
-                        <img src="../Images/SpecCon-LOGO.png" alt="SpecCon Holdings Logo" class="h-12">
+                        <img src="../Images/SpecCon-LOGO.png" alt="SpecCon Holdings Logo" class="h-12 mr-3">
                         <div>
                             <h3 class="text-xl font-bold">SpecCon Holdings</h3>
                             <p class="text-white/80">Accredited Training Solutions</p>
@@ -515,8 +515,7 @@
                 NumAttendees: 0,
                 Location: '',
                 Reason: formData.get('reason') || '',
-                Source: 'wr-retail-supervisor-nqf4',
-                TrainingBookingDate: ''
+                Source: 'wr-retail-supervisor-nqf4'
             };
 
             // Save to localStorage for reference
@@ -528,6 +527,7 @@
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
+                            'Accept': 'application/json',
                     },
                     body: JSON.stringify(enquiryData)
                 });
