@@ -130,7 +130,7 @@
                     </a>
                     <div class="ml-3">
                         <h1 class="text-xl font-bold text-[#12265E]">SpecCon Holdings</h1>
-                        <p class="text-sm text-gray-600">Computer Technician Qualification</p>
+                        <p class="text-sm text-[#ffa600]">FASSET Qualifications</p>
                     </div>
                 </div>
 
@@ -223,19 +223,23 @@
                     </p>
                     <div class="grid grid-cols-3 gap-4 mb-8">
                         <div class="text-center p-4 bg-[#12265E] rounded-lg shadow">
-                            <div class="text-xl font-bold text-white">282</div>
-                            <div class="text-sm text-white/80">Credits</div>
+                            <div class="text-xl font-bold text-[#ffa600]">282</div>
+                            <div class="text-sm text-white">Credits</div>
                         </div>
                         <div class="text-center p-4 bg-[#92abc4] rounded-lg shadow">
                             <div class="text-xl font-bold text-white">24-30</div>
-                            <div class="text-sm text-gray-600">Months</div>
+                            <div class="text-sm text-white">Months</div>
                         </div>
                         <div class="text-center p-4 bg-[#12265E] rounded-lg shadow">
-                            <div class="text-xl font-bold text-white">NQF 5</div>
+                            <div class="text-xl font-bold text-[#ffa600]">NQF 5</div>
                             <div class="text-sm text-white/80">Level</div>
                         </div>
                     </div>
-                    
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button onclick="openContactModal()" class="border-2 border-[#12265E] text-[#12265E] font-semibold px-8 py-4 rounded-lg hover:bg-[#12265E] hover:text-white transition duration-300 text-center">
+                            Get More Info
+                        </button>
+                    </div>
                 </div>
                 <div>
                     <img src="https://images.pexels.com/photos/574073/pexels-photo-574073.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
@@ -303,11 +307,7 @@
                         <div class="grid md:grid-cols-2 gap-4 mb-8">
                             <div class="flex items-center">
                                 <i data-lucide="briefcase" class="w-5 h-5 text-[#ffa600] mr-3"></i>
-                                <span>Computer Technician</span>
-                            </div>
-                            <div class="flex items-center">
-                                <i data-lucide="briefcase" class="w-5 h-5 text-[#ffa600] mr-3"></i>
-                                <span>IT Support Specialist</span>
+                                <span>Computer Hardware Technician</span>
                             </div>
                             <div class="flex items-center">
                                 <i data-lucide="briefcase" class="w-5 h-5 text-[#ffa600] mr-3"></i>
@@ -319,85 +319,70 @@
                             </div>
                             <div class="flex items-center">
                                 <i data-lucide="briefcase" class="w-5 h-5 text-[#ffa600] mr-3"></i>
-                                <span>Field Service Technician</span>
-                            </div>
-                            <div class="flex items-center">
-                                <i data-lucide="briefcase" class="w-5 h-5 text-[#ffa600] mr-3"></i>
                                 <span>Technical Support Engineer</span>
                             </div>
                         </div>
                     </div>
 
                     <!-- Modules -->
-                    <h3 class="text-2xl font-bold text-[#12265E] mb-6">Core Modules</h3>
+                    <h3 class="text-2xl font-bold text-[#12265E] mb-6">Programme Modules</h3>
                     <div class="space-y-6 mb-12">
- <div class="bg-[#12265E] p-6 rounded-xl">
- <h4 class="text-white font-bold text-lg mb-3">Module 1: Foundational Digital Literacy and End-User Computing</h4>
+                        <div class="bg-[#12265E] p-6 rounded-xl">
+                            <h4 class="font-bold text-lg text-white mb-3">Module 1: Foundational Digital Literacy and End-User Computing</h4>
                             <ul class="space-y-2 text-sm text-white">
-                                <li>• End User Computing fundamentals (6 credits)</li>
-                                <li>• Business Communication and Customer Services (8 credits)</li>
-                                <li>• Social Media and Digital Literacy (5 credits)</li>
-                                <li>• Professional workplace communication skills</li>
+                                <li>• End User Computing</li>
+                                <li>• Business Communication and Customer Services</li>
+                                <li>• Social Media and Digital Literacy</li>
                             </ul>
                         </div>
 
- <div class="bg-[#92abc4] p-6 rounded-xl">
-                            <h4 class="text-white font-bold text-lg mb-3">Module 2: Sustainability and Green IT Awareness</h4>
+                        <div class="bg-[#92abc4] p-6 rounded-xl">
+                            <h4 class="font-bold text-lg text-white mb-3">Module 2: Sustainability and Green IT Awareness</h4>
                             <ul class="space-y-2 text-sm text-white">
-                                <li>• Basic Concepts of Sustainable Computer Environment (10 credits)</li>
-                                <li>• Green Technologies Process and Procedures (10 credits)</li>
-                                <li>• Environmental impact assessment</li>
-                                <li>• Energy-efficient computing practices</li>
+                                <li>• Basic Concepts of Sustainable Computer Environment and Green Technologies</li>
+                                <li>• Identify the Potential Green Technologies Process and Procedures</li>
                             </ul>
                         </div>
 
- <div class="bg-[#12265E] p-6 rounded-xl">
- <h4 class="text-white font-bold text-lg mb-3">Module 3: Computer Architecture - Hardware and Software</h4>
+                        <div class="bg-[#12265E] p-6 rounded-xl">
+                            <h4 class="font-bold text-lg text-white mb-3">Module 3: Computer Architecture: Hardware and Software</h4>
                             <ul class="space-y-2 text-sm text-white">
-                                <li>• Basics of Computer Architecture: Hardware (30 credits)</li>
-                                <li>• Basics of Computer Architecture: Software (30 credits)</li>
-                                <li>• Install Computer Software and Hardware (5 credits)</li>
-                                <li>• Component integration and compatibility</li>
+                                <li>• Basics of Computer Architecture: Hardware</li>
+                                <li>• Basics of Computer Architecture: Software</li>
+                                <li>• Install Computer Software and Hardware</li>
                             </ul>
                         </div>
 
- <div class="bg-[#92abc4] p-6 rounded-xl">
-                            <h4 class="text-white font-bold text-lg mb-3">Module 4: Data Communication and Networking</h4>
+                        <div class="bg-[#92abc4] p-6 rounded-xl">
+                            <h4 class="font-bold text-lg text-white mb-3">Module 4: Data Communication and Networking</h4>
                             <ul class="space-y-2 text-sm text-white">
-                                <li>• Introduction to Data Communication and Networking (15 credits)</li>
-                                <li>• Network protocols and standards</li>
-                                <li>• LAN and WAN configuration</li>
-                                <li>• Network security fundamentals</li>
+                                <li>• Introduction to Data Communication and Networking</li>
                             </ul>
                         </div>
 
- <div class="bg-[#12265E] p-6 rounded-xl">
- <h4 class="text-white font-bold text-lg mb-3">Module 5: Troubleshooting and Support</h4>
+                        <div class="bg-[#12265E] p-6 rounded-xl">
+                            <h4 class="font-bold text-lg text-white mb-3">Module 5: Troubleshooting and Support</h4>
                             <ul class="space-y-2 text-sm text-white">
-                                <li>• Set up Equipment and Check OS Performance (25 credits)</li>
-                                <li>• Troubleshoot Computer and Network Faults (30 credits)</li>
-                                <li>• Maintain Computer and Network Security (8 credits)</li>
-                                <li>• Respond to User Enquiries and Fault Requests (30 credits)</li>
+                                <li>• Set up Equipment, Check OS Performance, Ensure Proper Installation</li>
+                                <li>• Troubleshoot Computer and Network Faults</li>
+                                <li>• Maintain Computer and Network Security</li>
+                                <li>• Respond to User Enquiries Regarding Fault Requests</li>
                             </ul>
                         </div>
 
- <div class="bg-[#92abc4] p-6 rounded-xl">
-                            <h4 class="text-white font-bold text-lg mb-3">Module 6: Customer and Technical Support Services</h4>
+                        <div class="bg-[#92abc4] p-6 rounded-xl">
+                            <h4 class="font-bold text-lg text-white mb-3">Module 6: Customer and Technical Support Services</h4>
                             <ul class="space-y-2 text-sm text-white">
-                                <li>• Provide Support to End Users (30 credits)</li>
-                                <li>• Customer relationship management</li>
-                                <li>• Service level agreements</li>
-                                <li>• Technical documentation and training</li>
+                                <li>• Provide Support to End Users</li>
                             </ul>
                         </div>
 
- <div class="bg-[#12265E] p-6 rounded-xl">
- <h4 class="text-white font-bold text-lg mb-3">Module 7: Work Standards, Maintenance, and Record Keeping</h4>
+                        <div class="bg-[#12265E] p-6 rounded-xl">
+                            <h4 class="font-bold text-lg text-white mb-3">Module 7: Work Standards, Maintenance, and Record Keeping</h4>
                             <ul class="space-y-2 text-sm text-white">
-                                <li>• Ready for Work Standards (5 credits)</li>
-                                <li>• Process of Maintaining Computer Systems and Peripherals (15 credits)</li>
-                                <li>• Maintain Records of Communication Transactions and Remedial Actions (20 credits)</li>
-                                <li>• Quality assurance and compliance procedures</li>
+                                <li>• Ready for Work Standards</li>
+                                <li>• Process of Maintaining Computer Systems and Peripherals</li>
+                                <li>• Maintain Records of Communication Transactions, Problems, and Remedial Actions</li>
                             </ul>
                         </div>
                     </div>
@@ -448,8 +433,7 @@
                         </div>
 
                         <div class="space-y-4">
-                            
-                            <button onclick="openEnquireModal()" class="block w-full border-2 border-[#12265E] text-[#12265E] font-bold py-3 px-6 rounded-lg text-center hover:bg-[#12265E] hover:text-white transition duration-300">
+                            <button onclick="openContactModal()" class="block w-full border-2 border-[#12265E] text-[#12265E] font-bold py-3 px-6 rounded-lg text-center hover:bg-[#12265E] hover:text-white transition duration-300">
                                 Request Information
                             </button>
                         </div>
@@ -457,7 +441,7 @@
                         <div class="mt-8 p-4 bg-[#92abc4] rounded-lg">
                             <h4 class="font-bold text-[#12265E] mb-2">Need Help?</h4>
                             <p class="text-sm text-gray-600 mb-3">Contact our qualification specialists for guidance.</p>
-                            <a href="mailto:help@speccon.co.za" class="text-[#ffa600] hover:text-[#ffa600] font-medium text-sm">help@speccon.co.za</a>
+                            <a href="mailto:help@speccon.co.za" class="text-[#12265E] hover:text-[#ffa600] font-medium text-sm transition duration-300">help@speccon.co.za</a>
                         </div>
                     </div>
                 </div>
@@ -474,39 +458,39 @@
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
-                <a href="../setas/mict-seta.html" class="bg-white rounded-2xl shadow-lg p-6 card-hover transition-all duration-300 block">
+                <a href="../setas/mict-seta.html" class="group bg-white rounded-2xl shadow-lg p-6 card-hover transition-all duration-300 block">
                     <div class="flex items-center mb-4">
                         <div class="w-12 h-12 bg-[#ffffff]/70 rounded-lg flex items-center justify-center mr-4">
-                            <i data-lucide="monitor" class="w-6 h-6 text-[#ffa600]"></i>
+                            <i data-lucide="monitor" class="w-6 h-6 text-[#ffa600] group-hover:text-[#92abc4] transition duration-300"></i>
                         </div>
                         <div>
-                            <span class="text-sm text-blue-600 font-medium">MICT SETA</span>
+                            <span class="text-sm text-[#ffa600] font-medium group-hover:text-[#92abc4] transition duration-300">MICT SETA</span>
                             <h3 class="font-bold text-lg text-[#12265E]">IT Qualifications</h3>
                         </div>
                     </div>
-                    <p class="text-white text-sm">Explore software development and IT systems qualifications.</p>
+                    <p class="text-gray-600 text-sm">Explore software development and IT systems qualifications.</p>
                 </a>
 
-                <a href="../setas/services-seta.html" class="bg-white rounded-2xl shadow-lg p-6 card-hover transition-all duration-300 block">
+                <a href="../setas/services-seta.html" class="group bg-white rounded-2xl shadow-lg p-6 card-hover transition-all duration-300 block">
                     <div class="flex items-center mb-4">
                         <div class="w-12 h-12 bg-[#ffffff]/70 rounded-lg flex items-center justify-center mr-4">
-                            <i data-lucide="briefcase" class="w-6 h-6 text-[#ffa600]"></i>
+                            <i data-lucide="briefcase" class="w-6 h-6 text-[#ffa600] group-hover:text-[#92abc4] transition duration-300"></i>
                         </div>
                         <div>
-                            <span class="text-sm text-purple-600 font-medium">Services SETA</span>
+                            <span class="text-sm text-[#ffa600] font-medium group-hover:text-[#92abc4] transition duration-300">Services SETA</span>
                             <h3 class="font-bold text-lg text-[#12265E]">Business Services</h3>
                         </div>
                     </div>
-                    <p class="text-white text-sm">Business administration and management qualifications.</p>
+                    <p class="text-gray-600 text-sm">Business administration and management qualifications.</p>
                 </a>
 
-                <a href="../setas/fasset.html" class="bg-white rounded-2xl shadow-lg p-6 card-hover transition-all duration-300 block">
+                <a href="../setas/fasset.html" class="group bg-white rounded-2xl shadow-lg p-6 card-hover transition-all duration-300 block">
                     <div class="flex items-center mb-4">
                         <div class="w-12 h-12 bg-[#ffffff]/70 rounded-lg flex items-center justify-center mr-4">
-                            <i data-lucide="calculator" class="w-6 h-6 text-[#ffa600]"></i>
+                            <i data-lucide="calculator" class="w-6 h-6 text-[#ffa600] group-hover:text-[#92abc4] transition duration-300"></i>
                         </div>
                         <div>
-                            <span class="text-sm text-green-600 font-medium">All Levels</span>
+                            <span class="text-sm text-[#ffa600] font-medium group-hover:text-[#92abc4] transition duration-300">All Levels</span>
                             <h3 class="font-bold text-lg text-[#12265E]">View All FASSET</h3>
                         </div>
                     </div>
