@@ -458,32 +458,53 @@
             }
         }
 
-        function submitBooking(event) {
+        async function submitBooking(event) {
             event.preventDefault();
 
             // Get form data
             const formData = new FormData(event.target);
             const bookingData = {
-                firstName: formData.get('firstName'),
-                lastName: formData.get('lastName'),
-                email: formData.get('email'),
-                phone: formData.get('phone'),
-                company: formData.get('company'),
-                numberOfParticipants: formData.get('numberOfParticipants'),
-                preferredDate: formData.get('preferredDate'),
-                additionalInfo: formData.get('additionalInfo'),
-                trainingCourse: document.title.split('|')[0].trim()
+                Name: formData.get('firstName') || '',
+                Surname: formData.get('lastName') || '',
+                Email: formData.get('email') || '',
+                MobileNumber: formData.get('phone') || '',
+                JobTitle: '',
+                CompanyName: formData.get('company') || '',
+                NumEmployees: 0,
+                Course: 'Sales Training',
+                NumAttendees: parseInt(formData.get('numberOfParticipants')) || 0,
+                Location: '',
+                PreferredDate: formData.get('preferredDate') || '',
+                Reason: formData.get('additionalInfo') || '',
+                Source: 'sales-training'
             };
 
-            // Show success message
-            alert('Thank you for your booking request! We will contact you shortly to confirm the details.');
-            closeBookNowModal();
+            // Store in localStorage
+            localStorage.setItem('lastBookingData', JSON.stringify(bookingData));
 
-            // Reset form
-            event.target.reset();
+            try {
+                const response = await fetch('https://enquiry.speccon.co.za/api/enquiry/submit', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify(bookingData)
+                });
 
-            // In a real implementation, you would send this data to your server
-            console.log('Booking submitted:', bookingData);
+                if (response.ok) {
+                    alert('Thank you for your booking request! We will contact you shortly to confirm the details.');
+                    closeBookNowModal();
+                    event.target.reset();
+                } else {
+                    const errorData = await response.json();
+                    alert('There was an error submitting your booking. Please try again or contact us directly.');
+                    console.error('API Error:', errorData);
+                }
+            } catch (error) {
+                alert('There was an error submitting your booking. Please try again or contact us directly.');
+                console.error('Network Error:', error);
+            }
         }
 
         // Close modal when clicking outside
