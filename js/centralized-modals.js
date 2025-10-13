@@ -422,28 +422,33 @@ function setupContactModal() {
             submitButton.textContent = 'Sending...';
 
             try {
-                // Prepare data for API
-                const data = {
-                    name: formData.get('name'),
-                    surname: formData.get('surname'),
-                    email: formData.get('email'),
-                    phone: formData.get('phone'),
-                    jobTitle: formData.get('jobTitle') || '',
-                    company: formData.get('company') || '',
-                    reason: formData.get('reason'),
-                    message: formData.get('message') || '',
-                    type: 'contact',
-                    source: 'website',
-                    submittedAt: new Date().toISOString()
+                // Prepare data for API (matching index.html format)
+                const applicationData = {
+                    Name: formData.get('name') || '',
+                    Surname: formData.get('surname') || '',
+                    Email: formData.get('email') || '',
+                    MobileNumber: formData.get('phone') || '',
+                    JobTitle: formData.get('jobTitle') || '',
+                    CompanyName: formData.get('company') || '',
+                    NumEmployees: 0,
+                    Course: '',
+                    NumAttendees: 0,
+                    Location: '',
+                    Reason: formData.get('reason') || '',
+                    Source: 'contactus'
                 };
 
+                // Save to localStorage for reference (matching index.html behavior)
+                localStorage.setItem('lastApplicationData', JSON.stringify(applicationData));
+
                 // Send to API
-                const response = await fetch('https://equiry.speccon.co.za/api/enquiry/submit', {
+                const response = await fetch('https://enquiry.speccon.co.za/api/enquiry/submit', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
+                        'Accept': 'application/json'
                     },
-                    body: JSON.stringify(data)
+                    body: JSON.stringify(applicationData)
                 });
 
                 if (!response.ok) {
@@ -531,10 +536,11 @@ function setupEnquireModal() {
                 };
 
                 // Send to API
-                const response = await fetch('https://equiry.speccon.co.za/api/enquiry/submit', {
+                const response = await fetch('https://enquiry.speccon.co.za/api/enquiry/submit', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
+                        'Accept': 'application/json'
                     },
                     body: JSON.stringify(data)
                 });
@@ -627,10 +633,11 @@ function setupBookNowModal() {
                 };
 
                 // Send to API
-                const response = await fetch('https://equiry.speccon.co.za/api/enquiry/submit', {
+                const response = await fetch('https://enquiry.speccon.co.za/api/enquiry/submit', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
+                        'Accept': 'application/json'
                     },
                     body: JSON.stringify(data)
                 });
