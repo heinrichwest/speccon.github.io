@@ -7,15 +7,29 @@ NQF Level: 2
 Minimum Credits: 120
 Qualification NLRD ID: 48977
 Learning Programme NLRD ID: N/A
-Expiry Date: 30-Jun-26
-Status: Legacy Extended
+Registration End Date: 30-Jun-2023
+Last Date for Enrolment: 30-Jun-2026
+Last Date for Achievement: 30-Jun-2029
+Status: Passed the End Date - Status was 'Reregistered'
 Reference Sheet: Megro
 
-MODULES AND UNITS
-=================
-PURPOSE
-=======
-This qualification provides learners with the opportunity to obtain competence in broad macadamia production and de-husking processes and practices, including harvesting of macadamias, fertilisation and irrigation of orchards, scouting of macadamia orchards, and de-husking of macadamia nuts. This will provide the learner with opportunities to grow within any of these fields.
+QUALIFICATION OVERVIEW
+======================
+
+This qualification is designed to enable junior personnel to progress towards farm labour positions in mixed farming systems. The qualification provides learners with the opportunity to participate in agricultural processes for both plant and animal production while performing directed activities and guiding others in a mixed farming context.
+
+Key objectives of this qualification include:
+• Participating in agricultural processes combining plant and animal production under supervision
+• Performing directed activities and providing guidance to other team members
+• Gaining competency in multiple agricultural sub-fields including small stock, large stock, dairy, vegetable production, and hydroponic systems
+• Making responsible decisions within familiar contexts based on agri-business principles
+• Understanding and implementing agricultural practices and technical skills in mixed farming environments
+• Developing fundamental competencies in communication, mathematics, and data management
+• Learning agri-business principles including enterprise selection, production management, and marketing
+• Implementing good agricultural practices including food safety, quality management, and environmental conservation
+• Acquiring practical skills in both animal production (feeding, breeding, health) and plant production (cultivation, harvesting, pest management)
+
+This qualification prepares learners for progression to higher management and technical production roles and allows horizontal movement between different agricultural sub-fields. It also supports recognition of prior learning and accommodates learners with varying backgrounds and experience levels.
 
 COURSE CONTENT
 ==============
@@ -66,8 +80,28 @@ ENTRY LEVEL REQUIREMENTS
 - Numeracy, Literacy & Communication NQF 1
 - Technical skills pertaining to agricultural activities NQF 1
 
-CAREER POSSIBILITIES
-===================
-- Farmer / Farm Worker specialising in Animal Production
-- Farm Supervisor
-- Farm Team Leader
+CAREER OPPORTUNITIES
+====================
+
+Upon successful completion of this qualification, learners can pursue the following career paths:
+
+• Farm Labourer/Operator in mixed farming systems
+• Agricultural Worker in various specializations:
+  - Small stock production
+  - Large stock production
+  - Dairy production
+  - Vegetable production
+  - Hydroponic production
+  - Organic farming
+  - Combined plant and animal production
+• Junior Farm Supervisor
+• Team Leader in agricultural operations
+
+This qualification also provides opportunities for:
+• Progression to higher agricultural qualifications at NQF Level 3
+• Advancement towards management and technical production practices
+• Horizontal movement between different agricultural sub-fields
+• Active participation in the primary agricultural sector
+• Access to local, national, and international agricultural markets
+• Career development in diverse mixed farming operations
+• Recognition of prior learning and practical experience

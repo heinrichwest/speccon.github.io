@@ -1,4 +1,4 @@
-QUALIFICATION DETAILS
+QUALIFICATION DETAILS  .
 =====================
 
 Qualification Name: National Certificate: Animal Production
@@ -7,9 +7,44 @@ NQF Level: 1
 Minimum Credits: 120
 Qualification NLRD ID: 48970
 Learning Programme NLRD ID: N/A
-Expiry Date: 30-Jun-26
-Status: Legacy extended
+Registration End Date: 30-Jun-2023
+Status: Passed the End Date - Status was 'Reregistered'
 Reference Sheet: Megro
+
+QUALIFICATION OVERVIEW
+======================
+
+This qualification is designed to provide new entrants with access to the Primary Agricultural Sector in Animal Production. It aims to equip learners with the foundational knowledge and skills required to participate effectively in agricultural processes under supervision.
+
+Key objectives of this qualification include:
+• Enabling learners to participate in agricultural processes and gain competence in specialized sub-fields of Animal Production
+• Developing an understanding of basic agri-business principles and agricultural practices
+• Building skills to make responsible decisions within a limited range of farming operations
+• Supporting local economic development through agricultural production
+• Allowing horizontal progression between different animal production categories (small stock, large stock, dairy, aquaculture, etc.)
+• Providing a pathway to NQF Level 2 qualifications for career advancement
+
+This qualification prepares learners to contribute to local, national, and international agricultural markets while developing a solid foundation in animal production practices.
+
+CAREER OPPORTUNITIES
+====================
+
+Upon successful completion of this qualification, learners can pursue the following career paths:
+
+• Junior Labourer in farming operations
+• Entry-level Farmer in animal production
+• Agricultural Assistant in various animal production sub-fields including:
+  - Small stock production
+  - Large stock production
+  - Dairy farming
+  - Aquaculture
+  - Other specialized animal production areas
+
+This qualification also provides opportunities for:
+• Progression towards higher management and technical production practices
+• Advancement to NQF Level 2 qualifications
+• Horizontal movement between different animal production categories
+• Development of specialised skills in chosen animal production sub-fields
 
 MODULES AND UNITS
 =================
@@ -58,3 +93,11 @@ Module 6: Farming Practices
 • Apply fertiliser manually
 • Control nematodes manually using chemicals
 • Control weeds manually
+
+CAREER
+=================
+1. Farm Worker
+2. Livestock Assistant
+3. Animal Care Assistant
+4. Agricultural Trainee
+5. Farm Labourer

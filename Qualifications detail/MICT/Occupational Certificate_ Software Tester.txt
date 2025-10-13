@@ -27,3 +27,9 @@ MODULES AND UNITS
 • **Module 4: Testing and Quality Assurance (30 credits)**
   - 251201-001-00-PM-04: Test or Debug Source Code to Ensure Client's needs are met (Level 5, 15 credits)
   - 251201-001-00-WM-04: Software Testing (Level 5, 15 credits)
+
+  CAREERS
+  1. Junior/Entry Level Software Tester/QA Analyst
+  2. Test Case Developer/Documenter
+  3. Quality Assurance Support/Quality Assurance Administrator Role
+  4. Automation Tester

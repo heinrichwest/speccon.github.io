@@ -533,6 +533,7 @@
         }        async function submitEnquiry(event) {
             event.preventDefault();
 
+            // Get form data
             const formData = new FormData(event.target);
             const enquiryData = {
                 Name: formData.get('firstName') || '',
@@ -547,17 +548,19 @@
                 Location: '',
                 Reason: formData.get('reason') || '',
                 Source: 'fasset'
+
             };
 
-            // Save to localStorage as backup
+            // Save to localStorage for reference (matching index.html behavior)
             localStorage.setItem('lastEnquiryData', JSON.stringify(enquiryData));
 
+            // Submit to API
             try {
                 const response = await fetch('https://enquiry.speccon.co.za/api/enquiry/submit', {
                     method: 'POST',
                     headers: {
-                        'Content-Type': 'application/json',
-                        'Accept': 'application/json'
+                             'Content-Type': 'application/json',
+                            'Accept': 'application/json'
                     },
                     body: JSON.stringify(enquiryData)
                 });
@@ -574,7 +577,14 @@
             } catch (error) {
                 alert('There was an error submitting your enquiry. Please try again or contact us directly.');
                 console.error('Network Error:', error);
-            }        }
+            }
+
+            // Reset form
+            event.target.reset();
+
+            // In a real implementation, you would send this data to your server
+            console.log('Enquiry submitted:', enquiryData);
+        }
 
         // Set up modal event listeners after DOM is ready
         document.addEventListener('DOMContentLoaded', function() {

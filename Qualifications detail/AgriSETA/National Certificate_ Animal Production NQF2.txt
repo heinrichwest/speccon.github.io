@@ -7,10 +7,83 @@ NQF Level: 2
 Minimum Credits: 120
 Qualification NLRD ID: 48976
 Learning Programme NLRD ID: N/A
-Expiry Date: 30-Jun-26
-Status: Legacy extended
+Registration End Date: 30-Jun-2023
+Status: Passed the End Date - Status was 'Reregistered'
 Reference Sheet: Megro
+
+QUALIFICATION OVERVIEW
+======================
+
+This qualification is designed to enable junior personnel to progress towards farm labor positions in animal production. The qualification provides learners with the opportunity to participate in agricultural processes under supervision while performing directed activities in specialized sub-fields of animal production.
+
+Key objectives of this qualification include:
+• Gaining competence in specialized animal production areas including small stock, large stock, dairy production, pig/poultry production, game farming, aquaculture, and bee keeping
+• Understanding basic agri-business principles and agricultural practices
+• Developing technical and practical skills for animal production operations
+• Building knowledge in fundamental competencies including communication, mathematics, and data collection
+• Learning Good Agricultural Practices including food safety, quality management, and environmental conservation
+• Acquiring skills in animal evaluation, nutrition, breeding, and health management
+
+This qualification prepares learners to contribute effectively to animal production operations and provides a pathway for progression to higher management levels and NQF Level 3 qualifications. It also allows horizontal progression between different animal production categories.
+
+CAREER OPPORTUNITIES
+====================
+
+Upon successful completion of this qualification, learners can pursue the following career paths:
+
+• Farm Laborer in animal production operations
+• Animal Production Technician in various specializations:
+  - Small and large stock production
+  - Dairy production
+  - Pig and poultry production
+  - Game farming
+  - Aquaculture
+  - Bee keeping
+  - Organic production
+• Agricultural Assistant in animal husbandry operations
+
+This qualification also provides opportunities for:
+• Progression to higher agricultural qualifications at NQF Level 3
+• Advancement towards supervisory and junior management positions
+• Horizontal movement between different animal production sub-fields
+• Participation in local economic development through agricultural skills
+• Contributing to local, national, and international agricultural markets
 
 MODULES AND UNITS
 =================
-[This section will be populated later with detailed curriculum information]
+
+Fundamental Competencies:
+
+1. Apply various communication skills within the agricultural environment.
+2. Apply mathematical calculations within the agricultural environment.
+3. Collect and collate agricultural data and recognize and report on deviations
+4. Explain basic functions of the environment by recognising patterns and processes, knowing local resources and basic sustainable agricultural processes using environmental indicators.
+
+Agri-business:
+
+5. Apply basic skills in record keeping, storage, contaminant management and associated legislation when controlling input and stock.
+6. Set goals and objectives related to production / conversion systems within an agricultural business.
+7. Apply knowledge of the marketing principles within agriculture for a specific product or service.
+8. Define and illustrate the gross margin statement, income statement, balance sheet and cash flow budget as well as the different cost aspects that one can find in a business.
+9. Describe and understand the principles of Human Resources Management as applied.
+10. Explain the principles and factors influencing agricultural enterprise selection and production.
+
+Good Agricultural Practices:
+
+11. Monitor and support the implementation of food safety and quality, production, environmental and social practices and awareness within the agricultural supply chain.
+12. Demonstrate an understanding of the importance of water quality to agriculture and to monitor and maintain water quality using established procedures.
+13. Apply basic practices to conserve the environment, including natural resources.
+14. Select basic equipment and implements that are appropriate to a combination of activities within a single agricultural process.
+15. Carry out basic physical farm layout tasks including construction of rainwater harvesting and soil conservation structures in a small farm or garden environment
+
+Animal Production:
+
+16. Evaluate animals externally with respect to their internal and external anatomical systems and morphology.
+17. Explain the basic concepts used in animal nutrition, maintaining, preserving, modifying and enhancing the nutrient value of animal feeds and follow correct on-farm feeding practices.
+18. Identify and monitor breeding behaviour, and pre and post-partum behaviour of farm animals.
+19. Harvest animal products, prepare them for processing and identify processes involved in processing of animal products.
+20. Identify, record and report on abnormal animal behaviour and physical abnormalities, supervise the movement and restraint of animals and apply treatment and perform basic procedures.
+
+Plant Production:
+
+21. Produce crop whilst demonstrating an understanding of the physical and biological environment and its relationship to sustainable production. 

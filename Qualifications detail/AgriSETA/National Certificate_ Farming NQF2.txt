@@ -7,15 +7,30 @@ NQF Level: 2
 Minimum Credits: 120
 Qualification NLRD ID: 20288
 Learning Programme NLRD ID: N/A
-Expiry Date: 30-Jun-26
-Status: Legacy Extended
+Registration End Date: 30-Jun-2023
+Status: Passed the End Date - Status was 'Reregistered'
 Reference Sheet: Megro
+
+QUALIFICATION OVERVIEW
+======================
+
+This qualification enables learners to perform the necessary technical skills within the context of agronomy, horticulture, or animal husbandry, as applicable to the agricultural commodity. The qualification is designed to support learners in operating as part of an operational team or, in the case of farm owners, to execute basic business skills and develop as a Small, Micro, and Medium Enterprise (SMME).
+
+Key objectives of this qualification include:
+• Performing technical agricultural skills in agronomy, horticulture, or animal husbandry operations
+• Executing basic business skills for farm management and enterprise development
+• Producing quality agricultural products for local, national, and international markets
+• Understanding and applying communication and information management skills in farming contexts
+• Developing mathematical literacy for agricultural applications
+• Learning agricultural production fundamentals including pest and disease identification
+• Implementing quality control and health and safety measures
+• Supporting land reform processes and school leavers entering agriculture
+• Generating income through farming and trading commodities in SADC countries
+
+This qualification allows recognition of prior learning and supports individuals with varying levels of practical farming experience. It provides opportunities for articulation with other agricultural roles and career advancement in the sector.
 
 MODULES AND UNITS
 =================
-PURPOSE
-=======
-A learner assessed as competent against this qualification will be able to perform the necessary technical skills within the context of either agronomy, horticulture, or animal husbandry, as applicable to the agricultural commodity. The learner will be able to operate as part of the operational team. In the case of the farm owner, the learner will be able to execute basic business skills and develop as a small, micro, or medium enterprise.
 
 COURSE CONTENT
 ==============
@@ -66,8 +81,25 @@ ENTRY LEVEL REQUIREMENTS
 - Numeracy, Literacy & Communication NQF 1
 - Technical skills pertaining to agricultural activities NQF 1
 
-CAREER POSSIBILITIES
-===================
-- Farmer/Farm Worker specialising in Animal Production
-- Farm Supervisor
-- Farm Team Leader
+CAREER OPPORTUNITIES
+====================
+
+Upon successful completion of this qualification, learners can pursue the following career paths:
+
+• Farm Worker specializing in various agricultural sectors:
+  - Animal Production
+  - Crop Production (Agronomy)
+  - Horticulture
+• Farm Operator managing day-to-day operations
+• Farm Supervisor overseeing teams and activities
+• Farm Team Leader coordinating work groups
+• Entrepreneur running own farming operation as an SMME
+• Agricultural Technician
+
+This qualification also provides opportunities for:
+• Developing and operating as a Small, Micro, or Medium Enterprise (SMME)
+• Generating sustainable income through agricultural production
+• Trading agricultural commodities in local, national, and SADC markets
+• Articulation with other agricultural roles such as laboratory assistant
+• Supporting land reform beneficiaries in establishing farming operations
+• Progression to higher NQF levels in agricultural qualifications

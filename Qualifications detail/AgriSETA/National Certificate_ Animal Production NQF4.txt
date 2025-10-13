@@ -7,10 +7,94 @@ NQF Level: 4
 Minimum Credits: 140
 Qualification NLRD ID: 48979
 Learning Programme NLRD ID: N/A
-Expiry Date: 30-Jun-26
-Status: Legacy Extended
+Registration End Date: 30-Jun-2023
+Last Date for Enrolment: 30-Jun-2026
+Last Date for Achievement: 30-Jun-2029
+Status: Passed the End Date - Status was 'Reregistered'
 Reference Sheet: Megro
+
+QUALIFICATION OVERVIEW
+======================
+
+This qualification is designed to enable supervisors to progress towards a Junior Farm Manager position in Animal Production. The qualification prepares learners to manage supervisors and working teams in agricultural processes while taking responsibility for both the quality and quantity of outputs.
+
+Key objectives of this qualification include:
+• Managing supervisors and coordinating working teams in agricultural operations
+• Gaining competency in specialized sub-fields of animal production including small/large stock, dairy, pig/poultry, game farming, aquaculture, and bee keeping
+• Making responsible decisions based on agri-business principles and agricultural management practices
+• Overseeing implementation of procedures and maintaining industry standards
+• Developing advanced skills in communication, mathematical calculations, and data management
+• Implementing quality control and food safety management systems
+• Understanding and applying principles of human resources management
+• Managing stores, agro-inputs, and farm resources effectively
+
+This qualification provides a pathway to NQF Level 5 qualifications and enables horizontal movement between animal production sub-fields. It also allows recognition of prior learning and prepares learners for advanced management roles in the agricultural sector.
+
+CAREER OPPORTUNITIES
+====================
+
+Upon successful completion of this qualification, learners can pursue the following career paths:
+
+• Junior Farm Manager in animal production
+• Farm Supervisor managing teams and operations
+• Animal Production Manager in various specializations:
+  - Small and large stock production
+  - Dairy production
+  - Pig and poultry production
+  - Game farming
+  - Aquaculture
+  - Bee keeping
+  - Organic production
+• Agricultural Operations Coordinator
+• Quality Control Manager in agricultural enterprises
+• Agricultural Marketing and Sales positions
+
+This qualification also provides opportunities for:
+• Progression to NQF Level 5 qualifications and senior management positions
+• Horizontal movement between different animal production sub-fields
+• Agri-tourism management roles
+• Development of integrated whole farm budgets and business planning
+• Leadership positions in agricultural enterprises and cooperatives
 
 MODULES AND UNITS
 =================
-[This section will be populated later with detailed curriculum information]
+Fundamental Competencies:
+
+1. Apply communication skills in an agricultural environment.
+2. Apply mathematical calculations within the agricultural environment.
+3. Implement a data collection plan in the agricultural sector.
+4. Plan and maintain environmentally sound agricultural processes by identifying knowledge processes and patterns of the environment in the region, and understanding the limitations of resources and how their management contributes to sustainable interactive agriculture, using environmental indicators.
+
+Agri-business:
+
+5. Manage stores and agro-inputs in stores.
+6. Implement quality control aspects of an agribusiness
+7. Demonstrate ability to development of an integrated marketing plan.
+8. Demonstrate the ability to develop an integrated whole farm budget.
+9. Apply principles of human resources management in an agricultural environment.
+10. Participate in the analysis, planning and management of an agri-business
+11. Describe the historical and current structure of the relevant industry within secondary agriculture.
+12. Evaluate and adjust the enterprise and production processes of animal and crop enterprises.
+
+Agricultural Practices:
+
+13. Implement a management system related to food safety, production practices, as well as demonstrate environmental and social awareness within the agricultural supply chain.
+14. Apply principles to design, prepare and implement basic operational procedures for the maintenance and storage of equipment, implements and infrastructure.
+15. Implement corrective actions to ensure water quality.
+16. Implement a natural resource management plan of the farm in relation to area wide planning.
+17. Maintain the most appropriate land-use on a farm by continuously assessing the natural resource base.
+
+Animal Production:
+
+18. Evaluate and manage animals according to specific criteria related to anatomical and physiological systems.
+19. Describe the scientific and technical principles of animal nutrition, feed, technology and feeding management.
+20. Apply basic genetic principles in the planning and maintenance of animal breeding systems.
+21. Describe potential damage and harmful effects to animal products and suggest alternatives.
+22. Apply repetitive and basic clinical procedures and apply correct dosages for the treatment of common diseases.
+23. Describe the historic and geographic origin and distribution of animal species and its use by man. 
+
+CAREERS
+1. Animal Production Assistant/Technician
+2. Livestock Farm Worker/Supervisor
+3. Dairy Farm Worker/Supervisor
+4. Poultry Farm Worker

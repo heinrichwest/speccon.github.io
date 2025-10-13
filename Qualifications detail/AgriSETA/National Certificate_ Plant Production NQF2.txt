@@ -7,15 +7,29 @@ NQF Level: 2
 Minimum Credits: 120
 Qualification NLRD ID: 48975
 Learning Programme NLRD ID: N/A
-Expiry Date: 30-Jun-26
-Status: Legacy Extended
+Registration End Date: 30-Jun-2023
+Last Date for Enrolment: 30-Jun-2026
+Last Date for Achievement: 30-Jun-2029
+Status: Passed the End Date - Status was 'Reregistered'
 Reference Sheet: Megro
 
-MODULES AND UNITS
-=================
-PURPOSE
-=======
-The purpose of this qualification is to allow junior personnel and elected candidates to progress towards a position of farm labourers (operators) with specific reference to plant production.
+QUALIFICATION OVERVIEW
+======================
+
+This qualification is designed to enable junior personnel to progress towards farm labourer (operator) positions with specific reference to plant production. The qualification provides learners with the opportunity to participate in agricultural processes, perform directed activities, and gain competency in specialized plant production sub-fields.
+
+Key objectives of this qualification include:
+• Participating in agricultural processes and performing directed activities in plant production operations
+• Gaining competency in plant production sub-fields and making responsible decisions within familiar contexts
+• Understanding agri-business principles and agricultural practices applicable to plant production
+• Developing communication skills for accessing and using information, oral communication, and written documentation
+• Building mathematical literacy for statistics, probability, patterns, functions, and financial monitoring
+• Learning general agricultural practices including ecological environment, data collection, livestock production principles, equipment maintenance, and agrochemical control
+• Understanding agricultural business principles including marketing, layout planning, input control, production systems, human resource management, and financial statements
+• Acquiring advanced plant production skills including crop protection, plant manipulation, propagation, harvesting, irrigation systems, soil fertility, and pest/disease/weed control
+• Implementing natural resource management including sustainable farming practices and agri/ecotourism
+
+This qualification prepares learners for progression to higher agricultural qualifications at NQF Level 3 and enables advancement towards supervisory and management roles. It also allows recognition of prior learning and accommodates learners with varying backgrounds including farm owners and those with practical experience.
 
 COURSE CONTENT
 ==============
@@ -76,8 +90,26 @@ ENTRY LEVEL REQUIREMENTS
 - Grade 10
 - Computer Literacy
 
-CAREER POSSIBILITIES
-===================
-- Farmer / Farm Worker specialising in Animal Production
-- Farm Supervisor
-- Farm Team Leader
+CAREER OPPORTUNITIES
+====================
+
+Upon successful completion of this qualification, learners can pursue the following career paths:
+
+• Farm Labourer/Operator in plant production
+• Farm Worker specializing in plant production:
+  - Pest Controller
+  - Irrigationist
+  - Crop Production Worker
+  - Horticulture Worker
+• Junior Farm Supervisor in plant production operations
+• Farm Team Leader
+• Agricultural Technician in plant production
+
+This qualification also provides opportunities for:
+• Progression to higher agricultural qualifications at NQF Level 3
+• Advancement towards supervisory and junior management positions
+• Career development in various plant production sub-fields
+• Horizontal movement to other agricultural sectors
+• Participation in local, national, and international agricultural markets
+• Development of specialized skills in plant production areas
+• Recognition of prior learning and practical experience

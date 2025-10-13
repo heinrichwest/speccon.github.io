@@ -7,9 +7,52 @@ NQF Level: 1
 Minimum Credits: 120
 Qualification NLRD ID: 48972
 Learning Programme NLRD ID: N/A
-Expiry Date: 30-Jun-26
-Status: Legacy Extended
+Registration End Date: 30-Jun-2023
+Last Date for Enrolment: 30-Jun-2026
+Last Date for Achievement: 30-Jun-2029
+Status: Passed the End Date - Status was 'Reregistered'
 Reference Sheet: Megro
+
+QUALIFICATION OVERVIEW
+======================
+
+This qualification is designed to provide new entrants with access to the Primary Agricultural Sector, specifically in Plant Production. The qualification prepares learners to participate in agricultural processes under close supervision while gaining competencies in various plant production sub-fields.
+
+Key objectives of this qualification include:
+• Enabling learners to participate in agricultural processes and gain competence in specialized plant production sub-fields including organic production, hydroponics, permaculture, agronomy, and horticulture
+• Developing skills to make responsible decisions within a limited range based on understanding of agri-business principles
+• Building foundational knowledge in mathematical literacy, communication, and agricultural data collection
+• Learning agricultural business principles including enterprise selection, capital management, human resource management, and marketing
+• Understanding and applying general agricultural practices including food safety, water quality management, and equipment operation
+• Acquiring practical plant production skills including plant structure and function, crop planting, harvesting, pest/disease/weed recognition, plant propagation, and fertilization
+• Learning natural resource management and sustainable farming systems
+
+This qualification prepares learners for progression towards higher agricultural management and technical practices. It also provides opportunities for horizontal progression to other agricultural qualifications and allows recognition of prior learning. Entry requirements assume basic literacy and numeracy equivalent to ABET 3.
+
+CAREER OPPORTUNITIES
+====================
+
+Upon successful completion of this qualification, learners can pursue the following career paths:
+
+• Junior Labourer in plant production farming operations
+• Entry-level Farmer in plant production
+• Agricultural Worker in various plant production specializations:
+  - Organic production
+  - Hydroponics
+  - Permaculture
+  - Agronomy (field crops)
+  - Horticulture (fruits, vegetables, ornamentals)
+• Farm Assistant in plant production operations
+
+This qualification also provides opportunities for:
+• Progression to higher agricultural qualifications at NQF Level 2
+• Advancement towards agricultural management and technical production practices
+• Horizontal movement to other agricultural fields (animal production, mixed farming)
+• Career paths in agricultural pharmaceutical operations
+• Roles as laboratory assistant in agricultural settings
+• Positions in marketing and selling agricultural products
+• Participation in local, national, and international agricultural markets
+• Development of own farming enterprises
 
 MODULES AND UNITS
 =================

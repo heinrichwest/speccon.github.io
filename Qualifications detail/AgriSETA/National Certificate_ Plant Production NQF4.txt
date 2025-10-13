@@ -7,43 +7,60 @@ NQF Level: 4
 Minimum Credits: 142
 Qualification NLRD ID: 49009
 Learning Programme NLRD ID: N/A
-Expiry Date: 30-Jun-26
-Status: Legacy extended
+Registration End Date: 30-Jun-2023
+Last Date for Enrolment: 30-Jun-2026
+Last Date for Achievement: 30-Jun-2029
+Status: Passed the End Date - Status was 'Reregistered'
+Replacement Qualification: Occupational Certificate: Horticultural Farm Foreman (ID: 101871)
 Reference Sheet: Megro
+
+QUALIFICATION OVERVIEW
+======================
+
+This qualification is designed to enable supervisors to progress towards junior farm manager positions in plant production. The qualification prepares learners to manage supervisors and working teams in agricultural processes while taking full responsibility for the quality and quantity of outputs in plant production operations.
+
+Key objectives of this qualification include:
+• Managing supervisors and coordinating working teams in plant production processes
+• Taking responsibility for quality and quantity of outputs in agricultural operations
+• Gaining competency in specialized plant production sub-fields including vegetables, fruit production, hydroponics, organic production, permaculture, agronomy, and horticulture
+• Making responsible decisions based on agri-business principles and agricultural management practices
+• Overseeing implementation of procedures and ensuring compliance with industry standards
+• Developing advanced management and leadership skills in plant production environments
+• Understanding farm operations across multiple plant production categories
+• Implementing quality control, safety, and environmental management systems
+• Preparing for higher management and technical production practices at NQF Level 5
+
+This qualification positions learners for higher management roles and allows horizontal movement between different plant production sub-fields. It also supports recognition of prior learning and accommodates learners from diverse backgrounds including farm operators, school leavers, and those with practical experience. The qualification has been replaced by the Occupational Certificate: Horticultural Farm Foreman (ID: 101871) for those seeking current credentials.
+
+CAREER OPPORTUNITIES
+====================
+
+Upon successful completion of this qualification, learners can pursue the following career paths:
+
+• Junior Farm Manager in plant production
+• Farm Manager overseeing plant production operations
+• Agricultural Supervisor managing teams and processes
+• Production Manager in various plant production sectors:
+  - Vegetables
+  - Fruit production
+  - Hydroponics
+  - Organic production
+  - Permaculture
+  - Agronomy
+  - Horticulture
+• Agricultural Operations Coordinator
+• Quality Control Manager in plant production
+• Horticultural Farm Foreman
+
+This qualification also provides opportunities for:
+• Progression to higher agricultural qualifications at NQF Level 5
+• Advancement to senior management and executive positions in agriculture
+• Horizontal movement between different plant production specializations
+• Leadership positions in agricultural enterprises and cooperatives
+• Participation in local, national, and international agricultural markets
+• Development of farm management expertise and business planning skills
+• Transition to Occupational Certificate: Horticultural Farm Foreman for updated credentials
 
 MODULES AND UNITS
 =================
-Fundamental Competencies:
-
-1. Apply communication skills in an agricultural environment.
-2. Apply mathematical calculations within the agricultural environment.
-3. Implement a data collection plan in the agricultural sector.
-4. Plan and maintain environmentally sound agricultural processes by identifying knowledge processes and patterns of the environment in the region, and understanding the limitations of resources and how their management contributes to sustainable interactive agriculture, using environmental indicators.
-
-Agri-business:
-
-5. Manage stores and agro-inputs in stores.
-6. Implement quality control aspects of an agribusiness.
-7. Demonstrate ability to development of an integrated marketing plan.
-8. Demonstrate the ability to develop an integrated whole farm budget.
-9. Apply principles of human resources management in an agricultural environment.
-10. Participate in the analysis, planning and management of an agri-business.
-11. Describe the historical and current structure of the relevant industry within secondary agriculture.
-12. Evaluate and adjust the enterprise and production processes of animal and crop enterprises.
-
-Agricultural Practices:
-
-13. Implement a management system related to food safety, production practices, as well as demonstrate environmental and social awareness within the agricultural supply chain.
-14. Apply principles to design, prepare and implement basic operational procedures for the maintenance and storage of equipment, implements and infrastructure.
-15. Implement corrective actions to ensure water quality.
-16. Implement a natural resource management plan of the farm in relation to area wide planning.
-17. Maintain the most appropriate land-use on a farm by continuously assessing the natural resource base.
-
-Plant Production:
-
-18. Explain the different physiological processes involved in the growth and development of the plant.
-19. Establish and supervise the implementation of soil preparation procedures
-20. Propagate plants in a variety of situations
-21. Demonstrate an understanding of an integrated pest management system
-22. Develop a harvesting plan for crops.
-23. Implement a plant manipulation management plan using a broad range of techniques. 
+[Module content to be updated based on specific curriculum requirements]

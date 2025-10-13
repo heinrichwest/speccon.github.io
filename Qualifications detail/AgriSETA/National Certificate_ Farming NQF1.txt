@@ -7,9 +7,48 @@ NQF Level: 1
 Minimum Credits: 120
 Qualification NLRD ID: 20287
 Learning Programme NLRD ID: N/A
-Expiry Date: 30-Jun-26
-Status: Legacy Extended
+Registration End Date: 30-Jun-2023
+Last Date for Enrolment: 30-Jun-2026
+Last Date for Achievement: 30-Jun-2029
+Status: Passed the End Date - Status was 'Reregistered'
 Reference Sheet: Megro
+
+QUALIFICATION OVERVIEW
+======================
+
+This qualification is designed to prepare learners to practice as farmers in the farming field of their choice, whether in agronomy, horticulture, animal husbandry, or a combination of these fields. The qualification provides accessibility and flexibility while reflecting the diverse needs of farming in South Africa.
+
+Key objectives of this qualification include:
+• Developing foundational skills across multiple farming disciplines including agronomy, horticulture, and animal husbandry
+• Providing accessibility and flexibility to accommodate multiple job roles and organizational requirements
+• Building competencies in communication, mathematical literacy, and practical farming skills
+• Understanding agricultural business principles including supply and demand, contracts, and production concepts
+• Learning health and safety principles relevant to agricultural environments
+• Acquiring hands-on farming practices including fencing, crop harvesting, irrigation, and pest control
+• Adapting to the changing technological nature of the agricultural industry
+
+This qualification has been benchmarked against New Zealand and Australian qualification frameworks and allows recognition of prior learning. It provides learners with a nationally recognized qualification that supports career development in various agricultural sectors.
+
+CAREER OPPORTUNITIES
+====================
+
+Upon successful completion of this qualification, learners can pursue the following career paths:
+
+• Farmer in various agricultural sectors:
+  - Agronomy (crop farming)
+  - Horticulture (fruit, vegetable, and plant production)
+  - Animal husbandry (livestock farming)
+  - Mixed farming operations
+• General Agricultural Worker
+• Farm Assistant
+• Agricultural Laborer
+
+This qualification also provides opportunities for:
+• Progression to higher NQF levels in agricultural qualifications
+• Development of own farming enterprises
+• Flexibility to work in multiple agricultural job roles
+• Recognition of prior learning and experience
+• Contribution to local, national, and international agricultural markets
 
 MODULES AND UNITS
 =================

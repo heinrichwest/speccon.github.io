@@ -1,41 +1,173 @@
 QUALIFICATION DETAILS
 =====================
 
-Qualification Name: N certitificate: Information Technology: End user Computing
+Qualification Name: National Certificate: Information Technology: End User Computing
 SETA: MICT
 NQF Level: 3
 Minimum Credits: 130
-Qualification NLRD ID: 49077
-Learning Programme NLRD ID: N/A
+Qualification SAQA ID: 61591 (Learning Programme ID: 49077)
+Field: Physical, Mathematical, Computer and Life Sciences
+Duration: 240 hours
 Expiry Date: 30-Jun-26
 Status: Legacy extended
 Reference Sheet: SpecCon MICT Seta
 
+
+QUALIFICATION OVERVIEW
+======================
+
+Purpose and Rationale:
+This qualification aims to empower learners to acquire the knowledge, skills, attitudes, and values
+required to operate confidently in the End User Computing environment. It provides a deep study of
+ICT concepts and the modern productive use of computers in business and office environments.
+
+The qualification addresses workplace needs by providing a nationally recognized certification for
+learners with end user computing experience, enabling them to:
+- Build comprehensive end user computing knowledge and skills
+- Gain recognition for prior learning and experience
+- Establish a foundation for further education in ICT
+- Improve workplace productivity and efficiency
+
+Entry Requirements:
+- Pass in Grade 11 or equivalent (NQF Level 2)
+
+International Comparability:
+This qualification is benchmarked against:
+- New Zealand National Qualifications Framework
+- Australian National Qualifications Framework
+- British National Vocational Qualifications (NVQs)
+- International certifications such as Microsoft MOUS, IC3, and ECDL/ICDL
+
+
+EXIT LEVEL OUTCOMES
+===================
+
+Upon completion of this qualification, learners will be able to:
+
+1. Apply Word Processing skills to create, edit, and format professional documents
+2. Apply Presentation Application skills to design and deliver effective presentations
+3. Apply Spreadsheet Application skills for data analysis and business calculations
+4. Apply Electronic Mail skills for professional communication
+5. Apply Web Browser skills to navigate and research information online
+6. Demonstrate improved communication skills in occupational contexts
+7. Apply mathematical literacy to investigate financial aspects of personal and business issues
+8. Understand ICT's organizational and societal impact, including preventative maintenance,
+   environmental and safety issues in computer environments
+
+
 MODULES AND UNITS
 =================
-PURPOSE
-The purpose of the qualification is to build the knowledge and skills required by learners in information technology: end user computing. It is intended to empower learners to acquire knowledge, skills, attitudes and values required to operate confidently in the end user computing course environment in the South African community and to respond to the challenges of the economic environment. 
 
-COURSE CONTENT
-Module 1 – Basic Computer Skills
-▼
-Module 2 – Excel
-▼
-Module 3 – Outlook and PowerPoint
-▼
-Module 4 – Word
-▼
-Use a Graphical User Interface (GUI)-based word processor to format documents
-Use a GUI-based word processor to create merged documents
-Use a GUI-based word processor to enhance a document through the use of tables and columns
-Module 5 – Access and Basic Communication Skills
-▼
-Module 6 – Basic Skills for Working on Projects
-▼
-Module 7 – Mathematical and Finance Essentials
-▼
-Module 8 – Research, Analyze and Present
-▼
-DELIVERY
-Duration: 12 Months
-Delivery: Classroom/Online/Blended
+The qualification consists of 130 credits divided into Core, Fundamental, and Elective components:
+
+CORE UNIT STANDARDS (56 Credits - Compulsory)
+----------------------------------------------
+
+Microsoft Office Applications:
+- MS Word (Word Processing Application)
+  * Create, edit, and format professional documents
+  * Apply advanced formatting and layout techniques
+  * Use templates and mail merge functionality
+
+- MS Excel (Spreadsheet Application)
+  * Perform basic and advanced business calculations
+  * Create and format spreadsheets and charts
+  * Use formulas and functions for data analysis
+
+- MS PowerPoint (Presentation Application)
+  * Design and create professional presentations
+  * Apply multimedia elements and animations
+  * Deliver effective presentations
+
+- MS Access (Database Application)
+  * Create and manage databases
+  * Design queries and reports
+  * Understand data relationships
+
+- MS Outlook (Electronic Mail and Communication)
+  * Manage email communications professionally
+  * Organize calendars and appointments
+  * Use contact management features
+
+Additional Core Skills:
+- Web Browser Application
+  * Navigate the internet effectively
+  * Research and evaluate online information
+  * Understand online safety and security
+
+
+FUNDAMENTAL UNIT STANDARDS (47 Credits)
+----------------------------------------
+
+Business and Communication Skills:
+- Perform basic business calculations in a business environment
+- Use language and communication in occupational learning programmes
+- Apply mathematical literacy to investigate and monitor financial aspects of:
+  * Personal financial management
+  * Business operations
+  * National economic issues
+
+Technology and Workplace Awareness:
+- Demonstrate understanding of preventative maintenance in computer environments
+- Apply environmental and safety practices in ICT workplaces
+- Investigate the use of computer technology in organizations
+- Understand the impact of technology on business processes
+
+Social Responsibility:
+- Demonstrate knowledge and understanding of HIV/AIDS in the workplace
+- Understand the effects of HIV/AIDS on business sub-sectors
+- Apply workplace policies related to health and safety
+
+
+ELECTIVE UNIT STANDARDS (27 Credits Minimum)
+---------------------------------------------
+
+Learners must complete a minimum of 27 credits from available elective options to reach
+the total of 130 credits. Electives may include:
+- Advanced applications in specific software
+- Specialized business computing skills
+- Industry-specific ICT applications
+- Additional productivity tools and technologies
+
+
+CAREER OPPORTUNITIES
+====================
+
+This qualification prepares learners for various entry-level and intermediate positions in
+office and business environments, including:
+
+Administrative Roles:
+- Office Administrator
+- Receptionist
+- Personal Assistant
+- Project Administrator
+- Administrative Assistant
+
+Technical Support:
+- Front Desk Support
+- Call Center Help Desk
+- IT Help Desk Support (entry-level)
+- Technical Support Assistant
+
+Data and Operations:
+- Data Capturer
+- Data Administrator
+- Records Management Clerk
+- Information Clerk
+
+General Business Support:
+- Customer Service Representative
+- Operations Support
+- Business Support Assistant
+- Clerical Officer
+
+Career Progression:
+Learners who complete this qualification can pursue further studies and career advancement in:
+- Higher-level ICT qualifications (NQF Levels 4-6)
+- Specialized technical certifications
+- Business administration qualifications
+- Supervisory and management roles
+
+The qualification provides both vertical mobility (progression to higher qualifications) and
+horizontal mobility (movement across different business sectors), making it versatile for
+various career pathways in the modern digital workplace.

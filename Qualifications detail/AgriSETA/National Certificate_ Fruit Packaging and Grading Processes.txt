@@ -7,15 +7,49 @@ NQF Level: 3
 Minimum Credits: 120
 Qualification NLRD ID: 48848
 Learning Programme NLRD ID: N/A
-Expiry Date: 30-Jun-26
-Status: Legacy Extended
+Registration End Date: 30-Jun-2023
+Last Date for Achievement: 30-Jun-2029
+Status: Passed the End Date - Status was 'Reregistered'
 Reference Sheet: Megro
 
-MODULES AND UNITS
-=================
-PURPOSE
-=======
-This fruit packaging and grading process equips learners with the practical skills to excel in the broad fruit packaging and grading processes and practices. These include receiving, handling, packing, storing, grading, and dispatching of fruits, ensuring that you are competent and ready for the industry.
+QUALIFICATION OVERVIEW
+======================
+
+This qualification equips learners with practical skills to excel in broad fruit packaging and grading processes and practices. The qualification is designed to release the potential of people to become more competent workers, adding value to individuals, workplaces, and the economy through comprehensive training in fruit handling operations.
+
+Key objectives of this qualification include:
+• Developing competence in receiving, handling, packing, storing, grading, and dispatching fruits
+• Understanding the basic requirements of different fruit markets and product characteristics
+• Learning mathematical literacy for measurement, calculations, geometry, and financial monitoring
+• Building communication skills for oral communication, text interpretation, and writing for various contexts
+• Understanding fruit packing and grading processes including market requirements, product characteristics, and cold chain processes
+• Operating fruit packing line machines and fruit sizing machines
+• Implementing proper fruit handling procedures including grading, packing, palletizing, dispatching, receiving, and storing
+• Applying hygiene procedures and safety and health procedures in fruit processing environments
+• Monitoring fruit treatment processes and ensuring quality control
+
+This qualification has been benchmarked against similar qualifications in New Zealand and Australia and allows recognition of prior learning (RPL). It provides both vertical and horizontal articulation possibilities and addresses Department of Labour priorities for reducing unemployment in the agricultural processing sector.
+
+CAREER OPPORTUNITIES
+====================
+
+Upon successful completion of this qualification, learners can pursue the following career paths:
+
+• Packer and Grader in fruit processing facilities
+• Packing and Grading Supervisor overseeing operations
+• Packing and Grading Team Leader coordinating teams
+• Packing and Grading Manager managing facilities
+• Quality Control Inspector in fruit processing
+• Fruit Processing Technician
+• Cold Chain Operations Specialist
+
+This qualification also provides opportunities for:
+• Career progression in the fruit packing industry
+• Advancement to supervisory and management positions in fruit processing
+• Development of specialized skills in fruit handling and quality control
+• Horizontal movement to related agricultural processing fields
+• Recognition of prior learning and practical experience
+• Contribution to reducing unemployment through skilled employment in the agricultural sector
 
 COURSE CONTENT
 ==============
@@ -62,10 +96,3 @@ Delivery: Classroom/Online/Blended
 ENTRY LEVEL REQUIREMENTS
 ========================
 - Competence in languages, communication & numeracy at NQF Level 2
-
-CAREER POSSIBILITIES
-===================
-- Packer and Grader
-- Packing and Grading Supervisor
-- Packing and Grading Manager
-- Packing and Grading Team Leader

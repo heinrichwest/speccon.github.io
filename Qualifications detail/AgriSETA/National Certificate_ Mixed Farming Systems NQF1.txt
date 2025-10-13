@@ -7,24 +7,25 @@ NQF Level: 1
 Minimum Credits: 120
 Qualification NLRD ID: 48971
 Learning Programme NLRD ID: N/A
-Expiry Date: 30-Jun-26
-Status: Legacy Extended
+Registration End Date: 30-Jun-2023
+Status: Passed the End Date - Status was 'Reregistered'
 Reference Sheet: Megro
 
-MODULES AND UNITS
-=================
-PURPOSE
-=======
-The purpose of this qualification is to allow new entrants access to the primary agricultural sector with specific reference to mixed farming systems. The contextualised purpose and usage of the qualification is as follows:
+QUALIFICATION OVERVIEW
+======================
 
-- A learner assessed against this qualification will have the necessary competence to participate as part of a working team, performing the agricultural processes as applicable to plant and animal production as required for a mixed farming system in a closely defined context and under close supervision
-- Competency will be gained in a combination of the sub-fields of plant and animal production as specified under areas of specialisation (i.e. small stock, large stock, as well as vegetables, fruit production, hydroponics, etc.)
-- The learner will be able to make responsible decisions within a limited range based on a sound understanding of the basic principles of agri-business and good agricultural practices, in meeting the set objectives and targets within the broader farm plan, which includes the economic application of general resources, agricultural production, and technical knowledge and skills, all in a mixed farming context
-- The learner will be able to carry out repetitive procedures in a predictable environment and will be able to adhere to the relevant safety, quality, hygiene, and technical standards as applicable within the industry
-- In addition to the above, the learner will be well-positioned to extend learning and practice into other sub-fields such as plant production and animal production, since such efforts will only require additional learning within the elective scope of other qualifications at this level
-- The learner will be well-positioned to progress towards higher levels of management and technical production practices as defined by qualifications at the next level
-- Learners will be enabled to actively participate in the primary agricultural sector through the production of quality agricultural products, enhancing the overall agricultural process, and gaining opportunities to access local, national, and international agricultural markets
-- Finally, this qualification will allow qualifying learners to become economically active in farming practices that will have a direct impact on local economic development through the production of food, the improvement of household food security, and access to mainstream agriculture
+This qualification is designed to provide new entrants with access to the Primary Agricultural Sector with specific reference to mixed farming systems. The qualification prepares learners to participate as part of a working team, performing agricultural processes applicable to both plant and animal production in a closely defined context and under close supervision.
+
+Key objectives of this qualification include:
+• Gaining competency in a combination of plant and animal production sub-fields including small stock, large stock, vegetables, fruit production, and hydroponics
+• Making responsible decisions within a limited range based on sound understanding of agri-business principles and good agricultural practices
+• Carrying out repetitive procedures in a predictable environment while adhering to safety, quality, hygiene, and technical standards
+• Meeting set objectives and targets within the broader farm plan through economic application of resources and technical skills
+• Developing foundational knowledge in mathematical literacy, communication, and data management
+• Learning agricultural fundamentals including food safety, farm layout, water quality management, and pest/disease recognition
+• Acquiring practical skills in both animal production (feeding, harvesting animal products, handling) and plant production (fertilization, harvesting, planting)
+
+This qualification positions learners to extend their learning into other agricultural sub-fields and progress towards higher levels of management and technical production practices. It also allows recognition of prior learning and assumes basic literacy and numeracy equivalent to ABET 3.
 
 COURSE CONTENT
 ==============
@@ -82,10 +83,30 @@ Delivery: Classroom/Online/Blended
 
 ENTRY LEVEL REQUIREMENTS
 ========================
-- Numeracy, Literacy & Communication
+- Numeracy, Literacy & Communication (ABET 3 equivalent)
 
-CAREER POSSIBILITIES
-===================
-- Farmer/Farm worker specialising in Animal Production
-- Farm Supervisor
-- Farm Team Leader
+CAREER OPPORTUNITIES
+====================
+
+Upon successful completion of this qualification, learners can pursue the following career paths:
+
+• Junior Labourer in mixed farming operations
+• Farmer specializing in mixed farming systems
+• Agricultural Worker in various sectors:
+  - Small stock production
+  - Large stock production
+  - Vegetable production
+  - Fruit production
+  - Hydroponics
+  - Combined plant and animal production
+• Farm Assistant in mixed farming environments
+
+This qualification also provides opportunities for:
+• Progression to higher agricultural qualifications at NQF Level 2
+• Advancement towards supervisory and management positions
+• Horizontal movement between plant and animal production sub-fields
+• Active participation in the primary agricultural sector through production of quality products
+• Access to local, national, and international agricultural markets
+• Economic activity in farming practices that impact local development
+• Improvement of household food security and access to mainstream agriculture
+• Extension of learning into specialized plant or animal production fields

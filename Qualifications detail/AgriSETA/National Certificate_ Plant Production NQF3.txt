@@ -7,15 +7,28 @@ NQF Level: 3
 Minimum Credits: 120
 Qualification NLRD ID: 49052
 Learning Programme NLRD ID: N/A
-Expiry Date: 30-Jun-26
-Status: Legacy Extended
+Registration End Date: 30-Jun-2023
+Last Date for Achievement: 30-Jun-2029
+Status: Passed the End Date - Status was 'Reregistered'
 Reference Sheet: Megro
 
-MODULES AND UNITS
-=================
-PURPOSE
-=======
-The purpose of this qualification is to allow supervisors to progress towards a junior farm manager position with specific reference to plant production.
+QUALIFICATION OVERVIEW
+======================
+
+This qualification is designed to allow supervisors to progress towards junior farm manager positions with specific reference to plant production. The qualification enables learners to supervise and lead working teams performing agricultural processes while making responsible decisions based on agri-business principles.
+
+Key objectives of this qualification include:
+• Supervising and leading working teams in agricultural processes and plant production operations
+• Making responsible decisions based on agri-business principles and agricultural management practices
+• Implementing quality, safety, and hygiene standards in plant production environments
+• Developing advanced communication skills including oral communication, text interpretation, and writing for various contexts
+• Building mathematical literacy for statistics, probability, data collection, geometrical relationships, and financial monitoring
+• Learning general agricultural practices including environmental planning, integrated pest/disease/weed control, harvesting plans, and irrigation systems
+• Understanding agricultural business principles including human resource management, industry structure, food safety systems, whole farm budgeting, marketing plans, input procurement, and permaculture design
+• Acquiring advanced plant production skills including physiological processes, soil fertility, plant nutrition, manipulation methods, water quality management, plant propagation, and hydroponic systems
+• Preparing for advanced agricultural management roles and specialized plant production operations
+
+This qualification allows recognition of prior learning and is suitable for individuals with practical farming experience. It provides a pathway to higher NQF levels and prepares learners for management positions in various plant production sectors including agronomy and horticulture.
 
 COURSE CONTENT
 ==============
@@ -69,9 +82,32 @@ ENTRY LEVEL REQUIREMENTS
 - Numeracy, Literacy & Communication NQF 2
 - Technical skills pertaining to agricultural activities NQF 2
 
-CAREER POSSIBILITIES
-===================
-- Farm Worker specialising in plant production (Pest controller or Irrigationist)
-- Farm Supervisor
-- Farm Team Leader
-- Farm Manager
+CAREER OPPORTUNITIES
+====================
+
+Upon successful completion of this qualification, learners can pursue the following career paths:
+
+• Farm Supervisor in plant production operations
+• Farm Operator managing plant production activities
+• Agricultural Team Leader coordinating work teams
+• Junior Farm Manager in plant production
+• Specialized Plant Production Worker:
+  - Pest Controller
+  - Irrigationist
+  - Crop Production Supervisor
+  - Horticulture Supervisor
+• Agricultural Manager in various sectors:
+  - Agronomy
+  - Horticulture
+  - Organic production
+  - Hydroponics
+
+This qualification also provides opportunities for:
+• Progression to higher agricultural qualifications and advanced management roles
+• Advancement to senior farm management positions
+• Development of specialized expertise in plant production sub-fields
+• Horizontal movement to other agricultural sectors
+• Leadership positions in agricultural enterprises
+• Participation in local, national, and international agricultural markets
+• Recognition of prior learning and practical experience
+• Career development in permaculture and sustainable agriculture
