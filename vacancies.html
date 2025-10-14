@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Opportunities | SpecCon Holdings</title>
+    <meta name="description" content="Join our team at SpecCon Holdings. Explore exciting career opportunities in training, education, and skills development.">
+    <link rel="icon" type="image/png" href="Images/Logo.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="js/centralized-modals.js"></script>
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #12265E 0%, #92ABC4 100%);
+        }
+        .gradient-bg-reverse {
+            background: linear-gradient(135deg, #92ABC4 0%, #12265E 100%);
+        }
+        /* SpecCon Brand Colors */
+        .speccon-blue { background-color: #12265E; }
+        .speccon-orange { background-color: #FFA600; }
+        .speccon-light-blue { background-color: #92abc4; }
+        .text-speccon-blue { color: #12265E; }
+        .text-speccon-orange { color: #FFA600; }
+        .text-speccon-light-blue { color: #92abc4; }
+        .border-speccon-blue { border-color: #12265E; }
+        .border-speccon-orange { border-color: #FFA600; }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 10px 10px -5px rgb(0 0 0 / 0.04);
+        }
+
+        /* Enhanced Dropdown Menu Styles */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: calc(100% + 8px);
+            left: 0;
+            min-width: 16rem;
+            background: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e5e7eb;
+            z-index: 1000;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: opacity 0.2s ease, transform 0.2s ease;
+        }
+        .dropdown:hover .dropdown-menu {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .dropdown::before {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            height: 12px;
+            z-index: 999;
+        }
+        .dropdown button {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            padding: 0;
+            font-size: inherit;
+            font-family: inherit;
+            color: inherit;
+        }
+
+        .hero-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        /* Application Modal Styles */
+        .application-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        .application-modal.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        .application-modal-content {
+            background: white;
+            border-radius: 20px;
+            max-width: 600px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+            transform: translateY(20px);
+            transition: transform 0.3s ease;
+        }
+        .application-modal.show .application-modal-content {
+            transform: translateY(0);
+        }
+
+        /* Job Image Modal */
+        .image-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 3000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .image-modal.show {
+            display: flex;
+        }
+        .image-modal img {
+            max-width: 100%;
+            max-height: 90vh;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-900">
+    <!-- Header -->
+    <header class="bg-white/95 backdrop-blur-md shadow-lg fixed w-full z-50 top-0">
+        <div class="container mx-auto px-4 lg:px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <a href="index.html">
+                        <img src="Images/Logo.png" alt="SpecCon Holdings Logo" class="h-12">
+                    </a>
+                    <div class="ml-3">
+                        <h1 class="text-xl font-bold text-[#12265E]">SpecCon Holdings</h1>
+                        <p class="text-sm text-[#ffa600]">Career Opportunities</p>
+                    </div>
+                </div>
+
+                <nav class="hidden lg:flex items-center space-x-8">
+                    <a href="index.html#about" class="text-[#12265E] hover:text-[#FFA600] font-medium transition duration-300">Why Choose Us</a>
+                    <a href="index.html#qualifications" class="text-[#12265E] hover:text-[#FFA600] font-medium transition duration-300">Qualifications</a>
+                    <a href="index.html#accreditations" class="text-[#12265E] hover:text-[#FFA600] font-medium transition duration-300">Accreditations</a>
+                    <a href="index.html#classroom-training" class="text-[#12265E] hover:text-[#FFA600] font-medium transition duration-300">Classroom Training</a>
+                    <a href="vacancies.html" class="text-[#12265E] hover:text-[#FFA600] font-medium transition duration-300">Vacancies</a>
+                    <div class="relative dropdown">
+                        <button class="text-[#12265E] hover:text-[#FFA600] font-medium transition duration-300 inline-flex items-center">
+                            Other Products <i data-lucide="chevron-down" class="w-4 h-4 ml-1"></i>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a href="https://elearning.co.za/" target="_blank" class="block px-4 py-3 text-sm text-gray-700 hover:bg-[#12265E]/10 hover:text-[#12265E] transition duration-200">
+                                <i data-lucide="monitor" class="w-4 h-4 inline mr-2"></i>Online Training
+                            </a>
+                            <a href="https://employmentequityact.co.za/" target="_blank" class="block px-4 py-3 text-sm text-gray-700 hover:bg-[#12265E]/10 hover:text-[#12265E] transition duration-200">
+                                <i data-lucide="shield-check" class="w-4 h-4 inline mr-2"></i>Employment Equity
+                            </a>
+                            <a href="https://learningmanagementsystem.co.za/" target="_blank" class="block px-4 py-3 text-sm text-gray-700 hover:bg-[#12265E]/10 hover:text-[#12265E] transition duration-200">
+                                <i data-lucide="graduation-cap" class="w-4 h-4 inline mr-2"></i>Learning Management System
+                            </a>
+                            <a href="https://skillsdevelopment.co.za/" target="_blank" class="block px-4 py-3 text-sm text-gray-700 hover:bg-[#12265E]/10 hover:text-[#12265E] transition duration-200">
+                                <i data-lucide="trending-up" class="w-4 h-4 inline mr-2"></i>Skills Development
+                            </a>
+                            <a href="https://www.specconacademy.co.za/" target="_blank" class="block px-4 py-3 text-sm text-gray-700 hover:bg-[#12265E]/10 hover:text-[#12265E] transition duration-200">
+                                <i data-lucide="school" class="w-4 h-4 inline mr-2"></i>SpecCon Academy
+                            </a>
+                            <a href="https://bbbee.co.za/" target="_blank" class="block px-4 py-3 text-sm text-gray-700 hover:bg-[#12265E]/10 hover:text-[#12265E] transition duration-200">
+                                <i data-lucide="award" class="w-4 h-4 inline mr-2"></i>BBBEE Consulting
+                            </a>
+                        </div>
+                    </div>
+                </nav>
+
+                <div class="hidden lg:block">
+                    <a href="#" data-modal="contact" class="bg-gradient-to-r from-[#12265E] to-[#92ABC4] text-white font-semibold px-6 py-3 rounded-lg hover:from-[#0d1a47] hover:to-[#3a7bc8] transition duration-300 shadow-lg">
+                        Contact Us
+                    </a>
+                </div>
+
+                <button id="mobile-menu-button" class="lg:hidden">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden lg:hidden mt-4">
+                <a href="index.html#about" class="block py-2 text-[#12265E] hover:text-[#FFA600]">Why Choose Us</a>
+                <a href="index.html#qualifications" class="block py-2 text-[#12265E] hover:text-[#FFA600]">Qualifications</a>
+                <a href="index.html#accreditations" class="block py-2 text-[#12265E] hover:text-[#FFA600]">Accreditations</a>
+                <a href="index.html#classroom-training" class="block py-2 text-[#12265E] hover:text-[#FFA600]">Classroom Training</a>
+                <a href="vacancies.html" class="block py-2 text-[#12265E] hover:text-[#FFA600]">Vacancies</a>
+                <a href="#" data-modal="contact" class="mt-2 block w-full bg-gradient-to-r from-[#12265E] to-[#92ABC4] text-white font-semibold px-5 py-2 rounded-lg hover:from-[#0d1a47] hover:to-[#3a7bc8] transition duration-300 shadow-lg text-center">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 relative overflow-hidden">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="Images/Career possibilities.png" alt="Career Possibilities" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-r from-[#12265E]/95 via-[#12265E]/85 to-[#92ABC4]/90"></div>
+        </div>
+
+        <!-- Content -->
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Left Column - Text Content -->
+                <div class="text-left">
+                    <div class="inline-block mb-6">
+                        <div class="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mb-4">
+                            <i data-lucide="briefcase" class="w-10 h-10 text-white"></i>
+                        </div>
+                    </div>
+                    <h1 class="text-5xl md:text-6xl font-bold text-white mb-6">Join Our Team</h1>
+                    <p class="text-xl text-white/90 mb-8 leading-relaxed">
+                        Be part of South Africa's leading accredited training provider. We're looking for passionate professionals to help us empower the next generation of skilled workers.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#current-openings" class="bg-[#FFA600] text-white font-semibold px-8 py-4 rounded-lg hover:bg-[#ff9500] transition duration-300 shadow-lg inline-flex items-center justify-center">
+                            <i data-lucide="search" class="w-5 h-5 mr-2"></i>
+                            View Open Positions
+                        </a>
+                        <a href="#why-join" class="bg-white text-[#12265E] font-semibold px-8 py-4 rounded-lg hover:bg-gray-100 transition duration-300 shadow-lg inline-flex items-center justify-center">
+                            <i data-lucide="heart" class="w-5 h-5 mr-2"></i>
+                            Why Join Us
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Column - Career Possibilities Image Feature -->
+                <div class="hidden lg:block">
+                    <div class="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 shadow-2xl">
+                        <h3 class="text-2xl font-bold text-white mb-4">Unlock Your Career Potential</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start text-white/90">
+                                <i data-lucide="check-circle" class="w-6 h-6 text-[#FFA600] mr-3 mt-1 flex-shrink-0"></i>
+                                <span>Professional development in accredited training</span>
+                            </li>
+                            <li class="flex items-start text-white/90">
+                                <i data-lucide="check-circle" class="w-6 h-6 text-[#FFA600] mr-3 mt-1 flex-shrink-0"></i>
+                                <span>Work with leading SETA qualifications</span>
+                            </li>
+                            <li class="flex items-start text-white/90">
+                                <i data-lucide="check-circle" class="w-6 h-6 text-[#FFA600] mr-3 mt-1 flex-shrink-0"></i>
+                                <span>Make a difference in skills development</span>
+                            </li>
+                            <li class="flex items-start text-white/90">
+                                <i data-lucide="check-circle" class="w-6 h-6 text-[#FFA600] mr-3 mt-1 flex-shrink-0"></i>
+                                <span>Competitive benefits and growth opportunities</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Join Us Section -->
+    <section id="why-join" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-[#12265E] mb-4">Why Join SpecCon Holdings?</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Be part of a dynamic team making a real difference in skills development</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-grey rounded-2xl shadow-lg p-8 card-hover transition-all duration-300">
+                    <div class="w-16 h-16 bg-[#FFA600]/10 rounded-2xl flex items-center justify-center mb-6">
+                        <i data-lucide="trending-up" class="w-8 h-8 text-[#FFA600]"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-[#12265E] mb-4">Career Growth</h3>
+                    <p class="text-gray-600">Continuous professional development and clear career progression paths in the training and education sector.</p>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg p-8 card-hover transition-all duration-300">
+                    <div class="w-16 h-16 bg-[#92ABC4]/20 rounded-2xl flex items-center justify-center mb-6">
+                        <i data-lucide="users" class="w-8 h-8 text-[#12265E]"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-[#12265E] mb-4">Collaborative Culture</h3>
+                    <p class="text-gray-600">Work with passionate professionals dedicated to transforming lives through quality education and training.</p>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg p-8 card-hover transition-all duration-300">
+                    <div class="w-16 h-16 bg-[#FFA600]/10 rounded-2xl flex items-center justify-center mb-6">
+                        <i data-lucide="award" class="w-8 h-8 text-[#FFA600]"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-[#12265E] mb-4">Industry Leader</h3>
+                    <p class="text-gray-600">Join an accredited training provider recognized across multiple SETAs with a proven track record of excellence.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Current Openings Section -->
+    <section id="current-openings" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-[#12265E] mb-4">Current Openings</h2>
+                <p class="text-xl text-gray-600">Click on any position to view full requirements</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                <!-- Cyber Security Expert Position -->
+                <div class="bg-white border-2 border-gray-200 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden">
+                    <div class="bg-gradient-to-r from-[#12265E] to-[#92ABC4] p-6">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <h3 class="text-2xl font-bold text-white mb-2">Cyber Security Expert</h3>
+                                <p class="text-white/90">DevOps & Information Security</p>
+                            </div>
+                            <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center">
+                                <i data-lucide="shield" class="w-8 h-8 text-white"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="space-y-4 mb-6">
+                            <div class="flex items-center text-gray-700">
+                                <i data-lucide="map-pin" class="w-5 h-5 mr-3 text-[#FFA600]"></i>
+                                <span>Centurion, Gauteng</span>
+                            </div>
+                            <div class="flex items-center text-gray-700">
+                                <i data-lucide="clock" class="w-5 h-5 mr-3 text-[#FFA600]"></i>
+                                <span>Intermediate - Senior</span>
+                            </div>
+                            <div class="flex items-center text-gray-700">
+                                <i data-lucide="briefcase" class="w-5 h-5 mr-3 text-[#FFA600]"></i>
+                                <span>DevOps & Security</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-6">
+                            Drive DevOps practices, ensure secure and scalable delivery pipelines, and maintain our information security posture. Bridge development, operations, and security to deliver high-availability systems.
+                        </p>
+                        <div class="flex gap-3">
+                            <button onclick="openPDF('Cyber Security Expert.pdf')" class="flex-1 bg-[#12265E] text-white font-semibold py-3 px-6 rounded-lg hover:bg-[#0d1a47] transition duration-300">
+                                <i data-lucide="file-text" class="w-4 h-4 inline mr-2"></i>
+                                View Details
+                            </button>
+                            <button onclick="openApplicationModal('Cyber Security Expert')" class="flex-1 bg-[#FFA600] text-white font-semibold py-3 px-6 rounded-lg hover:bg-[#92abc4] transition duration-300">
+                                <i data-lucide="send" class="w-4 h-4 inline mr-2"></i>
+                                Apply Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Content Creator - Marketing Team Position -->
+                <div class="bg-white border-2 border-gray-200 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden">
+                    <div class="bg-gradient-to-r from-[#FFA600] to-[#12265E] p-6">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <h3 class="text-2xl font-bold text-white mb-2">Content Creator</h3>
+                                <p class="text-white/90">Marketing Team</p>
+                            </div>
+                            <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center">
+                                <i data-lucide="video" class="w-8 h-8 text-white"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="space-y-4 mb-6">
+                            <div class="flex items-center text-gray-700">
+                                <i data-lucide="map-pin" class="w-5 h-5 mr-3 text-[#FFA600]"></i>
+                                <span>Centurion, Gauteng</span>
+                            </div>
+                            <div class="flex items-center text-gray-700">
+                                <i data-lucide="clock" class="w-5 h-5 mr-3 text-[#FFA600]"></i>
+                                <span>2+ Years Experience</span>
+                            </div>
+                            <div class="flex items-center text-gray-700">
+                                <i data-lucide="briefcase" class="w-5 h-5 mr-3 text-[#FFA600]"></i>
+                                <span>Marketing & Content Creation</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-6">
+                            Create engaging video content and eye-catching graphics for our marketing campaigns. Plan, shoot, and edit content while maintaining our brand's consistent look and feel across all platforms.
+                        </p>
+                        <div class="flex gap-3">
+                            <button onclick="openPDF('Content Creator Marketing.pdf')" class="flex-1 bg-[#12265E] text-white font-semibold py-3 px-6 rounded-lg hover:bg-[#0d1a47] transition duration-300">
+                                <i data-lucide="file-text" class="w-4 h-4 inline mr-2"></i>
+                                View Details
+                            </button>
+                            <button onclick="openApplicationModal('Content Creator - Marketing Team')" class="flex-1 bg-[#FFA600] text-white font-semibold py-3 px-6 rounded-lg hover:bg-[#92abc4] transition duration-300">
+                                <i data-lucide="send" class="w-4 h-4 inline mr-2"></i>
+                                Apply Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Subject Matter Expert / Facilitator Position -->
+                <div class="bg-white border-2 border-gray-200 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden">
+                    <div class="bg-gradient-to-r from-[#FFA600] to-[#12265E] p-6">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <h3 class="text-2xl font-bold text-white mb-2">Subject Matter Expert / Facilitator</h3>
+                                <p class="text-white/90">Training & Curriculum Development</p>
+                            </div>
+                            <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center">
+                                <i data-lucide="book-open" class="w-8 h-8 text-white"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="space-y-4 mb-6">
+                            <div class="flex items-center text-gray-700">
+                                <i data-lucide="map-pin" class="w-5 h-5 mr-3 text-[#FFA600]"></i>
+                                <span>Centurion, Gauteng</span>
+                            </div>
+                            <div class="flex items-center text-gray-700">
+                                <i data-lucide="clock" class="w-5 h-5 mr-3 text-[#FFA600]"></i>
+                                <span>Contract Type</span>
+                            </div>
+                            <div class="flex items-center text-gray-700">
+                                <i data-lucide="briefcase" class="w-5 h-5 mr-3 text-[#FFA600]"></i>
+                                <span>Training & Development</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-6">
+                            Develop and deliver accredited training programs. Create learning materials, facilitate courses, and ensure quality standards across our qualification offerings.
+                        </p>
+                        <div class="flex gap-3">
+                            <button onclick="openPDF('Subject Matter Expert  Facilitator.pdf')" class="flex-1 bg-[#12265E] text-white font-semibold py-3 px-6 rounded-lg hover:bg-[#0d1a47] transition duration-300">
+                                <i data-lucide="file-text" class="w-4 h-4 inline mr-2"></i>
+                                View Details
+                            </button>
+                            <button onclick="openApplicationModal('Subject Matter Expert / Facilitator')" class="flex-1 bg-[#FFA600] text-white font-semibold py-3 px-6 rounded-lg hover:bg-[#92abc4] transition duration-300">
+                                <i data-lucide="send" class="w-4 h-4 inline mr-2"></i>
+                                Apply Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Admin Assistant - SETA and Learner Registration Position -->
+                <div class="bg-white border-2 border-gray-200 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden">
+                    <div class="bg-gradient-to-r from-[#12265E] to-[#92ABC4] p-6">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <h3 class="text-2xl font-bold text-white mb-2">Admin Assistant</h3>
+                                <p class="text-white/90">SETA and Learner Registration</p>
+                            </div>
+                            <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center">
+                                <i data-lucide="file-text" class="w-8 h-8 text-white"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="space-y-4 mb-6">
+                            <div class="flex items-center text-gray-700">
+                                <i data-lucide="map-pin" class="w-5 h-5 mr-3 text-[#FFA600]"></i>
+                                <span>Centurion, Gauteng</span>
+                            </div>
+                            <div class="flex items-center text-gray-700">
+                                <i data-lucide="clock" class="w-5 h-5 mr-3 text-[#FFA600]"></i>
+                                <span>Full-time, Permanent</span>
+                            </div>
+                            <div class="flex items-center text-gray-700">
+                                <i data-lucide="briefcase" class="w-5 h-5 mr-3 text-[#FFA600]"></i>
+                                <span>SETA Administration</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-6">
+                            Manage SETA-related administration, learner registrations, and compliance reporting. Work with multiple SETAs ensuring quality submissions and learner success.
+                        </p>
+                        <div class="flex gap-3">
+                            <button onclick="openPDF('Admin assistant.pdf')" class="flex-1 bg-[#12265E] text-white font-semibold py-3 px-6 rounded-lg hover:bg-[#0d1a47] transition duration-300">
+                                <i data-lucide="file-text" class="w-4 h-4 inline mr-2"></i>
+                                View Details
+                            </button>
+                            <button onclick="openApplicationModal('Admin Assistant - SETA and Learner Registration')" class="flex-1 bg-[#FFA600] text-white font-semibold py-3 px-6 rounded-lg hover:bg-[#92abc4] transition duration-300">
+                                <i data-lucide="send" class="w-4 h-4 inline mr-2"></i>
+                                Apply Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-[#12265E] mb-4">What We Offer</h2>
+                <p class="text-xl text-gray-600">Competitive benefits and a supportive work environment</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+                <div class="bg-white rounded-xl shadow p-6 text-center">
+                    <div class="w-12 h-12 bg-[#FFA600]/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="dollar-sign" class="w-6 h-6 text-[#FFA600]"></i>
+                    </div>
+                    <h4 class="font-bold text-[#12265E] mb-2">Competitive Salary</h4>
+                    <p class="text-sm text-gray-600">Market-related remuneration packages</p>
+                </div>
+
+                <div class="bg-white rounded-xl shadow p-6 text-center">
+                    <div class="w-12 h-12 bg-[#92ABC4]/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="heart" class="w-6 h-6 text-[#12265E]"></i>
+                    </div>
+                    <h4 class="font-bold text-[#12265E] mb-2">Medical Aid</h4>
+                    <p class="text-sm text-gray-600">Comprehensive health coverage</p>
+                </div>
+
+                <div class="bg-white rounded-xl shadow p-6 text-center">
+                    <div class="w-12 h-12 bg-[#FFA600]/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="graduation-cap" class="w-6 h-6 text-[#FFA600]"></i>
+                    </div>
+                    <h4 class="font-bold text-[#12265E] mb-2">Learning & Development</h4>
+                    <p class="text-sm text-gray-600">Continuous training opportunities</p>
+                </div>
+
+                <div class="bg-white rounded-xl shadow p-6 text-center">
+                    <div class="w-12 h-12 bg-[#92ABC4]/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="coffee" class="w-6 h-6 text-[#12265E]"></i>
+                    </div>
+                    <h4 class="font-bold text-[#12265E] mb-2">Work-Life Balance</h4>
+                    <p class="text-sm text-gray-600">Flexible working arrangements</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Modal -->
+    <div id="applicationModal" class="application-modal">
+        <div class="application-modal-content">
+            <div class="p-8">
+                <div class="flex items-center justify-between mb-6">
+                    <h2 class="text-2xl font-bold text-gray-900">Apply for <span id="modalPositionTitle">Position</span></h2>
+                    <button onclick="closeApplicationModal()" class="text-gray-400 hover:text-gray-600 text-xl">
+                        <i data-lucide="x" class="w-6 h-6"></i>
+                    </button>
+                </div>
+
+                <div class="mb-6 p-4 bg-blue-50 rounded-lg border border-blue-200">
+                    <p class="text-blue-700 text-sm">
+                        <i data-lucide="info" class="w-4 h-4 inline mr-2"></i>
+                        Please complete all required fields and attach your CV in PDF format.
+                    </p>
+                </div>
+
+                <form id="applicationForm" onsubmit="submitApplication(event)">
+                    <input type="hidden" id="position" name="position" value="">
+
+                    <div class="grid md:grid-cols-2 gap-4 mb-4">
+                        <div>
+                            <label for="firstName" class="block text-sm font-medium text-gray-700 mb-2">First Name *</label>
+                            <input type="text" id="firstName" name="firstName" required
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#12265E] focus:border-transparent">
+                        </div>
+                        <div>
+                            <label for="lastName" class="block text-sm font-medium text-gray-700 mb-2">Last Name *</label>
+                            <input type="text" id="lastName" name="lastName" required
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#12265E] focus:border-transparent">
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-4 mb-4">
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address *</label>
+                            <input type="email" id="email" name="email" required
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#12265E] focus:border-transparent">
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#12265E] focus:border-transparent">
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="location" class="block text-sm font-medium text-gray-700 mb-2">Current Location *</label>
+                        <input type="text" id="location" name="location" required
+                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#12265E] focus:border-transparent">
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="cv" class="block text-sm font-medium text-gray-700 mb-2">Upload CV (PDF) *</label>
+                        <input type="file" id="cv" name="cv" accept=".pdf" required
+                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#12265E] focus:border-transparent">
+                    </div>
+
+                    <div class="mb-6">
+                        <label for="coverLetter" class="block text-sm font-medium text-gray-700 mb-2">Cover Letter / Motivation *</label>
+                        <textarea id="coverLetter" name="coverLetter" rows="6" required
+                                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#12265E] focus:border-transparent resize-none"
+                                  placeholder="Tell us why you're the perfect fit for this role..."></textarea>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-3">
+                        <button type="submit" class="flex-1 bg-gradient-to-r from-[#12265E] to-[#92ABC4] text-white font-semibold py-3 px-6 rounded-lg hover:from-[#0d1a47] hover:to-[#3a7bc8] transition duration-300">
+                            <i data-lucide="send" class="w-4 h-4 inline mr-2"></i>
+                            Submit Application
+                        </button>
+                        <button type="button" onclick="closeApplicationModal()" class="flex-1 bg-gray-500 text-white font-semibold py-3 px-6 rounded-lg hover:bg-gray-600 transition duration-300">
+                            Cancel
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="image-modal">
+        <div class="relative max-w-6xl w-full">
+            <button onclick="closeImageModal()" class="absolute top-4 right-4 bg-white/10 hover:bg-white/20 text-white p-2 rounded-full backdrop-blur-sm transition duration-300">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+            <img id="modalImage" src="" alt="Job Details" class="w-full">
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-[#12265E] to-[#92ABC4] text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <img src="Images/SpecCon-LOGO.png" alt="SpecCon Holdings Logo" class="h-12 mr-3">
+                        <div>
+                            <h3 class="text-xl font-bold">SpecCon Holdings</h3>
+                            <p class="text-white/80">Accredited Training Solutions</p>
+                        </div>
+                    </div>
+                    <p class="text-white/80 mb-4">Empowering individuals and organizations through high-quality, accredited education and training solutions.</p>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html#about" class="text-white/80 hover:text-[#FFA600] transition duration-200">Why Choose Us</a></li>
+                        <li><a href="index.html#qualifications" class="text-white/80 hover:text-[#FFA600] transition duration-200">Qualifications</a></li>
+                        <li><a href="index.html#accreditations" class="text-white/80 hover:text-[#FFA600] transition duration-200">Accreditations</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Us</h4>
+                    <ul class="space-y-2">
+                        <li><p class="text-white/80">Phone: 012 667 4962</p></li>
+                        <li><p class="text-white/80">Email: <a href="mailto:help@speccon.co.za" class="underline hover:text-[#FFA600]">help@speccon.co.za</a></p></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-white/20 mt-8 pt-8 text-center">
+                <p class="text-white/80">&copy; 2025 SpecCon Holdings. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+
+        // Application Modal Functions
+        function openApplicationModal(position) {
+            const modal = document.getElementById('applicationModal');
+            const titleElement = document.getElementById('modalPositionTitle');
+            const positionInput = document.getElementById('position');
+
+            if (modal && titleElement && positionInput) {
+                titleElement.textContent = position;
+                positionInput.value = position;
+                modal.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeApplicationModal() {
+            const modal = document.getElementById('applicationModal');
+            if (modal) {
+                modal.classList.remove('show');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        function submitApplication(event) {
+            event.preventDefault();
+
+            const formData = new FormData(event.target);
+            const position = formData.get('position');
+            const firstName = formData.get('firstName');
+            const lastName = formData.get('lastName');
+            const email = formData.get('email');
+            const phone = formData.get('phone');
+            const location = formData.get('location');
+            const coverLetter = formData.get('coverLetter');
+
+            // Create email content
+            const subject = `Job Application: ${position} - ${firstName} ${lastName}`;
+            const body = `Job Application Details:
+
+Position: ${position}
+Name: ${firstName} ${lastName}
+Email: ${email}
+Phone: ${phone}
+Location: ${location}
+
+Cover Letter / Motivation:
+${coverLetter}
+
+---
+Note: Please request the applicant's CV via email response.`;
+
+            // Create mailto link
+            const mailtoLink = `mailto:hr@speccon.co.za?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+            // Open email client
+            window.location.href = mailtoLink;
+
+            // Close modal and reset form after a short delay
+            setTimeout(() => {
+                alert('Your email client will open. Please attach your CV and send the email to complete your application.');
+                closeApplicationModal();
+                event.target.reset();
+            }, 500);
+        }
+
+        // PDF Open Function
+        function openPDF(pdfPath) {
+            // Open PDF in a new window/tab
+            window.open(pdfPath, '_blank');
+        }
+
+        // Image Modal Functions
+        function openImageModal(imagePath) {
+            const modal = document.getElementById('imageModal');
+            const modalImage = document.getElementById('modalImage');
+
+            if (modal && modalImage) {
+                modalImage.src = imagePath;
+                modal.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeImageModal() {
+            const modal = document.getElementById('imageModal');
+            if (modal) {
+                modal.classList.remove('show');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        // Close image modal on click outside
+        document.getElementById('imageModal')?.addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeImageModal();
+            }
+        });
+
+        // Close application modal on click outside
+        document.getElementById('applicationModal')?.addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeApplicationModal();
+            }
+        });
+
+        // Dropdown menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const dropdown = document.querySelector('.dropdown');
+            const dropdownButton = document.querySelector('.dropdown button');
+            const dropdownMenu = document.querySelector('.dropdown-menu');
+
+            if (dropdown && dropdownButton) {
+                dropdownButton.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+                    if (dropdownMenu.style.display === 'block') {
+                        dropdownMenu.style.opacity = '1';
+                        dropdownMenu.style.transform = 'translateY(0)';
+                    }
+                });
+
+                document.addEventListener('click', function(e) {
+                    if (!dropdown.contains(e.target)) {
+                        dropdownMenu.style.display = 'none';
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

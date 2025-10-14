@@ -1,16 +1,183 @@
 QUALIFICATION DETAILS
 =====================
 
-Qualification Name: NC: Wholesale and Retail Operation
-SETA: W&R
+Qualification Name: National Certificate: Wholesale and Retail Operations
+SETA: W&R SETA
 NQF Level: 3
 Minimum Credits: 120
-Qualification NLRD ID: 63409
+Qualification SAQA ID: 63409
 Learning Programme NLRD ID: N/A
-Expiry Date: 30-Jun-26
-Status: Legacy extended
+Registration Period: 2018-07-01 to 2023-06-30
+Status: Passed the End Date - Legacy Extended
+Last Enrollment Date: 30-Jun-26
+Last Achievement Date: 2029-06-30
 Reference Sheet: Megro
 
-MODULES AND UNITS
-=================
-[This section will be populated later with detailed curriculum information]
+QUALIFICATION OVERVIEW
+======================
+
+Purpose and Rationale:
+This qualification fills a critical gap in the learning pathway for Wholesale and Retail practitioners, providing essential operational skills required in the industry. It develops competent personnel who can perform operational functions to industry standards in areas including:
+
+- Ordering stock
+- Receiving and dispatching
+- Stock control
+- Cash control
+- Sales and marketing
+
+The qualification addresses skills identified on the scarce and critical skills list, including roles such as:
+- Sales persons
+- Cashiers
+- Merchandisers
+- Stock controllers
+- Retail and wholesale operators
+
+Learning Assumptions:
+- Open access qualification
+- Learners should ideally be competent in Communication at NQF Level 2
+- Learners should ideally be competent in Mathematical Literacy at NQF Level 2
+- Recognition of Prior Learning (RPL) is available
+
+Qualification Structure:
+- 36 credits of Fundamental unit standards
+- 38 credits of Core unit standards
+- 46 credits of Elective unit standards
+- Total: 120 credits
+
+MODULES AND UNIT STANDARDS
+===========================
+
+FUNDAMENTAL UNIT STANDARDS (36 Credits Required)
+-------------------------------------------------
+
+1. Accommodate audience and context needs in oral/signed communication
+   - ID: 119472 | NQF Level 3 | Credits: 5
+
+2. Demonstrate an understanding of the use of different number bases and measurement units
+   - ID: 9010 | NQF Level 3 | Credits: 2
+
+3. Describe, apply, analyse and calculate shape and motion in 2-and 3-dimensional space
+   - ID: 9013 | NQF Level 3 | Credits: 4
+
+4. Interpret and use information from texts
+   - ID: 119457 | NQF Level 3 | Credits: 5
+
+5. Investigate life and work related problems using data and probabilities
+   - ID: 9012 | NQF Level 3 | Credits: 5
+
+6. Use language and communication in occupational learning programmes
+   - ID: 119467 | NQF Level 3 | Credits: 5
+
+7. Use mathematics to investigate and monitor the financial aspects of personal, business and national issues
+   - ID: 7456 | NQF Level 3 | Credits: 5
+
+8. Write/present/sign texts for a range of communicative contexts
+   - ID: 119465 | NQF Level 3 | Credits: 5
+
+CORE UNIT STANDARDS (38 Credits Required)
+------------------------------------------
+
+1. Define the core concepts of the wholesale and retail environment
+   - ID: 114895 | NQF Level 2 | Credits: 10
+
+2. Apply theft, fraud and safety controls in a Wholesale and Retail outlet
+   - ID: 258161 | NQF Level 3 | Credits: 8
+
+3. Build customer relations in an operational unit
+   - ID: 258156 | NQF Level 3 | Credits: 10
+
+4. Explain the factors that impact on the bottom line of a Wholesale and Retail unit
+   - ID: 258155 | NQF Level 3 | Credits: 10
+
+ELECTIVE UNIT STANDARDS (46 Credits Required)
+----------------------------------------------
+
+Learners must select 46 credits from the following elective options, allowing for specialization in areas such as:
+- Stock Control
+- Cash Control
+- Credit Control
+- Retail Sales
+- Wholesale Sales
+- Perishable Foods Sales
+- Cosmetics
+- Visual Merchandising
+- Forecourt Supervision
+
+Selected Elective Options Include:
+
+Stock Control & Operations:
+- Break bulk, pack and label stock (ID: 258175) | NQF Level 2 | Credits: 8
+- Count stock for a stock-take (ID: 114891) | NQF Level 2 | Credits: 5
+- Operate a computer in a Wholesale/Retail outlet (ID: 114902) | NQF Level 2 | Credits: 6
+
+Cash & Transaction Processing:
+- Explain the processing of transactions in a wholesale and retail outlet (ID: 258157) | NQF Level 2 | Credits: 6
+- Administer and control the organisation's deposits and floats (ID: 114909) | NQF Level 3 | Credits: 8
+- Administer day-end cashing up procedures (ID: 114905) | NQF Level 3 | Credits: 8
+
+Customer Service & Sales:
+- Pack customer purchases at point of sales (ID: 114893) | NQF Level 2 | Credits: 3
+- Address customer queries in a wholesale environment (ID: 243712) | NQF Level 3 | Credits: 10
+- Address customer requests and queries in a Distribution Centre (ID: 258220) | NQF Level 3 | Credits: 6
+- Implement promotional instructions (ID: 114904) | NQF Level 2 | Credits: 6
+
+CAREER OPPORTUNITIES
+====================
+
+This qualification prepares learners for various operational roles in the wholesale and retail sector, including:
+
+Entry-Level Positions:
+- Sales Assistant
+- Cashier
+- Stock Controller
+- Merchandiser
+- Receiving Clerk
+- Dispatch Clerk
+- Customer Service Representative
+- Retail Floor Assistant
+- Wholesale Operations Assistant
+
+Specialized Roles (depending on elective choices):
+- Visual Merchandiser
+- Cosmetics Sales Consultant
+- Perishable Foods Handler
+- Forecourt Supervisor
+- Credit Controller
+- Cash Office Assistant
+
+Career Progression:
+Upon completion of this NQF Level 3 qualification, learners can progress to:
+- Further Education and Training Certificate: Generic Management (NQF Level 4)
+- Higher certificates and diplomas in Retail Management
+- Supervisory and management roles within the wholesale and retail sector
+
+Industry Sectors:
+Graduates can find employment in:
+- Retail stores (supermarkets, department stores, specialty shops)
+- Wholesale operations and distribution centers
+- Cash and carry outlets
+- E-commerce and online retail operations
+- Franchise operations
+- Independent retail businesses
+
+ASSESSMENT
+==========
+
+- Integrated assessment across unit standards
+- Focus on observable performance and demonstration of competence
+- Assessment of both practical skills and underlying knowledge
+- Workplace-based assessment opportunities
+- Recognition of Prior Learning (RPL) available
+
+INTERNATIONAL COMPARABILITY
+============================
+
+This qualification has been benchmarked against similar qualifications in:
+- United Kingdom
+- Singapore
+- Australia
+- New Zealand
+- United States of America
+- Botswana
+
+Common competencies across international qualifications include customer service, sales, stock control, and industry knowledge.
