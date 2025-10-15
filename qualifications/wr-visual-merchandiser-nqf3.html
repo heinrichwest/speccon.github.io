@@ -120,6 +120,9 @@
                         Enquire Now
                     </button>
                 </div>
+                <button id="mobile-menu-button" class="lg:hidden">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
             </div>
         
             <!-- Mobile Menu -->
@@ -516,6 +519,14 @@
     <script>
         // Initialize Lucide icons
         lucide.createIcons();
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
     </script>
     <script>
 

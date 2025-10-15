@@ -81,8 +81,13 @@ MAIN SECTIONS
    │   ├── mer-automotive-sales-advisor-nqf4.html (Header: SETA/Qualifications)
    │   └── merseta-automotive-sales-advisor-nqf4.html (Header: SETA/Qualifications)
    │
-   └── TETA (1 qualification) (Header: SETA/Qualifications)
-       └── teta-transport-clerk-nqf4.html (Header: SETA/Qualifications)
+   └── TETA (6 qualifications) (Header: SETA/Qualifications)
+       ├── teta-transport-nqf1.html (Header: SETA/Qualifications)
+       ├── teta-professional-driving-nqf3.html (Header: SETA/Qualifications)
+       ├── teta-freight-handling-nqf3.html (Header: SETA/Qualifications)
+       ├── teta-transport-clerk-nqf4.html (Header: SETA/Qualifications)
+       ├── teta-road-transport-supervision-nqf4.html (Header: SETA/Qualifications)
+       └── teta-supply-chain-management-nqf5.html (Header: SETA/Qualifications)
 
 2. SHORT COURSES (short-courses/)
    ├── AI & Technology Training (Header: Short Courses)
@@ -139,10 +144,10 @@ ADDITIONAL RESOURCES
 TOTAL PAGE COUNT
 ================
 - Main Landing Page: 1
-- Qualification Pages: 47
+- Qualification Pages: 52
 - Short Course Pages: 22
 - SETA Information Pages: 9
-- Total Pages: 79
+- Total Pages: 84
 
 QUALIFICATION BREAKDOWN BY SETA
 ===============================
@@ -150,11 +155,11 @@ QUALIFICATION BREAKDOWN BY SETA
 2. AgriSETA: 12 qualifications
 3. W&R SETA: 10 qualifications
 4. MICT SETA: 6 qualifications
-5. INSETA: 5 qualifications
-6. ETDP SETA: 3 qualifications
-7. MERSETA: 2 qualifications
-8. FASSET: 1 qualification
-9. TETA: 1 qualification
+5. TETA: 6 qualifications
+6. INSETA: 5 qualifications
+7. ETDP SETA: 3 qualifications
+8. MERSETA: 2 qualifications
+9. FASSET: 1 qualification
 
 SHORT COURSE CATEGORIES
 =======================
@@ -187,3 +192,4 @@ TECHNICAL NOTES
 - Standardized template for qualification pages
 - SETA-specific color coding and branding
 - SEO-optimized URLs and content structure
+- Mobile menu functionality implemented across all qualification pages
