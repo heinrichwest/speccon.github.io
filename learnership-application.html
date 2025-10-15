@@ -302,6 +302,23 @@
                 </div>
             </div>
         </section>
+         <!-- Disclaimer Alert -->
+                <div class="mb-6 bg-red-600 border-2 border-red-700 rounded-lg p-4 shadow-lg">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0">
+                            <i data-lucide="alert-triangle" class="w-6 h-6 text-white"></i>
+                        </div>
+                        <div class="ml-3">
+                            <h3 class="text-sm font-bold text-white mb-2">⚠️APPLICATION DISCLAIMER</h3>
+                            <p class="text-sm text-white leading-relaxed">
+                                <strong>Please ensure that all information provided in this application form is accurate, original, and written in your own words.</strong><br><br>
+                                Submissions that appear to be AI-generated, copied, or produced using automated writing tools may result in disqualification.<br><br>
+                                We reserve the right to verify the authenticity of all written responses.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
 
         <!-- Assessment Requirements -->
         <section class="py-16">
@@ -2084,7 +2101,7 @@ async function submitApplication(event) {
             dreamJobReason: formData.get('dreamJobReason') || '',
             aboutself: assessmentResults.literacy.writingSample || '',
             currentWorkSkills: formData.get('currentWorkSkills') || '',
-            computerInternetAccess: formData.get('computerInternetAccess') === 'yes',
+            computerInternetAccess: formData.get('computerInternetAccess') === 'Yes',
             dateOfBirth: formData.get('dateOfBirth')
         };
 
