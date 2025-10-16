@@ -934,19 +934,12 @@
                             <!-- Assessment Status Summary -->
                             <div class="mb-8 p-6 bg-gray-50 rounded-lg">
                                 <h3 class="text-lg font-semibold text-gray-900 mb-4">Assessment Status</h3>
-                                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                                <div class="grid grid-cols-3 gap-4">
                                     <div id="typing-status" class="text-center p-3 bg-yellow-100 rounded-lg">
                                         <div class="w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-2">
                                             <i data-lucide="clock" class="w-4 h-4 text-white"></i>
                                         </div>
                                         <p class="text-sm font-medium">Typing Test</p>
-                                        <p class="text-xs text-gray-600">Pending</p>
-                                    </div>
-                                    <div id="literacy-status" class="text-center p-3 bg-yellow-100 rounded-lg">
-                                        <div class="w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-2">
-                                            <i data-lucide="clock" class="w-4 h-4 text-white"></i>
-                                        </div>
-                                        <p class="text-sm font-medium">About yourself</p>
                                         <p class="text-xs text-gray-600">Pending</p>
                                     </div>
                                     <div id="math-status" class="text-center p-3 bg-yellow-100 rounded-lg">
@@ -974,7 +967,7 @@
                                         class="bg-gray-400 text-white font-semibold py-4 px-8 rounded-lg cursor-not-allowed">
                                     Complete All Assessments to Submit
                                 </button>
-                                <p class="text-sm text-gray-500 mt-2">All four assessments must be completed before submission</p>
+                                <p class="text-sm text-gray-500 mt-2">All three assessments must be completed before submission</p>
                             </div>
                         </form>
                     </div>
@@ -1878,7 +1871,6 @@
         // Check if all assessments are completed
         function checkAllAssessments() {
             const allCompleted = assessmentResults.typing.completed &&
-                               assessmentResults.literacy.completed &&
                                assessmentResults.math.completed &&
                                assessmentResults.excel.completed;
 
@@ -1975,7 +1967,6 @@ async function submitApplication(event) {
 
     // Check if all assessments are completed
     const allCompleted = assessmentResults.typing.completed &&
-                       assessmentResults.literacy.completed &&
                        assessmentResults.math.completed &&
                        assessmentResults.excel.completed;
 
@@ -2098,7 +2089,7 @@ async function submitApplication(event) {
             
             typingScore: assessmentResults.typing.wpm + ' WPM (' + assessmentResults.typing.accuracy + '% accuracy)',
             excelScore: assessmentResults.excel.score + '%',
-            literacyScore: assessmentResults.literacy.score + '%',
+            literacyScore: '0%', // No longer collecting literacy score
             mathScore: assessmentResults.math.score + '%',
             disabilityType: formData.get('disabilityType'),
             disabilityDescription: formData.get('disabilityDescription'),
@@ -2107,7 +2098,7 @@ async function submitApplication(event) {
             qualificationName: formData.get('qualificationName') || '',
             dreamJob: formData.get('dreamJob') || '',
             dreamJobReason: formData.get('dreamJobReason') || '',
-            aboutself: assessmentResults.literacy.writingSample || '',
+            aboutself: formData.get('aboutYourself') || '',
             currentWorkSkills: formData.get('currentWorkSkills') || '',
             computerInternetAccess: formData.get('computerInternetAccess') === 'Yes',
             dateOfBirth: formData.get('dateOfBirth')
