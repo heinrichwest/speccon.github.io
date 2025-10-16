@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retail Manager (Retail Chain Store Manager) NQF Level 5 | W&R SETA | SpecCon Holdings</title>
+    <meta name="description" content="Develop advanced retail management and leadership skills with our NQF Level 5 Occupational Certificate: Retail Manager qualification accredited by W&R SETA. 106 credits, workplace-ready training.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        nav { font-family: 'Roboto', sans-serif; }
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 10px 10px -5px rgb(0 0 0 / 0.04);
+        }
+        .animate-scroll {
+            animation: scroll 30s linear infinite;
+        }
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+
+        /* Enquiry Popup Modal Styles */
+        .enquiry-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        .enquiry-modal.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        .enquiry-modal-content {
+            background: white;
+            border-radius: 20px;
+            max-width: 500px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+            transform: translateY(20px);
+            transition: transform 0.3s ease;
+        }
+        .enquiry-modal.show .enquiry-modal-content {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-900">
+    <!-- Header -->
+    <header class="bg-white/95 backdrop-blur-md shadow-lg fixed w-full z-50 top-0">
+        <div class="container mx-auto px-4 lg:px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <a href="../index.html">
+                        <img src="../Images/Logo.png" alt="SpecCon Holdings Logo" class="h-12">
+                    </a>
+                    <div class="ml-3">
+                        <h1 class="text-xl font-bold text-[#12265E]">SpecCon Holdings</h1>
+                        <p class="text-sm text-gray-600">Retail Chain Store Manager Qualification</p>
+                    </div>
+                </div>
+
+                <nav class="hidden lg:flex items-center space-x-8">
+                    <a href="../index.html#about" class="text-[#12265E] hover:text-[#FFA600] font-medium transition duration-300">Why Choose Us</a>
+                    <a href="../index.html#qualifications" class="text-[#12265E] hover:text-[#FFA600] font-medium transition duration-300">Qualifications</a>
+                    <a href="../index.html#accreditations" class="text-[#12265E] hover:text-[#FFA600] font-medium transition duration-300">Accreditations</a>
+                    <a href="../index.html#classroom-training" class="text-[#12265E] hover:text-[#FFA600] font-medium transition duration-300">Classroom Training</a>
+                    <div class="relative dropdown">
+                        <button class="text-[#12265E] hover:text-[#FFA600] font-medium transition duration-300 inline-flex items-center">
+                            Other Products <i data-lucide="chevron-down" class="w-4 h-4 ml-1"></i>
+                        </button>
+                        <div class="dropdown-menu absolute left-0 w-64 bg-white rounded-lg shadow-xl py-2 z-20 border">
+                            <a href="https://elearning.co.za/" target="_blank" class="block px-4 py-3 text-sm text-gray-700 hover:bg-[#12265E]/10 hover:text-[#12265E] transition duration-200">
+                                <i data-lucide="monitor" class="w-4 h-4 inline mr-2"></i>Online Training
+                            </a>
+                            <a href="https://employmentequityact.co.za/" target="_blank" class="block px-4 py-3 text-sm text-gray-700 hover:bg-[#12265E]/10 hover:text-[#12265E] transition duration-200">
+                                <i data-lucide="shield-check" class="w-4 h-4 inline mr-2"></i>Employment Equity
+                            </a>
+                            <a href="https://learningmanagementsystem.co.za/" target="_blank" class="block px-4 py-3 text-sm text-gray-700 hover:bg-[#12265E]/10 hover:text-[#12265E] transition duration-200">
+                                <i data-lucide="graduation-cap" class="w-4 h-4 inline mr-2"></i>Learning Management System
+                            </a>
+                            <a href="https://skillsdevelopment.co.za/" target="_blank" class="block px-4 py-3 text-sm text-gray-700 hover:bg-[#12265E]/10 hover:text-[#12265E] transition duration-200">
+                                <i data-lucide="trending-up" class="w-4 h-4 inline mr-2"></i>Skills Development
+                            </a>
+                            <a href="https://www.specconacademy.co.za/" target="_blank" class="block px-4 py-3 text-sm text-gray-700 hover:bg-[#12265E]/10 hover:text-[#12265E] transition duration-200">
+                                <i data-lucide="school" class="w-4 h-4 inline mr-2"></i>SpecCon Academy
+                            </a>
+                            <a href="https://bbbee.co.za/" target="_blank" class="block px-4 py-3 text-sm text-gray-700 hover:bg-[#12265E]/10 hover:text-[#12265E] transition duration-200">
+                                <i data-lucide="award" class="w-4 h-4 inline mr-2"></i>BBBEE Consulting
+                            </a>
+                        </div>
+                    </div>
+                </nav>
+
+                <div class="hidden lg:block">
+                    <button onclick="openEnquiryModal()" class="bg-gradient-to-r from-[#12265E] to-[#92ABC4] text-white font-semibold px-6 py-3 rounded-lg hover:from-[#0d1a47] hover:to-[#3a7bc8] transition duration-300 shadow-lg">
+                        Enquire Now
+                    </button>
+                </div>
+
+                <button id="mobile-menu-button" class="lg:hidden">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden lg:hidden mt-4">
+                <a href="../index.html#about" class="block py-2 text-[#12265E] hover:text-[#FFA600]">About Us</a>
+                <a href="../index.html#qualifications" class="block py-2 text-[#12265E] hover:text-[#FFA600]">Qualifications</a>
+                <a href="../index.html#accreditations" class="block py-2 text-[#12265E] hover:text-[#FFA600]">Accreditations</a>
+                <a href="../index.html#classroom-training" class="block py-2 text-[#12265E] hover:text-[#FFA600]">Classroom Training</a>
+                <button onclick="openEnquiryModal()" class="mt-2 w-full bg-gradient-to-r from-[#12265E] to-[#92ABC4] text-white font-semibold px-5 py-2 rounded-lg hover:from-[#0d1a47] hover:to-[#3a7bc8] transition duration-300 shadow-lg text-center block">
+                    Enquire Now
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <section class="pt-24 pb-8 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <nav class="text-sm text-gray-600">
+                <a href="../index.html" class="hover:text-[#ffa600]">Home</a>
+                <span class="mx-2">/</span>
+                <a href="../setas/wr-seta.html" class="hover:text-[#ffa600]">W&R SETA</a>
+                <span class="mx-2">/</span>
+                <span class="text-[#12265E] font-semibold">Retail Manager NQF Level 5</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="py-16 bg-gradient-to-br from-[#ffa600]/10 to-white">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-[#ffffff]/70 rounded-2xl flex items-center justify-center mr-6">
+                            <i data-lucide="briefcase" class="w-8 h-8 text-[#ffa600]"></i>
+                        </div>
+                        <div>
+                            <span class="text-[#12265E] font-semibold">NQF Level 5 | W&R SETA</span>
+                            <h1 class="text-2xl md:text-5xl font-bold text-[#12265E]">Retail Manager (Retail Chain Store Manager)</h1>
+                        </div>
+                    </div>
+                    <p class="text-lg text-gray-600 leading-relaxed mb-8">
+                        Occupational Certificate: Retail Manager (Retail Chain Store Manager) - A comprehensive qualification for aspiring and current retail chain store managers, covering leadership, operations, financial management, and stakeholder relations.
+                        Master the skills needed to effectively manage retail chain stores and drive business success.
+                    </p>
+                    <div class="grid grid-cols-3 gap-4 mb-8">
+                        <div class="text-center p-4 bg-[#12265E] rounded-lg shadow">
+                            <div class="text-xl font-bold text-white">106</div>
+                            <div class="text-sm text-white/80">Credits</div>
+                        </div>
+                        <div class="text-center p-4 bg-[#92abc4] rounded-lg shadow">
+                            <div class="text-xl font-bold text-white">12</div>
+                            <div class="text-sm text-gray-600">Months</div>
+                        </div>
+                        <div class="text-center p-4 bg-[#12265E] rounded-lg shadow">
+                            <div class="text-xl font-bold text-white">NQF 5</div>
+                            <div class="text-sm text-white/80">Level</div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col sm:flex-row gap-4">
+
+
+                    </div>
+                </div>
+                <div>
+                    <img src="https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Retail Manager" class="rounded-2xl shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Qualification Details -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-3 gap-12">
+                <!-- Main Content -->
+                <div class="lg:col-span-2">
+                    <!-- Overview -->
+                    <div class="mb-12">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-6">Qualification Overview</h2>
+                        <div class="prose prose-lg text-gray-700">
+                            <p>The Occupational Certificate: Retail Manager (Retail Chain Store Manager) (NQF Level 5) equips learners with comprehensive management skills for retail chain store operations. This qualification is designed for individuals seeking to advance into retail management positions or enhance their current management capabilities.</p>
+                            <p>Students will gain expertise in leadership, stakeholder relations, operations management, service standards, sales and marketing, financial management, and asset and stock management, preparing them for successful careers in retail chain store management.</p>
+                        </div>
+                    </div>
+
+                    <!-- Learning Modules -->
+                    <div class="mb-12">
+                        <h2 class="text-3xl font-bold text-[#12265E] mb-8">Core Modules</h2>
+                        <div class="space-y-6">
+                            <!-- Module 1 -->
+                            <div class="rounded-xl p-6 bg-[#12265E]">
+                                <h3 class="text-xl font-semibold text-[#ffffff] mb-4">Module 1: Leadership</h3>
+                                <ul class="space-y-2 text-[#ffffff]">
+                                    <li class="flex items-start"><span class="mr-2">•</span><span>Concepts and principles of leading teams in a retail chain store environment</span></li>
+                                    <li class="flex items-start"><span class="mr-2">•</span><span>Manage retail chain store employee performance</span></li>
+                                    <li class="flex items-start"><span class="mr-2">•</span><span>Processes and procedures for leading teams in a retail chain store environment</span></li>
+                                </ul>
+                            </div>
+
+                            <!-- Module 2 -->
+                            <div class="rounded-xl p-6 bg-[#92abc4]">
+                                <h3 class="text-xl font-semibold text-[#ffffff] mb-4">Module 2: Stakeholder Relations</h3>
+                                <ul class="space-y-2 text-[#ffffff]">
+                                    <li class="flex items-start"><span class="mr-2">•</span><span>Concept and principles of communication in retail</span></li>
+                                    <li class="flex items-start"><span class="mr-2">•</span><span>Maintain effective retail chain store stakeholder relations</span></li>
+                                    <li class="flex items-start"><span class="mr-2">•</span><span>Processes and procedures for maintaining effective retail chain store stakeholder relations</span></li>
+                                </ul>
+                            </div>
+
+                            <!-- Module 3 -->
+                            <div class="rounded-xl p-6 bg-[#12265E]">
+                                <h3 class="text-xl font-semibold text-[#ffffff] mb-4">Module 3: Operations Management</h3>
+                                <ul class="space-y-2 text-[#ffffff]">
+                                    <li class="flex items-start"><span class="mr-2">•</span><span>Concept and principles of retail operations management</span></li>
+                                    <li class="flex items-start"><span class="mr-2">•</span><span>Manage retail chain store operational processes</span></li>
+                                    <li class="flex items-start"><span class="mr-2">•</span><span>Processes and procedures for planning and implementing retail chain store operations</span></li>
+                                </ul>
+                            </div>
+
+                            <!-- Module 4 -->
+                            <div class="rounded-xl p-6 bg-[#92abc4]">
+                                <h3 class="text-xl font-semibold text-[#ffffff] mb-4">Module 4: Managing Service Standards</h3>
+                                <ul class="space-y-2 text-[#ffffff]">
+                                    <li class="flex items-start"><span class="mr-2">•</span><span>Concept and principles of managing service standards of a retail chain store</span></li>
+                                    <li class="flex items-start"><span class="mr-2">•</span><span>Manage retail chain store service standards</span></li>
+                                    <li class="flex items-start"><span class="mr-2">•</span><span>Processes and procedures for managing retail chain store service standards</span></li>
+                                </ul>
+                            </div>
+
+                            <!-- Module 5 -->
+                            <div class="rounded-xl p-6 bg-[#12265E]">
+                                <h3 class="text-xl font-semibold text-[#ffffff] mb-4">Module 5: Sales and Marketing</h3>
+                                <ul class="space-y-2 text-[#ffffff]">
+                                    <li class="flex items-start"><span class="mr-2">•</span><span>Concept and principles of implementing promotional activities in a retail chain store</span></li>
+                                    <li class="flex items-start"><span class="mr-2">•</span><span>Propose improvements to a retail chain store's range and layout</span></li>
+                                    <li class="flex items-start"><span class="mr-2">•</span><span>Implement plans to improve sales in a retail chain store</span></li>
+                                    <li class="flex items-start"><span class="mr-2">•</span><span>Processes and procedures for managing sales and promotional activities</span></li>
+                                </ul>
+                            </div>
+
+                            <!-- Module 6 -->
+                            <div class="rounded-xl p-6 bg-[#92abc4]">
+                                <h3 class="text-xl font-semibold text-[#ffffff] mb-4">Module 6: Financial Management</h3>
+                                <ul class="space-y-2 text-[#ffffff]">
+                                    <li class="flex items-start"><span class="mr-2">•</span><span>Concept and principles of improving the financial performance of a retail chain store</span></li>
+                                    <li class="flex items-start"><span class="mr-2">•</span><span>Implement plans to improve a retail chain store's financial performance</span></li>
+                                    <li class="flex items-start"><span class="mr-2">•</span><span>Processes and procedures for improving the retail chain store's bottom line</span></li>
+                                </ul>
+                            </div>
+
+                            <!-- Module 7 -->
+                            <div class="rounded-xl p-6 bg-[#12265E]">
+                                <h3 class="text-xl font-semibold text-[#ffffff] mb-4">Module 7: Asset and Stock Management</h3>
+                                <ul class="space-y-2 text-[#ffffff]">
+                                    <li class="flex items-start"><span class="mr-2">•</span><span>Concepts and principles of stock control in a retail chain store</span></li>
+                                    <li class="flex items-start"><span class="mr-2">•</span><span>Manage stock control in a retail chain store</span></li>
+                                    <li class="flex items-start"><span class="mr-2">•</span><span>Manage risk and maintain assets in a retail chain store</span></li>
+                                    <li class="flex items-start"><span class="mr-2">•</span><span>Processes and procedures for managing stock levels and influencing store range and layout</span></li>
+                                    <li class="flex items-start"><span class="mr-2">•</span><span>Processes and procedures for managing risk and maintaining assets in a retail chain store</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="lg:col-span-1">
+                    <!-- Quick Facts -->
+                    <div class="bg-white border border-gray-200 rounded-2xl shadow-lg p-8 sticky top-24 mb-8">
+                        <h3 class="text-xl font-bold text-[#12265E] mb-6">Qualification Details</h3>
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-center py-3 border-b border-gray-100">
+                                <span class="text-gray-600">SETA</span>
+                                <span class="font-semibold">W&R SETA</span>
+                            </div>
+                            <div class="flex justify-between items-center py-3 border-b border-gray-100">
+                                <span class="text-gray-600">NQF Level</span>
+                                <span class="font-semibold">Level 5</span>
+                            </div>
+                            <div class="flex justify-between items-center py-3 border-b border-gray-100">
+                                <span class="text-gray-600">Credits</span>
+                                <span class="font-semibold">106 Credits</span>
+                            </div>
+                            <div class="flex justify-between items-center py-3 border-b border-gray-100">
+                                <span class="text-gray-600">NLRD ID</span>
+                                <span class="font-semibold">103150</span>
+                            </div>
+                        </div>
+
+                        <div class="space-y-4 mt-8">
+                            <button onclick="openContactModal()" class="block w-full border-2 border-[#12265E] text-[#12265E] font-bold py-3 px-6 rounded-lg text-center hover:bg-[#12265E] hover:text-white transition duration-300">
+                                Request Information
+                            </button>
+                        </div>
+
+                        <!-- Career Opportunities -->
+                        <div class="border-t border-gray-200 pt-8 mt-8">
+                            <h3 class="text-xl font-bold text-[#12265E] mb-6">Career Opportunities</h3>
+                            <p class="text-gray-600 text-sm mb-6">This qualification opens doors to various management opportunities:</p>
+                            <ul class="space-y-3 text-gray-700">
+                                <li class="flex items-start">
+                                    <i data-lucide="briefcase" class="w-5 h-5 text-[#ffa600] mr-3 mt-0.5 flex-shrink-0"></i>
+                                    <span>Retail Operations Supervisor</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i data-lucide="briefcase" class="w-5 h-5 text-[#ffa600] mr-3 mt-0.5 flex-shrink-0"></i>
+                                    <span>Sales Manager</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i data-lucide="briefcase" class="w-5 h-5 text-[#ffa600] mr-3 mt-0.5 flex-shrink-0"></i>
+                                    <span>Merchandising Manager</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i data-lucide="briefcase" class="w-5 h-5 text-[#ffa600] mr-3 mt-0.5 flex-shrink-0"></i>
+                                    <span>Customer Service Manager</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Qualifications -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#12265E] mb-4">Related Qualifications</h2>
+                <p class="text-xl text-[#ffa600] max-w-3xl mx-auto">Explore other W&R SETA qualifications</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <a href="wr-retail-supervisor-nqf4.html" class="group bg-white rounded-2xl shadow-lg p-6 card-hover transition-all duration-300 block">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-[#ffa600]/10 rounded-lg flex items-center justify-center mr-4">
+                            <i data-lucide="users" class="w-6 h-6 text-[#ffa600]"></i>
+                        </div>
+                        <div>
+                            <span class="text-sm text-[#ffa600] font-medium group-hover:text-[#92abc4] transition duration-300">NQF Level 4</span>
+                            <h3 class="font-bold text-lg text-[#12265E]">Retail Supervisor</h3>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm">Supervisory level management</p>
+                </a>
+
+                <a href="wr-retail-buyer-nqf5.html" class="group bg-white rounded-2xl shadow-lg p-6 card-hover transition-all duration-300 block">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-[#ffa600]/10 rounded-lg flex items-center justify-center mr-4">
+                            <i data-lucide="shopping-cart" class="w-6 h-6 text-[#ffa600]"></i>
+                        </div>
+                        <div>
+                            <span class="text-sm text-[#ffa600] font-medium group-hover:text-[#92abc4] transition duration-300">NQF Level 5</span>
+                            <h3 class="font-bold text-lg text-[#12265E]">Retail Buyer</h3>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm">Procurement and buying</p>
+                </a>
+
+                <a href="wr-generic-management-nqf5.html" class="group bg-white rounded-2xl shadow-lg p-6 card-hover transition-all duration-300 block">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-[#ffa600]/10 rounded-lg flex items-center justify-center mr-4">
+                            <i data-lucide="bar-chart" class="w-6 h-6 text-[#ffa600]"></i>
+                        </div>
+                        <div>
+                            <span class="text-sm text-[#ffa600] font-medium group-hover:text-[#92abc4] transition duration-300">NQF Level 5</span>
+                            <h3 class="font-bold text-lg text-[#12265E]">Generic Management</h3>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm">General management skills</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-gradient-to-r from-[#12265E] to-[#92ABC4] text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Advance Your Retail Management Career?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto opacity-90">
+                Join our Retail Manager qualification and develop the comprehensive skills needed for a successful career in retail chain store management.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+
+                <button onclick="openContactModal()" class="border-2 border-white text-white font-semibold px-8 py-4 rounded-lg hover:bg-white hover:text-[#ffa600] transition duration-300">
+                    Contact Us
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enquiry Modal -->
+    <div id="enquiryModal" class="enquiry-modal">
+        <div class="enquiry-modal-content">
+            <div class="p-8">
+                <div class="flex items-center justify-between mb-6">
+                    <h2 class="text-2xl font-bold text-gray-900">Enquire About Retail Manager (Retail Chain Store Manager) NQF5</h2>
+                    <button onclick="closeEnquiryModal()" class="text-gray-400 hover:text-gray-600 text-xl">
+                        <i data-lucide="x" class="w-6 h-6"></i>
+                    </button>
+                </div>
+
+                <div class="mb-6 p-4 bg-blue-50 rounded-lg border border-blue-200">
+                    <p class="text-blue-700 text-sm">
+                        <i data-lucide="info" class="w-4 h-4 inline mr-2"></i>
+                        If you are applying for a learnership, please <a href="../learnership-application.html" class="font-semibold underline hover:text-blue-800">click here</a>.
+                    </p>
+                </div>
+
+                <form id="enquiryForm" onsubmit="submitEnquiry(event)">
+                    <div class="grid md:grid-cols-2 gap-4 mb-4">
+                        <div>
+                            <label for="firstName" class="block text-sm font-medium text-gray-700 mb-2">Name *</label>
+                            <input type="text" id="firstName" name="firstName" required
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                        <div>
+                            <label for="surname" class="block text-sm font-medium text-gray-700 mb-2">Surname *</label>
+                            <input type="text" id="surname" name="surname" required
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-4 mb-4">
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email *</label>
+                            <input type="email" id="email" name="email" required
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="company" class="block text-sm font-medium text-gray-700 mb-2">Company *</label>
+                        <input type="text" id="company" name="company" required
+                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                    </div>
+
+                    <div class="mb-6">
+                        <label for="reason" class="block text-sm font-medium text-gray-700 mb-2">Reason for Enquiry *</label>
+                        <textarea id="reason" name="reason" rows="4" required
+                                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
+                                  placeholder="Please tell us about your enquiry and how we can help you..."></textarea>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-3">
+                        <button type="submit" class="flex-1 bg-gradient-to-r from-[#12265E] to-[#92ABC4] text-white font-semibold py-3 px-6 rounded-lg hover:from-[#0d1a47] hover:to-[#3a7bc8] transition duration-300">
+                            <i data-lucide="send" class="w-4 h-4 inline mr-2"></i>
+                            Send Enquiry
+                        </button>
+                        <button type="button" onclick="closeEnquiryModal()" class="flex-1 bg-gray-500 text-white font-semibold py-3 px-6 rounded-lg hover:bg-gray-600 transition duration-300">
+                            Cancel
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+
+    <footer class="bg-gradient-to-r from-[#12265E] to-[#92ABC4] text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <img src="../Images/SpecCon-LOGO.png" alt="SpecCon Holdings Logo" class="h-12 mr-3">
+                        <div>
+                            <h3 class="text-xl font-bold">SpecCon Holdings</h3>
+                            <p class="text-white/80">Accredited Training Solutions</p>
+                        </div>
+                    </div>
+                    <p class="text-white/80 mb-4">Empowering individuals and organisations through high-quality, accredited education and training solutions.</p>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="/index.html#about" class="text-white/80 hover:text-[#FFA600] transition duration-200">Why Choose Us</a></li>
+                        <li><a href="/index.html#qualifications" class="text-white/80 hover:text-[#FFA600] transition duration-200">Qualifications</a></li>
+                        <li><a href="/index.html#accreditations" class="text-white/80 hover:text-[#FFA600] transition duration-200">Accreditations</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                     <h4 class="text-lg font-semibold mb-4">Contact Us</h4>
+                    <ul class="space-y-2">
+                        <li><p class="text-white/80">Phone: 012 667 4962</p></li>
+                         <p class="text-white/80">
+    Email: <a href="mailto:help@speccon.co.za" class="hover:text-[#ffa600]">help@speccon.co.za</a>
+  </p>
+</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-white/80">© 2025 SpecCon Holdings. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+    <script>
+
+        // Enquiry Modal Functions
+        function openEnquiryModal() {
+            const modal = document.getElementById('enquiryModal');
+            if (modal) {
+                modal.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeEnquiryModal() {
+            const modal = document.getElementById('enquiryModal');
+            if (modal) {
+                modal.classList.remove('show');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        async function submitEnquiry(event) {
+            event.preventDefault();
+            const formData = new FormData(event.target);
+            const enquiryData = {
+                Name: formData.get('firstName') || '',
+                Surname: formData.get('surname') || '',
+                Email: formData.get('email') || '',
+                MobileNumber: formData.get('phone') || '',
+                JobTitle: '',
+                CompanyName: formData.get('company') || '',
+                NumEmployees: 0,
+                Course: 'Retail Manager (Retail Chain Store Manager) NQF Level 5',
+                NumAttendees: 0,
+                Location: '',
+                Reason: formData.get('reason') || '',
+                Source: 'wr-retail-store-manager-nqf5'
+            };
+
+            // Save to localStorage for reference
+            localStorage.setItem('lastEnquiryData', JSON.stringify(enquiryData));
+
+            // Submit to API
+            try {
+                const response = await fetch('https://enquiry.speccon.co.za/api/enquiry/submit', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                            'Accept': 'application/json',
+                    },
+                    body: JSON.stringify(enquiryData)
+                });
+
+                if (response.ok) {
+                    alert('Thank you for your enquiry! We will get back to you soon.');
+                    closeEnquiryModal();
+                    event.target.reset();
+                } else {
+                    const errorData = await response.json();
+                    alert('There was an error submitting your enquiry. Please try again or contact us directly.');
+                    console.error('API Error:', errorData);
+                }
+            } catch (error) {
+                alert('There was an error submitting your enquiry. Please try again or contact us directly.');
+                console.error('Network Error:', error);
+            }
+        }
+
+        stickyBanner.addEventListener("click", function() {
+            bannerPopup.classList.toggle("show");
+            isPopupOpen = !isPopupOpen;
+        });
+
+        // Close popup
+        closePopup.addEventListener("click", function() {
+            bannerPopup.classList.remove("show");
+            isPopupOpen = false;
+        });
+
+        // Close popup when clicking outside
+        document.addEventListener("click", function(e) {
+            if (!stickyBanner.contains(e.target) && !bannerPopup.contains(e.target)) {
+                bannerPopup.classList.remove("show");
+                isPopupOpen = false;
+            }
+        });
+    </script>
+
+    <script src="../js/centralized-modals.js"></script>
+    <script src="../js/value-adds-popup.js"></script>
+
+    <!-- Enhanced Dropdown Menu JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const dropdown = document.querySelector('.dropdown');
+            const dropdownButton = document.querySelector('.dropdown button');
+            const dropdownMenu = document.querySelector('.dropdown-menu');
+
+            if (dropdown && dropdownButton) {
+                // Handle click to toggle dropdown
+                dropdownButton.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+                    if (dropdownMenu.style.display === 'block') {
+                        dropdownMenu.style.opacity = '1';
+                        dropdownMenu.style.transform = 'translateY(0)';
+                    }
+                });
+
+                // Close dropdown when clicking outside
+                document.addEventListener('click', function(e) {
+                    if (!dropdown.contains(e.target)) {
+                        dropdownMenu.style.display = 'none';
+                    }
+                });
+
+                // Ensure dropdown works on touch devices
+                dropdownButton.addEventListener('touchstart', function(e) {
+                    e.preventDefault();
+                    dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
