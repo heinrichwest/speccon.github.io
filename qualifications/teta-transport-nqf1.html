@@ -12,8 +12,8 @@
 </script>
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>General Education and Training Certificate: Transport NQF Level 1 | TETA | SpecCon Holdings</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Transport NQF Level 1 | TETA | SpecCon Holdings</title>
     <meta name="description" content="Entry-level transport and logistics training with our NQF Level 1 General Education and Training Certificate in Transport accredited by TETA. 120 credits, comprehensive foundation training.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -130,6 +130,11 @@
                         Enquire Now
                     </button>
                 </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="lg:hidden text-[#12265E] focus:outline-none">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
             </div>
 
             <!-- Mobile Menu -->
@@ -153,7 +158,7 @@
                 <span class="mx-2">/</span>
                 <a href="../setas/teta-seta.html" class="hover:text-[#ffa600]">TETA</a>
                 <span class="mx-2">/</span>
-                <span class="text-[#12265E] font-semibold">General Education and Training Certificate: Transport NQF Level 1</span>
+                <span class="text-[#12265E] font-semibold">Transport NQF Level 1</span>
             </nav>
         </div>
     </section>
@@ -169,7 +174,7 @@
                         </div>
                         <div>
                             <span class="text-[#ffa600] font-semibold">NQF Level 1 | TETA</span>
-                            <h1 class="text-4xl md:text-5xl font-bold text-[#12265E]">General Education and Training Certificate: Transport</h1>
+                            <h1 class="text-4xl md:text-5xl font-bold text-[#12265E]">Transport</h1>
                         </div>
                     </div>
                     <p class="text-lg text-gray-600 leading-relaxed mb-8">
@@ -562,7 +567,7 @@
         <div class="enquiry-modal-content">
             <div class="p-8">
                 <div class="flex items-center justify-between mb-6">
-                    <h2 class="text-2xl font-bold text-gray-900">Enquire About General Education and Training Certificate: Transport NQF1</h2>
+                    <h2 class="text-2xl font-bold text-gray-900">Enquire About Transport NQF1</h2>
                     <button onclick="closeEnquiryModal()" class="text-gray-400 hover:text-gray-600 text-xl">
                         <i data-lucide="x" class="w-6 h-6"></i>
                     </button>
@@ -791,6 +796,16 @@
                 dropdownButton.addEventListener('touchstart', function(e) {
                     e.preventDefault();
                     dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+                });
+            }
+
+            // Mobile menu toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
                 });
             }
         });
