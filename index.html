@@ -393,12 +393,13 @@
             </div>
 
             <div class="grid md:grid-cols-2 gap-8">
-                <!-- Contact Details -->
+                <!-- Left Column -->
                 <div class="bg-white p-8 rounded-xl shadow-lg h-full flex flex-col">
                     <h3 class="text-2xl font-bold text-[#12265E] mb-6">Contact Details</h3>
                     <div class="space-y-6 text-gray-600 flex-grow">
-                        <div class="flex items-center">
-                            <div class="w-12 h-12 bg-[#12265E] rounded-lg flex items-center justify-center mr-4">
+                        <!-- Email -->
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-[#12265E] rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
                                 <i data-lucide="mail" class="w-6 h-6 text-white"></i>
                             </div>
                             <div>
@@ -407,44 +408,78 @@
                             </div>
                         </div>
 
-                        <div class="flex items-center">
-                            <div class="w-12 h-12 bg-[#12265E] rounded-lg flex items-center justify-center mr-4">
+                        <!-- LinkedIn -->
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-[#12265E] rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
                                 <i data-lucide="linkedin" class="w-6 h-6 text-white"></i>
                             </div>
                             <div>
                                 <p class="text-sm text-gray-500 mb-1">Connect With Us</p>
                                 <a href="https://at.linkedin.com/company/speccon-pty-ltd" target="_blank" class="text-[#12265E] hover:text-[#ffa600] font-semibold transition duration-300">LinkedIn Profile</a>
-                            
                             </div>
                         </div>
 
+                        <!-- Head Office -->
                         <div class="flex items-start">
-                            <div class="w-12 h-12 bg-[#12265E] rounded-lg flex items-center justify-center mr-4 mt-1">
-                                <i data-lucide="map-pin" class="w-6 h-6 text-white"></i>
-                            </div>
-                            <div>
-                                <p class="text-sm text-gray-500 mb-1">Visit Our Office</p>
-                                <span class="text-[#12265E] font-semibold">Suite W003 & W004, Midlands Office Park West<br>1 Mount Quray Street, Midstream, 1692</span>
-
-                            </div>
-                        </div>
-
-                        <div class="flex items-start mt-6">
-                            <a href="https://www.google.com/maps/search/?api=1&query=182+Cradock+Ave,+Lyttelton+Manor,+Centurion+0157" target="_blank" class="w-12 h-12 bg-[#12265E] rounded-lg flex items-center justify-center mr-4 mt-1 hover:bg-[#ffa600] transition duration-300">
+                            <a href="https://www.google.com/maps/search/?api=1&query=Suite+W003+W004+Midlands+Office+Park+West+1+Mount+Quray+Street+Midstream+1692" target="_blank" class="w-12 h-12 bg-[#12265E] rounded-lg flex items-center justify-center mr-4 flex-shrink-0 hover:bg-[#ffa600] transition duration-300">
                                 <i data-lucide="map-pin" class="w-6 h-6 text-white"></i>
                             </a>
                             <div>
-                                <p class="text-sm text-gray-500 mb-1">Training Centre</p>
-                                <span class="text-[#12265E] font-semibold">182 Cradock Ave<br>Lyttelton Manor<br>Centurion 0157</span>
+                                <p class="text-sm text-gray-500 mb-1">Head Office</p>
+                                <span class="text-[#12265E] font-semibold">Suite W003 & W004, Midlands Office Park West<br>1 Mount Quray Street, Midstream, 1692</span>
+                            </div>
+                        </div>
 
+                        <!-- Centurion Learning Centre -->
+                        <div class="flex items-start">
+                            <a href="https://www.google.com/maps/search/?api=1&query=182+Cradock+Ave+Lyttelton+Manor+Centurion+0157" target="_blank" class="w-12 h-12 bg-[#12265E] rounded-lg flex items-center justify-center mr-4 flex-shrink-0 hover:bg-[#ffa600] transition duration-300">
+                                <i data-lucide="map-pin" class="w-6 h-6 text-white"></i>
+                            </a>
+                            <div>
+                                <p class="text-sm text-gray-500 mb-1">Centurion Learning Centre</p>
+                                <span class="text-[#12265E] font-semibold">182 Cradock Ave<br>Lyttelton Manor<br>Centurion 0157</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Google Map -->
-                <div class="rounded-xl shadow-lg overflow-hidden h-full min-h-[400px]">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3588.373299175368!2d28.18871131504176!3d-25.924945983573547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDU1JzI5LjgiUyAyOMKwMTEnMjguMiJF!5e0!3m2!1sen!2sus!4v1634557890123!5m2!1sen!2sus&q=Suite+W003+%26+W004%2C+Midlands+Office+Park+West%2C+1+Mount+Quray+Street%2C+Midstream%2C+1692" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <!-- Right Column -->
+                <div class="bg-white p-8 rounded-xl shadow-lg h-full flex flex-col">
+                    <h3 class="text-2xl font-bold text-[#12265E] mb-6">Location</h3>
+                    <div class="space-y-6 text-gray-600 flex-grow">
+                        <!-- Cape Town Learning Centre -->
+                        <div class="flex items-start">
+                            <a href="https://www.google.com/maps/search/?api=1&query=Sunbel+Building+12th+Floor+3+Old+Paarl+Road+Bellville+Cape+Town+7530" target="_blank" class="w-12 h-12 bg-[#12265E] rounded-lg flex items-center justify-center mr-4 flex-shrink-0 hover:bg-[#ffa600] transition duration-300">
+                                <i data-lucide="map-pin" class="w-6 h-6 text-white"></i>
+                            </a>
+                            <div>
+                                <p class="text-sm text-gray-500 mb-1">Cape Town Learning Centre</p>
+                                <span class="text-[#12265E] font-semibold">Sunbel Building, 12th Floor<br>3 Old Paarl Road, Bellville<br>Cape Town 7530</span>
+                            </div>
+                        </div>
+
+                        <!-- Mpumalanga Learning Centre -->
+                        <div class="flex items-start">
+                            <a href="https://www.google.com/maps/search/?api=1&query=45+Ferreira+Street+Mbombela+1200" target="_blank" class="w-12 h-12 bg-[#12265E] rounded-lg flex items-center justify-center mr-4 flex-shrink-0 hover:bg-[#ffa600] transition duration-300">
+                                <i data-lucide="map-pin" class="w-6 h-6 text-white"></i>
+                            </a>
+                            <div>
+                                <p class="text-sm text-gray-500 mb-1">Megro Learning Centre</p>
+                                <span class="text-[#12265E] font-semibold">45 Ferreira Street<br>Mbombela<br>1200</span>
+                            </div>
+                        </div>
+
+                        <!-- Pinetown Learning Centre -->
+                        <div class="flex items-start">
+                            <a href="https://www.google.com/maps/search/?api=1&query=25-27+Hill+Street+Pinetown+Durban+3610" target="_blank" class="w-12 h-12 bg-[#12265E] rounded-lg flex items-center justify-center mr-4 flex-shrink-0 hover:bg-[#ffa600] transition duration-300">
+                                <i data-lucide="map-pin" class="w-6 h-6 text-white"></i>
+                            </a>
+                            <div>
+                                <p class="text-sm text-gray-500 mb-1">Pinetown Learning Centre</p>
+                                <span class="text-[#12265E] font-semibold">25-27 Hill Street, KZN Pinehill Centre<br>(Entrance in Dales Avenue)<br>Pinetown, Durban 3610</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1289,7 +1324,7 @@
                         <img src="Images/TETA-300x300-1.png" alt="TETA Logo" class="w-16 h-16 object-contain">
                     </div>
                     <h3 class="font-bold text-lg text-white mb-2">TETA</h3>
-                    <p class="text-3xl font-bold text-[#FFA600] mb-1">6</p>
+                    <p class="text-3xl font-bold text-[#FFA600] mb-1">9</p>
                     <p class="text-white text-sm">Qualifications</p>
                 </a>
                 <a href="setas/inseta.html" class="bg-[#92ABC4] p-8 rounded-2xl shadow-lg card-hover transition-all duration-300 text-center hover:shadow-2xl cursor-pointer block">
