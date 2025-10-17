@@ -1,0 +1,47 @@
+# robots.txt for SpecCon Holdings - Accredited Training & Learnerships
+
+# Allow all search engines to crawl the site
+User-agent: *
+Allow: /
+
+# Disallow crawling of admin and private areas
+Disallow: /admin/
+Disallow: /wp-admin/
+Disallow: /login/
+Disallow: /user/
+Disallow: /dashboard/
+
+# Disallow crawling of search results and filtered pages
+Disallow: /search/
+Disallow: /*?s=
+Disallow: /*?search=
+
+# Disallow crawling of duplicate content
+Disallow: /print/
+Disallow: /*?print=
+Disallow: /pdf/
+
+# Disallow crawling of form processing scripts
+Disallow: /cgi-bin/
+Disallow: /form-submit/
+Disallow: /contact-form/
+
+# Disallow crawling of private documents and applications
+Disallow: /applications/private/
+Disallow: /student-portal/
+Disallow: /learner-documents/
+
+# Allow crawling of important pages
+Allow: /courses/
+Allow: /learnerships/
+Allow: /training/
+Allow: /accreditation/
+Allow: /contact/
+Allow: /about/
+Allow: /apply/
+
+# Sitemap location (https://speccon.co.za/sitemap.xml)
+Sitemap: https://speccon.co.za/sitemap.xml
+# Crawl-delay for slower bots (optional)
+# User-agent: *
+# Crawl-delay: 10
