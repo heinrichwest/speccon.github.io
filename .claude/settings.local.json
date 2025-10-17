@@ -56,7 +56,9 @@
       "Bash(sed:*)",
       "Bash(node:*)",
       "Bash(del test-assessment.js)",
-      "Bash(del test-writing-assessment.html)"
+      "Bash(del test-writing-assessment.html)",
+      "Bash(git pull:*)",
+      "Bash(git commit:*)"
     ],
     "deny": [],
     "ask": []

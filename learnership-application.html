@@ -354,7 +354,7 @@
                     <!-- Mathematical and Excel Tests (2-column grid) -->
                     <div class="grid md:grid-cols-2 gap-6 mb-6">
                         <!-- Mathematical Test -->
-                        <div id="math-assessment" class="p-6 rounded-xl shadow-lg border assessment-pending bg-[#12265E]">
+                        <div id="math-assessment" class="p-6 rounded-xl shadow-lg border assessment-pending bg-[#12265E] flex flex-col">
                             <div class="flex items-center mb-4">
                                 <div class="w-12 h-12 bg-[#ffffff] rounded-lg flex items-center justify-center mr-4">
                                     <i data-lucide="calculator" class="w-6 h-6 text-[#FFA600]"></i>
@@ -371,13 +371,13 @@
                                     <p class="text-sm text-green-600 hidden">Score: <span id="math-score">0</span>%</p>
                                 </div>
                             </div>
-                            <button onclick="startMathTest()" class="w-full bg-[#ffa600] text-white py-3 rounded-lg font-semibold hover:bg-[#92abc4] transition duration-300">
+                            <button onclick="startMathTest()" class="w-full bg-[#ffa600] text-white py-3 rounded-lg font-semibold hover:bg-[#92abc4] transition duration-300 mt-auto">
                                 Start Mathematical Test
                             </button>
                         </div>
 
                         <!-- Excel Skills Test -->
-                        <div id="excel-assessment" class="p-6 rounded-xl shadow-lg border assessment-pending bg-[#12265E]">
+                        <div id="excel-assessment" class="p-6 rounded-xl shadow-lg border assessment-pending bg-[#12265E] flex flex-col">
                             <div class="flex items-center mb-4">
                                 <div class="w-12 h-12 bg-[#ffffff] rounded-lg flex items-center justify-center mr-4">
                                     <i data-lucide="table" class="w-6 h-6 text-[#FFA600]"></i>
@@ -394,7 +394,7 @@
                                     <p class="text-sm text-green-600 hidden">Score: <span id="excel-score">0</span>%</p>
                                 </div>
                             </div>
-                            <button onclick="startExcelTest()" class="w-full bg-[#ffa600] text-white py-3 rounded-lg font-semibold hover:bg-[#92abc4] transition duration-300">
+                            <button onclick="startExcelTest()" class="w-full bg-[#ffa600] text-white py-3 rounded-lg font-semibold hover:bg-[#92abc4] transition duration-300 mt-auto">
                                 Start Excel Test
                             </button>
                         </div>
