@@ -1,12 +1,6 @@
 {
   "permissions": {
     "allow": [
-<<<<<<< HEAD
-      "Bash(python:*)",
-      "Read(//c/Users/Speccon/Documents/Websites/**)",
-      "Bash(sed:*)",
-      "Bash(git add:*)"
-=======
       "mcp__firecrawl__firecrawl_scrape",
       "WebFetch(domain:speccon.co.za)",
       "Bash(python:*)",
@@ -22,6 +16,7 @@
       "Bash(python3:*)",
       "Bash(chmod:*)",
       "Bash(./update_files.sh)",
+      "Read(//c/Users/Speccon/Documents/Websites/**)",
       "Read(//c/Users/Asus/OneDrive - Speccon Holdings (Pty) Ltd/Websites/**)",
       "WebFetch(domain:127.0.0.1)",
       "Bash(bash:*)",
@@ -58,16 +53,12 @@
       "Bash(git remote add:*)",
       "Bash(git add:*)",
       "Bash(git push:*)",
+      "Bash(sed:*)",
       "Bash(node:*)",
       "Bash(del test-assessment.js)",
       "Bash(del test-writing-assessment.html)"
->>>>>>> 72d83411f6abf68f9bb9918494f39f9b2eab0148
     ],
     "deny": [],
     "ask": []
   }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 72d83411f6abf68f9bb9918494f39f9b2eab0148
