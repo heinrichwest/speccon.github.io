@@ -1,0 +1,11 @@
+# Robots.txt for SpecCon Holdings
+# Website: www.speccon.co.za
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.speccon.co.za/sitemap.xml
+
+# Disallow template files
+Disallow: /qualifications/template-qualification.html
