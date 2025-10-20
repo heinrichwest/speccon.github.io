@@ -9,3 +9,4 @@ Sitemap: https://www.speccon.co.za/sitemap.xml
 
 # Disallow template files
 Disallow: /qualifications/template-qualification.html
+Disallow: /cdn-cgi/

@@ -42,7 +42,58 @@
             0% { transform: translateX(0); }
             100% { transform: translateX(-100%); }
         }
-    
+
+        /* Enhanced Dropdown Menu Styles */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: calc(100% + 8px);
+            left: 0;
+            min-width: 16rem;
+            background: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e5e7eb;
+            z-index: 1000;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: opacity 0.2s ease, transform 0.2s ease;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Invisible bridge to prevent menu closing when moving cursor */
+        .dropdown::before {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            height: 12px;
+            z-index: 999;
+        }
+
+        .dropdown button {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            padding: 0;
+            font-size: inherit;
+            font-family: inherit;
+            color: inherit;
+        }
+
         /* Enquiry Popup Modal Styles */
         .enquiry-modal {
             position: fixed;
@@ -489,9 +540,9 @@
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
                 
-                <a href="../index.html#contact" class="border-2 border-white text-white font-semibold px-8 py-4 rounded-lg hover:bg-white hover:text-[#12265E] transition duration-300">
-                    Contact Us
-                </a>
+                <a href="#" onclick="openEnquiryModal()" class="border-2 border-white text-white font-semibold px-8 py-4 rounded-lg hover:bg-white hover:text-[#12265E] transition duration-300">
+    Contact Us
+</a>
             </div>
         </div>
     </section>
