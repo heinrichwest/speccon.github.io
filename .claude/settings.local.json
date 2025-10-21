@@ -58,7 +58,9 @@
       "Bash(del test-assessment.js)",
       "Bash(del test-writing-assessment.html)",
       "Bash(git pull:*)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(do if ! grep -q \"<!-- Career Opportunities -->\" \"$file\")",
+      "Bash(then echo \"$file\")"
     ],
     "deny": [],
     "ask": []
