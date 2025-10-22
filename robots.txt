@@ -15,4 +15,6 @@ Disallow: /for-individuals/
 Disallow: /frequently-asked-question/
 Disallow: /learning-management-systems/
 Disallow: /shortcoursescatalogue/
+Disallow: /css/
+Disallow: /js/
 
