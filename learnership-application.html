@@ -733,6 +733,54 @@
                                         </select>
                                     </div>
                                     <div>
+                                        <label for="passType" class="block text-sm font-medium text-gray-700 mb-2">Pass Type</label>
+                                        <select id="passType" name="passType"
+                                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFA600] focus:border-transparent">
+                                            <option value="">Select pass type</option>
+                                            <option value="Bachelor's Pass">Bachelor's Pass</option>
+                                            <option value="Diploma Pass">Diploma Pass</option>
+                                            <option value="Higher Certificate Pass">Higher Certificate Pass</option>
+                                        </select>
+                                    </div>
+                                    <div class="md:col-span-2">
+                                        <label class="block text-sm font-medium text-gray-700 mb-2">Matric Subjects</label>
+                                        <div class="flex gap-2">
+                                            <select id="subjectDropdown" class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFA600] focus:border-transparent">
+                                                <option value="">Select a subject</option>
+                                                <option value="Accounting">Accounting</option>
+                                                <option value="Afrikaans First Additional Language">Afrikaans First Additional Language</option>
+                                                <option value="Afrikaans Home Language">Afrikaans Home Language</option>
+                                                <option value="Business Studies">Business Studies</option>
+                                                <option value="Computer Applications Technology">Computer Applications Technology</option>
+                                                <option value="Economics">Economics</option>
+                                                <option value="English First Additional Language">English First Additional Language</option>
+                                                <option value="English Home Language">English Home Language</option>
+                                                <option value="Geography">Geography</option>
+                                                <option value="History">History</option>
+                                                <option value="Mathematics Literacy">Mathematics Literacy</option>
+                                                <option value="Physical Science">Physical Science</option>
+                                                <option value="Visual Arts">Visual Arts</option>
+                                                <option value="Mathematics">Mathematics</option>
+                                            </select>
+                                            <input type="number" id="subjectPercentage" placeholder="%" min="0" max="100"
+                                                   class="w-24 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFA600] focus:border-transparent">
+                                            <button type="button" id="addSubjectBtn"
+                                                    class="px-6 py-3 bg-[#FFA600] text-white rounded-lg hover:bg-[#FF8C00] transition duration-300 font-semibold">
+                                                Add
+                                            </button>
+                                        </div>
+                                        <p class="text-xs text-gray-500 mt-1">Select a subject, enter the percentage, and click Add</p>
+                                        <p class="text-xs text-[#FFA600] mt-1">⚠️ Please note: Adding subjects is not mandatory.</p>
+                                    </div>
+                                    <div class="md:col-span-2">
+                                        <label class="block text-sm font-medium text-gray-700 mb-2">Added Subjects</label>
+                                        <div id="selectedSubjectsList" class="w-full min-h-[100px] px-4 py-3 border border-gray-300 rounded-lg bg-gray-50">
+                                            <div id="subjectsListContainer" class="space-y-2">
+                                                <span class="text-gray-400 text-sm">No subjects added yet</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
                                         <label for="institution" class="block text-sm font-medium text-gray-700 mb-2">Institution</label>
                                         <input type="text" id="institution" name="institution"
                                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFA600] focus:border-transparent">
@@ -2051,6 +2099,10 @@ async function submitApplication(event) {
             throw new Error('Validation failed:\n\n' + validationErrors.join('\n'));
         }
 
+        // Get added matric subjects with percentages
+        const addedSubjectsArray = window.getAddedSubjects();
+        const matricSubjectsData = addedSubjectsArray.map(s => `${s.name}: ${s.percentage}%`).join(', ');
+
         // Prepare application data for API
         const applicationData = {
             firstName: formData.get('firstName'),
@@ -2069,11 +2121,13 @@ async function submitApplication(event) {
             isDisabled: formData.get('disability') === 'yes',
             desiredQualification: formData.get('qualification'),
             highestQualification: formData.get('highestQualification'),
+            passType: formData.get('passType') || '',
+            matricSubjects: matricSubjectsData,
             institution: formData.get('institution'),
             yearCompleted: formData.get('yearCompleted'),
             mathematicsLevel: formData.get('mathsLevel'),
             englishLevel: formData.get('englishLevel'),
-         
+
             employmentStatus: formData.get('employmentStatus'),
             currentEmployer: formData.get('currentEmployer') || '',
             currentPosition: formData.get('currentPosition') || '',
@@ -2324,6 +2378,87 @@ setInterval(saveDraft, 120000);
                     }
                 });
             }
+
+            // Matric Subjects with percentage handler
+            const subjectDropdown = document.getElementById('subjectDropdown');
+            const subjectPercentage = document.getElementById('subjectPercentage');
+            const addSubjectBtn = document.getElementById('addSubjectBtn');
+            const subjectsListContainer = document.getElementById('subjectsListContainer');
+
+            // Array to store added subjects
+            let addedSubjects = [];
+
+            function updateSubjectsDisplay() {
+                if (addedSubjects.length === 0) {
+                    subjectsListContainer.innerHTML = '<span class="text-gray-400 text-sm">No subjects added yet</span>';
+                } else {
+                    const subjectRows = addedSubjects.map((subject, index) => {
+                        return `<div class="flex items-center justify-between p-3 bg-white rounded-lg border border-gray-200">
+                            <div class="flex-1">
+                                <span class="font-medium text-gray-900">${subject.name}</span>
+                                <span class="ml-3 text-[#FFA600] font-semibold">${subject.percentage}%</span>
+                            </div>
+                            <button type="button" onclick="removeSubjectAtIndex(${index})"
+                                    class="text-red-600 hover:text-red-800 focus:outline-none p-1">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                </svg>
+                            </button>
+                        </div>`;
+                    }).join('');
+                    subjectsListContainer.innerHTML = subjectRows;
+                }
+            }
+
+            // Add subject button handler
+            if (addSubjectBtn) {
+                addSubjectBtn.addEventListener('click', function() {
+                    const selectedSubject = subjectDropdown.value;
+                    const percentage = subjectPercentage.value;
+
+                    // Validation
+                    if (!selectedSubject) {
+                        alert('Please select a subject');
+                        return;
+                    }
+
+                    if (!percentage || percentage < 0 || percentage > 100) {
+                        alert('Please enter a valid percentage (0-100)');
+                        return;
+                    }
+
+                    // Check if subject already added
+                    const alreadyAdded = addedSubjects.find(s => s.name === selectedSubject);
+                    if (alreadyAdded) {
+                        alert('This subject has already been added. Please remove it first to update.');
+                        return;
+                    }
+
+                    // Add subject to array
+                    addedSubjects.push({
+                        name: selectedSubject,
+                        percentage: percentage
+                    });
+
+                    // Update display
+                    updateSubjectsDisplay();
+
+                    // Reset inputs
+                    subjectDropdown.value = '';
+                    subjectPercentage.value = '';
+                });
+            }
+
+            // Function to remove subject by index
+            window.removeSubjectAtIndex = function(index) {
+                addedSubjects.splice(index, 1);
+                updateSubjectsDisplay();
+            };
+
+            // Make addedSubjects accessible globally for form submission
+            window.getAddedSubjects = function() {
+                return addedSubjects;
+            };
 
             // Disability section toggle
             const disabilitySelect = document.getElementById('disability');
