@@ -2121,8 +2121,7 @@ async function submitApplication(event) {
             isDisabled: formData.get('disability') === 'yes',
             desiredQualification: formData.get('qualification'),
             highestQualification: formData.get('highestQualification'),
-            passType: formData.get('passType') || '',
-            matricSubjects: matricSubjectsData,
+            
             institution: formData.get('institution'),
             yearCompleted: formData.get('yearCompleted'),
             mathematicsLevel: formData.get('mathsLevel'),
@@ -2155,7 +2154,9 @@ async function submitApplication(event) {
             aboutself: formData.get('aboutYourself') || '',
             currentWorkSkills: formData.get('currentWorkSkills') || '',
             computerInternetAccess: formData.get('computerInternetAccess') === 'Yes',
-            dateOfBirth: formData.get('dateOfBirth')
+            dateOfBirth: formData.get('dateOfBirth'),
+            passType: formData.get('passType') || '',
+            matricSubjects: matricSubjectsData
         };
 
         // Make API call to submit application
