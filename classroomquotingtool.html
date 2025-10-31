@@ -1,0 +1,2445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpecCon Training Quoting Tool</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        :root {
+            --blue: #12265E;
+            --orange: #FFA600;
+            --white: #FFFFFF;
+            --light-blue: #92ABC4;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--blue);
+            color: var(--white);
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .interface-toggle {
+            background-color: var(--orange);
+            color: var(--white);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+
+        .interface-toggle:hover,
+        .logout-btn:hover {
+            opacity: 0.8;
+        }
+
+        .logout-btn {
+            background-color: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        .logout-btn:hover {
+            background-color: var(--white);
+            color: var(--blue);
+        }
+
+        /* Login Container */
+        .login-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, var(--blue) 0%, var(--light-blue) 100%);
+        }
+
+        .login-box {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            width: 450px;
+            max-width: 90%;
+        }
+
+        .login-logo {
+            display: block;
+            margin: 0 auto 20px;
+            width: 120px;
+            height: auto;
+        }
+
+        .login-box h1 {
+            color: var(--blue);
+            margin-bottom: 10px;
+            font-size: 32px;
+            text-align: center;
+        }
+
+        .login-box p {
+            color: #666;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--blue);
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 5px;
+            font-size: 14px;
+            transition: border-color 0.3s;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--orange);
+        }
+
+        .btn {
+            width: 100%;
+            padding: 12px;
+            background-color: var(--orange);
+            color: var(--white);
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: opacity 0.3s;
+        }
+
+        .btn:hover {
+            opacity: 0.8;
+        }
+
+        .btn-secondary {
+            background-color: var(--blue);
+            margin-top: 10px;
+        }
+
+        .btn-small {
+            width: auto;
+            padding: 8px 16px;
+            font-size: 14px;
+        }
+
+        .btn-link {
+            background: none;
+            color: var(--blue);
+            text-decoration: underline;
+            margin-top: 15px;
+        }
+
+        /* Main Container */
+        .main-container {
+            display: flex;
+            min-height: calc(100vh - 80px);
+        }
+
+        /* Navigation */
+        .sidebar {
+            width: 250px;
+            background-color: var(--blue);
+            padding: 20px 0;
+        }
+
+        .nav-item {
+            padding: 15px 30px;
+            color: var(--white);
+            cursor: pointer;
+            transition: background-color 0.3s;
+            border-left: 4px solid transparent;
+        }
+
+        .nav-item:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-item.active {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-left-color: var(--orange);
+        }
+
+        /* Content Area */
+        .content {
+            flex: 1;
+            padding: 40px;
+            background-color: #f5f5f5;
+            overflow-y: auto;
+        }
+
+        .page-title {
+            color: var(--blue);
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .page-subtitle {
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            margin-bottom: 20px;
+        }
+
+        .card-title {
+            color: var(--blue);
+            font-size: 20px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--orange);
+        }
+
+        /* Table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        th {
+            background-color: var(--blue);
+            color: var(--white);
+            font-weight: 500;
+        }
+
+        tr:hover {
+            background-color: #f9f9f9;
+        }
+
+        .action-btn {
+            background-color: var(--orange);
+            color: white;
+            border: none;
+            padding: 5px 15px;
+            border-radius: 3px;
+            cursor: pointer;
+            margin-right: 5px;
+            font-size: 12px;
+        }
+
+        .action-btn:hover {
+            opacity: 0.8;
+        }
+
+        .action-btn.edit {
+            background-color: var(--blue);
+        }
+
+        .action-btn.delete {
+            background-color: #dc3545;
+        }
+
+        .action-btn.reset {
+            background-color: #ffc107;
+        }
+
+        /* Toggle Switch */
+        .toggle-switch {
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            height: 24px;
+        }
+
+        .toggle-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .toggle-slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: 0.4s;
+            border-radius: 24px;
+        }
+
+        .toggle-slider:before {
+            position: absolute;
+            content: "";
+            height: 18px;
+            width: 18px;
+            left: 3px;
+            bottom: 3px;
+            background-color: white;
+            transition: 0.4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .toggle-slider {
+            background-color: var(--orange);
+        }
+
+        input:checked + .toggle-slider:before {
+            transform: translateX(26px);
+        }
+
+        .format-toggles {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .format-toggle-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            background: #f9f9f9;
+            border-radius: 5px;
+            border: 2px solid #e0e0e0;
+        }
+
+        .format-toggle-item label {
+            font-weight: 500;
+            color: var(--blue);
+        }
+
+        /* Course Item */
+        .course-item {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            border-left: 4px solid var(--orange);
+        }
+
+        .course-item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .course-item-title {
+            font-weight: 500;
+            color: var(--blue);
+            font-size: 16px;
+        }
+
+        /* Grid Layout */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+        }
+
+        .grid-4 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 20px;
+        }
+
+        /* Alert Messages */
+        .alert {
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .alert-success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .alert-error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        .alert-info {
+            background-color: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+
+        /* Quote Summary */
+        .quote-summary {
+            background: linear-gradient(135deg, var(--blue) 0%, var(--light-blue) 100%);
+            color: var(--white);
+            padding: 30px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .quote-summary h3 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .summary-row.total {
+            font-size: 24px;
+            font-weight: bold;
+            border-bottom: none;
+            margin-top: 10px;
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            overflow-y: auto;
+        }
+
+        .modal.active {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: var(--white);
+            padding: 30px;
+            border-radius: 10px;
+            width: 600px;
+            max-width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .modal-title {
+            color: var(--blue);
+            font-size: 24px;
+        }
+
+        .close-modal {
+            background: none;
+            border: none;
+            font-size: 30px;
+            cursor: pointer;
+            color: #999;
+        }
+
+        .close-modal:hover {
+            color: #333;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .grid-2, .grid-3, .grid-4 {
+                grid-template-columns: 1fr;
+            }
+
+            .main-container {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+            }
+
+            .format-toggles {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .variable-cost-item {
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            border-left: 3px solid var(--orange);
+        }
+
+        .variable-cost-row {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr auto;
+            gap: 10px;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Login Page -->
+    <div id="loginPage" class="login-container">
+        <div class="login-box">
+            <img src="Images/Logo.png" alt="SpecCon Logo" class="login-logo">
+            <h1>SpecCon</h1>
+            <p>Training Quoting Tool</p>
+
+            <div id="loginForm">
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" id="loginEmail" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" id="loginPassword" placeholder="Enter password">
+                </div>
+                <button class="btn" onclick="login()">Login</button>
+                <button class="btn btn-link" onclick="showActivationForm()">Activate Account</button>
+            </div>
+
+            <div id="activationForm" class="hidden">
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" id="activationEmail" placeholder="Enter your whitelisted email">
+                </div>
+                <div class="form-group">
+                    <label>Create Password</label>
+                    <input type="password" id="activationPassword" placeholder="Create a password">
+                </div>
+                <div class="form-group">
+                    <label>Confirm Password</label>
+                    <input type="password" id="activationPasswordConfirm" placeholder="Confirm password">
+                </div>
+                <button class="btn" onclick="activateAccount()">Activate Account</button>
+                <button class="btn btn-link" onclick="showLoginForm()">Back to Login</button>
+            </div>
+
+            <div id="authMessage" class="alert alert-error hidden" style="margin-top: 15px;"></div>
+        </div>
+    </div>
+
+    <!-- Main Application -->
+    <div id="mainApp" class="hidden">
+        <header>
+            <div class="logo">SpecCon</div>
+            <div class="user-info">
+                <span id="currentUser"></span>
+                <button id="interfaceToggle" class="interface-toggle hidden" onclick="toggleInterface()">
+                    Switch to <span id="toggleText">Sales</span> Interface
+                </button>
+                <button class="logout-btn" onclick="logout()">Logout</button>
+            </div>
+        </header>
+
+        <div class="main-container">
+            <nav class="sidebar" id="sidebar">
+                <!-- Navigation will be inserted here -->
+            </nav>
+
+            <main class="content">
+                <!-- Admin: User Management -->
+                <div id="userManagement" class="page-section hidden">
+                    <h1 class="page-title">User Management</h1>
+                    <p class="page-subtitle">Manage whitelisted users and access control</p>
+
+                    <div class="card">
+                        <h3 class="card-title">Add Whitelisted Email</h3>
+                        <div class="grid-2">
+                            <div class="form-group">
+                                <label>Email Address</label>
+                                <input type="email" id="whitelistEmail" placeholder="user@example.com">
+                            </div>
+                            <div class="form-group">
+                                <label>Role</label>
+                                <select id="whitelistRole">
+                                    <option value="sales">Sales Representative</option>
+                                    <option value="admin">Administrator</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button class="btn btn-small" onclick="addWhitelistedEmail()">Add Email</button>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="card-title">Whitelisted Users</h3>
+                        <div id="whitelistTable"></div>
+                    </div>
+                </div>
+
+                <!-- Admin: Course Management -->
+                <div id="courseManagement" class="page-section hidden">
+                    <h1 class="page-title">Course Management</h1>
+                    <p class="page-subtitle">Manage training courses and pricing</p>
+
+                    <button class="btn btn-small" style="margin-bottom: 20px;" onclick="showAddCourseModal()">Add New Course</button>
+
+                    <div class="card">
+                        <h3 class="card-title">Existing Courses</h3>
+                        <div id="coursesList"></div>
+                    </div>
+                </div>
+
+                <!-- Admin: Variable Costs Configuration -->
+                <div id="variableCostsConfig" class="page-section hidden">
+                    <h1 class="page-title">Variable Costs Configuration</h1>
+                    <p class="page-subtitle">Configure pricing for variable cost items</p>
+
+                    <div class="card">
+                        <h3 class="card-title">Standard Rates</h3>
+                        <div class="grid-2">
+                            <div class="form-group">
+                                <label>Travel Rate (per km)</label>
+                                <input type="number" id="travelRatePerKm" step="0.01" min="0" value="4.50">
+                            </div>
+                            <div class="form-group">
+                                <label>Accommodation Rate (per night)</label>
+                                <input type="number" id="accommodationRatePerNight" step="0.01" min="0" value="1200.00">
+                            </div>
+                        </div>
+                        <button class="btn btn-small" onclick="saveVariableCostRates()">Save Rates</button>
+                    </div>
+                </div>
+
+                <!-- Admin: Terms & Conditions -->
+                <div id="termsConditions" class="page-section hidden">
+                    <h1 class="page-title">Terms & Conditions</h1>
+                    <p class="page-subtitle">Edit the terms and conditions that appear on quotations</p>
+
+                    <div class="card">
+                        <h3 class="card-title">Quote Terms & Conditions</h3>
+                        <div class="form-group">
+                            <label>Terms & Conditions Text</label>
+                            <textarea id="termsTextarea" rows="20" style="width: 100%; padding: 12px; border: 2px solid #e0e0e0; border-radius: 5px; font-family: 'Roboto', sans-serif; font-size: 14px;"></textarea>
+                        </div>
+                        <button class="btn btn-small" onclick="saveTermsAndConditions()">Save Terms & Conditions</button>
+                    </div>
+                </div>
+
+                <!-- Admin: Quote Management -->
+                <div id="quoteManagement" class="page-section hidden">
+                    <h1 class="page-title">Quote Management</h1>
+                    <p class="page-subtitle">View and download all generated quotes</p>
+
+                    <div class="card">
+                        <h3 class="card-title">All Quotes</h3>
+                        <div id="allQuotesTable"></div>
+                    </div>
+                </div>
+
+                <!-- Sales: Create Quote -->
+                <div id="createQuote" class="page-section hidden">
+                    <h1 class="page-title">Create New Quote</h1>
+                    <p class="page-subtitle">Generate a professional pro-forma quotation</p>
+
+                    <div class="card">
+                        <h3 class="card-title">Client Information</h3>
+                        <div class="grid-2">
+                            <div class="form-group">
+                                <label>Client Registration Name *</label>
+                                <input type="text" id="clientName" required>
+                            </div>
+                            <div class="form-group">
+                                <label>VAT Number</label>
+                                <input type="text" id="clientVAT">
+                            </div>
+                            <div class="form-group">
+                                <label>Address Line 1 *</label>
+                                <input type="text" id="clientAddress1" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Address Line 2</label>
+                                <input type="text" id="clientAddress2">
+                            </div>
+                            <div class="form-group">
+                                <label>Address Line 3</label>
+                                <input type="text" id="clientAddress3">
+                            </div>
+                            <div class="form-group">
+                                <label>Address Line 4</label>
+                                <input type="text" id="clientAddress4">
+                            </div>
+                            <div class="form-group">
+                                <label>Area Code</label>
+                                <input type="text" id="clientAreaCode">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="card-title">Add Course to Quote</h3>
+                        <div class="grid-2">
+                            <div class="form-group">
+                                <label>Select Course *</label>
+                                <select id="quoteCourse" onchange="updateFormatOptions()">
+                                    <option value="">-- Select Course --</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Training Format *</label>
+                                <select id="quoteFormat">
+                                    <option value="">-- Select Format --</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Number of Delegates *</label>
+                                <input type="number" id="quoteDelegates" min="1" value="5">
+                            </div>
+                            <div class="form-group">
+                                <label>&nbsp;</label>
+                                <button class="btn" onclick="addCourseToQuote()">Add to Quote</button>
+                            </div>
+                        </div>
+
+                        <div id="selectedCourses"></div>
+                    </div>
+
+                    <div class="card" id="variableCostInfoCard" style="background-color: #f0f8ff; border-left: 4px solid var(--blue);">
+                        <h3 class="card-title">Adding Variable Costs</h3>
+                        <p style="color: #666; font-size: 14px; line-height: 1.6;">
+                            <strong>Variable costs are now added per course.</strong><br>
+                            After adding a course above, you'll see an "Add Variable Cost" button for that specific course.<br><br>
+                            <strong>Available variable costs:</strong>
+                        </p>
+                        <ul style="color: #666; font-size: 14px; margin-left: 20px; line-height: 1.8;">
+                            <li><strong>Travel:</strong> Enter round-trip distance (km) - <span id="travelRateInfo">automatically calculated</span></li>
+                            <li><strong>Accommodation:</strong> Enter number of nights - <span id="accomRateInfo">automatically calculated</span></li>
+                            <li><strong>Venue Hire:</strong> Enter custom amount</li>
+                            <li><strong>Catering:</strong> Enter custom amount</li>
+                            <li><strong>Equipment Hire:</strong> Enter custom amount</li>
+                        </ul>
+                        <p style="color: #999; font-size: 13px; margin-top: 15px; font-style: italic;">
+                            💡 Tip: Variable costs are typically only applicable for Blended Online and Face to Face formats.
+                        </p>
+                    </div>
+
+                    <div class="quote-summary">
+                        <h3>Quote Summary</h3>
+                        <div class="summary-row">
+                            <span>Subtotal:</span>
+                            <span id="summarySubtotal">R 0.00</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>VAT (15%):</span>
+                            <span id="summaryVAT">R 0.00</span>
+                        </div>
+                        <div class="summary-row total">
+                            <span>TOTAL:</span>
+                            <span id="summaryTotal">R 0.00</span>
+                        </div>
+                    </div>
+
+                    <button class="btn" style="margin-top: 20px;" onclick="generatePDF()">Generate PDF Quote</button>
+                </div>
+
+                <!-- Sales: Quote History -->
+                <div id="quoteHistory" class="page-section hidden">
+                    <h1 class="page-title">My Quote History</h1>
+                    <p class="page-subtitle">View and manage your quotations</p>
+
+                    <div class="card">
+                        <div id="myQuotesTable"></div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Add/Edit Course Modal -->
+    <div id="courseModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" id="courseModalTitle">Add New Course</h2>
+                <button class="close-modal" onclick="closeCourseModal()">&times;</button>
+            </div>
+            <form id="courseForm" onsubmit="saveCourse(event)">
+                <input type="hidden" id="editCourseId">
+
+                <div class="form-group">
+                    <label>Course Title *</label>
+                    <input type="text" id="courseTitle" required>
+                </div>
+
+                <div class="grid-2">
+                    <div class="form-group">
+                        <label>Duration (Days) *</label>
+                        <input type="number" id="courseDuration" min="1" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Accredited</label>
+                        <select id="courseAccredited">
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="grid-2">
+                    <div class="form-group">
+                        <label>Minimum Delegates</label>
+                        <input type="number" id="courseMinDelegates" min="1" value="5">
+                    </div>
+                    <div class="form-group">
+                        <label>Maximum Delegates</label>
+                        <input type="number" id="courseMaxDelegates" min="1" value="10">
+                    </div>
+                </div>
+
+                <h4 style="color: var(--blue); margin: 20px 0 10px 0;">Available Training Formats</h4>
+                <div class="format-toggles">
+                    <div class="format-toggle-item">
+                        <label>Full Online</label>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="formatFullOnlineAvailable" checked>
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                    <div class="format-toggle-item">
+                        <label>Online Supported</label>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="formatOnlineSupportedAvailable" checked>
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                    <div class="format-toggle-item">
+                        <label>Blended Online</label>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="formatBlendedAvailable" checked>
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                    <div class="format-toggle-item">
+                        <label>Face to Face</label>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="formatF2FAvailable" checked>
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <h4 style="color: var(--blue); margin: 20px 0 10px 0;">Pricing Configuration</h4>
+
+                <h5 style="color: #666; margin: 10px 0;">Full Online</h5>
+                <div class="grid-2">
+                    <div class="form-group">
+                        <label>Per Person (R)</label>
+                        <input type="number" id="priceFullOnlinePerson" min="0" step="0.01" value="0">
+                    </div>
+                </div>
+
+                <h5 style="color: #666; margin: 10px 0;">Online Supported</h5>
+                <div class="grid-2">
+                    <div class="form-group">
+                        <label>Per Person (R)</label>
+                        <input type="number" id="priceOnlineSupportedPerson" min="0" step="0.01" value="0">
+                    </div>
+                    <div class="form-group">
+                        <label>Per Day (R)</label>
+                        <input type="number" id="priceOnlineSupportedDay" min="0" step="0.01" value="0">
+                    </div>
+                </div>
+
+                <h5 style="color: #666; margin: 10px 0;">Blended Online</h5>
+                <div class="grid-2">
+                    <div class="form-group">
+                        <label>Per Person (R)</label>
+                        <input type="number" id="priceBlendedPerson" min="0" step="0.01" value="0">
+                    </div>
+                    <div class="form-group">
+                        <label>Per Day (R)</label>
+                        <input type="number" id="priceBlendedDay" min="0" step="0.01" value="0">
+                    </div>
+                </div>
+
+                <h5 style="color: #666; margin: 10px 0;">Face to Face</h5>
+                <div class="grid-2">
+                    <div class="form-group">
+                        <label>Per Person (R)</label>
+                        <input type="number" id="priceF2FPerson" min="0" step="0.01" value="0">
+                    </div>
+                    <div class="form-group">
+                        <label>Per Day (R)</label>
+                        <input type="number" id="priceF2FDay" min="0" step="0.01" value="0">
+                    </div>
+                </div>
+
+                <button type="submit" class="btn" style="margin-top: 20px;">Save Course</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Add Variable Cost Modal -->
+    <div id="variableCostModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Add Variable Cost</h2>
+                <button class="close-modal" onclick="closeVariableCostModal()">&times;</button>
+            </div>
+            <div class="form-group">
+                <label>Cost Type</label>
+                <select id="varCostType" onchange="updateVariableCostFields()">
+                    <option value="">-- Select Type --</option>
+                    <option value="travel">Travel (Distance-based)</option>
+                    <option value="accommodation">Accommodation (Night-based)</option>
+                    <option value="venue">Venue Hire</option>
+                    <option value="catering">Catering</option>
+                    <option value="equipment">Equipment Hire</option>
+                </select>
+            </div>
+            <div id="varCostFields"></div>
+            <button class="btn" onclick="addVariableCostToQuote()">Add to Quote</button>
+        </div>
+    </div>
+
+    <script>
+        // Application Data Store
+        const APP_DATA = {
+            whitelist: [],
+            users: [],
+            courses: [],
+            quotes: [],
+            rates: {
+                travelPerKm: 4.50,
+                accommodationPerNight: 1200.00
+            },
+            termsAndConditions: '',
+            currentQuote: {
+                client: {},
+                courses: []
+            }
+        };
+
+        let currentUser = null;
+        let currentInterface = 'admin'; // 'admin' or 'sales'
+        let currentCourseForVariableCost = null; // Track which course is receiving a variable cost
+
+        // Currency formatting helper
+        function formatCurrency(amount) {
+            return amount.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+        }
+
+        // Initialize
+        function initializeApp() {
+            loadData();
+            initializeDefaultData();
+        }
+
+        // Load data from localStorage
+        function loadData() {
+            const savedData = localStorage.getItem('specconDataV2');
+            if (savedData) {
+                const parsed = JSON.parse(savedData);
+                APP_DATA.whitelist = parsed.whitelist || [];
+                APP_DATA.users = parsed.users || [];
+                APP_DATA.courses = parsed.courses || [];
+                APP_DATA.quotes = parsed.quotes || [];
+                APP_DATA.rates = parsed.rates || { travelPerKm: 4.50, accommodationPerNight: 1200.00 };
+                APP_DATA.termsAndConditions = parsed.termsAndConditions || '';
+            }
+        }
+
+        // Save data
+        function saveData() {
+            localStorage.setItem('specconDataV2', JSON.stringify({
+                whitelist: APP_DATA.whitelist,
+                users: APP_DATA.users,
+                courses: APP_DATA.courses,
+                quotes: APP_DATA.quotes,
+                rates: APP_DATA.rates,
+                termsAndConditions: APP_DATA.termsAndConditions
+            }));
+        }
+
+        // Initialize default data
+        function initializeDefaultData() {
+            if (APP_DATA.whitelist.length === 0) {
+                // Obfuscated default credentials - DO NOT SHARE PUBLICLY
+                const _0x1a2b = (s) => atob(s);
+                const _0x3c4d = [
+                    // Admin credentials
+                    {
+                        e: _0x1a2b('YWRtaW5Ac3BlY2Nvbi5jby56YQ=='),
+                        p: _0x1a2b('YWRtaW4xMjM='),
+                        r: _0x1a2b('YWRtaW4=')
+                    },
+                    // Sales credentials
+                    {
+                        e: _0x1a2b('c2FsZXNAc3BlY2Nvbi5jby56YQ=='),
+                        p: _0x1a2b('c2FsZXMxMjM='),
+                        r: _0x1a2b('c2FsZXM=')
+                    }
+                ];
+
+                // Initialize default users
+                _0x3c4d.forEach(u => {
+                    APP_DATA.whitelist.push({
+                        email: u.e,
+                        role: u.r,
+                        status: 'active'
+                    });
+
+                    APP_DATA.users.push({
+                        email: u.e,
+                        password: u.p,
+                        role: u.r
+                    });
+                });
+
+                saveData();
+            }
+
+            if (APP_DATA.courses.length === 0) {
+                // Add sample courses
+                APP_DATA.courses = [
+                    {
+                        id: Date.now(),
+                        title: 'Firefighting, Emergency evacuation & Fire Marshall',
+                        duration: 1,
+                        minDelegates: 5,
+                        maxDelegates: 10,
+                        accredited: 'Yes',
+                        availableFormats: {
+                            fullOnline: true,
+                            onlineSupported: true,
+                            blended: true,
+                            faceToFace: true
+                        },
+                        pricing: {
+                            fullOnline: { perPerson: 500, perDay: 0 },
+                            onlineSupported: { perPerson: 500, perDay: 2000 },
+                            blended: { perPerson: 500, perDay: 3000 },
+                            faceToFace: { perPerson: 500, perDay: 3500 }
+                        }
+                    },
+                    {
+                        id: Date.now() + 1,
+                        title: 'First Aid Level 1',
+                        duration: 1,
+                        minDelegates: 5,
+                        maxDelegates: 10,
+                        accredited: 'Yes',
+                        availableFormats: {
+                            fullOnline: true,
+                            onlineSupported: true,
+                            blended: true,
+                            faceToFace: true
+                        },
+                        pricing: {
+                            fullOnline: { perPerson: 500, perDay: 0 },
+                            onlineSupported: { perPerson: 500, perDay: 2000 },
+                            blended: { perPerson: 500, perDay: 3000 },
+                            faceToFace: { perPerson: 500, perDay: 3500 }
+                        }
+                    }
+                ];
+
+                saveData();
+            }
+
+            if (!APP_DATA.termsAndConditions) {
+                APP_DATA.termsAndConditions = `1. ENROLLMENT PROCESS
+Upon acceptance of quotation: VAT invoice will be issued, training commences upon receipt of full payment.
+Required documentation: TETA documents, POPI Act consent form, and certified copy of ID.
+Login details for LMS or classroom booking will be provided after enrollment.
+
+2. TRAINING TIERS & LIMITATIONS
+Tier 1 - Self-Study (Online): Non-accredited, Certificate of Attendance upon completion, No participant limitations.
+Tier 2 - Face-to-Face Classroom: Accredited, Certificate of Completion (7-14 days after training), Minimum 5, Maximum 10 participants.
+Tier 3 - Blended: Accredited, Certificate of Completion (7-14 days after training), Minimum 5, Maximum 10 participants per session.
+Tier 4 - Online Theory + Teams Practical: Accredited, Certificate of Completion (7-14 days after training), Minimum 5, Maximum 10 participants.
+
+3. CANCELLATION & REFUND POLICY
+10+ days before training: 75% refund. Less than 5 days before training: Non-refundable. No-show on training day: Non-refundable.
+Service Provider reserves the right to cancel/reschedule with full refund or alternative date offered.
+
+4. PARTICIPANT OBLIGATIONS
+Attend all sessions punctually. Meet training prerequisites. Engage actively in learning activities. Maintain professional and respectful conduct.
+Unauthorized recording or distribution of materials is prohibited.
+
+5. CERTIFICATION
+Certificates issued only upon: Meeting all attendance and assessment requirements, Receipt of full payment.
+
+6. TRAINING MATERIALS
+All materials remain intellectual property of Andebe Group. For personal learning only; not for commercial use.
+
+7. ADDITIONAL COSTS
+When training exceeds 200km from office/trainer base: Travel and accommodation costs for client account unless specified as complementary in SLA.
+
+8. GOVERNING LAW
+Training conducted in accordance with TETA (Transport Education Training Authority) legislation and Service Provider accreditation.
+Disputes resolved through TETA appeal process.
+
+9. LIMITATION OF LIABILITY
+Service Provider liability limited to amount paid for training. Not liable for indirect, consequential, or incidental damages.`;
+                saveData();
+            }
+        }
+
+        // Show login form
+        function showLoginForm() {
+            document.getElementById('loginForm').classList.remove('hidden');
+            document.getElementById('activationForm').classList.add('hidden');
+            document.getElementById('authMessage').classList.add('hidden');
+        }
+
+        // Show activation form
+        function showActivationForm() {
+            document.getElementById('loginForm').classList.add('hidden');
+            document.getElementById('activationForm').classList.remove('hidden');
+            document.getElementById('authMessage').classList.add('hidden');
+        }
+
+        // Login
+        function login() {
+            const email = document.getElementById('loginEmail').value.trim().toLowerCase();
+            const password = document.getElementById('loginPassword').value;
+
+            const user = APP_DATA.users.find(u => u.email === email && u.password === password);
+
+            if (user) {
+                currentUser = user;
+                currentInterface = user.role === 'admin' ? 'admin' : 'sales';
+
+                document.getElementById('loginPage').classList.add('hidden');
+                document.getElementById('mainApp').classList.remove('hidden');
+                document.getElementById('currentUser').textContent = user.email;
+
+                if (user.role === 'admin') {
+                    document.getElementById('interfaceToggle').classList.remove('hidden');
+                }
+
+                loadInterface(currentInterface);
+                showMessage('Login successful!', 'success');
+            } else {
+                showAuthMessage('Invalid email or password', 'error');
+            }
+        }
+
+        // Activate Account
+        function activateAccount() {
+            const email = document.getElementById('activationEmail').value.trim().toLowerCase();
+            const password = document.getElementById('activationPassword').value;
+            const confirmPassword = document.getElementById('activationPasswordConfirm').value;
+
+            if (!email || !password || !confirmPassword) {
+                showAuthMessage('Please fill in all fields', 'error');
+                return;
+            }
+
+            if (password !== confirmPassword) {
+                showAuthMessage('Passwords do not match', 'error');
+                return;
+            }
+
+            if (password.length < 6) {
+                showAuthMessage('Password must be at least 6 characters', 'error');
+                return;
+            }
+
+            // Check if email is whitelisted
+            const whitelisted = APP_DATA.whitelist.find(w => w.email === email);
+            if (!whitelisted) {
+                showAuthMessage('Email is not whitelisted. Please contact an administrator.', 'error');
+                return;
+            }
+
+            // Check if user already exists
+            const existingUser = APP_DATA.users.find(u => u.email === email);
+            if (existingUser) {
+                // Update password (password reset)
+                existingUser.password = password;
+            } else {
+                // Create new user
+                APP_DATA.users.push({
+                    email: email,
+                    password: password,
+                    role: whitelisted.role
+                });
+            }
+
+            // Update whitelist status
+            whitelisted.status = 'active';
+
+            saveData();
+            showAuthMessage('Account activated successfully! You can now login.', 'success');
+
+            setTimeout(() => {
+                showLoginForm();
+                document.getElementById('loginEmail').value = email;
+            }, 2000);
+        }
+
+        // Show auth message
+        function showAuthMessage(message, type) {
+            const msgDiv = document.getElementById('authMessage');
+            msgDiv.textContent = message;
+            msgDiv.className = `alert alert-${type === 'success' ? 'success' : 'error'}`;
+            msgDiv.classList.remove('hidden');
+        }
+
+        // Logout
+        function logout() {
+            currentUser = null;
+            currentInterface = 'admin';
+            document.getElementById('loginPage').classList.remove('hidden');
+            document.getElementById('mainApp').classList.add('hidden');
+            document.getElementById('loginEmail').value = '';
+            document.getElementById('loginPassword').value = '';
+            document.getElementById('authMessage').classList.add('hidden');
+        }
+
+        // Toggle Interface
+        function toggleInterface() {
+            currentInterface = currentInterface === 'admin' ? 'sales' : 'admin';
+            loadInterface(currentInterface);
+        }
+
+        // Load Interface
+        function loadInterface(interfaceType) {
+            const sidebar = document.getElementById('sidebar');
+            const toggleText = document.getElementById('toggleText');
+
+            let nav = '';
+
+            if (interfaceType === 'admin') {
+                nav = `
+                    <div class="nav-item active" onclick="showPage('userManagement')">User Management</div>
+                    <div class="nav-item" onclick="showPage('courseManagement')">Course Management</div>
+                    <div class="nav-item" onclick="showPage('variableCostsConfig')">Variable Costs Config</div>
+                    <div class="nav-item" onclick="showPage('termsConditions')">Terms & Conditions</div>
+                    <div class="nav-item" onclick="showPage('quoteManagement')">Quote Management</div>
+                `;
+                toggleText.textContent = 'Sales';
+                showPage('userManagement');
+            } else {
+                nav = `
+                    <div class="nav-item active" onclick="showPage('createQuote')">Create Quote</div>
+                    <div class="nav-item" onclick="showPage('quoteHistory')">My Quotes</div>
+                `;
+                toggleText.textContent = 'Admin';
+                showPage('createQuote');
+                loadCoursesForQuote();
+                updateVariableCostInfo();
+            }
+
+            sidebar.innerHTML = nav;
+        }
+
+        // Show Page
+        function showPage(pageId) {
+            document.querySelectorAll('.page-section').forEach(section => {
+                section.classList.add('hidden');
+            });
+            document.querySelectorAll('.nav-item').forEach(item => {
+                item.classList.remove('active');
+            });
+
+            document.getElementById(pageId).classList.remove('hidden');
+            if (event && event.target) {
+                event.target.classList.add('active');
+            }
+
+            // Load data for specific pages
+            if (pageId === 'userManagement') {
+                displayWhitelist();
+            } else if (pageId === 'courseManagement') {
+                displayCourses();
+            } else if (pageId === 'variableCostsConfig') {
+                loadVariableCostRates();
+            } else if (pageId === 'termsConditions') {
+                loadTermsAndConditions();
+            } else if (pageId === 'quoteManagement') {
+                displayAllQuotes();
+            } else if (pageId === 'createQuote') {
+                resetQuoteForm();
+                loadCoursesForQuote();
+                updateVariableCostInfo();
+            } else if (pageId === 'quoteHistory') {
+                displayMyQuotes();
+            }
+        }
+
+        // Add Whitelisted Email
+        function addWhitelistedEmail() {
+            const email = document.getElementById('whitelistEmail').value.trim().toLowerCase();
+            const role = document.getElementById('whitelistRole').value;
+
+            if (!email) {
+                alert('Please enter an email address');
+                return;
+            }
+
+            if (APP_DATA.whitelist.find(w => w.email === email)) {
+                alert('This email is already whitelisted');
+                return;
+            }
+
+            APP_DATA.whitelist.push({
+                email: email,
+                role: role,
+                status: 'pending'
+            });
+
+            saveData();
+            displayWhitelist();
+
+            document.getElementById('whitelistEmail').value = '';
+        }
+
+        // Display Whitelist
+        function displayWhitelist() {
+            const container = document.getElementById('whitelistTable');
+
+            if (APP_DATA.whitelist.length === 0) {
+                container.innerHTML = '<p style="color: #666;">No whitelisted users yet.</p>';
+                return;
+            }
+
+            let html = '<table><thead><tr><th>Email</th><th>Role</th><th>Status</th><th>Actions</th></tr></thead><tbody>';
+
+            APP_DATA.whitelist.forEach((item, index) => {
+                const user = APP_DATA.users.find(u => u.email === item.email);
+                const status = user ? 'Active' : 'Pending Activation';
+
+                html += `
+                    <tr>
+                        <td>${item.email}</td>
+                        <td>${item.role === 'admin' ? 'Administrator' : 'Sales Representative'}</td>
+                        <td>${status}</td>
+                        <td>
+                            <button class="action-btn reset" onclick="resetUserPassword('${item.email}')">Reset Password</button>
+                            <button class="action-btn delete" onclick="removeWhitelistedEmail(${index})">Remove</button>
+                        </td>
+                    </tr>
+                `;
+            });
+
+            html += '</tbody></table>';
+            container.innerHTML = html;
+        }
+
+        // Reset User Password
+        function resetUserPassword(email) {
+            if (!confirm(`Reset password for ${email}? User will need to reactivate their account.`)) {
+                return;
+            }
+
+            const userIndex = APP_DATA.users.findIndex(u => u.email === email);
+            if (userIndex !== -1) {
+                APP_DATA.users.splice(userIndex, 1);
+            }
+
+            const whitelist = APP_DATA.whitelist.find(w => w.email === email);
+            if (whitelist) {
+                whitelist.status = 'pending';
+            }
+
+            saveData();
+            displayWhitelist();
+            alert('Password reset. User must reactivate their account.');
+        }
+
+        // Remove Whitelisted Email
+        function removeWhitelistedEmail(index) {
+            if (!confirm('Remove this email from the whitelist?')) {
+                return;
+            }
+
+            const email = APP_DATA.whitelist[index].email;
+            APP_DATA.whitelist.splice(index, 1);
+
+            // Also remove user if exists
+            const userIndex = APP_DATA.users.findIndex(u => u.email === email);
+            if (userIndex !== -1) {
+                APP_DATA.users.splice(userIndex, 1);
+            }
+
+            saveData();
+            displayWhitelist();
+        }
+
+        // Show Add Course Modal
+        function showAddCourseModal() {
+            document.getElementById('courseModalTitle').textContent = 'Add New Course';
+            document.getElementById('courseForm').reset();
+            document.getElementById('editCourseId').value = '';
+
+            // Reset all toggles to checked
+            document.getElementById('formatFullOnlineAvailable').checked = true;
+            document.getElementById('formatOnlineSupportedAvailable').checked = true;
+            document.getElementById('formatBlendedAvailable').checked = true;
+            document.getElementById('formatF2FAvailable').checked = true;
+
+            document.getElementById('courseModal').classList.add('active');
+        }
+
+        // Show Edit Course Modal
+        function showEditCourseModal(courseId) {
+            const course = APP_DATA.courses.find(c => c.id === courseId);
+            if (!course) return;
+
+            document.getElementById('courseModalTitle').textContent = 'Edit Course';
+            document.getElementById('editCourseId').value = courseId;
+
+            document.getElementById('courseTitle').value = course.title;
+            document.getElementById('courseDuration').value = course.duration;
+            document.getElementById('courseAccredited').value = course.accredited;
+            document.getElementById('courseMinDelegates').value = course.minDelegates;
+            document.getElementById('courseMaxDelegates').value = course.maxDelegates;
+
+            // Set format availability
+            document.getElementById('formatFullOnlineAvailable').checked = course.availableFormats.fullOnline;
+            document.getElementById('formatOnlineSupportedAvailable').checked = course.availableFormats.onlineSupported;
+            document.getElementById('formatBlendedAvailable').checked = course.availableFormats.blended;
+            document.getElementById('formatF2FAvailable').checked = course.availableFormats.faceToFace;
+
+            // Set pricing
+            document.getElementById('priceFullOnlinePerson').value = course.pricing.fullOnline.perPerson;
+            document.getElementById('priceOnlineSupportedPerson').value = course.pricing.onlineSupported.perPerson;
+            document.getElementById('priceOnlineSupportedDay').value = course.pricing.onlineSupported.perDay;
+            document.getElementById('priceBlendedPerson').value = course.pricing.blended.perPerson;
+            document.getElementById('priceBlendedDay').value = course.pricing.blended.perDay;
+            document.getElementById('priceF2FPerson').value = course.pricing.faceToFace.perPerson;
+            document.getElementById('priceF2FDay').value = course.pricing.faceToFace.perDay;
+
+            document.getElementById('courseModal').classList.add('active');
+        }
+
+        // Close Course Modal
+        function closeCourseModal() {
+            document.getElementById('courseModal').classList.remove('active');
+        }
+
+        // Save Course
+        function saveCourse(event) {
+            event.preventDefault();
+
+            const courseId = document.getElementById('editCourseId').value;
+
+            const courseData = {
+                title: document.getElementById('courseTitle').value,
+                duration: parseInt(document.getElementById('courseDuration').value),
+                minDelegates: parseInt(document.getElementById('courseMinDelegates').value),
+                maxDelegates: parseInt(document.getElementById('courseMaxDelegates').value),
+                accredited: document.getElementById('courseAccredited').value,
+                availableFormats: {
+                    fullOnline: document.getElementById('formatFullOnlineAvailable').checked,
+                    onlineSupported: document.getElementById('formatOnlineSupportedAvailable').checked,
+                    blended: document.getElementById('formatBlendedAvailable').checked,
+                    faceToFace: document.getElementById('formatF2FAvailable').checked
+                },
+                pricing: {
+                    fullOnline: {
+                        perPerson: parseFloat(document.getElementById('priceFullOnlinePerson').value) || 0,
+                        perDay: 0
+                    },
+                    onlineSupported: {
+                        perPerson: parseFloat(document.getElementById('priceOnlineSupportedPerson').value) || 0,
+                        perDay: parseFloat(document.getElementById('priceOnlineSupportedDay').value) || 0
+                    },
+                    blended: {
+                        perPerson: parseFloat(document.getElementById('priceBlendedPerson').value) || 0,
+                        perDay: parseFloat(document.getElementById('priceBlendedDay').value) || 0
+                    },
+                    faceToFace: {
+                        perPerson: parseFloat(document.getElementById('priceF2FPerson').value) || 0,
+                        perDay: parseFloat(document.getElementById('priceF2FDay').value) || 0
+                    }
+                }
+            };
+
+            if (courseId) {
+                // Edit existing course
+                const course = APP_DATA.courses.find(c => c.id === parseInt(courseId));
+                if (course) {
+                    Object.assign(course, courseData);
+                }
+            } else {
+                // Add new course
+                courseData.id = Date.now();
+                APP_DATA.courses.push(courseData);
+            }
+
+            saveData();
+            displayCourses();
+            closeCourseModal();
+            alert('Course saved successfully!');
+        }
+
+        // Display Courses
+        function displayCourses() {
+            const container = document.getElementById('coursesList');
+
+            if (APP_DATA.courses.length === 0) {
+                container.innerHTML = '<p style="color: #666;">No courses added yet.</p>';
+                return;
+            }
+
+            let html = '<table><thead><tr><th>Course Title</th><th>Duration</th><th>Delegates</th><th>Accredited</th><th>Formats</th><th>Actions</th></tr></thead><tbody>';
+
+            APP_DATA.courses.forEach(course => {
+                const formats = [];
+                if (course.availableFormats.fullOnline) formats.push('FO');
+                if (course.availableFormats.onlineSupported) formats.push('OS');
+                if (course.availableFormats.blended) formats.push('BO');
+                if (course.availableFormats.faceToFace) formats.push('F2F');
+
+                html += `
+                    <tr>
+                        <td>${course.title}</td>
+                        <td>${course.duration} day(s)</td>
+                        <td>${course.minDelegates} - ${course.maxDelegates}</td>
+                        <td>${course.accredited}</td>
+                        <td>${formats.join(', ')}</td>
+                        <td>
+                            <button class="action-btn edit" onclick="showEditCourseModal(${course.id})">Edit</button>
+                            <button class="action-btn delete" onclick="deleteCourse(${course.id})">Delete</button>
+                        </td>
+                    </tr>
+                `;
+            });
+
+            html += '</tbody></table>';
+            container.innerHTML = html;
+        }
+
+        // Delete Course
+        function deleteCourse(id) {
+            if (!confirm('Are you sure you want to delete this course?')) {
+                return;
+            }
+
+            APP_DATA.courses = APP_DATA.courses.filter(c => c.id !== id);
+            saveData();
+            displayCourses();
+        }
+
+        // Load Variable Cost Rates
+        function loadVariableCostRates() {
+            document.getElementById('travelRatePerKm').value = APP_DATA.rates.travelPerKm;
+            document.getElementById('accommodationRatePerNight').value = APP_DATA.rates.accommodationPerNight;
+        }
+
+        // Save Variable Cost Rates
+        function saveVariableCostRates() {
+            APP_DATA.rates.travelPerKm = parseFloat(document.getElementById('travelRatePerKm').value) || 0;
+            APP_DATA.rates.accommodationPerNight = parseFloat(document.getElementById('accommodationRatePerNight').value) || 0;
+
+            saveData();
+            alert('Rates saved successfully!');
+        }
+
+        // Load Terms and Conditions
+        function loadTermsAndConditions() {
+            document.getElementById('termsTextarea').value = APP_DATA.termsAndConditions;
+        }
+
+        // Save Terms and Conditions
+        function saveTermsAndConditions() {
+            APP_DATA.termsAndConditions = document.getElementById('termsTextarea').value;
+            saveData();
+            alert('Terms & Conditions saved successfully!');
+        }
+
+        // Display All Quotes
+        function displayAllQuotes() {
+            const container = document.getElementById('allQuotesTable');
+
+            if (APP_DATA.quotes.length === 0) {
+                container.innerHTML = '<p style="color: #666;">No quotes generated yet.</p>';
+                return;
+            }
+
+            let html = '<table><thead><tr><th>Quote #</th><th>Date</th><th>Client</th><th>Created By</th><th>Total</th><th>Actions</th></tr></thead><tbody>';
+
+            APP_DATA.quotes.slice().reverse().forEach(quote => {
+                const total = calculateQuoteTotal(quote);
+
+                html += `
+                    <tr>
+                        <td>${quote.number}</td>
+                        <td>${new Date(quote.date).toLocaleDateString('en-ZA')}</td>
+                        <td>${quote.client.name}</td>
+                        <td>${quote.createdBy}</td>
+                        <td>R ${total.toFixed(2)}</td>
+                        <td>
+                            <button class="action-btn" onclick="downloadQuote(${quote.number})">Download PDF</button>
+                        </td>
+                    </tr>
+                `;
+            });
+
+            html += '</tbody></table>';
+            container.innerHTML = html;
+        }
+
+        // Display My Quotes
+        function displayMyQuotes() {
+            const container = document.getElementById('myQuotesTable');
+            const myQuotes = APP_DATA.quotes.filter(q => q.createdBy === currentUser.email);
+
+            if (myQuotes.length === 0) {
+                container.innerHTML = '<p style="color: #666;">You haven\'t created any quotes yet.</p>';
+                return;
+            }
+
+            let html = '<table><thead><tr><th>Quote #</th><th>Date</th><th>Client</th><th>Total</th><th>Actions</th></tr></thead><tbody>';
+
+            myQuotes.slice().reverse().forEach(quote => {
+                const total = calculateQuoteTotal(quote);
+
+                html += `
+                    <tr>
+                        <td>${quote.number}</td>
+                        <td>${new Date(quote.date).toLocaleDateString('en-ZA')}</td>
+                        <td>${quote.client.name}</td>
+                        <td>R ${total.toFixed(2)}</td>
+                        <td>
+                            <button class="action-btn" onclick="downloadQuote(${quote.number})">Download PDF</button>
+                        </td>
+                    </tr>
+                `;
+            });
+
+            html += '</tbody></table>';
+            container.innerHTML = html;
+        }
+
+        // Calculate Quote Total
+        function calculateQuoteTotal(quote) {
+            let subtotal = 0;
+
+            quote.courses.forEach(item => {
+                // Use totalDays if available (for multi-session courses), otherwise use duration
+                const daysToCharge = item.totalDays || item.duration;
+                subtotal += (item.pricing.perPerson * item.delegates) + (item.pricing.perDay * daysToCharge);
+
+                // Add variable costs for this course
+                if (item.variableCosts && item.variableCosts.length > 0) {
+                    item.variableCosts.forEach(cost => {
+                        subtotal += cost.amount;
+                    });
+                }
+            });
+
+            // Legacy support: also check for old-style independent variable costs
+            if (quote.variableCosts && quote.variableCosts.length > 0) {
+                quote.variableCosts.forEach(cost => {
+                    subtotal += cost.amount;
+                });
+            }
+
+            return subtotal * 1.15;
+        }
+
+        // Load Courses for Quote
+        function loadCoursesForQuote() {
+            const select = document.getElementById('quoteCourse');
+            select.innerHTML = '<option value="">-- Select Course --</option>';
+
+            APP_DATA.courses.forEach(course => {
+                select.innerHTML += `<option value="${course.id}">${course.title}</option>`;
+            });
+        }
+
+        // Update Format Options
+        function updateFormatOptions() {
+            const courseId = parseInt(document.getElementById('quoteCourse').value);
+            const formatSelect = document.getElementById('quoteFormat');
+
+            if (!courseId) {
+                formatSelect.innerHTML = '<option value="">-- Select Format --</option>';
+                return;
+            }
+
+            const course = APP_DATA.courses.find(c => c.id === courseId);
+            if (!course) return;
+
+            let options = '<option value="">-- Select Format --</option>';
+
+            if (course.availableFormats.fullOnline) {
+                options += '<option value="fullOnline">Full Online</option>';
+            }
+            if (course.availableFormats.onlineSupported) {
+                options += '<option value="onlineSupported">Online Supported</option>';
+            }
+            if (course.availableFormats.blended) {
+                options += '<option value="blended">Blended Online</option>';
+            }
+            if (course.availableFormats.faceToFace) {
+                options += '<option value="faceToFace">Face to Face</option>';
+            }
+
+            formatSelect.innerHTML = options;
+        }
+
+        // Add Course to Quote
+        function addCourseToQuote() {
+            const courseId = parseInt(document.getElementById('quoteCourse').value);
+            const format = document.getElementById('quoteFormat').value;
+            const delegates = parseInt(document.getElementById('quoteDelegates').value);
+
+            if (!courseId || !format || !delegates) {
+                alert('Please fill in all required fields');
+                return;
+            }
+
+            const course = APP_DATA.courses.find(c => c.id === courseId);
+            const formatNames = {
+                fullOnline: 'Full Online',
+                onlineSupported: 'Online Supported',
+                blended: 'Blended Online',
+                faceToFace: 'Face to Face'
+            };
+
+            // Calculate number of sessions needed based on max delegates
+            const sessionsNeeded = Math.ceil(delegates / course.maxDelegates);
+            const totalDays = course.duration * sessionsNeeded;
+
+            // Show warning if multiple sessions are needed
+            if (sessionsNeeded > 1) {
+                const msg = `The number of delegates (${delegates}) exceeds the maximum per session (${course.maxDelegates}).\n\n` +
+                           `This will require ${sessionsNeeded} sessions over ${totalDays} days.\n` +
+                           `Day rate will be multiplied by ${sessionsNeeded}.\n\n` +
+                           `Do you want to continue?`;
+                if (!confirm(msg)) {
+                    return;
+                }
+            }
+
+            APP_DATA.currentQuote.courses.push({
+                id: Date.now(),
+                courseId: course.id,
+                title: course.title,
+                format: format,
+                formatName: formatNames[format],
+                delegates: delegates,
+                duration: course.duration,
+                sessionsNeeded: sessionsNeeded,
+                totalDays: totalDays,
+                pricing: course.pricing[format],
+                variableCosts: []
+            });
+
+            displaySelectedCourses();
+            updateQuoteSummary();
+
+            document.getElementById('quoteCourse').value = '';
+            document.getElementById('quoteFormat').value = '';
+        }
+
+        // Display Selected Courses
+        function displaySelectedCourses() {
+            const container = document.getElementById('selectedCourses');
+
+            if (APP_DATA.currentQuote.courses.length === 0) {
+                container.innerHTML = '';
+                return;
+            }
+
+            let html = '<h4 style="color: var(--blue); margin: 20px 0 10px 0;">Courses in Quote:</h4>';
+
+            APP_DATA.currentQuote.courses.forEach(item => {
+                const perPersonCost = item.pricing.perPerson * item.delegates;
+                // Use totalDays if available (for multi-session courses), otherwise use duration
+                const daysToCharge = item.totalDays || item.duration;
+                const perDayCost = item.pricing.perDay * daysToCharge;
+                let courseTotal = perPersonCost + perDayCost;
+
+                // Add variable costs to course total
+                if (item.variableCosts && item.variableCosts.length > 0) {
+                    item.variableCosts.forEach(cost => {
+                        courseTotal += cost.amount;
+                    });
+                }
+
+                html += `
+                    <div class="course-item">
+                        <div class="course-item-header">
+                            <span class="course-item-title">${item.title} - ${item.formatName}</span>
+                            <button class="action-btn delete" onclick="removeCourseFromQuote(${item.id})">Remove</button>
+                        </div>
+                        <div style="color: #666; font-size: 14px;">
+                            ${item.delegates} delegates × R ${formatCurrency(item.pricing.perPerson)} = R ${formatCurrency(perPersonCost)}
+                            ${item.pricing.perDay > 0 ? `<br>${daysToCharge} day(s) × R ${formatCurrency(item.pricing.perDay)} = R ${formatCurrency(perDayCost)}` : ''}
+                            ${item.sessionsNeeded > 1 ? `<br><strong style="color: var(--orange);">Note: ${item.sessionsNeeded} sessions required (${item.delegates} delegates exceeds max ${Math.floor(item.delegates / item.sessionsNeeded)} per session)</strong>` : ''}
+                `;
+
+                // Display variable costs for this course
+                if (item.variableCosts && item.variableCosts.length > 0) {
+                    html += '<div style="margin-top: 10px; padding-left: 15px; border-left: 2px solid var(--orange);">';
+                    html += '<strong>Variable Costs:</strong>';
+                    item.variableCosts.forEach(cost => {
+                        html += `
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 5px;">
+                                <span>${cost.description}</span>
+                                <div>
+                                    <span style="margin-right: 10px;">R ${formatCurrency(cost.amount)}</span>
+                                    <button class="action-btn delete btn-small" style="padding: 3px 10px; font-size: 11px;" onclick="removeVariableCostFromCourse(${item.id}, ${cost.id})">Remove</button>
+                                </div>
+                            </div>
+                        `;
+                    });
+                    html += '</div>';
+                }
+
+                html += `
+                            <br><strong>Course Total: R ${formatCurrency(courseTotal)}</strong>
+                        </div>
+                        <button class="btn btn-small" style="margin-top: 10px;" onclick="showAddVariableCostModalForCourse(${item.id})">Add Variable Cost</button>
+                    </div>
+                `;
+            });
+
+            container.innerHTML = html;
+        }
+
+        // Remove Course from Quote
+        function removeCourseFromQuote(id) {
+            APP_DATA.currentQuote.courses = APP_DATA.currentQuote.courses.filter(c => c.id !== id);
+            displaySelectedCourses();
+            updateQuoteSummary();
+        }
+
+        // Show Add Variable Cost Modal for Course
+        function showAddVariableCostModalForCourse(courseId) {
+            currentCourseForVariableCost = courseId;
+            document.getElementById('varCostType').value = '';
+            document.getElementById('varCostFields').innerHTML = '';
+            document.getElementById('variableCostModal').classList.add('active');
+        }
+
+        // Show Add Variable Cost Modal (legacy - kept for compatibility)
+        function showAddVariableCostModal() {
+            if (APP_DATA.currentQuote.courses.length === 0) {
+                alert('Please add at least one course first');
+                return;
+            }
+            // Default to first course if called directly
+            showAddVariableCostModalForCourse(APP_DATA.currentQuote.courses[0].id);
+        }
+
+        // Close Variable Cost Modal
+        function closeVariableCostModal() {
+            document.getElementById('variableCostModal').classList.remove('active');
+        }
+
+        // Update Variable Cost Fields
+        function updateVariableCostFields() {
+            const type = document.getElementById('varCostType').value;
+            const container = document.getElementById('varCostFields');
+
+            if (!type) {
+                container.innerHTML = '';
+                return;
+            }
+
+            let html = '';
+
+            if (type === 'travel') {
+                html = `
+                    <div class="form-group">
+                        <label>Round Trip Distance (km)</label>
+                        <input type="number" id="varCostValue" min="0" step="1" placeholder="e.g., 200">
+                    </div>
+                    <p style="color: #666; font-size: 14px; margin-top: -10px;">
+                        Rate: R${APP_DATA.rates.travelPerKm.toFixed(2)} per km
+                    </p>
+                `;
+            } else if (type === 'accommodation') {
+                html = `
+                    <div class="form-group">
+                        <label>Number of Nights</label>
+                        <input type="number" id="varCostValue" min="0" step="1" placeholder="e.g., 2">
+                    </div>
+                    <p style="color: #666; font-size: 14px; margin-top: -10px;">
+                        Rate: R${APP_DATA.rates.accommodationPerNight.toFixed(2)} per night
+                    </p>
+                `;
+            } else {
+                html = `
+                    <div class="form-group">
+                        <label>Amount (R)</label>
+                        <input type="number" id="varCostValue" min="0" step="0.01">
+                    </div>
+                `;
+            }
+
+            container.innerHTML = html;
+        }
+
+        // Add Variable Cost to Quote
+        function addVariableCostToQuote() {
+            const type = document.getElementById('varCostType').value;
+            const value = parseFloat(document.getElementById('varCostValue').value);
+
+            if (!type || !value || value <= 0) {
+                alert('Please fill in all fields with valid values');
+                return;
+            }
+
+            if (!currentCourseForVariableCost) {
+                alert('No course selected for variable cost');
+                return;
+            }
+
+            const course = APP_DATA.currentQuote.courses.find(c => c.id === currentCourseForVariableCost);
+            if (!course) {
+                alert('Course not found');
+                return;
+            }
+
+            let amount = 0;
+            let description = '';
+
+            if (type === 'travel') {
+                amount = value * APP_DATA.rates.travelPerKm;
+                description = `Travel (${value} km round trip @ R${APP_DATA.rates.travelPerKm}/km)`;
+            } else if (type === 'accommodation') {
+                amount = value * APP_DATA.rates.accommodationPerNight;
+                description = `Accommodation (${value} night${value > 1 ? 's' : ''} @ R${APP_DATA.rates.accommodationPerNight}/night)`;
+            } else {
+                amount = value;
+                const typeNames = {
+                    venue: 'Venue Hire',
+                    catering: 'Catering',
+                    equipment: 'Equipment Hire'
+                };
+                description = typeNames[type];
+            }
+
+            if (!course.variableCosts) {
+                course.variableCosts = [];
+            }
+
+            course.variableCosts.push({
+                id: Date.now(),
+                type: type,
+                description: description,
+                amount: amount
+            });
+
+            displaySelectedCourses();
+            updateQuoteSummary();
+            closeVariableCostModal();
+            currentCourseForVariableCost = null;
+        }
+
+        // Display Variable Costs (legacy - no longer used standalone)
+        function displayVariableCosts() {
+            // This function is no longer needed as variable costs are displayed per course
+            // Kept for backwards compatibility but does nothing
+        }
+
+        // Remove Variable Cost (legacy)
+        function removeVariableCost(id) {
+            // Legacy function - no longer used
+        }
+
+        // Remove Variable Cost from Course
+        function removeVariableCostFromCourse(courseId, costId) {
+            const course = APP_DATA.currentQuote.courses.find(c => c.id === courseId);
+            if (course && course.variableCosts) {
+                course.variableCosts = course.variableCosts.filter(c => c.id !== costId);
+                displaySelectedCourses();
+                updateQuoteSummary();
+            }
+        }
+
+        // Update Quote Summary
+        function updateQuoteSummary() {
+            let subtotal = 0;
+
+            APP_DATA.currentQuote.courses.forEach(item => {
+                // Use totalDays if available (for multi-session courses), otherwise use duration
+                const daysToCharge = item.totalDays || item.duration;
+                subtotal += (item.pricing.perPerson * item.delegates) + (item.pricing.perDay * daysToCharge);
+
+                // Add variable costs for this course
+                if (item.variableCosts && item.variableCosts.length > 0) {
+                    item.variableCosts.forEach(cost => {
+                        subtotal += cost.amount;
+                    });
+                }
+            });
+
+            const vat = subtotal * 0.15;
+            const total = subtotal + vat;
+
+            document.getElementById('summarySubtotal').textContent = `R ${formatCurrency(subtotal)}`;
+            document.getElementById('summaryVAT').textContent = `R ${formatCurrency(vat)}`;
+            document.getElementById('summaryTotal').textContent = `R ${formatCurrency(total)}`;
+        }
+
+        // Reset Quote Form
+        function resetQuoteForm() {
+            APP_DATA.currentQuote = {
+                client: {},
+                courses: []
+            };
+
+            document.getElementById('clientName').value = '';
+            document.getElementById('clientVAT').value = '';
+            document.getElementById('clientAddress1').value = '';
+            document.getElementById('clientAddress2').value = '';
+            document.getElementById('clientAddress3').value = '';
+            document.getElementById('clientAddress4').value = '';
+            document.getElementById('clientAreaCode').value = '';
+
+            document.getElementById('selectedCourses').innerHTML = '';
+
+            updateQuoteSummary();
+            updateVariableCostInfo();
+        }
+
+        // Update Variable Cost Info Display
+        function updateVariableCostInfo() {
+            const travelInfo = document.getElementById('travelRateInfo');
+            const accomInfo = document.getElementById('accomRateInfo');
+
+            if (travelInfo) {
+                travelInfo.textContent = `calculated at R${APP_DATA.rates.travelPerKm.toFixed(2)}/km`;
+            }
+            if (accomInfo) {
+                accomInfo.textContent = `calculated at R${APP_DATA.rates.accommodationPerNight.toFixed(2)}/night`;
+            }
+        }
+
+        // Generate PDF
+        function generatePDF() {
+            const clientName = document.getElementById('clientName').value;
+            const clientVAT = document.getElementById('clientVAT').value;
+            const clientAddress1 = document.getElementById('clientAddress1').value;
+
+            if (!clientName || !clientAddress1) {
+                alert('Please fill in required client information (Client Name and Address Line 1)');
+                return;
+            }
+
+            if (APP_DATA.currentQuote.courses.length === 0) {
+                alert('Please add at least one course to the quote');
+                return;
+            }
+
+            APP_DATA.currentQuote.client = {
+                name: clientName,
+                vat: clientVAT,
+                address1: clientAddress1,
+                address2: document.getElementById('clientAddress2').value,
+                address3: document.getElementById('clientAddress3').value,
+                address4: document.getElementById('clientAddress4').value,
+                areaCode: document.getElementById('clientAreaCode').value
+            };
+
+            const quoteNumber = 1000 + APP_DATA.quotes.length + 1;
+            const quote = {
+                number: quoteNumber,
+                date: new Date().toISOString(),
+                client: { ...APP_DATA.currentQuote.client },
+                courses: JSON.parse(JSON.stringify(APP_DATA.currentQuote.courses)), // Deep copy to preserve variableCosts
+                createdBy: currentUser.email
+            };
+
+            APP_DATA.quotes.push(quote);
+            saveData();
+
+            generateQuotePDF(quote);
+
+            alert('Quote generated successfully!');
+            resetQuoteForm();
+        }
+
+        // Download Quote
+        function downloadQuote(quoteNumber) {
+            const quote = APP_DATA.quotes.find(q => q.number === quoteNumber);
+            if (quote) {
+                generateQuotePDF(quote);
+            }
+        }
+
+        // Generate Quote PDF
+        function generateQuotePDF(quote) {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+
+            const blue = [18, 38, 94];
+            const orange = [255, 166, 0];
+
+            // Header
+            doc.setFillColor(...blue);
+            doc.rect(0, 0, 210, 40, 'F');
+
+            doc.setFontSize(24);
+            doc.setTextColor(255, 255, 255);
+            doc.setFont(undefined, 'bold');
+            doc.text('SPECCON', 15, 20);
+            doc.setFontSize(10);
+            doc.setFont(undefined, 'normal');
+            doc.text('HOLDINGS', 15, 27);
+
+            // Company details
+            doc.setFontSize(9);
+            doc.text('SpecCon Holdings (Pty) Ltd', 150, 15);
+            doc.text('Midlands Office Park West', 150, 20);
+            doc.text('Suites W003 & W004', 150, 25);
+            doc.text('1 Mount Quray Street', 150, 30);
+            doc.text('Midstream, 1692', 150, 35);
+
+            // Quote title
+            doc.setFontSize(20);
+            doc.setTextColor(...blue);
+            doc.text('QUOTE', 15, 55);
+
+            // Quote details
+            doc.setFontSize(10);
+            doc.text(`Date: ${new Date(quote.date).toLocaleDateString('en-ZA')}`, 150, 55);
+            doc.text(`Quote Number: ${quote.number}`, 150, 62);
+            doc.text(`VAT Number: 4410263224`, 150, 69);
+
+            // Client details
+            doc.setFontSize(11);
+            doc.setFont(undefined, 'bold');
+            doc.text(quote.client.name, 15, 75);
+            doc.setFont(undefined, 'normal');
+            doc.setFontSize(10);
+
+            let yPos = 82;
+            if (quote.client.address1) {
+                doc.text(quote.client.address1, 15, yPos);
+                yPos += 5;
+            }
+            if (quote.client.address2) {
+                doc.text(quote.client.address2, 15, yPos);
+                yPos += 5;
+            }
+            if (quote.client.address3) {
+                doc.text(quote.client.address3, 15, yPos);
+                yPos += 5;
+            }
+            if (quote.client.address4) {
+                doc.text(quote.client.address4, 15, yPos);
+                yPos += 5;
+            }
+            if (quote.client.areaCode) {
+                doc.text(quote.client.areaCode, 15, yPos);
+                yPos += 5;
+            }
+            if (quote.client.vat) {
+                doc.text(`VAT Number: ${quote.client.vat}`, 15, yPos + 5);
+            }
+
+            // Table header
+            yPos = 120;
+            doc.setFillColor(...blue);
+            doc.rect(15, yPos, 180, 10, 'F');
+
+            doc.setTextColor(255, 255, 255);
+            doc.setFontSize(9);
+            doc.setFont(undefined, 'bold');
+            doc.text('Description', 17, yPos + 6.5);
+            doc.text('Qty', 110, yPos + 6.5);
+            doc.text('Unit Price', 130, yPos + 6.5);
+            doc.text('VAT', 160, yPos + 6.5);
+            doc.text('Amount', 175, yPos + 6.5);
+
+            // Draw table borders
+            doc.setDrawColor(200, 200, 200);
+            doc.setLineWidth(0.1);
+
+            // Table rows
+            doc.setTextColor(0, 0, 0);
+            doc.setFont(undefined, 'normal');
+            yPos += 14;
+
+            let subtotal = 0;
+
+            // Add courses
+            quote.courses.forEach(course => {
+                const perPersonTotal = course.pricing.perPerson * course.delegates;
+                // Use totalDays if available (for multi-session courses), otherwise use duration
+                const daysToCharge = course.totalDays || course.duration;
+                const perDayTotal = course.pricing.perDay * daysToCharge;
+
+                // Course line (removed separator line that was crossing content)
+                doc.setFont(undefined, 'bold');
+                doc.text(`${course.title}`, 17, yPos);
+                doc.setFont(undefined, 'normal');
+                doc.text(`${course.formatName}`, 17, yPos + 4);
+                doc.text(`${course.delegates} delegate(s)`, 17, yPos + 8);
+                if (course.sessionsNeeded > 1) {
+                    doc.setFontSize(8);
+                    doc.text(`(${course.sessionsNeeded} sessions required)`, 17, yPos + 12);
+                    doc.setFontSize(9);
+                }
+                doc.text('1', 110, yPos);
+                doc.text(`R ${formatCurrency(perPersonTotal)}`, 130, yPos);
+                doc.text('15%', 160, yPos);
+                doc.text(`R ${formatCurrency(perPersonTotal)}`, 175, yPos);
+
+                subtotal += perPersonTotal;
+                yPos += course.sessionsNeeded > 1 ? 18 : 14;
+
+                if (course.pricing.perDay > 0) {
+                    const sessionInfo = course.sessionsNeeded > 1 ? ` (${course.sessionsNeeded} sessions)` : '';
+                    doc.text(`  Training delivery (${daysToCharge} day${daysToCharge > 1 ? 's' : ''}${sessionInfo})`, 17, yPos);
+                    doc.text('1', 110, yPos);
+                    doc.text(`R ${formatCurrency(perDayTotal)}`, 130, yPos);
+                    doc.text('15%', 160, yPos);
+                    doc.text(`R ${formatCurrency(perDayTotal)}`, 175, yPos);
+
+                    subtotal += perDayTotal;
+                    yPos += 8;
+                }
+
+                // Add variable costs for this course
+                if (course.variableCosts && course.variableCosts.length > 0) {
+                    course.variableCosts.forEach(cost => {
+                        doc.setFontSize(8);
+                        doc.text(`    • ${cost.description}`, 17, yPos);
+                        doc.setFontSize(9);
+                        doc.text('1', 110, yPos);
+                        doc.text(`R ${formatCurrency(cost.amount)}`, 130, yPos);
+                        doc.text('15%', 160, yPos);
+                        doc.text(`R ${formatCurrency(cost.amount)}`, 175, yPos);
+
+                        subtotal += cost.amount;
+                        yPos += 7;
+                    });
+                }
+
+                yPos += 8;  // Increased spacing between courses for better separation
+            });
+
+            // Legacy support: Add old-style independent variable costs if they exist
+            if (quote.variableCosts && quote.variableCosts.length > 0) {
+                quote.variableCosts.forEach(cost => {
+                    doc.text(cost.description, 17, yPos);
+                    doc.text('1', 110, yPos);
+                    doc.text(`R ${formatCurrency(cost.amount)}`, 130, yPos);
+                    doc.text('15%', 160, yPos);
+                    doc.text(`R ${formatCurrency(cost.amount)}`, 175, yPos);
+
+                    subtotal += cost.amount;
+                    yPos += 8;
+                });
+            }
+
+            // Totals
+            yPos += 8;
+            doc.setDrawColor(...blue);
+            doc.setLineWidth(0.5);
+            doc.line(15, yPos, 195, yPos);
+            yPos += 8;
+
+            doc.setFont(undefined, 'bold');
+            doc.setFontSize(10);
+            doc.text('Subtotal (excl. VAT)', 110, yPos);
+            doc.text(`R ${formatCurrency(subtotal)}`, 193, yPos, { align: 'right' });
+
+            yPos += 7;
+            const vat = subtotal * 0.15;
+            doc.text('VAT (15%)', 110, yPos);
+            doc.text(`R ${formatCurrency(vat)}`, 193, yPos, { align: 'right' });
+
+            yPos += 8;
+            doc.setDrawColor(...orange);
+            doc.setLineWidth(0.8);
+            doc.line(110, yPos - 2, 195, yPos - 2);
+
+            const total = subtotal + vat;
+            doc.setFontSize(12);
+            doc.setTextColor(...blue);
+            doc.text('TOTAL (incl. VAT)', 110, yPos + 2);
+            doc.text(`R ${formatCurrency(total)}`, 193, yPos + 2, { align: 'right' });
+
+            // Signature Section
+            yPos += 15;
+
+            // Check if we need a new page for signature
+            if (yPos > 220) {  // Reduced threshold to ensure footer space
+                // Add footer to current page before adding new page
+                doc.setFontSize(8);
+                doc.setFont(undefined, 'normal');
+                doc.setTextColor(100, 100, 100);
+                doc.text('Company Registration No: 2013/101544/07', 105, 275, { align: 'center' });
+                doc.text('Registered Office: Midlands Office Park West, Suites W003 & W004, 1 Mount Quray Street, Midstream, 1692, South Africa', 105, 280, { align: 'center' });
+
+                doc.addPage();
+                yPos = 30;
+                doc.setFontSize(11);
+                doc.setTextColor(...blue);
+            }
+
+            doc.setFontSize(11);
+            doc.setFont(undefined, 'bold');
+            doc.setTextColor(...blue);
+            doc.text('ACCEPTANCE OF QUOTE', 15, yPos);
+
+            doc.setFontSize(9);
+            doc.setFont(undefined, 'normal');
+            doc.setTextColor(0, 0, 0);
+            yPos += 8;
+            doc.text('I/We hereby accept the above quotation and agree to the terms and conditions stated herein.', 15, yPos);
+
+            yPos += 15;
+
+            // Signature line
+            doc.line(15, yPos, 100, yPos);
+            doc.line(120, yPos, 195, yPos);
+            yPos += 5;
+            doc.setFontSize(8);
+            doc.text('Authorized Signature', 15, yPos);
+            doc.text('Date', 120, yPos);
+
+            yPos += 10;
+            doc.line(15, yPos, 100, yPos);
+            doc.line(120, yPos, 195, yPos);
+            yPos += 5;
+            doc.text('Full Name', 15, yPos);
+            doc.text('Position/Title', 120, yPos);
+
+            yPos += 10;
+            doc.line(15, yPos, 100, yPos);
+            yPos += 5;
+            doc.text('Company Stamp (if applicable)', 15, yPos);
+
+            // Footer (moved higher to avoid printer margins)
+            doc.setFontSize(8);
+            doc.setFont(undefined, 'normal');
+            doc.setTextColor(100, 100, 100);
+            doc.text('Company Registration No: 2013/101544/07', 105, 275, { align: 'center' });
+            doc.text('Registered Office: Midlands Office Park West, Suites W003 & W004, 1 Mount Quray Street, Midstream, 1692, South Africa', 105, 280, { align: 'center' });
+
+            // Add new page for T&Cs
+            doc.addPage();
+
+            doc.setFontSize(14);
+            doc.setFont(undefined, 'bold');
+            doc.setTextColor(...blue);
+            doc.text('TERMS AND CONDITIONS', 105, 20, { align: 'center' });
+
+            doc.setFontSize(9);
+            doc.setFont(undefined, 'normal');
+            doc.setTextColor(0, 0, 0);
+
+            // Use configurable Terms & Conditions
+            const termsText = APP_DATA.termsAndConditions || 'No terms and conditions configured.';
+
+            const lines = doc.splitTextToSize(termsText, 180);
+            let termsY = 30;
+            let currentTCPage = doc.internal.getNumberOfPages();
+
+            lines.forEach(line => {
+                if (termsY > 260) {  // Reduced from 280 to allow footer space
+                    // Add footer to previous page before adding new one
+                    doc.setFontSize(8);
+                    doc.setFont(undefined, 'normal');
+                    doc.setTextColor(100, 100, 100);
+                    doc.text('Company Registration No: 2013/101544/07', 105, 275, { align: 'center' });
+                    doc.text('Registered Office: Midlands Office Park West, Suites W003 & W004, 1 Mount Quray Street, Midstream, 1692, South Africa', 105, 280, { align: 'center' });
+
+                    doc.addPage();
+                    termsY = 20;
+                    doc.setFontSize(9);
+                    doc.setTextColor(0, 0, 0);
+                }
+                doc.text(line, 15, termsY);
+                termsY += 5;
+            });
+
+            // Add footer to final T&Cs page
+            doc.setFontSize(8);
+            doc.setFont(undefined, 'normal');
+            doc.setTextColor(100, 100, 100);
+            doc.text('Company Registration No: 2013/101544/07', 105, 275, { align: 'center' });
+            doc.text('Registered Office: Midlands Office Park West, Suites W003 & W004, 1 Mount Quray Street, Midstream, 1692, South Africa', 105, 280, { align: 'center' });
+
+            doc.save(`SpecCon_Quote_${quote.number}.pdf`);
+        }
+
+        // Show Message
+        function showMessage(message, type) {
+            // You can implement a toast notification here if needed
+            console.log(`${type}: ${message}`);
+        }
+
+        // Initialize app on load
+        window.onload = initializeApp;
+    </script>
+</body>
+</html>

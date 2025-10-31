@@ -29,7 +29,7 @@
   </url>
   <url>
     <loc>https://www.speccon.co.za/setas/etdp-seta.html</loc>
-    <lastmod>2025-10-17</lastmod>
+    <lastmod>2025-10-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -523,7 +523,19 @@
   </url>
   <url>
     <loc>https://www.speccon.co.za/qualifications/skills-workplace-essential-skills-nqf4.html</loc>
-    <lastmod>2025-10-17</lastmod>
+    <lastmod>2025-10-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.speccon.co.za/qualifications/skills-learning-development-advisor-nqf7.html</loc>
+    <lastmod>2025-10-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.speccon.co.za/qualifications/skills-training-development-practitioner-nqf5.html</loc>
+    <lastmod>2025-10-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
